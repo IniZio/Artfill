@@ -1,13 +1,13 @@
 package controllers
 
 import (
+	"artfill/config"
 	"artfill/models"
 	"bytes"
 	"crypto/md5"
 	"crypto/rand"
 	"encoding/base64"
 	"fmt"
-	"github.com/astaxie/beego/config"
 	"github.com/astaxie/beego/orm"
 	"github.com/astaxie/beego/session"
 
@@ -77,20 +77,20 @@ func (c *MainController) Login() {
 	}
 }
 
-func GenerateRandomBytes(n int) ([]byte, error) {
-	b := make([]byte, n)
-	_, err := rand.Read(b)
-	if err != nil {
-		return nil, err
-	}
+// func GenerateRandomBytes(n int) ([]byte, error) {
+// 	b := make([]byte, n)
+// 	_, err := rand.Read(b)
+// 	if err != nil {
+// 		return nil, err
+// 	}
 
-	return b, nil
-}
+// 	return b, nil
+// }
 
-func GenerateRandomString(s int) (string, error) {
-	b, err := GenerateRandomBytes(s)
-	return base64.URLEncoding.EncodeToString(b), err
-}
+// func GenerateRandomString(s int) (string, error) {
+// 	b, err := GenerateRandomBytes(s)
+// 	return base64.URLEncoding.EncodeToString(b), err
+// }
 
 // func (c *MainController) Register() {
 // 	c.Data["Form"] = &(models.User{})
