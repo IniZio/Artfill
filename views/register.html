@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+
+<form id = "email_check_form" style="display:none">
+	<input type="hidden" value="check_email" name="mode">
+	<input type="text" name="email" id="email_check">
+</form>
+<form id="regForm" action="/register" method="post">
+	<table>
+		<tr>
+			<td>
+				<label id="email_address_label" for="email_address"> Email address</label>
+			</td>
+			<td>
+				<input id="email_address" name="email_address" type="text" >
+			</td>
+		</tr>
+	</table>
+</form>
+
+</body>
+</html>
