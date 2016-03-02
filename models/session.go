@@ -1,9 +1,18 @@
 package models
 
+import (
+	"artfill_lab/config"
+	"github.com/astaxie/beego/orm"
+)
+
 type Session struct {
-	Id string
+	Id string `orm:"pk"`
 }
 
-// func init() {
-// 	orm.RegisterModel(new(Session))
-// }
+func init() {
+	orm.RegisterModelWithPrefix(config.Constant.DBPrefix, new(Session))
+}
+
+func (s *Session) TableName() string {
+	return "Session"
+}

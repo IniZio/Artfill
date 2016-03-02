@@ -2813,7 +2813,7 @@ select[multiple].input-lg {
   line-height: 30px;
 }
 .has-success .help-block,
-.has-success .control-label,
+.has-success .controlel,
 .has-success .radio,
 .has-success .checkbox,
 .has-success .radio-inline,
@@ -2843,7 +2843,7 @@ select[multiple].input-lg {
   color: #3c763d;
 }
 .has-warning .help-block,
-.has-warning .control-label,
+.has-warning .controlel,
 .has-warning .radio,
 .has-warning .checkbox,
 .has-warning .radio-inline,
@@ -2873,7 +2873,7 @@ select[multiple].input-lg {
   color: #8a6d3b;
 }
 .has-error .help-block,
-.has-error .control-label,
+.has-error .controlel,
 .has-error .radio,
 .has-error .checkbox,
 .has-error .radio-inline,
@@ -2940,7 +2940,7 @@ select[multiple].input-lg {
   .form-inline .input-group > .form-control {
     width: 100%;
   }
-  .form-inline .control-label {
+  .form-inline .controlel {
     margin-bottom: 0;
     vertical-align: middle;
   }
@@ -2981,7 +2981,7 @@ select[multiple].input-lg {
   margin-left: -15px;
 }
 @media (min-width: 768px) {
-  .form-horizontal .control-label {
+  .form-horizontal .controlel {
     padding-top: 7px;
     margin-bottom: 0;
     text-align: right;
@@ -2991,13 +2991,13 @@ select[multiple].input-lg {
   right: 15px;
 }
 @media (min-width: 768px) {
-  .form-horizontal .form-group-lg .control-label {
+  .form-horizontal .form-group-lg .controlel {
     padding-top: 11px;
     font-size: 18px;
   }
 }
 @media (min-width: 768px) {
-  .form-horizontal .form-group-sm .control-label {
+  .form-horizontal .form-group-sm .controlel {
     padding-top: 6px;
     font-size: 12px;
   }
@@ -4404,7 +4404,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-form .input-group > .form-control {
     width: 100%;
   }
-  .navbar-form .control-label {
+  .navbar-form .controlel {
     margin-bottom: 0;
     vertical-align: middle;
   }

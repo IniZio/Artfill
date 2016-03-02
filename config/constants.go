@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-type Constants struct {
+type constants struct {
 	ListenAddress     string `envconfig:"SERVER_ADDR"`
 	LoginRedirectPath string `envconfig:"SERVER_REDIRECT_PATH"`
 
@@ -15,9 +15,10 @@ type Constants struct {
 	DbDatabase string `envconfig:"DATABASE_NAME"`
 	DbUsername string `envconfig:"DATABASSE_USERNAME"`
 	DbPassword string `envconfig:"DATABASE_PASSWORD"`
+	DBPrefix   string `envconfig:"DATABASE_PREFIX"`
 }
 
-var constants = Constants{}
+var Constant = constants{}
 var MySQLConn string
 
 func SetupConstants() {
@@ -30,21 +31,22 @@ func SetupConstants() {
 	} else if val == "test" {
 		setupTestConstants()
 	}
-	err := envconfig.Process("artfill", &constants)
+	err := envconfig.Process("artfill_lab", &Constant)
 	if err != nil {
 		log.Error(err.Error())
 	}
-	MySQLConn = constants.DbUsername + ":" + constants.DbPassword + "@/" + constants.DbDatabase + "?charset=utf8"
+	MySQLConn = Constant.DbUsername + ":" + Constant.DbPassword + "@/" + Constant.DbDatabase + "?charset=utf8"
 }
 
 func setupDevelopmentConstants() {
-	constants.ListenAddress = "http://localhost:8080"
-	constants.LoginRedirectPath = "http://localhost:8080"
+	Constant.ListenAddress = "http://localhost:8080"
+	Constant.LoginRedirectPath = "http://localhost:8080"
 
-	constants.Dbaddr = "127.0.0.1:3306"
-	constants.DbDatabase = "artfill"
-	constants.DbUsername = "root"
-	constants.DbPassword = "toor"
+	Constant.Dbaddr = "127.0.0.1:3306"
+	Constant.DbDatabase = "artfill_lab"
+	Constant.DbUsername = "root"
+	Constant.DbPassword = "toor"
+	Constant.DBPrefix = "artfill_lab"
 }
 
 func setupProductionConstants() {

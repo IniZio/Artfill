@@ -1,7 +1,7 @@
 package install
 
 import (
-	models "artfill/models"
+	models artfill_lab/models"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql"
 )

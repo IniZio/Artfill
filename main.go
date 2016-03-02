@@ -1,8 +1,9 @@
 package main
 
 import (
-	"artfill/models"
-	_ "artfill/routers"
+	"artfill_lab/config"
+	"artfill_lab/models"
+	_ "artfill_lab/routers"
 	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
@@ -15,13 +16,11 @@ import (
 )
 
 func init() {
+	config.SetupConstants()
 	orm.RegisterDriver("mysql", orm.DRMySQL)
-	db_username := "root"
-	db_password := "toor"
-	db_dbname := "artfill"
-	orm.RegisterDataBase("default", "mysql", db_username+":"+db_password+"@/"+db_dbname+"?charset=utf8")
-	// beego.BConfig.WebConfig.Session.SessionProvider = "mysql"
-	// beego.BConfig.WebConfig.Session.SessionProviderConfig = db_username + ":" + db_password + "@/" + db_dbname + "?charset=utf8"
+	orm.RegisterDataBase("default", "mysql", config.MySQLConn)
+	beego.BConfig.WebConfig.Session.SessionProvider = "mysql"
+	beego.BConfig.WebConfig.Session.SessionProviderConfig = config.MySQLConn
 }
 
 func main() {
