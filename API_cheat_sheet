@@ -1,0 +1,13 @@
+Here we list some discovered ways to access database and different site settings, functions
+
+Accessing shopsy_admin_settings:
+    read:
+        $this->admin_model->getAdminSettings()->row()->buyer_commission
+    write:
+        $newdata = array('buyer_commission' => $buyer_commission, 'paypal_rate' => $paypal_rate, 'paypal_static' => $paypal_static);
+		$condition = array('id' => '1');
+		$this->admin_model->update_details($mode,$newdata,$condition);
+		
+Check admin login status
+    if($mode == ADMIN_SETTINGS){
+    }
