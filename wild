@@ -1,1 +1,10 @@
 1. ME! showcase
+
+database tables
+`artfill_sessions` : list of sessions, shows user hierarchy
+`artfill_admins` : list of admins and their permissions, inherit from user
+`artfill_platform_setting` : only one record, all core platform settings
+`artfill_ads` : list of advertisements, their specs, type includes image, banner, script
+`artfill_receipts` : list of receipts from transactions, promises
+`artfill_categories` : list of catergories according to criteria
+`artfill_tags` : all used tags, prevents duplication
