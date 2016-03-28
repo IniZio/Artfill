@@ -1999,73 +1999,33 @@ CREATE TABLE IF NOT EXISTS `artfill_payment_proof` (
 
 CREATE TABLE IF NOT EXISTS `artfill_product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `seller_product_id` bigint(20) NOT NULL,
-  `created` datetime NOT NULL,
+  `seller_id` bigint(20) NOT NULL,
+  `store_id` varchar(255) NOT NULL,
+  `created` datetime NOT NULL CURRENT_TIMESTAMP,
   `modified` datetime NOT NULL,
   `product_name` varchar(100) NOT NULL,
   `seourl` varchar(255) NOT NULL,
   `meta_title` longblob NOT NULL,
   `meta_keyword` longblob NOT NULL,
   `meta_description` longblob NOT NULL,
-  `excerpt` varchar(255) NOT NULL,
   `category_id` varchar(255) NOT NULL,
-  `store_id` varchar(255) NOT NULL,
-  `shippingType_id` int(11) NOT NULL,
   `tag` text NOT NULL,
   `materials` text NOT NULL,
   `price` decimal(13,5) NOT NULL,
-  `currency_value` decimal(10,3) NOT NULL,
-  `base_price` decimal(10,2) NOT NULL,
-  `price_range` varchar(100) NOT NULL,
-  `sale_price` decimal(10,2) NOT NULL,
-  `price_type` enum('Fixed','Auction') NOT NULL,
-  `current_auction` int(11) NOT NULL,
-  `auction_level` enum('ongoing','completed','') NOT NULL,
   `discount` int(11) DEFAULT NULL,
-  `deal_date` date DEFAULT NULL,
+  `deal_date_from` date DEFAULT NULL,
   `deal_date_to` date DEFAULT NULL,
   `deal_time_from` time DEFAULT NULL,
   `deal_time_to` time DEFAULT NULL,
-  `action` varchar(255) DEFAULT NULL,
   `image` longtext NOT NULL,
-  `product_featured` enum('No','Yes') NOT NULL DEFAULT 'No',
-  `product_promoted` enum('Promote','Unpromote') NOT NULL DEFAULT 'Unpromote',
-  `description` blob NOT NULL,
-  `shipping` blob NOT NULL,
-  `weight` varchar(100) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `max_quantity` int(11) NOT NULL DEFAULT '1',
   `purchasedCount` int(11) NOT NULL,
   `view_count` int(11) NOT NULL,
-  `status` enum('Publish','UnPublish','Deleted') NOT NULL DEFAULT 'Publish',
-  `latitude` decimal(10,7) DEFAULT NULL,
-  `longitude` decimal(10,7) DEFAULT NULL,
-  `pay_status` enum('Pending','Paid') NOT NULL DEFAULT 'Pending',
-  `shipping_type` enum('Shippable','Not Shippable') NOT NULL,
-  `shipping_cost` decimal(6,2) NOT NULL,
-  `taxable_type` enum('Taxable','Not Taxable') NOT NULL,
-  `tax_cost` decimal(6,2) NOT NULL,
-  `sku` varchar(100) NOT NULL,
-  `option` longtext NOT NULL,
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `likes` bigint(20) NOT NULL DEFAULT '0',
-  `list_name` longtext NOT NULL,
-  `list_value` longtext NOT NULL,
+  `status` enum('Publish','UnPublish','Deleted') NOT NULL DEFAULT 'UnPublish',
+  `like_count` bigint(20) NOT NULL DEFAULT '0',
   `comment_count` bigint(20) NOT NULL,
-  `gift_card` enum('false','true') NOT NULL,
   `made_by` varchar(100) NOT NULL,
-  `product_condition` varchar(100) NOT NULL,
-  `maked_on` varchar(100) NOT NULL,
-  `ship_duration` varchar(150) NOT NULL,
-  `ship_from` varchar(100) DEFAULT NULL,
-  `ship_details` varchar(255) NOT NULL COMMENT 'ship from:shiping price:ship with another',
-  `txn_id` varchar(255) NOT NULL,
-  `pay_type` varchar(255) NOT NULL,
-  `pay_date` varchar(255) NOT NULL,
-  `pay_amount` decimal(10,2) NOT NULL,
-  `feature_expire` date NOT NULL,
-  `product_type` enum('digital','physical') NOT NULL,
-  `pickup_option` varchar(255) NOT NULL,
+  `made_on` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `status` (`status`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -4921,12 +4881,13 @@ CREATE TABLE IF NOT EXISTS `artfill_transaction` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `artfill_users`
+-- Table structure for table `artfill_user`
 --
 
-CREATE TABLE IF NOT EXISTS `artfill_users` (
+CREATE TABLE IF NOT EXISTS `artfill_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `send_req` enum('Yes','No') NOT NULL DEFAULT 'No',
+  `is_local_account` enum('Yes', 'No') DEFAULT NULL,
   `withdraw_amt` decimal(10,2) NOT NULL,
   `loginUserType` enum('normal','twitter','facebook','google','mobile') NOT NULL,
   `gcm_buyer_id` varchar(250) DEFAULT NULL,
@@ -4939,7 +4900,7 @@ CREATE TABLE IF NOT EXISTS `artfill_users` (
   `group` enum('User','Seller') NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `status` enum('Active','Inactive','Deleted') NOT NULL,
+  `status` enum('Active','Inactive','Deleted') NOT NULL DEFAULT 'Active',
   `is_verified` enum('Yes','No') NOT NULL,
   `is_brand` enum('no','yes') NOT NULL DEFAULT 'no',
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -5040,7 +5001,7 @@ CREATE TABLE IF NOT EXISTS `artfill_users` (
 -- Dumping data for table `artfill_users`
 --
 
-INSERT INTO `artfill_users` (`id`, `send_req`, `withdraw_amt`, `loginUserType`, `gcm_buyer_id`, `gcm_seller_id`, `ios_device_id`, `full_name`, `user_name`, `last_name`, `about_us`, `group`, `email`, `password`, `status`, `is_verified`, `is_brand`, `created`, `modified`, `last_login_date`, `last_logout_date`, `last_login_ip`, `last_activity_visit`, `thumbnail`, `address`, `address2`, `city`, `district`, `state`, `country`, `postal_code`, `phone_no`, `s_address`, `s_city`, `s_district`, `s_state`, `s_country`, `s_postal_code`, `s_phone_no`, `brand_name`, `brand_description`, `commision`, `cod_available`, `web_url`, `bank_name`, `bank_no`, `bank_code`, `request_status`, `verify_code`, `feature_product`, `followers_count`, `following_count`, `followers`, `following`, `twitter`, `facebook`, `google`, `pinterest`, `birthday`, `about`, `age`, `gender`, `language`, `visibility`, `favorites_visibility`, `shop_visibility`, `display_lists`, `email_notifications`, `notifications`, `updates`, `products`, `lists`, `likes`, `location`, `following_user_lists`, `following_giftguide_lists`, `api_id`, `own_products`, `own_count`, `referId`, `want_count`, `refund_amount`, `paypal_email`, `product_template`, `shop_template`, `blog_template`, `seller_shop`, `favorite_materials`, `include_profile`, `currency`, `region`, `languages`, `privacy`, `twitter_id`, `mobile_verification`, `mobile_otp_code`, `credits`, `HttpReferer`, `fb_purchase_count`, `fb_discounttype`, `fb_discountvalue`, `affiliateId`, `freshdesk_status`, `update_email`, `notification_email`, `resetcode`, `resettime`, `resetstatus`) VALUES
+INSERT INTO `artfill_user` (`id`, `send_req`, `withdraw_amt`, `loginUserType`, `gcm_buyer_id`, `gcm_seller_id`, `ios_device_id`, `full_name`, `user_name`, `last_name`, `about_us`, `group`, `email`, `password`, `status`, `is_verified`, `is_brand`, `created`, `modified`, `last_login_date`, `last_logout_date`, `last_login_ip`, `last_activity_visit`, `thumbnail`, `address`, `address2`, `city`, `district`, `state`, `country`, `postal_code`, `phone_no`, `s_address`, `s_city`, `s_district`, `s_state`, `s_country`, `s_postal_code`, `s_phone_no`, `brand_name`, `brand_description`, `commision`, `cod_available`, `web_url`, `bank_name`, `bank_no`, `bank_code`, `request_status`, `verify_code`, `feature_product`, `followers_count`, `following_count`, `followers`, `following`, `twitter`, `facebook`, `google`, `pinterest`, `birthday`, `about`, `age`, `gender`, `language`, `visibility`, `favorites_visibility`, `shop_visibility`, `display_lists`, `email_notifications`, `notifications`, `updates`, `products`, `lists`, `likes`, `location`, `following_user_lists`, `following_giftguide_lists`, `api_id`, `own_products`, `own_count`, `referId`, `want_count`, `refund_amount`, `paypal_email`, `product_template`, `shop_template`, `blog_template`, `seller_shop`, `favorite_materials`, `include_profile`, `currency`, `region`, `languages`, `privacy`, `twitter_id`, `mobile_verification`, `mobile_otp_code`, `credits`, `HttpReferer`, `fb_purchase_count`, `fb_discounttype`, `fb_discountvalue`, `affiliateId`, `freshdesk_status`, `update_email`, `notification_email`, `resetcode`, `resettime`, `resetstatus`) VALUES
 (1, 'No', '0.00', 'normal', NULL, NULL, NULL, 'admin', 'admin', '', 'admin of the site', 'Seller', 'info@zoplay.com', '21232f297a57a5a743894a0e4a801fc3', 'Active', 'Yes', 'no', '2015-05-05 13:05:30', '2015-07-15 00:00:00', '2015-10-09 11:10:32', '2015-10-09 06:50:03', '192.168.1.72', '1444394920', '9002.jpg', 'ssssssssssssssssssss', 'ffffffffffffffffff', 'fhhhhhhhhhhhhhhhhhhhhhh', '', 'hhhjjjjjjjjjjjjjjjjjjjjjj', 'India', 56666666, '1236549870', '', '', '', '', '', 0, '', '', '', '3.80', 'Yes', '', '', '', '', 'Approved', 'QtBxP0RbXM', 0, 0, 0, '', '', '', '', '', '', 'Month-Day', '', '', 'Male', 'en', '', 'Public', 'Public', '', '', '', '', 0, 0, 0, '', '', '', 0, '', 0, 0, 0, '0.00', 'vinubuyer1@gmail.com', 'left', 'three', 'template1', '', '', 'Shop,Favorite_items,Favorite_shops,Teams', 'USD', 'EV', 'en', 'No', '', 'Yes', '87665', 6, 0, 0, 'Flat', 0, 'admin123', 'No', 'No', 'follow,msg,like,lik_of_like,fav_shop_pro,fav_shop,', '', '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
