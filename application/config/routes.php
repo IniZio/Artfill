@@ -53,8 +53,8 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['except'] = 'welcome/welcome';
-$route['try_user'] = 'user/insert_user';
+// $route['except'] = 'welcome/welcome';
+// $route['try_user'] = 'user/insert_user';
 // $route['ci_google_oauth'] = 'User_Auth';
 // $route['oauth2callback'] = 'User_Auth/oauth2callback';
 $route['hauth']='hauth';

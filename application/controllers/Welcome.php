@@ -35,7 +35,7 @@ class Welcome extends MY_Controller {
 	*	redirects back to wordpress welcome page
 	*/
 	public function welcome(){
-		// redirect('/welcome',302);
-		$this->load->view('google_sign');
+		redirect('/welcome',302);
+		// $this->load->view('google_sign');
 	}
 }
