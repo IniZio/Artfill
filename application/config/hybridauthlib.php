@@ -36,7 +36,7 @@ $config =
 
 			"Facebook" => array (
 				"enabled" => true,
-				"keys"    => array ( "id" => "", "secret" => "" ),
+				"keys"    => array ( "id" => "2003504729874665", "secret" => "da7c2025e1458ba2d3a991b2f4a55b27" ),
 			),
 
 			"Twitter" => array (
