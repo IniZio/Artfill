@@ -59,5 +59,7 @@ $route['translate_uri_dashes'] = FALSE;
 // $route['oauth2callback'] = 'User_Auth/oauth2callback';
 $route['hauth']='hauth';
 $route['hauth/login/(:provider)']='hauth/login/$1';
+$route['user/login']='user/login_form';
+$route['user/login_user']='user/login';
 $route['(:any)'] = 'welcome';
 // $route['admin'] = 'admin';

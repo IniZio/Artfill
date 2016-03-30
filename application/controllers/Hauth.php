@@ -36,9 +36,11 @@ class Hauth extends MY_Controller
                     log_message('info', 'controllers.HAuth.login: user profile:' . PHP_EOL . print_r($user_profile, true));
 
                     // display raw user profile information after login
-                    $data['user_profile'] = $user_profile;
+                    // $data['user_profile'] = $user_profile;
 
-                    $this->load->view('hauth/done', $data);
+                    // $this->load->view('hauth/done', $data);
+
+                    // require: login user
 
                 } else // Cannot authenticate user
                 {

@@ -5,7 +5,11 @@
 
 2. RULES
 - inserting thing should be an easy step
-- use is_local_account to distinguish whether use api login or local login way
+- user roles: (U)ser, (O)wner, (E)mployee, (A)dmin
+U : able to login
+O : able to modify everything about its shop
+E : able to access/modify/view things permitted by owner
+A : able to modify platform settings as permitted by system
 
 2. DATABASE TABLES
 `artfill_users` : list of users, their roles(admin, user, seller, employee)

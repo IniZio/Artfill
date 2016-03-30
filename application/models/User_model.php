@@ -7,8 +7,7 @@ if (! defined ( 'BASEPATH' ))
 */
 class User_model extends MY_Model
 {
-	
-	function __construct()
+	public function __construct()
 	{
 		parent::__construct();
 	}
@@ -17,7 +16,7 @@ class User_model extends MY_Model
 	*	only insert user
 	*	@param String $firstname, $lastname, $username, $email, $password, $roles
 	*/
-	public function insert_user($firstname='', $lastname='', $username=''. $email='', $password='', $roles=array('user')){
+	public function insert_user($firstname='', $lastname='', $username='', $email='', $password='', $roles=array('user')){
 		if ($username='') {
 			$username = substr($email, 0,strpos($email, '@'));
 			while ($this->user_model->check_exist(USER, array('username' => $username))){
