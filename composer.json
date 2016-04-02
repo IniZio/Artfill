@@ -1,5 +1,7 @@
 {
     "require": {
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.2",
+        "whatsapp/chat-api": "^3.2",
+        "xaamin/whatsapi": "^1.1"
     }
 }

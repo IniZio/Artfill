@@ -94,3 +94,5 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+$db['local_dev']['hostname'] = 'mysql:host=127.0.0.1'; 

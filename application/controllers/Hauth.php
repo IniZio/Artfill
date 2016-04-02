@@ -12,7 +12,7 @@ class Hauth extends MY_Controller
 
     public function index()
     {
-        $this->load->view('hauth/home');
+        $this->load->view('site/hauth/home');
     }
 
     public function login($provider)
@@ -38,7 +38,7 @@ class Hauth extends MY_Controller
                     // display raw user profile information after login
                     // $data['user_profile'] = $user_profile;
 
-                    // $this->load->view('hauth/done', $data);
+                    // $this->load->view('site/hauth/done', $data);
 
                     // require: login user
 

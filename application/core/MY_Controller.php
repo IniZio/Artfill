@@ -20,5 +20,14 @@ class MY_Controller extends CI_Controller
 		// $this->load->set_header();
 		// $this->load->model();
 	}
+
+	/**
+    * 
+    * Generate random string
+    * @param Integer $length
+    */
+   public function get_rand_str($length='6'){
+		return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
+   }
 }
 ?>

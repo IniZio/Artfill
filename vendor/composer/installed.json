@@ -226,5 +226,105 @@
             "rest",
             "web service"
         ]
+    },
+    {
+        "name": "whatsapp/chat-api",
+        "version": "v3.2",
+        "version_normalized": "3.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mgp25/Chat-API.git",
+            "reference": "7a7619a8ab2bee61f800c8f3dee9d05110061f90"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mgp25/Chat-API/zipball/7a7619a8ab2bee61f800c8f3dee9d05110061f90",
+            "reference": "7a7619a8ab2bee61f800c8f3dee9d05110061f90",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-gd": "*",
+            "ext-mcrypt": "*",
+            "ext-openssl": "*",
+            "ext-pdo": "*",
+            "ext-sockets": "*",
+            "ext-sqlite3": "*",
+            "php": ">=5.6"
+        },
+        "time": "2016-02-19 19:11:36",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0+"
+        ],
+        "authors": [
+            {
+                "name": "Chat API Contributing Team",
+                "homepage": "https://github.com/WHAnonymous/Chat-API/graphs/contributors",
+                "role": "Contributors"
+            }
+        ],
+        "description": "The PHP WhatsApp library",
+        "keywords": [
+            "Chat-API",
+            "whatsapi",
+            "whatsapp"
+        ]
+    },
+    {
+        "name": "xaamin/whatsapi",
+        "version": "v1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/xaamin/whatsapi.git",
+            "reference": "483bea565e820a13028b50cb32866dc802fa65c5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/xaamin/whatsapi/zipball/483bea565e820a13028b50cb32866dc802fa65c5",
+            "reference": "483bea565e820a13028b50cb32866dc802fa65c5",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "whatsapp/chat-api": "^3.2"
+        },
+        "suggest": {
+            "illuminate/support": "For use on Laravel 5."
+        },
+        "time": "2016-03-26 00:42:23",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Xaamin\\Whatsapi\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Benjamín Martínez Mateos",
+                "email": "bmxamin@gmail.com"
+            }
+        ],
+        "description": "Wrapper for Whatsapp messenger",
+        "keywords": [
+            "Messenger",
+            "chat",
+            "laravel",
+            "whatsapi",
+            "whatsapp"
+        ]
     }
 ]
