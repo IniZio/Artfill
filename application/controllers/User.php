@@ -14,11 +14,18 @@ class User extends MY_Controller
         $this->load->library(array('form_validation', 'session'));
         $this->load->model(array('user_model'));
     }
+
+    public function register_form()
+    {
+        $this->load->view('site/user/register');
+    }
+
     /*
      * Function for basic register information
      */
-    public function insert_user()
+    public function register()
     {
+        $username = $this->input->post('username');
         $email    = $this->input->post('email');
         $password = $this->input->post('password');
 
@@ -27,11 +34,14 @@ class User extends MY_Controller
             if ($this->user_model->check_exist(USERS, $condition)) {
                 // require: return message 'email already exists'
             } else {
-                // require: add user to database
+                $verify_code = $this->get_rand_str('10');
+                $this->user_model->insert_user($username, $email. $password, $verify_code);
+                // might: save user data to session to login after register?
+                $registered_user=$this->user_model->get_all_details(USER, $condition)->row();
+                $this->send_verify_email($registered_user);
                 // require: return message 'successfully registered'
             }
         } else {
-            ;
         }
         // require: return message 'invalid email id'
     }
@@ -40,21 +50,24 @@ class User extends MY_Controller
     {
     }
 
-    public function send_verify_email()
+    public function send_verify_email($email)
     {
 
     }
 
     /*
-	* Form of user login
-    */
+     * Form of user login
+     */
     public function login_form()
-    {	
-    	// require: redirect to base url if already loginned
-    	{
-    		//require: get where to redirect back add to data of form
-    		$this->load->view('user/login');
-    	}
+    {
+        if ($this->session->userdata('artfill_session_user_name') != '') {
+        } else {
+            // require: redirect to base url if already loginned
+            {
+                //require: get where to redirect back add to data of form
+                $this->load->view('site/user/login');
+            }
+        }
     }
 
     /*
@@ -62,32 +75,43 @@ class User extends MY_Controller
      */
     public function login()
     {
+
         $username = $this->input->post('username');
         $email    = $this->input->post('email');
         $password = $this->input->post('password');
 
         // check if user exists
         $condition = '(email = \'' . addslashes($email) . '\' OR user_name = \'' . addslashes($username) . '\') AND password=\'' . $password . '\' AND status=\'Active\'';
-        if ($this->user_model->check_exist(USER, $condition)) {
+        if ($this->user_model->check_exist(USER, $condition)==true) {
             $userrow = $this->user_model->get_all_details(USER, $condition);
             // set session data
             $userdata = array(
-                'session_user_id'    => $userrow->row->id,
-                'session_user_name'  => $userrow->row->user_name,
-                'session_user_email' => $userrow->row->email,
-                'session_user_role'  => $userrow->row->role,
+                'artfill_session_user_id'    => $userrow->row()->id,
+                'artfill_session_user_name'  => $userrow->row()->user_name,
+                // 'artfill_session_user_name' => 'idiot again',
+                'artfill_session_user_email' => $userrow->row()->email,
+                'artfill_session_user_role'  => $userrow->row()->role,
             );
             $this->session->set_userdata($userdata);
             // require: set cookie and update last login details
             redirect('/', 302);
         } else {
-        	// require: return message 'wrong account details'
-        	redirect('login',302);
+            // require: return message 'wrong account details'
+            redirect('user/login', 302);
         }
     }
 
-    public function logout_user()
+    public function logout()
     {
-        //require: reset everything in session including google, facebook
+        $userdata = array(
+            'artfill_session_user_id'    => '',
+            'artfill_session_user_name'  => '',
+            'artfill_session_user_email' => '',
+            'artfill_session_user_role'  => '',
+        );
+        $this->session->unset_userdata($userdata);
+        // require: delte cookie
+        // require: return message 'successfully logout'
+        redirect('/', 302);
     }
 }
