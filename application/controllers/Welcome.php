@@ -25,19 +25,19 @@ class Welcome extends MY_Controller
         parent::__construct();
         $this->load->helper('url');
 
-        $username = '85265530162'; // Your number with country code, ie: 34123456789
-        $nickname = ''; // Your nickname, it will appear in push notifications
-        $debug    = true; // Shows debug log, this is set to false if not specified
-        $log      = true; // Enables log file, this is set to false if not specified
+        // $username = '85265530162'; // Your number with country code, ie: 34123456789
+        // $nickname = ''; // Your nickname, it will appear in push notifications
+        // $debug    = true; // Shows debug log, this is set to false if not specified
+        // $log      = true; // Enables log file, this is set to false if not specified
 
-        // Create a instance of WhatsProt class.
-        $w = new WhatsProt($username, $nickname, $debug, $log);
-        $w->connect(); // Connect to WhatsApp network
-        $w->loginWithPassword($password); // logging in with the password we got!
-        // Create an instance of Registration.
-        // $r = new Registration($username, $debug);
+        // // Create a instance of WhatsProt class.
+        // $w = new WhatsProt($username, $nickname, $debug, $log);
+        // $w->connect(); // Connect to WhatsApp network
+        // $w->loginWithPassword($password); // logging in with the password we got!
+        // // Create an instance of Registration.
+        // // $r = new Registration($username, $debug);
 
-        // $w->codeRequest('voice');
+        // // $w->codeRequest('voice');
 
     }
 
@@ -55,7 +55,7 @@ class Welcome extends MY_Controller
     {
         $username = "85265530162";
         $nickname = "digit";
-        $password = ""; // The one we got registering the number
+        $password = "UupZyRA+lUxnb0AEG5ItXd0fkWs="; // The one we got registering the number
         $debug = true;
 
         // Create a instance of WhastPort.
@@ -63,6 +63,8 @@ class Welcome extends MY_Controller
 
         $w->connect(); // Connect to WhatsApp network
         $w->loginWithPassword($password); // logging in with the password we got!
+        $target="85297732499";
+        $message="Tell me on telegram if u can receive this message";
         $w->sendMessage($target, $message);
     }
 }

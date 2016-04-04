@@ -16,9 +16,17 @@ class MY_Controller extends CI_Controller
 		ob_start();
 		ob_clean();
 		$this->load->helper(array());
-		$this->load->library(array());
+		$this->load->library(array('session'));
 		// $this->load->set_header();
 		// $this->load->model();
+
+		$userdata = array(
+            'artfill_session_user_id'    => '',
+            'artfill_session_user_name'  => '',
+            'artfill_session_user_email' => '',
+            'artfill_session_user_role'  => '',
+        );
+        $this->session->set_userdata($userdata);
 	}
 
 	/**

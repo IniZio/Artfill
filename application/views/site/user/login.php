@@ -1,21 +1,15 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 ?>
+<?php 
+
+$this->load->view('site/template/header');
+?>
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<!-- <form method="post" action="/user/login_user">
-	<label>User name</label>
-	<input type="text" id="username"></input>
-	<label>Email</label>
-	<input type="text" id="email"></input>
-
-	<label>Password</label>
-	<input type="password" id="password"></input>
-	<input type="submit" value="submit"></input>
-</form> -->
-
-<form action="/user/login_user" method="POST">
+<form action="login_user" method="POST">
 
 	<div class="form-group">
 		<label for="username" class="col-sm-1 control-label">Username:</label>
@@ -38,4 +32,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-<?php echo $this->session->userdata['artfill_session_user_name'] ?>
+<!-- <?php echo $this->session->userdata['artfill_session_user_name'] ?> -->
+
+
+

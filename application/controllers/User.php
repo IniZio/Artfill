@@ -13,8 +13,12 @@ class User extends MY_Controller
         $this->load->helper(array('cookie', 'date', 'email', 'form', 'url'));
         $this->load->library(array('form_validation', 'session'));
         $this->load->model(array('user_model'));
+        // require: check login
     }
 
+    /**
+    * Display registration form
+    */
     public function register_form()
     {
         $this->load->view('site/user/register');
@@ -46,17 +50,28 @@ class User extends MY_Controller
         // require: return message 'invalid email id'
     }
 
+    /**
+    * Function for saving user profile modification
+    * @param String seourl
+    */
     public function edit_user($seourl)
     {
     }
 
-    public function send_verify_email($email)
+    /**
+    * Function for sending verification email
+    * @param Model user
+    */
+    public function send_verify_email($user)
     {
-
+        $username=$user->username;
+        $email=$user->email;
+        $verify_code=$user->verify_code;
+        // requireL send the email
     }
 
     /*
-     * Form of user login
+     * Display user login form
      */
     public function login_form()
     {
@@ -88,7 +103,6 @@ class User extends MY_Controller
             $userdata = array(
                 'artfill_session_user_id'    => $userrow->row()->id,
                 'artfill_session_user_name'  => $userrow->row()->user_name,
-                // 'artfill_session_user_name' => 'idiot again',
                 'artfill_session_user_email' => $userrow->row()->email,
                 'artfill_session_user_role'  => $userrow->row()->role,
             );
@@ -101,6 +115,9 @@ class User extends MY_Controller
         }
     }
 
+    /**
+    * Log out from user session
+    */
     public function logout()
     {
         $userdata = array(

@@ -8,7 +8,7 @@
 - user roles: (U)ser, (O)wner, (E)mployee, (A)dmin
 U : able to login
 O : able to modify everything about its shop
-E : able to access/modify/view things permitted by owner
+M : able to access/modify/view things permitted by owner
 A : able to modify platform settings as permitted by system
 
 2. DATABASE TABLES
@@ -35,5 +35,9 @@ A : able to modify platform settings as permitted by system
 `artfill_cart` : shopping cart for each user
 
 
-3. CONSTANTS
-default language code
+3. CONFIG
+- default language code
+- 
+
+4. CONSTANTS
+- 

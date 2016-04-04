@@ -16,7 +16,7 @@ class User_model extends MY_Model
 	*	only insert user
 	*	@param String $firstname, $lastname, $username, $email, $password, $roles
 	*/
-	public function insert_user(username='', $email='', $password='',$verify_code='', $roles='U'){
+	public function insert_user($username='', $email='', $password='',$verify_code='', $roles='U'){
 		if ($username='') {
 			$username = substr($email, 0,strpos($email, '@'));
 			while ($this->user_model->check_exist(USER, array('username' => $username))){
