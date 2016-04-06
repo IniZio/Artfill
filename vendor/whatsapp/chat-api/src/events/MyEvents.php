@@ -35,7 +35,7 @@ class MyEvents extends AllEvents
 //        'onGetGroupsSubject',
 //        'onGetImage',
 //        'onGetLocation',
-//        'onGetMessage',
+       'onGetMessage',
 //        'onGetNormalizedJid',
 //        'onGetPrivacyBlockedList',
 //        'onGetProfilePicture',
@@ -60,16 +60,16 @@ class MyEvents extends AllEvents
 //        'onMediaUploadFailed',
 //        'onMessageComposing',
 //        'onMessagePaused',
-//        'onMessageReceivedClient',
-//        'onMessageReceivedServer',
+       'onMessageReceivedClient',
+       'onMessageReceivedServer',
 //        'onPaidAccount',
 //        'onPing',
 //        'onPresenceAvailable',
 //        'onPresenceUnavailable',
 //        'onProfilePictureChanged',
 //        'onProfilePictureDeleted',
-//        'onSendMessage',
-//        'onSendMessageReceived',
+       'onSendMessage',
+       'onSendMessageReceived',
 //        'onSendPong',
 //        'onSendPresence',
 //        'onSendStatusUpdate',
@@ -86,5 +86,18 @@ class MyEvents extends AllEvents
     public function onDisconnect($mynumber, $socket)
     {
         echo "<p>Booo!, Phone number $mynumber is disconnected!</p>";
+    }
+
+    public function onGetMessage( $mynumber, $from, $id, $type, $time, $name, $body )
+    {
+        echo "Message from $name:\n$body\n\n";
+    }
+
+    public function onSendMessageReceived($mynumber, $id, $from, $type){
+        echo "My sent message is sreceived\n\n";
+    }
+
+    public function onSendMessage($mynumber, $target, $messageId, $node){
+        echo "<p>Sending message</p>";
     }
 }

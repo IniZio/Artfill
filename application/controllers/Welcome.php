@@ -24,6 +24,7 @@ class Welcome extends MY_Controller
     {
         parent::__construct();
         $this->load->helper('url');
+        // require '/events/MyEvents.php';
 
         // $username = '85265530162'; // Your number with country code, ie: 34123456789
         // $nickname = ''; // Your nickname, it will appear in push notifications
@@ -54,17 +55,40 @@ class Welcome extends MY_Controller
     public function welcome()
     {
         $username = "85265530162";
-        $nickname = "digit";
-        $password = "UupZyRA+lUxnb0AEG5ItXd0fkWs="; // The one we got registering the number
+        $nickname = "Newman";
+        $password = "A7+Dn9rhwWgy2HzPt9TIaUO6F9Y="; // The one we got registering the number
         $debug = true;
 
         // Create a instance of WhastPort.
         $w = new WhatsProt($username, $nickname, $debug);
+        $events = new MyEvents($w);
+        $events->setEventsToListenFor($events->activeEvents); //You can also pass in your own array with a list of events to listen too instead.
+
 
         $w->connect(); // Connect to WhatsApp network
         $w->loginWithPassword($password); // logging in with the password we got!
+
+
+        // $w->sendGetPrivacyBlockedList(); // Get our privacy list [Done automatically by the API]
+
+        // $w->sendGetClientConfig(); // Get client config [Done automatically by the API]
+
+        // $w->sendGetServerProperties(); // Get server properties [Done automatically by the API]
+
+        // $w->sendGetGroups(); // Get groups (participating)
+
+        // $w->sendGetBroadcastLists(); // Get broadcasts lists
+
+
         $target="85297732499";
-        $message="Tell me on telegram if u can receive this message";
+        $message="Tell me on telegram whether u can following picture";
         $w->sendMessage($target, $message);
+
+        // $pathToAudio = "http://localhost/video/payphone.mp3"; // This could be url or path to image.
+        // $w->sendMessageAudio($target, $pathToAudio);
+
+        $w->sendMessageImage($target, 'https://artfill.co/wp-content/uploads/2015/03/Artfill-Banner.png');
+
+        while ($w->pollMessage());
     }
 }
