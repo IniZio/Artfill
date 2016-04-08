@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+f-- phpMyAdmin SQL Dump
 -- version 3.2.0.1
 -- http://www.phpmyadmin.net
 --
@@ -4886,12 +4886,13 @@ CREATE TABLE IF NOT EXISTS `artfill_transaction` (
 
 CREATE TABLE IF NOT EXISTS `artfill_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `is_local_account` enum('Yes',     'No') DEFAULT NULL,
+  `is_local_account` enum('Yes', 'No') DEFAULT NULL,
   `first_name` varchar(100) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `user_name` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `role` varchar(100) NOT NULL DEFAULT `U`,
   `thumbnail` text NOT NULL,
   `status` enum('Active','Inactive','Deleted') NOT NULL DEFAULT 'Active',
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,

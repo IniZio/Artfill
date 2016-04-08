@@ -30,7 +30,6 @@ class MY_Controller extends CI_Controller
 	}
 
 	/**
-    * 
     * Generate random string
     * @param Integer $length
     */

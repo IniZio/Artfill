@@ -3,6 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  * User Controller
+ * @author Artfill
  */
 class User extends MY_Controller
 {
@@ -11,7 +12,7 @@ class User extends MY_Controller
     {
         parent::__construct();
         $this->load->helper(array('cookie', 'date', 'email', 'form', 'url'));
-        $this->load->library(array('form_validation', 'session'));
+        $this->load->library(array('email', 'form_validation', 'session'));
         $this->load->model(array('user_model'));
         // require: check login
     }
@@ -62,12 +63,21 @@ class User extends MY_Controller
     * Function for sending verification email
     * @param Model user
     */
-    public function send_verify_email($user)
+    public function send_verify_email($user='')
     {
-        $username=$user->username;
-        $email=$user->email;
-        $verify_code=$user->verify_code;
+        // $username=$user->username;
+        // $email=$user->email;
+        // $verify_code=$user->verify_code;
         // requireL send the email
+        $this->email->from('chowkachun1@gmail.com', 'Your Name');
+        $this->email->to('digit4free@gmail.com'); 
+
+        $this->email->subject('Email Test');
+        $this->email->message('Testing the email class.');  
+
+        $this->email->send();
+        $this->output->append_output($this->email->print_debugger());
+        // log_message('info', $this->email->print_debugger());
     }
 
     /*
@@ -76,7 +86,9 @@ class User extends MY_Controller
     public function login_form()
     {
         if ($this->session->userdata('artfill_session_user_name') != '') {
+            log_message('info', 'found a session');
         } else {
+            log_message('info', 'have not loginned yet');
             // require: redirect to base url if already loginned
             {
                 //require: get where to redirect back add to data of form

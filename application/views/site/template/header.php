@@ -22,16 +22,22 @@ $shipVal='';
 }
 </style>
 
-
+<script>
+function hideErrDiv(arg) {
+    document.getElementById(arg).style.display = 'none';
+}
+</script> 
 
 </head>
- 		<?php
-				if($this->session->flashdata('sErrMSG') != '') { ?>
-                <div class="errorContainer" id="<?php echo $this->session->flashdata('sErrMSGType'); ?>">
-                  <script>setTimeout("hideErrDiv('<?php echo $this->session->flashdata('sErrMSGType'); ?>')", 5000);</script>
-                  <p><span> <?php echo $this->session->flashdata('sErrMSG');  ?> </span></p>
-                </div>
-   		 <?php } ?>
+	<?php
+		// $this->session->set_flashdata('sErrMSG','try flash data for error messages');
+		if($this->session->flashdata('sErrMSG') != '') { ?>
+		<!-- require: state type of message to hide -->
+        <div class="errorContainer" id="<?php echo $this->session->flashdata('sErrMSGType'); ?>">
+          <script>setTimeout("hideErrDiv('<?php echo $this->session->flashdata('sErrMSGType'); ?>')", 5000);</script>
+          <p><span> <?php echo $this->session->flashdata('sErrMSG');  ?> </span></p>
+        </div>
+	 <?php } ?>
 <body>
 <!-- header_start -->
  <header>

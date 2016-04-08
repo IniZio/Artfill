@@ -16,7 +16,8 @@
 		?>
 		<link href="./theme/themecss_<?php echo '15'; ?>header.css" rel="stylesheet">
    		<link href="./theme/themecss_<?php echo '15'; ?>footer.css" rel="stylesheet">
-   		<link href="./theme/themecss_<?php echo '15'; ?>Cart-page.css" rel="stylesheet">
+   		<link rel="stylesheet" type="text/css" media="all" href="css/default/site/shopsy_style.css"/>
+
 		<!--[if lt IE 9]>
 		<script src="js/html5shiv/dist/html5shiv.js"></script>
 		<![endif]-->
@@ -25,5 +26,7 @@
 		<!-- <?php
 		$path = './theme/themecss_' . '15' . '.css';
 		?> -->
-		<!--<script src="js/assets/jquery-v11.js"></script>
-		<script src="js/assets/bootstrap.min.js"></script>-->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+		<!-- <script src="js/assets/jquery-v11.js"></script> -->
+		<!-- <script src="js/assets/bootstrap.min.js"></script> -->

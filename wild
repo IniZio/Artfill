@@ -5,13 +5,15 @@
 - Online delivery
 - Product trading without money
 - Swagger
+- import from ig?
 
 2. RULES
-- inserting thing should be an easy step
-- user roles: (U)ser, (O)wner, (E)mployee, (A)dmin
+- log to file
+- inserting thing should be an easy step, editting thing is comprehensive
+- user roles: (U)ser, (O)wner, (C)ontributer, (A)dmin
 U : able to login
-O : able to modify everything about its shop
-M : able to access/modify/view things permitted by owner
+O : able to modify everything in its shop
+C : able to access/modify/view things permitted by owner
 A : able to modify platform settings as permitted by system
 
 2. DATABASE TABLES

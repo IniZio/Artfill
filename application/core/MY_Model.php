@@ -67,4 +67,25 @@ class MY_Model extends CI_Model
             return $this->db->get_where($table, $condition);
         }
     }
+
+    /**
+    * This function sends all emails from server
+    */
+    public function common_send_email()
+    {
+        $this->config->load('email');
+        $config=array_merge($config, $this->config->item('email'));
+        // Set SMTP Configuration
+        
+        if ($config ['smtp_user'] != '' && $config ['smtp_pass'] != '') {
+            $emailConfig = array (
+                    'protocol' => 'smtp',
+                    'smtp_host' => $config ['smtp_host'],
+                    'smtp_port' => $config ['smtp_port'],
+                    'smtp_user' => $config ['smtp_user'],
+                    'smtp_pass' => $config ['smtp_pass'],
+                    'auth' => true 
+            );
+        }
+    }
 }

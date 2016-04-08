@@ -54,9 +54,9 @@ class Welcome extends MY_Controller
      */
     public function welcome()
     {
-        $username = "85265530162";
+        $username = "85293044624";
         $nickname = "Newman";
-        $password = "A7+Dn9rhwWgy2HzPt9TIaUO6F9Y="; // The one we got registering the number
+        $password = "KCF3WbukCLzpsHR9AavLIyjRj5s="; // The one we got registering the number
         $debug = true;
 
         // Create a instance of WhastPort.
@@ -81,7 +81,7 @@ class Welcome extends MY_Controller
 
 
         $target="85297732499";
-        $message="Tell me on telegram whether u can following picture";
+        $message="Tell me on telegram whether u can get following picture";
         $w->sendMessage($target, $message);
 
         // $pathToAudio = "http://localhost/video/payphone.mp3"; // This could be url or path to image.
