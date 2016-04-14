@@ -1,0 +1,48 @@
+1. Just ideas
+- ME! showcase
+- whatsapp, wechat timely stats message
+- can register/login with phone number?
+- Online delivery
+- Product trading without money
+- Swagger
+- import from ig?
+
+2. RULES
+- log to file
+- inserting thing should be an easy step, editting thing is comprehensive
+- user roles: (U)ser, (O)wner, (C)ontributer, (A)dmin
+U : able to login
+O : able to modify everything in its shop
+C : able to access/modify/view things permitted by owner
+A : able to modify platform settings as permitted by system
+
+2. DATABASE TABLES
+`artfill_users` : list of users, their roles(admin, user, seller, employee)
+`artfill_sessions` : list of sessions, shows user hierarchy
+`artfill_admins` : list of admins and their permissions, inherit from user
+`artfill_platform_setting` : only one record, all core platform settings
+`artfill_ads` : list of advertisements, their specs, type includes image, banner, script
+`artfill_receipts` : list of receipts from transactions, promises, completed or not, pointer to proof
+`artfill_categories` : list of catergories according to criteria
+`artfill_tags` : list of used tags, prevents duplication
+`artfill_cms` : list content pages??
+`artfill_comments` : list comments, target shops, website features, previous comment, 
+`artfill_events` : list of events, whether official or community
+`artfill_news` : list of news, recent trends, possibly for email subscriped newsletter
+`artfill_shops` : list of shops, owner, members, employees
+`artfill_activity` : list of user actions with  user_id, receipt_id, comment_id...
+`artfill_regions` : list of regions with region_code, currency, default_language_code, tax
+`artfill_languages` : list of language codes
+`artfill_payment_gateway` : list of payment gateways
+`artfill_products` : all products
+`artfill_reports` : user report to website
+'artfill_themes' : might not need, list of themes, use 'default theme' as reference
+`artfill_cart` : shopping cart for each user
+
+
+3. CONFIG
+- default language code
+- 
+
+4. CONSTANTS
+- 
