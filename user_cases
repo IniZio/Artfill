@@ -1,0 +1,4 @@
+# Simulate user cases
+
+1. product transaction
+dream: buyer add product to card -> buyer checkout with payment gateway -> get receipt
