@@ -1,0 +1,8 @@
+           <div class="main"> <div class="top-warnig" id="tempp">
+                <h3><?php if($this->lang->line('comm_hi') != '') { echo stripslashes($this->lang->line('comm_hi')); } else echo 'Hi'; ?> <?php echo $this->session->userdata['shopsy_session_full_name'];?>, <?php if($this->lang->line('comm_mail_confirmation') != '') { echo stripslashes($this->lang->line('comm_mail_confirmation')); } else echo 'your account is unconfirmed'; ?>.</h3>
+                <p> </p>
+                <p><?php if($this->lang->line('comm_confirm') != '') { echo stripslashes($this->lang->line('comm_confirm')); } else echo 'Confirm'; ?> <strong><?php echo $this->session->userdata['shopsy_session_user_email'];?></strong> <?php if($this->lang->line('comm_accessall') != '') { echo stripslashes($this->lang->line('comm_accessall')); } else echo 'for access to all things'; ?> <?php echo $this->config->item('email_title'); ?>.</p>
+                <button onClick="return resendConfirmation('<?php echo $this->session->userdata['shopsy_session_user_email'];?>');" class="resendbutton confirm-email" style="cursor:pointer;"><?php if($this->lang->line('comm_resend_email') != '') { echo stripslashes($this->lang->line('comm_resend_email')); } else echo 'Resend email'; ?></button>
+             
+                <a href="settings/my-account/<?php echo $this->session->userdata['shopsy_session_user_name'];?>"><?php if($this->lang->line('comm_change_email') != '') { echo stripslashes($this->lang->line('comm_change_email')); } else echo 'Change your email'; ?></a>
+            </div></div>

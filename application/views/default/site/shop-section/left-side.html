@@ -1,0 +1,129 @@
+            		<div class="left_side">
+
+                	<div class="browse">
+
+                    	<h2><?php if($this->lang->line('shopsec_shop') != '') { echo stripslashes($this->lang->line('shopsec_shop')); } else echo 'Shop Sections'; ?></h2>
+
+                        <ul>
+
+                            <li><a href="<?php echo base_url().'shop-section/'.$this->uri->segment(2); ?>"><?php if($this->lang->line('shopsec_shophome') != '') { echo stripslashes($this->lang->line('shopsec_shophome')); } else echo 'Shop home'; ?><span><?php echo stripslashes($totProduct); ?> <?php if($this->lang->line('user_items') != '') { echo stripslashes($this->lang->line('user_items')); } else echo 'items'; ?></span></a></li>
+
+                            <?php foreach($get_shop_section_list as $shop_section_list_dtls) { 
+
+							/*if($_GET['search_query'] != '')
+
+							{*/
+
+								$shop_link = base_url().'shop-section/'.$this->uri->segment(2).'?section_id='.$shop_section_list_dtls['section_id'];
+
+							/*}
+
+							else
+
+							{
+
+								$shop_link = base_url().'shop-section/'.$this->uri->segment(2).'?section_id='.$shop_section_list_dtls['section_id'];
+
+							}*/
+
+							
+
+							if($shop_section_list_dtls['shop_prod_count'] != 0 && $shop_section_list_dtls['shop_prod_count'] != '') { 
+
+							?>
+
+                            	<li><a href="<?php echo $shop_link; ?>"><?php echo stripslashes($shop_section_list_dtls['section_name']); ?><span><?php echo stripslashes($shop_section_list_dtls['shop_prod_count']); ?></span></a></li>
+
+                               <?php } } ?>
+
+                        </ul>
+
+                    </div>
+
+                         <div class="email_subscribe">
+
+                    	<h2><?php if($this->lang->line('user_shop_owner') != '') { echo stripslashes($this->lang->line('user_shop_owner')); } else echo 'Shop Owner'; ?></h2>
+
+
+                      
+
+                        <div class="places"> <?php echo stripslashes($get_shop_owner_info['city']);?> <?php if($get_shop_owner_info['country'] != '') echo " , ".stripslashes($get_shop_owner_info['country']);?> </div>
+
+                       <div class="contact-detail">
+
+                        <p><b><?php if($this->lang->line('shopsec_question') != '') { echo stripslashes($this->lang->line('shopsec_question')); } else echo 'Have a question'; ?>?</b></p>
+
+							<?php 
+							if($this->session->userdata['shopsy_session_user_id'] != '') {
+								if($this->session->userdata['shopsy_session_user_id']==$get_shop_owner_info['seller_id']){
+								?>
+								<a class="contact_shop_owner-popup" href="#ownshop_contact" data-toggle="modal">
+									<?php if($this->lang->line('shopsec_contact') != '') { echo stripslashes($this->lang->line('shopsec_contact')); } else echo 'Contact the shop owner'; ?>
+								</a>
+								<?php } else { ?>
+								<a class="contact_shop_owner-popup" href="#contact_shop_owner" data-toggle="modal">
+									<?php if($this->lang->line('shopsec_contact') != '') { echo stripslashes($this->lang->line('shopsec_contact')); } else echo 'Contact the shop owner'; ?>
+								</a>
+						<?php }} else {?>
+								<a class="contact_shop_owner-popup" href="login?action=<?php echo current_url(); ?>">
+								<?php if($this->lang->line('shopsec_contact') != '') { echo stripslashes($this->lang->line('shopsec_contact')); } else echo 'Contact the shop owner'; ?>
+							</a>
+						
+						<?php } ?>
+
+                       </div>
+
+                          <!--<p><b>Need a custom order?</b></p>
+
+                        <input type="submit" value="Request Custom Order" class="subscribe_btn" />-->
+
+                    </div>
+
+                    <div class="email_subscribe">
+
+                    	<h2><?php if($this->lang->line('shopsec_shopinfo') != '') { echo stripslashes($this->lang->line('shopsec_shopinfo')); } else echo 'Shop Info'; ?></h2>                        
+
+                        <a class="names-it" href="<?php echo base_url().$this->uri->segment(1).'/'.$this->uri->segment(2); ?>"><span class="newimages"></span><?php echo stripslashes($get_seller_details['seller_businessname']); ?></a>
+
+                        <div class="places"> <?php if($this->lang->line('shopsec_openedon') != '') { echo stripslashes($this->lang->line('shopsec_openedon')); } else echo 'Opened on'; ?> <?php echo date("d M, Y",strtotime($get_seller_details['created'])); ?> </div>                        
+
+                        <div class="art">
+
+                            <ul>
+
+                            <li><a href="<?php echo base_url().$this->uri->segment(1).'/'.$this->uri->segment(2).'/about'; ?>"><?php if($this->lang->line('user_about') != '') { echo stripslashes($this->lang->line('user_about')); } else echo 'About'; ?></a></li>                    
+
+                            <li><a href="<?php echo base_url().$this->uri->segment(1).'/'.$this->uri->segment(2).'/policy'; ?>"><?php if($this->lang->line('shopsec_policy') != '') { echo stripslashes($this->lang->line('shopsec_policy')); } else echo 'Policies'; ?></a></li>   
+
+                            <li>
+
+                            <a href="<?php echo base_url().$this->uri->segment(1).'/'.$this->uri->segment(2).'/reviews'; ?>"><?php if($this->lang->line('shopsec_reviews') != '') { echo stripslashes($this->lang->line('shopsec_reviews')); } else echo 'Reviews'; ?><br />
+
+                            <span class="reviews">
+
+                                <div class="stars small" style="width: <?php echo $get_shop_owner_info['shop_ratting']*17.2 ?>px !important;"> </div>
+
+                            </span>    
+
+                            <span class="reviews-numbers">
+
+                                <span class="review-num">(<?php echo $get_shop_owner_info['review_count']; ?>)</span>
+
+                            </span>
+
+                            </a>
+
+                            </li>
+
+                            <li><a href="<?php echo base_url().$this->uri->segment(1).'/'.$this->uri->segment(2).'/sales'; ?>"><?php echo count($get_seller_sales_qry); ?> <?php if($this->lang->line('shopsec_sales') != '') { echo stripslashes($this->lang->line('shopsec_sales')); } else echo 'sales'; ?></a></li>
+
+                            <li><a href="shops/<?php echo $this->uri->segment(2); ?>/favoriters"><?php echo $Shopadmirers; ?> <?php if($this->lang->line('shopsec_admirers') != '') { echo stripslashes($this->lang->line('shopsec_admirers')); } else echo 'admirers'; ?></a></li>
+
+                            </ul>
+                        </div>
+                       </div>
+                     <div class="email_subscribe">
+                    	<h2><?php if($this->lang->line('shopsec_actions') != '') { echo stripslashes($this->lang->line('shopsec_actions')); } else echo 'Actions'; ?></h2>
+                        
+                       </div>   
+                    </div>
