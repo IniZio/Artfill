@@ -1,0 +1,6 @@
+			<PackageWeight>
+				<UnitOfMeasurement>
+					<Code>{PACKAGE_WEIGHT_UOM}</Code>
+				</UnitOfMeasurement>
+				<Weight>{PACKAGE_WEIGHT}</Weight>
+			</PackageWeight>

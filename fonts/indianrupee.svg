@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg>
+<metadata>
+Created by FontForge 20120731 at Wed Nov 12 02:14:17 2014
+ By Orthosie Webhosting
+(c)2010 Jay Paudyal, Rupee.im
+</metadata>
+<defs>
+<font id="IndianRupeeRegular" horiz-adv-x="1240" >
+  <font-face 
+    font-family="IndianRupeeRegular"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="2048"
+    panose-1="0 0 5 4 0 0 0 0 0 4"
+    ascent="1565"
+    descent="-483"
+    bbox="-20 0 4262 1493"
+    underline-thickness="109"
+    underline-position="-167"
+    unicode-range="U+0020-0060"
+  />
+<missing-glyph 
+d="M77 1493h962v-2q-85 -131 -96 -140h-257q53 -62 72 -151h274q5 -1 5 -4q-92 -138 -94 -138h-178q-6 -71 -68 -171q-82 -101 -157 -131q-140 -67 -268 -67v-2q0 -10 579 -687h-255q-564 657 -564 660v133l2 5q50 -7 117 -7q316 0 393 205q12 30 12 62h-572q-4 0 -4 4
+q95 138 97 138h454v2q-39 79 -151 123q-80 26 -144 26h-254v5q92 137 95 137zM4262 1469v0v0v0v0z" />
+    <glyph glyph-name=".notdef" 
+d="M77 1493h962v-2q-85 -131 -96 -140h-257q53 -62 72 -151h274q5 -1 5 -4q-92 -138 -94 -138h-178q-6 -71 -68 -171q-82 -101 -157 -131q-140 -67 -268 -67v-2q0 -10 579 -687h-255q-564 657 -564 660v133l2 5q50 -7 117 -7q316 0 393 205q12 30 12 62h-572q-4 0 -4 4
+q95 138 97 138h454v2q-39 79 -151 123q-80 26 -144 26h-254v5q92 137 95 137zM4262 1469v0v0v0v0z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="600" 
+ />
+    <glyph glyph-name="space" unicode=" " horiz-adv-x="600" 
+ />
+    <glyph glyph-name="underscore" unicode="_" 
+ />
+    <glyph glyph-name="grave" unicode="`" horiz-adv-x="1474" 
+d="M77 1493h962v-2q-85 -131 -96 -140h-257q53 -62 72 -151h274q5 -1 5 -4q-92 -138 -94 -138h-178q-6 -71 -68 -171q-82 -101 -157 -131q-140 -67 -268 -67v-2q0 -10 579 -687h-255q-564 657 -564 660v133l2 5q50 -7 117 -7q316 0 393 205q12 30 12 62h-572q-4 0 -4 4
+q95 138 97 138h454v2q-39 79 -151 123q-80 26 -144 26h-254v5q92 137 95 137zM4262 1469v0v0v0v0z" />
+    <glyph glyph-name="glyph5" 
+d="M77 1493h962v-2q-85 -131 -96 -140h-257q53 -62 72 -151h274q5 -1 5 -4q-92 -138 -94 -138h-178q-6 -71 -68 -171q-82 -101 -157 -131q-140 -67 -268 -67v-2q0 -10 579 -687h-255q-564 657 -564 660v133l2 5q50 -7 117 -7q316 0 393 205q12 30 12 62h-572q-4 0 -4 4
+q95 138 97 138h454v2q-39 79 -151 123q-80 26 -144 26h-254v5q92 137 95 137zM4262 1469v0v0v0v0z" />
+  </font>
+</defs></svg>

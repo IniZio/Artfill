@@ -1,0 +1,37 @@
+/* CSS */
+blockquote.easy_testimonial {
+    margin: 10px auto;
+    min-height: 80px;
+    padding: 10px;
+}
+
+blockquote.easy_testimonial .wp-post-image{
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+blockquote.easy_testimonial p {
+    width: 100%;
+}
+
+blockquote.easy_testimonial p a {
+}
+
+blockquote.easy_testimonial p a:hover{
+}
+
+blockquote.easy_testimonial cite{
+}
+
+.widgets blockquote.easy_testimonial{
+	margin: 5px auto;
+}
+
+.cycle-slideshow{
+	overflow: hidden;
+}
+
+.cycle-slide {
+    width: 100%;
+}

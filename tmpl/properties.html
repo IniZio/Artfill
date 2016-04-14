@@ -1,0 +1,58 @@
+<div id="propAccordion">
+<% 
+var selectorIndex = 0;
+for (var selector in properties){    
+    var props = properties[selector].props;
+%>
+    <div class="accordion-group <%='selector-index-' + selectorIndex%>">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-selector="<%=selector%>" data-toggle="collapse" data-parent="#propAccordion" data-target="#<%='properties-' + selectorIndex%>" href="javascript:;"><%=properties[selector].name%></a>
+        </div>
+        <div id="<%='properties-' + selectorIndex%>" class="accordion-body collapse" data-selector="<%=selector%>">
+            <div class="accordion-inner">
+                <ul class="property-list">
+                    <% for (var propId in props){%>
+                        <li class="<%='prop-index-' + propId%>" data-prop="<%=props[propId]%>">
+                            <span><%=props[propId]%></span>
+                            <div class="lcePropValue"></div>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+<%
+    selectorIndex++;
+} %>
+
+<button class="btn" id="cssBtn1" path="" >Save</button>
+
+
+</div>
+<script type="text/javascript">
+	
+	$("#cssBtn1").click(function(){	
+		var theme_name=$(document).find("#theme_id").val();	
+		var page_name= $(document).find("#page_name").val();
+		var path=$(this).attr("path");
+		var css = $("#lce").livecsseditor("getCss"); 
+		var header_css = $("#lce").livecsseditor("get_header_Css",{pagePath:path});
+		var footer_css = $("#lce").livecsseditor("get_footer_Css",{pagePath:path});
+		var body_css = $("#lce").livecsseditor("get_body_Css",{pagePath:path});		
+
+		$.ajax({
+			type: "POST",
+			url: "layout/write_css",
+			data:{"header_css":header_css,"footer_css":footer_css,"body_css":body_css,"theme_name":theme_name,"page_name":page_name},
+			success: function(data) 
+			{
+				
+				alert("Theme changed successfully");
+				
+			}
+			
+		});
+		
+	});
+	
+</script>

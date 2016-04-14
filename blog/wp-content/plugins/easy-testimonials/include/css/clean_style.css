@@ -1,0 +1,55 @@
+/* CSS */
+blockquote.easy_testimonial {
+    margin: 10px auto;
+    min-height: 80px;
+    padding: 10px;
+}
+
+blockquote.easy_testimonial p{
+    width: 100% !important;
+}
+
+blockquote.easy_testimonial p a {
+}
+
+blockquote.easy_testimonial p a:hover{
+}
+
+blockquote.easy_testimonial cite{
+}
+
+.attachment-easy_testimonial_thumb{
+  width: 60px;
+  height: 60px;
+}
+
+.attachment-easy_testimonial_thumb{
+  display: block;
+  margin: 1em auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
+}
+
+.widget blockquote.easy_testimonial .attachment-easy_testimonial_thumb {
+    height: 44px;
+    width: 44px;
+}
+
+body blockquote.easy_testimonial .wp-post-image{
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.cycle-slideshow{
+	overflow: hidden;
+}
+
+.cycle-slide {
+    width: 100%;
+}
