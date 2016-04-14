@@ -1,7 +1,7 @@
 RewriteEngine On
-RewriteBase /shop/
+RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond $1 !^(index\.php|javascript|images|robots\.txt)
-RewriteRule ^(.*)$ /shop/index.php?/$1 [L]
+RewriteRule ^(.*)$ /index.php?/$1 [L]
 Options -Indexes
