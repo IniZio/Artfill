@@ -2,7 +2,7 @@
 <div class="main" id="content_geo">
 <div style="text-align:left" class="regional-setting-left">
 <h5><?php if($this->lang->line('land_regionalsettings') != '') { echo stripslashes($this->lang->line('land_regionalsettings')); } else echo "Hi! We'd like to set these regional settings for you"; ?>.</h5>
-<h3><?php echo "English (".$GeoCountryCode."), ".$dcurrencySymbol." ".$GeoCurrencyArr->row()->currency_name." ".$dcurrencyType.", ". $GeoCountryArr->row()->name; ?> </h3>
+<h3><?php echo "中文繁體 (".$GeoCountryCode."), ".$dcurrencySymbol." ".$GeoCurrencyArr->row()->currency_name." ".$dcurrencyType.", ". $GeoCountryArr->row()->name; ?> </h3>
 </div>
 
 <div class="regional-setting-right">
