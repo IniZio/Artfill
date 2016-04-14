@@ -1,7 +1,0 @@
-{
-    "require": {
-        "guzzlehttp/guzzle": "^6.2",
-        "whatsapp/chat-api": "^3.2",
-        "monolog/monolog": "1.0.*"
-    }
-}
