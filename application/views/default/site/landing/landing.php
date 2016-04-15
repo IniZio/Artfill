@@ -47,6 +47,8 @@ shuffle($deal_of_day);
       <div class="recent-fav">
         
 		<?php  for($i=0;$i<$n;$i++){ 
+			if($i%3==0){ ?> <div class="row"> <?php }
+
 		
 		$img=explode(',',$deal_of_day[$i]->image); 
 		
@@ -118,6 +120,7 @@ shuffle($deal_of_day);
           </div>
          
         </div>
+        <?php if($i%3==2){ ?> </div> <?php } ?>
 		
 		<?php }  ?>
         
