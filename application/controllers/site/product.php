@@ -99,7 +99,7 @@ class Product extends MY_Controller {
 						redirect('shop/billing');
 					}else{
 						//redirect('products/'.$UPDATE_product_Seourl);
-						redirect('/');
+						redirect('/shop/sell');
 					}
 					
 				}else{
@@ -108,7 +108,7 @@ class Product extends MY_Controller {
 						redirect('shop/billing');
 					}else{
 						//redirect('products/'.$UPDATE_product_Seourl);
-						redirect('/');
+						redirect('/shop/sell');
 					}
 				}
 			}
