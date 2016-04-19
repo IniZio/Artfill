@@ -1448,7 +1448,7 @@ notify_version='".$_REQUEST['notify_version']."', amount='".$_REQUEST['amount'].
 			'CancelURL' => site_url('order/failure/pay_cancel'), 	// Required.  The URL to which the sender's browser is redirected if the sender cancels the approval for the payment after logging in to paypal.com.  1024 char max.
 			'CurrencyCode' => $curreny_type, 			// Required.  3 character currency code.
 			'FeesPayer' => 'EACHRECEIVER', 				// The payer of the fees.  Values are:  SENDER, PRIMARYRECEIVER, EACHRECEIVER, SECONDARYONLY
-			'IPNNotificationURL' => '', 				// The URL to which you want all IPN messages for this payment to be sent.  1024 char max.
+			'IPNNotificationURL' => site_url('paypal_ipn.php'), 				// The URL to which you want all IPN messages for this payment to be sent.  1024 char max.
 			'Memo' => '', 								// A note associated with the payment (text, not HTML).  1000 char max
 			'Pin' => '', 								// The sener's personal id number, which was specified when the sender signed up for the preapproval
 			'PreapprovalKey' => '', 					// The key associated with a preapproval for this payment.  The preapproval is required if this is a preapproved payment.  

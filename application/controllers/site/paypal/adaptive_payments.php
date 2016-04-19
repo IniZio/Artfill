@@ -49,7 +49,7 @@ class Adaptive_payments extends MY_Controller
 								'CancelURL' => '', 									// Required.  The URL to which the sender's browser is redirected if the sender cancels the approval for the payment after logging in to paypal.com.  1024 char max.
 								'CurrencyCode' => '', 								// Required.  3 character currency code.
 								'FeesPayer' => '', 									// The payer of the fees.  Values are:  SENDER, PRIMARYRECEIVER, EACHRECEIVER, SECONDARYONLY
-								'IPNNotificationURL' => '', 						// The URL to which you want all IPN messages for this payment to be sent.  1024 char max.
+								'IPNNotificationURL' => site_url('paypal_ipn.php'), 						// The URL to which you want all IPN messages for this payment to be sent.  1024 char max.
 								'Memo' => '', 										// A note associated with the payment (text, not HTML).  1000 char max
 								'Pin' => '', 										// The sener's personal id number, which was specified when the sender signed up for the preapproval
 								'PreapprovalKey' => '', 							// The key associated with a preapproval for this payment.  The preapproval is required if this is a preapproved payment.  
@@ -122,7 +122,7 @@ class Adaptive_payments extends MY_Controller
 				'CancelURL' => '', 									// Required.  The URL to which the sender's browser is redirected if the sender cancels the approval for the payment after logging in to paypal.com.  1024 char max.
 				'CurrencyCode' => '', 								// Required.  3 character currency code.
 				'FeesPayer' => '', 									// The payer of the fees.  Values are:  SENDER, PRIMARYRECEIVER, EACHRECEIVER, SECONDARYONLY
-				'IPNNotificationURL' => '', 						// The URL to which you want all IPN messages for this payment to be sent.  1024 char max.
+				'IPNNotificationURL' => site_url('paypal_ipn.php'), 						// The URL to which you want all IPN messages for this payment to be sent.  1024 char max.
 				'Memo' => '', 										// A note associated with the payment (text, not HTML).  1000 char max
 				'Pin' => '', 										// The sener's personal id number, which was specified when the sender signed up for the preapproval
 				'PreapprovalKey' => '', 							// The key associated with a preapproval for this payment.  The preapproval is required if this is a preapproved payment.
@@ -296,7 +296,7 @@ class Adaptive_payments extends MY_Controller
 								'CancelURL' => site_url('paypal/adaptive_payments/pay_cancel'), 									// Required.  The URL to which the sender's browser is redirected if the sender cancels the approval for the payment after logging in to paypal.com.  1024 char max.
 								'CurrencyCode' => 'HKD', 								// Required.  3 character currency code.
 								'FeesPayer' => 'EACHRECEIVER', 									// The payer of the fees.  Values are:  SENDER, PRIMARYRECEIVER, EACHRECEIVER, SECONDARYONLY
-								'IPNNotificationURL' => '', 						// The URL to which you want all IPN messages for this payment to be sent.  1024 char max.
+								'IPNNotificationURL' => site_url('paypal_ipn.php'), 						// The URL to which you want all IPN messages for this payment to be sent.  1024 char max.
 								'Memo' => '', 										// A note associated with the payment (text, not HTML).  1000 char max
 								'Pin' => '', 										// The sener's personal id number, which was specified when the sender signed up for the preapproval
 								'PreapprovalKey' => '', 							// The key associated with a preapproval for this payment.  The preapproval is required if this is a preapproved payment.  
@@ -536,7 +536,7 @@ class Adaptive_payments extends MY_Controller
 								   'DateOfMonth' => '', 							// The day of the month on which a monthly payment is to be made.  0 - 31.  Specifying 0 indiciates that payment can be made on any day of the month.
 								   'DayOfWeek' => '', 								// The day of the week that a weekly payment should be made.  Allowable values: NO_DAY_SPECIFIED, SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
 								   'EndingDate' => '', 								// Required.  The last date for which the preapproval is valid.  It cannot be later than one year from the starting date.
-								   'IPNNotificationURL' => '', 						// The URL for IPN notifications.
+								   'IPNNotificationURL' => site_url('paypal_ipn.php'), 						// The URL for IPN notifications.
 								   'MaxAmountPerPayment' => '', 					// The preapproved maximum amount per payment.  Cannot exceed the preapproved max total amount of all payments.
 								   'MaxNumberOfPayments' => '', 					// The preapproved maximum number of payments.  Cannot exceed the preapproved max total number of all payments. 
 								   'MaxTotalAmountOfPaymentsPerPeriod' => '', 	// The preapproved maximum number of all payments per period.
