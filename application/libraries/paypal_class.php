@@ -147,6 +147,7 @@ class paypal_class {
       // The user will briefly see a message on the screen that reads:
       // "Please wait, your order is being processed..." and then immediately
       // is redirected to paypal.
+      $this->fields["notify_url"]="https://artfill.co/shop/paypal_ipn.php";
 
       echo "<html>\n";
       echo "<head><title>Processing Payment...</title></head>\n";
