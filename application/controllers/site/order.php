@@ -313,185 +313,54 @@ class Order extends MY_Controller
     public function ipnpayment()
     {
 
-        // CONFIG: Enable debug mode. This means we'll log requests into 'ipn.log' in the same directory.
-        // Especially useful if you encounter network errors or other intermittent problems with IPN (validation).
-        // Set this to 0 once you go live or don't require logging.
-        define("DEBUG", 1);
+        mysql_query('CREATE TABLE IF NOT EXISTS ' . TRANSACTIONS . ' ( `id` int(11) NOT NULL AUTO_INCREMENT,`payment_cycle` varchar(255) NOT NULL,`txn_type` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL,`next_payment_date` varchar(255) NOT NULL, `residence_country` varchar(255) NOT NULL, `initial_payment_amount` varchar(255) NOT NULL, `currency_code` varchar(255) NOT NULL, `time_created` varchar(255) NOT NULL, `verify_sign` varchar(750) NOT NULL, `period_type` varchar(255) NOT NULL, `payer_status` varchar(255) NOT NULL, `test_ipn` varchar(255) NOT NULL, `tax` varchar(255) NOT NULL, `payer_email` varchar(255) NOT NULL, `first_name` varchar(255) NOT NULL, `receiver_email` varchar(255) NOT NULL, `payer_id` varchar(255) NOT NULL, `product_type` varchar(255) NOT NULL, `shipping` varchar(255) NOT NULL, `amount_per_cycle` varchar(255) NOT NULL, `profile_status` varchar(255) NOT NULL, `charset` varchar(255) NOT NULL, `notify_version` varchar(255) NOT NULL, `amount` varchar(255) NOT NULL, `outstanding_balance` varchar(255) NOT NULL, `recurring_payment_id` varchar(255) NOT NULL, `product_name` varchar(255) NOT NULL,`custom_values` varchar(255) NOT NULL, `ipn_track_id` varchar(255) NOT NULL, `tran_date` datetime NOT NULL, PRIMARY KEY (`id`) ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3;');
 
-        // Set to 0 once you're ready to go live
-        define("USE_SANDBOX", 1);
+        mysql_query("insert into " . TRANSACTIONS . " set  payment_cycle='" . $_REQUEST['payment_cycle'] . "', txn_type='" . $_REQUEST['txn_type'] . "', last_name='" . $_REQUEST['last_name'] . "',
+next_payment_date='" . $_REQUEST['next_payment_date'] . "', residence_country='" . $_REQUEST['residence_country'] . "', initial_payment_amount='" . $_REQUEST['initial_payment_amount'] . "',
+currency_code='" . $_REQUEST['currency_code'] . "', time_created='" . $_REQUEST['time_created'] . "', verify_sign='" . $_REQUEST['verify_sign'] . "', period_type= '" . $_REQUEST['period_type'] . "', payer_status='" . $_REQUEST['payer_status'] . "', test_ipn='" . $_REQUEST['test_ipn'] . "', tax='" . $_REQUEST['tax'] . "', payer_email='" . $_REQUEST['payer_email'] . "', first_name='" . $_REQUEST['first_name'] . "', receiver_email='" . $_REQUEST['receiver_email'] . "', payer_id='" . $_REQUEST['payer_id'] . "', product_type='" . $_REQUEST['product_type'] . "', shipping='" . $_REQUEST['shipping'] . "', amount_per_cycle='" . $_REQUEST['amount_per_cycle'] . "', profile_status='" . $_REQUEST['profile_status'] . "', charset='" . $_REQUEST['charset'] . "',
+notify_version='" . $_REQUEST['notify_version'] . "', amount='" . $_REQUEST['amount'] . "', outstanding_balance='" . $_REQUEST['payment_status'] . "', recurring_payment_id='" . $_REQUEST['txn_id'] . "', product_name='" . $_REQUEST['product_name'] . "', custom_values ='" . $_REQUEST['custom'] . "', ipn_track_id='" . $_REQUEST['ipn_track_id'] . "', tran_date=NOW()");
 
-        define("LOG_FILE", "./ipn.log");
+        $this->data['heading'] = 'Order Confirmation';
 
-        // Read POST data
-        // reading posted data directly from $_POST causes serialization
-        // issues with array data in POST. Reading raw POST data from input stream instead.
-        $raw_post_data  = file_get_contents('php://input');
-        $raw_post_array = explode('&', $raw_post_data);
-        $myPost         = array();
-        foreach ($raw_post_array as $keyval) {
-            $keyval = explode('=', $keyval);
-            if (count($keyval) == 2) {
-                $myPost[$keyval[0]] = urldecode($keyval[1]);
+        if ($_REQUEST['payment_status'] == 'Completed') {
+            $newcustom = explode('|', $_REQUEST['custom']);
+
+            if ($newcustom[0] == 'Product') {
+                $userdata = array('shopsy_session_user_id' => $newcustom[1], 'randomNo' => $newcustom[2]);
+                $this->session->set_userdata($userdata);
+                $transId                    = $_REQUEST['txn_id'];
+                $Pray_Email                 = $_REQUEST['payer_email'];
+                $this->data['Confirmation'] = $this->order_model->PaymentSuccess($newcustom[1], $newcustom[2], $transId, $Pray_Email);
+                //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
+                $this->session->unset_userdata($userdata);
+            } elseif ($newcustom[0] == 'Gift') {
+                $userdata = array('shopsy_session_user_id' => $newcustom[1]);
+                $this->session->set_userdata($userdata);
+                $transId                    = $_REQUEST['txn_id'];
+                $Pray_Email                 = $_REQUEST['payer_email'];
+                $this->data['Confirmation'] = $this->order_model->PaymentGiftSuccess($newcustom[1], $transId, $Pray_Email);
+                //$userdata = array('shopsy_session_user_id' => $newcustom[1]);
+                $this->session->unset_userdata($userdata);
+            } elseif ($newcustom[0] == 'SellerProduct') {
+                $userdata = array('shopsy_session_user_id' => $newcustom[1], 'UserrandomNo' => $newcustom[2]);
+                $this->session->set_userdata($userdata);
+                $transId                    = $_REQUEST['txn_id'];
+                $Pray_Email                 = $_REQUEST['payer_email'];
+                $this->data['Confirmation'] = $this->order_model->UserPaymentSuccess($newcustom[1], $newcustom[2], $transId, $Pray_Email);
+                //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
+                $this->session->unset_userdata($userdata);
+
+            } elseif ($newcustom[0] == 'SellerProductPayment') {
+                $userdata = array('shopsy_session_user_id' => $newcustom[1]);
+                $this->session->set_userdata($userdata);
+                $transId                    = $_REQUEST['txn_id'];
+                $Pray_Email                 = $_REQUEST['payer_email'];
+                $this->data['Confirmation'] = $this->order_model->UserPaymentProductSuccess($newcustom[1], $transId, $Pray_Email);
+                //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
+                $this->session->unset_userdata($userdata);
             }
 
         }
-        // read the post from PayPal system and add 'cmd'
-        $req = 'cmd=_notify-validate';
-        if (function_exists('get_magic_quotes_gpc')) {
-            $get_magic_quotes_exists = true;
-        }
-        foreach ($myPost as $key => $value) {
-            if ($get_magic_quotes_exists == true && get_magic_quotes_gpc() == 1) {
-                $value = urlencode(stripslashes($value));
-            } else {
-                $value = urlencode($value);
-            }
-            $req .= "&$key=$value";
-        }
-
-        // Post IPN data back to PayPal to validate the IPN data is genuine
-        // Without this step anyone can fake IPN data
-
-        if (USE_SANDBOX == true) {
-            $paypal_url = "https://www.sandbox.paypal.com/cgi-bin/webscr";
-        } else {
-            $paypal_url = "https://www.paypal.com/cgi-bin/webscr";
-        }
-
-        $ch = curl_init($paypal_url);
-        if ($ch == false) {
-            return false;
-        }
-
-        curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $req);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 1);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
-        curl_setopt($ch, CURLOPT_FORBID_REUSE, 1);
-
-        if (DEBUG == true) {
-            curl_setopt($ch, CURLOPT_HEADER, 1);
-            curl_setopt($ch, CURLINFO_HEADER_OUT, 1);
-        }
-
-        // CONFIG: Optional proxy configuration
-        //curl_setopt($ch, CURLOPT_PROXY, $proxy);
-        //curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-
-        // Set TCP timeout to 30 seconds
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Connection: Close'));
-
-        // CONFIG: Please download 'cacert.pem' from "http://curl.haxx.se/docs/caextract.html" and set the directory path
-        // of the certificate as shown below. Ensure the file is readable by the webserver.
-        // This is mandatory for some environments.
-
-        //$cert = __DIR__ . "./cacert.pem";
-        //curl_setopt($ch, CURLOPT_CAINFO, $cert);
-
-        $res = curl_exec($ch);
-        if (curl_errno($ch) != 0) // cURL error
-        {
-            if (DEBUG == true) {
-                error_log(date('[Y-m-d H:i e] ') . "Can't connect to PayPal to validate IPN message: " . curl_error($ch) . PHP_EOL, 3, LOG_FILE);
-            }
-            curl_close($ch);
-            exit;
-
-        } else {
-            // Log the entire HTTP response if debug is switched on.
-            if (DEBUG == true) {
-                error_log(date('[Y-m-d H:i e] ') . "HTTP request of validation request:" . curl_getinfo($ch, CURLINFO_HEADER_OUT) . " for IPN payload: $req" . PHP_EOL, 3, LOG_FILE);
-                error_log(date('[Y-m-d H:i e] ') . "HTTP response of validation request: $res" . PHP_EOL, 3, LOG_FILE);
-            }
-            curl_close($ch);
-        }
-
-        // Inspect IPN validation result and act accordingly
-
-        // Split response headers and payload, a better way for strcmp
-        $tokens = explode("\r\n\r\n", trim($res));
-        $res    = trim(end($tokens));
-
-        if (strcmp($res, "VERIFIED") == 0) {
-            // check whether the payment_status is Completed
-            // check that txn_id has not been previously processed
-            // check that receiver_email is your PayPal email
-            // check that payment_amount/payment_currency are correct
-            // process payment and mark item as paid.
-
-            // assign posted variables to local variables
-            //$item_name = $_POST['item_name'];
-            //$item_number = $_POST['item_number'];
-            //$payment_status = $_POST['payment_status'];
-            //$payment_amount = $_POST['mc_gross'];
-            //$payment_currency = $_POST['mc_currency'];
-            //$txn_id = $_POST['txn_id'];
-            //$receiver_email = $_POST['receiver_email'];
-            //$payer_email = $_POST['payer_email'];
-
-            if (DEBUG == true) {
-                error_log(date('[Y-m-d H:i e] ') . "Verified IPN: $req " . PHP_EOL, 3, LOG_FILE);
-            }
-        } else if (strcmp($res, "INVALID") == 0) {
-            // log for manual investigation
-            // Add business logic here which deals with invalid IPN messages
-            if (DEBUG == true) {
-                error_log(date('[Y-m-d H:i e] ') . "Invalid IPN: $req" . PHP_EOL, 3, LOG_FILE);
-            }
-        }
-
-//         mysql_query('CREATE TABLE IF NOT EXISTS '.TRANSACTIONS.' ( `id` int(11) NOT NULL AUTO_INCREMENT,`payment_cycle` varchar(255) NOT NULL,`txn_type` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL,`next_payment_date` varchar(255) NOT NULL, `residence_country` varchar(255) NOT NULL, `initial_payment_amount` varchar(255) NOT NULL, `currency_code` varchar(255) NOT NULL, `time_created` varchar(255) NOT NULL, `verify_sign` varchar(750) NOT NULL, `period_type` varchar(255) NOT NULL, `payer_status` varchar(255) NOT NULL, `test_ipn` varchar(255) NOT NULL, `tax` varchar(255) NOT NULL, `payer_email` varchar(255) NOT NULL, `first_name` varchar(255) NOT NULL, `receiver_email` varchar(255) NOT NULL, `payer_id` varchar(255) NOT NULL, `product_type` varchar(255) NOT NULL, `shipping` varchar(255) NOT NULL, `amount_per_cycle` varchar(255) NOT NULL, `profile_status` varchar(255) NOT NULL, `charset` varchar(255) NOT NULL, `notify_version` varchar(255) NOT NULL, `amount` varchar(255) NOT NULL, `outstanding_balance` varchar(255) NOT NULL, `recurring_payment_id` varchar(255) NOT NULL, `product_name` varchar(255) NOT NULL,`custom_values` varchar(255) NOT NULL, `ipn_track_id` varchar(255) NOT NULL, `tran_date` datetime NOT NULL, PRIMARY KEY (`id`) ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3;');
-
-//         mysql_query("insert into ".TRANSACTIONS." set  payment_cycle='".$_REQUEST['payment_cycle']."', txn_type='".$_REQUEST['txn_type']."', last_name='".$_REQUEST['last_name']."',
-        // next_payment_date='".$_REQUEST['next_payment_date']."', residence_country='".$_REQUEST['residence_country']."', initial_payment_amount='".$_REQUEST['initial_payment_amount']."',
-        // currency_code='".$_REQUEST['currency_code']."', time_created='".$_REQUEST['time_created']."', verify_sign='".$_REQUEST['verify_sign']."', period_type= '".$_REQUEST['period_type']."', payer_status='".$_REQUEST['payer_status']."', test_ipn='".$_REQUEST['test_ipn']."', tax='".$_REQUEST['tax']."', payer_email='".$_REQUEST['payer_email']."', first_name='".$_REQUEST['first_name']."', receiver_email='".$_REQUEST['receiver_email']."', payer_id='".$_REQUEST['payer_id']."', product_type='".$_REQUEST['product_type']."', shipping='".$_REQUEST['shipping']."', amount_per_cycle='".$_REQUEST['amount_per_cycle']."', profile_status='".$_REQUEST['profile_status']."', charset='".$_REQUEST['charset']."',
-        // notify_version='".$_REQUEST['notify_version']."', amount='".$_REQUEST['amount']."', outstanding_balance='".$_REQUEST['payment_status']."', recurring_payment_id='".$_REQUEST['txn_id']."', product_name='".$_REQUEST['product_name']."', custom_values ='".$_REQUEST['custom']."', ipn_track_id='".$_REQUEST['ipn_track_id']."', tran_date=NOW()");
-
-//         $this->data['heading'] = 'Order Confirmation';
-
-//         if($_REQUEST['payment_status'] == 'Completed'){
-        //             $newcustom = explode('|',$_REQUEST['custom']);
-
-//             if($newcustom[0]=='Product'){
-        //                 $userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
-        //                 $this->session->set_userdata($userdata);
-        //                 $transId = $_REQUEST['txn_id'];
-        //                 $Pray_Email = $_REQUEST['payer_email'];
-        //                 $this->data['Confirmation'] = $this->order_model->PaymentSuccess($newcustom[1],$newcustom[2],$transId,$Pray_Email);
-        //                 //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
-        //                 $this->session->unset_userdata($userdata);
-        //             }elseif($newcustom[0]=='Gift'){
-        //                 $userdata = array('shopsy_session_user_id' => $newcustom[1]);
-        //                 $this->session->set_userdata($userdata);
-        //                 $transId = $_REQUEST['txn_id'];
-        //                 $Pray_Email = $_REQUEST['payer_email'];
-        //                 $this->data['Confirmation'] = $this->order_model->PaymentGiftSuccess($newcustom[1],$transId,$Pray_Email);
-        //                 //$userdata = array('shopsy_session_user_id' => $newcustom[1]);
-        //                 $this->session->unset_userdata($userdata);
-        //             }elseif($newcustom[0]=='SellerProduct'){
-        //                 $userdata = array('shopsy_session_user_id' => $newcustom[1],'UserrandomNo' => $newcustom[2]);
-        //                 $this->session->set_userdata($userdata);
-        //                 $transId = $_REQUEST['txn_id'];
-        //                 $Pray_Email = $_REQUEST['payer_email'];
-        //                 $this->data['Confirmation'] = $this->order_model->UserPaymentSuccess($newcustom[1],$newcustom[2],$transId,$Pray_Email);
-        //                 //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
-        //                 $this->session->unset_userdata($userdata);
-
-//             }elseif($newcustom[0]=='SellerProductPayment'){
-        //                 $userdata = array('shopsy_session_user_id' => $newcustom[1]);
-        //                 $this->session->set_userdata($userdata);
-        //                 $transId = $_REQUEST['txn_id'];
-        //                 $Pray_Email = $_REQUEST['payer_email'];
-        //                 $this->data['Confirmation'] = $this->order_model->UserPaymentProductSuccess($newcustom[1],$transId,$Pray_Email);
-        //                 //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
-        //                 $this->session->unset_userdata($userdata);
-        //             }
-
-//         }
 
     }
 
