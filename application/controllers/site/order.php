@@ -323,7 +323,13 @@ notify_version='" . $_REQUEST['notify_version'] . "', amount='" . $_REQUEST['amo
         $this->data['heading'] = 'Order Confirmation';
 
         if ($_REQUEST['payment_status'] == 'Completed') {
-            $newcustom = explode('|', $_REQUEST['custom']);
+            if (isset($_REQUEST['paytype']) && $_REQUEST['paytype'] == 'adaptive') {
+                $newcustom[0] = 'SellerProduct';
+                $newcustom[1] = $_REQUEST['uid'];
+                $newcustom[2] = $_REQUEST['dealcode'];
+            } else {
+                $newcustom = explode('|', $_REQUEST['custom']);
+            }
 
             if ($newcustom[0] == 'Product') {
                 $userdata = array('shopsy_session_user_id' => $newcustom[1], 'randomNo' => $newcustom[2]);

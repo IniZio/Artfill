@@ -1,4 +1,6 @@
-.phpintel/
 vendor/
-images/
+./synced_commits.txt
+.phpintel/
 ipn.log
+synced_commits.txt
+images/
