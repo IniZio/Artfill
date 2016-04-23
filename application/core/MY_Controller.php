@@ -417,6 +417,7 @@ class MY_Controller extends CI_Controller {
 					session_start();
 				}
 				$_SESSION['template'] = 'default';
+				$_SESSION['old_template'] = 'default';
 				
 				if ($_SESSION['old_template']!=$_SESSION['template']){
 					$this->session->keep_flashdata('sErrMSGType');
@@ -441,6 +442,7 @@ class MY_Controller extends CI_Controller {
 					session_start();
 				}
 				$_SESSION['template'] = 'default';
+				$_SESSION['old_template'] = 'default';
 				
 				if ($_SESSION['old_template']!=$_SESSION['template']){
 					$this->session->keep_flashdata('sErrMSGType');
