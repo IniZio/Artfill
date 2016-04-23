@@ -574,7 +574,7 @@ die();
 			
 			$this->paypal_class->add_field('cancel_return', base_url().'order/failure'); // Cancel URL
 			
-			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment?paytype=adaptive&uid='.$loginUserId.'&dealcode='.$lastFeatureInsertId); // Notify url
+			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment'); // Notify url
 			
 			$this->paypal_class->add_field('custom', 'Product|'.$loginUserId.'|'.$lastFeatureInsertId); // Custom Values			
 			
@@ -862,9 +862,6 @@ die();
 			}else{
 				$this->paypal_class->paypal_url = 'https://www.paypal.com/cgi-bin/webscr';     // paypal url
 			}
-
-			// temporarily set all paypal url to sandbox
-			$this->paypal_class->paypal_url = 'https://www.sandbox.paypal.com/cgi-bin/webscr';
 			
 			$this->paypal_class->add_field('currency_code', $this->data['currencyType']);
 			
@@ -874,7 +871,7 @@ die();
 			
 			$this->paypal_class->add_field('cancel_return', base_url().'order/failure'); // Cancel URL
 			
-			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment?paytype=adaptive&uid='.$loginUserId.'&dealcode='.$lastFeatureInsertId); // Notify url
+			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment'); // Notify url
 			
 			$this->paypal_class->add_field('custom', 'SellerProduct|'.$loginUserId.'|'.$lastFeatureInsertId); // Custom Values			
 			
@@ -1451,7 +1448,7 @@ notify_version='".$_REQUEST['notify_version']."', amount='".$_REQUEST['amount'].
 			'CancelURL' => site_url('order/failure/pay_cancel'), 	// Required.  The URL to which the sender's browser is redirected if the sender cancels the approval for the payment after logging in to paypal.com.  1024 char max.
 			'CurrencyCode' => $curreny_type, 			// Required.  3 character currency code.
 			'FeesPayer' => 'EACHRECEIVER', 				// The payer of the fees.  Values are:  SENDER, PRIMARYRECEIVER, EACHRECEIVER, SECONDARYONLY
-			'IPNNotificationURL' => site_url('paypal_ipn.php'), 				// The URL to which you want all IPN messages for this payment to be sent.  1024 char max.
+			// 'IPNNotificationURL' => site_url('paypal_ipn.php'), 				// The URL to which you want all IPN messages for this payment to be sent.  1024 char max.
 			'IPNNotificationURL' => base_url().'site/order/ipnpayment?paytype=adaptive&uid='.$loginUserId.'&dealcode='.$lastFeatureInsertId, 
 			'Memo' => '', 								// A note associated with the payment (text, not HTML).  1000 char max
 			'Pin' => '', 								// The sener's personal id number, which was specified when the sender signed up for the preapproval
@@ -1571,7 +1568,7 @@ notify_version='".$_REQUEST['notify_version']."', amount='".$_REQUEST['amount'].
 			
 			$this->paypal_class->add_field('cancel_return', base_url().'order/failure'); // Cancel URL
 			
-			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment?paytype=adaptive&uid='.$loginUserId.'&dealcode='.$lastFeatureInsertId); // Notify url
+			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment'); // Notify url
 			
 			$this->paypal_class->add_field('custom', 'Gift|'.$loginUserId); // Custom Values			
 			
@@ -1936,7 +1933,7 @@ notify_version='".$_REQUEST['notify_version']."', amount='".$_REQUEST['amount'].
 			}
 			
 			
-			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment?paytype=adaptive&uid='.$loginUserId.'&dealcode='.$lastFeatureInsertId); // Notify url
+			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment'; // Notify url
 			
 			$this->paypal_class->add_field('custom', 'SellerProductPayment|'.$loginUserId.'|'.$lastFeatureInsertId.'|'.$totalAmount); // Custom Values			
 			
@@ -2132,7 +2129,7 @@ function UserPaymentOnwesternunion()
 	                $array1['amount']=ceil($totalAmount); 
 	                $array1['surl']=base_url().'order/payusuccess/'.$loginUserId.'/'.$lastFeatureInsertId; // Return URL
 			        $array1['curl']=base_url().'order/failure'; // Cancel URL
-			        $array1['furl']=base_url().'site/order/ipnpayment?paytype=adaptive&uid='.$loginUserId.'&dealcode='.$lastFeatureInsertId; // Notify url
+			        $array1['furl']=base_url().'site/order/ipnpayment'; // Notify url
 					$array1['productinfo']='Item Name , '.$item_name." Quantity,".$quantity;
 					$array1['email']=$this->config->item('email_title');
 					

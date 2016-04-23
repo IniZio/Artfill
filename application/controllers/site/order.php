@@ -312,63 +312,61 @@ class Order extends MY_Controller
      */
     public function ipnpayment()
     {
+        mysql_query('CREATE TABLE IF NOT EXISTS '.TRANSACTIONS.' ( `id` int(11) NOT NULL AUTO_INCREMENT,`payment_cycle` varchar(255) NOT NULL,`txn_type` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL,`next_payment_date` varchar(255) NOT NULL, `residence_country` varchar(255) NOT NULL, `initial_payment_amount` varchar(255) NOT NULL, `currency_code` varchar(255) NOT NULL, `time_created` varchar(255) NOT NULL, `verify_sign` varchar(750) NOT NULL, `period_type` varchar(255) NOT NULL, `payer_status` varchar(255) NOT NULL, `test_ipn` varchar(255) NOT NULL, `tax` varchar(255) NOT NULL, `payer_email` varchar(255) NOT NULL, `first_name` varchar(255) NOT NULL, `receiver_email` varchar(255) NOT NULL, `payer_id` varchar(255) NOT NULL, `product_type` varchar(255) NOT NULL, `shipping` varchar(255) NOT NULL, `amount_per_cycle` varchar(255) NOT NULL, `profile_status` varchar(255) NOT NULL, `charset` varchar(255) NOT NULL, `notify_version` varchar(255) NOT NULL, `amount` varchar(255) NOT NULL, `outstanding_balance` varchar(255) NOT NULL, `recurring_payment_id` varchar(255) NOT NULL, `product_name` varchar(255) NOT NULL,`custom_values` varchar(255) NOT NULL, `ipn_track_id` varchar(255) NOT NULL, `tran_date` datetime NOT NULL, PRIMARY KEY (`id`) ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3;');
 
-        mysql_query('CREATE TABLE IF NOT EXISTS ' . TRANSACTIONS . ' ( `id` int(11) NOT NULL AUTO_INCREMENT,`payment_cycle` varchar(255) NOT NULL,`txn_type` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL,`next_payment_date` varchar(255) NOT NULL, `residence_country` varchar(255) NOT NULL, `initial_payment_amount` varchar(255) NOT NULL, `currency_code` varchar(255) NOT NULL, `time_created` varchar(255) NOT NULL, `verify_sign` varchar(750) NOT NULL, `period_type` varchar(255) NOT NULL, `payer_status` varchar(255) NOT NULL, `test_ipn` varchar(255) NOT NULL, `tax` varchar(255) NOT NULL, `payer_email` varchar(255) NOT NULL, `first_name` varchar(255) NOT NULL, `receiver_email` varchar(255) NOT NULL, `payer_id` varchar(255) NOT NULL, `product_type` varchar(255) NOT NULL, `shipping` varchar(255) NOT NULL, `amount_per_cycle` varchar(255) NOT NULL, `profile_status` varchar(255) NOT NULL, `charset` varchar(255) NOT NULL, `notify_version` varchar(255) NOT NULL, `amount` varchar(255) NOT NULL, `outstanding_balance` varchar(255) NOT NULL, `recurring_payment_id` varchar(255) NOT NULL, `product_name` varchar(255) NOT NULL,`custom_values` varchar(255) NOT NULL, `ipn_track_id` varchar(255) NOT NULL, `tran_date` datetime NOT NULL, PRIMARY KEY (`id`) ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3;');
-
-        mysql_query("insert into " . TRANSACTIONS . " set  payment_cycle='" . $_REQUEST['payment_cycle'] . "', txn_type='" . $_REQUEST['txn_type'] . "', last_name='" . $_REQUEST['last_name'] . "',
-next_payment_date='" . $_REQUEST['next_payment_date'] . "', residence_country='" . $_REQUEST['residence_country'] . "', initial_payment_amount='" . $_REQUEST['initial_payment_amount'] . "',
-currency_code='" . $_REQUEST['currency_code'] . "', time_created='" . $_REQUEST['time_created'] . "', verify_sign='" . $_REQUEST['verify_sign'] . "', period_type= '" . $_REQUEST['period_type'] . "', payer_status='" . $_REQUEST['payer_status'] . "', test_ipn='" . $_REQUEST['test_ipn'] . "', tax='" . $_REQUEST['tax'] . "', payer_email='" . $_REQUEST['payer_email'] . "', first_name='" . $_REQUEST['first_name'] . "', receiver_email='" . $_REQUEST['receiver_email'] . "', payer_id='" . $_REQUEST['payer_id'] . "', product_type='" . $_REQUEST['product_type'] . "', shipping='" . $_REQUEST['shipping'] . "', amount_per_cycle='" . $_REQUEST['amount_per_cycle'] . "', profile_status='" . $_REQUEST['profile_status'] . "', charset='" . $_REQUEST['charset'] . "',
-notify_version='" . $_REQUEST['notify_version'] . "', amount='" . $_REQUEST['amount'] . "', outstanding_balance='" . $_REQUEST['payment_status'] . "', recurring_payment_id='" . $_REQUEST['txn_id'] . "', product_name='" . $_REQUEST['product_name'] . "', custom_values ='" . $_REQUEST['custom'] . "', ipn_track_id='" . $_REQUEST['ipn_track_id'] . "', tran_date=NOW()");
+        mysql_query("insert into ".TRANSACTIONS." set  payment_cycle='".$_REQUEST['payment_cycle']."', txn_type='".$_REQUEST['txn_type']."', last_name='".$_REQUEST['last_name']."',
+        next_payment_date='".$_REQUEST['next_payment_date']."', residence_country='".$_REQUEST['residence_country']."', initial_payment_amount='".$_REQUEST['initial_payment_amount']."',
+        currency_code='".$_REQUEST['currency_code']."', time_created='".$_REQUEST['time_created']."', verify_sign='".$_REQUEST['verify_sign']."', period_type= '".$_REQUEST['period_type']."', payer_status='".$_REQUEST['payer_status']."', test_ipn='".$_REQUEST['test_ipn']."', tax='".$_REQUEST['tax']."', payer_email='".$_REQUEST['payer_email']."', first_name='".$_REQUEST['first_name']."', receiver_email='".$_REQUEST['receiver_email']."', payer_id='".$_REQUEST['payer_id']."', product_type='".$_REQUEST['product_type']."', shipping='".$_REQUEST['shipping']."', amount_per_cycle='".$_REQUEST['amount_per_cycle']."', profile_status='".$_REQUEST['profile_status']."', charset='".$_REQUEST['charset']."',
+        notify_version='".$_REQUEST['notify_version']."', amount='".$_REQUEST['amount']."', outstanding_balance='".$_REQUEST['payment_status']."', recurring_payment_id='".$_REQUEST['txn_id']."', product_name='".$_REQUEST['product_name']."', custom_values ='".$_REQUEST['custom']."', ipn_track_id='".$_REQUEST['ipn_track_id']."', tran_date=NOW()");
 
         $this->data['heading'] = 'Order Confirmation';
+        if($_REQUEST['payment_status'] == 'Completed'){
+                    
+        	if (isset($_REQUEST['paytype']) && $_REQUEST['paytype']=='adaptive'){
+                    	$newcustom[0] = 'SellerProduct';
+                    	$newcustom[1] = $_REQUEST['uid'];
+                    	$newcustom[2] = $_REQUEST['dealcode'];
+                    } else {
+                    	$newcustom = explode('|',$_REQUEST['custom']);
+                    }
 
-        if ($_REQUEST['payment_status'] == 'Completed') {
-            if (isset($_REQUEST['paytype']) && $_REQUEST['paytype'] == 'adaptive') {
-                $newcustom[0] = 'SellerProduct';
-                $newcustom[1] = $_REQUEST['uid'];
-                $newcustom[2] = $_REQUEST['dealcode'];
-            } else {
-                $newcustom = explode('|', $_REQUEST['custom']);
-            }
+            if($newcustom[0]=='Product'){
+                        $userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
+                        $this->session->set_userdata($userdata);
+                        $transId = $_REQUEST['txn_id'];
+                        $Pray_Email = $_REQUEST['payer_email'];
+                        $this->data['Confirmation'] = $this->order_model->PaymentSuccess($newcustom[1],$newcustom[2],$transId,$Pray_Email);
+                        //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
+                        $this->session->unset_userdata($userdata);
+                    }elseif($newcustom[0]=='Gift'){
+                        $userdata = array('shopsy_session_user_id' => $newcustom[1]);
+                        $this->session->set_userdata($userdata);
+                        $transId = $_REQUEST['txn_id'];
+                        $Pray_Email = $_REQUEST['payer_email'];
+                        $this->data['Confirmation'] = $this->order_model->PaymentGiftSuccess($newcustom[1],$transId,$Pray_Email);
+                        //$userdata = array('shopsy_session_user_id' => $newcustom[1]);
+                        $this->session->unset_userdata($userdata);
+                    }elseif($newcustom[0]=='SellerProduct'){
+                        $userdata = array('shopsy_session_user_id' => $newcustom[1],'UserrandomNo' => $newcustom[2]);
+                        $this->session->set_userdata($userdata);
+                        $transId = $_REQUEST['txn_id'];
+                        $Pray_Email = $_REQUEST['payer_email'];
+                        $this->data['Confirmation'] = $this->order_model->UserPaymentSuccess($newcustom[1],$newcustom[2],$transId,$Pray_Email);
+                        //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
+                        $this->session->unset_userdata($userdata);
 
-            if ($newcustom[0] == 'Product') {
-                $userdata = array('shopsy_session_user_id' => $newcustom[1], 'randomNo' => $newcustom[2]);
-                $this->session->set_userdata($userdata);
-                $transId                    = $_REQUEST['txn_id'];
-                $Pray_Email                 = $_REQUEST['payer_email'];
-                $this->data['Confirmation'] = $this->order_model->PaymentSuccess($newcustom[1], $newcustom[2], $transId, $Pray_Email);
-                //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
-                $this->session->unset_userdata($userdata);
-            } elseif ($newcustom[0] == 'Gift') {
-                $userdata = array('shopsy_session_user_id' => $newcustom[1]);
-                $this->session->set_userdata($userdata);
-                $transId                    = $_REQUEST['txn_id'];
-                $Pray_Email                 = $_REQUEST['payer_email'];
-                $this->data['Confirmation'] = $this->order_model->PaymentGiftSuccess($newcustom[1], $transId, $Pray_Email);
-                //$userdata = array('shopsy_session_user_id' => $newcustom[1]);
-                $this->session->unset_userdata($userdata);
-            } elseif ($newcustom[0] == 'SellerProduct') {
-                $userdata = array('shopsy_session_user_id' => $newcustom[1], 'UserrandomNo' => $newcustom[2]);
-                $this->session->set_userdata($userdata);
-                $transId                    = $_REQUEST['txn_id'];
-                $Pray_Email                 = $_REQUEST['payer_email'];
-                $this->data['Confirmation'] = $this->order_model->UserPaymentSuccess($newcustom[1], $newcustom[2], $transId, $Pray_Email);
-                //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
-                $this->session->unset_userdata($userdata);
-
-            } elseif ($newcustom[0] == 'SellerProductPayment') {
-                $userdata = array('shopsy_session_user_id' => $newcustom[1]);
-                $this->session->set_userdata($userdata);
-                $transId                    = $_REQUEST['txn_id'];
-                $Pray_Email                 = $_REQUEST['payer_email'];
-                $this->data['Confirmation'] = $this->order_model->UserPaymentProductSuccess($newcustom[1], $transId, $Pray_Email);
-                //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
-                $this->session->unset_userdata($userdata);
-            }
+            }elseif($newcustom[0]=='SellerProductPayment'){
+                        $userdata = array('shopsy_session_user_id' => $newcustom[1]);
+                        $this->session->set_userdata($userdata);
+                        $transId = $_REQUEST['txn_id'];
+                        $Pray_Email = $_REQUEST['payer_email'];
+                        $this->data['Confirmation'] = $this->order_model->UserPaymentProductSuccess($newcustom[1],$transId,$Pray_Email);
+                        //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
+                        $this->session->unset_userdata($userdata);
+                    }
 
         }
-
-    }
+}
 
     /**
      *
