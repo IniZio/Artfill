@@ -574,7 +574,7 @@ die();
 			
 			$this->paypal_class->add_field('cancel_return', base_url().'order/failure'); // Cancel URL
 			
-			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment'); // Notify url
+			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment?paytype=adaptive&uid='.$loginUserId.'&dealcode='.$lastFeatureInsertId); // Notify url
 			
 			$this->paypal_class->add_field('custom', 'Product|'.$loginUserId.'|'.$lastFeatureInsertId); // Custom Values			
 			
@@ -874,7 +874,7 @@ die();
 			
 			$this->paypal_class->add_field('cancel_return', base_url().'order/failure'); // Cancel URL
 			
-			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment'); // Notify url
+			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment?paytype=adaptive&uid='.$loginUserId.'&dealcode='.$lastFeatureInsertId); // Notify url
 			
 			$this->paypal_class->add_field('custom', 'SellerProduct|'.$loginUserId.'|'.$lastFeatureInsertId); // Custom Values			
 			
@@ -1571,7 +1571,7 @@ notify_version='".$_REQUEST['notify_version']."', amount='".$_REQUEST['amount'].
 			
 			$this->paypal_class->add_field('cancel_return', base_url().'order/failure'); // Cancel URL
 			
-			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment'); // Notify url
+			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment?paytype=adaptive&uid='.$loginUserId.'&dealcode='.$lastFeatureInsertId); // Notify url
 			
 			$this->paypal_class->add_field('custom', 'Gift|'.$loginUserId); // Custom Values			
 			
@@ -1936,7 +1936,7 @@ notify_version='".$_REQUEST['notify_version']."', amount='".$_REQUEST['amount'].
 			}
 			
 			
-			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment'); // Notify url
+			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment?paytype=adaptive&uid='.$loginUserId.'&dealcode='.$lastFeatureInsertId); // Notify url
 			
 			$this->paypal_class->add_field('custom', 'SellerProductPayment|'.$loginUserId.'|'.$lastFeatureInsertId.'|'.$totalAmount); // Custom Values			
 			
@@ -2132,7 +2132,7 @@ function UserPaymentOnwesternunion()
 	                $array1['amount']=ceil($totalAmount); 
 	                $array1['surl']=base_url().'order/payusuccess/'.$loginUserId.'/'.$lastFeatureInsertId; // Return URL
 			        $array1['curl']=base_url().'order/failure'; // Cancel URL
-			        $array1['furl']=base_url().'site/order/ipnpayment'; // Notify url
+			        $array1['furl']=base_url().'site/order/ipnpayment?paytype=adaptive&uid='.$loginUserId.'&dealcode='.$lastFeatureInsertId; // Notify url
 					$array1['productinfo']='Item Name , '.$item_name." Quantity,".$quantity;
 					$array1['email']=$this->config->item('email_title');
 					
