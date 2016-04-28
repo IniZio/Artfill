@@ -190,9 +190,9 @@ class User extends MY_Controller
         $rating            = $this->input->post('rating');
         $status            = "Active";
         $title             = $this->input->post('title');
-        // if (trim($this->input->post('old_msg')) != $description || $this->input->post('old_rating') != $rating) {
-        //     $status = "Inactive";
-        // }
+        if (trim($this->input->post('old_msg')) != $description || $this->input->post('old_rating') != $rating) {
+            $status = "Inactive";
+        }
         $dataArray = array('voter_id' => $voter_id,
             'shop_id'                     => $shop_id,
             'seller_product_id'           => $seller_product_id,
@@ -233,7 +233,6 @@ class User extends MY_Controller
             $query        = "SELECT AVG(rating) as shop_ratting,COUNT(*) as review_count  FROM " . PRODUCT_FEEDBACK . " WHERE status='Active' and shop_id=" . $shop_id;
             $shop_ratting = $this->user_model->ExecuteQuery($query)->row();
             $ratting      = round($shop_ratting->shop_ratting, 2);
-            echo '<pre>'.$shop_ratting->shop_ratting;die;
             $review_count = $shop_ratting->review_count;
             $condition    = array('seller_id' => $shop_id);
             $dataArr      = array('shop_ratting' => $ratting, 'review_count' => $review_count);
