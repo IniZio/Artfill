@@ -47,8 +47,6 @@ shuffle($deal_of_day);
       <div class="recent-fav">
         
 		<?php  for($i=0;$i<$n;$i++){ 
-			if($i%3==0){ ?> <div class="row"> <?php }
-
 		
 		$img=explode(',',$deal_of_day[$i]->image); 
 		
@@ -120,7 +118,6 @@ shuffle($deal_of_day);
           </div>
          
         </div>
-        <?php if($i%3==2){ ?> </div> <?php } ?>
 		
 		<?php }  ?>
         
@@ -309,7 +306,7 @@ if( $this->config->item('testimonial')=='active' && $new_promote->id!=''){/*
 	}
 	</style>
 	
-	
+	<!--
 	<a href="coming-soon">
 	<div class="col-md-3" style="overflow:hidden;">
 		<img src="./images/editor_pick.png" />
@@ -343,6 +340,7 @@ if( $this->config->item('testimonial')=='active' && $new_promote->id!=''){/*
 		</div>
 	</div>
 	</a>
+        -->
 	
 		<ul class="hme-container col-md-12">
 		
@@ -723,11 +721,16 @@ if($this->config->item('recent_prod')=='active' && count($recent_product_details
   #exit;
   
 
-  for($i=0;$i<count($recent_product_details->result());$i++){ 
+  for($i=0;$i<count($recent_product_details->result());$i++){
 		
 		$img=explode(',',$recent_product_details->row($i)->image); 
 		
 	?>     
+	
+	<?php if($i==0 || $i%3==0){ ?>
+		<div class="row" style="margin:10px;">
+	<?php } ?>
+	
 		<div class="col-md-4 rf-bl animateblock right1">
 		  <div class="rf-bl-pic">
 			<!-- <a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/<?php echo $img[0]; ?>" alt="recent"> </a> -->
@@ -759,8 +762,7 @@ if($this->config->item('recent_prod')=='active' && count($recent_product_details
 		  ?>
 		<div class="offer-tag">
 									<p class="off-price"><?php echo $recent_product_details->row($i)->discount; ?>% Off</p>
-								</div>
-								
+								</div>								
 	     <?php }} ?>
    
 		  </div>
@@ -792,6 +794,10 @@ if($this->config->item('recent_prod')=='active' && count($recent_product_details
           </div>
          
         </div>
+		
+	<?php if(($i+1)%3 == 0){ ?>
+		</div>
+	<?php } ?>
 		
 		<?php }  ?>
         

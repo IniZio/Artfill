@@ -10,6 +10,18 @@ if($CurrUserImg != ''){
 	$user_pic='default_avat.png';
 } 												
 ?>
+<?php /*
+	$userdata = array(
+	    'shopsy_session_user_id'      => 1,
+	    'shopsy_session_user_name'    => 'ArtfillAdmin',
+	    'shopsy_session_full_name'    => 'ArtfillAdmin',
+	    'shopsy_session_user_email'   => 'admin@artfill.co',
+	    'shopsy_session_user_confirm' => 'Yes',
+	    'userType'                    => 'Seller',
+	);
+
+	$this->session->set_userdata($userdata);*/
+?>
 <style>
 #you1{
 	background-image:url("<?php echo base_url()."images/".$user_pic; ?>");
@@ -23,6 +35,18 @@ if($CurrUserImg != ''){
 	width: 31px;
 	background-size: cover;
 }
+
+/* Chrome, Safari, Opera */
+/* @-webkit-keyframes example {
+    0%   {left:0px; top:-100px;}
+    100%  {left:0px; top:0px;}
+}
+ */
+/* Standard syntax */
+/* @keyframes example {
+    0%   {left:0px; top:-100px;}
+    100%  {left:0px; top:0px;}
+} */
 </style>
 
 
@@ -42,7 +66,10 @@ if($CurrUserImg != ''){
 <body>
 <!-- header_start -->
  <header>
- <div class="header_top" style="position:relative;">
+ <div class="header_top" style="position:relative;-webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 1s;">
  
 		<?php if($this->session->userdata['shopsy_session_user_name'] == '' || true){?>
 			<div class="container top">
@@ -501,7 +528,7 @@ if($CurrUserImg != ''){
 		});
 		</script>
 		</div>
-		<div class="header_top header_fixed_menu" style="background-image:none;position:relative;">
+		<div class="header_top header_fixed_menu" style="background-image:none;position:relative; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 				<div class="container top">
 				<div class="row">
 								 

@@ -40,8 +40,8 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 
 </style>
 
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/default/site/base.css" />
 <link rel="stylesheet" href="css/default/site/style-menu.css" />
 <script>
@@ -486,7 +486,6 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 												
 					<div class="conversation_right">
 					
-<!-- 				<input class="conversation-subject" type="text" name="subject" placeholder="Subject" value="Re: Order #1439537778 on Aug 14,2015 ">  -->
 					
 	    			<textarea class="conversation-textarea" rows="11" name="message_text" id="message_text" placeholder="Message text"></textarea>
 					
