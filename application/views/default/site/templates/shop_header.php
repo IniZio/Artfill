@@ -73,7 +73,7 @@ if($CurrUserImg != ''){
 		        <?php if(count($shopProduc)!= 0) { ?>
 		        <a title="<?php echo shopsy_lg('lg_Choose_your_shop_payment','Choose your shop payment methods.');?>" href="shop/payment" class="<?php if($this->uri->segment(2)=='payment'){ echo 'shop_active_tab';} ?>  " ><div class="name-inner"><?php if($this->lang->line('comm_getpaid') != '') { echo stripslashes($this->lang->line('comm_getpaid')); } else echo 'Get Paid'; ?></div></a>
 		        <?php } else{ ?>
-		         <a class="shop_active"><div class="name-inner"><?php if($this->lang->line('comm_getpaid') != '') { echo stripslashes($this->lang->line('comm_getpaid')); } else echo 'Get Paid'; ?></div></a>
+		         <a class=""><div class="name-inner"><?php if($this->lang->line('comm_getpaid') != '') { echo stripslashes($this->lang->line('comm_getpaid')); } else echo 'Get Paid'; ?></div></a>
 				 <?php } ?>
 			</li>
 			
@@ -82,7 +82,7 @@ if($CurrUserImg != ''){
 		        <?php if($selectSellershop_details[0]['payment_mode']!= '') { ?>
 		        	<a title="<?php echo shopsy_lg('lg_Enter_the_credit_card_to_pay','Enter the credit card you want to use to pay your bill.');?>" href="shop/billing" class="<?php if($this->uri->segment(2)=='billing'){ echo 'shop_active_tab';} ?> "> <div class="name-inner"><?php if($this->lang->line('comm_billing') != '') { echo stripslashes($this->lang->line('comm_billing')); } else echo 'Billing'; ?></div></a>
 		        <?php } else { ?>
-					<a   class="shop_active"  > <div class="name-inner"><?php if($this->lang->line('comm_billing') != '') { echo stripslashes($this->lang->line('comm_billing')); } else echo 'Billing'; ?></div></a>
+					<a class=""> <div class="name-inner"><?php if($this->lang->line('comm_billing') != '') { echo stripslashes($this->lang->line('comm_billing')); } else echo 'Billing'; ?></div></a>
 		        <?php } ?>
 		       
 		     </li>

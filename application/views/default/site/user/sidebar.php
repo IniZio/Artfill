@@ -101,15 +101,7 @@
 	<?php	}
 	?>
 
-    <?php if($this->session->userdata['FBlogout']==''){ ?>
-
-                        <li><a href="logout"><?php if($this->lang->line('sign_out') != '') { echo stripslashes($this->lang->line('sign_out')); } else echo 'Sign Out'; ?></a></li>
-
-                        <?php }else{ ?>
-
-                        <li><a href="<?php echo $this->session->userdata['FBlogout']; ?>"><?php if($this->lang->line('sign_out') != '') { echo stripslashes($this->lang->line('sign_out')); } else echo 'Sign Out'; ?></a></li>
-
-                        <?php } ?>
+    
 
     
 

@@ -486,6 +486,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 												
 					<div class="conversation_right">
 					
+<!-- 				<input class="conversation-subject" type="text" name="subject" placeholder="Subject" value="Re: Order #1439537778 on Aug 14,2015 ">  -->
 					
 	    			<textarea class="conversation-textarea" rows="11" name="message_text" id="message_text" placeholder="Message text"></textarea>
 					

@@ -1006,7 +1006,7 @@ class User extends MY_Controller
 
                     $this->session->set_userdata($userdata);
 
-                    echo $this->session->userdata('shopsy_session_user_id')."\r\n";echo $this->session->userdata('shopsy_session_user_name')."\r\n";echo $this->session->userdata('shopsy_session_full_name')."\r\n";echo $this->session->userdata('shopsy_session_user_email')."\r\n";echo $this->session->userdata('shopsy_session_user_confirm')."\r\n";echo $this->session->userdata('userType')."\r\n";die;
+                    // echo $this->session->userdata('shopsy_session_user_id')."\r\n";echo $this->session->userdata('shopsy_session_user_name')."\r\n";echo $this->session->userdata('shopsy_session_full_name')."\r\n";echo $this->session->userdata('shopsy_session_user_email')."\r\n";echo $this->session->userdata('shopsy_session_user_confirm')."\r\n";echo $this->session->userdata('userType')."\r\n";die;
 
                     //echo '<pre>'; print_r($next); die;
                     if ($stay_signed_in == "yes") {

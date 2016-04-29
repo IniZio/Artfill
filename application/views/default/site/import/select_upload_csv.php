@@ -14,8 +14,8 @@ $this->load->view('site/templates/shop_header',$this->data);
 								<li class="col-md-3">
 									<a href="etsy-import">										
 										<h4>
-											<!-- <img src="images/etsylogo.png" alt="From Etsy" title="From Etsy" /> -->
-											<div>From Artfill</div>
+											<img src="images/etsylogo.png" alt="From Etsy" title="From Etsy" />
+											<div>From Etsy</div>
 										</h4>
 									</a>
 								</li>

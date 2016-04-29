@@ -128,7 +128,7 @@ if($this->session->userdata('rUrl') != ''){
 										  <span style=" color: #999999;font-size: 11px;margin: 12px 0 5px;"> 
 										  <input type="checkbox" name="privacychecking" id="privacychecking"  checked/> 
 										  <?php if($this->lang->line('user_by_clk_rster') != '') { echo stripslashes($this->lang->line('user_by_clk_rster')); } else echo "By clicking Register, you confirm that you accept our"; ?> 
-											<a href="pages/terms-conditions" target="_blank"><?php if($this->lang->line('user_touse') != '') { echo stripslashes($this->lang->line('user_touse')); } else echo "Terms of Use"; ?></a> <?php if($this->lang->line('user_and') != '') { echo stripslashes($this->lang->line('user_and')); } else echo "and"; ?><a href="pages/privacy-policy" target="_blank"> <?php if($this->lang->line('user_privacy_policy') != '') { echo stripslashes($this->lang->line('user_privacy_policy')); } else echo "Privacy Policy"; ?></a></span>
+											<a href="terms" target="_blank"><?php if($this->lang->line('user_touse') != '') { echo stripslashes($this->lang->line('user_touse')); } else echo "Terms of Use"; ?></a> <?php if($this->lang->line('user_and') != '') { echo stripslashes($this->lang->line('user_and')); } else echo "and"; ?><a href="privacy" target="_blank"> <?php if($this->lang->line('user_privacy_policy') != '') { echo stripslashes($this->lang->line('user_privacy_policy')); } else echo "Privacy Policy"; ?></a></span>
 											<br />
 											
 											 <input type="checkbox" name="subscription" id="subscription" style="display:none;" />

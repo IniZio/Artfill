@@ -15,7 +15,7 @@ $this->load->view('site/templates/header');
 
 </div>
 
-
+<!--
   <div class="container">
   
 		<ul class="bread_crumbs">
@@ -26,7 +26,7 @@ $this->load->view('site/templates/header');
   
 
      <?php echo stripslashes($this->config->item('shop_index_page')); ?>
-
+	</div>-->
 
 </section>
   

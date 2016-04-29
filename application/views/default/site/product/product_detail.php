@@ -27,7 +27,7 @@ $this->load->view('site/templates/header');
     <![endif]-->
 
 <div id="product_detail_div">
-	<section class="container">
+	<section class="row">
   <div class="seller-wrapper">
     <div class="col-md-6 seller"> 
 	<?php if($selectedSeller_details[0]['thumbnail']!=""){ $Pro_pic=$selectedSeller_details[0]['thumbnail']; }else { $Pro_pic='profile_pic.png';} ?>
@@ -77,7 +77,7 @@ $this->load->view('site/templates/header');
   </div>
   
   
-  <div class="content-seller">
+  <div class="content-seller" style="width:100%;">
   <div class="col-md-12">
     <div class="seller-right col-md-7">
       <div class="favorites-nag">

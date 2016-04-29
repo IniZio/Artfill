@@ -85,16 +85,6 @@ $this->load->model('user_model');
 					
 					
 					
-					
-						<div class="shop_view_text">
-							<a style="font-size:14px; font-weight:bold; line-height:24px; float:left;  text-decoration:none;" href="shop-section/<?php echo stripslashes($get_seller_details['seller_businessname']); ?>">
-								<?php  echo stripslashes($get_seller_details['shop_title']); ?>
-								<?php  echo "("; ?>
-								<?php  echo stripslashes($get_seller_details['seller_businessname']); ?>
-								<?php  echo ")"; ?>
-</a>
-							<div class="opented" style="font-size:11px; color:#fff;"><?php if($this->lang->line('shopsec_openedon') != '') { echo stripslashes($this->lang->line('shopsec_openedon')); } else echo 'Opened on'; ?> <?php echo substr($get_seller_details['created'],0,10); ?></div>
-						</div>
 						<div class="shop-owner-text">
 							<ul>
 								<li>
@@ -146,6 +136,7 @@ $this->load->model('user_model');
 				</div>
 				<div id="shop-detail-info" class="shopview_info">
 					<ul>
+						<li><a href="<?php echo base_url().'shop-section/'.$this->uri->segment(2); ?>"><?php  echo stripslashes($get_seller_details['shop_title']); ?></a></li>
 						<?php
 						
 							$seller_shoper_id = stripslashes($get_seller_details['seller_id']);

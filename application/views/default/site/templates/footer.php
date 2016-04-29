@@ -56,7 +56,7 @@
 	</div>-->
 		  <div class="col-md-6  footer-block">
 		<ul class="footer-list">
-		<li><a href="about">關於我們</a></li>
+		<li><a href="pages/about-us">關於我們</a></li>
 		<li><a href="company">公司資料</a></li>
 		<li><a href="shop/sell">商店加盟</a></li>
 		<li><a href="terms">使用條款</a></li>
@@ -125,7 +125,7 @@
 	</div>-->
 		  <div class="col-md-4  footer-block">
 		<ul class="footer-list">
-		<li><a href="about">關於我們</a></li>
+		<li><a href="pages/about-us">關於我們</a></li>
 		<li><a href="company">公司資料</a></li>
 		<li><a href="shop/sell">商店加盟</a></li>
 		<li><a href="terms">使用條款</a></li>
@@ -146,11 +146,11 @@
 <!--
 <div class="col-lg-3  footer-block"><span class="footer-head no-ul"><span>政策</span></span> 
 <ul class="footer-list">
-<li><a href="http://localhost/pages/privacy-policy">私隱政策</a></li>
-<li><span><a href="http://localhost/pages/terms-and-conditions">使用條款</a></span></li>
-<li><span><span><a href="http://localhost/pages/refund-and-return-policy">退款及退還細則</a></span><br /></span></li>
-<li><span><span><span><a href="http://localhost/pages/sales-policy">銷售政策</a></span><br /></span></span></li>
-<li><span><span><span><span><a href="http://localhost/pages/sellers-eligibility-and-protection-policy">開店準則及保障</a></span><br /></span></span></span></li>
+<li><a href="https://artfill.co/shop/pages/privacy-policy">私隱政策</a></li>
+<li><span><a href="https://artfill.co/shop/pages/terms-and-conditions">使用條款</a></span></li>
+<li><span><span><a href="https://artfill.co/shop/pages/refund-and-return-policy">退款及退還細則</a></span><br /></span></li>
+<li><span><span><span><a href="https://artfill.co/shop/pages/sales-policy">銷售政策</a></span><br /></span></span></li>
+<li><span><span><span><span><a href="https://artfill.co/shop/pages/sellers-eligibility-and-protection-policy">開店準則及保障</a></span><br /></span></span></span></li>
 </ul>
 </div>
 
