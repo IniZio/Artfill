@@ -9,7 +9,6 @@
 
 class Landing extends MY_Controller {
 	function __construct(){
-	
         parent::__construct();
 		$this->load->helper(array('cookie','date','form','email'));
 		$this->load->library('session');
@@ -57,7 +56,6 @@ class Landing extends MY_Controller {
      * 
      */
    	public function index(){	 
-
 // 		if ($this->checkLogin('U') != ''){
 // 			redirect('home');
 // 		}
@@ -106,8 +104,8 @@ class Landing extends MY_Controller {
 		
 		
 		//$bancondition = array('status' =>'Publish');
-		$this->data['bannerSlide'] = $this->user_model->get_all_details(LANDING_BANNER,$bancondition);
-		$this->data['bannerSlide_image'] = $this->user_model->get_all_details(LANDING_BANNER,$bancondition)->result_array();
+		//$this->data['bannerSlide'] = $this->user_model->get_all_details(LANDING_BANNER,$bancondition);
+		//$this->data['bannerSlide_image'] = $this->user_model->get_all_details(LANDING_BANNER,$bancondition)->result_array();
 		
 		$this->data['banner_settings'] = $this->user_model->get_all_details(BANNER_SETTINGS,array());
 		$condition = array('status'=>'active');
@@ -117,6 +115,7 @@ class Landing extends MY_Controller {
 		#echo "<pre>"; print_r($this->data['bannerSlide']); die;
 		
 		$this->data['recent_product_details'] = $this->product_model->get_recent_product_details();
+		// echo $this->data['recent_product_details']; die;
 		$this->data['featured_product_details'] = $this->product_model->get_featured_product_details();
 		//$this->data['deal_of_day'] = $this->product_model->get_deal_today();
 		//echo "<pre>";print_r($this->data['deal_of_day']);die;

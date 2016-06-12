@@ -538,6 +538,5 @@ $j('#slider-container').slider({
 
 </script>
 <?php }?>
-
 </body>
 </html>

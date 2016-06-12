@@ -3,5 +3,5 @@
 	   $dbUserName = 'root';
 	   $dbPassword = 'toor';
 	   $databaseName = 'artfill';
- define('SITE_URL', 'https://localhost');
+ define('SITE_URL', 'http://localhost');
  ?>

@@ -38,7 +38,8 @@ if (defined('ENVIRONMENT'))
 	switch (ENVIRONMENT)
 	{
 		case 'development':
-			error_reporting(E_ALL ^ (E_NOTICE));
+			//error_reporting(E_ALL ^ (E_NOTICE));
+			error_reporting(E_ALL);
 		break;
 	
 		case 'testing':
@@ -204,6 +205,8 @@ if (defined('ENVIRONMENT'))
  * And away we go...
  *
  */
+//echo 'APPPATH: '.APPPATH;
+//echo 'BASEPATH: '.BASEPATH;
 require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */

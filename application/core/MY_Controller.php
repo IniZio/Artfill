@@ -16,7 +16,6 @@ class MY_Controller extends CI_Controller {
 	//public $geo_data=array();
 	function __construct()
     { 
-	
         parent::__construct(); 
 		ob_start();
 		ob_clean();
@@ -158,13 +157,15 @@ class MY_Controller extends CI_Controller {
 		/*
 		 * Loading CMS Pages
 		 */
-		/*if ($_SESSION['cmsPages'] == ''){
+		/*if ($_SESSIO 	N['cmsPages'] == ''){
 			$cmsPages = $this->db->query('select * from '.CMS.' where `status`="Publish" and `hidden_page`="No"');
 			$_SESSION['cmsPages'] = $cmsPages->result_array();
 		}
 		$this->data['cmsPages'] = $_SESSION['cmsPages'];*/
 		
 		$_SESSION['cmsPages'] == '';
+		//$cmsPages = $this->db->query('select * from '.CMS.' where `status`="Publish" and `hidden_page`="No"');
+		//$cmsPages = $this->db->get_where(CMS, array('status'=>"Publish", 'hidden_page'=> "No"));
 		$cmsPages = $this->db->query('select * from '.CMS.' where `status`="Publish" and `hidden_page`="No"');
 		$this->data['cmsPages'] = $cmsPages->result_array();
 				
@@ -176,7 +177,7 @@ class MY_Controller extends CI_Controller {
 		 */
    unset($_SESSION['themeLayout']);
 		if ($_SESSION['themeLayout'] == ''){
-			$themeLayout = $this->db->query('select * from '.THEME.' where status="Active"');
+			$themeLayout = $this->db->query("select * from ".THEME." where `status`='Active'");
 			$_SESSION['themeLayout'] = $themeLayout->result_array();
 		}
 		$this->data['themeLayout'] = $_SESSION['themeLayout'];

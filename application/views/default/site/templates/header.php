@@ -10,6 +10,8 @@ if($CurrUserImg != ''){
 	$user_pic='default_avat.png';
 } 												
 ?>
+<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+<link href="//db.onlinewebfonts.com/c/91764cfbfb9049ea89665b0ac8f0ee41?family=Heiti+TC" rel="stylesheet" type="text/css"/>
 <style>
 #you1{
 	background-image:url("<?php echo base_url()."images/".$user_pic; ?>");
@@ -24,8 +26,6 @@ if($CurrUserImg != ''){
 	background-size: cover;
 }
 </style>
-
-
 
 </head>
                 <div class="errorContainer" id="message-red" style="position:fixed;top:0;">
@@ -42,7 +42,7 @@ if($CurrUserImg != ''){
 <body>
 <!-- header_start -->
  <header>
- <div class="header_top" style="position:relative;">
+ <div class="header_top animated bounceInDown" style="position:relative;">
  
 		<?php if($this->session->userdata['shopsy_session_user_name'] == '' || true){?>
 			<div class="container top">
@@ -57,7 +57,7 @@ if($CurrUserImg != ''){
 						</span>
 				    </div>-->
 					<!--new elements-->
-					<div>
+					<div class="hidden-xs">
 						<a href="<?php echo base_url();?>" title="<?php echo shopsy_lg('lg_home','Home'); ?>"><span style="color:white;">首頁</span></a>
 						<span style="color:white;">&emsp;|&emsp;</span>
 						<a href="pages/about-us"><span style="color:white;">關於我們</span></a>
@@ -73,16 +73,20 @@ if($CurrUserImg != ''){
 						</a>
 					</div>
 					
-					<div style="text-align:center;width:100%;padding-top:20px;">
-						<a href="."><img src="./images/header_logo.png" style="width:20%;" /></a>
+					<div class="col-xs-12" style="text-align:center;width:100%;padding-top:20px;">
+						<a href="."><img src="./images/header_logo.png" style="width:20%;min-width:200px;" /></a>
 					</div>
 					
 					<div style="clear:both;padding-top:30px;padding-bottom:30px;">
 					</div>
+
+
+					<div class="visible-xs" style="clear:both;padding-top:30px;padding-bottom:30px;">
+					</div>
 					
-					<div style="width:100%;padding-bottom:20px;">
-						<div class="col-xs-12 col-sm-3 header-menu" style="text-align:center;">
-							<div style="width:100%;padding-bottom:2px;" >
+					<div class="" style="width:100%;padding-bottom:20px;">
+						<div class="col-xs-6 col-sm-3 header-menu" style="text-align:center;">
+							<div style="width:100%;" >
 								<div style="">
 								<a href="search/vintage/4-clothing?" style="color:#8dbad4">
 								<span style="padding:5px;font-size:120%;">衣物配件</span>
@@ -90,8 +94,8 @@ if($CurrUserImg != ''){
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-3 header-menu" style="text-align:center;">
-							<div style="width:100%;padding-bottom:2px;" >
+						<div class="col-xs-6 col-sm-3 header-menu" style="text-align:center;">
+							<div style="width:100%;" >
 								<div style="">
 								<a href="search/supplies?" style="color:#8dbad4">
 								<span style="padding:5px;font-size:120%;">工藝用品</span>
@@ -99,8 +103,8 @@ if($CurrUserImg != ''){
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-3 header-menu" style="text-align:center;">
-							<div style="width:100%;padding-bottom:2px;" >
+						<div class="col-xs-6 col-sm-3 header-menu" style="text-align:center;">
+							<div style="width:100%;" >
 								<div style="">
 								<a href="search/all?min_price=0&max_price=100" style="color:#8dbad4">
 								<span style="padding:5px;font-size:120%;">100元內筍貨</span>
@@ -108,8 +112,8 @@ if($CurrUserImg != ''){
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-3 header-menu" style="text-align:center;">
-							<div style="width:100%;padding-bottom:2px;" >
+						<div class="col-xs-6 col-sm-3 header-menu" style="text-align:center;">
+							<div style="width:100%;" >
 								<div style="">
 								<a href="search/supplies/11-tailor-made?" style="color:#8dbad4">
 								<span style="padding:5px;font-size:120%;">度身訂做</span>
@@ -501,15 +505,20 @@ if($CurrUserImg != ''){
 		});
 		</script>
 		</div>
-		<div class="header_top header_fixed_menu" style="background-image:none;position:relative;">
+		<div class="header_top header_fixed_menu" style="background-image:none;position:relative;opacity: 0.9;">
 				<div class="container top">
 				<div class="row">
 								 
 					<div class="col-md-4 search-bl col-xs-12">	
 						<div class="col-md-12 col-xs-12 col-sm-12">
 						<a href="search/all"><span style="color:#8dbad4; font-weight: bold;font-size:150%;">分類</span></a>
-						<form name="search" action="search/all" method="get" style="width:80%;">
-							<input type="text" class="search" name="item" placeholder="<?php if($this->lang->line('temp_srchitems') != '') { echo stripslashes($this->lang->line('temp_srchitems')); } else echo 'Search for items and shops'; ?>" value="<?php if($this->input->get('item') != ''){ echo htmlspecialchars($this->input->get('item'));}?>" id="search_items" onkeyup="ajaxSearch()" autocomplete="off" >
+						<form name="search" action="search/all" method="get"> <!--style="width:80%;"> -->
+							<div class="input-group">
+								<input type="text" class="search" name="item" placeholder="<?php if($this->lang->line('temp_srchitems') != '') { echo stripslashes($this->lang->line('temp_srchitems')); } else echo 'Search for items and shops'; ?>" value="<?php if($this->input->get('item') != ''){ echo htmlspecialchars($this->input->get('item'));}?>" id="search_items" autocomplete="off" />
+								<div class="input-group-btn">
+									<button type="submit" class="btn btn-default search-bt"><i class="glyphicon glyphicon-search"></i></button>
+								</div>
+							</div>
 							<?php if($this->input->get('gift_cards') == 'on'){ ?>
 							<input type="hidden" name="gift_cards" value="<?php echo $gift;?>" /> <?php  }?>
 							 <?php if($minVal != ''){ ?> 
@@ -519,8 +528,10 @@ if($CurrUserImg != ''){
 							<?php if($locVal != ''){ ?>
 							<input type="hidden" name="location" value="<?php echo $locVal;?>" /> <?php  }?>
 							<?php if($shipVal != ''){ ?>
-							<input type="hidden" name="shipto" value="<?php echo $shipVal;?>" /> <?php  }?>						
-							<input type="submit" value="      " class="search-bt" style="color:white;background-image:url('./images/magnifier.png');background-size: 70%;background-repeat: no-repeat;" />
+							<input type="hidden" name="shipto" value="<?php echo $shipVal;?>" /> <?php  }?>						<!-- 
+							<input type="submit" value="      " class="search-bt" style="color:white;background-image:url('./images/magnifier.png');background-size: 70%;background-repeat: no-repeat;" /> -->
+
+							<ul id="suggestions" class="results"></ul>
 						</form>
 						</div>
 						<div id="sugglist"></div>
@@ -689,7 +700,7 @@ if($CurrUserImg != ''){
 								</ul>		-->			
 							</li>
 							<?php } else {?>
-							<li>
+							<li class="underline_a">
 								<a data-toggle="modal" href="#signin"><img src="./images/shape.png" style="width:20px;" /><span style=" font-weight: bold;font-size:120%;margin-left:5px;">登入</span></a>	
 							</li>
 							

@@ -1502,7 +1502,7 @@ class Product_model extends My_Model
 		//$this->db->where('p.product_featured','Yes');
 		$this->db->where('s.status','active');
 		$this->db->order_by('p.id','desc');
-		$this->db->limit(3);
+		// $this->db->limit(3);
 		return $this->db->get();
 		//echo $this->db->last_query();die;
 			
