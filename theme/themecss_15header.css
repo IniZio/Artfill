@@ -28,8 +28,8 @@ span#CartCount1{color:rgb(255, 255, 255);background-color:#8dbad4;}
 input#search_items
 {
 	border-color:#8dbad4;
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
 	font: 12px Arial, Helvetica, sans-serif;
@@ -73,10 +73,4 @@ button.search-bt:hover
 	background-color:#ffffff;
 	background: linear-gradient(to bottom, #ffffff 2%, #ffffff 8%, #ffffff 58%, #ffffff 95%);
 	background:rgba(0, 0, 0, 0) linear-gradient(rgb(152, 208, 224) 2%, rgb(104, 184, 209) 8%, rgb(79, 169, 198) 58%, rgb(76, 164, 192) 95%) repeat scroll 0% 0% / auto padding-box border-box;
-}
-
-.header-menu li a:hover
-{
-	border-bottom-color: #439348;
-  	transition: border 1s linear;
 }

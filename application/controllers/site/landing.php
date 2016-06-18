@@ -9,6 +9,7 @@
 
 class Landing extends MY_Controller {
 	function __construct(){
+	
         parent::__construct();
 		$this->load->helper(array('cookie','date','form','email'));
 		$this->load->library('session');
@@ -56,6 +57,7 @@ class Landing extends MY_Controller {
      * 
      */
    	public function index(){	 
+
 // 		if ($this->checkLogin('U') != ''){
 // 			redirect('home');
 // 		}
@@ -104,8 +106,8 @@ class Landing extends MY_Controller {
 		
 		
 		//$bancondition = array('status' =>'Publish');
-		//$this->data['bannerSlide'] = $this->user_model->get_all_details(LANDING_BANNER,$bancondition);
-		//$this->data['bannerSlide_image'] = $this->user_model->get_all_details(LANDING_BANNER,$bancondition)->result_array();
+		$this->data['bannerSlide'] = $this->user_model->get_all_details(LANDING_BANNER,$bancondition);
+		$this->data['bannerSlide_image'] = $this->user_model->get_all_details(LANDING_BANNER,$bancondition)->result_array();
 		
 		$this->data['banner_settings'] = $this->user_model->get_all_details(BANNER_SETTINGS,array());
 		$condition = array('status'=>'active');
@@ -481,7 +483,7 @@ echo $this->data['currencyValue']; die;
 		if($langOpt==1){
 			$DefCurrencyList=$this->product_model->get_all_details(CURRENCY,array('status' => 'Active','default_currency'=>'Yes'));
 			
-			$GeoArr = serialize(array('GeoCountry'=>'HK','GoeCurrency'=>$DefCurrencyList->row()->currency_code));
+			$GeoArr = serialize(array('GeoCountry'=>'US','GoeCurrency'=>$DefCurrencyList->row()->currency_code));
 			$GeoCookie = array('name'=>'shopsy_geo_locate','value'=>$GeoArr,'expire'=>86500,'secure'=>FALSE);
 			$this->input->set_cookie($GeoCookie);
 			$this->session->unset_userdata('currency_data');

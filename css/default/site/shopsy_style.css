@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'OpenSansBold';
     src: url('../../../fonts/opensans-bold.eot');
@@ -1343,7 +1342,8 @@ ol {
 	color:#FFF;
 	font-size:14px;
 	height:33px;
-	background:url(../../../images/btn_bg.png) repeat-x;
+	/* background:url(../../../images/btn_bg.png) repeat-x; */
+	background-color: #5598bf;
 	line-height:34px;
 	padding:0 13px;
 	font-weight:bold;
@@ -1354,7 +1354,7 @@ ol {
 	border-radius:3px;
 }
 .submit_btn:hover {
-	background:#846f85;
+	background:#377091;
 }
 .div_line {
 	background: none repeat scroll 0 0 #DADBD6;
@@ -1401,7 +1401,7 @@ nav#nav-main a
 	padding:0;
 	display:block;
 	text-transform:capitalize;
-	color: #fff;
+	color: #0b5664;
 }
 .name-inner {
 	font-size: 13px;
@@ -14194,7 +14194,7 @@ div#inline_reg11 {
 }*/
 .modal-dialog
 {
-	bottom: 15px !important;
+	bottom: -30px !important;
 }
 .art {
     float: left;
@@ -14547,7 +14547,7 @@ div#inline_reg11 {
     position: absolute;
 }
 .carousel-inner, .jumbotron.hero {
-    height: 387px !important;
+    height: 100% !important;/*387px !important;*/
     min-width: 1000px !important;
 }
 .jumbotron.hero {

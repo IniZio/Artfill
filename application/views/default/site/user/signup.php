@@ -97,7 +97,7 @@ if($this->session->userdata('rUrl') != '')
 
                     <div class="popup_login" style="margin-bottom:15px">
 
-                        <input type="submit" class="submit_btn" value="Sign In" />
+                        <input type="submit" class="submit_btn" value="Sign In" autofocus/>
 
                         <span id="loginloadErr"></span>
 

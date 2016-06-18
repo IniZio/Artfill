@@ -2049,15 +2049,15 @@ changeGateway('.$selId.','.$paypalRate.','.$paypalStatic.','.$UsergrantAmt.');
 
 			$delete = 'delete from '.USER_PAYMENT.' where dealCodeNumber = "'.$this->session->userdata('UserrandomNo').'" and user_id = "'.$userid.'" ';
 			$this->ExecuteQuery($delete, 'delete');
+			$this->session->set_userdata('UserrandomNo', time());
 			$dealCodeNumberUser = $this->session->userdata('UserrandomNo');
 		} else {
 			$dealCodeNumberUser = time();
 		}
-		//echo $lastFeatureInsertId = $this->session->userdata('UserrandomNo');
+		// echo $lastFeatureInsertId = $this->session->userdata('UserrandomNo');die;
 
 		$insertIds = array();
 		foreach ($AddPayt->result() as $result) {
-		
 					if($this->input->post('is_gift')==''){
 						$ordergift = 0;
 					}else{

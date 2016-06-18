@@ -27,14 +27,21 @@ $this->load->view('site/templates/header');
     <![endif]-->
 
 <div id="product_detail_div">
+
+
+
+
+
+<!--
 	<section class="row">
+
   <div class="seller-wrapper">
     <div class="col-md-6 seller"> 
-	<?php if($selectedSeller_details[0]['thumbnail']!=""){ $Pro_pic=$selectedSeller_details[0]['thumbnail']; }else { $Pro_pic='profile_pic.png';} ?>
+	<?php /*if($selectedSeller_details[0]['thumbnail']!=""){ $Pro_pic=$selectedSeller_details[0]['thumbnail']; }else { $Pro_pic='profile_pic.png';}*/ ?>
      <div class=" avatar"> <img src="images/users/thumb/<?php echo $Pro_pic; ?>" alt="small"></div>
      <div class="shop-name">
 		<a href="shop-section/<?php echo $selectedSeller_details[0]['seourl']; ?>"> <span class="shop-txt"><?php echo $selectedSeller_details[0]['seller_businessname']; ?></span> </a> 
-		<?php if($loginCheck !=''){
+		<?php /*if($loginCheck !=''){
 							$favArr = $this->product_model->getUserFavoriteShopDetails(stripslashes($selectedSeller_details[0]['seller_id']));
 							
 							if(empty($favArr)){ ?>
@@ -49,25 +56,28 @@ $this->load->view('site/templates/header');
                         	<a href="javascript:void(0);" onclick="return changeShopToFavourite('<?php echo stripslashes($selectedSeller_details[0]['seller_id']); ?>','Fresh');">
                             	<div class="btn-secondary"> <i id="fav" class="fa fa-heart"></i><?php if($this->lang->line('shop_favshop') != '') { echo stripslashes($this->lang->line('shop_favshop')); } else echo 'Favorite Shop'; ?></div>
                          	</a>
-          <?php  } ?>
+          <?php  }*/ ?>
 	</div>
     </div>
+
+
+
     <div class="col-md-6 cart-right-small">
       <div class="banner-user-profile">
-			<?php if(count($shopProductDetails)<2){$c=count($shopProductDetails);}else{ $c=2; } 
+			<?php /*if(count($shopProductDetails)<2){$c=count($shopProductDetails);}else{ $c=2; } 
 				for($i=0;$i<$c;$i++){ 
 					$imgArry=explode(',',$shopProductDetails[$i]['image']);
 				?>
 				
 				<div class="rf-small"> 
 					<a href="products/<?php echo $shopProductDetails[$i]['seourl']; ?>">
-						<!-- <img alt="<?php echo $shopProductDetails[$i]['product_name']; ?>" src="images/product/list-image/<?php echo $imgArry[0]; ?>"> -->
+						<img alt="<?php echo $shopProductDetails[$i]['product_name']; ?>" src="images/product/list-image/<?php echo $imgArry[0]; ?>">
 						<img alt="<?php echo $shopProductDetails[$i]['product_name']; ?>" src="images/product/cropthumb/<?php echo $imgArry[0]; ?>">
 						
 					</a>
 				</div>
 			
-			<?php } ?>                       
+			<?php }*/ ?>                       
 			 <div class="rf-small"> 
 				<a href="shop-section/<?php echo $selectedSeller_details[0]['seourl']; ?>" class="shop-listing-count"> <span class="listing-count"><?php echo count($shopProductDetails)+1; ?> </span><?php if($this->lang->line('user_items') != '') { echo stripslashes($this->lang->line('user_items')); } else echo 'items'; ?> 
 				</a>
@@ -75,54 +85,16 @@ $this->load->view('site/templates/header');
       </div>
     </div>
   </div>
-  
+-->  
+
+
+
+
+
   
   <div class="content-seller" style="width:100%;">
   <div class="col-md-12">
     <div class="seller-right col-md-7">
-      <div class="favorites-nag">
-        <div class="fav-bt"> 		
-			 <?php if($loginCheck !=''){ ?>
-					<?php if($added_item_details[0]['user_id']==$loginCheck){ ?>
-						<a href="javascript:void(0);" onclick="return ownProductFav();">
-							<div class="btn-secondary col-md-11" id="fav-icon">
-								<i class="fa fa-heart"></i>
-							</div>
-						</a>
-						<?php
-						}else{
-						$favArr = $this->product_model->getUserFavoriteProductDetails(stripslashes($added_item_details[0]['id']));
-						
-						if(empty($favArr)){ ?>
-                        <a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($added_item_details[0]['id']); ?>','Fresh',this);">
-							<div class="btn-secondary col-md-11" id="fav-icon"> 
-								<i id="prodfav" class="fa fa-heart"></i><?php if($this->lang->line('user_favorite') != '') { echo stripslashes($this->lang->line('user_favorite')); } else echo 'Favorite'; ?>
-							</div>
-                        </a>						
-						
-						<?php  } else { ?>                        
-						<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($added_item_details[0]['id']); ?>','Old',this);">
-							<div class="btn-secondary" id="fav-icon"> 
-								<i id="prodfav" class="fav-icon-sel"></i><?php if($this->lang->line('user_favorite') != '') { echo stripslashes($this->lang->line('user_favorite')); } else echo 'Favorite'; ?>
-							</div>
-                        </a>	
-						
-                        <?php }}} else { ?>
-                      
-						<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($added_item_details[0]['id']); ?>','Fresh',this);">
-							<div class="btn-secondary" id="fav-icon"> 
-								<i id="prodfav" class="fa fa-heart"></i><?php if($this->lang->line('user_favorite') != '') { echo stripslashes($this->lang->line('user_favorite')); } else echo 'Favorite'; ?>
-							</div>
-                        </a>		
-                        <?php  } ?> 
-		 </div>		
-		 
-        <div class="nag-message">
-             <h2><?php if($this->lang->line('like_item') != '') { echo stripslashes($this->lang->line('like_item')); } else echo 'Like this item?'; ?></h2>
-            <?php if($this->lang->line('favorites_to_revisit') != '') { echo stripslashes($this->lang->line('favorites_to_revisit')); } else echo 'Add it to your favorites to revisit it later.'; ?> 
-		</div>
-      </div>
-	  
          <?php /* <div class="cart-slide-block"> 
 		 <?php $imageArr=explode(',',$added_item_details[0]['image']); ?>
 			<img src="images/product/<?php echo $imageArr[0]; ?>" alt="<?php echo stripslashes($added_item_details[0]['product_name']); ?>">
@@ -151,6 +123,118 @@ $this->load->view('site/templates/header');
 		</div>
 		 
 		 <div class="col-md-5">
+		 
+		 
+		 
+      <div class="related-listings">
+        <div class="related-listing-inner">
+             <div class="shop-info"> 
+				 <span class="avatar"><a href="shop-section/<?php echo $selectedSeller_details[0]['seourl']; ?>"><img style="border-radius:50%;" src="images/users/thumb/<?php echo $Pro_pic; ?>" width="75" height="75" /></a></span>
+				 <div class="shop-name"> <a href="shop-section/<?php echo $selectedSeller_details[0]['seourl']; ?>"><?php echo $selectedSeller_details[0]['seller_businessname']; ?></a></div>
+				  <?php if(trim($selectedSeller_details[0]['city']) !='' && trim($selectedSeller_details[0]['city'])!= 0 ) { ?>
+					<span class="ship-label">
+						<span><?php if($this->lang->line('prod_in') != '') { echo stripslashes($this->lang->line('prod_in')); } else echo 'in'; ?></span> <?php echo $selectedSeller_details[0]['city']; ?>
+					</span>
+                  <?php } else {
+				  if(trim($selectedSeller_details[0]['country'])!='' && trim($selectedSeller_details[0]['country'])!= 0 ) {?>
+					 <span class="ship-label">
+						<span><?php if($this->lang->line('prod_in') != '') { echo stripslashes($this->lang->line('prod_in')); } else echo 'in'; ?></span> <?php echo $selectedSeller_details[0]['country']; ?>
+					</span>				  
+				  <?php }}?>
+	         </div>
+			
+			<?php if(count($shopProductDetails)<4){$c=count($shopProductDetails);}else{ $c=4; } 
+						for($i=0;$i<$c;$i++){ 
+						$imgArry=explode(',',$shopProductDetails[$i]['image']);
+						if($shopProductDetails[$i]['price']!=0){$price=$currencyValue*$shopProductDetails[$i]['price'];}else{$price=$currencyValue*$shopProductDetails[$i]['base_price'].'+';}
+						?>
+			
+		    <div class="realated-brick col-md-6 odd"> 
+				<a href="products/<?php echo $shopProductDetails[$i]['seourl']; ?>">
+					<img src="images/product/thumb/<?php echo $imgArry[0] ?>" alt="<?php echo $shopProductDetails[$i]['product_name']; ?>" title="<?php echo $shopProductDetails[$i]['product_name']; ?>" />
+				</a>
+				<div class="info">
+				  <h3><a href="products/<?php echo $shopProductDetails[$i]['seourl']; ?>"><?php echo character_limiter($shopProductDetails[$i]['product_name'],15); ?></a></h3>
+				  <span class="cat-name cat-price"><?php echo $currencySymbol; echo number_format($price,2);?> <span class="currencyType"><?php echo $currencyType; ?></span></span> 
+				 </div>
+				 
+				 
+				 <div class="collections-ui" style="display:none;">
+				     <div  class="favorite-container"> 
+					   <?php if($loginCheck !=''){ ?>
+					   <?php if($shopProductDetails[$i]['user_id']==$loginCheck){ ?>
+						<button onclick="return ownProductFav();" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
+							<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
+						</button>
+						<?php
+						}else{
+						$favArr = $this->product_model->getUserFavoriteProductDetails(stripslashes($shopProductDetails[$i]['id']));
+						if(empty($favArr)){ ?>
+							 <button onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
+								<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
+							 </button>
+						<?php } else {?>
+							<?php echo "hshshshdhsdh";?>
+							<button onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Old',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
+							<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
+						 </button>
+						<?php }}} else {?> 
+							<button onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
+							<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
+						 </button>
+						<?php }?>
+						</div>
+						
+						<div  class="collect-container">
+							<button onclick="return hoverView('<?php echo $shopProductDetails[$i]['id'];?>');"" class="btn-collect btn-dropdown  inline-overlay-trigger ollection-add-action" type="button"> 
+								<span class="icon"></span> 
+								<span class="icon-dropdown"></span> 
+								<span class="ie-fix">&nbsp;</span>
+							</button>							
+						
+							<div id="hoverlist<?php echo $shopProductDetails[$i]['id'];?>" class="hover_lists">
+									<h2><?php if($this->lang->line('user_your_lists') != '') { echo stripslashes($this->lang->line('user_your_lists')); } else echo 'Your Lists'; ?></h2>
+									<div class="lists_check">
+										<?php foreach($userLists as $Lists){ 
+											$haveListIn = $this->user_model->check_list_products(stripslashes($shopProductDetails[$i]['id']),$Lists['id'])->num_rows();
+											#echo $haveListIn;
+											if($haveListIn>0){$chk='checked="checked"';}else{ $chk='';}
+										?>
+										 <input type="checkbox" onclick="return addproducttoList('<?php echo $Lists['id']; ?>','<?php echo stripslashes($shopProductDetails[$i]['id']); ?>');" <?php echo $chk; ?> />
+										 <label><?php echo $Lists['name']; ?></label><br/>
+										 <?php } ?>
+										 
+										 <?php if(!empty($userRegistry)){ 
+												$haveRegisryIn = $this->user_model->check_registry_products($shopProductDetails[$i]['id'],$userRegistry->user_id)->num_rows();
+												if($haveRegisryIn>0){$chk='checked="checked"';}else{ $chk='';}
+											?>
+											<input type="checkbox"  onclick="return manageRegisrtyProduct('<?php echo $userRegistry->user_id; ?>','<?php echo $shopProductDetails[$i]['id']; ?>');" <?php echo $chk; ?> /> 
+											<label><span class="registry_icon"></span><?php if($this->lang->line('prod_wedding') != '') { echo stripslashes($this->lang->line('prod_wedding')); } else echo 'Wedding Registry'; ?></label>
+											<?php }  ?>						
+									  </div>       							  
+								<div class="new_list">
+									<form action="site/user/add_list" method="post">
+										<input type="hidden" value="1" name="ddl" />
+										<input type="hidden" value="<?php echo $shopProductDetails[$i]['id']; ?>" name="productId" />
+										<input type="text" placeholder="<?php if($this->lang->line('user_new_list') != '') { echo stripslashes($this->lang->line('user_new_list')); } else echo 'New list'; ?>" class="list_scroll" name="list" id="creat_list_<?php echo $i; ?>" />
+										<input type="submit" value="<?php if($this->lang->line('user_add') != '') { echo stripslashes($this->lang->line('user_add')); } else echo 'Add'; ?>" class="primary-button" onclick="return validate_create_list('<?php echo $i; ?>');" />
+									</form>
+								</div>							
+						    </div> 
+						</div>	
+				    </div>
+				 
+				 
+				 
+             </div>
+            
+			<?php }?>
+         
+         
+        </div>
+      </div>
+		 
+		 
 		 
 			<div class="listing-page-cart">
 	  
@@ -357,7 +441,7 @@ $this->load->view('site/templates/header');
 					<!--<li>
 						<?php if($this->lang->line('shop_ships') != '') { echo stripslashes($this->lang->line('shop_ships')); } else echo 'Ships'; ?> <?php if(strpos($added_item_details[0]['ship_details'],'Everywhere Else') != false){ echo 'worldwide';} ?> <?php if($this->lang->line('shop_from') != '') { echo stripslashes($this->lang->line('shop_from')); } else echo 'from'; ?> <?php echo $added_item_details[0]['ship_from']; ?>
 					 </li>-->
-					 <?php if($added_item_details[0]['pickup_option'] == 'collection'){?>
+					 <?php /*if($added_item_details[0]['pickup_option'] == 'collection'){?>
 						<li>
 							<?php if($this->lang->line('local_collection_only') != '') { echo stripslashes($this->lang->line('local_collection_only')); } else echo 'Local Collection Only'; ?>
 						</li>
@@ -371,7 +455,7 @@ $this->load->view('site/templates/header');
 						
 						<?php if($this->lang->line('shop_ships') != '') { echo stripslashes($this->lang->line('shop_ships')); } else echo 'Ships'; ?> <?php if(strpos($added_item_details[0]['ship_details'],'Everywhere Else') != false){ echo 'worldwide';} ?> <?php if($this->lang->line('ship_postcode') != '') { echo stripslashes($this->lang->line('ship_postcode')); } else echo 'from'; ?> <?php echo $added_item_details[0]['ship_from']; ?>
 					 </li>
-					<?php  }?>
+					<?php  }*/ ?>
 					 <?php if($selectedSeller_details[0]['gift_card'] == 'Yes') {?>
 					 
 						<li>
@@ -461,8 +545,8 @@ $this->load->view('site/templates/header');
 					<?php  } ?> 
 					
 						
-			  
-			    <div class="btn-secondary">
+			  <!-- START: removed: Add to user list -->
+			    <!-- <div class="btn-secondary">
 					<?php /* <a href="javascript:void(0);" onclick="return hoverView('123');"> 
 						<span class="glyphicon glyphicon-align-justify"></span><?php if($this->lang->line('add_to') != '') { echo stripslashes($this->lang->line('add_to')); } else echo 'Add to '; ?> <i class="fa fa-sort-desc"></i>
 					</a>
@@ -478,7 +562,7 @@ $this->load->view('site/templates/header');
                                         </a>
 											<?php  } ?>
                                     </div>
-				<div id="hoverlist123" class="hover_lists">
+				 <div id="hoverlist123" class="hover_lists">
 								<h2><?php if($this->lang->line('user_your_lists') != '') { echo stripslashes($this->lang->line('user_your_lists')); } else echo 'Your Lists'; ?></h2>
 								<div class="lists_check">
 									<?php foreach($userLists as $Lists){ 
@@ -507,22 +591,23 @@ $this->load->view('site/templates/header');
 								</form>
 							</div>
 							
-						</div> 
+						</div>
 				
 				
-				</div>
+				</div> -->
+				<!-- END: removed: Add to user list -->
 				
 			  
 			</div>
 			<!-- AddThis Button BEGIN -->
 			<?php if($loginCheck==''){ $att= current_url(); } else{ $att= current_url()."?aff=".$userDetails->row()->affiliateId;}?>
-			<div class="addthis_toolbox addthis_default_style " addthis:url="<?php echo $att;?>">
+<!-- 			<div class="addthis_toolbox addthis_default_style " addthis:url="<?php echo $att;?>">
 				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
 				<a class="addthis_button_tweet"></a>
 				<a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
 				<a class="addthis_counter addthis_pill_style"></a>
 			</div>
-			<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50ab628f64d148de"></script>
+			<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50ab628f64d148de"></script> -->
 			<!-- AddThis Button END -->
 			<?php //if($loginCheck==''){ $att= current_url(); } else{ $att= current_url()."?aff=".$userDetails->row()->affiliateId;}
 			//$title=urlencode($added_item_details[0]['product_name']);
@@ -545,7 +630,56 @@ $this->load->view('site/templates/header');
 		
 		
 		
-		<div class="col-md-12 middel-detail"> 
+		
+	  	<div class="col-md-12 realated-this-item">
+    <div class="col-md-7">
+	<?php if($added_item_details[0]['tag']!=''){ ?>
+	
+	<h2><?php if($this->lang->line('shop_relateditem') != '') { echo stripslashes($this->lang->line('shop_relateditem')); } else echo 'Related to this Item'; ?></h2>
+    <ul class="tag">
+     <?php $Related=explode(',',$added_item_details[0]['tag']) ?>
+            <?php foreach($Related as $tag){?>
+        	<li><a href="market/<?php echo url_title($tag); ?>"><?php echo $tag; ?></a></li> 
+            <?php } ?>
+    </ul>
+	<?php }?>
+	</div>
+	<div class="col-md-5">
+    <div class="clear inner" id="fineprint">
+      <ul class="clear">
+        <li><?php if($this->lang->line('prod_listed') != '') { echo stripslashes($this->lang->line('prod_listed')); } else echo 'Listed on'; ?> 
+		<?php echo date('M d,Y',strtotime($added_item_details[0]['created'])); ?></li>
+        <li> <?php echo $added_item_details[0]['view_count']; ?> <?php if($this->lang->line('shopsec_views') != '') { echo stripslashes($this->lang->line('shopsec_views')); } else echo 'views'; ?> </li>
+        <li> 
+			<a href="product/<?php echo $added_item_details[0]['seourl']; ?>/favoriters"> <?php echo count($ProductFavoriteCount); ?> <?php if($this->lang->line('user_favorites') != '') { echo stripslashes($this->lang->line('user_favorites')); } else echo 'Favorites'; ?> </a> 
+		</li>
+        <?php /* <li> <a href="#"> 1 Treasury list </a> </li>
+        <li id="add-treasury-item"> <a href="#" class="inline-overlay-trigger"> Add item to treasury </a> </li> */ ?>
+        <li id="item-reporter">
+          <div id="reporter-link-container"> 
+
+				<?php if($this->session->userdata['shopsy_session_user_id'] != '') {
+						if($this->session->userdata['shopsy_session_user_id']==$selectedSeller_details[0]['seller_id']){?>
+						<a href="#ownshop_report" style="color:rgb(1, 173, 220);" data-toggle="modal"><?php if($this->lang->line('prod_report') != '') { echo stripslashes($this->lang->line('prod_report')); } else echo 'Report this item to'; ?> <?php echo $this->config->item('email_title'); ?></a>
+						<?php } else { ?>
+					<a href="#detailreport_reg" style="color:rgb(1, 173, 220);" data-toggle="modal"><?php if($this->lang->line('prod_report') != '') { echo stripslashes($this->lang->line('prod_report')); } else echo 'Report this item to'; ?> <?php echo $this->config->item('email_title'); ?></a>
+				<?php } } else {?>
+					<a href="login?action=<?php echo current_url(); ?>" style="color:rgb(1, 173, 220);"><?php if($this->lang->line('prod_report') != '') { echo stripslashes($this->lang->line('prod_report')); } else echo 'Report this item to'; ?> <?php echo $this->config->item('email_title'); ?></a>
+				<?php } ?>
+
+		  </div>
+          <div id="reporter-complete-container"> </div>
+        </li>
+      </ul>
+    </div>
+	</div>
+  </div>
+	  
+	  
+    </div>
+
+	
+  <div class="col-md-12 middel-detail"> 
 		<div class="col-md-7">
       <div role="tabpanel" class="tab-content"> 
         
@@ -744,165 +878,8 @@ line-height: 2;"><?php echo $review['title']; ?></p>
     </div>
 	
 	
-    <div class="col-md-5">
-        
-		
-      <div class="related-listings">
-        <div class="related-listing-inner">
-             <div class="shop-info"> 
-				 <span class="avatar"><a href="shop-section/<?php echo $selectedSeller_details[0]['seourl']; ?>"><img src="images/users/thumb/<?php echo $Pro_pic; ?>" width="75" height="75" /></a></span>
-				 <div class="shop-name"> <a href="shop-section/<?php echo $selectedSeller_details[0]['seourl']; ?>"><?php echo $selectedSeller_details[0]['seller_businessname']; ?></a></div>
-				  <?php if(trim($selectedSeller_details[0]['city']) !='' && trim($selectedSeller_details[0]['city'])!= 0 ) { ?>
-					<span class="ship-label">
-						<span><?php if($this->lang->line('prod_in') != '') { echo stripslashes($this->lang->line('prod_in')); } else echo 'in'; ?></span> <?php echo $selectedSeller_details[0]['city']; ?>
-					</span>
-                  <?php } else {
-				  if(trim($selectedSeller_details[0]['country'])!='' && trim($selectedSeller_details[0]['country'])!= 0 ) {?>
-					 <span class="ship-label">
-						<span><?php if($this->lang->line('prod_in') != '') { echo stripslashes($this->lang->line('prod_in')); } else echo 'in'; ?></span> <?php echo $selectedSeller_details[0]['country']; ?>
-					</span>				  
-				  <?php }}?>
-	         </div>
-			
-			<?php if(count($shopProductDetails)<4){$c=count($shopProductDetails);}else{ $c=4; } 
-						for($i=0;$i<$c;$i++){ 
-						$imgArry=explode(',',$shopProductDetails[$i]['image']);
-						if($shopProductDetails[$i]['price']!=0){$price=$currencyValue*$shopProductDetails[$i]['price'];}else{$price=$currencyValue*$shopProductDetails[$i]['base_price'].'+';}
-						?>
-			
-		    <div class="realated-brick col-md-6 odd"> 
-				<a href="products/<?php echo $shopProductDetails[$i]['seourl']; ?>">
-					<img src="images/product/thumb/<?php echo $imgArry[0] ?>" alt="<?php echo $shopProductDetails[$i]['product_name']; ?>" title="<?php echo $shopProductDetails[$i]['product_name']; ?>" />
-				</a>
-				<div class="info">
-				  <h3><a href="products/<?php echo $shopProductDetails[$i]['seourl']; ?>"><?php echo character_limiter($shopProductDetails[$i]['product_name'],15); ?></a></h3>
-				  <span class="cat-name cat-price"><?php echo $currencySymbol; echo number_format($price,2);?> <span class="currencyType"><?php echo $currencyType; ?></span></span> 
-				 </div>
-				 
-				 
-				 <div class="collections-ui" style="display:none;">
-				     <div  class="favorite-container"> 
-					   <?php if($loginCheck !=''){ ?>
-					   <?php if($shopProductDetails[$i]['user_id']==$loginCheck){ ?>
-						<button onclick="return ownProductFav();" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
-							<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
-						</button>
-						<?php
-						}else{
-						$favArr = $this->product_model->getUserFavoriteProductDetails(stripslashes($shopProductDetails[$i]['id']));
-						if(empty($favArr)){ ?>
-							 <button onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
-								<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
-							 </button>
-						<?php } else {?>
-							<?php echo "hshshshdhsdh";?>
-							<button onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Old',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
-							<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
-						 </button>
-						<?php }}} else {?> 
-							<button onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
-							<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
-						 </button>
-						<?php }?>
-						</div>
-						
-						<div  class="collect-container">
-							<button onclick="return hoverView('<?php echo $shopProductDetails[$i]['id'];?>');"" class="btn-collect btn-dropdown  inline-overlay-trigger ollection-add-action" type="button"> 
-								<span class="icon"></span> 
-								<span class="icon-dropdown"></span> 
-								<span class="ie-fix">&nbsp;</span>
-							</button>							
-						
-							<div id="hoverlist<?php echo $shopProductDetails[$i]['id'];?>" class="hover_lists">
-									<h2><?php if($this->lang->line('user_your_lists') != '') { echo stripslashes($this->lang->line('user_your_lists')); } else echo 'Your Lists'; ?></h2>
-									<div class="lists_check">
-										<?php foreach($userLists as $Lists){ 
-											$haveListIn = $this->user_model->check_list_products(stripslashes($shopProductDetails[$i]['id']),$Lists['id'])->num_rows();
-											#echo $haveListIn;
-											if($haveListIn>0){$chk='checked="checked"';}else{ $chk='';}
-										?>
-										 <input type="checkbox" onclick="return addproducttoList('<?php echo $Lists['id']; ?>','<?php echo stripslashes($shopProductDetails[$i]['id']); ?>');" <?php echo $chk; ?> />
-										 <label><?php echo $Lists['name']; ?></label><br/>
-										 <?php } ?>
-										 
-										 <?php if(!empty($userRegistry)){ 
-												$haveRegisryIn = $this->user_model->check_registry_products($shopProductDetails[$i]['id'],$userRegistry->user_id)->num_rows();
-												if($haveRegisryIn>0){$chk='checked="checked"';}else{ $chk='';}
-											?>
-											<input type="checkbox"  onclick="return manageRegisrtyProduct('<?php echo $userRegistry->user_id; ?>','<?php echo $shopProductDetails[$i]['id']; ?>');" <?php echo $chk; ?> /> 
-											<label><span class="registry_icon"></span><?php if($this->lang->line('prod_wedding') != '') { echo stripslashes($this->lang->line('prod_wedding')); } else echo 'Wedding Registry'; ?></label>
-											<?php }  ?>						
-									  </div>       							  
-								<div class="new_list">
-									<form action="site/user/add_list" method="post">
-										<input type="hidden" value="1" name="ddl" />
-										<input type="hidden" value="<?php echo $shopProductDetails[$i]['id']; ?>" name="productId" />
-										<input type="text" placeholder="<?php if($this->lang->line('user_new_list') != '') { echo stripslashes($this->lang->line('user_new_list')); } else echo 'New list'; ?>" class="list_scroll" name="list" id="creat_list_<?php echo $i; ?>" />
-										<input type="submit" value="<?php if($this->lang->line('user_add') != '') { echo stripslashes($this->lang->line('user_add')); } else echo 'Add'; ?>" class="primary-button" onclick="return validate_create_list('<?php echo $i; ?>');" />
-									</form>
-								</div>							
-						    </div> 
-						</div>	
-				    </div>
-				 
-				 
-				 
-             </div>
-            
-			<?php }?>
-         
-         
-        </div>
-      </div>
-	  </div>
 	 </div>
-	  	<div class="col-md-12 realated-this-item">
-    <div class="col-md-7">
-	<?php if($added_item_details[0]['tag']!=''){ ?>
 	
-	<h2><?php if($this->lang->line('shop_relateditem') != '') { echo stripslashes($this->lang->line('shop_relateditem')); } else echo 'Related to this Item'; ?></h2>
-    <ul class="tag">
-     <?php $Related=explode(',',$added_item_details[0]['tag']) ?>
-            <?php foreach($Related as $tag){?>
-        	<li><a href="market/<?php echo url_title($tag); ?>"><?php echo $tag; ?></a></li> 
-            <?php } ?>
-    </ul>
-	<?php }?>
-	</div>
-	<div class="col-md-5">
-    <div class="clear inner" id="fineprint">
-      <ul class="clear">
-        <li><?php if($this->lang->line('prod_listed') != '') { echo stripslashes($this->lang->line('prod_listed')); } else echo 'Listed on'; ?> 
-		<?php echo date('M d,Y',strtotime($added_item_details[0]['created'])); ?></li>
-        <li> <?php echo $added_item_details[0]['view_count']; ?> <?php if($this->lang->line('shopsec_views') != '') { echo stripslashes($this->lang->line('shopsec_views')); } else echo 'views'; ?> </li>
-        <li> 
-			<a href="product/<?php echo $added_item_details[0]['seourl']; ?>/favoriters"> <?php echo count($ProductFavoriteCount); ?> <?php if($this->lang->line('user_favorites') != '') { echo stripslashes($this->lang->line('user_favorites')); } else echo 'Favorites'; ?> </a> 
-		</li>
-        <?php /* <li> <a href="#"> 1 Treasury list </a> </li>
-        <li id="add-treasury-item"> <a href="#" class="inline-overlay-trigger"> Add item to treasury </a> </li> */ ?>
-        <li id="item-reporter">
-          <div id="reporter-link-container"> 
-
-				<?php if($this->session->userdata['shopsy_session_user_id'] != '') {
-						if($this->session->userdata['shopsy_session_user_id']==$selectedSeller_details[0]['seller_id']){?>
-						<a href="#ownshop_report" style="color:rgb(1, 173, 220);" data-toggle="modal"><?php if($this->lang->line('prod_report') != '') { echo stripslashes($this->lang->line('prod_report')); } else echo 'Report this item to'; ?> <?php echo $this->config->item('email_title'); ?></a>
-						<?php } else { ?>
-					<a href="#detailreport_reg" style="color:rgb(1, 173, 220);" data-toggle="modal"><?php if($this->lang->line('prod_report') != '') { echo stripslashes($this->lang->line('prod_report')); } else echo 'Report this item to'; ?> <?php echo $this->config->item('email_title'); ?></a>
-				<?php } } else {?>
-					<a href="login?action=<?php echo current_url(); ?>" style="color:rgb(1, 173, 220);"><?php if($this->lang->line('prod_report') != '') { echo stripslashes($this->lang->line('prod_report')); } else echo 'Report this item to'; ?> <?php echo $this->config->item('email_title'); ?></a>
-				<?php } ?>
-
-		  </div>
-          <div id="reporter-complete-container"> </div>
-        </li>
-      </ul>
-    </div>
-	</div>
-  </div>
-	  
-	  
-    </div>
-
   </div>
   
 </section>
@@ -1362,7 +1339,7 @@ jQuery(document).ready(function() {
 	jQuery('[data-countdown]').each(function() {
 	   var $this = $(this), finalDate = jQuery(this).data('countdown');
 	   $this.countdown(finalDate, function(event) {
-		 $this.html(event.strftime('%D days %H:%M:%S'));
+		 $this.html(event.strftime('%D days %H:%M'));
 	   });
 	 });
 }); 

@@ -1173,7 +1173,7 @@ class CI_Loader {
 			// Load the database driver.
 			if (in_array('database', $autoload['libraries']))
 			{
-				$this->database();	
+				$this->database();
 				$autoload['libraries'] = array_diff($autoload['libraries'], array('database'));
 			}
 

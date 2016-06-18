@@ -69,7 +69,7 @@ if($this->session->userdata('rUrl') != ''){
 				</form>
 									
 					<a href="forgot-password" style="font-size: 12px; width:100%;">忘記密碼?<?php //if($this->lang->line('user_fgt_pwd') != '') { echo stripslashes($this->lang->line('user_fgt_pwd')); } else echo "Forgot your password?"; ?></a>
-					<a href="reopen-account" style="font-size: 12px; width:100%;">新會員註冊<?php //if($this->lang->line('land_reopenacc') != '') { echo stripslashes($this->lang->line('land_reopenacc')); } else echo "Reopen your account?"; ?></a>
+					<a href="register" style="font-size: 12px; width:100%;">新會員註冊<?php //if($this->lang->line('land_reopenacc') != '') { echo stripslashes($this->lang->line('land_reopenacc')); } else echo "Reopen your account?"; ?></a>
 					
 				</div>
 				</div>

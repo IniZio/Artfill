@@ -244,7 +244,7 @@
 				}else if($font['type'] == 'Google Font'){
 					$temp_font_name = str_replace(' ', '+' , $font_name);
 					$google_font_family = $temp_font_name . ':' . $font_weight . '&subset=' . $font_subset;
-					wp_enqueue_style('Google-Font-' . $temp_font_name,'//fonts.googleapis.com/css?family=' . $google_font_family);
+					wp_enqueue_style('Google-Font-' . $temp_font_name,'http://fonts.googleapis.com/css?family=' . $google_font_family);
 				}				
 				
 			}
@@ -267,7 +267,7 @@
 		
 		}else if($all_font[$recieve_font]['type'] == "Google Font"){
 			
-			$font_url = array('type'=>$all_font[$recieve_font]['type'], 'url'=>'//fonts.googleapis.com/css?family=' . str_replace(' ', '+' , $recieve_font));	
+			$font_url = array('type'=>$all_font[$recieve_font]['type'], 'url'=>'http://fonts.googleapis.com/css?family=' . str_replace(' ', '+' , $recieve_font));	
 		
 		}else{
 		

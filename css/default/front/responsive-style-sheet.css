@@ -1484,6 +1484,7 @@ img.middel-banner
   .cat-name, .cat-name a {
     text-align: center;
     width: 100%;
+    overflow: hidden;
   }
 
   .recent-review {

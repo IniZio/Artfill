@@ -7,7 +7,7 @@
 <tr>
 <td style=\"padding: 10px 0px; color: #5a5a5a; font-size: 15px;\">
 <p><img src=\"http://artfill.co/email/top.png\" alt=\"\" /></p>
-<p style=\"text-align: center;\"><img src=\"http://artfill.co/email/logo_7.png\" alt=\"\" width=\"292\" height=\"110\" /></p>
+<p style=\"text-align: center;\"><a href=\" https://artfill.co/shop/\"><img src=\"http://artfill.co/email/logo_7.png\" alt=\"\" width=\"292\" height=\"110\" /></a></p>
 <p><img src=\"http://artfill.co/email/hr.png\" alt=\"\" width=\"1024\" height=\"56\" /></p>
 </td>
 </tr>

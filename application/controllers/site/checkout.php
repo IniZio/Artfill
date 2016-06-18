@@ -557,7 +557,8 @@ die();
 			$loginUserId = $this->checkLogin('U');
 			//DealCodeNumber
 			$lastFeatureInsertId = $this->session->userdata('randomNo');
-			
+			echo "there: ".$lastFeatureInsertId; die;
+
 			$quantity = 1;
 			
 			if($this->input->post('paypalmode') == 'sandbox'){
@@ -843,6 +844,7 @@ die();
 		$insID = $this->db->insert_id();
 		
 		$this->checkout_model->update_details(USER_PAYMENT,array('billingid' => $insID),array('dealCodeNumber' => $lastFeatureInsertId));
+		$quantity = $this->checkout_model->get_all_details(USER_PAYMENT, array('dealcodenumber' => $lastFeatureInsertId))->row()->quantity;
 		
 		//$this->checkout_model->commonInsertUpdate(USERS,'update',$excludeArr,$dataArr,$condition);
 	
@@ -855,7 +857,7 @@ die();
 			$totalAmount = number_format($this->input->post('total_price')*$this->data['currencyValue'],2);
 			
 			
-			$quantity = 1;
+			// $quantity = 1;
 			
 			if($this->input->post('paypalmode') == 'sandbox'){
 				$this->paypal_class->paypal_url = 'https://www.sandbox.paypal.com/cgi-bin/webscr';   // testing paypal url
@@ -1933,7 +1935,7 @@ notify_version='".$_REQUEST['notify_version']."', amount='".$_REQUEST['amount'].
 			}
 			
 			
-			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment'; // Notify url
+			$this->paypal_class->add_field('notify_url', base_url().'site/order/ipnpayment'); // Notify url
 			
 			$this->paypal_class->add_field('custom', 'SellerProductPayment|'.$loginUserId.'|'.$lastFeatureInsertId.'|'.$totalAmount); // Custom Values			
 			

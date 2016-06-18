@@ -917,6 +917,7 @@ $this->setErrorMessage('error', 'Login Required');
 redirect("login");
 }
 		$sellerId = $this->input->post('sell_id');
+		// $quantity = $this->input->post('userquantity0');
 		$userid = $this->checkLogin('U');
 		if($this->input->post('digital_item') == 'No'){
 			$cartDetails = $this->cart_model->get_all_details(USER_SHOPPING_CART,array('sell_id' => $sellerId, 'user_id' => $userid));

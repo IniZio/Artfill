@@ -38,7 +38,7 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-$route['ajaxsearch'] = "site/ajaxsearch";
+
 $route['default_controller'] = "site/landing";
 $route['404_override'] = '';
 
@@ -120,8 +120,6 @@ $route['(:any)/news-details/(:any)'] ="site/community/userPostComments";
 
 
 /****************product routes start**********************/
-// $route['productjson_echo'] = "site/product/get_product_details";
-$route['productjson'] = "site/product/get_product_details";
 $route['products/(:any)'] = "site/product/display_product_detail/$1"; 
 $route['product/(:any)/favoriters'] = "site/product/display_product_favoriters/$1";
 $route['add-product'] = "site/product/add_shop_product";

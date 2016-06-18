@@ -1,8 +1,14 @@
-DirectoryIndex index.php
+﻿Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
 RewriteEngine On
-RewriteBase /
+RewriteBase /shop/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond $1 !^(index\.php|javascript|images|robots\.txt)
-RewriteRule ^(.*)$ /index.php?/$1 [L]
+RewriteRule ^(.*)$ /shop/index.php?/$1 [L]
 Options -Indexes
+RewriteCond %{HTTP_HOST} ^shop\.artfill\.co$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.shop\.artfill\.co$
+RewriteRule ^/?$ "https\:\/\/artfill\.co\/shop" [R=301,L]
+

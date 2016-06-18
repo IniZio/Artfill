@@ -23,3 +23,5 @@
 <link href="css/default/front/zo-cas-style.css" rel="stylesheet">
 <link href="css/default/front/style-responsive.css" rel="stylesheet">
 <link href="css/default/front/responsive-style-sheet.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="//db.onlinewebfonts.com/c/91764cfbfb9049ea89665b0ac8f0ee41?family=Heiti+TC" rel="stylesheet"/>

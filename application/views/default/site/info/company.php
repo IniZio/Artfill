@@ -37,13 +37,13 @@ $this->load->view('site/templates/header');
 <section class="container">
 
 <div style="min-height:600px;color:#4c4c4c;border:1px;background-color:#ffffff;padding:10px;">
-<h1 style="color:#8dbad4;margin-top:300px;text-align:center;"> Company Information </h1>
+<h1 style="color:#8dbad4;margin-top:300px;text-align:center;"> 公司資料 </h1>
 
 <hr/>
 
 <p>
-<b><u>Press</u></b><br/>
-We love working with journalists to share our unique story. Please send an email to press@artfill.co for media enquiry. 
+<b><u>新聞及評論</u></b><br/>
+Artfill 團隊很樂意與外界分享我們的故事。 如有任何查詢， 請電郵至press@artfill.co查詢。
 
 </p>
 
@@ -51,7 +51,7 @@ We love working with journalists to share our unique story. Please send an email
 <br/>
 <p>
 <b><u>Artfillers</u></b><br/>
-We always value our users’ opinions and feedback. No matter you are our existing users or thinking about joining our close-knitted community, you are welcome to send an email to enquiry@artfill.co
+感謝手作界朋友一直以來的支持， 歡迎 Artfiller 或有意加入 Artfill手作買賣平台的買家／賣家電郵至enquiry@artfill.co查詢。
 
 </p>
 <br/>

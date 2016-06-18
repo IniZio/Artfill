@@ -34,7 +34,7 @@ label
 
 
 .add_shop {
-	background:#3e444e;
+	background:#ffffff;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 .add_steps li {
@@ -67,7 +67,7 @@ label
 }
 .add_steps a:hover{
 	background:none;
-	color:#fff;
+	color:#ddd;
 }
 .name-inner{	
 	width: auto;
@@ -286,7 +286,7 @@ header{
 	display:none;
 	right:0px;
 	top:34px;
-	background:#000000;
+	background:#ffffff;
 	z-index: 999;
 }
 .add_steps li:hover .add_shop_drop_down{

@@ -155,22 +155,6 @@ class My_Model extends CI_Model {
 		return $this->db->get_where ( $table, $condition );
 	}
 
-	// /**
-	//  * This function returns seourl near to condition
-	//  * @param  string $table     table name
-	//  * @param  string $limit     number of seourls returned
-	//  * @param  string $condition search condition
-	//  * @return array            seoruls
-	//  */
-	// public function get_near_seourl($table='', $limit = '', $column='', $keyword='')
-	// {
-	// 	$this->db->select('seourl');
-	// 	$this->db->from($table);
-	// 	$this->db->like($column, $keyword, 'none');
-	// 	$this->db->limit($limit);
-	// 	$query = $this->db->get();
-	// }
-	
 	/**
 	 *
 	 * This function update the table contents based on params

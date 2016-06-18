@@ -111,7 +111,8 @@ if (strcmp ($res, "VERIFIED") == 0) {
 	// process payment and mark item as paid.
 
 	// assign posted variables to local variables
-	//$item_name = $_POST['item_name'];
+	$item_name = $_POST['item_name'];
+error_log('item name: '.$item_name);
 	//$item_number = $_POST['item_number'];
 	//$payment_status = $_POST['payment_status'];
 	//$payment_amount = $_POST['mc_gross'];
@@ -130,5 +131,4 @@ if (strcmp ($res, "VERIFIED") == 0) {
 		error_log(date('[Y-m-d H:i e] '). "Invalid IPN: $req" . PHP_EOL, 3, LOG_FILE);
 	}
 }
-
 ?>

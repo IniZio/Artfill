@@ -684,69 +684,6 @@ class SearchShop extends MY_Controller {
 		echo json_encode($returnStr);
 	}
 	
-	// /** 
-	//  * 
-	//  * This function display the auto populate suggestions
-	//  *
-	//  */
-	// public function search_suggestions(){
-	// 	$search_key = $this->input->get('q');
-	// 	$returnStr['things'] = '<h4>Suggestions</h4>';
-	// 	if ($search_key != ''){
-	// 		$productDetails = $this->product_model->get_products_search_results($search_key);
-	// 		$UserproductDetails = $this->product_model->get_products_search_results_user($search_key);
-			
-	// 		$totalRows = $productDetails->num_rows() + $UserproductDetails->num_rows();
-			
-	// 		if ($totalRows>0){
-	// 			$returnStr['things'] .='
-	// 				<ul class="thing" style="display: block;">
-	// 			';
-	// 			foreach ($productDetails->result()as $productRow){
-	// 				$returnStr['things'] .='
-	// 				<li>
-	// 					<a href="things/'.$productRow->id.'/'.url_title($productRow->product_name,'-').'">'.$productRow->product_name.'</a>
-	// 				</li>
-	// 				';
-	// 			} 
-	// 			foreach ($UserproductDetails->result()as $UserproductRow){
-	// 				$returnStr['things'] .='
-	// 				<li>
-	// 					<a href="user/'.$UserproductRow->user_name.'/things/'.$UserproductRow->seller_product_id.'/'.url_title($UserproductRow->product_name,'-').'">'.$UserproductRow->product_name.'</a>
-	// 				</li>
-	// 				';
-	// 			} 
-	// 			$returnStr['things'] .='
-	// 				</ul>
-	// 			';
-	// 		}
-	// 		$userDetails = $this->product_model->get_user_search_results($search_key);
-	// 		if ($userDetails->num_rows()>0){
-	// 			$returnStr['things'] .='
-	// 				<ul class="user" style="display: block;">
-	// 			';
-	// 			foreach ($userDetails->result()as $userRow){
-	// 				$userImg = 'user-thumb1.png';
-	// 				if ($userRow->thumbnail != ''){
-	// 					$userImg = $userRow->thumbnail;
-	// 				}
-	// 				$returnStr['things'] .='
-	// 				<li>
-	// 					<a href="view-people/'.$userRow->user_name.'"><img src="images/users/'.$userImg.'" alt="'.$userRow->full_name.'" class="photo"> <b>'.$userRow->full_name.'</b> ('.$userRow->user_name.')</a>
-	// 				</li>
-	// 				';
-	// 			} 
-	// 			$returnStr['things'] .='
-	// 				</ul>
-	// 			';
-	// 		}
-	// 	}
-	// 	$returnStr['things'] .= '
-	// 			<a href="'.base_url().'shopby/all?q='.$search_key.'" class="more hover">See full search results</a>
-	// 			';
-	// 	echo json_encode($returnStr);
-	// }
-
 	/** 
 	 * 
 	 * This function display the auto populate suggestions
@@ -754,6 +691,7 @@ class SearchShop extends MY_Controller {
 	 */
 	public function search_suggestions(){
 		$search_key = $this->input->get('q');
+		$returnStr['things'] = '<h4>Suggestions</h4>';
 		if ($search_key != ''){
 			$productDetails = $this->product_model->get_products_search_results($search_key);
 			$UserproductDetails = $this->product_model->get_products_search_results_user($search_key);
@@ -762,6 +700,7 @@ class SearchShop extends MY_Controller {
 			
 			if ($totalRows>0){
 				$returnStr['things'] .='
+					<ul class="thing" style="display: block;">
 				';
 				foreach ($productDetails->result()as $productRow){
 					$returnStr['things'] .='
@@ -778,11 +717,13 @@ class SearchShop extends MY_Controller {
 					';
 				} 
 				$returnStr['things'] .='
+					</ul>
 				';
 			}
 			$userDetails = $this->product_model->get_user_search_results($search_key);
 			if ($userDetails->num_rows()>0){
 				$returnStr['things'] .='
+					<ul class="user" style="display: block;">
 				';
 				foreach ($userDetails->result()as $userRow){
 					$userImg = 'user-thumb1.png';
@@ -796,10 +737,12 @@ class SearchShop extends MY_Controller {
 					';
 				} 
 				$returnStr['things'] .='
+					</ul>
 				';
 			}
 		}
 		$returnStr['things'] .= '
+				<a href="'.base_url().'shopby/all?q='.$search_key.'" class="more hover">See full search results</a>
 				';
 		echo json_encode($returnStr);
 	}

@@ -538,8 +538,8 @@ function hoverView(val){
 		<div class="add_steps shop-menu-list">
 			<div class="main">
 				<!-- css -->
-<link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/default/site/base.css" />
 <link rel="stylesheet" href="css/default/site/style-menu.css" />
     

@@ -100,7 +100,7 @@ if (array_key_exists("login", $_GET)) {
 							
 							
 							
-                            <form  method="post" onSubmit="return register_user(this);">
+                            <form  method="post" onSubmit="return register_user(this);" style="padding-left:10px;padding-right:10px;">
 								  <input type='hidden' value="<?php echo $this->input->get('action');  ?>" name="next_url" id="next_url"/>
                                 <div class="popup_login">
 

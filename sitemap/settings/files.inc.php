@@ -1,7 +1,7 @@
 <?php
-$FILES['http://localhost/']['file_enabled'] = '1';
-$FILES['http://localhost/']['file_url'] = 'http://localhost/';
-$FILES['http://localhost/']['lastmod'] = '';
-$FILES['http://localhost/']['changefreq'] = 'daily';
-$FILES['http://localhost/']['priority'] = '0.5';
+$FILES['https://artfill.co/shop/']['file_enabled'] = '1';
+$FILES['https://artfill.co/shop/']['file_url'] = 'https://artfill.co/shop/';
+$FILES['https://artfill.co/shop/']['lastmod'] = '';
+$FILES['https://artfill.co/shop/']['changefreq'] = 'never';
+$FILES['https://artfill.co/shop/']['priority'] = '0.0';
 ?>

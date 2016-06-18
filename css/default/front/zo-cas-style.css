@@ -27,8 +27,9 @@ header {
     width: 100%;
     z-index: 999;
 	background:#ffffff;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+	/* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); */
+	/* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05); */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	top:0px;
 }
 .list_inner_fields{
@@ -40,9 +41,9 @@ header {
 }
 
 .add_steps{
-	background:#3e444e;
+	background:#ffffff;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-	border-bottom: 1px solid #262932;
+	border-bottom: 1px solid #ffffff;
 }
 .add_steps li {
     position: relative;
@@ -387,8 +388,8 @@ header {
 	
 	/*Kinson edit*/
 	background:#ffffff;
-  border-style: solid;
-  border-top: thin solid #66f4cf;
+  /*border-style: solid;
+  border-top: thin solid #66f4cf;*/
   border-left: none;
   border-right: none;
   border-bottom: none;

@@ -1,7 +1,7 @@
 <?php error_reporting(0);
 	   $hostName = 'localhost';
-	   $dbUserName = 'root';
-	   $dbPassword = 'toor';
-	   $databaseName = 'artfill';
- define('SITE_URL', 'http://localhost');
+	   $dbUserName = 'llfmcjqa_shop';
+	   $dbPassword = '5XM*$APNUMUg';
+	   $databaseName = 'llfmcjqa_artfill_shop';
+ define('SITE_URL', 'https://artfill.co/shop/');
  ?>
