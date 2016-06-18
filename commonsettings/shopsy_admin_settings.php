@@ -224,4 +224,4 @@ $config['last_logout_date'] = '2016-02-29 11:37:36';
 $config['last_login_ip'] = '175.159.99.137'; 
 $config['is_verified'] = 'Yes'; 
 $config['status'] = 'Active'; 
-$config['base_url'] = 'https://artfill.co/shop/';  ?>
+$config['base_url'] = 'http://localhost/';  ?>
