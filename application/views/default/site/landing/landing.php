@@ -514,7 +514,7 @@ $n = $deal_of_day1->num_rows();
         ?>
 		<section class="second-bl">
 		  <div class="container">
-			<h1 class="today-deal">熱門商品</h1>
+			<h1 class="today-deal">熱門商品1</h1>
 			    <div class="row">
 					<div class="recent-fav" >
 					<?php
