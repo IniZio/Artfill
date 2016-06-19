@@ -4,5 +4,5 @@ config-shopsy/databaseValues.php
 blog/wp-config-db.php
 sitemap/settings/files.inc.php
 logs/*
-/phpintel/*
+.phpintel/*
 application/logs/*
