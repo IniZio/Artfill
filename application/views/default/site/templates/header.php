@@ -632,7 +632,7 @@ if ($CurrUserImg != '') {
 		});
 		</script>
 		</div>
-		<div class="header_top header_fixed_menu hidden-xs" style="background-image:none;position:relative;opacity: 0.9;">
+		<div class="header_top header_fixed_menu hidden-xs" style="background-image:none;position:relative;opacity: 0.9;height:40px">
 				<div class="container top">
 				<div class="row">
 
