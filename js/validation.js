@@ -1280,86 +1280,121 @@ function register_user(evt){
 	if(fullname==''){
 		$('#fullnameErr').show();
 		$('#fullnameErr').html(lg_required_field);
-		$('#loadErr').html('Full Name is Empty');
+		// $('#loadErr').html('Full Name is Empty');
+		$('#loadErr').html('全名不能為空');
+
 	}else if(validateAlphabet(fullname)==false){
 			$('#fullnameErr').show();
 			$('#fullnameErr').html(lg_alphabets);
-			$('#loadErr').html('Incorrect Name Format');
+			// $('#loadErr').html('Incorrect Name Format');
+			$('#loadErr').html('名稱格式不正確');
+
 	}else if(fullname.length > 25){
 		$('#fullnameErr').show();
 		$('#fullnameErr').html(lg_firstname_25_max);
-		$('#loadErr').html('Name is too long');			
+		// $('#loadErr').html('Name is too long');	
+		$('#loadErr').html('名稱過長');			
+
 	}else if(lastname==''){
 		$('#lastnameErr').show();
 		$('#lastnameErr').html(lg_required_field);
-		$('#loadErr').html('Last Name is Empty');
+		// $('#loadErr').html('Last name empty');
+		$('#loadErr').html('姓氏不能為空');
 	}else if(validateAlphabet(lastname)==false){
 			$('#lastnameErr').show();
 			$('#lastnameErr').html(lg_alphabets);
-			$('#loadErr').html('Incorrect Name Format');
+			// $('#loadErr').html('incorrect full name format');
+			$('#loadErr').html('名稱格式不正確');
 	}else if(lastname.length > 25){
 		$('#lastnameErr').show();
 		$('#lastnameErr').html(lg_lastname_25_max);
-		$('#loadErr').html('Last Name is too long');				
+		// $('#loadErr').html('Last name too long');
+		$('#loadErr').html('姓氏過長');				
 	}else if( !IsEmail(email)) { 
 		$('#emailErr').show();
 		$('#emailErr').html(lg_invalid_email);	
-		$('#loadErr').html('Incorrect Email');
+		// $('#loadErr').html('Invalid Email');
+		$('#loadErr').html('電郵不正確');
 	}else if(email==''){
 		$('#emailErr').show();
 		$('#emailErr').html(lg_required_field);
-		$('#loadErr').html('Email is Empty');
+		// $('#loadErr').html('Email is Empty');
+		$('#loadErr').html('電郵不能為空');
+
 	}else if( !IsEmail(email)) { 
 		$('#emailErr').show();
 		$('#emailErr').html(lg_invalid_email);	
-		$('#loadErr').html('Incorrect Email');
+		// $('#loadErr').html('Incorrect Email');
+		$('#loadErr').html('電郵不正確');
+
 	}else if(pwd==''){
 		$('#user_passwordErr').show();
 		$('#user_passwordErr').html(lg_required_field);
-		$('#loadErr').html('Password is Empty');
+		// $('#loadErr').html('Password is Empty');
+		$('#loadErr').html('密碼不能為空');
+
 	}else if(pwd.length < 6){
 		$('#user_passwordErr').show();
 		$('#user_passwordErr').html(lg_pwd_6_char);
-		$('#loadErr').html('Password is too short');
+		// $('#loadErr').html('Password is too short');
+		$('#loadErr').html('密碼過短');
+
 	}else if(pwd.length > 12){
 		$('#user_passwordErr').show();
 		$('#user_passwordErr').html(lg_pwd_12_char);
-		$('#loadErr').html('Password is too long');		
+		// $('#loadErr').html('Password is too long');		
+		$('#loadErr').html('密碼過長');	
+
 	}else if(Confirmpwd==''){
 		$('#user_ConfirmpasswordErr').show();
 		$('#user_ConfirmpasswordErr').html(lg_required_field);
-		$('#loadErr').html('Confirm Password is Empty');
+		// $('#loadErr').html('Confirm Password is Empty');
+		$('#loadErr').html('確認密碼不能為空');
 	}else if(pwd != Confirmpwd)	{
 		$('#user_ConfirmpasswordErr').show();
 		$('#user_ConfirmpasswordErr').html(lg_pwd_not_match);
-		$('#loadErr').html('Password is not match');
+		// $('#loadErr').html('Password is not match');
+		$('#loadErr').html('密碼不匹配');
+
 	
 	}else if(username==''){
 		$('#usernameErr').show();
 		$('#usernameErr').html(lg_required_field);	
-		$('#loadErr').html('Username is empty');
+		// $('#loadErr').html('Username is empty');
+		$('#loadErr').html('用戶名不能為空');
+
 	}else if(username.length > 25){
 		$('#usernameErr').show();
 		$('#usernameErr').html(lg_username_25_max);
-		$('#loadErr').html('Username is too long');		
+		// $('#loadErr').html('Username is too long');		
+		$('#loadErr').html('用戶名過長');	
+
 		
 	}else if(pwd==fullname){
 		$('#user_passwordErr').show();
 		$('#user_passwordErr').html(lg_pwd_firstname_notsame);
-		$('#loadErr').html('Password and Full Name are the same');
+		// $('#loadErr').html('Password and Full Name are the same');
+		$('#loadErr').html('密碼和全名不能相同');
+
 	}else if(pwd==username){
 		$('#user_passwordErr').show();
 		$('#user_passwordErr').html(lg_pwd_username_notsame);
-		$('#loadErr').html('Password and Username are the same');
+		// $('#loadErr').html('Password and Username are the same');
+		$('#loadErr').html('密碼和用戶名不能相同');
+
 	}else if(pwd==email){
 		$('#user_passwordErr').show();
 		$('#user_passwordErr').html(lg_email_pwd_notsame);
-		$('#loadErr').html('Password and Email are the same');	
+		// $('#loadErr').html('Password and Email are the same');	
+		$('#loadErr').html('密碼和電郵不能相同');
+
 			
 	}else if(!priTerm){
 		$('#PrivacyErr').show();
 		$('#PrivacyErr').html(lg_accept_terms_policy);
-		$('#loadErr').html('Please accept our terms and policy');	
+		// $('#loadErr').html('Please accept our terms and policy');	
+		$('#loadErr').html('請接受我們的條款和政策');
+
 	
 		
 	}else {
