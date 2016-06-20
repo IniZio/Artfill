@@ -1293,7 +1293,8 @@ function register_user(evt){
 		$('#fullnameErr').show();
 		$('#fullnameErr').html(lg_firstname_25_max);
 		// $('#loadErr').html('Name is too long');	
-		$('#loadErr').html('名稱過長');			
+		// $('#loadErr').html('名稱過長');			
+		$('#loadErr').html(lg_firstname_25_max);
 
 	}else if(lastname==''){
 		$('#lastnameErr').show();
@@ -1309,12 +1310,14 @@ function register_user(evt){
 		$('#lastnameErr').show();
 		$('#lastnameErr').html(lg_lastname_25_max);
 		// $('#loadErr').html('Last name too long');
-		$('#loadErr').html('姓氏過長');				
+		// $('#loadErr').html('姓氏過長');				
+		$('#loadErr').html(lg_lastname_25_max);
 	}else if( !IsEmail(email)) { 
 		$('#emailErr').show();
 		$('#emailErr').html(lg_invalid_email);	
 		// $('#loadErr').html('Invalid Email');
-		$('#loadErr').html('電郵不正確');
+		// $('#loadErr').html('電郵不正確');
+		$('#loadErr').html(lg_invalid_email);
 	}else if(email==''){
 		$('#emailErr').show();
 		$('#emailErr').html(lg_required_field);
@@ -1325,7 +1328,8 @@ function register_user(evt){
 		$('#emailErr').show();
 		$('#emailErr').html(lg_invalid_email);	
 		// $('#loadErr').html('Incorrect Email');
-		$('#loadErr').html('電郵不正確');
+		// $('#loadErr').html('電郵不正確');
+		$('#loadErr').html(lg_invalid_email);
 
 	}else if(pwd==''){
 		$('#user_passwordErr').show();
@@ -1337,13 +1341,15 @@ function register_user(evt){
 		$('#user_passwordErr').show();
 		$('#user_passwordErr').html(lg_pwd_6_char);
 		// $('#loadErr').html('Password is too short');
-		$('#loadErr').html('密碼過短');
+		// $('#loadErr').html('密碼過短');
+		$('#loadErr').html(lg_pwd_6_char);
 
 	}else if(pwd.length > 12){
 		$('#user_passwordErr').show();
 		$('#user_passwordErr').html(lg_pwd_12_char);
 		// $('#loadErr').html('Password is too long');		
-		$('#loadErr').html('密碼過長');	
+		// $('#loadErr').html('密碼過長');	
+		$('#loadErr').html(lg_pwd_12_char);
 
 	}else if(Confirmpwd==''){
 		$('#user_ConfirmpasswordErr').show();
@@ -1354,7 +1360,8 @@ function register_user(evt){
 		$('#user_ConfirmpasswordErr').show();
 		$('#user_ConfirmpasswordErr').html(lg_pwd_not_match);
 		// $('#loadErr').html('Password is not match');
-		$('#loadErr').html('密碼不匹配');
+		// $('#loadErr').html('密碼不匹配');
+		$('#loadErr').html(lg_pwd_not_match);
 
 	
 	}else if(username==''){
@@ -1367,34 +1374,37 @@ function register_user(evt){
 		$('#usernameErr').show();
 		$('#usernameErr').html(lg_username_25_max);
 		// $('#loadErr').html('Username is too long');		
-		$('#loadErr').html('用戶名過長');	
-
+		// $('#loadErr').html('用戶名過長');	
+		$('#loadErr').html(lg_username_25_max);
 		
 	}else if(pwd==fullname){
 		$('#user_passwordErr').show();
 		$('#user_passwordErr').html(lg_pwd_firstname_notsame);
 		// $('#loadErr').html('Password and Full Name are the same');
-		$('#loadErr').html('密碼和全名不能相同');
+		// $('#loadErr').html('密碼和全名不能相同');
+		$('#loadErr').html(lg_pwd_firstname_notsame);
 
 	}else if(pwd==username){
 		$('#user_passwordErr').show();
 		$('#user_passwordErr').html(lg_pwd_username_notsame);
 		// $('#loadErr').html('Password and Username are the same');
-		$('#loadErr').html('密碼和用戶名不能相同');
+		// $('#loadErr').html('密碼和用戶名不能相同');
+		$('#loadErr').html(lg_pwd_username_notsame);
 
 	}else if(pwd==email){
 		$('#user_passwordErr').show();
 		$('#user_passwordErr').html(lg_email_pwd_notsame);
 		// $('#loadErr').html('Password and Email are the same');	
 		$('#loadErr').html('密碼和電郵不能相同');
+		$('#loadErr').html(lg_email_pwd_notsame);
 
 			
 	}else if(!priTerm){
 		$('#PrivacyErr').show();
 		$('#PrivacyErr').html(lg_accept_terms_policy);
 		// $('#loadErr').html('Please accept our terms and policy');	
-		$('#loadErr').html('請接受我們的條款和政策');
-
+		// $('#loadErr').html('請接受我們的條款和政策');
+		$('#loadErr').html(lg_accept_terms_policy);
 	
 		
 	}else {
@@ -1423,19 +1433,22 @@ function register_user(evt){
 								if(response.msg=='User name not valid'){
 									$('#usernameErr').show();
 									$('#usernameErr').html(lg_user_name_not_valid);
-									$('#loadErr').html('User name not valid');
+									// $('#loadErr').html('User name not valid');
+									$('#loadErr').html(lg_user_name_not_valid);
 									return false;
 								}
 								if(response.msg=='User name already exists'){
 									$('#usernameErr').show();
 									$('#usernameErr').html(lg_user_name_already);
-									$('#loadErr').html('User name already exists');
+									// $('#loadErr').html('User name already exists');
+									$('#loadErr').html(lg_user_name_already);
 									return false;
 								}
 								if(response.msg=='Email id already exists'){
 									$('#emailErr').show();
 									$('#emailErr').html(lg_email_reg_already);
-									$('#loadErr').html('Email id already exists');
+									// $('#loadErr').html('Email id already exists');
+									$('#loadErr').html(lg_email_reg_already);
 									return false;
 								}
 								
