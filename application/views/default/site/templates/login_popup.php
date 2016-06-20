@@ -155,7 +155,7 @@ if($this->session->userdata('rUrl') != ''){
 
 <script type="text/javascript">
 function loginVal(){ 
-	$('#loginloadErr').show();
+	// $('#loginloadErr').show();
 	$("#emailAddr_Warn").html('');
 	$("#password_Warn").html('');
 	
@@ -164,11 +164,14 @@ function loginVal(){
 	
 	if(emailAddr.length==0){
 	$("#emailAddr_Warn").html(lg_required_field);
-	$('#loginloadErr').hide();
+	// $('#loginloadErr').hide();
+	$('#loginloadErr').html(lg_required_field);
+	$('#loginloadErr').show();
 	return false;
 	}else if(password==''){
 	$("#password_Warn").html(lg_required_field);
-	$('#loginloadErr').hide();
+	$("#loginloadErr").html(lg_required_field);
+	$('#loginloadErr').show();
 	return false;
 	}
 	//return false;
