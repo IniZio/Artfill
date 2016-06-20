@@ -66,10 +66,10 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 			<div class="col-md-4  footer-block">
 				<ul class="footer-list">
 					<li><a href="pages/about-us">關於我們</a></li>
-					<li><a href="company">公司資料</a></li>
+					<li><a href="pages/company-info">公司資料</a></li>
 					<li><a href="shop/sell">商店加盟</a></li>
-					<li><a href="terms">使用條款</a></li>
-					<li><a href="privacy">私隱政策</a></li>
+					<li><a href="pages/terms-and-conditions">使用條款</a></li>
+					<li><a href="pages/privacy-policy">私隱政策</a></li>
 					<li><a href="reflection">意見諮詢</a></li>
 				</ul>
 			</div>
