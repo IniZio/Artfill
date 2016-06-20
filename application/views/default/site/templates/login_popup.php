@@ -100,10 +100,10 @@ if($this->session->userdata('rUrl') != ''){
 				
 									<form  method="post" action="" class="frm clearfix" onSubmit="return register_user(this);">
 										<div class="popup_login">
-											<input type="text" class="search" name="fullname" id="fullname" placeholder="名字" />
+											<input type="text" class="search" name="fullname" id="fullname" placeholder="名字(不多於25字元)" />
 										</div>
 										<div class="popup_login">
-											<input type="text" class="search" name="lastname" id="lastname" placeholder="姓氏"/>
+											<input type="text" class="search" name="lastname" id="lastname" placeholder="姓氏(不多於25字元)"/>
 										</div>
 										<div class="popup_login">
 											<input type="radio" style="float:left;margin: 6px 6px 0 2px;" name="gender" value="Male" checked/><span class="gen_check"><?php if($this->lang->line('user_male') != '') { echo stripslashes($this->lang->line('user_male')); } else echo "Male"; ?></span>
@@ -114,7 +114,7 @@ if($this->session->userdata('rUrl') != ''){
 											<input type="text" class="search" style="margin:0" name="email" id="email" placeholder="使用者電郵"/>
 										</div>
 										<div class="popup_login">
-											<input type="password" class="search" style="margin:0" name="pwd" id="pwd" placeholder="密碼"/>
+											<input type="password" class="search" style="margin:0" name="pwd" id="pwd" placeholder="密碼(6-12字元)"/>
 										</div>
 										<div class="popup_login">
 											<input type="password" class="search" style="margin:0" name="Confirmpwd" id="Confirmpwd" placeholder="確認密碼"/>
@@ -122,7 +122,7 @@ if($this->session->userdata('rUrl') != ''){
 										
 										<div class="popup_login">
 												<span style="color:#F00;" class="redFont" id="usernameErr"></span> 
-												 <input type="text" class="search" style="margin:0" name="username" id="username" placeholder="用戶名稱*"/>
+												 <input type="text" class="search" style="margin:0" name="username" id="username" placeholder="用戶名稱(不多於25字元)*"/>
 										</div>
 										<p style="font-size:12px;  margin: 5px 0 4px 42px; color:#666; width:auto; float:left">								
 										  <span style=" color: #999999;font-size: 11px;margin: 12px 0 5px;"> 
