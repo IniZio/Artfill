@@ -165,7 +165,7 @@ function loginVal(){
 	if(emailAddr.length==0){
 	$("#emailAddr_Warn").html(lg_required_field);
 	// $('#loginloadErr').hide();
-	$('#loginloadErr').html("必須填寫電郵");
+	$('#loginloadErr').html("必須填寫帳號");
 	$('#loginloadErr').show();
 	return false;
 	}else if(password==''){
