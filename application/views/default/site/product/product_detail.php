@@ -50,6 +50,21 @@ $this->load->view('site/templates/header');
 					?>
 				</ul>
 			</div>
+			<div class="">
+		<?php if ($added_item_details[0]['tag'] != '') {
+		?>
+		<h2><?php if ($this->lang->line('shop_relateditem') != '') {echo stripslashes($this->lang->line('shop_relateditem'));} else {
+		echo 'Related to this Item';
+		}
+		?></h2>
+		<ul class="tag">
+			<?php $Related = explode(',', $added_item_details[0]['tag'])?>
+			<?php foreach ($Related as $tag) {?>
+			<li><a href="market/<?php echo url_title($tag); ?>"><?php echo $tag; ?></a></li>
+			<?php }?>
+		</ul>
+		<?php }?>
+	</div>
 		</div>
 		<div class="col-md-5">
 			
