@@ -46,6 +46,7 @@ $this->load->view('site/cms/contact');
 
   <section class="container">
     	<div class="main">
+		<!--
 		<ul class="bread_crumbs">
 
         	<li><a href="<?php echo base_url(); ?>" class="a_links"><?php if($this->lang->line('user_home') != '') { echo stripslashes($this->lang->line('user_home')); } else echo "Home"; ?></a></li>
@@ -55,7 +56,7 @@ $this->load->view('site/cms/contact');
            <li><?php echo $pageDetails->row()->page_title; ?></li>
 
               </ul>
-		
+		-->
 		
 		
             <div class="cms_content_about">
