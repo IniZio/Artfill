@@ -739,7 +739,7 @@ $this->load->view('site/templates/header');
 </div>
 
 
-
+<!--
 <div class="col-md-12 realated-this-item">
 	<div class="col-md-7">
 		<?php if ($added_item_details[0]['tag'] != '') {
@@ -805,7 +805,7 @@ $this->load->view('site/templates/header');
 		</div>
 	</div>
 </div>
-
+-->
 <div class="col-md-12 middel-detail" style="width:80%;margin-right:auto;margin-left:auto;">
 
 </div>
