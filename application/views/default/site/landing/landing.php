@@ -540,6 +540,7 @@ $img = explode(',', $recent_product_details->row($i)->image);
 	                            </div>
 	                        </div>
 	                        <!-- owner avatar -->
+	                        <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 avatar"> 
 	                        	<?php if ($recent_product_details->row($i)->thumbnail != '') {$profile_pic = 'users/thumb/' . $recent_product_details->row($i)->thumbnail;} else { $profile_pic = 'default_avat.png';}?>
 	                        	<img src="images/<?php echo $profile_pic ?>" alt="<?php echo $recent_product_details->row($i)->full_name; ?>" width="55px"  />
 	                        </div>
