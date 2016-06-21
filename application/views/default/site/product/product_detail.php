@@ -497,6 +497,59 @@ $this->load->view('site/templates/header');
 								<?php }?>
 							</ul>
 						</div>
+						
+						
+						
+		<div class="clear inner" id="fineprint">
+			<ul class="clear">
+				<li><?php if ($this->lang->line('prod_listed') != '') {echo stripslashes($this->lang->line('prod_listed'));} else {
+					echo 'Listed on';
+					}
+					?>
+				<?php echo date('M d,Y', strtotime($added_item_details[0]['created'])); ?></li>
+				<li> <?php echo $added_item_details[0]['view_count']; ?> <?php if ($this->lang->line('shopsec_views') != '') {echo stripslashes($this->lang->line('shopsec_views'));} else {
+					echo 'views';
+					}
+				?> </li>
+				<li>
+					<a href="product/<?php echo $added_item_details[0]['seourl']; ?>/favoriters"> <?php echo count($ProductFavoriteCount); ?> <?php if ($this->lang->line('user_favorites') != '') {echo stripslashes($this->lang->line('user_favorites'));} else {
+						echo 'Favorites';
+						}
+					?> </a>
+				</li>
+				<?php /* <li> <a href="#"> 1 Treasury list </a> </li>
+				<li id="add-treasury-item"> <a href="#" class="inline-overlay-trigger"> Add item to treasury </a> </li> */?>
+				<li id="item-reporter">
+					<div id="reporter-link-container">
+						<?php if ($this->session->userdata['shopsy_session_user_id'] != '') {
+						if ($this->session->userdata['shopsy_session_user_id'] == $selectedSeller_details[0]['seller_id']) {
+						?>
+						<a href="#ownshop_report" style="color:rgb(1, 173, 220);" data-toggle="modal"><?php if ($this->lang->line('prod_report') != '') {echo stripslashes($this->lang->line('prod_report'));} else {
+							echo 'Report this item to';
+							}
+						?> <?php echo $this->config->item('email_title'); ?></a>
+						<?php } else {
+						?>
+						<a href="#detailreport_reg" style="color:rgb(1, 173, 220);" data-toggle="modal"><?php if ($this->lang->line('prod_report') != '') {echo stripslashes($this->lang->line('prod_report'));} else {
+							echo 'Report this item to';
+							}
+						?> <?php echo $this->config->item('email_title'); ?></a>
+						<?php }} else {
+						?>
+						<a href="login?action=<?php echo current_url(); ?>" style="color:rgb(1, 173, 220);"><?php if ($this->lang->line('prod_report') != '') {echo stripslashes($this->lang->line('prod_report'));} else {
+							echo 'Report this item to';
+							}
+						?> <?php echo $this->config->item('email_title'); ?></a>
+						<?php }?>
+					</div>
+					<div id="reporter-complete-container"> </div>
+				</li>
+			</ul>
+		</div>
+						
+						
+						
+						
 					</div>
 					<?php if ($variations_one != '') {?>
 					<input type="hidden" name="variationName[]" id="variation_one_name" value="<?php echo $variations_one; ?>" />
@@ -669,6 +722,9 @@ $this->load->view('site/templates/header');
 		</div>
 	</div>
 </div>
+
+
+
 <div class="col-md-12 realated-this-item">
 	<div class="col-md-7">
 		<?php if ($added_item_details[0]['tag'] != '') {
