@@ -739,7 +739,7 @@ $this->load->view('site/templates/header');
 
 </div>
 
-<div class="col-md-7">
+<div class="col-md-7" style="width:100%;">
 	<div role="tabpanel" class="tab-content">
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs cart-tabs" role="tablist">
