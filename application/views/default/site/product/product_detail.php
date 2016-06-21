@@ -154,7 +154,7 @@ $this->load->view('site/templates/header');
 							
 							
 							
-							
+							<!--
 							<div class="btn-secondary">
 								<?php if ($this->session->userdata['shopsy_session_user_id'] != '') {
 								if ($this->session->userdata['shopsy_session_user_id'] == $selectedSeller_details[0]['seller_id']) {
@@ -177,6 +177,7 @@ $this->load->view('site/templates/header');
 								?></a>
 								<?php }?>
 							</div>
+							-->
 						</div>
 						<div class="related-listings">
 							<div class="related-listing-inner">
