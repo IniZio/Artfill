@@ -9,19 +9,6 @@ header{
 }
 </style>
 <script type="text/javascript" src="js/site/jquery.countdown.js"></script>
-<script>
-        $('.avatar').click(function(){
-    if ($(this).next('.info').css('display') == 'block'){
-    $(this).next('.info').css('display', 'none');
-    $(this).next('.info').next('.info').addClass('animated fadeIn');
-    $(this).next('.info').next('.info').css('display', 'block');
-    } else {
-    $(this).next('.info').addClass('animated fadeIn');
-    $(this).next('.info').css('display', 'block');
-    $(this).next('.info').next('.info').css('display', 'none');
-    }
-    });
-    </script>
 <link href="css/animate.css" rel="stylesheet">
 <?php if (isset($active_theme) && $active_theme->num_rows() != 0) {?>
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Home-page.css" rel="stylesheet">
@@ -553,7 +540,6 @@ $img = explode(',', $recent_product_details->row($i)->image);
 	                            </div>
 	                        </div>
 	                        <!-- owner avatar -->
-	                        <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 avatar">
 	                        	<?php if ($recent_product_details->row($i)->thumbnail != '') {$profile_pic = 'users/thumb/' . $recent_product_details->row($i)->thumbnail;} else { $profile_pic = 'default_avat.png';}?>
 	                        	<img src="images/<?php echo $profile_pic ?>" alt="<?php echo $recent_product_details->row($i)->full_name; ?>" width="55px"  />
 	                        </div>
@@ -684,6 +670,19 @@ $img = explode(',', $recent_product_details->row($i)->image);
 						*/
 						});
 						</script>
+						<script>
+        $('.avatar').click(function(){
+    if ($(this).next('.info').css('display') == 'block'){
+    $(this).next('.info').css('display', 'none');
+    $(this).next('.info').next('.info').addClass('animated fadeIn');
+    $(this).next('.info').next('.info').css('display', 'block');
+    } else {
+    $(this).next('.info').addClass('animated fadeIn');
+    $(this).next('.info').css('display', 'block');
+    $(this).next('.info').next('.info').css('display', 'none');
+    }
+    });
+    </script>
 						<?php $this->load->view('site/templates/footer');?>
 						<script type="text/javascript">
 						$(function(){

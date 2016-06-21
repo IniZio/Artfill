@@ -74,7 +74,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'traditional-chinese';
+$config['language']	= '';
 
 /*
 |--------------------------------------------------------------------------

@@ -165,20 +165,14 @@ function loginVal(){
 	if(emailAddr.length==0){
 	$("#emailAddr_Warn").html(lg_required_field);
 	// $('#loginloadErr').hide();
-<<<<<<< HEAD
-	$('#loginloadErr').html('請輸入電郵');
-=======
+	// $('#loginloadErr').html('請輸入電郵');
 	$('#loginloadErr').html("必須填寫帳號");
->>>>>>> b705998583ca4060e8b33a5f51a70eb145126b5b
 	$('#loginloadErr').show();
 	return false;
 	}else if(password==''){
 	$("#password_Warn").html(lg_required_field);
-<<<<<<< HEAD
-	$("#loginloadErr").html('請輸入密碼');
-=======
+	// $("#loginloadErr").html('請輸入密碼');
 	$("#loginloadErr").html("必須填寫密碼");
->>>>>>> b705998583ca4060e8b33a5f51a70eb145126b5b
 	$('#loginloadErr').show();
 	return false;
 	}
