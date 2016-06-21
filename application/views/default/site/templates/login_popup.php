@@ -165,12 +165,12 @@ function loginVal(){
 	if(emailAddr.length==0){
 	$("#emailAddr_Warn").html(lg_required_field);
 	// $('#loginloadErr').hide();
-	$('#loginloadErr').html(lg_required_field);
+	$('#loginloadErr').html('請輸入電郵');
 	$('#loginloadErr').show();
 	return false;
 	}else if(password==''){
 	$("#password_Warn").html(lg_required_field);
-	$("#loginloadErr").html(lg_required_field);
+	$("#loginloadErr").html('請輸入密碼');
 	$('#loginloadErr').show();
 	return false;
 	}
