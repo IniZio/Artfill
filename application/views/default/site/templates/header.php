@@ -1168,7 +1168,7 @@ $image_name = "images/landingbanner/banner-admin.jpg";
 
 			<div class="jumbotron hero" style="margin-top:inherit;">
 
-			<img src="images/sliders/front_page_.png" style="width:100%;" />
+			<img class="lazy" src="images/sliders/front_page_.png" style="width:100%;" />
 
 			<!--
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">

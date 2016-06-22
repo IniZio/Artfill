@@ -297,6 +297,8 @@ $('#languageTab').trigger('click');
 <script type="text/javascript" src="a_data/jquery.js"></script>
 <script type="text/javascript" src="a_data/jquery-ui.js"></script>
 <script type="text/javascript" src="js/currency/jquery.formatCurrency-1.4.0.js"></script>
+<script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
+<script>$("img.lazy").lazyload();</script>
 <?php /*?>
 <script>
 $(window).load(function(){
