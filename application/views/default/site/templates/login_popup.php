@@ -185,8 +185,9 @@ function loginVal(){
             url: 'json/user/login',
             type: 'post',
             dataType: 'json',   // or JSON.stringify(<data>) ??
+            data: {username, password},
             success: function (data) {
-                if (data.message = "failure"){
+                if (data['message'] = "failure"){
                 	$("#loginloadErr").html("Wrong account info~~");
 					$('#loginloadErr').show();
 					return false;
