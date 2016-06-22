@@ -46,14 +46,15 @@ if($this->session->userdata('rUrl') != ''){
 				<img src="./images/popup_logo.png" style="text-align:center;" />
 				<div style="clear:both;"></div>
 				<div style="margin-left:10px;;margin-right:auto;">
-				<span><h4>以Artfill 帳號登入</h4></span>
+				// demonstrate using shopsy_lg function, might fail though
+				<span><h4><?php echo shopsy_lg('lg_login_with_local_ac','以Artfill 帳戶登入'); ?></h4></span>
 				<div style="clear:both;"></div>
 				<form method="post" action="site/user/login_user" class="frm clearfix" onSubmit="return loginVal();">
 					
 					
 					<div class="popup_login">
 					<!--<label><?php if($this->lang->line('user_email_or_uname') != '') { echo stripslashes($this->lang->line('user_email_or_uname')); } else echo "Email or Username"; ?></label><span style="color:#F00;" class="redFont" id="emailAddr_Warn"></span> -->
-					<input type="text" class="search" name="emailAddr" id="emailAddr" placeholder="帳號" />
+					<input type="text" class="search" name="emailAddr" id="emailAddr" placeholder="帳號/電郵" />
 					</div> 
 					<div class="popup_login">
 					<!--<label><?php if($this->lang->line('user_password') != '') { echo stripslashes($this->lang->line('user_password')); } else echo "Password"; ?></label><span style="color:#F00;" class="redFont" id="password_Warn"></span>  -->
@@ -156,6 +157,7 @@ if($this->session->userdata('rUrl') != ''){
 <script type="text/javascript">
 function loginVal(){ 
 	// $('#loginloadErr').show();
+	$('#loginloadErr').html('');
 	$("#emailAddr_Warn").html('');
 	$("#password_Warn").html('');
 	
@@ -166,7 +168,7 @@ function loginVal(){
 	$("#emailAddr_Warn").html(lg_required_field);
 	// $('#loginloadErr').hide();
 	// $('#loginloadErr').html('請輸入電郵');
-	$('#loginloadErr').html("必須填寫帳號");
+	$('#loginloadErr').html("必須填寫帳號/電郵");
 	$('#loginloadErr').show();
 	return false;
 	}else if(password==''){
@@ -177,6 +179,20 @@ function loginVal(){
 	return false;
 	}
 	//return false;
+
+	var username = emailAddr;
+	$.ajax({
+            url: 'json/user/login',
+            type: 'post',
+            dataType: 'json',   // or JSON.stringify(<data>) ??
+            success: function (data) {
+                if (data.message = "failure"){
+                	$("#loginloadErr").html("Wrong account info~~");
+					$('#loginloadErr').show();
+					return false;
+                }
+            },
+        });
 }
 </script>
 
