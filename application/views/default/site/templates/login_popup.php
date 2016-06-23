@@ -46,7 +46,7 @@ if($this->session->userdata('rUrl') != ''){
 				<img src="./images/popup_logo.png" style="text-align:center;" />
 				<div style="clear:both;"></div>
 				<div style="margin-left:10px;;margin-right:auto;">
-				// demonstrate using af_lg function, might fail though
+				<!-- demonstrate using af_lg function, might fail though -->
 				<span><h4><?php echo af_lg('lg_login_with_local_ac','以Artfill 帳戶登入'); ?></h4></span>
 				<div style="clear:both;"></div>
 				<form method="post" action="" class="frm clearfix" onSubmit="return loginVal(this);">
@@ -156,8 +156,9 @@ if($this->session->userdata('rUrl') != ''){
 
 <script type="text/javascript">
 function loginVal(evt){ 
-	// $('#loginloadErr').show();
-	$('#loginloadErr').html('');
+	$('#loginloadErr').html('<span class="loading"><img src="images/indicator.gif" alt="Loading..."></span>');
+	$('#loginloadErr').show();
+	// $('#loginloadErr').html('');
 	$("#emailAddr_Warn").html('');
 	$("#password_Warn").html('');
 	
@@ -170,13 +171,11 @@ function loginVal(evt){
 	// $('#loginloadErr').html('請輸入電郵');
 	$('#loginloadErr').html("必須填寫帳號/電郵");
 	$('#loginloadErr').show();
-	return false;
 	}else if(password==''){
 	$("#password_Warn").html(lg_required_field);
 	// $("#loginloadErr").html('請輸入密碼');
 	$("#loginloadErr").html("必須填寫密碼");
 	$('#loginloadErr').show();
-	return false;
 	}
 	//return false;
 
@@ -189,9 +188,9 @@ function loginVal(evt){
                 if (data['message'] = "failure"){
                 	$("#loginloadErr").html("Wrong account info~~");
 					$('#loginloadErr').show();
-					return false;
                 }
             },
+             error: function (xhr) {alert(JSON.parse(xhr.responseText).Message); }
         });
 }
 </script>
