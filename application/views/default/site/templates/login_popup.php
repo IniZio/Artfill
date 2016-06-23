@@ -156,7 +156,6 @@ if($this->session->userdata('rUrl') != ''){
 
 <script type="text/javascript">
 function loginVal(evt){ 
-	window.history.pushState(“object or string”, “Title”, “/#login”);
 	$('#loginloadErr').html('<span class="loading"><img src="images/indicator.gif" alt="Loading..."></span>');
 	$('#loginloadErr').show();
 	// $('#loginloadErr').html('');
