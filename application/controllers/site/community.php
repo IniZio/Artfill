@@ -377,11 +377,11 @@ class Community extends MY_Controller {
 			 if(($checkDub->num_rows())==0){
 				 $dataArr = array( 'teamId'=> $teamId,'userId'=>$userId,'memberType'=>'Member','joinDate'=>date('Y m d H:i:s'));
 				 $this->community_model->commonInsertUpdate(TEAMMEMBERS,'insert',$excludeArr='',$dataArr,$condition='');
-				$lg_joined_team=addslashes(shopsy_lg('lg_joined_team','You have been joined successfully!'));
+				$lg_joined_team=addslashes(artfill_lg('lg_joined_team','You have been joined successfully!'));
 				$this->setErrorMessage('success',lg_joined_team);
 				redirect('team/'.$teamId.'/'.$teamSEOURL);
 			}else{
-			$lg_already_joined=addslashes(shopsy_lg('lg_already_joined','You have alredy joined in this team!'));
+			$lg_already_joined=addslashes(artfill_lg('lg_already_joined','You have alredy joined in this team!'));
 				$this->setErrorMessage('error',lg_already_joined);
 				redirect('team/'.$teamId.'/'.$teamSEOURL);
 			}
@@ -407,7 +407,7 @@ class Community extends MY_Controller {
 			 $Condition=array_merge(array('teamId'=> $teamId),$Cond1);
 			 $checkDub=$this->community_model->checkDublicatemember($Condition);
 			 if(($checkDub->num_rows())==0){
-			 $lg_not_a_memberin_team=addslashes(shopsy_lg('lg_not_a_memberin_team','You are not member in this team!'));
+			 $lg_not_a_memberin_team=addslashes(artfill_lg('lg_not_a_memberin_team','You are not member in this team!'));
 				$this->setErrorMessage('error',lg_not_a_memberin_team);
 				redirect('team/'.$teamId.'/'.$teamSEOURL);
 			}else{				

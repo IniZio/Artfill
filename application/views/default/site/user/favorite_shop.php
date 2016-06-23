@@ -752,7 +752,7 @@ function openItem(){
 							<div class="modal-footer footer_tab_footer">
 								<div class="btn-group">
 										<input class="submit_btn" type="submit" value="<?php if($this->lang->line('user_save') != '') { echo stripslashes($this->lang->line('user_save')); } else echo 'Save'; ?>" ></input>
-										<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo shopsy_lg('lg_cancel','Cancel');?></a>
+										<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo artfill_lg('lg_cancel','Cancel');?></a>
 								</div>
 								</div>
 							</div>								

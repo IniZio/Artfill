@@ -141,7 +141,7 @@ $('#sidenav').show();
 }else{
 $('#sidenav').hide();
 }
-" value="<?php echo shopsy_lg('lg_add-lang',' Add Language');?>" class="save_btn"/>
+" value="<?php echo artfill_lg('lg_add-lang',' Add Language');?>" class="save_btn"/>
 </span>
 <?php }?>
 </h3>	
@@ -239,15 +239,15 @@ $('#sidenav').hide();
 					</div>
 					<div class="col-sm-2 col-xs-12" id="When_is" style="display:none;">
 						<select name="when_made" id="when_made">
-							<optgroup label="<?php echo shopsy_lg('lg_notyetmade','Not yet made');?>">
+							<optgroup label="<?php echo artfill_lg('lg_notyetmade','Not yet made');?>">
 								<option value="made_to_order" ><?php if($this->lang->line('shop_madeorder') != '') { echo stripslashes($this->lang->line('shop_madeorder')); } else echo 'Made to order'; ?></option>
 							</optgroup>
-							<optgroup label="<?php echo shopsy_lg('lg_recently','Recently');?>">
+							<optgroup label="<?php echo artfill_lg('lg_recently','Recently');?>">
 								<option value="2010,<?php echo date("Y"); ?>">2010 - <?php echo date("Y"); ?></option>
 								<option value="2000,2009">2000  - 2009</option>
 								<option value="1995,1999">1995  - 1999</option>
 							</optgroup>
-							<optgroup label="<?php echo shopsy_lg('lg_vintage','Vintage');?>">
+							<optgroup label="<?php echo artfill_lg('lg_vintage','Vintage');?>">
 								<option value="0,1994"><?php if($this->lang->line('shop_sometimebefore') != '') { echo stripslashes($this->lang->line('shop_sometimebefore')); } else echo 'Sometime before'; ?> 1995</option>
 								<option value="1990,1994">1990  - 1994</option>
 								<option value="1980,1989">1980s</option>
@@ -403,33 +403,33 @@ $('#sidenav').hide();
 			
 			<?php if($this->config->item('deal_of_day')=='Yes') {?>
 			<div class="col-lg-12 sh_border" data-pricing-type="Fixed">
-				<h4><?php echo shopsy_lg('lg_deal_of_the_day','Deal Of The Day'); ?></h4>
+				<h4><?php echo artfill_lg('lg_deal_of_the_day','Deal Of The Day'); ?></h4>
 				
 				<div class="form-group">
-					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo shopsy_lg('lg_deal_date','Deal Date'); ?></label>
+					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo artfill_lg('lg_deal_date','Deal Date'); ?></label>
 					<div id="price_div_disp" class="col-sm-2">
-						<input type="text"  name="deal_date_from" id="deal_date_from" value="" placeholder="<?php echo shopsy_lg('lg_from_date','From Date'); ?>" class="form-control datepicker">
+						<input type="text"  name="deal_date_from" id="deal_date_from" value="" placeholder="<?php echo artfill_lg('lg_from_date','From Date'); ?>" class="form-control datepicker">
 					</div>
 					<div id="price_div_disp" class="col-sm-2">
-						<input type="text" name="deal_date_to" id="deal_date_to" value="" placeholder="<?php echo shopsy_lg('lg_to_date','To Date'); ?>" class="form-control datepicker2">
+						<input type="text" name="deal_date_to" id="deal_date_to" value="" placeholder="<?php echo artfill_lg('lg_to_date','To Date'); ?>" class="form-control datepicker2">
 					</div>
 					
 				</div>
 				
 				
 				<div class="form-group">
-					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo shopsy_lg('lg_deal_time','Deal Time'); ?></label>
+					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo artfill_lg('lg_deal_time','Deal Time'); ?></label>
 					<div id="price_div_disp" class="col-sm-2">
-						<input type="text" name="deal_time_from" id="deal_time_from" value="" placeholder="<?php echo shopsy_lg('lg_from_time','From Time'); ?>" class="form-control time">
+						<input type="text" name="deal_time_from" id="deal_time_from" value="" placeholder="<?php echo artfill_lg('lg_from_time','From Time'); ?>" class="form-control time">
 					</div>
 					<div id="price_div_disp" class="col-sm-2">
-						<input type="text" name="deal_time_to" id="deal_time_to" value="" placeholder="<?php echo shopsy_lg('lg_to_time','To Time'); ?>" class="form-control time">
+						<input type="text" name="deal_time_to" id="deal_time_to" value="" placeholder="<?php echo artfill_lg('lg_to_time','To Time'); ?>" class="form-control time">
 					</div>
 					
 				</div>
 				
 				<div class="form-group">
-					<label id="discount_name" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo shopsy_lg('lg_discount','Discount'); ?></label>
+					<label id="discount_name" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo artfill_lg('lg_discount','Discount'); ?></label>
 					<div id="price_div_disp" class="col-sm-2">
 						<input type="text" name="discount" id="discount" value="" placeholder="%" class="form-control">
 					</div>
@@ -796,49 +796,49 @@ $('#sidenav').hide();
 				</div>-->
 				<!--
 				<div class="form-group">
-					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo shopsy_lg('lg_pick_up_option','Delivery/Collection Options'); ?></label>
+					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo artfill_lg('lg_pick_up_option','Delivery/Collection Options'); ?></label>
 					<div class="col-md-2 col-sm-4 col-xs-12" style="width:20% !important;">
 						<div class="radio">
 							<label>
-								<input type="radio" name="pickup_option" id="pickup_local_or_delivery" value="delivery-collecion" onclick="pickupoption(this);" checked><?php echo shopsy_lg('lg_pick_up_or_delivery','Delivery & Collection'); ?>
+								<input type="radio" name="pickup_option" id="pickup_local_or_delivery" value="delivery-collecion" onclick="pickupoption(this);" checked><?php echo artfill_lg('lg_pick_up_or_delivery','Delivery & Collection'); ?>
 							</label>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-4 col-xs-12">
 						<div class="radio">
 							<label>
-								<input type="radio" name="pickup_option" id="pickup_delivery" value="delivery" onclick="pickupoption(this);"><?php echo shopsy_lg('lg_pick_up_delivery','Delivery Only'); ?>
+								<input type="radio" name="pickup_option" id="pickup_delivery" value="delivery" onclick="pickupoption(this);"><?php echo artfill_lg('lg_pick_up_delivery','Delivery Only'); ?>
 							</label>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-4 col-xs-12">
 						<div class="radio">
 							<label>
-								<input type="radio" name="pickup_option" id="pickup_local" value="collection" onclick="pickupoption(this);"><?php echo shopsy_lg('lg_local_pickup','Collection Only'); ?>
+								<input type="radio" name="pickup_option" id="pickup_local" value="collection" onclick="pickupoption(this);"><?php echo artfill_lg('lg_local_pickup','Collection Only'); ?>
 							</label>
 						</div>
 					</div>
 				</div>-->
 				<div class="form-group">
-					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo shopsy_lg('lg_pick_up_option','Delivery/Collection Options'); ?></label>
+					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo artfill_lg('lg_pick_up_option','Delivery/Collection Options'); ?></label>
 					<div class="col-md-2 col-sm-4 col-xs-12" style="width:20% !important;">
 						<div class="radio">
 							<label>
-								<input type="radio" name="pickup_option" id="pickup_local_or_delivery" value="delivery-collecion" onclick="pickupoption(this);" checked><?php echo shopsy_lg('lg_pick_up_or_delivery','Delivery & Collection'); ?>
+								<input type="radio" name="pickup_option" id="pickup_local_or_delivery" value="delivery-collecion" onclick="pickupoption(this);" checked><?php echo artfill_lg('lg_pick_up_or_delivery','Delivery & Collection'); ?>
 							</label>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-4 col-xs-12">
 						<div class="radio">
 							<label>
-								<input type="radio" name="pickup_option" id="pickup_delivery" value="delivery" onclick="pickupoption(this);"><?php echo shopsy_lg('lg_pick_up_delivery','Delivery Only'); ?>
+								<input type="radio" name="pickup_option" id="pickup_delivery" value="delivery" onclick="pickupoption(this);"><?php echo artfill_lg('lg_pick_up_delivery','Delivery Only'); ?>
 							</label>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-4 col-xs-12">
 						<div class="radio">
 							<label>
-								<input type="radio" name="pickup_option" id="pickup_local" value="collection" onclick="pickupoption(this);"><?php echo shopsy_lg('lg_local_pickup','Collection Only'); ?>
+								<input type="radio" name="pickup_option" id="pickup_local" value="collection" onclick="pickupoption(this);"><?php echo artfill_lg('lg_local_pickup','Collection Only'); ?>
 							</label>
 						</div>
 					</div>

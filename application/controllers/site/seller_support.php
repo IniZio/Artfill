@@ -107,11 +107,11 @@ class Seller_support extends MY_Controller {
 		$ticket_id=$result->helpdesk_ticket->display_id;
 
 		if($ticket_id != ''){
-		$submitted=addslashes(shopsy_lg('lg_ur_ticket_submitted','Your ticket submitted successfully'));
+		$submitted=addslashes(artfill_lg('lg_ur_ticket_submitted','Your ticket submitted successfully'));
 			$this->setErrorMessage('success',$submitted);
 			redirect('view-ticket/'.$ticket_id);
 		} else {
-		$not_submitted=addslashes(shopsy_lg('lg_ur_ticket_notsubmitted','Ticket not submitted, Please try again later'));
+		$not_submitted=addslashes(artfill_lg('lg_ur_ticket_notsubmitted','Ticket not submitted, Please try again later'));
 			$this->setErrorMessage('error',$not_submitted);
 			redirect($_SERVER['HTTP_REFERER']);
 		}
@@ -139,7 +139,7 @@ class Seller_support extends MY_Controller {
 				if($seller_data->freshdesk_id == $requester_id){
 					$this->load->view('site/freshdesk/freshdesk_view_message',$this->data);
 				} else {
-				$not_permitted_toview=addslashes(shopsy_lg('lg_no_permission','You are not permitted to view this ticket'));
+				$not_permitted_toview=addslashes(artfill_lg('lg_no_permission','You are not permitted to view this ticket'));
 					$this->setErrorMessage('error',$not_permitted_toview);
 					redirect('view-ticket-list/'.$seller_data->seourl);
 				}
@@ -179,7 +179,7 @@ class Seller_support extends MY_Controller {
 				echo $response;
 				#exit;
 		}
-		$ticket_msg=addslashes(shopsy_lg('lg_ticket_msg_submitted','Ticket message submitted successfully'));
+		$ticket_msg=addslashes(artfill_lg('lg_ticket_msg_submitted','Ticket message submitted successfully'));
 		$this->setErrorMessage('success',$ticket_msg);
 		redirect('view-ticket/'.$ticket_id);
 	}
@@ -202,7 +202,7 @@ class Seller_support extends MY_Controller {
 					'filter_name' => 'all_tickets',
 					'page'=>$pageNo
 				);
-				$this->data['heading'] = addslashes(shopsy_lg('lg_seller_suport_ticket','Seller Support Ticket Lists'));
+				$this->data['heading'] = addslashes(artfill_lg('lg_seller_suport_ticket','Seller Support Ticket Lists'));
 				$this->data['freshdesk_messages']=$freshdesk_messages=$this->support_model->freshdesk_view_ticket($ticket_data1);
 				$freshdesk_messagesList=array_filter($freshdesk_messages);
 				$ticketCount=count($freshdesk_messagesList);

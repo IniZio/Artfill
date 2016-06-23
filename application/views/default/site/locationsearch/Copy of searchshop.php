@@ -144,7 +144,7 @@ speedTest.showMarkers = function(){
 		var title = document.createElement('A');
 		title.href = 'javascript:void(0)';
 		title.className = 'title';
-		title.innerHTML = '<span><?php echo shopsy_lg('lg_noshop found','No Shop are found.....');?></span>';
+		title.innerHTML = '<span><?php echo artfill_lg('lg_noshop found','No Shop are found.....');?></span>';
 		items.appendChild(title);
 		panel.appendChild(items);
 	}
@@ -230,11 +230,11 @@ function file_get_contents(url) {
 				
 					<ul>
 					
-						<li class="event-icon"><a href="view-local-events"><?php echo shopsy_lg('lg_view_localevents','View Local Events');?></a></li>
+						<li class="event-icon"><a href="view-local-events"><?php echo artfill_lg('lg_view_localevents','View Local Events');?></a></li>
 						
-						<li class="location-icon"><a href="shop-by-location"><?php echo shopsy_lg('lg_shop_by_location','Shop By Location');?></a></li>
+						<li class="location-icon"><a href="shop-by-location"><?php echo artfill_lg('lg_shop_by_location','Shop By Location');?></a></li>
 						
-						<li class="items-icon"><a href="shop-by-items"><?php echo shopsy_lg('lg_shop_by_items','Shop By items');?></a></li>
+						<li class="items-icon"><a href="shop-by-items"><?php echo artfill_lg('lg_shop_by_items','Shop By items');?></a></li>
 					
 					</ul>
 			
@@ -247,11 +247,11 @@ function file_get_contents(url) {
 <div class="col-lg-12 search-location">
 	<div class="col-lg-3 search-location-left">
 		<div class="col-lg-12">
-			<input type="text" class="form-control " placeholder="<?php echo shopsy_lg('lg_enter your addr','Enter your address');?>" id="autocomplete" id="autocomplete" name="task_location">
+			<input type="text" class="form-control " placeholder="<?php echo artfill_lg('lg_enter your addr','Enter your address');?>" id="autocomplete" id="autocomplete" name="task_location">
 			<input style="display:none;" type="checkbox" checked="checked" id="usegmm"/>
 		</div>
 		<div class="col-lg-12 margin-top-15" style="padding: 3px;">
-			<div class="col-lg-5" style="margin-top: 5px;"><p><?php echo shopsy_lg('lg_showshops','Show shops');?></p></div>
+			<div class="col-lg-5" style="margin-top: 5px;"><p><?php echo artfill_lg('lg_showshops','Show shops');?></p></div>
 			<div class="col-lg-7">
 				<select id="nummarkers">
 					<option value="10" style="padding:7px;">10</option>
@@ -262,7 +262,7 @@ function file_get_contents(url) {
 				</select>
 			</div>		
 		</div>
-		<div class="col-lg-12 margin-top-15"><p><?php echo shopsy_lg('lg_shoplist','shop list');?></p></div>
+		<div class="col-lg-12 margin-top-15"><p><?php echo artfill_lg('lg_shoplist','shop list');?></p></div>
 		<div id="markerlist" class="col-lg-12 margin-top-15 overflow">	
 		</div>
 		<span style="display:none;">Time used: <span id="timetaken"></span> ms</span>

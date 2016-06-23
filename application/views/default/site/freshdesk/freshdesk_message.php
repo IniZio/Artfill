@@ -21,11 +21,11 @@ $this->load->view('site/templates/commonheader');
 		<thead> 
 			<tr style="background: rgb(99, 181, 207);color: #fff;">
 			
-           <th><?php echo shopsy_lg('lg_ticketID','Ticket ID');?></th>
-             <th><?php echo shopsy_lg('lg_subject','Subject');?></th> 
-            <th><?php echo shopsy_lg('lg_created_date','Created Date');?></th> 
-			<th><?php echo shopsy_lg('lg_priority','Priority');?></th>
-             <th><?php echo shopsy_lg('lg_status','Status');?></th> 
+           <th><?php echo artfill_lg('lg_ticketID','Ticket ID');?></th>
+             <th><?php echo artfill_lg('lg_subject','Subject');?></th> 
+            <th><?php echo artfill_lg('lg_created_date','Created Date');?></th> 
+			<th><?php echo artfill_lg('lg_priority','Priority');?></th>
+             <th><?php echo artfill_lg('lg_status','Status');?></th> 
              </tr>                               
              </thead>
                             <tbody> 
@@ -44,19 +44,19 @@ $this->load->view('site/templates/commonheader');
 													$diffdate=floor($datediff/(60*60*24));
 													if($diffdate!=0){
 														if($diffdate<4){
-															$msgtime= $diffdate.addslashes(shopsy_lg('lg_days_ago',' days ago'));
+															$msgtime= $diffdate.addslashes(artfill_lg('lg_days_ago',' days ago'));
 														}else{
 															$msgtime= date('m/d/Y',strtotime($createdOn));
 														}
 													}else{
 														if(floor($datediff/(60*60))<1){
 															if(floor($datediff/(60))>0){
-																$msgtime= floor($datediff/(60)).addslashes(shopsy_lg('lg_mins_ago',' mins ago'));
+																$msgtime= floor($datediff/(60)).addslashes(artfill_lg('lg_mins_ago',' mins ago'));
 															}else{
-																$msgtime= addslashes(shopsy_lg('lg_justnow',' Just now'));
+																$msgtime= addslashes(artfill_lg('lg_justnow',' Just now'));
 															}
 														}else{
-															$msgtime= floor($datediff/(60*60)).addslashes(shopsy_lg('lg_hrs_ago',' hours ago'));
+															$msgtime= floor($datediff/(60*60)).addslashes(artfill_lg('lg_hrs_ago',' hours ago'));
 														}
 													}
 													echo $msgtime;
@@ -71,7 +71,7 @@ $this->load->view('site/templates/commonheader');
 							</tbody>						
 								
 			<?php } else { ?> 	
-				<span style="color:black;font-size:15px;padding: 20%;"><strong><?php echo shopsy_lg('lg_no_ticket','You Have No Tickets ..');?></strong></span>
+				<span style="color:black;font-size:15px;padding: 20%;"><strong><?php echo artfill_lg('lg_no_ticket','You Have No Tickets ..');?></strong></span>
 		<?php } ?>		
 	</table>
 	
@@ -82,7 +82,7 @@ $this->load->view('site/templates/commonheader');
 			<?php if($prevBtn == 'Yes'){ ?>
 			<li>
 			<a href="<?php echo base_url().'view-ticket-list/'.$globalshop_url.'/'.($pageNo-1); ?>" id="prevBtn" >
-			<span style="float: right; margin-left: 6px;"> <?php echo shopsy_lg('lg_previous','Previous');?></span> <i class="icon icon-previous"></i>
+			<span style="float: right; margin-left: 6px;"> <?php echo artfill_lg('lg_previous','Previous');?></span> <i class="icon icon-previous"></i>
 			</a>
 			</li>
 			<?php } ?>
@@ -92,7 +92,7 @@ $this->load->view('site/templates/commonheader');
 			<?php if($nextBtn == 'Yes'){ ?>
 			<li>
 			<a href="<?php echo base_url().'view-ticket-list/'.$globalshop_url.'/'.($pageNo+1); ?>" id="nextBtn">
-				<span style="margin-right: 6px;"> <?php echo shopsy_lg('lg_next','Next');?></span> <i class="icon icon-next"></i>
+				<span style="margin-right: 6px;"> <?php echo artfill_lg('lg_next','Next');?></span> <i class="icon icon-next"></i>
 			</a>
 			</li>
 			<?php } ?>

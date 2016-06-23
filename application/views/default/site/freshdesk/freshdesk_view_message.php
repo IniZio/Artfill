@@ -34,19 +34,19 @@ $this->load->view('site/freshdesk/menu_bar');
 													$diffdate=floor($datediff/(60*60*24));
 													if($diffdate!=0){
 														if($diffdate<4){
-															$msgtime= $diffdate.addslashes(shopsy_lg('lg_days_ago','days ago'));
+															$msgtime= $diffdate.addslashes(artfill_lg('lg_days_ago','days ago'));
 														}else{
 															$msgtime= date('m/d/Y',strtotime($createdOn));
 														}
 													}else{
 														if(floor($datediff/(60*60))<1){
 															if(floor($datediff/(60))>0){
-																$msgtime= floor($datediff/(60)).addslashes(shopsy_lg('lg_mins_ago',' mins ago'));
+																$msgtime= floor($datediff/(60)).addslashes(artfill_lg('lg_mins_ago',' mins ago'));
 															}else{
-																$msgtime= addslashes(shopsy_lg('lg_justnow',' Just now'));
+																$msgtime= addslashes(artfill_lg('lg_justnow',' Just now'));
 															}
 														}else{
-															$msgtime= floor($datediff/(60*60)).addslashes(shopsy_lg('lg_hrs_ago',' hours ago'));
+															$msgtime= floor($datediff/(60*60)).addslashes(artfill_lg('lg_hrs_ago',' hours ago'));
 														}
 													}
 												?>
@@ -55,9 +55,9 @@ $this->load->view('site/freshdesk/menu_bar');
 			</div>
 			
 			<div class="profile_field1">
-					 <label><?php echo shopsy_lg('lg_des','Description:');?> <?php  echo $freshdesk_view->helpdesk_ticket->description; ?> </label>
+					 <label><?php echo artfill_lg('lg_des','Description:');?> <?php  echo $freshdesk_view->helpdesk_ticket->description; ?> </label>
 			</div>
-				<span style="float:right;color:black;"><i><?php echo shopsy_lg('lg_posted','Posted');?> <?php echo $msgtime; ?></i> </span>
+				<span style="float:right;color:black;"><i><?php echo artfill_lg('lg_posted','Posted');?> <?php echo $msgtime; ?></i> </span>
 						<?php } ?>
 				<?php //echo"<pre>";print_r($freshdesk_view); ?>
 	  </div>
@@ -66,11 +66,11 @@ $this->load->view('site/freshdesk/menu_bar');
 		<?php for($i=1;$i<count($freshdesk_view->helpdesk_ticket->notes);$i++){ ?>
 			
 				<?php if($freshdesk_view->helpdesk_ticket->notes[$i]->note->source != 0)
-															{$conv_name=addslashes( shopsy_lg('lg_report','Reported by')).$freshdesk_view->helpdesk_ticket->requester_name;
+															{$conv_name=addslashes( artfill_lg('lg_report','Reported by')).$freshdesk_view->helpdesk_ticket->requester_name;
 															 $color="background-color:rgb(216, 240, 198);color:rgb(102, 3, 26);";
 															}
 																
-															else{$conv_name=addslashes(shopsy_lg('lg_reply','Replied by')).$freshdesk_view->helpdesk_ticket->responder_name; 
+															else{$conv_name=addslashes(artfill_lg('lg_reply','Replied by')).$freshdesk_view->helpdesk_ticket->responder_name; 
 																		 $color="color:rgb(0, 2, 3)";	
 															}
 															?>
@@ -80,19 +80,19 @@ $this->load->view('site/freshdesk/menu_bar');
 													$diffdate=floor($datediff/(60*60*24));
 													if($diffdate!=0){
 														if($diffdate<4){
-															$msgtime= $diffdate.addslashes(shopsy_lg('lg_days_ago',' days ago'));
+															$msgtime= $diffdate.addslashes(artfill_lg('lg_days_ago',' days ago'));
 														}else{
 															$msgtime= date('m/d/Y',strtotime($createdOn));
 														}
 													}else{
 														if(floor($datediff/(60*60))<1){
 															if(floor($datediff/(60))>0){
-																$msgtime= floor($datediff/(60)).addslashes(shopsy_lg('lg_mins_ago',' mins ago'));
+																$msgtime= floor($datediff/(60)).addslashes(artfill_lg('lg_mins_ago',' mins ago'));
 															}else{
-																$msgtime= addslashes(shopsy_lg('lg_justnow',' Just now'));
+																$msgtime= addslashes(artfill_lg('lg_justnow',' Just now'));
 															}
 														}else{
-															$msgtime= floor($datediff/(60*60)).addslashes(shopsy_lg('lg_hrs_ago',' hours ago'));
+															$msgtime= floor($datediff/(60*60)).addslashes(artfill_lg('lg_hrs_ago',' hours ago'));
 														}
 													}
 												?>

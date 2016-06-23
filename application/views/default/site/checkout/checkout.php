@@ -106,7 +106,7 @@ $this->load->view('site/templates/header.php');
        
        if ($CheckoutVal->row()->payment_type == 'userCredits'){?>
                    	<li class="depth1 current" id="dep1" style="background:none; width:250px;"><span><?php echo $payMethodCount;?></span><a onclick="javascript:paypal();" class="current">
-                    <?php echo shopsy_lg('lg_usercredits','User Credits');?>
+                    <?php echo artfill_lg('lg_usercredits','User Credits');?>
                      </a></li>
                <?php 
                }
@@ -129,11 +129,11 @@ $this->load->view('site/templates/header.php');
 				$("#twocheckout").validate();
 				
 				$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 				
 				$.validator.addMethod("ValidZipCode", function( value, element ) {  var result = this.optional(element) || value.length >= 3;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);
 					 var successCallback = function(data) {
 								//alert("success");
 								var myForm = document.getElementById('twocheckout');
@@ -452,10 +452,10 @@ $this->load->view('site/templates/header.php');
           <div class="cart-payment-wrap card-payment new-card-payment" id="PayuPay"> 
             <script>$(document).ready(function(){	$("#UserPaymentUForm").validate();
 					$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 					$.validator.addMethod("ValidZipCode", function( value, element ) {	var result = this.optional(element) || value.length >= 3;
-					if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
+					if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
 		   	</script>
             <form name="UserPaymentPayUForm" id="UserPaymentUForm" method="post" enctype="multipart/form-data" action="site/checkout/UserPaymentPayuProcess"  autocomplete="off">
               <?php /*?><input type="hidden" name="paypalmode" id="paypalmode" value="<?php echo $SellerDetails->row()->PayPal_mode; ?>"  />
@@ -628,10 +628,10 @@ $this->load->view('site/templates/header.php');
 			<div class="cart-payment-wrap card-payment new-card-payment" id="PaypalPay"> 
             <script>$(document).ready(function(){	$("#UserPaymentPaypalAdptForm").validate();
 					$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 					$.validator.addMethod("ValidZipCode", function( value, element ) {	var result = this.optional(element) || value.length >= 3;
-					if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
+					if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
 		   	</script>
             <form name="pesapalform" id="pesapalform" method="post" enctype="multipart/form-data" action="site/checkout/Pesapal"  autocomplete="off">
               <div id="complete-payment">
@@ -785,7 +785,7 @@ $this->load->view('site/templates/header.php');
 			?>
 			<script>$(document).ready(function(){	$("#BrainTreeForm").validate();
 					  $.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 					  $.validator.addMethod("ValidZipCode", function( value, element ) {
 								var result = this.optional(element) || value.length >= 3;
@@ -795,7 +795,7 @@ $this->load->view('site/templates/header.php');
 												else{
 												return true;
 												}
-							}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);
+							}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);
 					  
 					   });</script>
            <form name="BrainTreeForm" id="BrainTreeForm" method="post" enctype="multipart/form-data" action="site/checkout/PaymentCreditAjax" autocomplete="off">
@@ -1284,10 +1284,10 @@ $this->load->view('site/templates/header.php');
           <div class="cart-payment-wrap card-payment new-card-payment" id="PayuPay"> 
             <script>$(document).ready(function(){	$("#UserPaymentUForm").validate();
 					$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 					$.validator.addMethod("ValidZipCode", function( value, element ) {	var result = this.optional(element) || value.length >= 3;
-					if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
+					if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
 		   	</script>
             <form name="UserPaymentPayUForm" id="UserPaymentUForm" method="post" enctype="multipart/form-data" action="site/checkout/UserPaymentPayuProcess"  autocomplete="off">
               <?php /*?><input type="hidden" name="paypalmode" id="paypalmode" value="<?php echo $SellerDetails->row()->PayPal_mode; ?>"  />
@@ -1458,10 +1458,10 @@ $this->load->view('site/templates/header.php');
           <div class="cart-payment-wrap card-payment new-card-payment" id="PaypalPay"> 
             <script>$(document).ready(function(){	$("#UserPaymentPaypalAdptForm").validate();
 					$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 					$.validator.addMethod("ValidZipCode", function( value, element ) {	var result = this.optional(element) || value.length >= 3;
-					if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
+					if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
 		   	</script>
             <form name="UserPaymentPaypalAdptForm" id="UserPaymentPaypalAdptForm" method="post" enctype="multipart/form-data" action="site/checkout/UserPaymentProcessAdaptive"  autocomplete="off">
               <?php /*?><input type="hidden" name="paypalmode" id="paypalmode" value="<?php echo $SellerDetails->row()->PayPal_mode; ?>"  />
@@ -1634,10 +1634,10 @@ $this->load->view('site/templates/header.php');
           <div class="cart-payment-wrap card-payment new-card-payment" id="PayuPay"> 
             <script>$(document).ready(function(){	$("#UserPaymentUForm").validate();
 					$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 					$.validator.addMethod("ValidZipCode", function( value, element ) {	var result = this.optional(element) || value.length >= 3;
-					if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
+					if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
 		   	</script>
             <form name="UserPaymentPayUForm" id="UserPaymentUForm" method="post" enctype="multipart/form-data" action="site/checkout/UserPaymentPayuProcess"  autocomplete="off">
               <?php /*?><input type="hidden" name="paypalmode" id="paypalmode" value="<?php echo $SellerDetails->row()->PayPal_mode; ?>"  />
@@ -1808,10 +1808,10 @@ $this->load->view('site/templates/header.php');
           <div class="cart-payment-wrap card-payment new-card-payment" id="PaypalPay"> 
             <script>$(document).ready(function(){	$("#UserPaymentPaypalAdptForm").validate();
 					$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 					$.validator.addMethod("ValidZipCode", function( value, element ) {	var result = this.optional(element) || value.length >= 3;
-					if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
+					if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
 		   	</script>
             <form name="UserPaymentPaypalAdptForm" id="UserPaymentPaypalAdptForm" method="post" enctype="multipart/form-data" action="site/checkout/UserPaymentProcessAdaptive"  autocomplete="off">
               <?php /*?><input type="hidden" name="paypalmode" id="paypalmode" value="<?php echo $SellerDetails->row()->PayPal_mode; ?>"  />
@@ -1983,10 +1983,10 @@ $this->load->view('site/templates/header.php');
           <div class="cart-payment-wrap card-payment new-card-payment" id="PaypalPay"> 
             <script>$(document).ready(function(){	$("#UserPaymentPaypalForm").validate();
 					$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }},<?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }},<?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 					$.validator.addMethod("ValidZipCode", function( value, element ) {	var result = this.optional(element) || value.length >= 6;
-					if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
+					if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
 		   	</script>
             <form name="UserPaymentPaypalForm" id="UserPaymentPaypalForm" method="post" enctype="multipart/form-data" action="site/checkout/UserPaymentProcess"  autocomplete="off">
               <?php /*?><input type="hidden" name="paypalmode" id="paypalmode" value="<?php echo $SellerDetails->row()->PayPal_mode; ?>"  />
@@ -2166,10 +2166,10 @@ $this->load->view('site/templates/header.php');
           <div class="cart-payment-wrap card-payment new-card-payment" id="CreditCardPay"> 
             <script>$(document).ready(function(){	$("#UserPaymentCreditForm").validate();
 					$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }},<?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }},<?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 				$.validator.addMethod("ValidZipCode", function( value, element ) { var result = this.optional(element) || value.length >= 3;
-					if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
+					if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
 			</script>
             <form name="UserPaymentCreditForm" id="UserPaymentCreditForm" method="post" enctype="multipart/form-data" action="site/checkout/UserPaymentCredit" autocomplete="off">
               <input type="hidden" name="authorize_mode" id="authorize_mode" value="<?php echo $SellerDetails->row()->authorize_mode; ?>"  />
@@ -2724,10 +2724,10 @@ var stripeResponseHandler = function(status, response) {
           <div class="cart-payment-wrap card-payment new-card-payment" id="COD"> 
             <script>$(document).ready(function(){	$("#UserPaymentCodForm").validate();
 					$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 					$.validator.addMethod("ValidZipCode", function( value, element ) {	var result = this.optional(element) || value.length >= 3;
-					if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
+					if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
 		   	</script>
             <form name="UserPaymentCodForm" id="UserPaymentCodForm" method="post" enctype="multipart/form-data" action="site/checkout/UserPaymentOnDelivery"  autocomplete="off">
               <?php /*?><input type="hidden" name="paypalmode" id="paypalmode" value="<?php echo $SellerDetails->row()->PayPal_mode; ?>"  />
@@ -2902,10 +2902,10 @@ var stripeResponseHandler = function(status, response) {
 		            <div class="cart-payment-wrap card-payment new-card-payment" id="userCredits"> 
 		              <script>$(document).ready(function(){	$("#UserPaymentCodForm").validate();
 		  					$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				
 							$.validator.addMethod("ValidZipCode", function( value, element ) {	var result = this.optional(element) || value.length >= 3;
-		  					if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
+		  					if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);});
 		  		   	</script>
 		              <form name="userCreditsForm" id="userCreditsForm" method="post" enctype="multipart/form-data" action="site/checkout/UserPaymentOnUserCredits"  autocomplete="off">
 		                <?php /*?><input type="hidden" name="paypalmode" id="paypalmode" value="<?php echo $SellerDetails->row()->PayPal_mode; ?>"  />
@@ -3181,7 +3181,7 @@ var stripeResponseHandler = function(status, response) {
           <div class="cart-payment-wrap card-payment new-card-payment" id="PaypalPay" style="display:block;"> 
             <script>$(document).ready(function(){	$("#PaymentPaypalForm").validate();
 					 $.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }},<?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }},<?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				 
 					  $.validator.addMethod("ValidZipCode", function( value, element ) {
 								var result = this.optional(element) || value.length >= 3;
@@ -3191,7 +3191,7 @@ var stripeResponseHandler = function(status, response) {
 												else{
 												return true;
 												}
-							}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);
+							}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);
 					  
 					   });</script>
             <form name="PaymentPaypalForm" id="PaymentPaypalForm" method="post" enctype="multipart/form-data" action="site/checkout/PaymentGiftFree" autocomplete="off">
@@ -3343,7 +3343,7 @@ var stripeResponseHandler = function(status, response) {
             <script>$(document).ready(function(){	$("#PaymentGiftPaypalForm").validate();
 					  
 					$.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }}, <?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }}, <?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 									
 					$.validator.addMethod("ValidZipCode", function( value, element ) {
 								var result = this.optional(element) || value.length >= 3;
@@ -3353,7 +3353,7 @@ var stripeResponseHandler = function(status, response) {
 												else{
 												return true;
 												}
-							}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);
+							}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);
 					  
 					   });</script>
             <form name="PaymentGiftPaypalForm" id="PaymentGiftPaypalForm" method="post" enctype="multipart/form-data" action="site/checkout/PaymentProcessGift"  autocomplete="off">
@@ -3477,11 +3477,11 @@ var stripeResponseHandler = function(status, response) {
 												else{
 												return true;
 												}
-							}, <?php echo shopsy_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);
+							}, <?php echo artfill_lg('lg_enter_correct_pincode','Please Enter the Correct ZipCode');?>);
 					  
 					   });
 					   $.validator.addMethod("Validphno", function( value, element ) {  var result = this.optional(element) || value.length >= 8;
-				if (!result) { return false; }else{ return true; }},<?php echo shopsy_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
+				if (!result) { return false; }else{ return true; }},<?php echo artfill_lg('lg_enter_correct_phno','Please Enter the Correct ZipCode');?>);
 				</script>
             <form name="PaymentGiftCreditForm" id="PaymentGiftCreditForm" method="post" enctype="multipart/form-data" action="site/checkout/PaymentCreditGift" autocomplete="off">
               <div id="complete-payment">

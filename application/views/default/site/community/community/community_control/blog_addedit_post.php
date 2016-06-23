@@ -128,7 +128,7 @@ function ajaxfilemanager(field_name, url, type, win) {
             <input name="post_title" id="post_title" class="store_inputuse required" type="text" value="<?php if(!empty($editpostData)) echo stripslashes($editpostData[0]['post_title']); ?>" placeholder="<?php if($this->lang->line('com_title') != '') { echo stripslashes($this->lang->line('com_title')); } else echo "Enter title here"; ?>" class="store_inputuse" />
            </div>
             <div> 
-             <span class="store_heading" style="width: 714px;" ><?php if($this->lang->line('user_image') != '') { echo stripslashes($this->lang->line('user_image')); } else echo shopsy_lg('lg_image','Image');?> <span style="color:#F00;">*</span>
+             <span class="store_heading" style="width: 714px;" ><?php if($this->lang->line('user_image') != '') { echo stripslashes($this->lang->line('user_image')); } else echo artfill_lg('lg_image','Image');?> <span style="color:#F00;">*</span>
 			 
 			  <div class="input-change"><div style="width: 218px;
   margin-left: -4px;"><input type="button" onclick="document.getElementById('post_image').click()" value="<?php if($this->lang->line('choose_file') != '') { echo stripslashes($this->lang->line('choose_file')); } else echo "Choose File"; ?> ..."><b id="no_file_selected"><?php if($this->lang->line('no_file_selected') != '') { echo stripslashes($this->lang->line('no_file_selected')); } else echo "No File Selected"; ?></b></div></div>

@@ -740,7 +740,7 @@ class User extends MY_Controller {
 				redirect(base_url());
 			}else{
 				//echo "asdf";die;
-			 $email_exist=addslashes(shopsy_lg('lg_email_exist','Email Id Already Exists '));
+			 $email_exist=addslashes(artfill_lg('lg_email_exist','Email Id Already Exists '));
 				//echo $email_exist;die;
 				$this->setErrorMessage('error',$email_exist);
 				redirect(base_url());
@@ -1070,7 +1070,7 @@ class User extends MY_Controller {
 						}
 				  }*/
 			    } else{		
-                    $ur_ac_is_inactive=addslashes(shopsy_lg('lg_ur_ac is inactive','Your Account Is In-Active'));				
+                    $ur_ac_is_inactive=addslashes(artfill_lg('lg_ur_ac is inactive','Your Account Is In-Active'));				
 					$this->setErrorMessage('error',$ur_ac_is_inactive);
 					if($next!=''){
 						redirect('login?action='.urlencode($next));
@@ -1082,7 +1082,7 @@ class User extends MY_Controller {
 				  }
 			
 		}else {
-		$invalid_login=addslashes(shopsy_lg('lg_invalid_login_details','Invalid login details'));
+		$invalid_login=addslashes(artfill_lg('lg_invalid_login_details','Invalid login details'));
 				$this->setErrorMessage('error',$invalid_login);
 				
 				//$this->session->set_userdata('ErrTypeSess','TYPES');
@@ -1394,18 +1394,18 @@ class User extends MY_Controller {
 					$this->user_model->update_details(USERS,array('resetcode'=>$reset_code,'resettime'=>date('Y-m-d h:i:s'),'resetstatus'=>'0'),array('email' => $email));
 					$id=$checkUser->row()->id;
 					$this->send_user_password($pwd,$checkUser,$reset_code,$id);
-					$new_password=addslashes(shopsy_lg('lg_new_password send tour mail','New password sent to your mail'));
+					$new_password=addslashes(artfill_lg('lg_new_password send tour mail','New password sent to your mail'));
 					$this->setErrorMessage('success',$new_password);
 					redirect('wp_update_user.php?un='.$checkUser->row()->user_name.'&pw='.$pwd.'&pg=2');
 					//redirect('signup');
 					//redirect('login');
 				}else {
-				$not_match=addslashes(shopsy_lg('lg_email mismatch','Your email id not matched in our records'));
+				$not_match=addslashes(artfill_lg('lg_email mismatch','Your email id not matched in our records'));
 					$this->setErrorMessage('error',$not_match);
 					redirect('forgot-password');
 				}
 			}else {
-			$not_valid=addslashes(shopsy_lg('lg_email_not_valid','Email id not valid'));
+			$not_valid=addslashes(artfill_lg('lg_email_not_valid','Email id not valid'));
 				$this->setErrorMessage('error',$not_valid);
 				redirect('forgot-password');
 			}
@@ -1670,25 +1670,25 @@ class User extends MY_Controller {
 				$row=$checkUser->result_array(); 
 				if($row[0]['status']=='Active')
 				{
-				$ur_account=addslashes(shopsy_lg('lg_ur_ac_already_activated','Your account already activated'));
+				$ur_account=addslashes(artfill_lg('lg_ur_ac_already_activated','Your account already activated'));
 				$this->setErrorMessage('success',$ur_account);
 				//redirect('signup');
 				redirect('');
 				}elseif ($checkUser->num_rows() == '1'){
 					$this->send_reopen_account($checkUser);
-					$acc_activate=addslashes(shopsy_lg('lg_ur ac willbe activated soon','your account will be activated soon'));
+					$acc_activate=addslashes(artfill_lg('lg_ur ac willbe activated soon','your account will be activated soon'));
 					#$uid = $row[0]['id'];
 					#$email = $row[0]['email'];					
 					$this->setErrorMessage('success',$acc_activate);
 					redirect('reopen-account');
 				}else {
-				$lg_notmatch=addslashes(shopsy_lg('lg_email mismatch','Your email id not matched in our records'));
+				$lg_notmatch=addslashes(artfill_lg('lg_email mismatch','Your email id not matched in our records'));
 
 					$this->setErrorMessage('error',$lg_notmatch);
 					redirect('reopen-account');
 				}
 			}else {
-		$lg_invalid_email=addslashes(shopsy_lg('lg_email_not_valid','Email id not valid'));
+		$lg_invalid_email=addslashes(artfill_lg('lg_email_not_valid','Email id not valid'));
 				$this->setErrorMessage('error',$lg_invalid_email);
 				redirect('reopen-account');
 			}
@@ -1859,7 +1859,7 @@ class User extends MY_Controller {
 	 */
 	public function display_user_profile(){
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}
@@ -1901,7 +1901,7 @@ class User extends MY_Controller {
 	function public_profile()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',	$lg_login);
 				redirect(base_url());
 		}
@@ -1927,7 +1927,7 @@ class User extends MY_Controller {
 	function affiliate_clicks()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 			redirect(base_url());
 		}
@@ -1968,7 +1968,7 @@ class User extends MY_Controller {
 		//print_r($_FILES);
 		
 		if ($this->checkLogin('U')==''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 			redirect(base_url());
 		}
@@ -2012,12 +2012,12 @@ class User extends MY_Controller {
 			$this->user_model->update_details(USERS,$dataArr,array('id'=>$this->checkLogin('U')));
 			if($this->db->affected_rows()>0)
 			{
-			$profile_update=addslashes(shopsy_lg('lg_ur_profile_updated','Your profile successfully updated'));
+			$profile_update=addslashes(artfill_lg('lg_ur_profile_updated','Your profile successfully updated'));
 			$this->setErrorMessage('success',$profile_update);
 			 	 redirect("public-profile");	
 			}
 			else{
-			 $no_updation=addslashes(shopsy_lg('lg_noupdation','No updation on your profile'));
+			 $no_updation=addslashes(artfill_lg('lg_noupdation','No updation on your profile'));
 			$this->setErrorMessage('success', $no_updation);
 		 	redirect("public-profile");
 			}
@@ -2031,7 +2031,7 @@ class User extends MY_Controller {
 	function prototypes()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}
@@ -2117,7 +2117,7 @@ class User extends MY_Controller {
 	{
 
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}	
@@ -2205,7 +2205,7 @@ class User extends MY_Controller {
 	function account_preferences()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}
@@ -2222,7 +2222,7 @@ class User extends MY_Controller {
 	function account_privacy()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}
@@ -2240,7 +2240,7 @@ class User extends MY_Controller {
 	function account_security()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}
@@ -2258,7 +2258,7 @@ class User extends MY_Controller {
 	function account_shipping_address()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}
@@ -2279,7 +2279,7 @@ class User extends MY_Controller {
 	function add_shipping_address()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}
@@ -2309,7 +2309,7 @@ class User extends MY_Controller {
 			
 			if($result)
 			{
-			$ship_address=addslashes(shopsy_lg('lg_ship_addr_added_sucesss','Shipping address added successfully'));
+			$ship_address=addslashes(artfill_lg('lg_ship_addr_added_sucesss','Shipping address added successfully'));
 				$this->setErrorMessage('success',$ship_address);
 				redirect('settings/account-shipping-address');
 			}
@@ -2339,7 +2339,7 @@ class User extends MY_Controller {
 	function cart_shipping_address()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url()."login?redirect=cart");
 		}
@@ -2358,7 +2358,7 @@ class User extends MY_Controller {
 	function cart_add_shipping_address()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect('cart');
 		}
@@ -2379,11 +2379,11 @@ class User extends MY_Controller {
 			$result=$this->user_model->get_all_details(SHIPPING_ADDRESS,$dataArr);
 			
 			if($result->num_rows()>0){
-			$ship_add_alreadyexist=addslashes(shopsy_lg('lg_shipad_alreadyexist','This address already exist'));
+			$ship_add_alreadyexist=addslashes(artfill_lg('lg_shipad_alreadyexist','This address already exist'));
 				$this->setErrorMessage('error',$ship_add_alreadyexist);
 				redirect('settings/cart-shipping-address');
 			}
-			$ship_address=addslashes(shopsy_lg('lg_ship_addr_added_sucesss','Shipping address added successfully'));
+			$ship_address=addslashes(artfill_lg('lg_ship_addr_added_sucesss','Shipping address added successfully'));
 			$this->user_model->simple_insert(SHIPPING_ADDRESS,$dataArr);
 			$this->setErrorMessage('success',$ship_address);
 			redirect('cart');
@@ -2402,13 +2402,13 @@ class User extends MY_Controller {
 	function remove_shipping_address($id)
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}
 		//echo $id;die;
 		$this->user_model->commonDelete(SHIPPING_ADDRESS,array('id'=>$id));
-		$delete_ship_address=addslashes(shopsy_lg('lg_delete_ship_address','Shipping address deleted successfully'));
+		$delete_ship_address=addslashes(artfill_lg('lg_delete_ship_address','Shipping address deleted successfully'));
 		$this->setErrorMessage('success',$delete_ship_address);
 				redirect('settings/account-shipping-address');
 		}
@@ -2421,13 +2421,13 @@ class User extends MY_Controller {
 	function remove_creadit_card($id)
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect('login');
 		}
 		//echo $id;die;
 		$this->user_model->commonDelete(CREDITCARDS,array('user_id'=>$this->checkLogin('U')));
-		$remove_card=addslashes(shopsy_lg('lg_remove_card','Your Credit Card Informations Removed successfully'));
+		$remove_card=addslashes(artfill_lg('lg_remove_card','Your Credit Card Informations Removed successfully'));
 		$this->setErrorMessage('success',$remove_card);
 				redirect('settings/account-creditcard');
 		}
@@ -2440,7 +2440,7 @@ class User extends MY_Controller {
 	function remove_order($dealCodeNumber)
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}
@@ -2457,7 +2457,7 @@ class User extends MY_Controller {
 	function account_creditcard()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}
@@ -2480,7 +2480,7 @@ class User extends MY_Controller {
 		$cvv=$this->input->post('cvv');
 		$dataArr=array('user_id' => $this->checkLogin('U'),'card_number' => $card_number,'card_type' => $card_type,'exp_month' => $expiry_month,'exp_year' => $expiry_year,'security_code' => $cvv);
 		$this->user_model->simple_insert(CREDITCARDS,$dataArr);
-		$save_card=addslashes(shopsy_lg('lg_save_card','Your card saved  successfully'));
+		$save_card=addslashes(artfill_lg('lg_save_card','Your card saved  successfully'));
 	    $this->setErrorMessage('success',$save_card);		
 		redirect("settings/account-creditcard");
 	}
@@ -2493,7 +2493,7 @@ class User extends MY_Controller {
 	function account_email()
 	{
 		if ($this->checkLogin('U') == ''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 				redirect(base_url());
 		}
@@ -2933,13 +2933,13 @@ class User extends MY_Controller {
 			#echo "<pre>"; print_r($listConditionArr); die;
 			if ($listCheck->num_rows()==0){
 				$this->user_model->simple_insert(LISTS_DETAILS,$listArr);
-				$this->setErrorMessage('success', shopsy_lg('lg_list','List').' '.$name.' '.shopsy_lg('lg_created_success','created successfully'));			
+				$this->setErrorMessage('success', artfill_lg('lg_list','List').' '.$name.' '.artfill_lg('lg_created_success','created successfully'));			
 				if($this->input->post('ddl')){ redirect('');}
 				redirect('/people/'.$this->session->userdata('shopsy_session_user_name').'/favorites');
 			}
 			else 
 			{
-				$this->setErrorMessage('error',$name.' '.shopsy_lg('lg_already_in_list','is already in you List'));
+				$this->setErrorMessage('error',$name.' '.artfill_lg('lg_already_in_list','is already in you List'));
 				if($rdir){
 					redirect('/people/'.$this->session->userdata('shopsy_session_user_name').'/favorites');
 				}
@@ -2974,7 +2974,7 @@ class User extends MY_Controller {
 				#echo "<pre>"; print_r($dataArr); print_r($condition); die;
 				$this->user_model->update_details(LISTS_DETAILS,$dataArr,$condition);		
 						
-				$this->setErrorMessage('success',shopsy_lg('lg_list','List').' '.$list_name.' '.shopsy_lg('lg_update_success','Updated successfully'));
+				$this->setErrorMessage('success',artfill_lg('lg_list','List').' '.$list_name.' '.artfill_lg('lg_update_success','Updated successfully'));
 				            
 				redirect('/people/'.$this->session->userdata('shopsy_session_user_name').'/favorites/list/'.$listId.'-'.$list_name);
 			}
@@ -2994,7 +2994,7 @@ class User extends MY_Controller {
 	public function add_item_to_lists(){
 		$returnStr['status_code'] = 0;
 		if ($this->checkLogin('U')==''){
-		$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 			$returnStr['message'] =$lg_login;
 		}else {
 			$tid = $this->input->post('tid');
@@ -3964,7 +3964,7 @@ $message.='</td>
 					}
 					$this->user_model->update_details(USERS,array('lists'=>$listCount),array('id'=>$this->checkLogin('U')));
 					$returnStr['url'] = base_url().'people/'.$this->data['userDetails']->row()->user_name.'/favorites';
-					$list_delete=addslashes(shopsy_lg('lg_list_delete','List deleted successfully'));
+					$list_delete=addslashes(artfill_lg('lg_list_delete','List deleted successfully'));
 	
 					$this->setErrorMessage('success',$list_delete);
 					$returnStr['status_code'] = 1;
@@ -4435,7 +4435,7 @@ $message.='</td>
 
 					$email_send_to_common = $this->product_model->common_email_send($email_values);#die;
 				}
-				$add_shopfav_list=addslashes(shopsy_lg('lg_add_shopfav_list','This Shop Added to Your Favorite List!'));
+				$add_shopfav_list=addslashes(artfill_lg('lg_add_shopfav_list','This Shop Added to Your Favorite List!'));
 				//$this->setErrorMessage('success',$add_shopfav_list);	
 				$returnStr['status_code'] = 1;
 				/*Push Message Starts*/
@@ -4478,7 +4478,7 @@ $message.='</td>
 					$this->user_model->update_details(USERS,$dataArr,$condition);					
 					#$returnStr['status_code'] = 1;
 				}
-				$remove_shop =shopsy_lg('lg_remove_shop','This Shop Removed From Your Favorite List!');
+				$remove_shop =artfill_lg('lg_remove_shop','This Shop Removed From Your Favorite List!');
 				$this->user_model->fav_delete($userid,$shopid);
 				//$this->setErrorMessage('success',$remove_shop);
 				if($rdir){
@@ -4491,7 +4491,7 @@ $message.='</td>
 		}
 		else
 		{
-		$lg_login_reg_toadd_shopto_fav=addslashes(shopsy_lg('lg_login_reg_toadd_shopto_fav','Login Required for Adding this shop to your favorites'));
+		$lg_login_reg_toadd_shopto_fav=addslashes(artfill_lg('lg_login_reg_toadd_shopto_fav','Login Required for Adding this shop to your favorites'));
 			$this->setErrorMessage('error',$lg_login_reg_toadd_shopto_fav);
 			$returnStr['status_code'] = 0;
 			$returnStr['next_url']=urlencode('site/user/insert_favorite_status/'.$this->input->post('shopid').'/'.$this->input->post('type'));
@@ -4747,7 +4747,7 @@ $message.='</td>
 		}
 		else
 		{
-		$login_required=addslashes(shopsy_lg('lg_login req to add this product','Login Required for Adding this product to your favorites'));
+		$login_required=addslashes(artfill_lg('lg_login req to add this product','Login Required for Adding this product to your favorites'));
 			$this->setErrorMessage('error',$login_required);
 			$returnStr['status_code'] = 0;
 			$returnStr['next_url'] =urlencode('site/user/product_favorite_status/'.$this->input->post('pid').'/'.$this->input->post('type'));
@@ -4927,7 +4927,7 @@ $message.='</td>
 			{ 
 				$newproductlist=$listProduct[0]['product_id'].$prodId.','; $productCount=$listProduct[0]['product_count']+1; 
 			}
-			$ur_list_updated=addslashes(shopsy_lg('lg_your list_updated','Your List has been updated'));
+			$ur_list_updated=addslashes(artfill_lg('lg_your list_updated','Your List has been updated'));
 			//echo "<pre>"; print_r($listProduct); print_r($productArr);  echo $newproductlist;echo '/'.$productCount; die;
 			$this->user_model->update_details(LISTS_DETAILS,array('product_id'=>$newproductlist,'product_count'=>$productCount),array('id'=>$listId));
 			$this->setErrorMessage('success',$ur_list_updated);
@@ -4952,7 +4952,7 @@ $message.='</td>
 				#echo "<pre>"; print_r($dataArr); print_r($condition); die;
 				$this->user_model->update_details(USERS,$dataArr,$condition);
 				
-	         	$list_updated_successfully=addslashes(shopsy_lg('lg_List_Updated_successfully','List Updated successfully'));
+	         	$list_updated_successfully=addslashes(artfill_lg('lg_List_Updated_successfully','List Updated successfully'));
 						
 				$this->setErrorMessage('success',$list_updated_successfully);
 				redirect('/people/'.$this->session->userdata('shopsy_session_user_name').'/favorites/items-i-love');
@@ -4981,7 +4981,7 @@ $message.='</td>
 				$condition = array('id'=>$this->session->userdata('shopsy_session_user_id'));
 				#echo "<pre>"; print_r($dataArr); print_r($condition); die;
 				$this->user_model->update_details(USERS,$dataArr,$condition);	
-                 $shop_visiblity=addslashes(shopsy_lg('lg_your_shop_visible_changed','your shop visibilty changed successfully'));				
+                 $shop_visiblity=addslashes(artfill_lg('lg_your_shop_visible_changed','your shop visibilty changed successfully'));				
 						
 				$this->setErrorMessage('success', $shop_visiblity);
 				redirect('/people/'.$this->session->userdata('shopsy_session_user_name').'/favorites/shop');
@@ -5136,7 +5136,7 @@ $message.='</td>
 								);
 			//echo '<pre>'; print_r($email_values); die;
 			$email_send_to_common = $this->user_model->common_email_send($email_values);
-			$contact_shop_owner=addslashes(shopsy_lg('lg_contact_shop_owner','Contact Shop Owner Mail Sent Successfully.'));
+			$contact_shop_owner=addslashes(artfill_lg('lg_contact_shop_owner','Contact Shop Owner Mail Sent Successfully.'));
 			
 			$this->setErrorMessage('success',$contact_shop_owner);
 		}
@@ -5603,7 +5603,7 @@ $message.='</td>
 				    $this->user_model->commonDelete(REGISTRY_LISTINGS,array('collection_id'=>$userId,'listing_id'=>$prodId));
 					$this->user_model->commonDelete(REGISTRY_REQUEST,array('collection_id'=>$userId,'listing_id'=>$prodId));	
 			}
-			$ur_reg_updated=addslashes(shopsy_lg('lg_ur_reg_updated','Your Registry has been updated'));
+			$ur_reg_updated=addslashes(artfill_lg('lg_ur_reg_updated','Your Registry has been updated'));
 			
 			$this->setErrorMessage('success',$ur_reg_updated);		
 		}
@@ -6361,7 +6361,7 @@ $message.='</td>
 	public function reflection_form()
 	{
 		//if ($this->checkLogin('U') == ''){
-		//$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+		//$lg_login=addslashes(artfill_lg('lg_login','You must login'));
 		//	$this->setErrorMessage('error',	$lg_login);
 		//		redirect(base_url());
 		//}
@@ -6373,7 +6373,7 @@ $this->data['j']='j';
 	
 
         //if ($this->checkLogin('U')==''){
-        //$lg_login=addslashes(shopsy_lg('lg_login','You must login'));
+        //$lg_login=addslashes(artfill_lg('lg_login','You must login'));
         //    $this->setErrorMessage('error',$lg_login);
         //    redirect(base_url());
         //}
