@@ -69,7 +69,7 @@ if($this->session->userdata('rUrl') != ''){
 					</div>
 				</form>
 									
-					<a href="forgot-password" style="font-size: 12px; width:100%;"><?php echo af_lg('user_fgt_pwd',"忘記密碼?"); ?></a>
+					<a href="forgot-password" style="font-size: 12px; width:100%;"><?php echo af_lg('user_fgt_pwd',"忘記密碼"); ?></a> | 
 					<a href="register" style="font-size: 12px; width:100%;"><?php echo af_lg('user_register',"新會員註冊"); ?></a>
 					
 				</div>
