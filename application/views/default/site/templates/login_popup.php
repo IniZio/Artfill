@@ -171,13 +171,15 @@ function loginVal(evt){
 	// $('#loginloadErr').html('請輸入電郵');
 	$('#loginloadErr').html("必須填寫帳號/電郵");
 	$('#loginloadErr').show();
+	return false;
 	}else if(password==''){
 	$("#password_Warn").html(lg_required_field);
 	// $("#loginloadErr").html('請輸入密碼');
 	$("#loginloadErr").html("必須填寫密碼");
 	$('#loginloadErr').show();
+	return false;
 	}
-	//return false;
+	// return false;
 
 	$.ajax({
             url: 'site/mobile/user_login',
@@ -193,6 +195,7 @@ function loginVal(evt){
             },
              error: function (xhr) {alert(JSON.parse(xhr.responseText).Message); }
         });
+	return false;
 }
 </script>
 
