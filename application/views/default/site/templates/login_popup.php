@@ -195,7 +195,7 @@ function loginVal(evt){
             },
              error: function (xhr) {alert(JSON.parse(xhr.responseText).Message); }
         });
-	return false;
+	// return false;
 }
 </script>
 
