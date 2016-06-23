@@ -54,10 +54,10 @@ if($this->session->userdata('rUrl') != ''){
 					
 					<div class="popup_login">
 					<!--<label><?php echo af_lg('user_email_or_uname',"Email or Username"); ?></label><span style="color:#F00;" class="redFont" id="emailAddr_Warn"></span> -->
-					<input type="text" class="search" name="emailAddr" id="emailAddr" placeholder="帳號/電郵" />
+					<input type="text" class="search" maxlength="25" name="emailAddr" id="emailAddr" placeholder="帳號/電郵" />
 					</div> 
 					<div class="popup_login">
-					<!--<label><?php echo af_lg('user_password', "Password"); ?></label><span style="color:#F00;" class="redFont" id="password_Warn"></span>  -->
+					<!--<label><?php echo af_lg('user_password', "Password"); ?></label><span style="color:#F00;" maxlength="12" class="redFont" id="password_Warn"></span>  -->
 					<input type="password" class="search" name="password" id="password" placeholder="密碼" />
 					</div>
 					<div class="popup_login">
@@ -70,7 +70,7 @@ if($this->session->userdata('rUrl') != ''){
 				</form>
 									
 					<a href="forgot-password" style="font-size: 12px; width:100%;"><?php echo af_lg('user_fgt_pwd',"忘記密碼?"); ?></a>
-					<a href="register" style="font-size: 12px; width:100%;"><?php echo af_lg('land_reopenacc',"新會員註冊"); ?></a>
+					<a href="register" style="font-size: 12px; width:100%;"><?php echo af_lg('user_register',"新會員註冊"); ?></a>
 					
 				</div>
 				</div>
@@ -101,10 +101,10 @@ if($this->session->userdata('rUrl') != ''){
 				
 									<form  method="post" action="" class="frm clearfix" onSubmit="return register_user(this);">
 										<div class="popup_login">
-											<input type="text" class="search" name="fullname" id="fullname" placeholder="名字(不多於25字元)" />
+											<input type="text" class="search" maxlength="25" name="fullname" id="fullname" placeholder="名字(不多於25字元)" />
 										</div>
 										<div class="popup_login">
-											<input type="text" class="search" name="lastname" id="lastname" placeholder="姓氏(不多於25字元)"/>
+											<input type="text" class="search" maxlength="25" name="lastname" id="lastname" placeholder="姓氏(不多於25字元)"/>
 										</div>
 										<div class="popup_login">
 											<input type="radio" style="float:left;margin: 6px 6px 0 2px;" name="gender" value="Male" checked/><span class="gen_check"><?php echo af_lg('user_male', "Male"); ?></span>

@@ -1261,7 +1261,6 @@ function loginVal(evt){
 	$("#password").focus();
 	return false;
 	}
-	// return false;
 
 	$.ajax({
             url: 'site/mobile/user_login',
@@ -1283,12 +1282,9 @@ function loginVal(evt){
         });
 	return false;
 }
-	
+
 function register_user(evt){
-//	alert("Asdf");
-	
 	$('#loadErr').html('<span class="loading"><img src="images/indicator.gif" alt="Loading..."></span>');
-	//window.location.href='www.google.com';
 	var fullname = $('#fullname').val();
 	var lastname = $('#lastname').val();
 	var email = $('#email').val();
