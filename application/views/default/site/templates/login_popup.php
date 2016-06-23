@@ -180,6 +180,7 @@ function loginVal(evt){
 	return false;
 	}
 	// return false;
+	var wrong_ac = true;
 
 	$.ajax({
             url: 'site/mobile/user_login',
@@ -188,6 +189,7 @@ function loginVal(evt){
             data: {'username':emailAddr,'password': password},
             success: function (data) {
                 if (data['message'] = "failure"){
+                	wrong_ac = false;
                 	$("#loginloadErr").html("Wrong account info~~");
 					$('#loginloadErr').show();
 					return false;
@@ -195,7 +197,7 @@ function loginVal(evt){
             },
              error: function (xhr) {alert(JSON.parse(xhr.responseText).Message); }
         });
-	// return false;
+	return wrong_ac;
 }
 </script>
 
