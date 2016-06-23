@@ -194,7 +194,7 @@ function loginVal(evt){
 					$('#loginloadErr').show();
                 } else {
                 	$(evt).attr('action', 'site/user/login_user');
-                	$(evt).off('submit').submit();
+                	$(evt).off('onSubmit').submit();
                 	return true;
                 }
             },
