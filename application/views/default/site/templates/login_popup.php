@@ -188,6 +188,7 @@ function loginVal(evt){
                 if (data['message'] = "failure"){
                 	$("#loginloadErr").html("Wrong account info~~");
 					$('#loginloadErr').show();
+					return false;
                 }
             },
              error: function (xhr) {alert(JSON.parse(xhr.responseText).Message); }
