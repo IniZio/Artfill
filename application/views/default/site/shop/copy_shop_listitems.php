@@ -121,7 +121,7 @@ $(function() {
 			
 	<?php if($languagesList->num_rows() > 0 ) {?>
 	<span style="float: right;margin: 0px 20px 0px 0px;">
-	<input type="button" onclick="$('#sidenav').show();" value="<?php echo shopsy_lg('lg_add-lang','Add Language');?>" class="save_btn"/>
+	<input type="button" onclick="$('#sidenav').show();" value="<?php echo af_lg('lg_add-lang','Add Language');?>" class="save_btn"/>
 	</span>
 	<?php }?>
 	</h3>
@@ -227,15 +227,15 @@ $(function() {
 					$maked=$edit_item_detail->row()->maked_on;
 					$rmaked= str_replace(',', "-",$maked); ?>
 							<option selected="selected"><?php echo $rmaked; ?></option>
-							<optgroup  label="<?php echo shopsy_lg('lg_notyetmade','Not yet made');?>">
+							<optgroup  label="<?php echo af_lg('lg_notyetmade','Not yet made');?>">
 								<option value="made_to_order" ><?php if($this->lang->line('shop_madeorder') != '') { echo stripslashes($this->lang->line('shop_madeorder')); } else echo 'Made to order'; ?></option>
 							</optgroup>
-							<optgroup  label="<?php echo shopsy_lg('lg_recently','Recently');?>">
+							<optgroup  label="<?php echo af_lg('lg_recently','Recently');?>">
 								<option value="2010,2014">2010  - 2014</option>
 								<option value="2000,2009">2000  - 2009</option>
 								<option value="1995,1999">1995  - 1999</option>
 							</optgroup>
-							<optgroup  label="<?php echo shopsy_lg('lg_vintage','Vintage');?>">
+							<optgroup  label="<?php echo af_lg('lg_vintage','Vintage');?>">
 								<option value="0,1994"><?php if($this->lang->line('shop_sometimebefore') != '') { echo stripslashes($this->lang->line('shop_sometimebefore')); } else echo 'Sometime before'; ?> 1995</option>
 								<option value="1990,1994">1990  - 1994</option>
 								<option value="1980,1989">1980s</option>
@@ -467,33 +467,33 @@ $(function() {
 			
 			<?php if($this->config->item('deal_of_day')=='Yes') {?>
 			<div class="col-lg-12 sh_border" data-pricing-type="Fixed">
-				<h4><?php echo shopsy_lg('lg_deal of the day','Deal Of The day');?></h4>
+				<h4><?php echo af_lg('lg_deal of the day','Deal Of The day');?></h4>
 				
 				<div class="form-group">
-					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo shopsy_lg('lg_dealdate','Deal Date');?></label>
+					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo af_lg('lg_dealdate','Deal Date');?></label>
 					<div id="price_div_disp" class="col-sm-2">
-						<input type="text"  name="deal_date_from" id="deal_date_from" value="<?php  if($edit_item_detail->row()->action=='DOD') { echo date('m/d/Y',strtotime($edit_item_detail->row()->deal_date)); } ?>" placeholder="<?php echo shopsy_lg('lg_from date','From Date');?>" class="form-control datepicker">
+						<input type="text"  name="deal_date_from" id="deal_date_from" value="<?php  if($edit_item_detail->row()->action=='DOD') { echo date('m/d/Y',strtotime($edit_item_detail->row()->deal_date)); } ?>" placeholder="<?php echo af_lg('lg_from date','From Date');?>" class="form-control datepicker">
 					</div>
 					<div id="price_div_disp" class="col-sm-2">
-						<input type="text" name="deal_date_to" id="deal_date_to" value="<?php if($edit_item_detail->row()->action=='DOD') { echo date('m/d/Y',strtotime($edit_item_detail->row()->deal_date_to)); }?>" placeholder="<?php echo shopsy_lg('lg_to date','To Date');?>" class="form-control datepicker2">
+						<input type="text" name="deal_date_to" id="deal_date_to" value="<?php if($edit_item_detail->row()->action=='DOD') { echo date('m/d/Y',strtotime($edit_item_detail->row()->deal_date_to)); }?>" placeholder="<?php echo af_lg('lg_to date','To Date');?>" class="form-control datepicker2">
 					</div>
 					
 				</div>
 				
 				
 				<div class="form-group">
-					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo shopsy_lg('lg_dealtime','Deal Time');?></label>
+					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo af_lg('lg_dealtime','Deal Time');?></label>
 					<div id="price_div_disp" class="col-sm-2">
-						<input type="text" name="deal_time_from" id="deal_time_from" value="<?php if($edit_item_detail->row()->action=='DOD') { echo date('h:i A',strtotime($edit_item_detail->row()->deal_time_from)); } ?>" placeholder="<?php echo shopsy_lg('lg_from time','From Time');?>" class="form-control time">
+						<input type="text" name="deal_time_from" id="deal_time_from" value="<?php if($edit_item_detail->row()->action=='DOD') { echo date('h:i A',strtotime($edit_item_detail->row()->deal_time_from)); } ?>" placeholder="<?php echo af_lg('lg_from time','From Time');?>" class="form-control time">
 					</div>
 					<div id="price_div_disp" class="col-sm-2">
-						<input type="text" name="deal_time_to" id="deal_time_to" value="<?php if($edit_item_detail->row()->action=='DOD') { echo date('h:i A',strtotime($edit_item_detail->row()->deal_time_to)); } ?>" placeholder="<?php echo shopsy_lg('','To Time');?>" class="form-control time">
+						<input type="text" name="deal_time_to" id="deal_time_to" value="<?php if($edit_item_detail->row()->action=='DOD') { echo date('h:i A',strtotime($edit_item_detail->row()->deal_time_to)); } ?>" placeholder="<?php echo af_lg('','To Time');?>" class="form-control time">
 					</div>
 					
 				</div>
 				
 				<div class="form-group">
-					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo shopsy_lg('lg_discount','Discount');?></label>
+					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo af_lg('lg_discount','Discount');?></label>
 					<div id="price_div_disp" class="col-sm-2">
 						<input type="text" name="discount" id="discount" value="<?php if($edit_item_detail->row()->action=='DOD') { echo $edit_item_detail->row()->discount; }?>" placeholder="%:" class="form-control">
 					</div>
@@ -990,25 +990,25 @@ $(function() {
 				<h4><?php if($this->lang->line('shopsec_shipping') != '') { echo stripslashes($this->lang->line('shopsec_shipping')); } else echo 'Shipping'; ?></h4>
 				<p><?php if($this->lang->line('shopsec_shipping_text') != '') { echo stripslashes($this->lang->line('shopsec_shipping_text')); } else echo 'Set clear and realistic shipping expectations for shoppers by providing accurate processing time and shipping rates.'; ?></p>
 				<div class="form-group">
-					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo shopsy_lg('lg_pick_up_option','Delivery/Collection Options'); ?></label>
+					<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo af_lg('lg_pick_up_option','Delivery/Collection Options'); ?></label>
 					<div class="col-md-2 col-sm-4 col-xs-12" style="width:20% !important;">
 						<div class="radio">
 							<label>
-								<input type="radio" name="pickup_option" id="pickup_local_or_delivery" value="delivery-collecion" onclick="pickupoption(this);" <?php if($edit_item_detail->row()->pickup_option =='delivery-collecion'){echo "checked";}?>><?php echo shopsy_lg('lg_pick_up_or_delivery','Delivery & Collection'); ?>
+								<input type="radio" name="pickup_option" id="pickup_local_or_delivery" value="delivery-collecion" onclick="pickupoption(this);" <?php if($edit_item_detail->row()->pickup_option =='delivery-collecion'){echo "checked";}?>><?php echo af_lg('lg_pick_up_or_delivery','Delivery & Collection'); ?>
 							</label>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-4 col-xs-12">
 						<div class="radio">
 							<label>
-								<input type="radio" name="pickup_option" id="pickup_delivery" value="delivery" onclick="pickupoption(this);" <?php if($edit_item_detail->row()->pickup_option =='delivery'){echo "checked";}?>><?php echo shopsy_lg('lg_pick_up_delivery','Delivery Only'); ?>
+								<input type="radio" name="pickup_option" id="pickup_delivery" value="delivery" onclick="pickupoption(this);" <?php if($edit_item_detail->row()->pickup_option =='delivery'){echo "checked";}?>><?php echo af_lg('lg_pick_up_delivery','Delivery Only'); ?>
 							</label>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-4 col-xs-12">
 						<div class="radio">
 							<label>
-								<input type="radio" name="pickup_option" id="pickup_local" value="collection" onclick="pickupoption(this);" <?php if($edit_item_detail->row()->pickup_option =='collection'){echo "checked";}?>><?php echo shopsy_lg('lg_local_pickup','Collection Only'); ?>
+								<input type="radio" name="pickup_option" id="pickup_local" value="collection" onclick="pickupoption(this);" <?php if($edit_item_detail->row()->pickup_option =='collection'){echo "checked";}?>><?php echo af_lg('lg_local_pickup','Collection Only'); ?>
 							</label>
 						</div>
 					</div>

@@ -9,11 +9,11 @@ $this->load->view('site/templates/shop_header');
 	<section class="container">
     	<div class="main">
         	<ul class="bread_crumbs">
-            	<li><a href="<?php echo base_url(); ?>"><?php echo shopsy_lg('lg_home','Home');?></a></li>
+            	<li><a href="<?php echo base_url(); ?>"><?php echo af_lg('lg_home','Home');?></a></li>
                 <span>›</span>
-                <li><a href="shop/sell"><?php echo shopsy_lg('lg_ur_shop','Your Shop');?></a></li>
+                <li><a href="shop/sell"><?php echo af_lg('lg_ur_shop','Your Shop');?></a></li>
                 <span>›</span>
-                <li><?php echo shopsy_lg('lg_display_zendesk_ticket','Display Zendesk Tickets');?></li>
+                <li><?php echo af_lg('lg_display_zendesk_ticket','Display Zendesk Tickets');?></li>
             </ul>
             <div class="convers community_right">                
                 <div class="conversation_container" style="margin-bottom: 12px;">
@@ -25,9 +25,9 @@ $this->load->view('site/templates/shop_header');
 						<?php if($zen_user_id != '' && $zen_user_id != 0) { ?>
 						
                         <div class="ticket_header">
-							<span><h3><?php echo shopsy_lg('lg_display_zendesk_ticket','Display Zendesk Tickets');?>
+							<span><h3><?php echo af_lg('lg_display_zendesk_ticket','Display Zendesk Tickets');?>
 								<a href="#create_ticket_popup" data-toggle="modal">
-									<label class="addticket"> <h5><i class="fa fa-plus"></i><?php echo shopsy_lg('lg_add_ticket','Add Ticket');?></h5></label> </h3> 
+									<label class="addticket"> <h5><i class="fa fa-plus"></i><?php echo af_lg('lg_add_ticket','Add Ticket');?></h5></label> </h3> 
 								</a>
 							</span>
 						</div>
@@ -51,7 +51,7 @@ $this->load->view('site/templates/shop_header');
 
 								<li  class="statusLi">
 									<?php if($tickets[$i]->status == 'open'){ ?>
-								   <span class="ticket_status"><?echo shopsy_lg('lg_open','Open');?></span>
+								   <span class="ticket_status"><?echo af_lg('lg_open','Open');?></span>
 								   <?php } else { ?>
 								   <span class="ticket_status" style="background-color: gray;"><?php echo $tickets[$i]->status; ?></span>
 								   <?php } ?>
@@ -94,11 +94,11 @@ $this->load->view('site/templates/shop_header');
 							
 					
 							?>
-                         <span style="text-align:center;"><h3 style="margin:5%; text-align:center; "><?php echo shopsy_lg('lg_no_ticket_found','No Tickets Found');?></h3></span>
+                         <span style="text-align:center;"><h3 style="margin:5%; text-align:center; "><?php echo af_lg('lg_no_ticket_found','No Tickets Found');?></h3></span>
                         <?php } else { ?>
 						<form action="site/zendesk/create_zendesk_user" method="post" id="zendesk_form">
 							<a href="javascript:void(0);" onclick="javascript: $('#zendesk_form').submit();">
-								<span style="text-align:center;"><h3 CLASS="createZenAccount"><?php echo shopsy_lg('clk_here','Click Here To Create Account With Zendesk');?></h3></span>
+								<span style="text-align:center;"><h3 CLASS="createZenAccount"><?php echo af_lg('clk_here','Click Here To Create Account With Zendesk');?></h3></span>
 							</a>
 							<input type="hidden" name="user_id" value="<?php echo $this->session->userdata('shopsy_session_user_id'); ?>" />
 							<input type="hidden" name="user_name" value="<?php echo $this->session->userdata('shopsy_session_user_name'); ?>" />
@@ -127,15 +127,15 @@ $this->load->view('site/templates/shop_header');
 					<div class="conversation_container">				
 						<div class="conversation_right">
 							<form name="contactpeople" id="create_zendesk_ticket_form" method="post" action="site/zendesk/create_vendor_zendesk_ticket" onsubmit="return zenCheck();">
-								<input class="conversation-subject" type="text" name="subject" id="subject" placeholder="<?php echo shopsy_lg('lg_subject_conv','Subject of the Conversation');?>" style="width:610px;" value="" >
+								<input class="conversation-subject" type="text" name="subject" id="subject" placeholder="<?php echo af_lg('lg_subject_conv','Subject of the Conversation');?>" style="width:610px;" value="" >
 								<textarea class="conversation-textarea" style="width:610px;" rows="11" name="description" id="message_text" placeholder="<?php if($this->lang->line('lg_type ur msg here') != '') { echo stripslashes($this->lang->line('lg_type ur msg here')); } else echo 'Type Your Message Here'; ?>"></textarea>
 								<span style="float:right; margin-bottom: 2%; margin-right: 7%;">
-									<?php echo shopsy_lg('lg_priority','Priority : ');?>
+									<?php echo af_lg('lg_priority','Priority : ');?>
 									<select name="priority" id="priority">
-										<option selected="selected" value="low"><?php echo shopsy_lg('lg_low','Low');?></option>
-										<option value="normal"><?php echo shopsy_lg('lg_home','Normal');?></option>
-										<option value="high"><?php echo shopsy_lg('lg_high','High');?></option>
-										<option value="urgent"><?php echo shopsy_lg('lg_urgent','Urgent');?></option>
+										<option selected="selected" value="low"><?php echo af_lg('lg_low','Low');?></option>
+										<option value="normal"><?php echo af_lg('lg_home','Normal');?></option>
+										<option value="high"><?php echo af_lg('lg_high','High');?></option>
+										<option value="urgent"><?php echo af_lg('lg_urgent','Urgent');?></option>
 									</select>
 								</span>
 								<input type="hidden" name="requester" id="requester" value="<?php echo $this->session->userdata['shopsy_session_user_email']; ?>" />
@@ -145,7 +145,7 @@ $this->load->view('site/templates/shop_header');
 								 <span style="float:left;" id="ErrPUP" class="error"></span>
 									<div class="btn-group">
 											<input class="submit_btn" type="submit" value="<?php if($this->lang->line('user_send') != '') { echo stripslashes($this->lang->line('user_send')); } else echo 'send'; ?>" />
-											<a class="btn btn-default submit_btn" data-dismiss="modal" id="contact_reg"><?php echo shopsy_lg('lg_cancel','Cancel');?></a>
+											<a class="btn btn-default submit_btn" data-dismiss="modal" id="contact_reg"><?php echo af_lg('lg_cancel','Cancel');?></a>
 									</div>
 								</div>
 								

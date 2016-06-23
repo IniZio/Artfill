@@ -68,7 +68,7 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 				    </div>-->
 					<!--new elements-->
 					<div class="hidden-xs">
-						<a href="<?php echo base_url(); ?>" title="<?php echo shopsy_lg('lg_home', 'Home'); ?>"><span style="color:white;">首頁</span></a>
+						<a href="<?php echo base_url(); ?>" title="<?php echo af_lg('lg_home', 'Home'); ?>"><span style="color:white;">首頁</span></a>
 						<span style="color:white;">&emsp;|&emsp;</span>
 						<a href="pages/about-us"><span style="color:white;">關於我們</span></a>
 						<span style="color:white;">&emsp;|&emsp;</span>
@@ -156,7 +156,7 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 							<input type="hidden" name="location" value="<?php echo $locVal; ?>" /> <?php }?>
 							<?php if ($shipVal != '') {?>
 							<input type="hidden" name="shipto" value="<?php echo $shipVal; ?>" /> <?php }?>
-							<input type="submit" value="<?php echo shopsy_lg('heading_search', 'Search'); ?>" class="search-bt">
+							<input type="submit" value="<?php echo af_lg('heading_search', 'Search'); ?>" class="search-bt">
 						</form>
 						<div id="sugglist"></div>
 					</div>
@@ -215,7 +215,7 @@ break;}
 					<div class="col-md-5 col-xs-5 top-login">
 						<ul class="header_menu">
 							<li>
-								<a href="<?php echo base_url(); ?>" id="home" title="<?php echo shopsy_lg('lg_home', 'Home'); ?>">
+								<a href="<?php echo base_url(); ?>" id="home" title="<?php echo af_lg('lg_home', 'Home'); ?>">
 									<span class="icon-text"><?php if ($this->lang->line('landing_home') != '') {echo stripslashes($this->lang->line('landing_home'));} else {
         echo 'Home';
     }
@@ -223,7 +223,7 @@ break;}
 								</a>
 							</li>
 							<li>
-								<a href="shop/sell" id="shop" title="<?php echo shopsy_lg('lg_you_shop', 'You Shop'); ?>">
+								<a href="shop/sell" id="shop" title="<?php echo af_lg('lg_you_shop', 'You Shop'); ?>">
 									<span class="icon-text"><?php if ($this->lang->line('header_shop') != '') {echo stripslashes($this->lang->line('header_shop'));} else {
         echo 'Shop';
     }
@@ -437,7 +437,7 @@ break;}
 
 
 							<li>
-								<a href="<?php echo base_url(); ?>home" id="home" title="<?php echo shopsy_lg('lg_home', 'Home'); ?>">
+								<a href="<?php echo base_url(); ?>home" id="home" title="<?php echo af_lg('lg_home', 'Home'); ?>">
 									<span class="icon-text"><?php if ($this->lang->line('landing_home') != '') {echo stripslashes($this->lang->line('landing_home'));} else {
         echo 'Home';
     }
@@ -446,7 +446,7 @@ break;}
 							</li>
 
 							<li>
-								<a id="favorites" href="people/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>/favorites" title="<?php echo shopsy_lg('lg_favorites', 'Favorites'); ?>">
+								<a id="favorites" href="people/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>/favorites" title="<?php echo af_lg('lg_favorites', 'Favorites'); ?>">
 									<span class="icon-text"><?php if ($this->lang->line('landing_favorites') != '') {echo stripslashes($this->lang->line('landing_favorites'));} else {
         echo 'Favorites';
     }
@@ -455,7 +455,7 @@ break;}
 							</li>
 
 							<li>
-								<a href="shop/sell" id="shop" title="<?php echo shopsy_lg('lg_you_shop', 'You Shop'); ?>">
+								<a href="shop/sell" id="shop" title="<?php echo af_lg('lg_you_shop', 'You Shop'); ?>">
 									 <?php if ($curruserGroup == 'Seller') {
         ?>
 									<span class="icon-text"><?php if ($this->lang->line('landing_your_shop') != '') {echo stripslashes($this->lang->line('landing_your_shop'));} else {
@@ -491,9 +491,9 @@ break;}
 											<div class="drop_right"><strong>shunmugapriya</strong><span><a href="view-profile/shunmugapriya" class="view-btn1">View Profile</a></span></div>
 										</div>-->
 									<!--
-								<a class="dropdown-toggle browse "  data-toggle="dropdown" id="you1" title="<?php echo shopsy_lg('lg_you', 'You'); ?>">
+								<a class="dropdown-toggle browse "  data-toggle="dropdown" id="you1" title="<?php echo af_lg('lg_you', 'You'); ?>">
 									<span class="icon-text">
-									<?php echo shopsy_lg('lg_you', 'You'); ?>
+									<?php echo af_lg('lg_you', 'You'); ?>
 
 									<?php if ($notificationCount > 0) {?>
 									<span class="notification-count" id="notificationCount"><?php echo $notificationCount; ?></span>
@@ -727,7 +727,7 @@ $p++;
 						<ul class="header_menu">
 						<!--
 							<li>
-								<a href="<?php echo base_url(); ?>" id="home" title="<?php echo shopsy_lg('lg_home', 'Home'); ?>">
+								<a href="<?php echo base_url(); ?>" id="home" title="<?php echo af_lg('lg_home', 'Home'); ?>">
 									<span class="icon-text"><?php if ($this->lang->line('landing_home') != '') {echo stripslashes($this->lang->line('landing_home'));} else {
         echo 'Home';
     }
@@ -735,7 +735,7 @@ $p++;
 								</a>
 							</li>
 							<li>
-								<a href="shop/sell" id="shop" title="<?php echo shopsy_lg('lg_you_shop', 'You Shop'); ?>">
+								<a href="shop/sell" id="shop" title="<?php echo af_lg('lg_you_shop', 'You Shop'); ?>">
 									<span class="icon-text"><?php if ($this->lang->line('header_shop') != '') {echo stripslashes($this->lang->line('header_shop'));} else {
         echo 'Shop';
     }
@@ -1168,7 +1168,7 @@ $image_name = "images/landingbanner/banner-admin.jpg";
 
 			<div class="jumbotron hero" style="margin-top:inherit;">
 
-			<img src="images/sliders/front_page_.png" style="width:100%;" />
+			<img class="lazy" src="images/sliders/front_page_.png" style="width:100%;" />
 
 			<!--
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -1205,7 +1205,7 @@ $i++;
 										<p><?php echo trim($sliders->description); ?></p><?php }?>
 										<?php if ($sliders->link != '') {?>
 
-										<a class="banner-bt" href="<?php echo trim(prep_url($sliders->link)); ?>" target="_blank" /><?php echo shopsy_lg('lg_readmore', 'Read More'); ?></a> <?php }?>
+										<a class="banner-bt" href="<?php echo trim(prep_url($sliders->link)); ?>" target="_blank" /><?php echo af_lg('lg_readmore', 'Read More'); ?></a> <?php }?>
 
 									  </div>
 

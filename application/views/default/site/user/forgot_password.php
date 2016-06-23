@@ -9,9 +9,9 @@
         	<ul class="bread_crumbs">
         	<li><a href="<?php echo base_url(); ?>" class="a_links"><?php if($this->lang->line('user_home') != '') { echo stripslashes($this->lang->line('user_home')); } else echo "Home"; ?></a></li>
             <span>&rsaquo;</span>
-           <li><a href="login" class="a_links"><?php echo shopsy_lg('lg_login','Login'); ?></a></li>
+           <li><a href="login" class="a_links"><?php echo af_lg('lg_login','Login'); ?></a></li>
 		   <span>&rsaquo;</span>          
-           <li><?php echo shopsy_lg('lg_fgt_pwd','Forgot Password'); ?></li>
+           <li><?php echo af_lg('lg_fgt_pwd','Forgot Password'); ?></li>
         </ul>	
 
             <div class="community_page">

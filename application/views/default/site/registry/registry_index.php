@@ -162,7 +162,7 @@ box-shadow: 0 0 6px 0 #ccc;
 						<div style="border:none; margin:0; padding:0" class="sign_in_form-inner">
 							<div style="float:left; width:100%;" class="sign_head5">
 								<h2 style="font-size: 20px;"><?php if($this->lang->line('seller_wedding') != '') { echo stripslashes($this->lang->line('seller_wedding')); } else echo 'When is your wedding'; ?>?</h2> 
-								<input type="text"  name="registryDate" id="registryDate" class="payment_txt required" placeholder="<?php echo shopsy_lg('lg_select_date','Select the date');?>" value="" />	                 
+								<input type="text"  name="registryDate" id="registryDate" class="payment_txt required" placeholder="<?php echo af_lg('lg_select_date','Select the date');?>" value="" />	                 
 								<div style="float: left;">					
 									<div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="registryDate" data-link-format="yyyy-mm-dd">		
 														
@@ -171,7 +171,7 @@ box-shadow: 0 0 6px 0 #ccc;
 							</div> 
 						  <div class="modal-footer footer_tab_footer">
 								<div class="btn-group">
-										 <input class="submit_btn" type="submit" value="<?php echo shopsy_lg('lg_create_registry','Create Registry');?>" name="submitRegistry" />
+										 <input class="submit_btn" type="submit" value="<?php echo af_lg('lg_create_registry','Create Registry');?>" name="submitRegistry" />
 										<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php if($this->lang->line('user_cancel') != '') { echo stripslashes($this->lang->line('user_cancel')); } else echo 'Cancel'; ?></a>
 								</div>
 							</div>		

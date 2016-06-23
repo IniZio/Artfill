@@ -177,7 +177,7 @@ function tpEndSelect( time, startTimePickerInst ) {
                    </div>
                    <div class="cardinfo_div">
                     	<label><p class="teamnames"><?php if($this->lang->line('com_location') != '') { echo stripslashes($this->lang->line('com_location')); } else echo "Location"; ?></p><span style="color:#F00; margin: 0px;">*</span></label>
-                         <input type="text" id="autocomplete" name="eventLocation" class="payment_txt required" placeholder="<?php echo shopsy_lg('lg_enter_location','Enter a location');?>"value="<?php if(!empty($eventsList)){ echo $eventsList->row()->eventLocation; } ?>">
+                         <input type="text" id="autocomplete" name="eventLocation" class="payment_txt required" placeholder="<?php echo af_lg('lg_enter_location','Enter a location');?>"value="<?php if(!empty($eventsList)){ echo $eventsList->row()->eventLocation; } ?>">
                    </div>
                     <input type="hidden" name="event_id" value="<?php if(!empty($eventsList)){ echo $eventsList->row()->id; } ?>" />
                     <input type="submit" value="<?php if($this->lang->line('user_submit') != '') { echo stripslashes($this->lang->line('user_submit')); } else echo "SUBMIT"; ?>" class="create_btn_1">

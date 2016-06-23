@@ -46,14 +46,15 @@ if($this->session->userdata('rUrl') != ''){
 				<img src="./images/popup_logo.png" style="text-align:center;" />
 				<div style="clear:both;"></div>
 				<div style="margin-left:10px;;margin-right:auto;">
-				<span><h4>以Artfill 帳號登入</h4></span>
+				<!-- demonstrate using af_lg function, might fail though -->
+				<span><h4><?php echo af_lg('lg_login_with_local_ac','以Artfill 帳戶登入'); ?></h4></span>
 				<div style="clear:both;"></div>
-				<form method="post" action="site/user/login_user" class="frm clearfix" onSubmit="return loginVal();">
+				<form method="post" action="" class="frm clearfix" onSubmit="return loginVal(this);">
 					
 					
 					<div class="popup_login">
 					<!--<label><?php if($this->lang->line('user_email_or_uname') != '') { echo stripslashes($this->lang->line('user_email_or_uname')); } else echo "Email or Username"; ?></label><span style="color:#F00;" class="redFont" id="emailAddr_Warn"></span> -->
-					<input type="text" class="search" name="emailAddr" id="emailAddr" placeholder="帳號" />
+					<input type="text" class="search" name="emailAddr" id="emailAddr" placeholder="帳號/電郵" />
 					</div> 
 					<div class="popup_login">
 					<!--<label><?php if($this->lang->line('user_password') != '') { echo stripslashes($this->lang->line('user_password')); } else echo "Password"; ?></label><span style="color:#F00;" class="redFont" id="password_Warn"></span>  -->
@@ -64,7 +65,7 @@ if($this->session->userdata('rUrl') != ''){
 					</div>
 					<div class="popup_login" style="margin-bottom:15px">
 					<input type="submit" class="submit_btn" value="<?php if($this->lang->line('user_signin') != '') { echo stripslashes($this->lang->line('user_signin')); } else echo "Sign In"; ?>" />
-					<span id="loginloadErr" style="display:none;padding: 12px;"><img src="images/indicator.gif" alt="Loading..."></span>									 									 
+					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>									 									 
 					</div>
 				</form>
 									
@@ -154,8 +155,10 @@ if($this->session->userdata('rUrl') != ''){
 
 
 <script type="text/javascript">
-function loginVal(){ 
-	// $('#loginloadErr').show();
+function loginVal(evt){ 
+	$('#loginloadErr').html('<span class="loading"><img src="images/indicator.gif" alt="Loading..."></span>');
+	$('#loginloadErr').show();
+	// $('#loginloadErr').html('');
 	$("#emailAddr_Warn").html('');
 	$("#password_Warn").html('');
 	
@@ -166,17 +169,39 @@ function loginVal(){
 	$("#emailAddr_Warn").html(lg_required_field);
 	// $('#loginloadErr').hide();
 	// $('#loginloadErr').html('請輸入電郵');
-	$('#loginloadErr').html("必須填寫帳號");
+	$('#loginloadErr').html("必須填寫帳號/電郵");
 	$('#loginloadErr').show();
+	$("#emailAddr").focus();
 	return false;
 	}else if(password==''){
 	$("#password_Warn").html(lg_required_field);
 	// $("#loginloadErr").html('請輸入密碼');
 	$("#loginloadErr").html("必須填寫密碼");
 	$('#loginloadErr').show();
+	$("#password").focus();
 	return false;
 	}
-	//return false;
+	// return false;
+
+	$.ajax({
+            url: 'site/mobile/user_login',
+            type: 'post',
+            dataType: 'json',   // or JSON.stringify(<data>) ??
+            data: {'username':emailAddr,'password': password},
+            success: function (data) {
+                if (data['message'] == "Failure"){
+                	$("#loginloadErr").html("Wrong account info~~");
+					$('#loginloadErr').show();
+                } else {
+                	$(evt).attr('action', 'site/user/login_user');
+                	$(evt).attr('onSubmit', '');
+                	$(evt).off('onSubmit').submit();
+                	return true;
+                }
+            },
+             error: function (xhr) {alert(JSON.parse(xhr.responseText).Message); }
+        });
+	return false;
 }
 </script>
 
