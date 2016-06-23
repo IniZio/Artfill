@@ -49,7 +49,7 @@ if($this->session->userdata('rUrl') != ''){
 				<!-- demonstrate using af_lg function, might fail though -->
 				<span><h4><?php echo af_lg('lg_login_with_local_ac','以Artfill 帳戶登入'); ?></h4></span>
 				<div style="clear:both;"></div>
-				<form method="post" action="" class="frm clearfix" onSubmit="return loginVal(this);">
+				<form method="post" action="site/user/login_user" class="frm clearfix" onSubmit="return loginVal(this);">
 					
 					
 					<div class="popup_login">
@@ -65,7 +65,7 @@ if($this->session->userdata('rUrl') != ''){
 					</div>
 					<div class="popup_login" style="margin-bottom:15px">
 					<input type="submit" class="submit_btn" value="<?php if($this->lang->line('user_signin') != '') { echo stripslashes($this->lang->line('user_signin')); } else echo "Sign In"; ?>" />
-					<span id="loginloadErr" style="display:none;padding: 12px;"><img src="images/indicator.gif" alt="Loading..."></span>									 									 
+					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>									 									 
 					</div>
 				</form>
 									
@@ -171,16 +171,17 @@ function loginVal(evt){
 	// $('#loginloadErr').html('請輸入電郵');
 	$('#loginloadErr').html("必須填寫帳號/電郵");
 	$('#loginloadErr').show();
+	$("#emailAddr").focus();
 	return false;
 	}else if(password==''){
 	$("#password_Warn").html(lg_required_field);
 	// $("#loginloadErr").html('請輸入密碼');
 	$("#loginloadErr").html("必須填寫密碼");
 	$('#loginloadErr').show();
+	$("#password").focus();
 	return false;
 	}
 	// return false;
-	var wrong_ac = false;
 
 	$.ajax({
             url: 'site/mobile/user_login',
@@ -188,17 +189,16 @@ function loginVal(evt){
             dataType: 'json',   // or JSON.stringify(<data>) ??
             data: {'username':emailAddr,'password': password},
             success: function (data) {
-                if (data['message'] == "failure"){
-                	wrong_ac = true;
+                if (data['message'] != "failure"){
+                	this.submit();
+                } else {
                 	$("#loginloadErr").html("Wrong account info~~");
 					$('#loginloadErr').show();
-					return false;
                 }
             },
              error: function (xhr) {alert(JSON.parse(xhr.responseText).Message); }
         });
-	console.log('wrong ac? '+wrong_ac);
-	return (!wrong_ac);
+	return false;
 }
 </script>
 
