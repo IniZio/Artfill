@@ -40,7 +40,7 @@ if($this->session->userdata('rUrl') != ''){
 			<div style="margin:5px;border: 2px dashed #8adbd4; border-radius:5px;">
 				<span style="float:right;">
 					<a class="btn btn-default " href="javascript:void(0);" data-dismiss="modal">
-					<?php if($this->lang->line('X') != '') { echo stripslashes($this->lang->line('X')); } else echo 'X'; ?>
+					<?php echo af_lg('X', 'X'}); ?>
 					</a>
 				</span>
 				<img src="./images/popup_logo.png" style="text-align:center;" />
