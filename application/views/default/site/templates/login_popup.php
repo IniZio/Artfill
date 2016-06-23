@@ -49,7 +49,7 @@ if($this->session->userdata('rUrl') != ''){
 				<!-- demonstrate using af_lg function, might fail though -->
 				<span><h4><?php echo af_lg('lg_login_with_local_ac','以Artfill 帳戶登入'); ?></h4></span>
 				<div style="clear:both;"></div>
-				<form method="post" action="site/user/login_user" class="frm clearfix" onSubmit="return loginVal(this);">
+				<form method="post" action="" class="frm clearfix" onSubmit="return loginVal(this);">
 					
 					
 					<div class="popup_login">
@@ -193,7 +193,8 @@ function loginVal(evt){
                 	$("#loginloadErr").html("Wrong account info~~");
 					$('#loginloadErr').show();
                 } else {
-                	$(evt).submit();
+                	$(evt).attr('action', 'site/user/login_user');
+                	$(evt).off('submit').submit();
                 	return true;
                 }
             },
