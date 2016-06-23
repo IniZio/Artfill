@@ -190,7 +190,7 @@ function loginVal(evt){
             data: {'username':emailAddr,'password': password},
             success: function (data) {
                 if (data['message'] != "failure"){
-                	this.submit();
+                	$(evt).submit();
                 } else {
                 	$("#loginloadErr").html("Wrong account info~~");
 					$('#loginloadErr').show();
