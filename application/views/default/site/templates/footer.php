@@ -146,6 +146,8 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 <?php /* if($GeoLocationVal==''){
 $this->load->view('site/templates/geo_popup');
 } $this->load->view('site/templates/geo_popup'); */?>
+
+<!--
 <div class="language-setting" style="display:none;">
 <div class="main" id="content_geo">
 <div style="text-align:left" class="regional-setting-left">
@@ -169,7 +171,9 @@ $this->load->view('site/templates/geo_popup');
 ?>" type="button">
 </div>
 </div>
-</div>
+</div>-->
+
+
 <script>
 function getReloadVal(val)
 {
