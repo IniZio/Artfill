@@ -1,5 +1,5 @@
 <?php
-function af_lg($text,$cnt){
+function shopsy_lg($text,$cnt){
 	return lang($text)?lang($text):$cnt;
 }
 if (! function_exists('array_column')) {

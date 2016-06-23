@@ -2,7 +2,7 @@
  <script type="text/javascript" src="js/front/freewall.js"></script>
 
 
-<?php if(count($shopDetail) > 0){?> <div style="text-align: center;padding: 0px 0px 12px 0px;"><h4><?php echo af_lg('lg_published','Published Products');?></h4></div><?php }?>
+<?php if(count($shopDetail) > 0){?> <div style="text-align: center;padding: 0px 0px 12px 0px;"><h4><?php echo shopsy_lg('lg_published','Published Products');?></h4></div><?php }?>
 
 
  <div id="freewall" class="free-wall" style="margin-bottom: 51px;"> 
@@ -179,7 +179,7 @@
 
 <?php if(count($Unpublished) > 0){?></div>
 <div class="list_wrap">
-<div style="text-align: center;padding: 0px 0px 12px 0px;"><h4><?php echo af_lg('lg_unpublished_pro','Unpublished Products');?></h4></div>					
+<div style="text-align: center;padding: 0px 0px 12px 0px;"><h4><?php echo shopsy_lg('lg_unpublished_pro','Unpublished Products');?></h4></div>					
 					<ul class="list_wrap_items">                        	
 
                             <?php for($i=0;$i<count($Unpublished);$i++){  

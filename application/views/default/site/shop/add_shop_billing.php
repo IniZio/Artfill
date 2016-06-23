@@ -44,7 +44,7 @@ $this->load->view('site/templates/shop_header');
                         
                         
                         <div style="float:left; width:100%; color:#333; font-size:12px; line-height:normal">
-	                        <input type="button" onclick="Show_payment_options(this)" class="save_btn" value="<?php echo af_lg('lg_makepay','Make Pay');?>" id="pay_you_bill">
+	                        <input type="button" onclick="Show_payment_options(this)" class="save_btn" value="<?php echo shopsy_lg('lg_makepay','Make Pay');?>" id="pay_you_bill">
                         </div>
                         
                        <div id="paywallet" style="margin-top: 75px;padding-top: 50px;text-align: center;"></div>
@@ -52,12 +52,12 @@ $this->load->view('site/templates/shop_header');
                        <div><span id="pay_ur_err" style="color:red;"></span></div>
                        <div id="wallet_div" style="display:none; float:left; width:100%; color:#333; font-size:12px; line-height:normal; padding: 10px 0px 0px 0px;">
                         	<span>
-                        	<?php echo af_lg('lg_ur_current_amt','Your Current Wallet Amount is');?> <?php echo $currencySymbol; ?> <?php echo number_format($userDetails->credits * $this->data['currencyValue'],2); ?>
+                        	<?php echo shopsy_lg('lg_ur_current_amt','Your Current Wallet Amount is');?> <?php echo $currencySymbol; ?> <?php echo number_format($userDetails->credits * $this->data['currencyValue'],2); ?>
                         	<input type="hidden" id="curr_wallAmt" value="<?php echo $userDetails->credits;?>"/>
                         	
-                        	<br><?php echo af_lg('lg_enter_amt','Enter your recharge amount here and continue payment');?>
+                        	<br><?php echo shopsy_lg('lg_enter_amt','Enter your recharge amount here and continue payment');?>
                         	<input style="margin-left: 20px;" type="text" name="wallet_amount" id="wallet_amount"/>
-                        	<input style="float: none;" type="button" class="save_btn" onclick="Show_wallet_payment_options(this)" value="<?php echo af_lg('lg_continue','Continue');?>" id="continue_recharge_wallet">
+                        	<input style="float: none;" type="button" class="save_btn" onclick="Show_wallet_payment_options(this)" value="<?php echo shopsy_lg('lg_continue','Continue');?>" id="continue_recharge_wallet">
                         	<span id="pay_wa_err" style="color:red;"></span>
                         	
                         	</span>

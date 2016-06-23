@@ -102,7 +102,7 @@ $(document).ready(function() {
             <span>&rsaquo;</span>
            <li><a href="view-profile/<?php echo $userProfileDetails[0]['user_name'];?>" class="a_links"><?php echo $userProfileDetails[0]['user_name'];?></a></li>
 		    <span>&rsaquo;</span>
-           <li><?php echo af_lg('user_itmes_i_love','Items i love');?></li>
+           <li><?php echo shopsy_lg('user_itmes_i_love','Items i love');?></li>
         </ul>
 
         <div class="favorite-mem">

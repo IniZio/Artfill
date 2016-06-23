@@ -296,7 +296,7 @@ $(document).ready(function() {
 
                                         <div class="hover_lists" id="hoverlist<?php echo $hover; ?>">
 
-                                            <h2><?php echo af_lg('lg_your_list','Your Lists');?></h2> 
+                                            <h2><?php echo shopsy_lg('lg_your_list','Your Lists');?></h2> 
 
                                             <div class="lists_check">
 

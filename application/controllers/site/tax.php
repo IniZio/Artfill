@@ -126,12 +126,12 @@ class Tax extends MY_Controller {
 			$condition = array('id' => $tax_id);
 			if ($tax_id == ''){
 				$this->tax_model->simple_insert(SELLER_TAX,$dataArr);
-				$tax_added=addslashes(af_lg('lg_tax_added','Tax added successfully'));
+				$tax_added=addslashes(shopsy_lg('lg_tax_added','Tax added successfully'));
 				$this->setErrorMessage('success',$tax_added);
 			}else {
 				unset($dataArr['seller_id']);unset($dataArr['seourl']);
 				$this->tax_model->update_details(SELLER_TAX,$dataArr,$condition);
-				$tax_updated=addslashes(af_lg('lg_tax_added','Tax updated successfully'));
+				$tax_updated=addslashes(shopsy_lg('lg_tax_added','Tax updated successfully'));
 				$this->setErrorMessage('success',$tax_updated);
 			}	
 			redirect('shops/'.$sellerInfo->row()->seourl.'/tax-list');

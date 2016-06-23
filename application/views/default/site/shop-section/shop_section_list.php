@@ -126,7 +126,7 @@ $this->load->model('user_model');
 					</ul>
 					<ul class="reviews-bg">
 						<li>
-							<span><?php echo af_lg('lg_reviews','Reviews');?></span>
+							<span><?php echo shopsy_lg('lg_reviews','Reviews');?></span>
 							<span class="reviews">
                                 <div class="stars small" style="width: <?php echo $get_shop_owner_info['shop_ratting']*17.2 ?>px !important;"> </div>
                             </span>
@@ -143,7 +143,7 @@ $this->load->model('user_model');
 							#echo $seller_shoper_id;die;
 							if($loginCheck!=''){
 						?>
-							<li><a href="javascript:void(0);" onclick="add_delete_follow(<?php if(!(in_array($seller_shoper_id,$following_user_list))) echo "'add_follow' , '".$seller_shoper_id."'"; else echo "'delete_follow' , '".$seller_shoper_id."'"; ?>)"><?php if(!(in_array($seller_shoper_id,$following_user_list))) echo af_lg('lg_follow', 'Follow'); else echo af_lg('lg_following','Following'); ?></a>
+							<li><a href="javascript:void(0);" onclick="add_delete_follow(<?php if(!(in_array($seller_shoper_id,$following_user_list))) echo "'add_follow' , '".$seller_shoper_id."'"; else echo "'delete_follow' , '".$seller_shoper_id."'"; ?>)"><?php if(!(in_array($seller_shoper_id,$following_user_list))) echo shopsy_lg('lg_follow', 'Follow'); else echo shopsy_lg('lg_following','Following'); ?></a>
 						<?php
 							}
 						?>
@@ -207,20 +207,20 @@ $this->load->model('user_model');
 							<li>
 								<a <?php if($this->uri->segment(3)=='sales'){?>class="art-active"<?php } ?> href="<?php echo base_url().$this->uri->segment(1).'/'.$this->uri->segment(2).'/sales'; ?>">
 									<span class="shop-icon icon-37"></span>
-									<span><span><?php echo count($get_seller_sales_qry); ?></span> <?php echo af_lg('lg_sales','Sales');?></span>
+									<span><span><?php echo count($get_seller_sales_qry); ?></span> <?php echo shopsy_lg('lg_sales','Sales');?></span>
 								</a>						
 							</li>
 							<li>
 								<a <?php if($this->uri->segment(3)=='favorites'){?>class="art-active"<?php } ?> href="<?php echo base_url().$this->uri->segment(1).'/'.$this->uri->segment(2).'/favorites'; ?>">
 									<span class="shop-icon icon-37"></span>
-									<span><span><?php echo $Shopadmirers; ?></span> <?php echo af_lg('lg_favorites','Favorites');?>
+									<span><span><?php echo $Shopadmirers; ?></span> <?php echo shopsy_lg('lg_favorites','Favorites');?>
 									</span></span>
 								</a>
 							</li>
 							<li>
 								<a <?php if($this->uri->segment(3)==''){?>class="art-active"<?php } ?> href="<?php echo base_url().$this->uri->segment(1).'/'.$this->uri->segment(2); ?>">
 									<span class="shop-icon icon-37"></span>
-									<span><?php echo count($get_shop_selection_products)."   "; ?><?php echo af_lg('lg_products','Products');?></span>
+									<span><?php echo count($get_shop_selection_products)."   "; ?><?php echo shopsy_lg('lg_products','Products');?></span>
 								</a>
 							</li>
 							<!--<li>
@@ -232,13 +232,13 @@ $this->load->model('user_model');
 							<li style="float:right">
 								<a <?php if($this->uri->segment(3)=='followings'){?>class="art-active"<?php } ?> href="<?php echo base_url().$this->uri->segment(1).'/'.$this->uri->segment(2).'/followings'; ?>">
 									<span class="shop-icon icon-39"></span>
-									<span><span><?php echo count($followingUserDetails);?></span>  <?php echo af_lg('lg_follow','Follow');?></span>
+									<span><span><?php echo count($followingUserDetails);?></span>  <?php echo shopsy_lg('lg_follow','Follow');?></span>
 								</a>
 							</li>
 							<li style="float:right">
 								<a <?php if($this->uri->segment(3)=='followers'){?>class="art-active"<?php } ?> href="<?php echo base_url().$this->uri->segment(1).'/'.$this->uri->segment(2).'/followers'; ?>">
 									<span class="shop-icon icon-38"></span>
-									<span><span><?php echo count($followerUserDetails);?></span> <?php echo af_lg('lg_followers','Followers');?></span>
+									<span><span><?php echo count($followerUserDetails);?></span> <?php echo shopsy_lg('lg_followers','Followers');?></span>
 								</a>							
 							</li>
 						</ul>
@@ -274,7 +274,7 @@ $this->load->model('user_model');
 					<?php 						
 						if($get_shop_owner_info['gift_card'] == "Yes"){
 					?>
-							<b><?php echo af_lg('lg_shop_accpts_giftcards','This Shop Accepts Shopsy Gift Cards.');?><b>
+							<b><?php echo shopsy_lg('lg_shop_accpts_giftcards','This Shop Accepts Shopsy Gift Cards.');?><b>
 					<?php	}
 					?>
 					
@@ -410,7 +410,7 @@ $this->load->model('user_model');
 							<div class="modal-footer footer_tab_footer">
 								<div class="btn-group">
 										<input class="submit_btn" type="submit" value="<?php if($this->lang->line('shopsec_spam') != '') { echo stripslashes($this->lang->line('shopsec_spam')); } else echo "Report Spam"; ?>" />
-										<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo af_lg('lg_cancel','Cancel');?></a>
+										<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo shopsy_lg('lg_cancel','Cancel');?></a>
 								</div>
 							</div>	
 						</div>
@@ -437,7 +437,7 @@ $this->load->model('user_model');
 								<div class="conversation_right">
 									
 									<input type="hidden" name="productseourl" id="productseourl" value="<?php echo $added_item_details[0]['seourl']; ?>" >
-										<input class="conversation-subject" type="text" name="subject" id="subject" placeholder=<?php echo af_lg('lg_subject','Subject');?> />
+										<input class="conversation-subject" type="text" name="subject" id="subject" placeholder=<?php echo shopsy_lg('lg_subject','Subject');?> />
 										<textarea class="conversation-textarea" rows="11" name="message_text" id="message_text" placeholder="<?php if($this->lang->line('user_msg_txt') != '') { echo stripslashes($this->lang->line('user_msg_txt')); } else echo "Message text"; ?>"></textarea>
 										<input type="hidden" name="username" id="username" value="<?php echo $this->session->userdata['shopsy_session_user_name']; ?>" >
 										<input type="hidden" name="useremail" id="useremail" value="<?php echo $this->session->userdata['shopsy_session_user_email']; ?>" >

@@ -28,7 +28,7 @@ $this->load->view('site/templates/header');
             <span>&rsaquo;</span>
            <li><a href="view-profile/<?php echo $this->session->userdata['shopsy_session_user_name'];?>" class="a_links"><?php echo $this->session->userdata['shopsy_session_user_name'];?></a></li>
 		   <span>&rsaquo;</span>
-		   <li><?php echo af_lg('lg_gift_card','Gift cards');?></li>
+		   <li><?php echo shopsy_lg('lg_gift_card','Gift cards');?></li>
         </ul>
         	
 

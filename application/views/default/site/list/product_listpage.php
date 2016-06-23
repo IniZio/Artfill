@@ -154,7 +154,7 @@ $this->load->model('user_model');
 					<div class="filter-input facet">
 					  <label>Color 
 						  <select class="filtering-input" name="filterByColor" id="filterByColor">
-								<option value=""><?php echo af_lg('lg_choose color','choose color..');?></option>
+								<option value=""><?php echo shopsy_lg('lg_choose color','choose color..');?></option>
 								<?php foreach($colorfilter as $c_list) {?>
 									<option value="<?php echo $c_list->attr_value;?>" <?php if($c_list->attr_value == $this->input->get('color')) { echo 'selected="selected"';} ?>><?php echo $c_list->attr_value;?></option>
 								<?php }?>
@@ -165,9 +165,9 @@ $this->load->model('user_model');
 				</div>			    
 			</div>			
 			<div  id="filter_byColor" class="filter-button" style="display:none;">
-			<a href="javascript:void(0);"><?php echo af_lg('lg_color','color');?></a></div>	
+			<a href="javascript:void(0);"><?php echo shopsy_lg('lg_color','color');?></a></div>	
 			<?php } else {?>	
-		   <div  id="filter_byColor" class="filter-button"><a href="javascript:void(0);"><?php echo af_lg('lg_color','color');?></a></div>
+		   <div  id="filter_byColor" class="filter-button"><a href="javascript:void(0);"><?php echo shopsy_lg('lg_color','color');?></a></div>
         <?php }?>
 		
 		
@@ -587,7 +587,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	  $("#filter_byColor").click(function(){ 
-	    $("#filter_byColor").html('<div  style="display: inline-block;" class="filter-group selected-state"><div class="filter-input facet"><label><?php echo af_lg('lg_color','color');?> <select class="filtering-input" name="filterByColor" id="filterByColor"><option value=""><?php echo af_lg('lg_choose color','choose color..');?></option><?php foreach($colorfilter as $c_list) {?><option value="<?php echo $c_list->attr_value;?>" <?php if($c_list->attr_value == $this->input->get('color')) { echo 'selected="selected"';} ?>><?php echo $c_list->attr_value;?></option><?php }?></select></label></div><input class="filter-submit" type="button" id="remove_to" onclick="return remove_colorFilter();" value="<?php if($this->lang->line('list_go') != '') { echo stripslashes($this->lang->line('list_go')); } else echo 'Go'; ?>" /></div>');
+	    $("#filter_byColor").html('<div  style="display: inline-block;" class="filter-group selected-state"><div class="filter-input facet"><label><?php echo shopsy_lg('lg_color','color');?> <select class="filtering-input" name="filterByColor" id="filterByColor"><option value=""><?php echo shopsy_lg('lg_choose color','choose color..');?></option><?php foreach($colorfilter as $c_list) {?><option value="<?php echo $c_list->attr_value;?>" <?php if($c_list->attr_value == $this->input->get('color')) { echo 'selected="selected"';} ?>><?php echo $c_list->attr_value;?></option><?php }?></select></label></div><input class="filter-submit" type="button" id="remove_to" onclick="return remove_colorFilter();" value="<?php if($this->lang->line('list_go') != '') { echo stripslashes($this->lang->line('list_go')); } else echo 'Go'; ?>" /></div>');
 		$('#filter_byColor').removeClass('filter-button');
 		$('#filter_byColor').attr('id', 'color_clicked');
 		  }); 

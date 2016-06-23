@@ -11,17 +11,17 @@
 		<ul>
 			<li>
 				<a href="view-local-events">
-					<?php echo af_lg('lg_view_localevents','View Local Events');?>
+					<?php echo shopsy_lg('lg_view_localevents','View Local Events');?>
 				</a>
 			</li>
 			<li>
 				<a href="shop-by-location">
-				<?php echo af_lg('lg_shop_by_location','Shop by location');?>
+				<?php echo shopsy_lg('lg_shop_by_location','Shop by location');?>
 				</a>
 			</li>
 			<li>
 				<a href="shop-by-items">
-				<?php echo af_lg('lg_shop_by_items','Shop by items');?>
+				<?php echo shopsy_lg('lg_shop_by_items','Shop by items');?>
 				</a>
 			</li>
 		</ul>
@@ -31,20 +31,20 @@
 <div class="col-lg-12 margin-top-15" id="profile_div">
 	<div class="col-lg-3">
 		<div class="col-lg-12">
-			<input type="text" class="form-control " placeholder="<?php echo af_lg('lg_enter your addr','Enter your address');?>" id="autocomplete" name="task_location">
+			<input type="text" class="form-control " placeholder="<?php echo shopsy_lg('lg_enter your addr','Enter your address');?>" id="autocomplete" name="task_location">
 		</div>
 		<div class="col-lg-12 margin-top-15">
 			<select class="filter-date" name="filter-date" onchange="filterdate(this);">
-				<option value=""  style="padding:7px;"><?php echo af_lg('lg_filter by date','Filter by Date');?></option>
-				<option value="today"><?php echo af_lg('lg_today','Today');?></option>
-				<option value="week"><?php echo af_lg('lg_this week','This Week');?></option>
-				<option value="cmonth"><?php echo af_lg('lg_this month','This Month');?></option>
-				<option value="nmonth"><?php echo af_lg('lg_next month','Next Month');?></option>
-				<option value="year"><?php echo af_lg('lg_this year','This Year');?></option>
+				<option value=""  style="padding:7px;"><?php echo shopsy_lg('lg_filter by date','Filter by Date');?></option>
+				<option value="today"><?php echo shopsy_lg('lg_today','Today');?></option>
+				<option value="week"><?php echo shopsy_lg('lg_this week','This Week');?></option>
+				<option value="cmonth"><?php echo shopsy_lg('lg_this month','This Month');?></option>
+				<option value="nmonth"><?php echo shopsy_lg('lg_next month','Next Month');?></option>
+				<option value="year"><?php echo shopsy_lg('lg_this year','This Year');?></option>
 			</select>
 		</div>
 		<div class="col-lg-12 margin-top-15">
-			<p><?php echo af_lg('lg_events list','Events List');?></p>
+			<p><?php echo shopsy_lg('lg_events list','Events List');?></p>
 			<div id="side_bar" class="col-lg-12 margin-top-15 overflow">
 			</div>
 		</div>
@@ -118,7 +118,7 @@ function createMarker(events){
 		});	
 		$("#side_bar").html(side_bar_html);
 	}else{ 
-		$("#side_bar").html('<span><?php echo af_lg('lg_no products are found','No Products are found.....');?></span>');
+		$("#side_bar").html('<span><?php echo shopsy_lg('lg_no products are found','No Products are found.....');?></span>');
 	}
 	side_bar_html = "";
 }

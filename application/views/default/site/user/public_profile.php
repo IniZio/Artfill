@@ -205,7 +205,7 @@ $this->load->model('user_model');
         <div class="pass-right">
 
         	        <select class="preview_pro" name="country" id="country" style="cursor:pointer !important; width: 278px;">
-             	<option value=""><?php echo af_lg('lg_select','Select');?></option>
+             	<option value=""><?php echo shopsy_lg('lg_select','Select');?></option>
                 	<?php foreach($data_country->result() as $countryName){ ?>
                         <option <?php if($countryName->name==$PublicProfile->row()->country) { ?> selected="selected"<?php } ?> value="<?php echo $countryName->name; ?>"><?php echo $countryName->name; ?></option>
                     <?php } ?>

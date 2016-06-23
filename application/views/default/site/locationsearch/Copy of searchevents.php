@@ -148,7 +148,7 @@ speedTest.showMarkers = function(){
 		var title = document.createElement('A');
 		title.href = 'javascript:void(0)';
 		title.className = 'title';
-		title.innerHTML = '<span><?php echo af_lg('lg_no products are found','No Products are found.....');?></span>';
+		title.innerHTML = '<span><?php echo shopsy_lg('lg_no products are found','No Products are found.....');?></span>';
 		items.appendChild(title);
 		panel.appendChild(items);
 	}
@@ -237,19 +237,19 @@ function file_get_contents(url) {
 			<li>
 				<a href="view-local-events">
 					<!--<img src="images/3.png" class="img-responsive">-->
-					<?php echo af_lg('lg_view_localevents','View Local Events');?>
+					<?php echo shopsy_lg('lg_view_localevents','View Local Events');?>
 				</a>
 			</li>
 			<li>
 				<a href="shop-by-location">
 					<!--<img src="images/5.png" class="img-responsive">-->
-				<?php echo af_lg('lg_shop_by_location','Shop by location');?>
+				<?php echo shopsy_lg('lg_shop_by_location','Shop by location');?>
 				</a>
 			</li>
 			<li>
 				<a href="shop-by-items">
 					<!--<img src="images/4.png" class="img-responsive">-->
-				<?php echo af_lg('lg_shop_by_items','Shop by items');?>
+				<?php echo shopsy_lg('lg_shop_by_items','Shop by items');?>
 				</a>
 			</li>
 		</ul>
@@ -261,21 +261,21 @@ function file_get_contents(url) {
 <div class="col-lg-12 margin-top-15">
 	<div class="col-lg-3">
 		<div class="col-lg-12">
-			<input type="text" class="form-control " placeholder="<?php echo af_lg('lg_enter your addr','Enter your address');?>" id="autocomplete" name="task_location">
+			<input type="text" class="form-control " placeholder="<?php echo shopsy_lg('lg_enter your addr','Enter your address');?>" id="autocomplete" name="task_location">
 			<input style="display:none;" type="checkbox" checked="checked" id="usegmm"/>
 		</div>
 		<div class="col-lg-12 margin-top-15">
 			<select class="filter-date" name="filter-date" onchange="filterdate(this);">
-			<option value=""  style="padding:7px;"><?php echo af_lg('lg_filter by date','Filter by Date');?></option>
-			<option value="today"><?php echo af_lg('lg_today','Today');?></option>
-			<option value="week"><?php echo af_lg('lg_this week','This Week');?></option>
-			<option value="cmonth"><?php echo af_lg('lg_this month','This Month');?></option>
-			<option value="nmonth"><?php echo af_lg('lg_next month','Next Month');?></option>
-			<option value="year"><?php echo af_lg('lg_this year','This Year');?></option>
+			<option value=""  style="padding:7px;"><?php echo shopsy_lg('lg_filter by date','Filter by Date');?></option>
+			<option value="today"><?php echo shopsy_lg('lg_today','Today');?></option>
+			<option value="week"><?php echo shopsy_lg('lg_this week','This Week');?></option>
+			<option value="cmonth"><?php echo shopsy_lg('lg_this month','This Month');?></option>
+			<option value="nmonth"><?php echo shopsy_lg('lg_next month','Next Month');?></option>
+			<option value="year"><?php echo shopsy_lg('lg_this year','This Year');?></option>
 			</select>
 		</div>
 		<div class="col-lg-12 margin-top-15" style="padding: 3px;">
-			<div class="col-lg-5" style="margin-top: 5px;"><p><?php echo af_lg('lg_show events','Show Events');?></p></div>
+			<div class="col-lg-5" style="margin-top: 5px;"><p><?php echo shopsy_lg('lg_show events','Show Events');?></p></div>
 			<div class="col-lg-7">
 				<select id="nummarkers" >
 				<option value="10" style="padding:7px;">10</option>
@@ -286,7 +286,7 @@ function file_get_contents(url) {
 				</select>
 			</div>
 		</div>
-		<div class="col-lg-12 margin-top-15"><p><?php echo af_lg('lg_events list','Events List');?></p></div>
+		<div class="col-lg-12 margin-top-15"><p><?php echo shopsy_lg('lg_events list','Events List');?></p></div>
 		<div id="markerlist" class="col-lg-12 margin-top-15 overflow"></div>
 		<span style="display:none;">Time used: <span id="timetaken"></span> ms</span>
 	</div>

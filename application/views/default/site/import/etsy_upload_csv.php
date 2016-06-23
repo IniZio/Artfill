@@ -6,7 +6,7 @@ $this->load->view('site/templates/shop_header',$this->data);
 <section class="container">
 	<div class="main">
 		<div class="shop_details">   
-			<span class="shop_title"><?php echo af_lg('lg_pls_choose_your_csv_file','Please choose your CSV file');?></span>
+			<span class="shop_title"><?php echo shopsy_lg('lg_pls_choose_your_csv_file','Please choose your CSV file');?></span>
 			<div class="payment_div"></div>	
 				<div class="list_div" style="border-radius:5px 5px 0 0; margin:5px 0 0">
 					<div class="payment_check">
@@ -19,7 +19,7 @@ $this->load->view('site/templates/shop_header',$this->data);
 									 <label id="ErrImage" class="img-size"></label>
 								</div>	
 								
-									<input type="submit" id="btn-etsy" value="<?php echo af_lg('lg_upload','Upload');?>" class="btn btn-primary">
+									<input type="submit" id="btn-etsy" value="<?php echo shopsy_lg('lg_upload','Upload');?>" class="btn btn-primary">
 								</div>
 								<div class="col-md-1"></div>
 								<div id="etsy_upload_warn" class="col-md-10" style="color:#FF0000;"></div>
@@ -39,7 +39,7 @@ $this->load->view('site/templates/shop_header',$this->data);
 			<div class="modal-wrapper" id="popWrapper">
 				<div class="text-center" id="popUpLoad">
 					<img src="images/ajax-loader/ajax-loader-pop.gif" class="icon" width="50" />
-					<h4><?php echo af_lg('lg_import_product_pls_wait','Importing Product, Please Wait...');?></h4>
+					<h4><?php echo shopsy_lg('lg_import_product_pls_wait','Importing Product, Please Wait...');?></h4>
 				</div>
 			</div>
 		</div>

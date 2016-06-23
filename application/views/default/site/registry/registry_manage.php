@@ -106,7 +106,7 @@ box-shadow: 0 0 6px 0 #ccc;
 					  <div class="modal-footer footer_tab_footer">
 							<div class="btn-group">
 									 <input class="submit_btn" type="submit" value="<?php if($this->lang->line('user_save') != '') { echo stripslashes($this->lang->line('user_save')); } else echo 'Save'; ?>" name="submitRegistry" />
-									<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo af_lg('lg_cancel','Cancel');?></a>
+									<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo shopsy_lg('lg_cancel','Cancel');?></a>
 							</div>
 						</div>	
 					  
@@ -172,31 +172,31 @@ box-shadow: 0 0 6px 0 #ccc;
 			if($time>1){
 				if($interval->y > 0){
 					if($interval->y == 1){
-						echo "<span>".$interval->y. "</span>  ".af_lg('lg_year','Year');
+						echo "<span>".$interval->y. "</span>  ".shopsy_lg('lg_year','Year');
 					}else{
-						echo "<span>".$interval->y. "</span> ".af_lg('lg_years','Years'); 
+						echo "<span>".$interval->y. "</span> ".shopsy_lg('lg_years','Years'); 
 					}
 				}
 				if($interval->m > 0){
 					if($interval->m == 1){
-						echo "<span>".$interval->m. "</span> ".af_lg('lg_month','Month'); 
+						echo "<span>".$interval->m. "</span> ".shopsy_lg('lg_month','Month'); 
 					}else{
-						echo "<span>".$interval->m. "</span> ".af_lg('lg_months','Months'); 
+						echo "<span>".$interval->m. "</span> ".shopsy_lg('lg_months','Months'); 
 					}
 				}
 				
-				echo "<span>".$interval->d. "</span> ".af_lg('lg_day_left','days left '). "-<span>".$result->nos."</span> ".af_lg('lg_Items_requested','Items requested');?></h3>
+				echo "<span>".$interval->d. "</span> ".shopsy_lg('lg_day_left','days left '). "-<span>".$result->nos."</span> ".shopsy_lg('lg_Items_requested','Items requested');?></h3>
 			<?php }else if($time==1){
-			 echo "<span> Tomorrow is your Wedding day </span> - "." <span>".$result->nos."</span>".af_lg('lg_Items_requested','Items requested');;?></h3>
+			 echo "<span> Tomorrow is your Wedding day </span> - "." <span>".$result->nos."</span>".shopsy_lg('lg_Items_requested','Items requested');;?></h3>
        <?php }
 	        else if($time==0)
 			{
-			 echo "<span>" . af_lg('lg_tomorrow_your_wedding','Tomorrow is your Wedding day')." </span> - "." <span>".$result->nos."</span>".af_lg('lg_Items_requested','Items requested');;?></h3>
+			 echo "<span>" . shopsy_lg('lg_tomorrow_your_wedding','Tomorrow is your Wedding day')." </span> - "." <span>".$result->nos."</span>".shopsy_lg('lg_Items_requested','Items requested');;?></h3>
        <?php
 			}  
             else
             { $requestedflag=true;
-            echo "<span> ". af_lg('lg_today_your_wedding','Today is your Wedding day')."  : ".date("d-m-Y",strtotime($d2))." </span>";?></h3> 
+            echo "<span> ". shopsy_lg('lg_today_your_wedding','Today is your Wedding day')."  : ".date("d-m-Y",strtotime($d2))." </span>";?></h3> 
           <?php   }  ?>
             </li> 
           </ul> -->
@@ -347,14 +347,14 @@ box-shadow: 0 0 6px 0 #ccc;
 												echo "<option selected='selected' value={$i}>$i</option>";
 										}
 										?>
-										</select>  <?php echo af_lg('lg_requested','Requested');?>
+										</select>  <?php echo shopsy_lg('lg_requested','Requested');?>
                                         <?php }
 										else
 										{
 										echo $count. " Item(s) requested";
 										}
 										?>
-                                        </div>  <span class="request-num" style="color:#888"> <?php  echo $resultpurchased[0]["purchased"]; ?> <?php echo af_lg('lg_purchased','Purchased');?> </span>
+                                        </div>  <span class="request-num" style="color:#888"> <?php  echo $resultpurchased[0]["purchased"]; ?> <?php echo shopsy_lg('lg_purchased','Purchased');?> </span>
 										</div>
 										<?php 
 							 } ?>

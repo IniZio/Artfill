@@ -71,7 +71,7 @@ color:#FF0000!important;
                     	<label><?php if($this->lang->line('shop_tags') != '') { echo stripslashes($this->lang->line('shop_tags')); } else echo "Tags"; ?> </label>
                        <!-- <textarea class="payment_area tags tipTop required" name="teamTags" id="tags_Amt"></textarea>-->
                         <input name="teamTags" class="required  tipTop" style="display:block; width:290px" id="tags_Amt" type="text" tabindex="7" value="<?php if(!empty($teamList)){ echo $teamList->row()->teamTags; } ?>" />
-						<span style="color:red"> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; <?php echo af_lg('lg_tags','Eg: tag1,tag2,tag3'); ?></span>
+						<span style="color:red"> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; <?php echo shopsy_lg('lg_tags','Eg: tag1,tag2,tag3'); ?></span>
                     </div>
                     
                     

@@ -33,11 +33,11 @@ $this->load->view('site/freshdesk/menu_bar');
 					<div class="profile_field">
 						<label ><?php if($this->lang->line('support_priority') != '') { echo stripslashes($this->lang->line('support_priority')); } else echo 'Priority'; ?><span style="color:red;float: right;">*</span> </label>
 						<select name="support_priority" id="support_priority" >
-								<option value="Select Priority"><?php echo af_lg('lg_select_priority','Select Priority');?></option>
-							<option value="1"><?php echo af_lg('lg_low','Low');?></option>
-							<option value="2"><?php echo af_lg('lg_medium','Medium');?></option>
-							<option value="3"><?php echo af_lg('lg_high_pri','High Priority');?></option>
-							<option value="4"><?php echo af_lg('lg_urgent','Urgent');?></option>
+								<option value="Select Priority"><?php echo shopsy_lg('lg_select_priority','Select Priority');?></option>
+							<option value="1"><?php echo shopsy_lg('lg_low','Low');?></option>
+							<option value="2"><?php echo shopsy_lg('lg_medium','Medium');?></option>
+							<option value="3"><?php echo shopsy_lg('lg_high_pri','High Priority');?></option>
+							<option value="4"><?php echo shopsy_lg('lg_urgent','Urgent');?></option>
 						</select>
 						<span id="errorPri"></span>
 					</div>

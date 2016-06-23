@@ -6,11 +6,11 @@ $this->load->model('user_model');
 	<section class="container">
     	<div class="main">
         	<ul class="bread_crumbs">
-            	<li><a href="<?php echo base_url(); ?>"><?php echo af_lg('lg_home','Home'); ?></a></li>
+            	<li><a href="<?php echo base_url(); ?>"><?php echo shopsy_lg('lg_home','Home'); ?></a></li>
                 <span>›</span>
-                <li><a href="view-profile/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>"><?php echo af_lg('lg_profile','Profile'); ?></a></li>
+                <li><a href="view-profile/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>"><?php echo shopsy_lg('lg_profile','Profile'); ?></a></li>
                 <span>›</span>
-                <li><a href="people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>/conversations"><?php echo af_lg('lg_conversations','Conversations') ?></a></li>
+                <li><a href="people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>/conversations"><?php echo shopsy_lg('lg_conversations','Conversations') ?></a></li>
             </ul>
             <div class="convers">                
                 <div class="conversation_container">
@@ -71,7 +71,7 @@ $this->load->model('user_model');
 									<p><strong><?php echo $row['subject'];?></strong></p>
 									<p class="message"><?php echo $row['message'];?></p>
 									<i style="font-size:11px;float:right;">
-										 <?php echo af_lg('lg_sent_by','send by'); ?>
+										 <?php echo shopsy_lg('lg_sent_by','send by'); ?>
 										<span style="color:black;"><?php echo $row['sender_name'];?></span> 
 										<?php echo $row['dataAdded'];?>
 										<a href="site/email/deleteconversation/<?php echo $user_id;?>/<?php echo $row['id'];?>" class="tmsg">
@@ -88,7 +88,7 @@ $this->load->model('user_model');
 							<p><strong><?php echo $row['subject'];?></strong></p>
 							<p class="message"><?php echo $row['message'];?></p>
 							<p style="font-size:11px; text-align:right; ">
-								 <?php echo af_lg('lg_sent_by','send by'); ?>
+								 <?php echo shopsy_lg('lg_sent_by','send by'); ?>
 								<span style="color:black;"><?php echo $row['sender_name'];?> </span>
 								<?php echo $row['dataAdded'];?> 
 								<a href="site/email/deleteconversation/<?php echo $user_id;?>/<?php echo $row['id'];?>" class="tmsg">
@@ -106,7 +106,7 @@ $this->load->model('user_model');
 					}
 					if($MessageDetail->num_rows()==$count){
 					?>
-						<h2 style="margin: 1%;"><?php echo af_lg('lg_no_message_found','No Messages Found!');?></h2>
+						<h2 style="margin: 1%;"><?php echo shopsy_lg('lg_no_message_found','No Messages Found!');?></h2>
 					<?php
 					}
 								
@@ -114,7 +114,7 @@ $this->load->model('user_model');
 				} else {
 				?>
 
-					  <h2 style="margin: 1%;"><?php echo af_lg('lg_no_message_found','No Messages Found!');?></h2>
+					  <h2 style="margin: 1%;"><?php echo shopsy_lg('lg_no_message_found','No Messages Found!');?></h2>
 
 			  <?php } ?>
 
