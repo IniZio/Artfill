@@ -189,11 +189,12 @@ function loginVal(evt){
             dataType: 'json',   // or JSON.stringify(<data>) ??
             data: {'username':emailAddr,'password': password},
             success: function (data) {
-                if (data['message'] != "failure"){
-                	$(evt).submit();
-                } else {
+                if (data['message'] == "Failure"){
                 	$("#loginloadErr").html("Wrong account info~~");
 					$('#loginloadErr').show();
+                } else {
+                	$(evt).submit();
+                	return true;
                 }
             },
              error: function (xhr) {alert(JSON.parse(xhr.responseText).Message); }
