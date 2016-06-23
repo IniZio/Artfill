@@ -76,8 +76,8 @@ $this->load->model('user_model');
 	   <div class="feedback-container">
 	      <ul class="nav nav-tabs" role="tablist">
 	        
-	        <li role="presentation" class="active"><a href="#seller" aria-controls="seller" role="tab" data-toggle="tab"><?php echo shopsy_lg('lg_to_you','To You');?></a></li>
-	        <li role="presentation"><a href="#buyer" aria-controls="buyer" role="tab" data-toggle="tab"><?php echo shopsy_lg('lg_your_cases','Your Cases');?></a></li>
+	        <li role="presentation" class="active"><a href="#seller" aria-controls="seller" role="tab" data-toggle="tab"><?php echo af_lg('lg_to_you','To You');?></a></li>
+	        <li role="presentation"><a href="#buyer" aria-controls="buyer" role="tab" data-toggle="tab"><?php echo af_lg('lg_your_cases','Your Cases');?></a></li>
 	        
 			<!--<li role="presentation"><a href="#all-fbk" aria-controls="all-fbk" role="tab" data-toggle="tab">All Feedbacks</a></li> -->
 	        <!--<li role="presentation"><a href="#fbk-left" aria-controls="fbk-left" role="tab" data-toggle="tab">Feedback left for others</a></li>-->
@@ -163,7 +163,7 @@ $this->load->model('user_model');
                         </tbody>
                      </table>  
 <?php } else { 
-					 	echo shopsy_lg('lg_no transact_found','No Transaction Found...');
+					 	echo af_lg('lg_no transact_found','No Transaction Found...');
 						}			?>		 
                  </form>
 
@@ -239,7 +239,7 @@ $this->load->model('user_model');
                         </tbody>
                      </table>  
 <?php } else { 
-						echo shopsy_lg('lg_no transact_found','No Transaction Found...');
+						echo af_lg('lg_no transact_found','No Transaction Found...');
 						}			?>		 
                  </form>
         </div>
@@ -280,7 +280,7 @@ $this->load->model('user_model');
   					<form name="cancel_orderform" id="cancel_orderform" method="post" action="site/order/cancelOrder">
 					<div class="conversation">
 					<div class="conversation_container">
-					<h2 class="conversation_headline"><?php echo shopsy_lg('lg_sry_cancelling_item','We are sorry to see that you have to Cancel this item. Tell us why and we will improve');?></h2>
+					<h2 class="conversation_headline"><?php echo af_lg('lg_sry_cancelling_item','We are sorry to see that you have to Cancel this item. Tell us why and we will improve');?></h2>
 					<div class="conversation_thumb">
 					<?php if($CurrUserImg != ''){ $user_pic='users/thumb/'.$CurrUserImg; }
 							else{ $user_pic='default_avat.png';} 
@@ -305,10 +305,10 @@ $this->load->model('user_model');
 					-->
 					
 					<ul>
-					<li><input type="radio" name="reason" value=""><?php echo shopsy_lg('lg_products_reordered','Products reoredered');?></li>
-					<li><input type="radio" name="reason" value=""><?php echo shopsy_lg('lg_products_misplaced','Products misplaced');?></li>
-					<li><input type="radio" name="reason" value=""><?php echo shopsy_lg('lg_products_reorderdwithout','Products ordered without');?></li>
-					<li><input type="radio" name="reason" value=""><?php echo shopsy_lg('products_not_required','Products not required');?></li>
+					<li><input type="radio" name="reason" value=""><?php echo af_lg('lg_products_reordered','Products reoredered');?></li>
+					<li><input type="radio" name="reason" value=""><?php echo af_lg('lg_products_misplaced','Products misplaced');?></li>
+					<li><input type="radio" name="reason" value=""><?php echo af_lg('lg_products_reorderdwithout','Products ordered without');?></li>
+					<li><input type="radio" name="reason" value=""><?php echo af_lg('products_not_required','Products not required');?></li>
 					</ul>
 					
 					
@@ -316,7 +316,7 @@ $this->load->model('user_model');
 					<div class="modal-footer footer_tab_footer" style="width: 100%; ">
 						<div class="btn-group">
 							<input class="submit_btn" type="submit" value="send">
-								<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo shopsy_lg('lg_cancel','Cancel');?></a>
+								<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo af_lg('lg_cancel','Cancel');?></a>
 						</div>
 					</div>	
 				

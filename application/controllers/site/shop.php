@@ -106,7 +106,7 @@ class Shop extends MY_Controller {
 				);
 				$this->input->set_cookie($CookieVal); 
 			}
-			$welcome_admin=addslashes(shopsy_lg('lg_welcome_admin','Welcome, Admin'));
+			$welcome_admin=addslashes(af_lg('lg_welcome_admin','Welcome, Admin'));
 			$loggeduserID=$checkUser->row()->id;
 			$this->setErrorMessage('success',$welcome_admin);		
 		}else{
@@ -643,7 +643,7 @@ class Shop extends MY_Controller {
 				$this->product_model->commonInsertUpdate(SELLER,'insert','',$inputArrVal,$condition);
 				$this->data['selectSeller_details']=$this->seller_model->get_sellers_data(SELLER,$condition);
 				$this->product_model->update_details(USERS,$usrdataArr,array('id'=>$loggeduserID));
-				$payment_mode_added=addslashes(shopsy_lg('lg_payment_mode_added','Success! Your Shop Payment modes are Added'));
+				$payment_mode_added=addslashes(af_lg('lg_payment_mode_added','Success! Your Shop Payment modes are Added'));
 				$this->setErrorMessage('success',$payment_mode_added);
 				redirect('shop/billing');		
 			}
@@ -1077,14 +1077,14 @@ class Shop extends MY_Controller {
 				$seller_businessname =  htmlentities($this->input->post('seller_businessname'));
 				#echo $seller_businessname;die;
 				if($seller_businessname == "" ){
-					$shop_appreance=addslashes(shopsy_lg('lg_shop_appreance_error','Please Check with your Shop Name'));
+					$shop_appreance=addslashes(af_lg('lg_shop_appreance_error','Please Check with your Shop Name'));
 					$this->setErrorMessage('error',$shop_appreance);
 					redirect('shop/sell');
 				}
 				// $seller_businessname = preg_replace("/[^A-Za-z0-9_\-]/", '', $seller_businessname);
 				if($seller_businessname == "")
 				{	
-					$shop_appreance=addslashes(shopsy_lg('lg_shop_appreance_error','Please Check with your Shop Name'));
+					$shop_appreance=addslashes(af_lg('lg_shop_appreance_error','Please Check with your Shop Name'));
 					$this->setErrorMessage('error',$shop_appreance);
 					redirect('shop/sell');
 				}
@@ -1164,7 +1164,7 @@ class Shop extends MY_Controller {
 				$this->data['selectSeller_details']=$this->seller_model->get_sellers_data(SELLER,$condition);
 				
 				//print_r($this->data['selectSeller_details']); die;
-				$shop_appreance=addslashes(shopsy_lg('lg_shop_appreance_updated','Success! Your Shop Apperances Updated'));
+				$shop_appreance=addslashes(af_lg('lg_shop_appreance_updated','Success! Your Shop Apperances Updated'));
 				$this->setErrorMessage('success',$shop_appreance);
 				redirect('shop/sell');
 				       			
@@ -1205,7 +1205,7 @@ class Shop extends MY_Controller {
 			
 				$this->product_model->commonInsertUpdate(SELLER,'update','',$inputArrVal,$condition);
 				$this->data['selectSeller_details']=$this->seller_model->get_sellers_data(SELLER,$condition);
-				$policy_update=addslashes(shopsy_lg('lg_Success_Your_Shop_Policy_Updated','Success! Your Shop Policy Updated'));
+				$policy_update=addslashes(af_lg('lg_Success_Your_Shop_Policy_Updated','Success! Your Shop Policy Updated'));
 				$this->setErrorMessage('success',$policy_update);
 				redirect('shop/sell');
 			
@@ -1298,7 +1298,7 @@ class Shop extends MY_Controller {
 				 	$dataArr=array('city'=>$city,'country'=>$country,'about'=>$about,'thumbnail'=>$logoDetails['file_name']);
 			 	}
 			 	else{
-				$problem=addslashes(shopsy_lg('lg_problem','There was a problem with your image'));
+				$problem=addslashes(af_lg('lg_problem','There was a problem with your image'));
 					$this->setErrorMessage('error',$problem);
 			 		redirect("public-profile");
 				}
@@ -1308,11 +1308,11 @@ class Shop extends MY_Controller {
 			
 			$this->seller_model->update_details(USERS,$dataArr,array('id'=>$this->checkLogin('U')));
 			if($this->db->affected_rows()>0){
-			$updation=addslashes(shopsy_lg('lg_updation','Your profile successfully updated'));
+			$updation=addslashes(af_lg('lg_updation','Your profile successfully updated'));
 				$this->setErrorMessage('success',$updation);
 			 	redirect("shops/".$this->uri->segment(2, 0)."/profile");	
 			}else{
-			  $no_updation=addslashes(shopsy_lg('lg_no_updation','No updation on your profile'));
+			  $no_updation=addslashes(af_lg('lg_no_updation','No updation on your profile'));
 				$this->setErrorMessage('success', $no_updation);
 		 		redirect("shops/".$this->uri->segment(2, 0)."/profile");
 			}

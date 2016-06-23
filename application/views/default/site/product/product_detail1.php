@@ -431,7 +431,7 @@ $this->load->view('site/templates/header');
 					 </li>
 					<?php } */?>
 
-					 <li><?php if($this->lang->line('feedback:') != '') { echo stripslashes($this->lang->line('feedback:')); } else echo  shopsy_lg('lg_feedback', 'Feedback:'); ?> 
+					 <li><?php if($this->lang->line('feedback:') != '') { echo stripslashes($this->lang->line('feedback:')); } else echo  af_lg('lg_feedback', 'Feedback:'); ?> 
 					 
 					 <a href="shop-section/<?php echo $selectedSeller_details[0]['seourl']; ?>/reviews" onclick="javascript: $('#reviewTabbar').trigger('click');">
 						<?php echo $selectedSeller_details[0]['review_count']; ?> <?php if($this->lang->line('shopsec_reviews') != '') { echo stripslashes($this->lang->line('shopsec_reviews')); } else echo 'Reviews'; ?>
@@ -459,7 +459,7 @@ $this->load->view('site/templates/header');
 					 <?php if($selectedSeller_details[0]['gift_card'] == 'Yes') {?>
 					 
 						<li>
-							<?php if($this->lang->line('giftCarg_accept') != '') { echo stripslashes($this->lang->line('giftCarg_accept')); } else echo shopsy_lg('lg_giftcart accepted','Gift Card Accepted'); ?> 
+							<?php if($this->lang->line('giftCarg_accept') != '') { echo stripslashes($this->lang->line('giftCarg_accept')); } else echo af_lg('lg_giftcart accepted','Gift Card Accepted'); ?> 
 						</li>
 					 <?php } ?>
 				</ul>
@@ -501,7 +501,7 @@ $this->load->view('site/templates/header');
 					<input type="hidden" name="price" id="price" value="<?php echo $withoutdealprice; ?>">
 					<input type="hidden" name="qty" id="qty" value="1">
 									<?php if($added_item_details[0]['quantity'] > 0 || $subProduct->row()->digital_item!='') {?> 
-										<input class="btn-primary subscribe-link alert-popupcart" id="add_to_cart" type="submit" value="<?php echo shopsy_lg('lg_add_to_cart','Add to Cart');?>" <?php if($selectedSeller_details[0]['seller_id'] == $this->session->userdata['shopsy_session_user_id']){?> onclick="javascript:$('#ownproduct-link').trigger('click');"<?php } else{?> onclick="return ajax_add_cart();" <?php }?><?php if($added_item_details[0]['quantity'] <= 0) { echo 'disabled="disabled"'; } ?>  />
+										<input class="btn-primary subscribe-link alert-popupcart" id="add_to_cart" type="submit" value="<?php echo af_lg('lg_add_to_cart','Add to Cart');?>" <?php if($selectedSeller_details[0]['seller_id'] == $this->session->userdata['shopsy_session_user_id']){?> onclick="javascript:$('#ownproduct-link').trigger('click');"<?php } else{?> onclick="return ajax_add_cart();" <?php }?><?php if($added_item_details[0]['quantity'] <= 0) { echo 'disabled="disabled"'; } ?>  />
 									<?php }?>
 									<a href="#ownproduct-alert" id="ownproduct-link" data-toggle="modal"></a>
 					                                         
@@ -509,7 +509,7 @@ $this->load->view('site/templates/header');
 
 
 <!-- 				<?php if($added_item_details[0]['quantity'] > 0 || $subProduct->row()->digital_item!='') {?> 
-					<input class="btn-primary subscribe-link alert-popupcart" id="add_to_cart" type="submit" value="<?php if ($this->lang->line('add_cart')!=''){echo $this->lang->line('add_cart');}else { echo shopsy_lg('lg_add to cart','Add to Cart');}?>" <?php if($selectedSeller_details[0]['seller_id'] == $this->session->userdata['shopsy_session_user_id']){?> onclick="javascript:$('#ownproduct-link').trigger('click');"<?php } else{?> onclick="return ajax_add_cart();" <?php }?><?php if($added_item_details[0]['quantity'] <= 0) { echo 'disabled="disabled"'; } ?>  />
+					<input class="btn-primary subscribe-link alert-popupcart" id="add_to_cart" type="submit" value="<?php if ($this->lang->line('add_cart')!=''){echo $this->lang->line('add_cart');}else { echo af_lg('lg_add to cart','Add to Cart');}?>" <?php if($selectedSeller_details[0]['seller_id'] == $this->session->userdata['shopsy_session_user_id']){?> onclick="javascript:$('#ownproduct-link').trigger('click');"<?php } else{?> onclick="return ajax_add_cart();" <?php }?><?php if($added_item_details[0]['quantity'] <= 0) { echo 'disabled="disabled"'; } ?>  />
 					
 					
 					
@@ -1287,11 +1287,11 @@ if($product_list->num_rows() > 0) { ?>
 				 <div style='background:#fff;'>  
 					<div class="conversation" style="width: 64%; margin-left: 191px; margin-top: 171px;">
 						<div class="conversation_container">
-							<h2 class="conversation_headline" style="margin: 8px;color: #9E612F;"><?php echo shopsy_lg('lg_product_addeed_tocart','Product Added to cart');?> </h2>
+							<h2 class="conversation_headline" style="margin: 8px;color: #9E612F;"><?php echo af_lg('lg_product_addeed_tocart','Product Added to cart');?> </h2>
 							<div class="modal-footer footer_tab_footer">
 								<div class="btn-group">
-										<a class="btn btn-default submit_btn" data-dismiss="modal" ><?php echo shopsy_lg('lg_continue_shop','Continue Shopping');?></a>
-										<a class="btn btn-default submit_btn" href="cart"><?php echo shopsy_lg('lg_go_to_checkout','Go to Checkout');?></a>
+										<a class="btn btn-default submit_btn" data-dismiss="modal" ><?php echo af_lg('lg_continue_shop','Continue Shopping');?></a>
+										<a class="btn btn-default submit_btn" href="cart"><?php echo af_lg('lg_go_to_checkout','Go to Checkout');?></a>
 								</div>
 							</div>		
 						</div>

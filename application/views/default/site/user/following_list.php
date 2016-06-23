@@ -34,7 +34,7 @@ $this->load->model('user_model');
 
                 <li><?php echo stripslashes($userProfileDetails[0]['user_name']);?>'s <?php if($this->lang->line('user_profile') != '') { echo stripslashes($this->lang->line('user_profile')); } else echo "profile"; ?></li>
 
-                <li><?php echo shopsy_lg('user_following','Following');?></li>
+                <li><?php echo af_lg('user_following','Following');?></li>
 
             </ul>
 

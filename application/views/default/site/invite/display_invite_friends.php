@@ -18,14 +18,14 @@ $this->load->view('site/templates/header');
             <ul class="breadcrumb_top">
                 <li><a href="<?php echo base_url();?>"><?php if($this->lang->line('user_home') != '') { echo stripslashes($this->lang->line('user_home')); } else echo "Home"; ?></a></li>
                 <li>></li>
-                <li><?php echo shopsy_lg('lg_invite_friends','Invite friends');?></li>
+                <li><?php echo af_lg('lg_invite_friends','Invite friends');?></li>
             </ul>
             <div class="left_side">   
                 <?php //$this->load->view('site/user/sidebar'); ?>
             </div>
             <div class="right_side" >
 				<div class="split_prefile">
-                        <h2><?php echo shopsy_lg('lg_invite your friends','Invite Your Friends');?></h2>
+                        <h2><?php echo af_lg('lg_invite your friends','Invite Your Friends');?></h2>
                         <div class="clear"></div>
                  <div class="close_content">
                  </div>
@@ -50,11 +50,11 @@ $this->load->view('site/templates/header');
 								<?php if($this->lang->line('invite_frds') != '') { echo stripslashes($this->lang->line('invite_frds')); } else echo "Google Invite"; ?>
 								</button>
 				
-				<!--<a  id="google_invite" name="google_invite"  class="submit_btn " href="https://accounts.google.com/o/oauth2/auth?client_id=	<?php echo $get_admin_details[0]->google_client_id;?>&redirect_uri=<?php echo $get_admin_details[0]->google_redirect_url; ?>&scope=https://www.google.com/m8/feeds/&response_type=code"><i class="fa fa-google-plus-square"></i><span style="margin-left:10px;"><?php echo shopsy_lg('lg_google invite','Google invite');?></span></a>	-->
+				<!--<a  id="google_invite" name="google_invite"  class="submit_btn " href="https://accounts.google.com/o/oauth2/auth?client_id=	<?php echo $get_admin_details[0]->google_client_id;?>&redirect_uri=<?php echo $get_admin_details[0]->google_redirect_url; ?>&scope=https://www.google.com/m8/feeds/&response_type=code"><i class="fa fa-google-plus-square"></i><span style="margin-left:10px;"><?php echo af_lg('lg_google invite','Google invite');?></span></a>	-->
 
-					<button class="submit_btn facebook" id="facebook" name="facebook"><i class="fa fa-facebook-square"></i><span style="margin-left:10px;"><?php echo shopsy_lg('lg_FB_invite','Facebook invite');?></span>
+					<button class="submit_btn facebook" id="facebook" name="facebook"><i class="fa fa-facebook-square"></i><span style="margin-left:10px;"><?php echo af_lg('lg_FB_invite','Facebook invite');?></span>
 					
-					<button class="submit_btn twitter" id="twitter" name="twitter" data-url="http://twitter.com/share?text=<?php echo urlencode($siteTitle);?>&url=<?php echo urlencode(base_url());?>%3Faff%3D<?php echo $userDetails->row()->affiliateId;?>"><i class="fa fa-twitter-square"></i><span style="margin-left:10px;"><?php echo shopsy_lg('lg_twitter_invite','Twitter invite');?></span>					
+					<button class="submit_btn twitter" id="twitter" name="twitter" data-url="http://twitter.com/share?text=<?php echo urlencode($siteTitle);?>&url=<?php echo urlencode(base_url());?>%3Faff%3D<?php echo $userDetails->row()->affiliateId;?>"><i class="fa fa-twitter-square"></i><span style="margin-left:10px;"><?php echo af_lg('lg_twitter_invite','Twitter invite');?></span>					
 					
 			</div>
                 </div>

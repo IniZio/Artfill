@@ -9,9 +9,9 @@
 	<div class="add_steps shop-menu-list">
 		<div class="main">
 			<ul>
-				<li class="event-icon"><a href="view-local-events"><?php echo shopsy_lg('lg_view_localevents','View Local Events');?></a></li>
-				<li class="location-icon"><a href="shop-by-location"><?php echo shopsy_lg('lg_shop_by_location','Shop By Location');?></a></li>
-				<li class="items-icon"><a href="shop-by-items"><?php echo shopsy_lg('lg_shop_by_items','Shop By items');?></a></li>
+				<li class="event-icon"><a href="view-local-events"><?php echo af_lg('lg_view_localevents','View Local Events');?></a></li>
+				<li class="location-icon"><a href="shop-by-location"><?php echo af_lg('lg_shop_by_location','Shop By Location');?></a></li>
+				<li class="items-icon"><a href="shop-by-items"><?php echo af_lg('lg_shop_by_items','Shop By items');?></a></li>
 			</ul>
 		</div>
 	</div>
@@ -19,10 +19,10 @@
 <div class="col-lg-12 search-location" id="profile_div">
 	<div class="col-lg-3 search-location-left">
 		<div class="col-lg-12">
-			<input type="text" class="form-control " placeholder="<?php echo shopsy_lg('lg_enter your addr','Enter your address');?>" id="autocomplete" name="task_location">
+			<input type="text" class="form-control " placeholder="<?php echo af_lg('lg_enter your addr','Enter your address');?>" id="autocomplete" name="task_location">
 		</div>
 		<div class="col-lg-12 margin-top-15">
-			<p><?php echo shopsy_lg('lg_shoplist','shop list');?></p>
+			<p><?php echo af_lg('lg_shoplist','shop list');?></p>
 		</div>
 		<div id="side_bar" class="col-lg-12 margin-top-15 overflow">	
 		</div>
@@ -97,7 +97,7 @@ function createMarker(shopdetails, productCount){
 		});	
 		$("#side_bar").html(side_bar_html);
 	}else{ 
-		$("#side_bar").html('<span><?php echo shopsy_lg('lg_noshop found','No Shop are found.....');?></span>');
+		$("#side_bar").html('<span><?php echo af_lg('lg_noshop found','No Shop are found.....');?></span>');
 	}
 	side_bar_html = "";
 }

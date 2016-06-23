@@ -251,7 +251,7 @@ $j('#slider-container').slider({
 													
                                     <ul id="facet-price" class="filter first">
                                 	<ul class="price-input">
-                                    	<li class="changeable selected"><?php echo shopsy_lg('lg_price','Price');?></li>
+                                    	<li class="changeable selected"><?php echo af_lg('lg_price','Price');?></li>
 										<li class="price-slider-max">
 													<?php if($minVal != '' && $maxVal !=''){?>
 													  <span style="float:left; margin-left: 2%;" class="currency" ><?php echo $currencySymbol; ?><span id="minPriceDisp" ><?php echo trim(number_format(($minVal*$currencyValue),0));?></span></span> 
@@ -300,7 +300,7 @@ $j('#slider-container').slider({
 <!--------- Color Filter with Slider starts --->                                
                                  <ul id="facet-price" class="filter first">
                                 	<ul class="price-input">
-                                    	<li class="changeable selected"><?php echo shopsy_lg('lg_color','Color') ?></li>
+                                    	<li class="changeable selected"><?php echo af_lg('lg_color','Color') ?></li>
                                     </ul>
                                 </ul>
                                 
@@ -413,14 +413,14 @@ $j('#slider-container').slider({
                                 </ul>
                                <?php if($this->config->item('deal_of_day') == 'Yes'){ ?>
                                 <ul class="filter shop-in">
-                                    <li class="input-group selected" id="shiptobox"><?php //echo shopsy_lg('lg_product_type','Product Type') 
-												echo shopsy_lg('lg_deal_of_the_day','Deal Of The Day');
+                                    <li class="input-group selected" id="shiptobox"><?php //echo af_lg('lg_product_type','Product Type') 
+												echo af_lg('lg_deal_of_the_day','Deal Of The Day');
 												?></li>
                                     
                                   
                                     
-                                    <?php i?><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.$order.$colorVal.'&dealday=today';?>"><p style="margin: 5px 5px 5px 15px;"> <?php echo shopsy_lg('lg_todays_deal','Todays Deals');?> </p></a><?php  ?>
-                                    <?php  ?><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.$order.$colorVal.'&dealday=upcoming';?>"><p style="margin: 5px 5px 5px 15px;"><?php echo shopsy_lg('lg_upcoming_deals','Upcoming Deals');?> </p></a><?php  ?>
+                                    <?php i?><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.$order.$colorVal.'&dealday=today';?>"><p style="margin: 5px 5px 5px 15px;"> <?php echo af_lg('lg_todays_deal','Todays Deals');?> </p></a><?php  ?>
+                                    <?php  ?><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.$order.$colorVal.'&dealday=upcoming';?>"><p style="margin: 5px 5px 5px 15px;"><?php echo af_lg('lg_upcoming_deals','Upcoming Deals');?> </p></a><?php  ?>
                                 </ul>
                                 <?php } ?>
                             </div>
@@ -461,13 +461,13 @@ $j('#slider-container').slider({
 								
 								<?php 
 								if($this->input->get('order') == 'date_desc'){
-								     echo shopsy_lg('shopsec_recent','Most Recent'); $recentAct='active';
+								     echo af_lg('shopsec_recent','Most Recent'); $recentAct='active';
 								}  else if($this->input->get('order') == 'most_relevant') { 
-									 echo shopsy_lg('seller_relevancy','Relevancy'); $relevanttAct='active';
+									 echo af_lg('seller_relevancy','Relevancy'); $relevanttAct='active';
 								} else if($this->input->get('order') == 'price_desc'){
-								     echo shopsy_lg('lg_highest price','Highest Price'); $priceHigh='active';
+								     echo af_lg('lg_highest price','Highest Price'); $priceHigh='active';
 								} else if($this->input->get('order') == 'price_asc'){
-									 echo shopsy_lg('lg_lowest price','Lowest Price'); $priceLow='active';
+									 echo af_lg('lg_lowest price','Lowest Price'); $priceLow='active';
 								}
 								
 								?>
@@ -479,8 +479,8 @@ $j('#slider-container').slider({
                                     
                                     
                                     <li><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.'&order=most_relevant';?>" id="Alphabetical" class="<?php echo $relevanttAct;?>"><?php if($this->lang->line('seller_relevancy') != '') { echo stripslashes($this->lang->line('seller_relevancy')); } else echo "Relevancy"; ?></a></li>
-                                     <li><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.'&order=price_desc';?>" id="Highest" class="<?php echo $priceHigh;?>"><?php echo shopsy_lg('lg_highest price','Highest Price');?></a></li>
-                                    <li><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.'&order=price_asc';?>" id="Lowest" class="<?php echo $priceLow;?>"><?php echo shopsy_lg('lg_lowest price','Lowest Price');?></a></li>
+                                     <li><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.'&order=price_desc';?>" id="Highest" class="<?php echo $priceHigh;?>"><?php echo af_lg('lg_highest price','Highest Price');?></a></li>
+                                    <li><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.'&order=price_asc';?>" id="Lowest" class="<?php echo $priceLow;?>"><?php echo af_lg('lg_lowest price','Lowest Price');?></a></li>
                                 </li>
                              </ul>
                                 

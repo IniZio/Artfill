@@ -24,7 +24,7 @@ $this->load->model('user_model');
             <span>&rsaquo;</span>
            <li><a href="view-profile/<?php echo $this->uri->segment(2);?>" class="a_links"><?php echo $this->uri->segment(2);?></a></li>
 		    <span>&rsaquo;</span>
-           <li><?php echo shopsy_lg('lg_fav_list','Favorites list');?></li>
+           <li><?php echo af_lg('lg_fav_list','Favorites list');?></li>
         </ul>
 
 	<div class="avatar_menu">

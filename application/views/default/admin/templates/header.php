@@ -31,7 +31,7 @@
 <script type="text/javascript">
 var BaseURL = '<?php echo base_url();?>';
 var baseURL = '<?php echo base_url();?>';
-var lg_required_field = '<?php echo addslashes(shopsy_lg('lg_required_field','This Field required')); ?>';
+var lg_required_field = '<?php echo addslashes(af_lg('lg_required_field','This Field required')); ?>';
 </script>
 <script src="js/jquery-1.7.1.min.js"></script>
 <script src="js/jquery-ui-1.8.18.custom.min.js"></script>

@@ -127,10 +127,10 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
       <!-- Nav tabs -->
       <ul class="nav nav-tabs" role="tablist">
         
-        <li role="presentation" class="active"><a href="#seller" aria-controls="seller" role="tab" data-toggle="tab"><?php echo shopsy_lg('lg_order_fb','Order Feedbacks');?></a></li>
-        <li role="presentation"><a href="#buyer" aria-controls="buyer" role="tab" data-toggle="tab"><?php echo shopsy_lg('lg_purchase_fb','Purchase Feedbacks');?></a></li>
+        <li role="presentation" class="active"><a href="#seller" aria-controls="seller" role="tab" data-toggle="tab"><?php echo af_lg('lg_order_fb','Order Feedbacks');?></a></li>
+        <li role="presentation"><a href="#buyer" aria-controls="buyer" role="tab" data-toggle="tab"><?php echo af_lg('lg_purchase_fb','Purchase Feedbacks');?></a></li>
         
-        <li role="presentation"><a href="#all-fbk" aria-controls="all-fbk" role="tab" data-toggle="tab"><?php echo shopsy_lg('lg_all_fb','All Feedbacks');?></a></li>
+        <li role="presentation"><a href="#all-fbk" aria-controls="all-fbk" role="tab" data-toggle="tab"><?php echo af_lg('lg_all_fb','All Feedbacks');?></a></li>
         <!--<li role="presentation"><a href="#fbk-left" aria-controls="fbk-left" role="tab" data-toggle="tab">Feedback left for others</a></li>-->
       </ul>
       <div class="receive-fbk">
@@ -138,28 +138,28 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
        <!-- <span class="bid-count">Bid Reactions (last 12 Months): <strong>0</strong></span>-->
       </div>
        <div class="period-choose hole_content">
-        <label><?php echo shopsy_lg('lg_period','Period:');?> </label>
+        <label><?php echo af_lg('lg_period','Period:');?> </label>
         <select id="stats">
-            <option value="site/product/reviews" ><?php echo shopsy_lg('lg_all','All');?></option>
-            <option <?php if(isset($_GET['month']) && $_GET['month'] == '12' ){ echo "selected"; }?> value="site/product/reviews?month=12" ><?php echo shopsy_lg('lg_12_months','12 Months');?></option>
-            <option <?php if(isset($_GET['month']) && $_GET['month'] == '6' ){ echo "selected"; }?> value="site/product/reviews?month=6"><?php echo shopsy_lg('lg_6_months','6 Months');?></option>
-            <option <?php if(isset($_GET['month']) && $_GET['month'] == '3' ){ echo "selected"; }?> value="site/product/reviews?month=3"><?php echo shopsy_lg('lg_3_months','3 Months');?></option>
+            <option value="site/product/reviews" ><?php echo af_lg('lg_all','All');?></option>
+            <option <?php if(isset($_GET['month']) && $_GET['month'] == '12' ){ echo "selected"; }?> value="site/product/reviews?month=12" ><?php echo af_lg('lg_12_months','12 Months');?></option>
+            <option <?php if(isset($_GET['month']) && $_GET['month'] == '6' ){ echo "selected"; }?> value="site/product/reviews?month=6"><?php echo af_lg('lg_6_months','6 Months');?></option>
+            <option <?php if(isset($_GET['month']) && $_GET['month'] == '3' ){ echo "selected"; }?> value="site/product/reviews?month=3"><?php echo af_lg('lg_3_months','3 Months');?></option>
         </select>
       </div>
       <!-- Tab panes -->
       <div class="tab-content fbk-tbl hole_content">
 	   
         <div role="tabpanel" class="tab-pane active" id="seller">
-			<span class="recv-fbk"><strong><?php echo $user_review->num_rows();?></strong> <?php echo shopsy_lg('lg_fb_received','Feedback(s)  Received');?></span>
+			<span class="recv-fbk"><strong><?php echo $user_review->num_rows();?></strong> <?php echo af_lg('lg_fb_received','Feedback(s)  Received');?></span>
 			<?php if($user_review->num_rows() != 0){?>
 		   <table class="table" id="property_table">
                 <thead class="fbk-thead">
                   <tr>
-					<th><?php echo shopsy_lg('lg_title','Title');?></th>
-                    <th><?php echo shopsy_lg('lg_feedback','Feedback');?></th>
-					<th><?php echo shopsy_lg('lg_from_user','From User');?></th>
-                    <th><?php echo shopsy_lg('lg_rating','Rating');?></th>
-                    <th><?php echo shopsy_lg('lg_when','When');?></th>
+					<th><?php echo af_lg('lg_title','Title');?></th>
+                    <th><?php echo af_lg('lg_feedback','Feedback');?></th>
+					<th><?php echo af_lg('lg_from_user','From User');?></th>
+                    <th><?php echo af_lg('lg_rating','Rating');?></th>
+                    <th><?php echo af_lg('lg_when','When');?></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -209,16 +209,16 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 
         </div>
         <div role="tabpanel" class="tab-pane" id="buyer">
-			<span class="recv-fbk"><strong><?php echo $my_review->num_rows();?></strong><?php echo shopsy_lg('lg_fb_sent','Feedback(s) Sent');?></span>
+			<span class="recv-fbk"><strong><?php echo $my_review->num_rows();?></strong><?php echo af_lg('lg_fb_sent','Feedback(s) Sent');?></span>
 			<?php if($my_review->num_rows() !=0){?>
 		   <table class="table" id="property_table">
                 <thead class="fbk-thead">
                   <tr>
-					<th><?php echo shopsy_lg('lg_title','Title');?></th>
-                    <th><?php echo shopsy_lg('lg_feedback','Feedback');?></th>
-				    <th><?php echo shopsy_lg('lg_rating','Rating');?></th>
-                    <th><?php echo shopsy_lg('lg_product','Product');?></th>
-                    <th><?php echo shopsy_lg('lg_when','When');?></t
+					<th><?php echo af_lg('lg_title','Title');?></th>
+                    <th><?php echo af_lg('lg_feedback','Feedback');?></th>
+				    <th><?php echo af_lg('lg_rating','Rating');?></th>
+                    <th><?php echo af_lg('lg_product','Product');?></th>
+                    <th><?php echo af_lg('lg_when','When');?></t
                   </tr>
                 </thead>
                 <tbody>
@@ -262,18 +262,18 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 			<?php }?>
         </div>
         <div role="tabpanel" class="tab-pane" id="all-fbk">
-           <span class="recv-fbk"><strong><?php echo $all_feedback->num_rows();?></strong> <?php echo shopsy_lg('lg_fb','Feedback(s)');?></span>
+           <span class="recv-fbk"><strong><?php echo $all_feedback->num_rows();?></strong> <?php echo af_lg('lg_fb','Feedback(s)');?></span>
 			<?php if($all_feedback->num_rows() !=0){
 					
 			?>
 		   <table class="table" id="property_table">
                 <thead class="fbk-thead">
                   <tr>
-					<th><?php echo shopsy_lg('lg_title','Title');?></th>
-                    <th><?php echo shopsy_lg('lg_feedback','Feedback');?></th>
-				    <th><?php echo shopsy_lg('lg_rating','Rating');?></th>
-                    <th><?php echo shopsy_lg('lg_name','Name');?></th>
-                    <th><?php echo shopsy_lg('lg_when','When');?></th>
+					<th><?php echo af_lg('lg_title','Title');?></th>
+                    <th><?php echo af_lg('lg_feedback','Feedback');?></th>
+				    <th><?php echo af_lg('lg_rating','Rating');?></th>
+                    <th><?php echo af_lg('lg_name','Name');?></th>
+                    <th><?php echo af_lg('lg_when','When');?></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -350,7 +350,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
   					<form name="cancel_orderform" id="cancel_orderform" method="post" action="site/order/cancelOrder">
 					<div class="conversation">
 					<div class="conversation_container">
-					<h2 class="conversation_headline"><?php echo shopsy_lg('lg_sry_msg','We are sorry to see that you have to Cancel this item. Tell us why and we will improve');?></h2>
+					<h2 class="conversation_headline"><?php echo af_lg('lg_sry_msg','We are sorry to see that you have to Cancel this item. Tell us why and we will improve');?></h2>
 					<div class="conversation_thumb">
 					<?php if($CurrUserImg != ''){ $user_pic='users/thumb/'.$CurrUserImg; }
 							else{ $user_pic='default_avat.png';} 
@@ -375,10 +375,10 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 					-->
 					
 					<ul>
-					<li><input type="radio" name="reason" value=""><?php echo shopsy_lg('lg_products_reordere','Products reoredered');?></li>
-					<li><input type="radio" name="reason" value=""><?php echo shopsy_lg('lg_products_misplaced','Products misplaced');?></li>
-					<li><input type="radio" name="reason" value=""><?php echo shopsy_lg('lg_pro_order_without','Products ordered without');?></li>
-					<li><input type="radio" name="reason" value=""><?php echo shopsy_lg('lg_pro_not_req','Products not required');?></li>
+					<li><input type="radio" name="reason" value=""><?php echo af_lg('lg_products_reordere','Products reoredered');?></li>
+					<li><input type="radio" name="reason" value=""><?php echo af_lg('lg_products_misplaced','Products misplaced');?></li>
+					<li><input type="radio" name="reason" value=""><?php echo af_lg('lg_pro_order_without','Products ordered without');?></li>
+					<li><input type="radio" name="reason" value=""><?php echo af_lg('lg_pro_not_req','Products not required');?></li>
 					</ul>
 					
 					
@@ -387,7 +387,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 					<div class="modal-footer footer_tab_footer" style="width: 100%; ">
 						<div class="btn-group">
 							<input class="submit_btn" type="submit" value="send">
-								<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo shopsy_lg('lg_cancel','Cancel');?></a>
+								<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo af_lg('lg_cancel','Cancel');?></a>
 						</div>
 					</div>	
 				
