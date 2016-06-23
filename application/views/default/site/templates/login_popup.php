@@ -49,7 +49,7 @@ if($this->session->userdata('rUrl') != ''){
 				// demonstrate using shopsy_lg function, might fail though
 				<span><h4><?php echo shopsy_lg('lg_login_with_local_ac','以Artfill 帳戶登入'); ?></h4></span>
 				<div style="clear:both;"></div>
-				<form method="post" action="site/user/login_user" class="frm clearfix" onSubmit="return loginVal();">
+				<form method="post" action="" class="frm clearfix" onSubmit="return loginVal(this);">
 					
 					
 					<div class="popup_login">
@@ -155,7 +155,7 @@ if($this->session->userdata('rUrl') != ''){
 
 
 <script type="text/javascript">
-function loginVal(){ 
+function loginVal(evt){ 
 	// $('#loginloadErr').show();
 	$('#loginloadErr').html('');
 	$("#emailAddr_Warn").html('');
@@ -180,12 +180,11 @@ function loginVal(){
 	}
 	//return false;
 
-	var username = emailAddr;
 	$.ajax({
-            url: 'json/user/login',
+            url: 'site/mobile/user_login',
             type: 'post',
             dataType: 'json',   // or JSON.stringify(<data>) ??
-            data: {username, password},
+            data: {'username':emailAddr,'password': password},
             success: function (data) {
                 if (data['message'] = "failure"){
                 	$("#loginloadErr").html("Wrong account info~~");
