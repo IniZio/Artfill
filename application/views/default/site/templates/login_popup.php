@@ -40,7 +40,7 @@ if($this->session->userdata('rUrl') != ''){
 			<div style="margin:5px;border: 2px dashed #8adbd4; border-radius:5px;">
 				<span style="float:right;">
 					<a class="btn btn-default " href="javascript:void(0);" data-dismiss="modal">
-					<?php if($this->lang->line('X') != '') { echo stripslashes($this->lang->line('X')); } else echo 'X'; ?>
+					<?php echo af_lg('X', 'X'); ?>
 					</a>
 				</span>
 				<img src="./images/popup_logo.png" style="text-align:center;" />
@@ -53,24 +53,24 @@ if($this->session->userdata('rUrl') != ''){
 					
 					
 					<div class="popup_login">
-					<!--<label><?php if($this->lang->line('user_email_or_uname') != '') { echo stripslashes($this->lang->line('user_email_or_uname')); } else echo "Email or Username"; ?></label><span style="color:#F00;" class="redFont" id="emailAddr_Warn"></span> -->
-					<input type="text" class="search" name="emailAddr" id="emailAddr" placeholder="帳號/電郵" />
+					<!--<label><?php echo af_lg('user_email_or_uname',"Email or Username"); ?></label><span style="color:#F00;" class="redFont" id="emailAddr_Warn"></span> -->
+					<input type="text" class="search" maxlength="25" name="emailAddr" id="emailAddr" placeholder="帳號/電郵" />
 					</div> 
 					<div class="popup_login">
-					<!--<label><?php if($this->lang->line('user_password') != '') { echo stripslashes($this->lang->line('user_password')); } else echo "Password"; ?></label><span style="color:#F00;" class="redFont" id="password_Warn"></span>  -->
+					<!--<label><?php echo af_lg('user_password', "Password"); ?></label><span style="color:#F00;" maxlength="12" class="redFont" id="password_Warn"></span>  -->
 					<input type="password" class="search" name="password" id="password" placeholder="密碼" />
 					</div>
 					<div class="popup_login">
-					<input  style="margin: 0px 5px 0px 0px;" type="checkbox" name="stay_signed_in" value="yes" checked/><?php if($this->lang->line('stay_sign') != '') { echo stripslashes($this->lang->line('stay_sign')); } else echo "Stay Signed in"; ?>
+					<input  style="margin: 0px 5px 0px 0px;" type="checkbox" name="stay_signed_in" value="yes" checked/><?php echo af_lg('stay_sign',"Stay Signed in"); ?>
 					</div>
 					<div class="popup_login" style="margin-bottom:15px">
-					<input type="submit" class="submit_btn" value="<?php if($this->lang->line('user_signin') != '') { echo stripslashes($this->lang->line('user_signin')); } else echo "Sign In"; ?>" />
+					<input type="submit" class="submit_btn" value="<?php echo af_lg('user_signin', "Sign In"); ?>" />
 					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>									 									 
 					</div>
 				</form>
 									
-					<a href="forgot-password" style="font-size: 12px; width:100%;">忘記密碼?<?php //if($this->lang->line('user_fgt_pwd') != '') { echo stripslashes($this->lang->line('user_fgt_pwd')); } else echo "Forgot your password?"; ?></a>
-					<a href="register" style="font-size: 12px; width:100%;">新會員註冊<?php //if($this->lang->line('land_reopenacc') != '') { echo stripslashes($this->lang->line('land_reopenacc')); } else echo "Reopen your account?"; ?></a>
+					<a href="forgot-password" style="font-size: 12px; width:100%;"><?php echo af_lg('user_fgt_pwd',"忘記密碼?"); ?></a>
+					<a href="register" style="font-size: 12px; width:100%;"><?php echo af_lg('user_register',"新會員註冊"); ?></a>
 					
 				</div>
 				</div>
@@ -88,7 +88,7 @@ if($this->session->userdata('rUrl') != ''){
 			<div style="margin:5px;border: 2px dashed #8adbd4; border-radius:5px;">
 				<span style="float:right;">
 					<a class="btn btn-default " href="javascript:void(0);" data-dismiss="modal">
-					<?php if($this->lang->line('X') != '') { echo stripslashes($this->lang->line('X')); } else echo 'X'; ?>
+					<?php echo af_lg('X', 'X'); ?>
 					</a>
 				</span>
 				<img src="./images/popup_logo.png" style="text-align:center;" />
@@ -101,45 +101,45 @@ if($this->session->userdata('rUrl') != ''){
 				
 									<form  method="post" action="" class="frm clearfix" onSubmit="return register_user(this);">
 										<div class="popup_login">
-											<input type="text" class="search" name="fullname" id="fullname" placeholder="名字(不多於25字元)" />
+											<input type="text" class="search" maxlength="25" name="fullname" id="fullname" placeholder="名字(不多於25字元)" />
 										</div>
 										<div class="popup_login">
-											<input type="text" class="search" name="lastname" id="lastname" placeholder="姓氏(不多於25字元)"/>
+											<input type="text" class="search" maxlength="25" name="lastname" id="lastname" placeholder="姓氏(不多於25字元)"/>
 										</div>
 										<div class="popup_login">
-											<input type="radio" style="float:left;margin: 6px 6px 0 2px;" name="gender" value="Male" checked/><span class="gen_check"><?php if($this->lang->line('user_male') != '') { echo stripslashes($this->lang->line('user_male')); } else echo "Male"; ?></span>
-											<input type="radio" style="float:left;margin: 6px 6px 0 12px;" name="gender" value="Female"/><span class="gen_check"><?php if($this->lang->line('user_female') != '') { echo stripslashes($this->lang->line('user_female')); } else echo "Female"; ?></span>
-											<input type="radio" style="float:left;margin: 6px 6px 0 12px;" name="gender" value="Unspecified"/><span class="gen_check"><?php if($this->lang->line('user_rather_not_say') != '') { echo stripslashes($this->lang->line('user_rather_not_say')); } else echo "Rather not say"; ?></span>
+											<input type="radio" style="float:left;margin: 6px 6px 0 2px;" name="gender" value="Male" checked/><span class="gen_check"><?php echo af_lg('user_male', "Male"); ?></span>
+											<input type="radio" style="float:left;margin: 6px 6px 0 12px;" name="gender" value="Female"/><span class="gen_check"><?php echo af_lg('user_female',"Female"); ?></span>
+											<input type="radio" style="float:left;margin: 6px 6px 0 12px;" name="gender" value="Unspecified"/><span class="gen_check"><?php echo af_lg('user_rather_not_say', "Rather not say"); ?></span>
 										</div>
 										<div class="popup_login">
 											<input type="text" class="search" style="margin:0" name="email" id="email" placeholder="使用者電郵"/>
 										</div>
 										<div class="popup_login">
-											<input type="password" class="search" style="margin:0" name="pwd" id="pwd" placeholder="密碼(6-12字元)"/>
+											<input type="password" class="search" maxlength="12" style="margin:0" name="pwd" id="pwd" placeholder="密碼(6-12字元)"/>
 										</div>
 										<div class="popup_login">
-											<input type="password" class="search" style="margin:0" name="Confirmpwd" id="Confirmpwd" placeholder="確認密碼"/>
+											<input type="password" class="search" maxlength="12" style="margin:0" name="Confirmpwd" id="Confirmpwd" placeholder="確認密碼"/>
 										</div>
 										
 										<div class="popup_login">
 												<span style="color:#F00;" class="redFont" id="usernameErr"></span> 
-												 <input type="text" class="search" style="margin:0" name="username" id="username" placeholder="用戶名稱(不多於25字元)*"/>
+												 <input type="text" class="search" style="margin:0" name="username" id="username" maxlength="25" placeholder="用戶名稱(不多於25字元)*"/>
 										</div>
 										<p style="font-size:12px;  margin: 5px 0 4px 42px; color:#666; width:auto; float:left">								
 										  <span style=" color: #999999;font-size: 11px;margin: 12px 0 5px;"> 
 										  <input type="checkbox" name="privacychecking" id="privacychecking"  checked/> 
-										  <?php if($this->lang->line('user_by_clk_rster') != '') { echo stripslashes($this->lang->line('user_by_clk_rster')); } else echo "By clicking Register, you confirm that you accept our"; ?> 
-											<a href="terms" target="_blank"><?php if($this->lang->line('user_touse') != '') { echo stripslashes($this->lang->line('user_touse')); } else echo "Terms of Use"; ?></a> <?php if($this->lang->line('user_and') != '') { echo stripslashes($this->lang->line('user_and')); } else echo "and"; ?><a href="privacy" target="_blank"> <?php if($this->lang->line('user_privacy_policy') != '') { echo stripslashes($this->lang->line('user_privacy_policy')); } else echo "Privacy Policy"; ?></a></span>
+										  <?php echo af_lg('user_by_clk_rster',"By clicking Register, you confirm that you accept our"); ?> 
+											<a href="terms" target="_blank"><?php echo af_lg('user_touse', "Terms of Use"); ?></a> <?php echo af_lg('user_and', "and"); ?><a href="privacy" target="_blank"> <?php echo af_lg('user_privacy_policy', "Privacy Policy"); ?></a></span>
 											<br />
 											
 											 <input type="checkbox" name="subscription" id="subscription" style="display:none;" />
-											  <?php /*if($this->lang->line('land_toreceive') != '') { echo stripslashes($this->lang->line('land_toreceive')); } else echo "I want to receive"; ?> <?php echo $this->config->item('email_title'); ?> <?php if($this->lang->line('land_anemailnews') != '') { echo stripslashes($this->lang->line('land_anemailnews')); } else echo "Finds, an email newsletter of fresh trends and editors' picks";*/ ?>
+											  <?php /*echo af_lg('land_toreceive') != '') { echo stripslashes($this->lang->line('land_toreceive')); } else echo "I want to receive"; ?> <?php echo $this->config->item('email_title'); ?> <?php echo af_lg('land_anemailnews') != '') { echo stripslashes($this->lang->line('land_anemailnews')); } else echo "Finds, an email newsletter of fresh trends and editors' picks";*/ ?>
 											<span class="error" id="PrivacyErr"></span>
 										</p>
 										
 										<div class="popup_login" style="margin-bottom:15px">
 										<span id="loadErr" style="color:red"></span><br/>
-											<input type="submit" class="submit_btn" value="<?php if($this->lang->line('user_register') != '') { echo stripslashes($this->lang->line('user_register')); } else echo "Register"; ?>"/>
+											<input type="submit" class="submit_btn" value="<?php echo af_lg('user_register', "Register"); ?>"/>
 											
 										</div>
 									</form>
@@ -151,59 +151,5 @@ if($this->session->userdata('rUrl') != ''){
 		</div>
 	</div>				
 </div>
-
-
-
-<script type="text/javascript">
-function loginVal(evt){ 
-	$('#loginloadErr').html('<span class="loading"><img src="images/indicator.gif" alt="Loading..."></span>');
-	$('#loginloadErr').show();
-	// $('#loginloadErr').html('');
-	$("#emailAddr_Warn").html('');
-	$("#password_Warn").html('');
-	
-	var emailAddr = $("#emailAddr").val();
-	var password = $("#password").val();
-	
-	if(emailAddr.length==0){
-	$("#emailAddr_Warn").html(lg_required_field);
-	// $('#loginloadErr').hide();
-	// $('#loginloadErr').html('請輸入電郵');
-	$('#loginloadErr').html("必須填寫帳號/電郵");
-	$('#loginloadErr').show();
-	$("#emailAddr").focus();
-	return false;
-	}else if(password==''){
-	$("#password_Warn").html(lg_required_field);
-	// $("#loginloadErr").html('請輸入密碼');
-	$("#loginloadErr").html("必須填寫密碼");
-	$('#loginloadErr').show();
-	$("#password").focus();
-	return false;
-	}
-	// return false;
-
-	$.ajax({
-            url: 'site/mobile/user_login',
-            type: 'post',
-            dataType: 'json',   // or JSON.stringify(<data>) ??
-            data: {'username':emailAddr,'password': password},
-            success: function (data) {
-                if (data['message'] == "Failure"){
-                	$("#loginloadErr").html("Wrong account info~~");
-					$('#loginloadErr').show();
-                } else {
-                	$(evt).attr('action', 'site/user/login_user');
-                	$(evt).attr('onSubmit', '');
-                	$(evt).off('onSubmit').submit();
-                	return true;
-                }
-            },
-             error: function (xhr) {alert(JSON.parse(xhr.responseText).Message); }
-        });
-	return false;
-}
-</script>
-
 
 <?php }?>
