@@ -36,7 +36,7 @@ $n=$deal_of_day1->num_rows();
 ?>
 <section class="second-bl">
 	<div class="container">
-		<h1 class="today-deal"><a href="<?php echo base_url();?>search/all?&dealday=today"><?php echo artfill_lg('lg_Today_Deal','Today\'s Deal');?><i class="fa fa-caret-right deal-arrow"></i></a></h1>
+		<h1 class="today-deal"><a href="<?php echo base_url();?>search/all?&dealday=today"><?php echo af_lg('lg_Today_Deal','Today\'s Deal');?><i class="fa fa-caret-right deal-arrow"></i></a></h1>
 		<div data-countdown="<?php echo date('Y-m-d')." 23:59:59" ?>" >
 			</div><div id="timer"></div>
 			<div class="">
@@ -126,7 +126,7 @@ $n=$deal_of_day1->num_rows();
 	<div id="landing_div">
 		<section class="second-bl">
 			  <div class="container">
-				<h1><?php echo artfill_lg('lg_Featured_products','Featured Products');?></h1>
+				<h1><?php echo af_lg('lg_Featured_products','Featured Products');?></h1>
 				<h5><?php /* if($this->lang->line('landing_text') != '') { echo stripslashes($this->lang->line('landing_text')); } else echo 'Discover finds from around the marketplace'; */?> </h5>
 				    <div class="">
 					      <div class="recent-fav">
@@ -244,7 +244,7 @@ $n=$deal_of_day1->num_rows();
 					</span>
 					<h3><a href="<?php echo base_url().'blog/'.$new_promote->post_name; ?>"  target="_blank"><?php echo $new_promote->post_title; ?></a> </h3>
 					     <span class="owner-details">
-						<em><?php echo artfill_lg('lg_meet','Meet');?></em>
+						<em><?php echo af_lg('lg_meet','Meet');?></em>
 						<a class="shop-name" href="shop-section/<?php echo $new_promote->seourl; ?>">
 							<span class="user-name"><?php echo $new_promote->full_name; ?></span> of <?php echo $new_promote->shop_title; ?>
 						</a>
@@ -277,7 +277,7 @@ $n=$deal_of_day1->num_rows();
 				
 				<h1><br/></h1>
 				
-				<!--<h1><?php //echo artfill_lg('lg_Featured_shop','Featured shops');?></h1>-->
+				<!--<h1><?php //echo af_lg('lg_Featured_shop','Featured shops');?></h1>-->
 				
 				<style>
 				.sub-box{
@@ -598,7 +598,7 @@ $n=$deal_of_day1->num_rows();
 			<?php if($this->config->item('top_seller')=='active' && count($maxfavourite->result()) > 0){/* ?>
 			<section class="second-bl third-bl">
 				  <div class="container">
-					<h1><?php echo artfill_lg('lg_top_seller','Top Sellers');?></h1>
+					<h1><?php echo af_lg('lg_top_seller','Top Sellers');?></h1>
 					    
 					    <div class="col-md-12 ct-block-cover-outside">
 						     
@@ -661,7 +661,7 @@ $n=$deal_of_day1->num_rows();
 										 
 										 <span class="ct-txt">
 											<h3> <?php echo $FavourPick->seller_firstname; ?></h3>
-											<p> <?php echo $FavourPick->new_id; ?> <?php echo artfill_lg('lg_fav','Favourites');?></p>
+											<p> <?php echo $FavourPick->new_id; ?> <?php echo af_lg('lg_fav','Favourites');?></p>
 											  
 										  </span> <i class="fa fa-chevron-circle-right arrow-ic"></i> 
 									</div>
@@ -679,7 +679,7 @@ $n=$deal_of_day1->num_rows();
 						if($this->config->item('recent_prod')=='active' && count($recent_product_details->result()) > 0){ ?>
 						<section class="second-bl" style="border-top:thick solid #66f4cf;">
 							  <div class="container">
-								<h1><?php //echo artfill_lg('lg_recent_product','Recent Products');?>熱門商品</h1>
+								<h1><?php //echo af_lg('lg_recent_product','Recent Products');?>熱門商品</h1>
 								<h5><?php /*if($this->lang->line('landing_text') != '') { echo stripslashes($this->lang->line('landing_text')); } else echo 'Discover finds from around the marketplace';*/ ?> </h5>
 								    <div class="">
 									      <div class="recent-fav">
@@ -845,7 +845,7 @@ $n=$deal_of_day1->num_rows();
 										
 										<h1><?php echo $this->config->item('email_title'); ?></h1>
 										
-										<h2><?php echo artfill_lg('lg_For_your_phone','For Your Phone');?></h2>
+										<h2><?php echo af_lg('lg_For_your_phone','For Your Phone');?></h2>
 										
 										<ul>
 											<?php if($this->config->item('app_store_link') != ""){ ?>

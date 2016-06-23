@@ -55,7 +55,7 @@ $this->load->view('site/templates/shop_header');
             
             <?php if($selectSeller_details[0]['seller_store_image'] != ''){ ?>
             <div class="shop_member">
-                <label class="label-text"><?php echo artfill_lg('lg_current_bannerimage','Current Banner image');?></label>
+                <label class="label-text"><?php echo af_lg('lg_current_bannerimage','Current Banner image');?></label>
                 <div class="shop_member_right"><img src="images/store-banner/<?php print_r($selectSeller_details[0]['seller_store_image']); ?>"/></div>
             </div>
             <hr>
@@ -112,12 +112,12 @@ $this->load->view('site/templates/shop_header');
             <span class="input-group-addon">px</span>
           </div>
           <div class="input-group">
-            <label class="input-group-addon" for="dataWidth"><?php echo artfill_lg('lg_width','Width');?></label>
+            <label class="input-group-addon" for="dataWidth"><?php echo af_lg('lg_width','Width');?></label>
             <input class="form-control" id="dataWidth" name="width" type="text" placeholder="width">
             <span class="input-group-addon">px</span>
           </div>
           <div class="input-group">
-            <label class="input-group-addon" for="dataHeight"><?php echo artfill_lg('lg_height','Height');?></label>
+            <label class="input-group-addon" for="dataHeight"><?php echo af_lg('lg_height','Height');?></label>
             <input class="form-control" id="dataHeight" name="height" type="text" placeholder="height">
             <span class="input-group-addon">px</span>
           </div>
@@ -143,7 +143,7 @@ $this->load->view('site/templates/shop_header');
         <div class="btn-group btn-group-crop" id="preview" style="display:none;">
           <button class="btn btn-primary" data-method="getCroppedCanvas" type="button">
             <span class="docs-tooltip" data-toggle="tooltip" title="$().cropper(&quot;getCroppedCanvas&quot;)">
-             <?php echo artfill_lg('lg_preview','preview');?>
+             <?php echo af_lg('lg_preview','preview');?>
             </span>
           </button>
         </div>
@@ -154,7 +154,7 @@ $this->load->view('site/templates/shop_header');
             <div class="modal-content">
               <div class="modal-header">
                 <button class="close" data-dismiss="modal" type="button" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="getCroppedCanvasTitle"><?php echo artfill_lg('lg_cropped','Cropped');?></h4>
+                <h4 class="modal-title" id="getCroppedCanvasTitle"><?php echo af_lg('lg_cropped','Cropped');?></h4>
               </div>
               <div class="modal-body"></div>
               <!-- <div class="modal-footer">

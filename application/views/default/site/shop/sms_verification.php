@@ -132,21 +132,21 @@
 				<a  href="#javascript:void(0);" class="close_otp" data-dismiss="modal" >X</a>
 				 <form name="mobile_verifcation" action="site/sms_twilio/confirm_mobile_verification" onsubmit="return verifyOtp();" method="post">
 					 <div class="otpcontainer">
-						<h4><b><?php echo artfill_lg('lg_verify_mob_no','Please Verify Your Mobile Number');?></b></h4>
+						<h4><b><?php echo af_lg('lg_verify_mob_no','Please Verify Your Mobile Number');?></b></h4>
 						<div class="mobilenumber">
-							<label><?php echo artfill_lg('lg_mob_no','Mobile Number:');?></label>
-							<input type="text" name="phone_code" id="phone_code" style="width:12%;" value="" placeholder="<?php echo artfill_lg('lg_code','Code...');?>"/>   
-							<input type="text" name="phone_number" id="phone_number" placeholder="<?php echo artfill_lg('lg_mob_no','Mobile Number:');?>" value="<?php echo $selectUser_details[0]['phone_no']; ?>" />  
-							<input type="button" value="<?php echo artfill_lg('lg_send_OTP','Send OTP');?>" class="otpbtn" id="otp_send_btn" onclick="return sendOtp();" />
+							<label><?php echo af_lg('lg_mob_no','Mobile Number:');?></label>
+							<input type="text" name="phone_code" id="phone_code" style="width:12%;" value="" placeholder="<?php echo af_lg('lg_code','Code...');?>"/>   
+							<input type="text" name="phone_number" id="phone_number" placeholder="<?php echo af_lg('lg_mob_no','Mobile Number:');?>" value="<?php echo $selectUser_details[0]['phone_no']; ?>" />  
+							<input type="button" value="<?php echo af_lg('lg_send_OTP','Send OTP');?>" class="otpbtn" id="otp_send_btn" onclick="return sendOtp();" />
 							<span style="display:none;" id="sms_loader"><img src="images/indicator.gif"  /></span>
 							<span id="otpNumErr"><p></p></span>
 							<span id="temp_otp" style="color: blue;"><p></p></span>
 							<input type="hidden" id="otp_mode" value="<?php echo $this->config->item('twilio_account_type');?>"/>
 						</div>
 						<div class="mobileverify">
-							<label><?php echo artfill_lg('lg_enter_OTP','Enter OTP :');?></label>
-							<input type="text" name="otp_code" id="otp_code" style="width:25%;" placeholder="<?php echo artfill_lg('lg_enter_OTP','Enter OTP :');?>" />   
-							<input type="Submit" value="<?php echo artfill_lg('lg_submit','Submit');?>" class="otpbtn" />
+							<label><?php echo af_lg('lg_enter_OTP','Enter OTP :');?></label>
+							<input type="text" name="otp_code" id="otp_code" style="width:25%;" placeholder="<?php echo af_lg('lg_enter_OTP','Enter OTP :');?>" />   
+							<input type="Submit" value="<?php echo af_lg('lg_submit','Submit');?>" class="otpbtn" />
 						</div>
 					</div>
 				</form>

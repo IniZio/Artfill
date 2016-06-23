@@ -174,7 +174,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
                     	
                         <a class="names-it" href="shop-section/<?php echo $Purchase->shop_seo; ?>"><span class="newimages"></span><?php echo $Purchase->shopname; ?></a>
 						<p> <?php if($this->lang->line('user_purch_from') != '') { echo stripslashes($this->lang->line('user_purch_from')); } else echo 'Purchase from'; ?></p>
-                        <span class="date-no"><?php echo artfill_lg('lg_on','ON');?> <?php $datestring ="%M %d,%Y "; $time = $Purchase->inserttime; echo mdate($datestring,$time); ?></span>
+                        <span class="date-no"><?php echo af_lg('lg_on','ON');?> <?php $datestring ="%M %d,%Y "; $time = $Purchase->inserttime; echo mdate($datestring,$time); ?></span>
 						
 						</div>
 						

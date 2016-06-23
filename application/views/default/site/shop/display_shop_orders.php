@@ -108,7 +108,7 @@ j(document).ready(function(){
 								?>
 								<?php echo number_format($balance_amt,2);?>
 							</h1>
-							<h2 style="text-align:center !important;margin-top: -11px;"><?php echo artfill_lg('lg_to_ear-withdar_earning','(Total Earnings - Withdrawal Earnings)');?>
+							<h2 style="text-align:center !important;margin-top: -11px;"><?php echo af_lg('lg_to_ear-withdar_earning','(Total Earnings - Withdrawal Earnings)');?>
 							
 							
 							</h2>
@@ -129,15 +129,15 @@ j(document).ready(function(){
         		<div class="top_list" style="width: 90%;margin: 0px 0px 10px 10px;">
                 <ul style="width:auto;" class="listtypename">
 					
-				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders" class="" ><div class="name-inner"><?php echo artfill_lg('lg_all','All');?> <span class="suborder"><?php if($_GET['order']=='' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span> </div></a></li>
-				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Processed" class="" ><div class="name-inner"><?php echo artfill_lg('lg_processed','Processed');?> <span class="suborder"><?php if($_GET['order']=='Processed' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span> </div></a></li>
-				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Shipped" class="" ><div class="name-inner"><?php echo artfill_lg('lg_shipped','Shipped');?> <span class="suborder"><?php if($_GET['order']=='Shipped' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
-				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Delivered" class="" ><div class="name-inner"><?php echo artfill_lg('lg_deliverd','Delivered');?> <span class="suborder"><?php if($_GET['order']=='Delivered' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
-				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Cancelled" class="" ><div class="name-inner"><?php echo artfill_lg('lg_cancelled','Cancelled');?> <span class="suborder"><?php if($_GET['order']=='Cancelled' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
-				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=dispute" class="" ><div class="name-inner"><?php echo artfill_lg('lg_retorrep','Return / Replace ');?> <span class="suborder"><?php if($_GET['order']=='dispute' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
-				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=cod" class="" ><div class="name-inner"><?php echo artfill_lg('lg_cod','Cash on Delivery');?> <span class="suborder"><?php if($_GET['order']=='cod' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span></div></a></li>
-				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=wiretransfer" class="" ><div class="name-inner"><?php echo artfill_lg('lg_wiretransfer','Wire Transfer');?> <span class="suborder"><?php if($_GET['order']=='wiretransfer' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span></div></a></li>
-					 <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=westernunion" class="" ><div class="name-inner"><?php echo artfill_lg('lg_westernunion','Western Union');?> <span class="suborder"><?php if($_GET['order']=='westernunion' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span></div></a></li>
+				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders" class="" ><div class="name-inner"><?php echo af_lg('lg_all','All');?> <span class="suborder"><?php if($_GET['order']=='' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span> </div></a></li>
+				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Processed" class="" ><div class="name-inner"><?php echo af_lg('lg_processed','Processed');?> <span class="suborder"><?php if($_GET['order']=='Processed' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span> </div></a></li>
+				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Shipped" class="" ><div class="name-inner"><?php echo af_lg('lg_shipped','Shipped');?> <span class="suborder"><?php if($_GET['order']=='Shipped' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
+				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Delivered" class="" ><div class="name-inner"><?php echo af_lg('lg_deliverd','Delivered');?> <span class="suborder"><?php if($_GET['order']=='Delivered' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
+				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Cancelled" class="" ><div class="name-inner"><?php echo af_lg('lg_cancelled','Cancelled');?> <span class="suborder"><?php if($_GET['order']=='Cancelled' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
+				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=dispute" class="" ><div class="name-inner"><?php echo af_lg('lg_retorrep','Return / Replace ');?> <span class="suborder"><?php if($_GET['order']=='dispute' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
+				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=cod" class="" ><div class="name-inner"><?php echo af_lg('lg_cod','Cash on Delivery');?> <span class="suborder"><?php if($_GET['order']=='cod' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span></div></a></li>
+				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=wiretransfer" class="" ><div class="name-inner"><?php echo af_lg('lg_wiretransfer','Wire Transfer');?> <span class="suborder"><?php if($_GET['order']=='wiretransfer' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span></div></a></li>
+					 <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=westernunion" class="" ><div class="name-inner"><?php echo af_lg('lg_westernunion','Western Union');?> <span class="suborder"><?php if($_GET['order']=='westernunion' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span></div></a></li>
             
                    
                 </ul>
@@ -154,10 +154,10 @@ j(document).ready(function(){
 				
 				
 			<div style="width: 100%;text-align: center;padding-bottom: 20px;margin-top:20px;">
-						<input type="text" id="transaction" name="transaction"placeholder="<?php echo artfill_lg('lg_trensacid','Transaction Id');?>"value="<?php if(isset($_GET['id'])){ echo $_GET['id'];}?>" title="Transaction ID"/>
-						<input type="text" id="orderfrom" name="orderfrom" placeholder="<?php echo artfill_lg('lg_orderfrom','Order from');?>" title="Order from" value="<?php if(isset($_GET['from'])){ echo $_GET['from'];}?>" />
-						<input type="text" id="orderto" name="orderto" title="Order to"  placeholder="<?php echo artfill_lg('lg_orderto','Order to');?>" value="<?php if(isset($_GET['to'])){ echo $_GET['to'];}?>" />
-						<input type="button" class="search-bt" id="search" name="search" value="<?php echo artfill_lg('lg_search','search');?>" onclick="search_Orders()"/>
+						<input type="text" id="transaction" name="transaction"placeholder="<?php echo af_lg('lg_trensacid','Transaction Id');?>"value="<?php if(isset($_GET['id'])){ echo $_GET['id'];}?>" title="Transaction ID"/>
+						<input type="text" id="orderfrom" name="orderfrom" placeholder="<?php echo af_lg('lg_orderfrom','Order from');?>" title="Order from" value="<?php if(isset($_GET['from'])){ echo $_GET['from'];}?>" />
+						<input type="text" id="orderto" name="orderto" title="Order to"  placeholder="<?php echo af_lg('lg_orderto','Order to');?>" value="<?php if(isset($_GET['to'])){ echo $_GET['to'];}?>" />
+						<input type="button" class="search-bt" id="search" name="search" value="<?php echo af_lg('lg_search','search');?>" onclick="search_Orders()"/>
 			</div>
 			
                 <form class="tab_form_list" style="width: 100%;">
@@ -227,7 +227,7 @@ j(document).ready(function(){
 								<?php $proof = $this->user_model->get_all_details(PROOF,array('dealcodenumber'=>$row->dealCodeNumber));?>
 								<?php //echo $this->db->last_query();?>
 									<?php if($proof->num_rows()==1){?>
-										<a target="_blank" href="view-proof/<?php echo $proof->row()->dealcodenumber?>"><?php echo artfill_lg('lg_viewproof','View Proof');?></a>
+										<a target="_blank" href="view-proof/<?php echo $proof->row()->dealcodenumber?>"><?php echo af_lg('lg_viewproof','View Proof');?></a>
 									<?php }?>
 								<?php } ?>
                                 </td>
@@ -241,7 +241,7 @@ j(document).ready(function(){
                         </tbody>
                      </table>  
 <?php } else { 
-						echo artfill_lg('lg_no transact_found','No Transaction Found...');
+						echo af_lg('lg_no transact_found','No Transaction Found...');
 						}			?>		 
                  </form>
                  
@@ -274,9 +274,9 @@ j(document).ready(function(){
 					
 				
 				<form method="post" action="site/shop/shoporder_update">
-				<span id="edd" style="display:none;"><?php echo artfill_lg('lg_est_deliverydate','Estimed Delivery Date:');?><input name="eventDate" id="eventDate" type="text" tabindex="6" class="required small tipTop" title="Please select the date" value=""/><br></span>
-				<span id="sid" style="display:none;"><?php echo artfill_lg('lg_shipid','Shipping Id : ');?> <input type="text" name="trackingId" id="trackingId"><br></span>
-				<span><?php echo artfill_lg('lg_comment','Comment :');?><textarea name="shippingMessage" style="z-index:99999999"></textarea><br></span>
+				<span id="edd" style="display:none;"><?php echo af_lg('lg_est_deliverydate','Estimed Delivery Date:');?><input name="eventDate" id="eventDate" type="text" tabindex="6" class="required small tipTop" title="Please select the date" value=""/><br></span>
+				<span id="sid" style="display:none;"><?php echo af_lg('lg_shipid','Shipping Id : ');?> <input type="text" name="trackingId" id="trackingId"><br></span>
+				<span><?php echo af_lg('lg_comment','Comment :');?><textarea name="shippingMessage" style="z-index:99999999"></textarea><br></span>
 				<input type="hidden" name="shipping_status" id="shipping_status" value=""/>
 				<input type="hidden" name="dealCodeNumber" id="dealCodeNumber" value=""/>
 
@@ -284,7 +284,7 @@ j(document).ready(function(){
 			<div class="modal-footer footer_tab_footer" style="width: 100%; ">
 						<div class="btn-group">
 							<input class="submit_btn" type="submit" value="submit">
-								<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo artfill_lg('lg_cancel','Cancel');?></a>
+								<a class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel"><?php echo af_lg('lg_cancel','Cancel');?></a>
 						</div>
 			</div>	
 			</form>

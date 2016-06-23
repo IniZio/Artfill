@@ -391,9 +391,9 @@ $(document).ready(function(){
 											<thead style="color: darkgoldenrod;">
 											<tr>
 												
-												<td width="150px"><?php echo artfill_lg('lg_name','Name');?></td>
-												<td width="50px"><?php echo artfill_lg('lg_days','Days');?></td>
-												<td width="50px"><?Php echo artfill_lg('lg_amount','Amount');?></td>
+												<td width="150px"><?php echo af_lg('lg_name','Name');?></td>
+												<td width="50px"><?php echo af_lg('lg_days','Days');?></td>
+												<td width="50px"><?Php echo af_lg('lg_amount','Amount');?></td>
 											</tr>
 											</thead>
 											<tbody>

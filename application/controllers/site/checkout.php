@@ -1015,7 +1015,7 @@ notify_version='".$_REQUEST['notify_version']."', amount='".$_REQUEST['amount'].
 		if($getUSDvalue->num_rows() >0){
 			$total_amount=$this->input->post('total_price')*$getUSDvalue->row()->currency_value;
 		} else{
-		$usd_currency_need=addslashes(artfill_lg('Sorry!_Authorize_payment_need_USD_currency','Sorry! Authorize payment need USD currency value.'));
+		$usd_currency_need=addslashes(af_lg('Sorry!_Authorize_payment_need_USD_currency','Sorry! Authorize payment need USD currency value.'));
 			$this->setErrorMessage('error',$usd_currency_need);
 			redirect('cart');
 		}

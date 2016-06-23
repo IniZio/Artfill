@@ -46,8 +46,8 @@ if($this->session->userdata('rUrl') != ''){
 				<img src="./images/popup_logo.png" style="text-align:center;" />
 				<div style="clear:both;"></div>
 				<div style="margin-left:10px;;margin-right:auto;">
-				// demonstrate using artfill_lg function, might fail though
-				<span><h4><?php echo artfill_lg('lg_login_with_local_ac','以Artfill 帳戶登入'); ?></h4></span>
+				// demonstrate using af_lg function, might fail though
+				<span><h4><?php echo af_lg('lg_login_with_local_ac','以Artfill 帳戶登入'); ?></h4></span>
 				<div style="clear:both;"></div>
 				<form method="post" action="" class="frm clearfix" onSubmit="return loginVal(this);">
 					

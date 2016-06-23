@@ -1059,7 +1059,7 @@ $shipName='Hong Kong';
 	 */	
 	public function reviews($pType=''){
 		if ($this->checkLogin('U') == ''){
-			$lg_login=addslashes(artfill_lg('lg_login','You must login'));
+			$lg_login=addslashes(af_lg('lg_login','You must login'));
 			$this->setErrorMessage('error',$lg_login);
 			redirect(base_url());
 		}
@@ -1110,7 +1110,7 @@ $shipName='Hong Kong';
 				//Check product type
 				$this->load->view('site/shop/edit_shop_listitems',$this->data);
 			}else{
-			$notableto_edit=addslashes(artfill_lg('lg_notableto_edit','Your not suppose to edit this product'));
+			$notableto_edit=addslashes(af_lg('lg_notableto_edit','Your not suppose to edit this product'));
 				$this->setErrorMessage('error',$notableto_edit);
 				redirect('products/'.$seourl);
 			}
@@ -1938,7 +1938,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 					echo 'Success|'.$path.$ImgTmpName;
 		   		}
 			}else{
-				$errormessage=addslashes(artfill_lg('lg_upload_img_too_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 550 X 350 .'));
+				$errormessage=addslashes(af_lg('lg_upload_img_too_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 550 X 350 .'));
 				echo 'Failure|'.$errormessage;
 			}
 				
@@ -1963,7 +1963,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 					echo 'Success|'.$path.$ImgTmpName;
 			   }
 			}else{
-			$errormessage=addslashes(artfill_lg('lg_upload_img_too_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 550 X 350 .'));
+			$errormessage=addslashes(af_lg('lg_upload_img_too_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 550 X 350 .'));
 				echo 'Failure|'.$errormessage;
 			}				   
 	}
@@ -1986,7 +1986,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 					echo 'Success|'.$path.$ImgTmpName;
 			   }
 			}else{
-				$errormessage=addslashes(artfill_lg('lg_upload_img_too_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 550 X 350 .'));
+				$errormessage=addslashes(af_lg('lg_upload_img_too_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 550 X 350 .'));
 				echo 'Failure|'.$errormessage;
 			}	
 	}
@@ -2009,7 +2009,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 					echo 'Success|'.$path.$ImgTmpName;
 			   }  
 			}else{
-				$errormessage=addslashes(artfill_lg('lg_upload_img_too_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 550 X 350 .'));
+				$errormessage=addslashes(af_lg('lg_upload_img_too_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 550 X 350 .'));
 				echo 'Failure|'.$errormessage;
 			}	
 		
@@ -2033,7 +2033,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 					echo 'Success|'.$path.$ImgTmpName;
 			   }
 			 }else{
-			$errormessage=addslashes(artfill_lg('lg_upload_img_too_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 550 X 350 .'));
+			$errormessage=addslashes(af_lg('lg_upload_img_too_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 550 X 350 .'));
 				echo 'Failure|'.$errormessage;
 			}	
 	}
@@ -2549,7 +2549,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 		 $this->data['max_base_price']=$priceRange->row()->maxprice;
 		  $this->data['min_base_price']=$priceRange->row()->minprice;
 		#echo  $this->data['max_base_price']."          ".  $this->data['min_base_price'];die;
-		$this->data['countTitle'] =$this->data['product_count']->num_rows().' '.artfill_lg('lg_items','Items');
+		$this->data['countTitle'] =$this->data['product_count']->num_rows().' '.af_lg('lg_items','Items');
 		if($this->data['product_list1']->num_rows < 12 && $this->data['product_list1']->num_rows !=0 ){
 			#$qry_str = $curUrl[0].'?pg='.$newPage. '?flag='.((12-$this->data['product_list1']->num_rows())+1); 
 			if(strpos($CUrurl,'?') !== false){

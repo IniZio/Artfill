@@ -125,7 +125,7 @@ class Market extends MY_Controller {
 				  $wedding_date=date('Y-m-d',time());
 				  } else { $wedding_date=$this->input->post('registryDate'); }
 			$this->product_model->simple_insert(REGISTRY,array('wedding_date' => $wedding_date,'user_id' => $this->checkLogin('U')));
-			$wedding_reg=addslashes(artfill_lg('lg_wedding_reg','Your Wedding Registry Added Successfully'));
+			$wedding_reg=addslashes(af_lg('lg_wedding_reg','Your Wedding Registry Added Successfully'));
 			$this->setErrorMessage('success',$wedding_reg);
 			redirect('registry');
 		  } else {
@@ -144,7 +144,7 @@ class Market extends MY_Controller {
 	public function updateRegistry(){
 		  if($this->checkLogin('U') != ''){    
 			$this->product_model->update_details(REGISTRY,array('wedding_date' => $this->input->post('registryDate')),array('user_id' => $this->checkLogin('U')));
-				$wedding_reg_updated=addslashes(artfill_lg('lg_wedding_reg','Your Wedding Registry updated Successfully'));
+				$wedding_reg_updated=addslashes(af_lg('lg_wedding_reg','Your Wedding Registry updated Successfully'));
 			$this->setErrorMessage('success',$wedding_reg_updated);
 			redirect('registry');
 		  }  else {
@@ -165,7 +165,7 @@ class Market extends MY_Controller {
 			$this->product_model->commonDelete(REGISTRY,array('user_id' => $this->checkLogin('U')));
 			$this->product_model->commonDelete(REGISTRY_LISTINGS,array('collection_id'=>$this->checkLogin('U')));
 			redirect('registry');
-			$wedding_reg_deleted=addslashes(artfill_lg('lg_wedding_reg','Your Wedding Registry Deleted Successfully'));
+			$wedding_reg_deleted=addslashes(af_lg('lg_wedding_reg','Your Wedding Registry Deleted Successfully'));
 			$this->setErrorMessage('success',$wedding_reg_deleted);
 		  }  else {
 		  $this->setErrorMessage('error','You Must Login First');

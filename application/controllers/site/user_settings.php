@@ -230,7 +230,7 @@ class User_settings extends MY_Controller {
 			$this->session->set_userdata($userdata);
 			$this->session->unset_userdata($userdata);
 			delete_cookie("Shopsy_NewUser");
-			$acc_inactive=addslashes(artfill_lg('lg_ur_acc_inactivated','Your account inactivated successfully'));
+			$acc_inactive=addslashes(af_lg('lg_ur_acc_inactivated','Your account inactivated successfully'));
     		$this->setErrorMessage('success',$acc_inactive);
 			//redirect('');
     	}
@@ -388,7 +388,7 @@ class User_settings extends MY_Controller {
     	if ($this->checkLogin('U')==''){
     		redirect(base_url().'login');
     	}else {  
-		$privacy_saved=addslashes(artfill_lg('lg_privacy_saved_successfully','Your privacy saved successfully'));
+		$privacy_saved=addslashes(af_lg('lg_privacy_saved_successfully','Your privacy saved successfully'));
     		$this->user_model->commonInsertUpdate(USERS,'update',array(),array(),array('id'=>$this->checkLogin('U')));
     		$this->setErrorMessage('success',$privacy_saved);
     		redirect('settings/account-privacy');
@@ -909,7 +909,7 @@ class User_settings extends MY_Controller {
 					);
 			#echo "<pre>";print_r($dataArr);die;
 			$this->user_model->update_details(USERS,$dataArr,array('id'=>$this->checkLogin('U')));
-			$change_email_notification=addslashes(artfill_lg('lg_sucess_email_notification','Successfully changes made on Email Notification'));
+			$change_email_notification=addslashes(af_lg('lg_sucess_email_notification','Successfully changes made on Email Notification'));
 			$this->setErrorMessage('success',$change_email_notification);
 			redirect(base_url().'manage-notification');
 		}

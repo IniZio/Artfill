@@ -390,7 +390,7 @@ class Cart extends MY_Controller {
 			$this->session->unset_userdata($shopCounty, '');
 			$this->cart_model->Check_Code_Val_Remove($this->data['common_user_id'],$seller_id);
 			
-		    $remove_product=addslashes(artfill_lg('lg_remove product from cart','Product Removed From Your Cart successfully')); 
+		    $remove_product=addslashes(af_lg('lg_remove product from cart','Product Removed From Your Cart successfully')); 
 			 
 			$this->setErrorMessage('success',$remove_product);	
 			

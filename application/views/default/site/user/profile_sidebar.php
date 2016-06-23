@@ -83,7 +83,7 @@
 
                             <li <?php if (in_array('conversations', $urlArr) || in_array('conversations', $urlArr)){ echo 'class="side_active"';  }?>>
 
-                                <a class="contact-popup2" href="javascript:void(0);"><?php echo artfill_lg('lg_conversations','Conversation');?></a>
+                                <a class="contact-popup2" href="javascript:void(0);"><?php echo af_lg('lg_conversations','Conversation');?></a>
 
                             </li>
 
@@ -91,7 +91,7 @@
 
                             <li <?php if (in_array('conversations', $urlArr) || in_array('conversations', $urlArr)){ echo 'class="side_active"';  }?>>
 
-                                <a href="people/<?php echo stripslashes($userProfileDetails[0]['user_name']);?>/conversations"><?php echo artfill_lg('lg_conversations','Conversation');?></a></a>
+                                <a href="people/<?php echo stripslashes($userProfileDetails[0]['user_name']);?>/conversations"><?php echo af_lg('lg_conversations','Conversation');?></a></a>
 
                             </li>
 

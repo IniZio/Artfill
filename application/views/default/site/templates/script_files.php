@@ -302,107 +302,107 @@ var no_match_records = '<?php echo addslashes($this->lang->line('no_match_record
 var no_match_records = 'No matching records found ';
 <?php }?>
 
-var lg_add_btn = '<?php echo addslashes(artfill_lg('shop_tagadd','ADD')); ?>';
-var lg_about_list_item ='<?php echo addslashes(artfill_lg('lg_about_list_item','About the Item,')); ?>';
+var lg_add_btn = '<?php echo addslashes(af_lg('shop_tagadd','ADD')); ?>';
+var lg_about_list_item ='<?php echo addslashes(af_lg('lg_about_list_item','About the Item,')); ?>';
 
-var lg_category = '<?php echo addslashes(artfill_lg('lg_category','Category,')); ?>';
-var lg_photo ='<?php echo addslashes(artfill_lg('lg_photo','Photo,')); ?>';
+var lg_category = '<?php echo addslashes(af_lg('lg_category','Category,')); ?>';
+var lg_photo ='<?php echo addslashes(af_lg('lg_photo','Photo,')); ?>';
 
-var lg_description = '<?php echo addslashes(artfill_lg('lg_description','Description,')); ?>';
-var lg_price ='<?php echo addslashes(artfill_lg('lg_price','Price,')); ?>';
+var lg_description = '<?php echo addslashes(af_lg('lg_description','Description,')); ?>';
+var lg_price ='<?php echo addslashes(af_lg('lg_price','Price,')); ?>';
 
-var lg_shipping_time ='<?php echo addslashes(artfill_lg('lg_shipping','Shipping Duration,')); ?>';
-var lg_shipping_from ='<?php echo addslashes(artfill_lg('lg_shipping_from','Shipping from,')); ?>';
-var lg_shipping_tax ='<?php echo addslashes(artfill_lg('lg_shipping_from','shipping cost,')); ?>';
-var lg_shipping_one ='<?php echo addslashes(artfill_lg('lg_shipping_from','Shipping cost With an Item,')); ?>';
+var lg_shipping_time ='<?php echo addslashes(af_lg('lg_shipping','Shipping Duration,')); ?>';
+var lg_shipping_from ='<?php echo addslashes(af_lg('lg_shipping_from','Shipping from,')); ?>';
+var lg_shipping_tax ='<?php echo addslashes(af_lg('lg_shipping_from','shipping cost,')); ?>';
+var lg_shipping_one ='<?php echo addslashes(af_lg('lg_shipping_from','Shipping cost With an Item,')); ?>';
 
-var lg_title ='<?php echo addslashes(artfill_lg('lg_title','Title,')); ?>';
+var lg_title ='<?php echo addslashes(af_lg('lg_title','Title,')); ?>';
 
-var lg_starting_price='<?php echo addslashes(artfill_lg('lg_starting_price','Starting price,')); ?>';
+var lg_starting_price='<?php echo addslashes(af_lg('lg_starting_price','Starting price,')); ?>';
 
-var lg_Duration='<?php echo addslashes(artfill_lg('lg_Duration','Duration,')); ?>';
+var lg_Duration='<?php echo addslashes(af_lg('lg_Duration','Duration,')); ?>';
 
-var lg_Quantity='<?php echo addslashes(artfill_lg('lg_Quantity','Quantity,')); ?>';
+var lg_Quantity='<?php echo addslashes(af_lg('lg_Quantity','Quantity,')); ?>';
 
-var lg_required_field = '<?php echo addslashes(artfill_lg('lg_required_field','This Field required')); ?>';
+var lg_required_field = '<?php echo addslashes(af_lg('lg_required_field','This Field required')); ?>';
 
-var lg_email_reg_already = '<?php echo addslashes(artfill_lg('lg_email_reg_already','This Email id already registered.'))?>';
+var lg_email_reg_already = '<?php echo addslashes(af_lg('lg_email_reg_already','This Email id already registered.'))?>';
 
-var lg_user_name_already = '<?php echo addslashes(artfill_lg('lg_user_name_already','Username already exists! Choose another'))?>';
+var lg_user_name_already = '<?php echo addslashes(af_lg('lg_user_name_already','Username already exists! Choose another'))?>';
 
-var lg_user_name_not_valid = '<?php echo addslashes(artfill_lg('lg_user_name_not_valid','User name not valid. Only alphanumeric allowed'))?>';
+var lg_user_name_not_valid = '<?php echo addslashes(af_lg('lg_user_name_not_valid','User name not valid. Only alphanumeric allowed'))?>';
 
-var lg_accept_terms_policy = '<?php echo addslashes(artfill_lg('lg_accept_terms_policy','Please accept our Terms of Use and Privacy Policy'))?>';
+var lg_accept_terms_policy = '<?php echo addslashes(af_lg('lg_accept_terms_policy','Please accept our Terms of Use and Privacy Policy'))?>';
 
-var lg_email_pwd_notsame = '<?php echo addslashes(artfill_lg('lg_email_pwd_notsame','Email Id and password cannot be same'))?>';
+var lg_email_pwd_notsame = '<?php echo addslashes(af_lg('lg_email_pwd_notsame','Email Id and password cannot be same'))?>';
 
-var lg_pwd_username_notsame = '<?php echo addslashes(artfill_lg('lg_pwd_username_notsame','Username and password cannot be same'))?>';
+var lg_pwd_username_notsame = '<?php echo addslashes(af_lg('lg_pwd_username_notsame','Username and password cannot be same'))?>';
 
-var lg_pwd_firstname_notsame = '<?php echo addslashes(artfill_lg('lg_pwd_firstname_notsame','First name and password cannot be same'))?>';
+var lg_pwd_firstname_notsame = '<?php echo addslashes(af_lg('lg_pwd_firstname_notsame','First name and password cannot be same'))?>';
 
-var lg_username_25_max = '<?php echo addslashes(artfill_lg('lg_username_25_max','Username must be maximum of 25 characters'))?>';
-var lg_firstname_25_max = '<?php echo addslashes(artfill_lg('lg_firstname_25_max','Firstname must be maximum of 25 characters'))?>';
-var lg_lastname_25_max = '<?php echo addslashes(artfill_lg('lg_lastname_25_max','Lastname must be maximum of 25 characters'))?>';
+var lg_username_25_max = '<?php echo addslashes(af_lg('lg_username_25_max','Username must be maximum of 25 characters'))?>';
+var lg_firstname_25_max = '<?php echo addslashes(af_lg('lg_firstname_25_max','Firstname must be maximum of 25 characters'))?>';
+var lg_lastname_25_max = '<?php echo addslashes(af_lg('lg_lastname_25_max','Lastname must be maximum of 25 characters'))?>';
 
-var lg_pwd_not_match = '<?php echo addslashes(artfill_lg('lg_pwd_not_match','password not match'))?>';
+var lg_pwd_not_match = '<?php echo addslashes(af_lg('lg_pwd_not_match','password not match'))?>';
 
-var lg_pwd_12_char = '<?php echo addslashes(artfill_lg('lg_pwd_12_char','Password must be maximum of 12 characters'))?>';
+var lg_pwd_12_char = '<?php echo addslashes(af_lg('lg_pwd_12_char','Password must be maximum of 12 characters'))?>';
 
-var lg_pwd_6_char = '<?php echo addslashes(artfill_lg('lg_pwd_6_char','Password must be minimum of 6 characters'))?>';
+var lg_pwd_6_char = '<?php echo addslashes(af_lg('lg_pwd_6_char','Password must be minimum of 6 characters'))?>';
 
-var lg_invalid_email = '<?php echo addslashes(artfill_lg('lg_invalid_email','Invalid e-mail address'))?>';
-var lg_alphabets = '<?php echo addslashes(artfill_lg('lg_alphabets','This field allowed only alphabets'))?>';
+var lg_invalid_email = '<?php echo addslashes(af_lg('lg_invalid_email','Invalid e-mail address'))?>';
+var lg_alphabets = '<?php echo addslashes(af_lg('lg_alphabets','This field allowed only alphabets'))?>';
 
-var lg_pls_enter_valid_email= '<?php echo addslashes(artfill_lg('lg_pls enter valid email','Please enter valid e-mail addresss'))?>';
-var lg_Pls_select_one = '<?php echo addslashes(artfill_lg('lg_Pls_select_one','Please select one'))?>';
-var lg_pls_enter_receiver_email = '<?php echo addslashes(artfill_lg('lg_pls_enter_receiver_email','Please Enter the Receiver Email'))?>';
-var lg_pls_enter_receiver_name = '<?php echo addslashes(artfill_lg('lg_pls_enter_receiver_name','Please enter the recipient\'s name'))?>';
-var lg_Please_enter_your_name = '<?php echo addslashes(artfill_lg('lg_Please_enter_your_name','Please enter your name'))?>';
-var lg_Please_Enter_Valid_Email_Address = '<?php echo addslashes(artfill_lg('lg_Please_Enter_Valid_Email_Address','Please Enter Valid Email Address'))?>';
-var lg_Please_Re_Enter_the_Receiver_Email = '<?php echo addslashes(artfill_lg('lg_Please_Re_Enter_the_Receiver_Email','Please Re-Enter the Receiver Email'))?>';
-var lg_Receiver_Email_doest_matched = '<?php echo addslashes(artfill_lg('lg_Receiver_Email_doest_matched','Receiver Email doesn\'t matched'))?>';
-var lg_add_your_tag_here = '<?php echo addslashes(artfill_lg('lg_add_your_tag_here','add your tag here!!!'))?>';
-var lg_enter_shopname='<?php echo addslashes(artfill_lg('lg_enter shopname','Enter Your Shop name.'))?>';
-var lg_choose_color= '<?php echo addslashes(artfill_lg('lg_choose color','Choose color'))?>';
-var lg_Enter_List_Name='<?php echo addslashes(artfill_lg('lg_enter listname','Enter List Name!'));?>';
-var lg_please_enter_the_amount='<?php echo addslashes(artfill_lg('lg_please_enterthe_amount','please enter the amount'));?>';
-var lg_characters_not_allowed='<?php echo addslashes(artfill_lg('lg_characters_not_allowed','characters not allowed'));?>';
-var lg_Are_you_Sure_to_Cancel_it='<?php echo addslashes(artfill_lg('lg_Are_you_Sure_to_Cancel_it','Are you Sure to Cancel it?'));?>';
-var lg_msg_min='<?php echo addslashes(artfill_lg('lg_Typemessage_minimum_5_characters','Type message minimum 5 characters'));?>';
-var lg_sure='<?php echo addslashes(artfill_lg('lg_Are you sure?','Are you sure?'));?>';
-var lg_select_reason='<?php echo addslashes(artfill_lg('lg_select_reason','You should select any one reason.'));?>';
-var lg_pls_add_subject='<?php echo addslashes(artfill_lg('lg_pls_add_subject','Please add subject.'));?>';
-var lg_Entered_code_is_invalid='<?php echo addslashes(artfill_lg('lg_Entered_code_is_invalid','Entered code is invalid '));?>';
-var lg_Please_select_one='<?php echo addslashes(artfill_lg('lg_Please_select_one','Please select one '));?>';
-var lg_Please_enter_the_recipientname='<?php echo addslashes(artfill_lg('lg_Please_enter_the_recipientname','Please enter the recipients name '));?>';
-var lg_payment_gateway='<?php echo addslashes(artfill_lg('lg_Please_Choose_the_Payment_Gateway','Please Choose the Payment Gateway '));?>';
-var lg_All_the_fields_are_required='<?php echo addslashes(artfill_lg('lg_All_the_fields_are_required','All the fields are required.'));?>';
-var lg_pls_enter_sub_5char='<?php echo addslashes(artfill_lg('lg_please_enterthe_subject_morethan_5character','please enter the subject more than 5 character'));?>';
-var lg_pls_enter_des_5char='<?php echo addslashes(artfill_lg('lg_please_enterthe_Description_morethan_5character','please enter the Description more than 5 character'));?>';
-var lg_pld_selct_priority='<?php echo addslashes(artfill_lg('lg_please_selectthe_priority','please select the priority'));?>';
-var lg_pls_enter_valid_amt='<?php echo addslashes(artfill_lg('lg_pls_enter_amt','please enter a valid amount'));?>';
-var lg_Selec_both_fromand_todate='<?php echo addslashes(artfill_lg(' lg_Selec_both_fromand_todate','Select both from and to date'));?>';
-var pls_entre_same_value='<?php echo addslashes(artfill_lg('pls_entre_same_value','Please enter the same value'));?>';
-var lg_scroll_more_results='<?php echo addslashes(artfill_lg('lg_scroll_more_results','Scroll for  more results or click here'));?>';
-var lg_enter_your_location='<?php echo addslashes(artfill_lg('lg_enter_your_location','Enter Your Location.'));?>';
-var lg_shopname_already_exist='<?php echo addslashes(artfill_lg('lg_shopname_already_exist','Sorry! This shop name already exist,Please enter another name'));?>';
-var lg_enter_email_orusername='<?php echo addslashes(artfill_lg('lg_enter_email_orusername','Enter email id or username'));?>';
-var lg_password_mismatch='<?php echo addslashes(artfill_lg('lg_password_mismatch','Password and Confirm Password are missmatch'));?>';
-var lg_enter_valid_email='<?php echo addslashes(artfill_lg('lg_enter_valid_email','Enter valid email id'));?>';
-var lg_enter_valid_email='<?php echo addslashes(artfill_lg('lg_emailmisssmatch','Email and Confirm Email are missmatch'));?>';
-var lg_enter_new_email='<?php echo addslashes(artfill_lg('lg_enter_new_email','Enter New email id'));?>';
-var lg_pls_choose_file_before='<?php echo addslashes(artfill_lg('lg_pls_choose_file_before','Please choose a file before you upload'));?>';
-var lg_pls_upload_file_withcsv_extension='<?php echo addslashes(artfill_lg('lg_pls_upload_file_withcsv_extension','Please upload a file with .csv extension.'));?>';
-var lg_enter_correct_phno='<?php echo addslashes(artfill_lg('lg_enter_correct_phno','Please Enter the Correct phone number'));?>';
-var lg_success='<?php echo addslashes(artfill_lg('lg_success','Success'));?>';
-var lg_shop_exist='<?php echo addslashes(artfill_lg('lg_shop_exist','Sorry! This shop name already exist,Please enter another name'));?>';
-var lg_img_small='<?php echo addslashes(artfill_lg('lg_img_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 760 X 100 .'));?>';
-var lg_pls_select_price_value='<?php echo addslashes(artfill_lg('lg_pls_select_price_value','Please Select the Price Value'));?>';
-var lg_enter_rxr_name='<?php echo addslashes(artfill_lg('lg_enter_rxr_name','Please Enter the Receiver Name'));?>';
-var lg_pls_enter_rxr_email='<?php echo addslashes(artfill_lg('lg_pls_enter_rxr_email','Please Enter the Receiver Email'));?>';
-var lg_enter_email_address='<?php echo addslashes(artfill_lg('lg_enter_email_address','Please Enter Valid Email Address'));?>';
-var lg_add_to_fav='<?php echo addslashes(artfill_lg('lg_add_to_fav','Add To Favorite'));?>';
-var lg_remove_from_fav='<?php echo addslashes(artfill_lg('lg_remove_from_fav','Remove from Favorite'));?>';
+var lg_pls_enter_valid_email= '<?php echo addslashes(af_lg('lg_pls enter valid email','Please enter valid e-mail addresss'))?>';
+var lg_Pls_select_one = '<?php echo addslashes(af_lg('lg_Pls_select_one','Please select one'))?>';
+var lg_pls_enter_receiver_email = '<?php echo addslashes(af_lg('lg_pls_enter_receiver_email','Please Enter the Receiver Email'))?>';
+var lg_pls_enter_receiver_name = '<?php echo addslashes(af_lg('lg_pls_enter_receiver_name','Please enter the recipient\'s name'))?>';
+var lg_Please_enter_your_name = '<?php echo addslashes(af_lg('lg_Please_enter_your_name','Please enter your name'))?>';
+var lg_Please_Enter_Valid_Email_Address = '<?php echo addslashes(af_lg('lg_Please_Enter_Valid_Email_Address','Please Enter Valid Email Address'))?>';
+var lg_Please_Re_Enter_the_Receiver_Email = '<?php echo addslashes(af_lg('lg_Please_Re_Enter_the_Receiver_Email','Please Re-Enter the Receiver Email'))?>';
+var lg_Receiver_Email_doest_matched = '<?php echo addslashes(af_lg('lg_Receiver_Email_doest_matched','Receiver Email doesn\'t matched'))?>';
+var lg_add_your_tag_here = '<?php echo addslashes(af_lg('lg_add_your_tag_here','add your tag here!!!'))?>';
+var lg_enter_shopname='<?php echo addslashes(af_lg('lg_enter shopname','Enter Your Shop name.'))?>';
+var lg_choose_color= '<?php echo addslashes(af_lg('lg_choose color','Choose color'))?>';
+var lg_Enter_List_Name='<?php echo addslashes(af_lg('lg_enter listname','Enter List Name!'));?>';
+var lg_please_enter_the_amount='<?php echo addslashes(af_lg('lg_please_enterthe_amount','please enter the amount'));?>';
+var lg_characters_not_allowed='<?php echo addslashes(af_lg('lg_characters_not_allowed','characters not allowed'));?>';
+var lg_Are_you_Sure_to_Cancel_it='<?php echo addslashes(af_lg('lg_Are_you_Sure_to_Cancel_it','Are you Sure to Cancel it?'));?>';
+var lg_msg_min='<?php echo addslashes(af_lg('lg_Typemessage_minimum_5_characters','Type message minimum 5 characters'));?>';
+var lg_sure='<?php echo addslashes(af_lg('lg_Are you sure?','Are you sure?'));?>';
+var lg_select_reason='<?php echo addslashes(af_lg('lg_select_reason','You should select any one reason.'));?>';
+var lg_pls_add_subject='<?php echo addslashes(af_lg('lg_pls_add_subject','Please add subject.'));?>';
+var lg_Entered_code_is_invalid='<?php echo addslashes(af_lg('lg_Entered_code_is_invalid','Entered code is invalid '));?>';
+var lg_Please_select_one='<?php echo addslashes(af_lg('lg_Please_select_one','Please select one '));?>';
+var lg_Please_enter_the_recipientname='<?php echo addslashes(af_lg('lg_Please_enter_the_recipientname','Please enter the recipients name '));?>';
+var lg_payment_gateway='<?php echo addslashes(af_lg('lg_Please_Choose_the_Payment_Gateway','Please Choose the Payment Gateway '));?>';
+var lg_All_the_fields_are_required='<?php echo addslashes(af_lg('lg_All_the_fields_are_required','All the fields are required.'));?>';
+var lg_pls_enter_sub_5char='<?php echo addslashes(af_lg('lg_please_enterthe_subject_morethan_5character','please enter the subject more than 5 character'));?>';
+var lg_pls_enter_des_5char='<?php echo addslashes(af_lg('lg_please_enterthe_Description_morethan_5character','please enter the Description more than 5 character'));?>';
+var lg_pld_selct_priority='<?php echo addslashes(af_lg('lg_please_selectthe_priority','please select the priority'));?>';
+var lg_pls_enter_valid_amt='<?php echo addslashes(af_lg('lg_pls_enter_amt','please enter a valid amount'));?>';
+var lg_Selec_both_fromand_todate='<?php echo addslashes(af_lg(' lg_Selec_both_fromand_todate','Select both from and to date'));?>';
+var pls_entre_same_value='<?php echo addslashes(af_lg('pls_entre_same_value','Please enter the same value'));?>';
+var lg_scroll_more_results='<?php echo addslashes(af_lg('lg_scroll_more_results','Scroll for  more results or click here'));?>';
+var lg_enter_your_location='<?php echo addslashes(af_lg('lg_enter_your_location','Enter Your Location.'));?>';
+var lg_shopname_already_exist='<?php echo addslashes(af_lg('lg_shopname_already_exist','Sorry! This shop name already exist,Please enter another name'));?>';
+var lg_enter_email_orusername='<?php echo addslashes(af_lg('lg_enter_email_orusername','Enter email id or username'));?>';
+var lg_password_mismatch='<?php echo addslashes(af_lg('lg_password_mismatch','Password and Confirm Password are missmatch'));?>';
+var lg_enter_valid_email='<?php echo addslashes(af_lg('lg_enter_valid_email','Enter valid email id'));?>';
+var lg_enter_valid_email='<?php echo addslashes(af_lg('lg_emailmisssmatch','Email and Confirm Email are missmatch'));?>';
+var lg_enter_new_email='<?php echo addslashes(af_lg('lg_enter_new_email','Enter New email id'));?>';
+var lg_pls_choose_file_before='<?php echo addslashes(af_lg('lg_pls_choose_file_before','Please choose a file before you upload'));?>';
+var lg_pls_upload_file_withcsv_extension='<?php echo addslashes(af_lg('lg_pls_upload_file_withcsv_extension','Please upload a file with .csv extension.'));?>';
+var lg_enter_correct_phno='<?php echo addslashes(af_lg('lg_enter_correct_phno','Please Enter the Correct phone number'));?>';
+var lg_success='<?php echo addslashes(af_lg('lg_success','Success'));?>';
+var lg_shop_exist='<?php echo addslashes(af_lg('lg_shop_exist','Sorry! This shop name already exist,Please enter another name'));?>';
+var lg_img_small='<?php echo addslashes(af_lg('lg_img_small','Upload Image Too Small. Please Upload Image Size More than or Equalto 760 X 100 .'));?>';
+var lg_pls_select_price_value='<?php echo addslashes(af_lg('lg_pls_select_price_value','Please Select the Price Value'));?>';
+var lg_enter_rxr_name='<?php echo addslashes(af_lg('lg_enter_rxr_name','Please Enter the Receiver Name'));?>';
+var lg_pls_enter_rxr_email='<?php echo addslashes(af_lg('lg_pls_enter_rxr_email','Please Enter the Receiver Email'));?>';
+var lg_enter_email_address='<?php echo addslashes(af_lg('lg_enter_email_address','Please Enter Valid Email Address'));?>';
+var lg_add_to_fav='<?php echo addslashes(af_lg('lg_add_to_fav','Add To Favorite'));?>';
+var lg_remove_from_fav='<?php echo addslashes(af_lg('lg_remove_from_fav','Remove from Favorite'));?>';
 
 </script>
 <?php ?>

@@ -9,9 +9,9 @@
 <div class="add_steps shop-menu-list">
 	<div class="main">
 		<ul>
-			<li class="event-icon"><a href="view-local-events"><?php echo artfill_lg('lg_view_localevents','View Local Events');?></a></li>
-			<li class="location-icon"><a href="shop-by-location"><?php echo artfill_lg('lg_shop_by_location','Shop by location');?></a></li>
-			<li class="items-icon"><a href="shop-by-items"><?php echo artfill_lg('lg_shop_by_items','Shop by items');?></a></li>
+			<li class="event-icon"><a href="view-local-events"><?php echo af_lg('lg_view_localevents','View Local Events');?></a></li>
+			<li class="location-icon"><a href="shop-by-location"><?php echo af_lg('lg_shop_by_location','Shop by location');?></a></li>
+			<li class="items-icon"><a href="shop-by-items"><?php echo af_lg('lg_shop_by_items','Shop by items');?></a></li>
 		</ul>
 	</div>
 </div>
@@ -19,11 +19,11 @@
 <div class="col-lg-12 search-location" id="profile_div">
 	<div class="col-lg-3 search-location-left">
 		<div class="col-lg-12">
-			<input type="text" class="form-control " placeholder="<?php echo artfill_lg('lg_enter your addr','Enter your address');?>" id="autocomplete" name="task_location">
+			<input type="text" class="form-control " placeholder="<?php echo af_lg('lg_enter your addr','Enter your address');?>" id="autocomplete" name="task_location">
 		</div>
 		<!--<div class="col-lg-12 margin-top-15">
 			<select id="main-subCat" onchange="changeFilter(this);" style="height:30px;">
-				<option value=""><?php echo artfill_lg('lg_filter_by_categ','Filter by Category');?></option>
+				<option value=""><?php echo af_lg('lg_filter_by_categ','Filter by Category');?></option>
 				<?php if($categories->num_rows()>0){?>
 					<?php foreach($categories->result() as $_categories){?>
 						<option value="<?php echo $_categories->id;?>"><?php echo $_categories->cat_name;?></option>
@@ -33,7 +33,7 @@
 			<div id="app-subcat" style="margin-top:10px;"></div>
 		</div>-->
 		<div class="col-lg-12 margin-top-15">
-			<p><?php echo artfill_lg('lg_itemlist','Item List');?></p>
+			<p><?php echo af_lg('lg_itemlist','Item List');?></p>
 		</div>
 		<div id="side_bar" class="col-lg-12 margin-top-15 overflow">
 			
@@ -105,7 +105,7 @@ function createMarker(product){
 		});	
 		$("#side_bar").html(side_bar_html);
 	}else{ 
-		$("#side_bar").html('<span><?php echo artfill_lg('lg_no products are found','No Products are found.....');?></span>');
+		$("#side_bar").html('<span><?php echo af_lg('lg_no products are found','No Products are found.....');?></span>');
 	}
 	side_bar_html = "";
 }

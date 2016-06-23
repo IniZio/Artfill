@@ -39,7 +39,7 @@ $this->load->view('site/templates/shop_header'); //$checkloginIDarr=$this->sessi
 					
 					<label><?php if($this->lang->line('com_location') != '') { echo stripslashes($this->lang->line('com_location')); } else echo 'Location'; ?></label>
 					
-					<input type="text" class="checkout_txt" name="shop_location" id="shop_location" placeholder="<?php echo artfill_lg('lg_enter_location','Enter a location');?>" value="<?php  echo stripslashes($selectSeller_details[0]['shop_location']); ?>" style="width:425px; height:27px; margin-left: 17px;" />
+					<input type="text" class="checkout_txt" name="shop_location" id="shop_location" placeholder="<?php echo af_lg('lg_enter_location','Enter a location');?>" value="<?php  echo stripslashes($selectSeller_details[0]['shop_location']); ?>" style="width:425px; height:27px; margin-left: 17px;" />
 					
 					<div id="errLocMsg" style="color:#FF3333"></div>
 <div style="display:none;" id="error_msg"><span style="color: red;" ><?php if($this->lang->line('special_characters_not_allowed') != '') { echo stripslashes($this->lang->line('special_characters_not_allowed')); } else echo "You are not supposed to use any special characters for your shop name"; ?><span></div>

@@ -78,10 +78,10 @@ $showShopHeadList = 0; if(in_array($this->uri->segment(1),$shopEditArr)){
                              <td class=""><?php echo$shopDetail[$i]->status; ?></td>
                             <td class="">
                                 
-										<a title="<?php echo artfill_lg('lg_Edit_listing','Edit listing'); ?>" href="edit-product/<?php echo $shopDetail[$i]->seourl; ?>" style="margin-right: 15%;"><image src="images/site/edit_icon.png" /></a>
-									   <a title="<?php echo artfill_lg('lg_copy_listing','Copy listing'); ?>" href="copy-product/<?php echo $shopDetail[$i]->seourl; ?>"><image src="images/site/copy-icon.png" /></a>
+										<a title="<?php echo af_lg('lg_Edit_listing','Edit listing'); ?>" href="edit-product/<?php echo $shopDetail[$i]->seourl; ?>" style="margin-right: 15%;"><image src="images/site/edit_icon.png" /></a>
+									   <a title="<?php echo af_lg('lg_copy_listing','Copy listing'); ?>" href="copy-product/<?php echo $shopDetail[$i]->seourl; ?>"><image src="images/site/copy-icon.png" /></a>
 									 
-										<a class="<?php if($shopDetail[$i]->status != "Publish"){echo "not-active";} ?>" title="<?php echo artfill_lg('lg_make_feature','Make it Feature'); ?>" href="site/cart/makeFeatrue/<?php echo $shopDetail[$i]->seourl; ?>" style="margin-right: 15%;"><image src="images/site/activity.png" /></a>
+										<a class="<?php if($shopDetail[$i]->status != "Publish"){echo "not-active";} ?>" title="<?php echo af_lg('lg_make_feature','Make it Feature'); ?>" href="site/cart/makeFeatrue/<?php echo $shopDetail[$i]->seourl; ?>" style="margin-right: 15%;"><image src="images/site/activity.png" /></a>
 												
 											
 									 
@@ -119,17 +119,17 @@ $showShopHeadList = 0; if(in_array($this->uri->segment(1),$shopEditArr)){
 				 <div style='background:#fff;'>  
 					<div class="conversation" style="width: 340px; margin-left: 191px; margin-top: 171px;">
 						<div class="conversation_container">
-							<h2 class="conversation_headline" style="margin: 8px;color: #9E612F;">  <?php echo artfill_lg('lg_Valid_Till',' Valid Till '); ?>
-							<label id="exp" name="exp"></label> <?php echo artfill_lg('lg_Date',' Date'); ?>
-							<?php echo artfill_lg('lg_Are_You_Sure_Unfeature',' Are You Sure To Unfeature This Product');?>  </h2>
+							<h2 class="conversation_headline" style="margin: 8px;color: #9E612F;">  <?php echo af_lg('lg_Valid_Till',' Valid Till '); ?>
+							<label id="exp" name="exp"></label> <?php echo af_lg('lg_Date',' Date'); ?>
+							<?php echo af_lg('lg_Are_You_Sure_Unfeature',' Are You Sure To Unfeature This Product');?>  </h2>
 							<form action="site/cart/proceed2unfeature"  method="post">
 								
 								<input type="hidden" id="product_seourl" name="product_seourl" value="">							
 							
 								<div class="modal-footer footer_tab_footer">
 										<div class="btn-group">
-												<input type="submit" class="btn btn-default submit_btn" id="submit_pay" value="<?php echo artfill_lg('lg_yes','YES'); ?>">
-												<input type="submit" class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel" value="<?php echo artfill_lg('lg_cancel','Cancel'); ?>">
+												<input type="submit" class="btn btn-default submit_btn" id="submit_pay" value="<?php echo af_lg('lg_yes','YES'); ?>">
+												<input type="submit" class="btn btn-default submit_btn" data-dismiss="modal" id="report-cancel" value="<?php echo af_lg('lg_cancel','Cancel'); ?>">
 										</div>
 								</div>	
 							</form>
