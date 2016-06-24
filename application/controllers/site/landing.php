@@ -16,6 +16,8 @@ class Landing extends MY_Controller {
 		$this->load->library(array('encrypt','form_validation'));		
 
 		$this->load->library('ciqrcode'); //qrcode library
+		$this->load->library('/qrcode_reader/QrReader'); //qrcode reader library
+
 		$this->load->model('product_model');
 		$this->load->model('user_model');
 		
@@ -141,7 +143,12 @@ class Landing extends MY_Controller {
 		$params['savename'] = FCPATH.'tes.png';
 		$this->ciqrcode->generate($params);
 
-		echo '<img src="'.base_url().'/tes.png" />';die;
+		echo '<img src="'.base_url().'tes.png" />';
+
+		$qrcode = new QrReader('tes.png');
+		$text = $qrcode->text(); //return decoded text from QR Code
+		echo $text;die;
+
 		$this->load->view('site/landing/landing',$this->data);
 	}
 	
