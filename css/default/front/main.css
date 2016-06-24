@@ -1739,6 +1739,16 @@ width: 100%;}
 
 .new-listitem .table td{text-align: center;   vertical-align: middle;}
 
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
 button.closd-btn{
     background: none repeat scroll 0 0 #373737;
     border: medium none;
