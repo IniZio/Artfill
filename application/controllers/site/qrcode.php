@@ -20,6 +20,6 @@ class Qrcode extends MY_Controller
 		$params['savename'] = FCPATH.'tes.png';
 		$this->ciqrcode->generate($params);
 
-		echo '<img src="'.base_url().'/images/tes.png" />';
+		echo '<img src="'.base_url().'/tes.png" />';
 	}
 }

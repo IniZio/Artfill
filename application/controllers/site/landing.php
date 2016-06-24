@@ -14,6 +14,8 @@ class Landing extends MY_Controller {
 		$this->load->helper(array('cookie','date','form','email'));
 		$this->load->library('session');
 		$this->load->library(array('encrypt','form_validation'));		
+
+		$this->load->library('ciqrcode'); //qrcode library
 		$this->load->model('product_model');
 		$this->load->model('user_model');
 		
@@ -132,6 +134,14 @@ class Landing extends MY_Controller {
 		
 		$this->data['new_promote'] = $recentpromote->row($testiMoni);
 		
+
+		$params['data'] = 'This is a text to encode become QR Code';
+		$params['level'] = 'H';
+		$params['size'] = 10;
+		$params['savename'] = FCPATH.'tes.png';
+		$this->ciqrcode->generate($params);
+
+		echo '<img src="'.base_url().'/tes.png" />';die;
 		$this->load->view('site/landing/landing',$this->data);
 	}
 	
