@@ -16,8 +16,8 @@ class Landing extends MY_Controller {
 		$this->load->library(array('encrypt','form_validation'));		
 
 		$this->load->library('ciqrcode'); //qrcode library
-		$this->load->library('qrcode_reader/QrReader'); //qrcode reader library
-		// include_once('./qrcode_reader/QrReader.php');
+		// $this->load->library('qrcode_reader/QrReader'); //qrcode reader library
+		include_once(APPPATH.'libraries/qrcode_reader/QrReader.php');
 
 		$this->load->model('product_model');
 		$this->load->model('user_model');
