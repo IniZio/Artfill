@@ -39,8 +39,8 @@ if($this->session->userdata('rUrl') != ''){
 			<div class="tabbable-panel">
 			<div style="margin:5px;border: 2px dashed #8adbd4; border-radius:5px;">
 				<span style="float:right;">
-				<!-- <a class="btn btn-default close-btn" href="javascript:void(0);" data-dismiss="modal"> -->
-					<a class="close-btn" href="javascript:void(0);" data-dismiss="modal">
+					<a class="btn-circle" href="javascript:void(0);" data-dismiss="modal">
+					<i class="fa fa-times" aria-hidden="true"></i>
 					</a>
 				</span>
 				<img src="./images/popup_logo.png" style="text-align:center;" />

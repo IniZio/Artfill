@@ -38,13 +38,13 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-
 $route['default_controller'] = "site/landing";
 $route['404_override'] = '';
 
 $route['admin'] = "admin/adminlogin";
 $route['test'] = "admin/adminlogin/test";
 
+$route['qrcode'] = "site/qrcode";
 $route['reflection'] = "site/user/reflection_form";
 $route['signup'] = "site/user/signup_form";
 $route['login'] = "site/user/signup_form";
