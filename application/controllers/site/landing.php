@@ -149,7 +149,7 @@ class Landing extends MY_Controller {
 		$qrcode = new QrReader('tes.png');
 		$text = $qrcode->text(); //return decoded text from QR Code
 
-		echo $text;die;
+		echo $text;
 
 		$this->load->view('site/landing/landing',$this->data);
 	}
