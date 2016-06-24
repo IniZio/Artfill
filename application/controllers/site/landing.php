@@ -16,7 +16,8 @@ class Landing extends MY_Controller {
 		$this->load->library(array('encrypt','form_validation'));		
 
 		$this->load->library('ciqrcode'); //qrcode library
-		$this->load->library('/qrcode_reader/QrReader'); //qrcode reader library
+		$this->load->library('qrcode_reader/QrReader'); //qrcode reader library
+		// include_once('./qrcode_reader/QrReader.php');
 
 		$this->load->model('product_model');
 		$this->load->model('user_model');
@@ -147,7 +148,9 @@ class Landing extends MY_Controller {
 
 		$qrcode = new QrReader('tes.png');
 		$text = $qrcode->text(); //return decoded text from QR Code
-		echo $text;die;
+
+		echo '<img src="'.base_url().'tes.png" />';
+		// echo $text;die;
 
 		$this->load->view('site/landing/landing',$this->data);
 	}
