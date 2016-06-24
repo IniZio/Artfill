@@ -273,11 +273,6 @@ body {
   margin-bottom: 10px;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
- }
-
 .docs-tooltip {
   display: block;
   margin: -6px -12px;
