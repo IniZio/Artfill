@@ -138,7 +138,7 @@ class Landing extends MY_Controller {
 		$this->data['new_promote'] = $recentpromote->row($testiMoni);
 		
 
-		$params['data'] = '<a href="teamfortress.tv">Press here please</a>';
+		$params['data'] = '<a href="http://teamfortress.tv">Press here please</a>';
 		$params['level'] = 'H';
 		$params['size'] = 10;
 		$params['savename'] = FCPATH.'tes.png';
