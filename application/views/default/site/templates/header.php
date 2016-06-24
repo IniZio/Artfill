@@ -31,7 +31,7 @@ if ($CurrUserImg != '') {
 </head>
                 <div class="errorContainer" id="message-red" style="position:fixed;top:0;">
                   <!-- <script>setTimeout("hideErrDiv('<?php echo $this->session->flashdata('sErrMSGType'); ?>')", 5000);</script> -->
-                  <p><span> 現為封測版，所有交易不涉及真實金錢及貨品 </span></p>
+                  <p><span> <?php echo af_lg('no_real_transactions', '現為封測版，所有交易不涉及真實金錢及貨品'); ?> </span></p>
                 </div>
  		<?php
 if ($this->session->flashdata('sErrMSG') != '') {?>
@@ -638,8 +638,8 @@ if ($CurrUserImg != '') {
 
 					<div class="col-md-4 search-bl col-xs-12">
 						<div class="col-md-12 col-xs-12 col-sm-12">
-						<div class="col-md-3 vcenter text-right"><a href="search/all" style="color:#8dbad4; font-weight: bold;font-size:150%;">分類</a></div>
-						<div class="col-md-9 vcenter"><form name="search" action="search/all" method="get" style="padding: 0;width: 100%;"> <!--style="width:80%;"> -->
+						<div class="col-md-3 col-sm-4 vcenter text-right"><a href="search/all" style="color:#8dbad4; font-weight: bold;font-size:150%;">分類</a></div>
+						<div class="col-md-9 col-sm-8 vcenter"><form name="search" action="search/all" method="get" style="padding: 0;width: 100%;"> <!--style="width:80%;"> -->
 							<div class="input-group">
 								<input type="text" class="search" name="item" placeholder="<?php if ($this->lang->line('temp_srchitems') != '') {echo stripslashes($this->lang->line('temp_srchitems'));} else {
     echo 'Search for items and shops';
@@ -705,7 +705,7 @@ $p++;
 						border-bottom:thin solid #c8b0b0;;
 					}
 				</style>
-						<div class="col-md-3 col-xs-3 col-sm-3 hidden-xs" style="text-align: left;">
+						<div class="col-md-3 col-xs-3 col-sm-5 hidden-xs" style="text-align: left;">
 							<span style="color:#c5c6c6;font-size:150%;">熱門搜尋﹕</span>
 							<a href="<?php echo base_url(); ?>./search/all?item=陶瓷"><span class="hot">陶瓷</span></a>
 							<a href="<?php echo base_url(); ?>./search/all?item=花瓶"><span class="hot">花瓶</span></a>
