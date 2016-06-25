@@ -2014,12 +2014,12 @@ $this->load->view('site/templates/header.php');
                         <b>*</b></label>
                       <input id="address" name="address" type="text" class="required" value="<?php echo $shipValDetails->row()->address1; ?>">
                     </dd>
-                    <dd>
+                    <!-- <dd>
                       <label for="payment-adds-1">
                         <?php if($this->lang->line('shipping_address_comm') != '') { echo stripslashes($this->lang->line('shipping_address_comm')); } else echo "Address"; ?>
                         2</label>
                       <input id="address2" name="address2" type="text" class="" value="<?php echo $shipValDetails->row()->address2; ?>">
-                    </dd>
+                    </dd> -->
                     <dd>
                       <label for="payment-city">
                         <?php if($this->lang->line('header_city') != '') { echo stripslashes($this->lang->line('header_city')); } else echo "City"; ?>
@@ -2027,7 +2027,7 @@ $this->load->view('site/templates/header.php');
                       <input id="city" name="city" type="text" class="required" value="<?php echo $shipValDetails->row()->city; ?>">
                     </dd>
                   </dl>
-                  <dl class="payment-card">
+                  <!-- <dl class="payment-card">
                     <dt><b>&nbsp;</b> <small>&nbsp;</small></dt>
                     <dd>
                       <label for="payment-state">
@@ -2060,7 +2060,7 @@ $this->load->view('site/templates/header.php');
                         <b>*</b></label>
                       <input id="phone_no" name="phone_no" type="text" class="required Validphno number" value="<?php echo $shipValDetails->row()->phone; ?>">
                     </dd>
-                  </dl>
+                  </dl> -->
                   <div class="hotel-booking-noti"><big>
                     <?php if($this->lang->line('checkout_secure_trans') != '') { echo stripslashes($this->lang->line('checkout_secure_trans')); } else echo "Secure Transaction"; ?>
                     </big>
@@ -3215,12 +3215,12 @@ var stripeResponseHandler = function(status, response) {
                         <b>*</b></label>
                       <input id="address" name="address" type="text" class="required" value="<?php echo $shipValDetails->row()->address1; ?>">
                     </dd>
-                    <dd>
+                    <!-- <dd>
                       <label for="payment-adds-1">
                         <?php if($this->lang->line('shipping_address_comm') != '') { echo stripslashes($this->lang->line('shipping_address_comm')); } else echo "Address"; ?>
                         2</label>
                       <input id="address2" name="address2" type="text" class="" value="<?php echo $shipValDetails->row()->address2; ?>">
-                    </dd>
+                    </dd> -->
                     <dd>
                       <label for="payment-city">
                         <?php if($this->lang->line('header_city') != '') { echo stripslashes($this->lang->line('header_city')); } else echo "City"; ?>
@@ -3228,7 +3228,7 @@ var stripeResponseHandler = function(status, response) {
                       <input id="city" name="city" type="text" class="required" value="<?php echo $shipValDetails->row()->city; ?>">
                     </dd>
                   </dl>
-                  <dl class="payment-card">
+                  <!-- <dl class="payment-card">
                     <dt><b>&nbsp;</b> <small>&nbsp;</small></dt>
                     <dd>
                       <label for="payment-state">
@@ -3253,13 +3253,8 @@ var stripeResponseHandler = function(status, response) {
                         <b>*</b></label>
                       <input id="postal_code" name="postal_code" type="text" class="required ValidZipCode" value="<?php echo $shipValDetails->row()->postal_code; ?>">
                     </dd>
-                    <dd>
-                      <label for="payment-phone">
-                        <?php if($this->lang->line('checkout_phone_no') != '') { echo stripslashes($this->lang->line('checkout_phone_no')); } else echo "Phone No"; ?>
-                        <b>*</b></label>
-                      <input id="phone_no" name="phone_no" type="text" class="required Validphno number" value="<?php echo $shipValDetails->row()->phone; ?>">
-                    </dd>
-                  </dl>
+                    
+                  </dl>-->
                   <div class="hotel-booking-noti"><big>
                     <?php if($this->lang->line('checkout_secure_trans') != '') { echo stripslashes($this->lang->line('checkout_secure_trans')); } else echo "Secure Transaction"; ?>
                     </big>

@@ -444,6 +444,7 @@ label {
 }
 .payment-total .txt_right{
 	text-align: left;
+	padding: 6px;
 }
 ul.payment-option{
 	margin-bottom: 10px;

@@ -553,12 +553,12 @@
 	font-size:16px;
 }
 
-.cart-list.chept2 .card-payment .cart-payment {
+/* .cart-list.chept2 .card-payment .cart-payment {
     overflow: hidden;
     padding-bottom: 245px;
     width: 252px;
 	 
-}
+} */
 .cart-list.chept2 .cart-payment {
     padding: 0;
 }

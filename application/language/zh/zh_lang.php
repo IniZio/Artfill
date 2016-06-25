@@ -42,6 +42,7 @@ $lang['shop_savecontinue'] = '保存並繼續';
 $lang['shop_like'] = '想收藏該產品'; 
 $lang['shop_revisit'] = '將它添加到您的收藏夾以後再講吧'; 
 $lang['shop_itemdetails'] = '產品詳細信息'; 
+$lang['shop_item'] = '產品'; 
 $lang['shop_shippingpolicy'] = '送貨與政策'; 
 $lang['shop_shipto'] = '運送到'; 
 $lang['shop_additional'] = '其他政策及常見問題解答'; 

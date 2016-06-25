@@ -176,6 +176,7 @@ class Cart_model extends My_Model
 		$cart_appusercredits = af_lg('cart_applyuserCredits', 'Apply User Credits');
 		$cart_Coupcode = af_lg('cart_couponcod','copuncode');
 		$cart_itemDetails = af_lg('shop_itemdetails','Item Details');
+		$cart_item = af_lg('shop_item', '產品');
 		$cart_itemsCart = af_lg('cart_itemscart', '手作在你的購物車');
 		$cart_keepShop = af_lg('cart_keepshop','Keep Shopping');
 		$cart_cartEmpty = af_lg('cart_cartempty','Your Shopping Cart is Empty');
@@ -1078,7 +1079,7 @@ if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
 						$UserCartValue.='<table width="100%" class="payment-total" id="payment-total">
                             	<tbody>
                                 	<tr>
-                                    	<td class="txt_right">'.$cart_itemDetails.'</td>
+                                    	<td class="txt_right col-md-7">'.$cart_item.'</td>
                                         <td>'.$this->data['currencySymbol'].'<span id="UserCartAmt_'.$selId.'">'.number_format($UsercartAmt * $this->data['currencyValue'],2,'.','').'</span> '.$this->data['currencyType'].'</td>
                                     </tr>
                                     <tr>

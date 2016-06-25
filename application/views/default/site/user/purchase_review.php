@@ -14,6 +14,11 @@ $this->load->model('user_model');
 <!--<link rel="stylesheet" href="css/default/site/shopsy_style.css" type="text/css" media="all" />-->
 <link rel="shortcut icon" type="image/x-icon" href="images/logo/<?php echo $this->data["fevicon"] ?>">
 <link rel="stylesheet" type="text/css" href="css/default/site/new/colorbox.css" media="all" />
+<?php if (isset($active_theme) && $active_theme->num_rows() != 0) {?>
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Home-page.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>footer.css" rel="stylesheet">
+<?php }?>
 
 <!-- <script src="'.base_url().'js/html5shiv.js"></script> -->
 
