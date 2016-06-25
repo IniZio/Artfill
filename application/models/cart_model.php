@@ -126,83 +126,74 @@ class Cart_model extends My_Model
 		
 		#echo '<pre>'; print_r($shippingMD->result()); die;
 		
-		
 		/*Start Language Translation*/
-		 if($this->lang->line('cart_orderform') != '') { $cart_orderForm = stripslashes($this->lang->line('cart_orderform')); } else $cart_orderForm = 'Order from'; 
-		 if($this->lang->line('giftcard_cards') != '') { $cart_giftCard = stripslashes($this->lang->line('giftcard_cards')); } else $cart_giftCard = 'Gift Cards'; 
-		 if($this->lang->line('cart_recipient') != '') { $cart_recip = stripslashes($this->lang->line('cart_recipient')); } else $cart_recip = 'Recipient'; 
-		 if($this->lang->line('user_from') != '') { $cart_from = stripslashes($this->lang->line('user_from')); } else $cart_from = 'From'; 
-		 if($this->lang->line('cart_message') != '') { $cart_msg = stripslashes($this->lang->line('cart_message')); } else $cart_msg = 'Message'; 
-		 if($this->lang->line('cart_editgc') != '') { $cart_editgiftCard = stripslashes($this->lang->line('cart_editgc')); } else $cart_editgiftCard = 'Edit gift card';
-		 if($this->lang->line('user_remove') != '') { $cart_remove = stripslashes($this->lang->line('user_remove')); } else $cart_remove = 'Remove'; 
-		 if($this->lang->line('cart_delinfo') != '') { $cart_delInfo = stripslashes($this->lang->line('cart_delinfo')); } else $cart_delInfo = 'Delivery Info'; 
-		 if($this->lang->line('cart_sendto') != '') { $cart_sendTo = stripslashes($this->lang->line('cart_sendto')); } else $cart_sendTo = 'Send to'; 
-		 if($this->lang->line('cart_ofgiftcard') != '') { $cart_ofGiftcard = stripslashes($this->lang->line('cart_ofgiftcard')); } else $cart_ofGiftcard = 'of Gift Card'; 
-		 if($this->lang->line('cart_howtopay') != '') { $cart_howyoupay = stripslashes($this->lang->line('cart_howtopay')); } else $cart_howyoupay = 'How You will Pay'; 
-		 if($this->lang->line('cart_ordertot') != '') { $cart_orderTotal = stripslashes($this->lang->line('cart_ordertot')); } else $cart_orderTotal = 'Order total'; 
-		 if($this->lang->line('cart_proceed') != '') { $cart_prodCheckout = stripslashes($this->lang->line('cart_proceed')); } else $cart_prodCheckout = 'Proceed to checkout'; 
-		 if($this->lang->line('cart_anothergc') != '') { $cart_anothgiftCard = stripslashes($this->lang->line('cart_anothergc')); } else $cart_anothgiftCard = 'Add another gift card'; 
-		 if($this->lang->line('prod_product') != '') { $cart_prod = stripslashes($this->lang->line('prod_product')); } else $cart_prod = 'Product'; 
-		 if($this->lang->line('giftcard_price') != '') { $cart_price = stripslashes($this->lang->line('giftcard_price')); } else $cart_price = 'Price'; 
-		 if($this->lang->line('shop_quantity') != '') { $cart_quantity = stripslashes($this->lang->line('shop_quantity')); } else $cart_quantity = 'Quantity'; 
-		 if($this->lang->line('cart_total') != '') { $cart_Total = stripslashes($this->lang->line('cart_total')); } else $cart_Total = 'Total'; 
-		 if($this->lang->line('cart_shipto') != '') { $cart_shipTo = stripslashes($this->lang->line('cart_shipto')); } else $cart_shipTo = 'Ship to'; 
-		 if($this->lang->line('cart_choose') != '') { $cart_chose = stripslashes($this->lang->line('cart_choose')); } else $cart_chose = 'Choose Your Shipping Address'; 
-		 if($this->lang->line('cart_deladdr') != '') { $cart_delAddr = stripslashes($this->lang->line('cart_deladdr')); } else $cart_delAddr = 'Delete this address'; 
-		 if($this->lang->line('cart_addaddr') != '') { $cart_addAddr = stripslashes($this->lang->line('cart_addaddr')); } else $cart_addAddr = 'Add new shipping address'; 
-		 if($this->lang->line('cart_order') != '') { $cart_Order = stripslashes($this->lang->line('cart_order')); } else $cart_Order = 'Order'; 
-		 if($this->lang->line('cart_itemtot') != '') { $cart_itemTot = stripslashes($this->lang->line('cart_itemtot')); } else $cart_itemTot = 'Item total'; 
-		 if($this->lang->line('shopsec_shipping') != '') { $cart_shiping = stripslashes($this->lang->line('shopsec_shipping')); } else $cart_shiping = 'Shipping'; 
-		 if($this->lang->line('cart_tax') != '') { $cart_Tax = stripslashes($this->lang->line('cart_tax')); } else $cart_Tax = 'Tax';
+		$cart_orderForm = af_lg('cart_orderform','Order from');
+		$cart_giftCard = af_lg('giftcard_cards','Gift Cards');
+		$cart_recip = af_lg('cart_recipient', 'Recipient');
+		$cart_from = af_lg('user_from', 'From');
+		$cart_msg = af_lg('cart_message', 'Message');
+		$cart_editgiftCard = af_lg('cart_editgc','Edit gift card');
+		$cart_remove = af_lg('user_remove','Remove');
+		$cart_delInfo = af_lg('cart_delinfo','Delivery Info');
+		$cart_sendTo = af_lg('cart_sendto', 'Send to');
+		$cart_ofGiftcard = af_lg('cart_ofgiftcard', 'of Gift Card');
+		$cart_howyoupay = af_lg('cart_howtopay','How You will Pay');
+		$cart_orderTotal = af_lg('cart_ordertot', 'Order total');
+		$cart_prodCheckout = af_lg('cart_proceed', 'Proceed to checkout');
+		$cart_anothgiftCard = af_lg('cart_anothergc', 'Add another gift card');
+		$cart_prod = af_lg('prod_product', 'Product');
+		$cart_price = af_lg('giftcard_price', 'Price');
+		$cart_quantity = af_lg('shop_quantity', 'Quantity');
+		$cart_Total = af_lg('cart_total', '總額');
+		$cart_shipTo = af_lg('cart_shipto','Ship to');
+		$cart_chose = af_lg('cart_choose', 'Choose Your Shipping Address');
+		$cart_delAddr = af_lg('cart_deladdr', 'Delete this address');
+		$cart_addAddr = af_lg('cart_addaddr', 'Add new shipping address');
+		$cart_Order = af_lg('cart_order','Order');
+		$cart_itemTot = af_lg('cart_itemtot', 'Item total');
+		$cart_shiping = af_lg('shopsec_shipping', 'Shipping');
+		$cart_Tax = af_lg('cart_tax','Tax');
+		$cartBuyerCommission = af_lg('cart_buyer_commission', 'Buyer commission');
+		$cartGatewayCommission = af_lg('cart_gateway_commission', 'Gateway commission');
+		$cartGatewayStatic = af_lg('cart_gateway_static','Gateway static');
+		$cart_orderForm = af_lg('cart_orderform', 'Order from');
+		$cart_Merchant = af_lg('cart_merchant','Merchant');
+		$cart_retailPrice = af_lg('cart_retailprice', 'retail price');
+		$cart_readyShip = af_lg('cart_readytoship','Ready to ship');
+		$cart_makeOrder = af_lg('cart_makeorder', 'Make to Order');
+		$cart_shipAddr = af_lg('cart_shipaddr','Choose Your Shipping Address');
+		$cart_coupCode = af_lg('cart_couponcode', 'Coupon Codes');
+		$cart_hvCoupcode = af_lg('cart_hvcoupcode', 'Have a coupon code');
+		$cart_Apply = af_lg('cart_apply', 'Apply');
+		$cart_Discount = af_lg('cart_discount', 'Discount');
+		$cart_contPay = af_lg('cart_paycont', 'Continue to Payment');
+		$cart_conOwner = af_lg('cart_conowner', 'Contact shop owner');
+		$cart_notShipto = af_lg('cart_notshipto','This item does not ship to');
+		$cart_noteTo = af_lg('cart_noteto', 'Note to');
+		$cart_Optional = af_lg('cart_optional', 'Optional');
+		$cart_compOrder = af_lg('cart_completeorder', 'You can enter any info needed to complete your order or write a note to the shop');
+		$cart_appCoupcode = af_lg('cart_applycouponcode', 'Apply shop coupon code');
+		$cart_appusercredits = af_lg('cart_applyuserCredits', 'Apply User Credits');
+		$cart_Coupcode = af_lg('cart_couponcod','copuncode');
+		$cart_itemDetails = af_lg('shop_itemdetails','Item Details');
+		$cart_itemsCart = af_lg('cart_itemscart', '手作在你的購物車');
+		$cart_keepShop = af_lg('cart_keepshop','Keep Shopping');
+		$cart_cartEmpty = af_lg('cart_cartempty','Your Shopping Cart is Empty');
+		$cart_shopCartEmpty = af_lg('cart_shopcartempty', 'Shopping Cart Empty');
+		$cart_awesomeSales = af_lg('cart_awesomesales', 'Don`t miss out on awesome sales right here on');
+		$cart_fillCart = af_lg('cart_fillcart','Let`s fill that cart, shall we?');
+		$cart_urShopCart = af_lg('cart_urshopcart', 'Your Shopping Cart');
+		$Move_to_favorite = af_lg('move_to_favorite_cart', 'Add To favorite');
+		$Remove_from_favorites = af_lg('remove_from_favorites_cart','Remove from favorites');
+		$pickup = af_lg('local_collection', '本地接收');
 
-		 if($this->lang->line('cart_buyer_commission') != '') { $cartBuyerCommission = stripslashes($this->lang->line('cart_buyer_commission')); } else $cartBuyerCommission = 'Buyer commission';
-
-		 if($this->lang->line('cart_gateway_commission') != '') { $cartGatewayCommission = stripslashes($this->lang->line('cart_gateway_commission')); } else $cartGatewayCommission = 'Gateway commission';
-
-		 if($this->lang->line('cart_gateway_static') != '') { $cartGatewayStatic = stripslashes($this->lang->line('cart_gateway_static')); } else $cartGatewayStatic = 'Gateway static';
- 
-		 if($this->lang->line('cart_orderform') != '') { $cart_orderForm = stripslashes($this->lang->line('cart_orderform')); } else $cart_orderForm = 'Order from'; 
-		 if($this->lang->line('cart_merchant') != '') { $cart_Merchant = stripslashes($this->lang->line('cart_merchant')); } else $cart_Merchant = 'Merchant'; 
-		 if($this->lang->line('cart_retailprice') != '') { $cart_retailPrice = stripslashes($this->lang->line('cart_retailprice')); } else $cart_retailPrice = 'retail price'; 
-		 if($this->lang->line('cart_readytoship') != '') { $cart_readyShip = stripslashes($this->lang->line('cart_readytoship')); } else $cart_readyShip = 'Ready to ship'; 
-		 if($this->lang->line('cart_makeorder') != '') { $cart_makeOrder = stripslashes($this->lang->line('cart_makeorder')); } else $cart_makeOrder = 'Make to Order'; 
-		 if($this->lang->line('cart_shipaddr') != '') { $cart_shipAddr = stripslashes($this->lang->line('cart_shipaddr')); } else $cart_shipaddr = 'Choose Your Shipping Address';
-		 if($this->lang->line('cart_couponcode') != '') { $cart_coupCode = stripslashes($this->lang->line('cart_couponcode')); } else $cart_coupCode = 'Coupon Codes'; 
-		 if($this->lang->line('cart_hvcoupcode') != '') { $cart_hvCoupcode = stripslashes($this->lang->line('cart_hvcoupcode')); } else $cart_hvCoupcode = 'Have a coupon code'; 
-		 if($this->lang->line('cart_apply') != '') { $cart_Apply = stripslashes($this->lang->line('cart_apply')); } else $cart_Apply = 'Apply'; 
-		 if($this->lang->line('cart_discount') != '') { $cart_Discount = stripslashes($this->lang->line('cart_discount')); } else $cart_Discount = 'Discount'; 
-		 if($this->lang->line('cart_paycont') != '') { $cart_contPay = stripslashes($this->lang->line('cart_paycont')); } else $cart_contPay = 'Continue to Payment'; 
-		 if($this->lang->line('cart_conowner') != '') { $cart_conOwner = stripslashes($this->lang->line('cart_conowner')); } else $cart_conOwner = 'Contact shop owner'; 
-		 if($this->lang->line('cart_notshipto') != '') { $cart_notShipto = stripslashes($this->lang->line('cart_notshipto')); } else $cart_notShipto = 'This item does not ship to';
-		 if($this->lang->line('cart_noteto') != '') { $cart_noteTo = stripslashes($this->lang->line('cart_noteto')); } else $cart_noteTo = 'Note to'; 
-		 if($this->lang->line('cart_optional') != '') { $cart_Optional = stripslashes($this->lang->line('cart_optional')); } else $cart_Optional = 'Optional'; 
-		 if($this->lang->line('cart_completeorder') != '') { $cart_compOrder = stripslashes($this->lang->line('cart_completeorder')); } else $cart_compOrder = 'You can enter any info needed to complete your order or write a note to the shop'; 
-		 if($this->lang->line('cart_applycouponcode') != '') { $cart_appCoupcode = stripslashes($this->lang->line('cart_applycouponcode')); } else $cart_appCoupcode = 'Apply shop coupon code';
-		 if($this->lang->line('cart_applyuserCredits') != '') { $cart_appusercredits = stripslashes($this->lang->line('cart_applyuserCredits')); } else $cart_appusercredits = 'Apply User Credits';
- 
-		 if($this->lang->line('cart_couponcod') != '') { $cart_Coupcode = stripslashes($this->lang->line('cart_couponcod')); } else $cart_Coupcode = 'copuncode'; 
-		 if($this->lang->line('shop_itemdetails') != '') { $cart_itemDetails = stripslashes($this->lang->line('shop_itemdetails')); } else $cart_itemDetails = 'Item Details'; 
-		 if($this->lang->line('cart_itemscart') != '') { $cart_itemsCart = stripslashes($this->lang->line('cart_itemscart')); } else $cart_itemsCart = 'Items in Your Cart'; 
-		 if($this->lang->line('cart_keepshop') != '') { $cart_keepShop = stripslashes($this->lang->line('cart_keepshop')); } else $cart_keepShop = 'Keep Shopping'; 
-		 if($this->lang->line('cart_cartempty') != '') { $cart_cartEmpty = stripslashes($this->lang->line('cart_cartempty')); } else $cart_cartEmpty = 'Your Shopping Cart is Empty'; 
-		 if($this->lang->line('cart_shopcartempty') != '') { $cart_shopCartEmpty = stripslashes($this->lang->line('cart_shopcartempty')); } else $cart_shopCartEmpty = 'Shopping Cart Empty'; 
-		 if($this->lang->line('cart_awesomesales') != '') { $cart_awesomeSales = stripslashes($this->lang->line('cart_awesomesales')); } else $cart_awesomeSales = 'Don`t miss out on awesome sales right here on'; 
-		 if($this->lang->line('cart_fillcart') != '') { $cart_fillCart = stripslashes($this->lang->line('cart_fillcart')); } else $cart_fillCart = 'Let`s fill that cart, shall we?'; 
-		 if($this->lang->line('cart_urshopcart') != '') { $cart_urShopCart = stripslashes($this->lang->line('cart_urshopcart')); } else $cart_urShopCart = 'Your Shopping Cart'; 
-		 
-		 if($this->lang->line('move_to_favorite_cart') != '') { $Move_to_favorite = stripslashes($this->lang->line('move_to_favorite_cart')); } else $Move_to_favorite = 'Add To favorite'; 
-		 
-		 if($this->lang->line('remove_from_favorites_cart') != '') { $Remove_from_favorites = stripslashes($this->lang->line('remove_from_favorites_cart')); } else $Remove_from_favorites = 'Remove from favorites'; 
-		 
-		 if($this->lang->line('local_collection') != '') { $pickup = stripslashes($this->lang->line('local_collection')); } else $pickup = 'Local Collection'; 
-		 
 		/*End Language Translation*/
 		
 		//$resultCart = $cartVal->result_array();
 		/****************************** Gift Card Displays **************************************/
 		if($giftRes -> num_rows() > 0 ){ 
 			$giftAmt = 0; $g=-1;
-			$GiftValue.= '<div id="UserCartTable_'.$selId.'" style="display:block;">
+			$GiftValue.= '<div id="UserCartTable_'.$selId.'" style="display:block;padding-top:30px;">
 			<form method="post" name="giftSubmit" id="giftSubmit" class="continue_payment" enctype="multipart/form-data" action="checkout/gift">
 			 			<div class="cart_items">
                 	<h2>
@@ -773,7 +764,7 @@ $CartValue.='
 
 			$disAmt = $discountQuery->row()->discountAmount;				
 
-			$UserCartValue.='<div id="UserCartTable_'.$selId.'" class="s-cart-bl">
+			$UserCartValue.='<div id="UserCartTable_'.$selId.'" class="s-cart-bl" style="padding-top:30px">
 				<div class="s-cart-bl-header">
                 	<h2>
                     	 '.$cart_orderForm.' 
@@ -849,8 +840,8 @@ $CartValue.='
 																	$UserCartValue.='<span>'.$this->data['currencySymbol'].number_format(($UserCartRow->price * $this->data['currencyValue']),2,'.','').' '.$this->data['currencyType'];										
 																}	
 																
-																	$UserCartValue.='<span id="UserIndTotalVal'.$g.'_'.$selId.'" >
-																		Total : '.$this->data['currencySymbol'].number_format(((($UserCartRow->price * $UserCartRow->quantity)+ $UserCartRow->shipping_cost) * $this->data['currencyValue']),2,'.','').' '.$this->data['currencyType'].'
+																	$UserCartValue.='<span id="UserIndTotalVal'.$g.'_'.$selId.'" >'.
+																		af_lg('cart_total','total').' : '.$this->data['currencySymbol'].number_format(((($UserCartRow->price * $UserCartRow->quantity)+ $UserCartRow->shipping_cost) * $this->data['currencyValue']),2,'.','').' '.$this->data['currencyType'].'
 																	</span>
 																</div>';																
 																$UserCartValue.='<ul class="s-actions">';
@@ -874,9 +865,9 @@ $CartValue.='
 $UserCartValue.='
 </ul></div>';
 if($UserCartRow->prod_pickup == 'delivery-collecion'){
-	$UserCartValue.='<span style="float:left; width:150px; font-weight:bold;">Pickup : delivery or collection</span>';
+	$UserCartValue.='<span style="float:left; width:150px; font-weight:bold;">'.af_lg('pickup','Pickup').': delivery or collection</span>';
 }else{
-	$UserCartValue.='<span style="float:left; width:150px; font-weight:bold;">Pickup : '.$UserCartRow->prod_pickup.' Only</span>';
+	$UserCartValue.='<span style="float:left; width:150px; font-weight:bold;">'.af_lg('pickup','Pickup').':'.$UserCartRow->prod_pickup.' Only</span>';
 }
 $UserCartValue.='</div>';
 																		
@@ -915,7 +906,7 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 	}else{
 		$pcollect = '';
 	}
-	$UserCartValue.='<div class="local-pick"><input disabled="disabled" class="local-pickup" onclick="localPickup(this,'.$selId.');" type="checkbox" value="'.$pcollect.'" name="pickup_opt" '.$pcollect.'><input type="hidden" value="'.$pcollect.'" name="pickup_option"><img src="images/pickup.png"/>'.$pickup.'</div>';
+	$UserCartValue.='<div class="local-pick"><input disabled="disabled" class="local-pickup" onclick="localPickup(this,'.$selId.');" type="checkbox" value="'.$pcollect.'" name="pickup_opt" '.$pcollect.' checked><input type="hidden" value="'.$pcollect.'" name="pickup_option"><img src="images/pickup.png"/>'.$pickup.'</div>';
 }elseif(in_array('delivery', $pickupArr)){
 	$UserCartValue.='<p class="ship_to">'.$cart_shipTo.'</p>
 	<select id="address-cart" class="ship_to" onchange="UserCartChangeAddress(this.value,'.$selId.');">
@@ -943,7 +934,7 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 		$style ='style="display:block"';
 	}
 	$UserCartValue.='<div class="local-pick"><input class="local-pickup" onclick="localPickup(this,'.$selId.');" type="checkbox" value="'.$pcollect.'" name="pickup_option" '.$pcollect.'><img src="images/pickup.png"/>'.$pickup.'</div>';
-	$UserCartValue.='<p '.$style.' class="ship_to">'.$cart_shipTo.'</p>
+	$UserCartValue.='<p '.$style.' class="ship_to" checked="checked">'.$cart_shipTo.'</p>
 	<select '.$style.' id="address-cart" class="ship_to" onchange="UserCartChangeAddress(this.value,'.$selId.');">
 	<option value="" id="address-select">'.$cart_chose.'</option>';
 	foreach ($shipVal->result() as $Shiprow){
@@ -1172,8 +1163,8 @@ changeGateway('.$selId.','.$paypalRate.','.$paypalStatic.','.$UsergrantAmt.');
 			$CartDisp = '
 			
 			<div class="">
-               	<h1><span id="Shop_id_count">'.$countVal.'</span> '.$cart_itemsCart.' </h1>
-            	<a href="home" class="search-bt col-md-6 col-xs-4 op-bt s-cart-button">'.$cart_keepShop.'</a>
+               	<!-- <h1><span id="Shop_id_count">'.$countVal.'</span> '.$cart_itemsCart.' </h1>
+            	<a href="home" class=" search-bt col-md-6 col-xs-4 op-bt s-cart-button">'.$cart_keepShop.'</a> -->
 				
 			
    

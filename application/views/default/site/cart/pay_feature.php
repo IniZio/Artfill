@@ -26,7 +26,7 @@ $PesapalVals=unserialize($Pesapaldet['settings']);
 
 <section>
   <div class="main">
-		<div class="container" style="margin:0">      
+		<div class="container">      
 			  <div class="cart_items">
 						<div class="conversation_container">
 							<h2 class="conversation_headline" style="color: #9E612F;"><?php echo af_lg('lg_pick your package','Pick your package.');?></h2>

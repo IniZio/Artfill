@@ -11419,7 +11419,7 @@ background:#D6EDF3
 }
 
 #userquantity1{
-    border: medium none;
+    /* border: medium none; */
     box-shadow: 0 0 2px 0 #666666;
     margin: 0 0 0 5px;
     padding: 1px;

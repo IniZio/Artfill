@@ -83,12 +83,12 @@ hr {
 }
 input, select {
 	vertical-align:middle;
-	border:1px solid #e2e2e2;
+	/* border:1px solid #e2e2e2; */
 	font:12px Arial, Helvetica, sans-serif;
 	padding:5px;
-	border-radius:3px;
+	/* border-radius:3px;
 	-moz-pborder-radius:3px;
-	-webkit-border-radius:3px;
+	-webkit-border-radius:3px; */
 }
 #search_items{
 	padding:7px 10px;
@@ -532,18 +532,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     .rf-bl.hoverrf-bl {
     -webkit-transition: 0.15s; /* Safari */
     transition: 0.15s;
-    box-shadow: 0 0 30px #e1e1e1;
+    box-shadow: 0 0 10px #e1e1e1;
     position: relative;
     padding-top: 0;
     overflow: hidden;
     text-align: left;
     /* background-color: rgba(214, 224, 226, 0.2); */
     /* background-color: rgba(214, 224, 226, 0.8); */
-    background-color: rgba(245, 245, 245,0.7);
+    /* background-color: rgba(245, 245, 245,0.7); */
+    background-color: #f5f6f8;;
     width:100%;
+    border-radius: 3px 3px 0 0;
+    border solid solid none;
     }
     .rf-bl.hoverrf-bl:active, .rf-bl.hoverrf-bl.active{
-    box-shadow: 0 0 30px #c1c1c1;
+    box-shadow: 0 0 10px #d1d1d1;
     }
     .rf-bl.hoverrf-bl .rf-blheader img{
     /* background: url("http://lorempixel.com/850/280/nature/4/");
@@ -582,7 +585,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	-webkit-transition: 0.1s;
     }
     .rf-bl.hoverrf-bl .avatar img:hover {
-    	box-shadow: 0 0 10px rgb(70, 70, 70);
+    	box-shadow: 0 0 10px rgb(100, 100, 100);
     }
 
 

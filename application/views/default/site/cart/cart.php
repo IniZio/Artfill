@@ -25,7 +25,7 @@
 				<!-- Cart Content Ends-->
 				<!-- Related Itrem Starts-->
 			<?php if(!empty($relatedPurchases)){ ?>
-				<h1><?php if($this->lang->line('cart_like') != '') { echo stripslashes($this->lang->line('cart_like')); } else echo 'You might also like… ';?> </h1>
+				<h1><?php echo af_lg('cart_like', '你可能對此感興趣... ');?> </h1>
 				<ul class="suggestion-list">					 
 							<?php $count=0; foreach($relatedPurchases as $relatedItems){ $count++; ?>
 										<?php if(!empty($relatedItems->product_name)){ ?>
@@ -56,7 +56,7 @@
 																		}?> 
 														<?php echo $currencyType;?> 
 													</div>
-													<a class="btn-transaction order-submit cart-btn" href="<?php echo base_url().'products/'.$relatedItems->seourl; ?>"> <?php if($this->lang->line('cart_detail') != '') { echo stripslashes($this->lang->line('cart_detail')); } else echo 'Detail'; ?> </a>
+													<a class="btn-transaction order-submit cart-btn" href="<?php echo base_url().'products/'.$relatedItems->seourl; ?>"> <?php echo af_lg('cart_detail', 'Detail'); ?> </a>
 												</div>
 											</li>
 										<?php } ?>
@@ -102,11 +102,12 @@ function localPickup(evt,sid){
 	var url = '<?php echo base_url()?>site/cart/localpickup';
 	$.post(url,{'value':value,'seller_id':sid},function(json){
 		if(json.success =='success'){
-			window.location.reload();
+			// window.location.reload();
 		}else{
-			alert('error Location collection');
+			console.log('error Location collection');
 		}
 	},"json");
+	// return false;
 }
 </script>
 

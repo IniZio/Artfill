@@ -6,7 +6,7 @@ $this->load->view('site/templates/header.php');
 <link rel="stylesheet" media="all" type="text/css" href="css/default/site/developer.css">
 <section>
   <div class="main">
-    <div class="container" style="margin:0">
+    <div class="container">
       
       <div class="cart_items">
         <h2>

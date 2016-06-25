@@ -19,7 +19,7 @@ $this->load->view('site/templates/header.php');
 <div id="profile_div">  
 <section>
   <div class="main">
-    <div class="container" style="margin:0">
+    <div class="container">
       
       <div class="cart_items">
         <h2>
@@ -38,7 +38,7 @@ $this->load->view('site/templates/header.php');
         $payMethodCount = 1;
         ?>
 			<?php if ($CheckoutVal->row()->payment_type == 'pesapal'){?>
-				<li class="depth2" id="dep2" style="background:none;"><span><?php echo $payMethodCount;?></span><a onclick="javascript:pesapal();" class="current">
+				<li class="depth2" id="dep2" style="background-color:red;"><span><?php echo $payMethodCount;?></span><a onclick="javascript:pesapal();" class="current">
 				<?php if($this->lang->line('checkout_pesapal') != '') { echo stripslashes($this->lang->line('checkout_pesapal')); } else echo "PesaPal"; ?>
 				</a></li>
             <?php } if ($CheckoutVal->row()->payment_type == 'Paypal Adaptive'){?>

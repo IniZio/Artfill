@@ -11,7 +11,7 @@ $this->load->view('site/templates/header.php');
 <section>    
   	<div class="main">
     <div class="payment_sucess community_right">
-        <div class="container" style="margin:0">
+        <div class="container">
         
          <div class="cart_items">
         
