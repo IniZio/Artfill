@@ -25,3 +25,8 @@
 <link href="css/default/front/responsive-style-sheet.css" rel="stylesheet">
 <link href="css/animate.min.css" rel="stylesheet">
 <!-- <link href="//db.onlinewebfonts.com/c/91764cfbfb9049ea89665b0ac8f0ee41?family=Heiti+TC" rel="stylesheet"/> -->
+<?php if (isset($active_theme) && $active_theme->num_rows() != 0) {?>
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Home-page.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>footer.css" rel="stylesheet">
+<?php }?>
