@@ -1236,7 +1236,13 @@ function validateAlphabet(value) {
     }
 	
 function loginVal(evt){ 
-	$('#loginloadErr').html('<span class="loading"><img src="images/indicator.gif" alt="Loading..."></span>');
+
+Ladda.bind( '#some',{});
+ var l = Ladda.create( document.querySelector( '#some' ) );
+l.start();
+
+
+	// $('#loginloadErr').html('<span class="loading"><img src="images/indicator.gif" alt="Loading..."></span>');
 	$('#loginloadErr').show();
 	// $('#loginloadErr').html('');
 	$("#emailAddr_Warn").html('');
@@ -1252,6 +1258,7 @@ function loginVal(evt){
 	$('#loginloadErr').html("必須填寫帳號/電郵");
 	$('#loginloadErr').show();
 	$("#emailAddr").focus();
+	l.stop();
 	return false;
 	}else if(password==''){
 	$("#password_Warn").html(lg_required_field);
@@ -1259,6 +1266,8 @@ function loginVal(evt){
 	$("#loginloadErr").html("必須填寫密碼");
 	$('#loginloadErr').show();
 	$("#password").focus();
+	l.stop();
+
 	return false;
 	}
 
@@ -1271,6 +1280,8 @@ function loginVal(evt){
                 if (data['message'] == "Failure"){
                 	$("#loginloadErr").html("Wrong account info~~");
 					$('#loginloadErr').show();
+					l.stop();
+
                 } else {
                 	$(evt).attr('action', 'site/user/login_user');
                 	$(evt).attr('onSubmit', '');
@@ -1280,6 +1291,7 @@ function loginVal(evt){
             },
              error: function (xhr) {alert(JSON.parse(xhr.responseText).Message); }
         });
+	l.stop();
 	return false;
 }
 

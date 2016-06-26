@@ -13,6 +13,7 @@ if($this->session->userdata('rUrl') != ''){
 	redirect ($reUrl);
 }
 ?>
+<link rel="stylesheet" href="dist/ladda.min.css"><link rel="stylesheet" href="dist/ladda.min.css">
 <style>
 .popup_google  {
     background: url("images/fb1.png") no-repeat scroll 25px 6px #ff6a6f;
@@ -64,7 +65,8 @@ if($this->session->userdata('rUrl') != ''){
 					<input  style="margin: 0px 5px 0px 0px;" type="checkbox" name="stay_signed_in" value="yes" checked/><?php echo af_lg('stay_sign',"Stay Signed in"); ?>
 					</div>
 					<div class="popup_login" style="margin-bottom:15px">
-					<input type="submit" class="submit_btn" value="<?php echo af_lg('user_signin', "Sign In"); ?>" />
+					<!-- <input type="submit" class="submit_btn"  value="<?php echo af_lg('user_signin', "Sign In"); ?>" /> -->
+					<button id="some" type="submit" class="ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label">Submit</span></button>
 					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>									 									 
 					</div>
 				</form>
@@ -87,7 +89,7 @@ if($this->session->userdata('rUrl') != ''){
 			<div class="tabbable-panel">
 			<div style="margin:5px;border: 2px dashed #8adbd4; border-radius:5px;">
 				<span style="float:right;">
-					<a class="btn btn-default " href="javascript:void(0);" data-dismiss="modal">
+					<a class="btn btn-default btn-circle" href="javascript:void(0);" data-dismiss="modal">
 					<?php echo af_lg('X', 'X'); ?>
 					</a>
 				</span>
@@ -153,3 +155,5 @@ if($this->session->userdata('rUrl') != ''){
 </div>
 
 <?php }?>
+<script src="dist/spin.min.js"></script> 
+<script src="dist/ladda.min.js"></script> 
