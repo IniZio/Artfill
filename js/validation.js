@@ -1237,14 +1237,11 @@ function validateAlphabet(value) {
 	
 function loginVal(evt){ 
 
-Ladda.bind( '#some',{});
- var l = Ladda.create( document.querySelector( '#some' ) );
-l.start();
-
-
+	Ladda.bind( '#login', { timeout: 1000 } );
+	var l = Ladda.create( document.querySelector( '#login' ) );
 	// $('#loginloadErr').html('<span class="loading"><img src="images/indicator.gif" alt="Loading..."></span>');
-	$('#loginloadErr').show();
-	// $('#loginloadErr').html('');
+	// $('#loginloadErr').show();
+	$('#loginloadErr').html('');
 	$("#emailAddr_Warn").html('');
 	$("#password_Warn").html('');
 	
@@ -1252,25 +1249,28 @@ l.start();
 	var password = $("#password").val();
 	
 	if(emailAddr.length==0){
-	$("#emailAddr_Warn").html(lg_required_field);
+		l.stop();
+	// $("#emailAddr_Warn").html(lg_required_field);
 	// $('#loginloadErr').hide();
 	// $('#loginloadErr').html('請輸入電郵');
 	$('#loginloadErr').html("必須填寫帳號/電郵");
 	$('#loginloadErr').show();
+	
 	$("#emailAddr").focus();
-	l.stop();
+	
 	return false;
 	}else if(password==''){
-	$("#password_Warn").html(lg_required_field);
+		l.toggle();
+	// $("#password_Warn").html(lg_required_field);
 	// $("#loginloadErr").html('請輸入密碼');
 	$("#loginloadErr").html("必須填寫密碼");
 	$('#loginloadErr').show();
+	
 	$("#password").focus();
-	l.stop();
-
 	return false;
 	}
 
+	l.start();
 	$.ajax({
             url: 'site/mobile/user_login',
             type: 'post',
@@ -1278,7 +1278,7 @@ l.start();
             data: {'username':emailAddr,'password': password},
             success: function (data) {
                 if (data['message'] == "Failure"){
-                	$("#loginloadErr").html("Wrong account info~~");
+                	$("#loginloadErr").html('無效的登錄資料');
 					$('#loginloadErr').show();
 					l.stop();
 

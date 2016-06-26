@@ -1,8 +1,8 @@
 <?php
 
-if (is_file('google-login-mats/index.php')){
-	require_once 'google-login-mats/index.php';
-}
+// if (is_file('google-login-mats/index.php')){
+// 	require_once 'google-login-mats/index.php';
+// }
 
 //echo $authUrl;die;
 //echo $this->session->userdata('rUrl');
@@ -55,18 +55,18 @@ if($this->session->userdata('rUrl') != ''){
 					
 					<div class="popup_login">
 					<!--<label><?php echo af_lg('user_email_or_uname',"Email or Username"); ?></label><span style="color:#F00;" class="redFont" id="emailAddr_Warn"></span> -->
-					<input type="text" class="search" maxlength="25" name="emailAddr" id="emailAddr" placeholder="帳號/電郵" />
+					<input type="text" required class="search" maxlength="25" name="emailAddr" id="emailAddr" placeholder="帳號/電郵"  autofocus/>
 					</div> 
 					<div class="popup_login">
 					<!--<label><?php echo af_lg('user_password', "Password"); ?></label><span style="color:#F00;" maxlength="12" class="redFont" id="password_Warn"></span>  -->
-					<input type="password" class="search" name="password" id="password" placeholder="密碼" />
+					<input type="password" required class="search" name="password" id="password" placeholder="密碼"/>
 					</div>
 					<div class="popup_login">
 					<input  style="margin: 0px 5px 0px 0px;" type="checkbox" name="stay_signed_in" value="yes" checked/><?php echo af_lg('stay_sign',"Stay Signed in"); ?>
 					</div>
 					<div class="popup_login" style="margin-bottom:15px">
 					<!-- <input type="submit" class="submit_btn"  value="<?php echo af_lg('user_signin', "Sign In"); ?>" /> -->
-					<button id="some" type="submit" class="ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label">Submit</span></button>
+					<button id="login" type="submit" class="ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label">Submit</span></button>
 					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>									 									 
 					</div>
 				</form>
@@ -156,4 +156,8 @@ if($this->session->userdata('rUrl') != ''){
 
 <?php }?>
 <script src="dist/spin.min.js"></script> 
-<script src="dist/ladda.min.js"></script> 
+<script src="dist/ladda.min.js"></script>
+<script>
+	// Ladda.bind( '#login',{});
+	Ladda.bind( '#login', { timeout: 1000 } );
+</script>
