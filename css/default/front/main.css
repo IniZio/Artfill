@@ -369,8 +369,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	width:100%;
 } */
 
-.thumbnail{
+.carousel-inner .item .thumbnail{
 	margin-bottom:0 !important;
+	padding: 0 !important;
 }
 
 .rf-bl {
@@ -562,6 +563,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     max-width: 100px;
     max-height: 100px; */
     /* max-width:270px; */
+    /* margin: 0 auto; */
     }
     .rf-bl.hoverrf-bl .avatar {
     position: relative;
@@ -597,17 +599,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     .rf-bl.hoverrf-bl .info {
     /* padding: 4px 8px 10px; */
     padding: 4px 8px 0px;
-    height: 80px;
+    height: 65px;
     margin-top: 40px;
     }
     .rf-bl.hoverrf-bl .info:hover{
     }
     .rf-bl.hoverrf-bl .info .title {
-    margin-bottom: 4px;
+    /* margin-bottom: 4px; */
     font-size: 24px;
     line-height: 1;
     color: #262626;
     vertical-align: middle;
+    max-height: 31px;
+	overflow: auto;
     }
     .rf-bl.hoverrf-bl .info .desc {
     overflow: hidden;

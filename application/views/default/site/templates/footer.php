@@ -295,7 +295,6 @@ $('#languageTab').trigger('click');
 }
 </script>
 <script src="js/site/ttmenu.js"></script>
-<?php if ($this->uri->segment(1) == 'search') {?>
 <link rel="stylesheet" type="text/css" href="a_data/jquery-ui.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/default/site/themes-smoothness-jquery-ui.css" />
 <script type="text/javascript" src="a_data/jquery.js"></script>
@@ -303,6 +302,7 @@ $('#languageTab').trigger('click');
 <script type="text/javascript" src="js/currency/jquery.formatCurrency-1.4.0.js"></script>
 <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
 <script>$("img.lazy").lazyload();</script>
+<?php if ($this->uri->segment(1) == 'search') {?>
 <?php /*?>
 <script>
 $(window).load(function(){

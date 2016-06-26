@@ -524,6 +524,7 @@ $img = explode(',', $recent_product_details->row($i)->image);
 											</div>
 										<?php } ?>
 									</div>
+									<?php if (sizeof($img) > 1) { ?>
 		                            <a class="left carousel-control" data-slide="prev" href="<?php echo '#productCarousel' . $i; ?>" role="button">
 			                                <span aria-hidden="true" class="glyphicon glyphicon-chevron-left">
 			                                </span>
@@ -538,6 +539,7 @@ $img = explode(',', $recent_product_details->row($i)->image);
 				                                    Next
 			                                </span>
 		                            </a>
+		                            <?php } ?>
 	                            </div>
 	                        </div>
 	                        <!-- owner avatar -->
@@ -550,8 +552,8 @@ $img = explode(',', $recent_product_details->row($i)->image);
     							<div class="title text-center" style="font-size: medium;">
     								<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>" alt="<?php echo character_limiter($recent_product_details->row($i)->product_name, 25); ?>"><?php echo character_limiter($recent_product_details->row($i)->product_name, 25); ?></a>
     							</div>
-    							<div class="desc row" style="font-size:large;position: absolute;bottom: 0;left: 0;right: 0">
-    							    <div class="col-md-8 col-xs-7">
+    							<div class="desc row" style="position: absolute;bottom: 0;left: 0;right: 0">
+    							    <div class="col-md-8 col-xs-7" style="padding: 0px;">
     							    	<?php
 											$style     = 'style="font-size:medium;"';
 								            $dealprice = '0';
@@ -583,10 +585,10 @@ $img = explode(',', $recent_product_details->row($i)->image);
 													                $price = $recent_product_details->row($i)->base_price;
 													                $pls   = '+';
 													}?>
-														<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>" <?php echo $style; ?>> <?php echo $currencySymbol . number_format($currencyValue * $price, 2) . $pls; ?> <span class="currencyType"> <?php echo $currencyType; ?> <span> </a> &nbsp;&nbsp; <?php if ($dealprice != 0) {?><a style='font-size:large;margin-top: 5px;'><?php echo $currencySymbol . number_format($currencyValue * $dealprice, 2) . $pls; ?> <span class="currencyType"> <?php echo $currencyType; ?> <span></a><?php }?>
+														<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>" <?php echo $style; ?>> <?php echo $currencySymbol . number_format($currencyValue * $price, 2) . $pls; ?> <span class="currencyType"> <?php echo $currencyType; ?> </span> </a> &nbsp;&nbsp; <?php if ($dealprice != 0) {?><a style='font-size:large;margin-top: 5px;'><?php echo $currencySymbol . number_format($currencyValue * $dealprice, 2) . $pls; ?> <span class="currencyType"> <?php echo $currencyType; ?> </span></a><?php }?>
     							    </div>
     							    <!-- recent reviews -->
-    							    <div class="col-md-4 col-md-offset-0 col-xs-offset-1 col-xs-4 col-sm-offset-0 col-sm-5 desc" style="text-align: right;">
+    							    <div class="col-md-4 col-md-offset-0 col-xs-offset-1 col-xs-4 col-sm-offset-0 col-sm-5 desc" style="text-align: right;padding: 0px;">
     							        <?php echo $recent_product_details->row($i)->review_count; ?> <?php if ($this->lang->line('shopsec_reviews') != '') {echo stripslashes($this->lang->line('shopsec_reviews'));} else {
     							                        echo "Reviews";}?>
     							    </div>

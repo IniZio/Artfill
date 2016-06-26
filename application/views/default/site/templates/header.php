@@ -43,7 +43,7 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 <body>
 <!-- header_start -->
  <header>
- <div class="header_top animated bounceInDown hidden-xs" style="position:relative;">
+ <div id="big_header" class="header_top hidden-xs" style="position:relative;">
 		<?php if ($this->session->userdata['shopsy_session_user_name'] == '' || true) {
     ?>
 			<div class="container top">
@@ -637,14 +637,13 @@ if ($CurrUserImg != '') {
 				<div class="row">
 
 					<div class="col-md-4 search-bl col-xs-12">
-						<div class="col-md-12 col-xs-12 col-sm-12">
-						<div class="col-md-3 vcenter text-right"><a href="search/all" style="color:#8dbad4; font-weight: bold;font-size:150%;">分類</a></div>
-						<div class="col-md-9 vcenter"><form name="search" action="search/all" method="get" style="padding: 0;width: 100%;"> <!--style="width:80%;"> -->
+						<div class="col-md-3 col-sm-4 vcenter text-right"><a href="search/all" style="color:#8dbad4; font-weight: bold;font-size:150%;">分類</a></div>
+						<div class="col-md-9 col-sm-8 vcenter" style="top: -2px;padding:0"><form name="search" action="search/all" method="get" style="padding: 0;width: 100%;"> <!--style="width:80%;"> -->
 							<div class="input-group">
 								<input type="text" class="search" name="item" placeholder="<?php if ($this->lang->line('temp_srchitems') != '') {echo stripslashes($this->lang->line('temp_srchitems'));} else {
     echo 'Search for items and shops';
 }
-?>" value="<?php if ($this->input->get('item') != '') {echo htmlspecialchars($this->input->get('item'));}?>" id="search_items" autocomplete="off" />
+?>" value="<?php if ($this->input->get('item') != '') {echo htmlspecialchars($this->input->get('item'));}?>" id="search_items" autocomplete="off" style="width:100% !important" />
 								<div class="input-group-btn">
 									<button type="submit" class="btn btn-default search-bt"><i class="glyphicon glyphicon-search"></i></button>
 								</div>
@@ -663,7 +662,6 @@ if ($CurrUserImg != '') {
 
 							<ul id="suggestions" class="results"></ul>
 						</form>
-						</div>
 						</div>
 						<div id="sugglist"></div>
 					</div>
@@ -705,7 +703,7 @@ $p++;
 						border-bottom:thin solid #c8b0b0;;
 					}
 				</style>
-						<div class="col-md-3 col-xs-3 col-sm-3 hidden-xs" style="text-align: left;">
+						<div class="col-md-3 col-xs-3 hidden-sm hidden-xs" style="text-align: left;">
 							<span style="color:#c5c6c6;font-size:150%;">熱門搜尋﹕</span>
 							<a href="<?php echo base_url(); ?>./search/all?item=陶瓷"><span class="hot">陶瓷</span></a>
 							<a href="<?php echo base_url(); ?>./search/all?item=花瓶"><span class="hot">花瓶</span></a>
@@ -1164,7 +1162,15 @@ $image_name = "images/landingbanner/banner-admin.jpg";
         }
         ?>
 
-			 <!--<div class="jumbotron hero" <?php if ($recentFavorites[0]['seller_banner'] != '') {?>style="background-image:url(images/banner/<?php echo $recentFavorites[0]['seller_banner']; ?>)" <?php }?>>-->
+
+		<?php }?>
+
+
+
+
+
+</header>
+				 <!--<div class="jumbotron hero" <?php if ($recentFavorites[0]['seller_banner'] != '') {?>style="background-image:url(images/banner/<?php echo $recentFavorites[0]['seller_banner']; ?>)" <?php }?>>-->
 
 			<div class="jumbotron hero" style="margin-top:inherit;">
 
@@ -1317,14 +1323,6 @@ $tag_txt = $recentFavorites[0]['city'];
 
 
 </div>
-		<?php }?>
-
-
-
-
-
-</header>
-
 	<div class="col-md-4 search-bl col-xs-12 hidesearch">
 		<div class="hidesearch-cover">
 			<form name="search" action="search/all" method="get">
