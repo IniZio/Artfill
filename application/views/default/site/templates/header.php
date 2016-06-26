@@ -43,7 +43,7 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 <body>
 <!-- header_start -->
  <header>
- <div id="big_header" class="header_top hidden-xs" style="position:relative;">
+ <div class="header_top animated bounceInDown hidden-xs" style="position:relative;">
 		<?php if ($this->session->userdata['shopsy_session_user_name'] == '' || true) {
     ?>
 			<div class="container top">
@@ -638,11 +638,7 @@ if ($CurrUserImg != '') {
 
 					<div class="col-md-4 search-bl col-xs-12">
 						<div class="col-md-3 col-sm-4 vcenter text-right"><a href="search/all" style="color:#8dbad4; font-weight: bold;font-size:150%;">分類</a></div>
-<<<<<<< HEAD
 						<div class="col-md-9 col-sm-8 vcenter" style="top: -2px;padding:0"><form name="search" action="search/all" method="get" style="padding: 0;width: 100%;"> <!--style="width:80%;"> -->
-=======
-						<div class="col-md-9 col-sm-8 vcenter"><form name="search" action="search/all" method="get" style="padding: 0;width: 100%;"> <!--style="width:80%;"> -->
->>>>>>> shop_test
 							<div class="input-group">
 								<input type="text" class="search" name="item" placeholder="<?php if ($this->lang->line('temp_srchitems') != '') {echo stripslashes($this->lang->line('temp_srchitems'));} else {
     echo 'Search for items and shops';
@@ -1165,16 +1161,9 @@ $image_name = "images/landingbanner/banner-admin.jpg";
             $banner_description = $this->config->item('banner_description');
         }
         ?>
-
-
-		<?php }?>
-
-
-
-
-
 </header>
-				 <!--<div class="jumbotron hero" <?php if ($recentFavorites[0]['seller_banner'] != '') {?>style="background-image:url(images/banner/<?php echo $recentFavorites[0]['seller_banner']; ?>)" <?php }?>>-->
+
+			 <!--<div class="jumbotron hero" <?php if ($recentFavorites[0]['seller_banner'] != '') {?>style="background-image:url(images/banner/<?php echo $recentFavorites[0]['seller_banner']; ?>)" <?php }?>>-->
 
 			<div class="jumbotron hero" style="margin-top:inherit;">
 
@@ -1327,6 +1316,13 @@ $tag_txt = $recentFavorites[0]['city'];
 
 
 </div>
+		<?php }?>
+
+
+
+
+
+
 	<div class="col-md-4 search-bl col-xs-12 hidesearch">
 		<div class="hidesearch-cover">
 			<form name="search" action="search/all" method="get">
