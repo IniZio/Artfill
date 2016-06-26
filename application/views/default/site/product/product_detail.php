@@ -155,8 +155,7 @@ $this->load->view('site/templates/header');
 						</a>
 						<?php }}} else {
 						?>
-						<a data-toggle="modal" href="#signin">
-						<!--<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($added_item_details[0]['id']); ?>','Fresh',this);">-->
+						<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($added_item_details[0]['id']); ?>','Fresh',this);">
 							<div class="btn-secondary"> <i class="fa fa-heart"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
 								echo 'Favorite';
 								}
