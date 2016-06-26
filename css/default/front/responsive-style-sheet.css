@@ -1793,7 +1793,7 @@ img.middel-banner
     margin-left: 0;
 }
 .carousel-inner, .jumbotron.hero{
-	height: 205px !important;
+	/* height: 205px !important; */
 }
 .hero-in{
 	top: 36px;
@@ -2760,7 +2760,7 @@ img.middel-banner
     width: 122px !important;
 }
 .carousel-inner, .jumbotron.hero{
-	height:183px !important;
+	/* height:183px !important; */
 }
   
   
@@ -3046,7 +3046,7 @@ img.middel-banner
 }
   
 .carousel-inner, .jumbotron.hero{
-	height:167px !important;
+	/* height:167px !important; */
 }
   
   
@@ -3200,7 +3200,7 @@ img.middel-banner
 }
 
 .carousel-inner, .jumbotron.hero{
-	height:157px !important;
+	/* height:157px !important; */
 }
 .hero-in {
     top: 15px;
@@ -4201,7 +4201,7 @@ right: 0px;
   
   
 .carousel-inner, .jumbotron.hero{
-	height: 175px !important;
+	/* height: 175px !important; */
 
 }
 .hero-in{

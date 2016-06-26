@@ -516,11 +516,11 @@ $img = explode(',', $recent_product_details->row($i)->image);
 									<!-- <div class="carousel-inner" role="listbox" style="max-width: 205px !important; max-height: 203px !important;"> -->
 									<div class="carousel-inner" role="listbox">
 										<div class="item active">
-											<a  href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $img[0]; ?>" alt="recent" style="max"> </a>
+											<a  href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $img[0]; ?>" alt="recent" style="max" class="thumbnail"> </a>
 										</div>
 										<?php foreach (array_slice($img,1) as $element) { ?>
 											<div class="item">
-												<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $element; ?>" alt="recent" style="max"> </a>
+												<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $element; ?>" alt="recent" style="max" class="thumbnail"> </a>
 											</div>
 										<?php } ?>
 									</div>
@@ -586,7 +586,7 @@ $img = explode(',', $recent_product_details->row($i)->image);
 														<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>" <?php echo $style; ?>> <?php echo $currencySymbol . number_format($currencyValue * $price, 2) . $pls; ?> <span class="currencyType"> <?php echo $currencyType; ?> <span> </a> &nbsp;&nbsp; <?php if ($dealprice != 0) {?><a style='font-size:large;margin-top: 5px;'><?php echo $currencySymbol . number_format($currencyValue * $dealprice, 2) . $pls; ?> <span class="currencyType"> <?php echo $currencyType; ?> <span></a><?php }?>
     							    </div>
     							    <!-- recent reviews -->
-    							    <div class="col-md-4 col-md-offset-0 col-xs-offset-1 col-xs-4 desc" style="text-align: right;">
+    							    <div class="col-md-4 col-md-offset-0 col-xs-offset-1 col-xs-4 col-sm-offset-0 col-sm-5 desc" style="text-align: right;">
     							        <?php echo $recent_product_details->row($i)->review_count; ?> <?php if ($this->lang->line('shopsec_reviews') != '') {echo stripslashes($this->lang->line('shopsec_reviews'));} else {
     							                        echo "Reviews";}?>
     							    </div>

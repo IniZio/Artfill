@@ -48,7 +48,7 @@
 /*----------------New one---------------*/
 
 .carousel-inner, .jumbotron.hero {
-    height: 288px !important;
+    /* height: 288px !important; */
     min-width: 1000px !important;
 }
 
@@ -350,7 +350,7 @@ a.shop-listing-count {
 }
 
 .carousel-inner, .jumbotron.hero{
-	 height: 211px !important;
+	 /* height: 211px !important; */
 	 min-width: inherit !important;
 }
 .hero-in{
