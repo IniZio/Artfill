@@ -66,7 +66,7 @@ if($this->session->userdata('rUrl') != ''){
 					</div>
 					<div class="popup_login" style="margin-bottom:15px">
 					<!-- <input type="submit" class="submit_btn"  value="<?php echo af_lg('user_signin', "Sign In"); ?>" /> -->
-					<button id="login" type="submit" class="ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label">Submit</span></button>
+					<button id="login" type="submit" class="ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label"><?php echo af_lg('user_signin', "Sign In"); ?></span></button>
 					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>									 									 
 					</div>
 				</form>
@@ -113,8 +113,13 @@ if($this->session->userdata('rUrl') != ''){
 											<input type="radio" style="float:left;margin: 6px 6px 0 12px;" name="gender" value="Female"/><span class="gen_check"><?php echo af_lg('user_female',"Female"); ?></span>
 											<input type="radio" style="float:left;margin: 6px 6px 0 12px;" name="gender" value="Unspecified"/><span class="gen_check"><?php echo af_lg('user_rather_not_say', "Rather not say"); ?></span>
 										</div>
+										<div style="margin-bottom: 10px; border-bottom: 1px dashed rgb(138, 219, 212);" class="clear"></div>
 										<div class="popup_login">
 											<input type="text" class="search" style="margin:0" name="email" id="email" placeholder="使用者電郵"/>
+										</div>
+										<div class="popup_login">
+												<span style="color:#F00;" class="redFont" id="usernameErr"></span> 
+												 <input type="text" class="search" style="margin:0" name="username" id="username" maxlength="25" placeholder="用戶名稱(不多於25字元)*"/>
 										</div>
 										<div class="popup_login">
 											<input type="password" class="search" maxlength="12" style="margin:0" name="pwd" id="pwd" placeholder="密碼(6-12字元)"/>
@@ -123,10 +128,7 @@ if($this->session->userdata('rUrl') != ''){
 											<input type="password" class="search" maxlength="12" style="margin:0" name="Confirmpwd" id="Confirmpwd" placeholder="確認密碼"/>
 										</div>
 										
-										<div class="popup_login">
-												<span style="color:#F00;" class="redFont" id="usernameErr"></span> 
-												 <input type="text" class="search" style="margin:0" name="username" id="username" maxlength="25" placeholder="用戶名稱(不多於25字元)*"/>
-										</div>
+										
 										<p style="font-size:12px;  margin: 5px 0 4px 42px; color:#666; width:auto; float:left">								
 										  <span style=" color: #999999;font-size: 11px;margin: 12px 0 5px;"> 
 										  <input type="checkbox" name="privacychecking" id="privacychecking"  checked/> 
@@ -140,8 +142,9 @@ if($this->session->userdata('rUrl') != ''){
 										</p>
 										
 										<div class="popup_login" style="margin-bottom:15px">
-										<span id="loadErr" style="color:red"></span><br/>
-											<input type="submit" class="submit_btn" value="<?php echo af_lg('user_register', "Register"); ?>"/>
+											<!-- <input type="submit" class="submit_btn" value="<?php echo af_lg('user_register', "Register"); ?>"/> -->
+											<button id="register1" type="submit" class="ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label"><?php echo af_lg('user_register', "Register"); ?></span></button>
+										<span id="loadErr" style="color:red"></span>
 											
 										</div>
 									</form>
@@ -160,4 +163,5 @@ if($this->session->userdata('rUrl') != ''){
 <script>
 	// Ladda.bind( '#login',{});
 	Ladda.bind( '#login', { timeout: 1000 } );
+	Ladda.bind( '#register1', { timeout: 1000 } );
 </script>

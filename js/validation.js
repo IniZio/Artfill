@@ -1296,7 +1296,9 @@ function loginVal(evt){
 }
 
 function register_user(evt){
-	$('#loadErr').html('<span class="loading"><img src="images/indicator.gif" alt="Loading..."></span>');
+	Ladda.bind( '#register1', { timeout: 1000 } );
+	var l = Ladda.create( document.querySelector( '#register1' ) );
+	// $('#loadErr').html('<span class="loading"><img src="images/indicator.gif" alt="Loading..."></span>');
 	var fullname = $('#fullname').val();
 	var lastname = $('#lastname').val();
 	var email = $('#email').val();
@@ -1420,6 +1422,7 @@ function register_user(evt){
 	
 		
 	}else {
+		l.start();
 		/*Check the email address is already used or no*/		
 		$.ajax({
 	        type: 'POST',
@@ -1432,6 +1435,8 @@ function register_user(evt){
 					$('#emailErr').show();
 					$('#emailErr').html(lg_email_reg_already);	
 					$('#loadErr').html('請檢查所輸入電郵');
+									l.stop();
+
 				}else if(response.msg==1){
 					$.ajax({
 						type: 'POST',
@@ -1446,24 +1451,32 @@ function register_user(evt){
 									$('#usernameErr').show();
 									$('#usernameErr').html(lg_user_name_not_valid);
 									$('#loadErr').html('用戶名稱不符合');
+									l.stop();
 									return false;
 								}
 								if(response.msg=='User name already exists'){
 									$('#usernameErr').show();
 									$('#usernameErr').html(lg_user_name_already);
 									$('#loadErr').html('用戶名稱已登記');
+									l.stop();
 									return false;
 								}
 								if(response.msg=='Email id already exists'){
 									$('#emailErr').show();
 									$('#emailErr').html(lg_email_reg_already);
 									$('#loadErr').html('電郵已登記');
+									l.stop();
+
 									return false;
 								}
 								
-								window.location.href = baseURL+'register';				
+								window.location.href = baseURL+'register';
+									l.stop();
+
 								return false;
 							 } else {
+									l.stop();
+
 								 window.location.href = baseURL+'wpconnect.php?un='+username+'&pd='+pwd+'&em='+email;
 							 }
 						}
@@ -3461,7 +3474,6 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 					}
 				
             } else {
-				alert("haha");
 				$("#signin").click();
 				
 				/*window.location.href = baseURL+'login?action='+json.next_url+'&redirect='+redirect;*/
