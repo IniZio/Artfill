@@ -5,11 +5,7 @@
 	}
 </style>
 <link href="css/animate.css" rel="stylesheet">
-<?php if (isset($active_theme) && $active_theme->num_rows() != 0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Home-page.css" rel="stylesheet">
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>footer.css" rel="stylesheet">
-<?php }?>
+
 <script src="js/popup.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/jcarousellite_1.0.1.pack.js"></script>
 <div class="list_inner_fields" id="shop_page_seller">
