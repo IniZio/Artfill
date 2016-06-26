@@ -299,7 +299,8 @@ $('#sidenav').hide();
 					<input type="radio" name="pricing_type" data-pricing="fixed" id="type_fixed" value="Fixed" checked style="display:none">
 				<div class="form-group">
 					<label id="PriceLab" for="price" class="col-sm-2 control-label"><?php if($this->lang->line('giftcard_price') != '') { echo stripslashes($this->lang->line('giftcard_price')); } else echo 'Price'; echo "   (  ".$currencySymbol ."   )";  ?></label>
-					<div class="col-sm-2" id="price_div_disp">
+					<div class="col-sm-2 input-group" id="price_div_disp">
+						<span class="input-group-addon">$</span>
 						<input type="text" class="form-control" placeholder="<?php echo $currencySymbol;?>:" value="" id="price" name="price">
 					</div>
 					<div  class="list_inner_right" id="price_div_hid" style="display:none;">
@@ -354,8 +355,9 @@ $('#sidenav').hide();
 					</div>-->
 					<div class="form-group" data-pricing-type="Fixed">
 					<label id="QuantityLab" for="quantity" class="col-sm-2 control-label"><?php if($this->lang->line('shop_quantity') != '') { echo stripslashes($this->lang->line('shop_quantity')); } else echo 'Quantity'; ?></label>
-					<div class="col-sm-2">
+					<div class="col-sm-2 input-group">
 						<input type="text" class="form-control" id="quantity" name="quantity" value="1">
+						<span class="input-group-addon"> <?php echo af_lg('quantity_piece','piece'); ?>
 					</div>
 					<div class="col-sm-5"></div>
 					<div class="col-md-3 col-sm-12" id="qty_text_div">
@@ -430,10 +432,11 @@ $('#sidenav').hide();
 				
 				<div class="form-group">
 					<label id="discount_name" for="product_name" class="col-xs-12 col-sm-2 control-label"><?php echo af_lg('lg_discount','Discount'); ?></label>
-					<div id="price_div_disp" class="col-sm-2">
+					<div id="price_div_disp" class="col-sm-2 input-group">
+						<span class="input-group-addon">-</span>
 						<input type="text" name="discount" id="discount" value="" placeholder="%" class="form-control">
+						<span class="input-group-addon">%</span>
 					</div>
-										<label id="title" for="product_name" class="col-xs-12 col-sm-2 control-label">% off</label>
 					
 				</div>
 														

@@ -2064,4 +2064,5 @@ $lang['cart_buyer_commission']='買家佣金';
 $lang['cart_gateway_static']='支付平台固定佣金';
 $lang['cart_gateway_commission']='支付平台佣金率';
 $lang['cart_total']= '總額';
-$lang['pickup']='接收'  ?>
+$lang['pickup']='接收';
+$lang['quantity_piece']='件'  ?>
