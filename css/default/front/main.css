@@ -610,8 +610,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     line-height: 1;
     color: #262626;
     vertical-align: middle;
-    max-height: 31px;
-	overflow: auto;
+    max-height: 32px;
+	overflow: hidden;
     }
     .rf-bl.hoverrf-bl .info .desc {
     overflow: hidden;

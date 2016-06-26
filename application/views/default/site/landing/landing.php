@@ -549,11 +549,15 @@ $img = explode(',', $recent_product_details->row($i)->image);
 	                        </div>
 	                        <div class="info" style="display: block;">
 	                        	<!-- product name -->
-    							<div class="title text-center" style="font-size: medium;">
+    							<div class="title text-left" style="font-size: medium;">
     								<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>" alt="<?php echo character_limiter($recent_product_details->row($i)->product_name, 25); ?>"><?php echo character_limiter($recent_product_details->row($i)->product_name, 25); ?></a>
     							</div>
     							<div class="desc row" style="position: absolute;bottom: 0;left: 0;right: 0">
+<<<<<<< HEAD
     							    <div class="col-md-8 col-xs-7" style="padding: 0px;">
+=======
+    							    <div class="col-md-8 col-xs-7">
+>>>>>>> shop_test
     							    	<?php
 											$style     = 'style="font-size:medium;"';
 								            $dealprice = '0';
