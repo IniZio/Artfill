@@ -3449,7 +3449,9 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 					}
 				
             } else {
-				$($("#signin").data("target")).modal('show');
+				alert("haha");
+				$("#signin").click();
+				
 				/*window.location.href = baseURL+'login?action='+json.next_url+'&redirect='+redirect;*/
 			}
 		},
