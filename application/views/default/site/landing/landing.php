@@ -508,12 +508,13 @@ $n = $deal_of_day1->num_rows();
 for ($i = 0; $i < count($recent_product_details->result()); $i++) {
 $img = explode(',', $recent_product_details->row($i)->image);
 ?>
-					<div class="col-lg-4 col-sm-4 col-xs-6">
+					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
 						<div class=" rf-bl hoverrf-bl">
 							<div class="rf-blheader">
 								<div class="carousel slide" data-ride="carousel" id="<?php echo 'productCarousel' . $i; ?>">
 									<!-- Wrapper for slides -->
-									<div class="carousel-inner" role="listbox" style="max-width: 205px !important; max-height: 203px !important;">
+									<!-- <div class="carousel-inner" role="listbox" style="max-width: 205px !important; max-height: 203px !important;"> -->
+									<div class="carousel-inner" role="listbox">
 										<div class="item active">
 											<a  href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $img[0]; ?>" alt="recent" style="max"> </a>
 										</div>

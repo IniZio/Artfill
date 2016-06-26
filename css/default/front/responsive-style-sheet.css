@@ -2091,7 +2091,7 @@ img.middel-banner
     width: 30%;
     float: left;
     display: block;
-    margin: 0px 20px 10px 0px;
+    /* margin: 0px 20px 10px 0px; */
   }
 
   .second-bl h1 {
@@ -3881,7 +3881,7 @@ right: 0px;
 	width:44%;
    /* float: none;
     display: inline-block;*/
-    margin: 0px 10px 20px !important;
+    /* margin: 0px 10px 20px !important; */
   }
 
   .hme-container li {
@@ -4263,7 +4263,7 @@ right: 0px;
 	height: 50px;
 }
 .recent-fav .rf-bl:last-child {
-    margin: 0 10px 20px !important;
+    /* margin: 0 10px 20px !important; */
 }
 .get-pro{
 	font: 14px Georgia,"Times New Roman",Times,serif;

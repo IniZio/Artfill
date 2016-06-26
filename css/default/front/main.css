@@ -338,7 +338,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	margin: 10px auto 0;
 	max-width: 100%;
 	overflow: hidden;
-	width: 940px;
+	/* width: 940px; */
+	width: 1200px;
 }
 .recent-bl {
 	/*border-bottom: 1px solid #e5e5e5;*/
