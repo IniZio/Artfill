@@ -516,11 +516,11 @@ $img = explode(',', $recent_product_details->row($i)->image);
 									<!-- <div class="carousel-inner" role="listbox" style="max-width: 205px !important; max-height: 203px !important;"> -->
 									<div class="carousel-inner" role="listbox">
 										<div class="item active">
-											<a  href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $img[0]; ?>" alt="recent" style="max" class="thumbnail"> </a>
+											<a  href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $img[0]; ?>" alt="recent" style="max" class="thumbnail" style="padding:0"> </a>
 										</div>
 										<?php foreach (array_slice($img,1) as $element) { ?>
 											<div class="item">
-												<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $element; ?>" alt="recent" style="max" class="thumbnail"> </a>
+												<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $element; ?>" alt="recent" style="max" class="thumbnail" style="padding:0"> </a>
 											</div>
 										<?php } ?>
 									</div>
