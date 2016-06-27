@@ -538,7 +538,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     .rf-bl.hoverrf-bl {
     -webkit-transition: 0.15s; /* Safari */
     transition: 0.15s;
-    box-shadow: 0 0 10px #e1e1e1;
+    box-shadow: 0 0 5px #e1e1e1;
     position: relative;
     padding-top: 0;
     overflow: hidden;
@@ -550,7 +550,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     width:100%;
     border-radius: 3px 3px 0 0;
     /* border solid solid none; */
-    border: 1px solid #ddd;
+    /* outline: 1px solid #ddd; */
     }
     .rf-bl.hoverrf-bl:active, .rf-bl.hoverrf-bl.active{
     box-shadow: 0 0 10px #d1d1d1;
