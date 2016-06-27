@@ -197,6 +197,7 @@ $this->load->view('site/templates/header');
 						<div class="related-listings">
 							<div class="related-listing-inner">
 								<div class="shop-info">
+									<?php if($selectedSeller_details[0]['thumbnail']!=""){ $Pro_pic=$selectedSeller_details[0]['thumbnail']; }else { $Pro_pic='profile_pic.png';} ?>
 									<span class="avatar"><a href="shop-section/<?php echo $selectedSeller_details[0]['seourl']; ?>"><img style="border-radius:50%;" src="images/users/thumb/<?php echo $Pro_pic; ?>" width="75" height="75" /></a></span>
 									<div class="shop-name"> <a href="shop-section/<?php echo $selectedSeller_details[0]['seourl']; ?>"><?php echo $selectedSeller_details[0]['seller_businessname']; ?></a></div>
 									<?php if (trim($selectedSeller_details[0]['city']) != '' && trim($selectedSeller_details[0]['city']) != 0) {
