@@ -127,6 +127,11 @@ header {
 	position:relative;
 }
 
+/* Hide breadcrumbs for now */
+#breadcrumbs {
+	display:none;
+}
+
 /*King edited*/
 .search-bl input[type="text"] {
 	position:relative;
