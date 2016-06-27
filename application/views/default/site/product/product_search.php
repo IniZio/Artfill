@@ -373,6 +373,7 @@ $j('#slider-container').slider({
                                     </li>   
                                   <?php //}?>
                                 </ul> 
+								<!--
                                <ul class="filter shop-in">
                                <li class="input-group <?php if($this->input->get('shipto') == '') { echo 'selected';}?>" id="shiptobox"><a href="<?php echo $lnk2.'?'.$s_key.$s_gift.$min_price.$max_price.$location;?>"><?php if($this->lang->line('prod_anywhere') != '') { echo stripslashes($this->lang->line('prod_anywhere')); } else echo 'Ships Anywhere'; ?></a></li>
                                 <?php /*if($shipVal == '') {?>  
@@ -411,6 +412,7 @@ $j('#slider-container').slider({
                                     </li>   
                                 	<?php //}?>
                                 </ul>
+								-->
                                <?php if($this->config->item('deal_of_day') == 'Yes'){ ?>
                                 <ul class="filter shop-in">
                                     <li class="input-group selected" id="shiptobox"><?php //echo af_lg('lg_product_type','Product Type') 
