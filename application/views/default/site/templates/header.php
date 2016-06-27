@@ -10,7 +10,15 @@ if ($CurrUserImg != '') {
     $user_pic = 'default_avat.png';
 }
 ?>
-
+<style>
+	.shadowed {
+	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
+Color='#444')";
+	filter: url(#drop-shadow);
+	-webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+	filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+}
+</style>
 <!-- START UNUSED STYLE to be deleted -->
 <style>
 #you1{
@@ -43,7 +51,7 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 <body>
 <!-- header_start -->
  <header>
- <div class="header_top animated bounceInDown hidden-xs" style="position:relative;">
+ <div class="header_top animated bounceInDown hidden-xs shadowed" style="position:relative;">
 		<?php if ($this->session->userdata['shopsy_session_user_name'] == '' || true) {
     ?>
 			<div class="container top">
@@ -84,7 +92,7 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 					</div>
 
 					<div class="col-xs-12" style="text-align:center;width:100%;padding-top:5px;padding-bottom: 5px">
-						<a href="."><img src="./images/<?php echo $this->config->item('logo_image'); ?>" alt="<?php echo $this->config->item('email_title'); ?>" title="<?php echo $this->config->item('email_title'); ?>" style="width:20%;min-width:200px;" /></a>
+						<a href="."><img class="shadowed" src="./images/<?php echo $this->config->item('logo_image'); ?>" alt="<?php echo $this->config->item('email_title'); ?>" title="<?php echo $this->config->item('email_title'); ?>" style="width:20%;min-width:200px;" /></a>
 					</div>
 
 					<div style="clear:both;padding-top:30px;padding-bottom:30px;">
