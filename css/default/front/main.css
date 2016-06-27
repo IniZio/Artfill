@@ -549,7 +549,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     background-color: #f5f6f8;;
     width:100%;
     border-radius: 3px 3px 0 0;
-    border solid solid none;
+    /* border solid solid none; */
+    border: 1px solid #ddd;
     }
     .rf-bl.hoverrf-bl:active, .rf-bl.hoverrf-bl.active{
     box-shadow: 0 0 10px #d1d1d1;
