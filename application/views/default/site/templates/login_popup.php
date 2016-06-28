@@ -13,7 +13,7 @@ if($this->session->userdata('rUrl') != ''){
 	redirect ($reUrl);
 }
 ?>
-<link rel="stylesheet" href="dist/ladda.min.css"><link rel="stylesheet" href="dist/ladda-themeless.min.css">
+<link rel="stylesheet" href="dist/ladda-themeless.min.css">
 <style>
 .popup_google  {
     background: url("images/fb1.png") no-repeat scroll 25px 6px #ff6a6f;
