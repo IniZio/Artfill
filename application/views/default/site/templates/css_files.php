@@ -30,4 +30,3 @@
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>footer.css" rel="stylesheet">
 <?php }?>
-<link rel="stylesheet" href="bootflat/css/bootflat.css">
