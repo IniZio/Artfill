@@ -343,7 +343,7 @@ $j('#slider-container').slider({
 <!--------- Color Filter with Slider ends--->   
                                 
                                 
-                                
+                                <!--
                                <ul class="filter shop-in">
                                 	<li class="input-group <?php if($this->input->get('location') == '') { echo 'selected';}?>" id="locationbox"><a href="<?php echo $lnk2.'?'.$s_key.$s_gift.$min_price.$max_price;?>"><?php if($this->lang->line('prod_anyshop') != '') { echo stripslashes($this->lang->line('prod_anyshop')); } else echo 'Any Shop Location'; ?></a></li>
                                 <?php /*if($locVal == '') {?>    <li class="changeable" id="shop-location-display">
@@ -372,7 +372,9 @@ $j('#slider-container').slider({
                                        </form>
                                     </li>   
                                   <?php //}?>
-                                </ul> 
+                                </ul>
+-->								
+								<!--
                                <ul class="filter shop-in">
                                <li class="input-group <?php if($this->input->get('shipto') == '') { echo 'selected';}?>" id="shiptobox"><a href="<?php echo $lnk2.'?'.$s_key.$s_gift.$min_price.$max_price.$location;?>"><?php if($this->lang->line('prod_anywhere') != '') { echo stripslashes($this->lang->line('prod_anywhere')); } else echo 'Ships Anywhere'; ?></a></li>
                                 <?php /*if($shipVal == '') {?>  
@@ -411,6 +413,7 @@ $j('#slider-container').slider({
                                     </li>   
                                 	<?php //}?>
                                 </ul>
+								-->
                                <?php if($this->config->item('deal_of_day') == 'Yes'){ ?>
                                 <ul class="filter shop-in">
                                     <li class="input-group selected" id="shiptobox"><?php //echo af_lg('lg_product_type','Product Type') 

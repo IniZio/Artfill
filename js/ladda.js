@@ -3,7 +3,7 @@
  * http://lab.hakim.se/ladda
  * MIT licensed
  *
- * Copyright (C) 2016 Hakim El Hattab, http://hakim.se
+ * Copyright (C) 2014 Hakim El Hattab, http://hakim.se
  */
 /* jshint node:true, browser:true */
 (function( root, factory ) {
@@ -42,34 +42,18 @@
 			return;
 		}
 
-		// The button must have the class "ladda-button"
-		if( !/ladda-button/i.test( button.className ) ) {
-			button.className += ' ladda-button';
-		}
-
-		// Style is required, default to "expand-right"
-		if( !button.hasAttribute( 'data-style' ) ) {
-			button.setAttribute( 'data-style', 'expand-right' );
-		}
-
 		// The text contents must be wrapped in a ladda-label
 		// element, create one if it doesn't already exist
 		if( !button.querySelector( '.ladda-label' ) ) {
-			var laddaLabel = document.createElement( 'span' );
-			laddaLabel.className = 'ladda-label';
-			wrapContent( button, laddaLabel );
+			button.innerHTML = '<span class="ladda-label">'+ button.innerHTML +'</span>';
 		}
 
 		// The spinner component
-		var spinner,
-			spinnerWrapper = button.querySelector( '.ladda-spinner' );
+		var spinner;
 
 		// Wrapper element for the spinner
-		if( !spinnerWrapper ) {
-			spinnerWrapper = document.createElement( 'span' );
-			spinnerWrapper.className = 'ladda-spinner';
-		}
-
+		var spinnerWrapper = document.createElement( 'span' );
+		spinnerWrapper.className = 'ladda-spinner';
 		button.appendChild( spinnerWrapper );
 
 		// Timer used to delay starting/stopping
@@ -255,7 +239,7 @@
 	 */
 	function getRequiredFields( form ) {
 
-		var requirables = [ 'input', 'textarea', 'select' ];
+		var requirables = [ 'input', 'textarea' ];
 		var inputs = [];
 
 		for( var i = 0; i < requirables.length; i++ ) {
@@ -312,29 +296,12 @@
 						var form = getAncestorOfTagType( element, 'FORM' );
 
 						if( typeof form !== 'undefined' ) {
-							// Modern form validation
-							if( typeof form.checkValidity === 'function' ) {
-								valid = form.checkValidity();
-							}
-							// Fallback to manual validation for old browsers
-							else {
-								var requireds = getRequiredFields( form );
-								for( var i = 0; i < requireds.length; i++ ) {
-
-									if( requireds[i].value.replace( /^\s+|\s+$/g, '' ) === '' ) {
-										valid = false;
-									}
-
-									// Radiobuttons and Checkboxes need to be checked for the "checked" attribute
-									if( (requireds[i].type === 'checkbox' || requireds[i].type === 'radio' ) && !requireds[i].checked ) {
-										valid = false;
-									}
-
-									// Email field validation
-									if( requireds[i].type === 'email' ) {
-										valid = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test( requireds[i].value );
-									}
-
+							var requireds = getRequiredFields( form );
+							for( var i = 0; i < requireds.length; i++ ) {
+								// Alternatively to this trim() check,
+								// we could have use .checkValidity() or .validity.valid
+								if( requireds[i].value.replace( /^\s+|\s+$/g, '' ) === '' ) {
+									valid = false;
 								}
 							}
 						}
@@ -379,8 +346,7 @@
 	function createSpinner( button ) {
 
 		var height = button.offsetHeight,
-			spinnerColor,
-			spinnerLines;
+			spinnerColor;
 
 		if( height === 0 ) {
 			// We may have an element that is not visible so
@@ -403,18 +369,14 @@
 			spinnerColor = button.getAttribute( 'data-spinner-color' );
 		}
 
-		// Allow buttons to specify the number of lines of the spinner
-		if( button.hasAttribute( 'data-spinner-lines' ) ) {
-			spinnerLines = parseInt( button.getAttribute( 'data-spinner-lines' ), 10 );
-		}
-
-		var radius = height * 0.2,
+		var lines = 12,
+			radius = height * 0.2,
 			length = radius * 0.6,
 			width = radius < 7 ? 2 : 3;
 
 		return new Spinner( {
 			color: spinnerColor || '#fff',
-			lines: spinnerLines || 12,
+			lines: lines,
 			radius: radius,
 			length: length,
 			width: width,
@@ -435,15 +397,6 @@
 		}
 
 		return a;
-
-	}
-
-	function wrapContent( node, wrapper ) {
-
-		var r = document.createRange();
-		r.selectNodeContents( node );
-		r.surroundContents( wrapper );
-		node.appendChild( wrapper );
 
 	}
 
