@@ -13,7 +13,7 @@ if($this->session->userdata('rUrl') != ''){
 	redirect ($reUrl);
 }
 ?>
-<link rel="stylesheet" href="dist/ladda.min.css"><link rel="stylesheet" href="dist/ladda.min.css">
+<link rel="stylesheet" href="dist/ladda.min.css"><link rel="stylesheet" href="dist/ladda-themeless.min.css">
 <style>
 .popup_google  {
     background: url("images/fb1.png") no-repeat scroll 25px 6px #ff6a6f;
@@ -66,7 +66,7 @@ if($this->session->userdata('rUrl') != ''){
 					</div>
 					<div class="popup_login" style="margin-bottom:15px">
 					<!-- <input type="submit" class="submit_btn"  value="<?php echo af_lg('user_signin', "Sign In"); ?>" /> -->
-					<button id="login" type="submit" class="ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label"><?php echo af_lg('user_signin', "Sign In"); ?></span></button>
+					<button id="login" type="submit" class="submit-btn ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label"><?php echo af_lg('user_signin', "Sign In"); ?></span></button>
 					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>									 									 
 					</div>
 				</form>
@@ -143,7 +143,7 @@ if($this->session->userdata('rUrl') != ''){
 										
 										<div class="popup_login" style="margin-bottom:15px">
 											<!-- <input type="submit" class="submit_btn" value="<?php echo af_lg('user_register', "Register"); ?>"/> -->
-											<button id="register1" type="submit" class="ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label"><?php echo af_lg('user_register', "Register"); ?></span></button>
+											<button id="register1" type="submit" class="submit-btn ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label"><?php echo af_lg('user_register', "Register"); ?></span></button>
 										<span id="loadErr" style="color:red"></span>
 											
 										</div>
