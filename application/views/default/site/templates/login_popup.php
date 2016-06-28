@@ -66,7 +66,7 @@ if($this->session->userdata('rUrl') != ''){
 					</div>
 					<div class="popup_login" style="margin-bottom:15px">
 					<!-- <input type="submit" class="submit_btn"  value="<?php echo af_lg('user_signin', "Sign In"); ?>" /> -->
-					<button id="login" type="submit" class="submit-btn ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label"><?php echo af_lg('user_signin', "Sign In"); ?></span></button>
+					<button id="login" type="submit" class="btn btn-primary submit-btn ladda-button" data-color="green" data-style="expand-right" data-size="s"><span class="ladda-label"><?php echo af_lg('user_signin', "Sign In"); ?></span></button>
 					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>									 									 
 					</div>
 				</form>
