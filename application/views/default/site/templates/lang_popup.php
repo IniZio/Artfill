@@ -136,7 +136,7 @@ function change_currency_ajax(){
 		success: function(data){ 
 			var sel = $("#selectedLanguage").text()
 			//alert(sel);
-			$("#language_href").text(sel);
+			//$("#language_href").text(sel);
 			//$("#currency_href").text($("#selectedCurrency").text());
 			//$("#currency_href").text(currency);
 			
