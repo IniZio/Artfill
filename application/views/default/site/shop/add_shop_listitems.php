@@ -1017,7 +1017,7 @@ $('#sidenav').hide();
 						</div>-->
 						<div class="input-group">
 							<span class="tagBox-list" id="tagBox-list-tags"></span>
-							<input type="text" name="jquery-tagbox-tags" id="jquery-tagbox-tags"  onblur="testscript();" class="jQTagBox" style="display: none;">
+							<input type="text" name="jquery-tagbox-tags" id="jquery-tagbox-tags"  onblur="testscript();" class="jQTagBox" style="display: block;">
 						</div>
 					</div>
 					<div class="col-md-1 col-sm-3">
@@ -1039,7 +1039,7 @@ $('#sidenav').hide();
 						</div>-->
 						<div class="input-group">
 							<span class="tagBox-list" id="tagBox-list-materials"></span>
-							<input type="text" name="jquery-tagbox-materials" id="jquery-tagbox-materials" class="jQTagBox" style="display: none;">
+							<input type="text" name="jquery-tagbox-materials" id="jquery-tagbox-materials" class="jQTagBox" style="display: block;">
 						</div>
 					</div>
 					<div class="col-md-1 col-sm-3"><?php /* <p id ="material_left_count"><?php if($this->lang->line('shop_lefttag') != '') { echo stripslashes($this->lang->line('shop_lefttag')); } else echo '13 left '; ?></p> */ ?></div>
