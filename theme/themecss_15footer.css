@@ -1,7 +1,7 @@
 /*section.foot-bg{background:rgb(ff, ff, ff) none repeat scroll 0% 0% / auto padding-box border-box;}*/
 section.foot-bg{background: url('../images/human_background.png') no-repeat center center fixed;background-size:cover;background-color : transparent;}
 
-div.footer-block ul.footer-list li a{color:rgb(153, 153, 153);}
+div.footer-block ul.footer-list li a{color:#000000;}
 div.footer-block span{color:rgb(255, 255, 255);}
 ul.locale-settings li a,ul.locale-settings{color:rgb(153, 153, 153);}
 div.footer-row a div.help-bt{color:rgb(1, 146, 181);background:rgb(243, 243, 242) none repeat scroll 0px 0px / auto padding-box border-box;}
