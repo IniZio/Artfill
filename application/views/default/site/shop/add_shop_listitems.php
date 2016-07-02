@@ -9,6 +9,15 @@ if(in_array($this->uri->segment(1),$shopEditArr)){
 } 
 ?>
 <script type="text/javascript" src="js/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+<script>
+	function syncDescription(inst) {
+        // alert("Some one modified something");
+        $('#goo_item_desc').html(inst.getBody().innerHTML);
+        // console.log(inst.getBody().innerHTML);
+        // change(inst.getBody().innerHTML, "goo_item_desc");
+}
+
+</script>
 <script type="text/javascript">
 tinyMCE.init({
 		// General options
@@ -38,6 +47,7 @@ tinyMCE.init({
 		external_link_list_url : "js/link_list.js",
 		external_image_list_url : "js/image_list.js",
 		media_external_list_url : "js/media_list.js",
+		onchange_callback : "syncDescription",
 		 
 		// Replace values for the template plugin
 		template_replace_values : {
@@ -309,9 +319,9 @@ $('#sidenav').hide();
 							<?php if($this->lang->line('shop_generalprice') != '') { echo stripslashes($this->lang->line('shop_generalprice')); } else echo 'To set a general price'; ?> <a href="javascript:void(0)" id="remove_attr_pricing"><?php if($this->lang->line('shop_pricingvariation') != '') { echo stripslashes($this->lang->line('shop_pricingvariation')); } else echo 'turn off pricing by variation'; ?></a>
 						</span>
 					</div>
-					<div class="col-md-3 col-sm-12 right P8">
+					<!-- <div class="col-md-3 col-sm-12 right P8">
 						<p><?php if($this->lang->line('giftcard_price_text') != '') { echo stripslashes($this->lang->line('giftcard_price_text')); } else echo 'Factor in the costs of materials and labor, plus any related business expenses.'; ?></p>
-					</div>
+					</div> -->
 					<input type="hidden" name="price_status"  id="price_status" value="1" />
 				</div>
 				
