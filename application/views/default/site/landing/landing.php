@@ -8,6 +8,9 @@ header{
 	margin-bottom: 0px;
 }
 </style>
+<div id="instafeed"></div>
+<script type="text/javascript" src="js/instafeed.min.js"></script>
+
 <script type="text/javascript" src="js/site/jquery.countdown.js"></script>
 <link href="css/animate.css" rel="stylesheet">
 <?php if (isset($active_theme) && $active_theme->num_rows() != 0) {?>
@@ -496,6 +499,7 @@ $n = $deal_of_day1->num_rows();
 								</div>
 							</section>
 							<?php */}?>
+							
 							<?php
     if ($this->config->item('recent_prod') == 'active' && count($recent_product_details->result()) > 0) {
         ?>
@@ -711,4 +715,37 @@ $img = explode(',', $recent_product_details->row($i)->image);
 						  } // end animate_elems()
 						});
 						</script>
-						
+						<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+        userId: 3183566433,
+        clientId: '3b25b1ad3f1241d991444b35731bd981',
+        accessToken: '3183566433.3b25b1a.b4cbfee0df4746a6b3f6199ef1d66e0a'
+    });
+    feed.run();
+</script>
+<!-- <script>
+	var token = '3183566433.3b25b1a.b4cbfee0df4746a6b3f6199ef1d66e0a', // learn how to obtain it below
+    userid = 3183566433, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
+    num_photos = 4; // how much photos do you want to get
+ 
+$.ajax({
+	url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent', // or /users/self/media/recent for Sandbox
+	dataType: 'jsonp',
+	type: 'GET',
+	data: {access_token: token, count: num_photos},
+	success: function(data){
+ 		console.log(data);
+		for( x in data.data ){
+			$('ul').append('<li><img src="'+data.data[x].images.low_resolution.url+'"></li>'); // data.data[x].images.low_resolution.url - URL of image, 306х306
+			// data.data[x].images.thumbnail.url - URL of image 150х150
+			// data.data[x].images.standard_resolution.url - URL of image 612х612
+			// data.data[x].link - Instagram post URL 
+		}
+	},
+	error: function(data){
+		console.log(data); // send the error notifications to console
+	}
+});
+</script>
+       -->
