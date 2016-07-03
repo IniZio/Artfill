@@ -18,6 +18,15 @@ $(document).ready(function(){
 </script>
 
 <script type="text/javascript" src="js/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+<script>
+	function syncDescription(inst) {
+        // alert("Some one modified something");
+        $('#goo_item_desc').html(inst.getBody().innerHTML);
+        // console.log(inst.getBody().innerHTML);
+        // change(inst.getBody().innerHTML, "goo_item_desc");
+}
+
+</script>
 <script type="text/javascript">
 tinyMCE.init({
 		// General options
@@ -47,6 +56,7 @@ tinyMCE.init({
 		external_link_list_url : "js/link_list.js",
 		external_image_list_url : "js/image_list.js",
 		media_external_list_url : "js/media_list.js",
+		onchange_callback : "syncDescription",
 		 
 		// Replace values for the template plugin
 		template_replace_values : {
