@@ -3477,8 +3477,8 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 					}
 				
             } else {
-				//$("#signin").trigger('click');
-				window.location.href = baseURL+'#signin';
+				$("#signin").trigger('click');
+				//window.location.href = baseURL+'#signin';
 				//window.location.href = baseURL+'login?action='+json.next_url+'&redirect='+redirect;
 			}
 		},

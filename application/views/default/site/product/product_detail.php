@@ -238,23 +238,23 @@ $this->load->view('site/templates/header');
 												<?php if ($loginCheck != '') {
 												?>
 												<?php if ($shopProductDetails[$i]['user_id'] == $loginCheck) {?>
-												<button onclick="return ownProductFav();" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
+												<button data-toggle="modal" onclick="return ownProductFav();" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
 												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php
 												} else {
 												$favArr = $this->product_model->getUserFavoriteProductDetails(stripslashes($shopProductDetails[$i]['id']));
 												if (empty($favArr)) {?>
-												<button onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
+												<button data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
 												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php } else {?>
 												<?php echo "hshshshdhsdh"; ?>
-												<button onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Old',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
+												<button data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Old',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
 												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php }}} else {?>
-												<button onclick="#signin" data-toggle="modal"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
+												<button data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-toggle="modal"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
 												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php }?>
