@@ -254,7 +254,7 @@ $this->load->view('site/templates/header');
 												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php }}} else {?>
-												<button onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
+												<button onclick="#signin" data-toggle="modal"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
 												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php }?>
