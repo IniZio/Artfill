@@ -254,13 +254,13 @@ $this->load->view('site/templates/header');
 												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php }}} else {?>
-												<button data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-toggle="modal"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
+												<button data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
 												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php }?>
 											</div>
 											<div  class="collect-container">
-												<button onclick="return hoverView('<?php echo $shopProductDetails[$i]['id']; ?>');"" class="btn-collect btn-dropdown  inline-overlay-trigger ollection-add-action" type="button">
+												<button onclick="return hoverView('<?php echo $shopProductDetails[$i]['id']; ?>');" class="btn-collect btn-dropdown  inline-overlay-trigger ollection-add-action" type="button">
 												<span class="icon"></span>
 												<span class="icon-dropdown"></span>
 												<span class="ie-fix">&nbsp;</span>

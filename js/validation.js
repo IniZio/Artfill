@@ -3385,7 +3385,9 @@ else
             }
 			else
 			{
-				location.href = baseURL+'login?action='+json.next_url+'&redirect='+redirect;
+				alert("login");
+				//$("#signin").modal('show');
+				//location.href = baseURL+'login?action='+json.next_url+'&redirect='+redirect;
 			}
         }
 	});
@@ -3431,10 +3433,10 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
         dataType : 'json',
 		success: function(json){
 			//alert(json);
-			if (json.status_code == 2){ 
+			if (json.status_code == 2){
 				//$(".ownproductfav-popup").colorbox({width:"350px", height:"auto", open:true,inline:true, href:"#alert_ownproductfav"});
 				$('#ownProdFavAlertCommonlink').trigger('click');
-			} else if (json.status_code == 1) {			
+			} else if (json.status_code == 1) {
 				
 			  // window.location.href = window.location.href;
 				if( type == 'Fresh'){
@@ -3475,6 +3477,7 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 				
             } else {
 				$("#signin").modal();
+				//alert("login");
 				//window.location.href = baseURL+'#signin';
 				//window.location.href = baseURL+'login?action='+json.next_url+'&redirect='+redirect;
 			}
