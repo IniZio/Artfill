@@ -395,8 +395,62 @@ $("#maxPriceDisp").html(ui.values[1]);
 });
 });
 </script>
-<script type="text/javascript">if (window.location.protocol != "https:")
-window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);</script>
+<!-- <script type="text/javascript">if (window.location.protocol != "https:")
+window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);</script> -->
+
 <?php }?>
+<script
+			  src="https://code.jquery.com/jquery-1.12.4.min.js"
+			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script>
+
+	function render(url) {
+
+		// Get the keyword from the url.
+		var temp = url.split('/')[0];
+
+		// Hide whatever page is currently shown.
+		$('.main-content .page').removeClass('visible');
+
+
+		var map = {
+
+			// Single Products page.
+			'#signin': function() {
+				// console.log('hey');
+				// document.getElementById('hey').click();
+				// document.getElementById('signin').disabled = false;
+				$("#signin").modal();
+			},
+			'#signup': function() {
+				// console.log('hey');
+				// document.getElementById('hey').click();
+				// document.getElementById('signin').disabled = false;
+				$("#signup").modal();
+			},
+
+		};
+
+		// Execute the needed function depending on the url keyword (stored in temp).
+		if(map[temp]){
+			map[temp]();
+		}
+		// If the keyword isn't listed in the above - render the error page.
+		else {
+			// renderErrorPage();
+		}
+
+	}
+	if ("onhashchange" in window) {
+		render(decodeURI(window.location.hash));
+	}
+	$(window).on('hashchange', function(){
+		// On every hash change the render function is called with the new hash.
+		// This is how the navigation of our app happens.
+		
+	});
+</script>
 </body>
 </html>
