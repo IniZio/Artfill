@@ -377,20 +377,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .carousel-inner .item .thumbnail{
 	margin-bottom:0 !important;
 	padding: 0 !important;
+    border: 0;
+    border-radius: 0px;
 }
 
 .rf-bl {
     padding-top: 20px;
     margin: 10px 0 20px 0;
-    background-color: rgba(214, 224, 226, 0.2);
+    /* background-color: rgba(214, 224, 226, 0.2); */
     border-top-width: 0;
     border-bottom-width: 2px;
-    -webkit-border-radius: 3px;
+    /* -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+    border-radius: 3px; */
+    -webkit-box-shadow: 0px 5px 20px 0px rgba(51,73,94,0.05);
+    -moz-box-shadow: 0px 5px 20px 0px rgba(51,73,94,0.05);
+    box-shadow: 0px 5px 20px 0px rgba(51,73,94,0.05);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -551,14 +553,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     /* background-color: rgba(214, 224, 226, 0.2); */
     /* background-color: rgba(214, 224, 226, 0.8); */
     /* background-color: rgba(245, 245, 245,0.7); */
-    background-color: #f5f6f8;;
+    /* background-color: #f5f6f8; */
+    background-color: white;
     width:100%;
-    border-radius: 3px 3px 0 0;
+    /* border-radius: 4px 4px 0 0; */
     /* border solid solid none; */
     /* outline: 1px solid #ddd; */
     }
-    .rf-bl.hoverrf-bl:active, .rf-bl.hoverrf-bl.active{
-    box-shadow: 0 0 10px #d1d1d1;
+    .rf-bl.hoverrf-bl:active, .rf-bl.hoverrf-bl.active, .rf-bl.hoverrf-bl:hover, .rf-bl.hoverrf-bl.hover{
+    box-shadow: 0 0 8px #d1d1d1;
+    /* box-shadow: 0 0 5px #e3e3e3; */
     }
     .rf-bl.hoverrf-bl .rf-blheader img{
     /* background: url("http://lorempixel.com/850/280/nature/4/");
