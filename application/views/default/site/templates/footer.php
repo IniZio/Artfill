@@ -421,12 +421,14 @@ window.location.href = "https:" + window.location.href.substring(window.location
 			'#signin': function() {
 				// console.log('hey');
 				// document.getElementById('hey').click();
+				// document.getElementById('signin').style.display = "block";
 				// document.getElementById('signin').disabled = false;
 				$("#signin").modal();
 			},
 			'#signup': function() {
 				// console.log('hey');
 				// document.getElementById('hey').click();
+				// document.getElementById('signin').style.display = "block";
 				// document.getElementById('signin').disabled = false;
 				$("#signup").modal();
 			},
@@ -449,6 +451,7 @@ window.location.href = "https:" + window.location.href.substring(window.location
 	$(window).on('hashchange', function(){
 		// On every hash change the render function is called with the new hash.
 		// This is how the navigation of our app happens.
+		render(decodeURI(window.location.hash));
 		
 	});
 </script>
