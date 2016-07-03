@@ -516,23 +516,23 @@ $img = explode(',', $recent_product_details->row($i)->image);
 									<!-- <div class="carousel-inner" role="listbox" style="max-width: 205px !important; max-height: 203px !important;"> -->
 									<div class="carousel-inner" role="listbox">
 										<div class="item active">
-											<a  href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $img[0]; ?>" alt="recent" style="max" class="thumbnail" style="padding:0"> </a>
+											<a  href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $img[0]; ?>" alt="recent" class="thumbnail" style="padding:0"> </a>
 										</div>
 										<?php foreach (array_slice($img,1) as $element) { ?>
 											<div class="item">
-												<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $element; ?>" alt="recent" style="max" class="thumbnail" style="padding:0"> </a>
+												<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>"><img src="images/product/cropmed/<?php echo $element; ?>" alt="recent" class="thumbnail" style="padding:0"> </a>
 											</div>
 										<?php } ?>
 									</div>
 									<?php if (sizeof($img) > 1) { ?>
-		                            <a class="left carousel-control" data-slide="prev" href="<?php echo '#productCarousel' . $i; ?>" role="button">
+		                            <a class="left carousel-control" style="opacity:100%" data-slide="prev" href="<?php echo '#productCarousel' . $i; ?>" role="button">
 			                                <span aria-hidden="true" class="glyphicon glyphicon-chevron-left">
 			                                </span>
 			                                <span class="sr-only">
 				                                    Previous
 			                                </span>
 		                            </a>
-		                            <a class="right carousel-control" data-slide="next" href="<?php echo '#productCarousel' . $i; ?>" role="button">
+		                            <a class="right carousel-control" style="opacity:100%" data-slide="next" href="<?php echo '#productCarousel' . $i; ?>" role="button">
 			                                <span aria-hidden="true" class="glyphicon glyphicon-chevron-right">
 			                                </span>
 			                                <span class="sr-only">
