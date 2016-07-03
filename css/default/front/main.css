@@ -560,8 +560,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     /* border solid solid none; */
     /* outline: 1px solid #ddd; */
     }
-    .rf-bl.hoverrf-bl:active, .rf-bl.hoverrf-bl.active{
-    box-shadow: 0 0 10px #d1d1d1;
+    .rf-bl.hoverrf-bl:active, .rf-bl.hoverrf-bl.active, .rf-bl.hoverrf-bl:hover, .rf-bl.hoverrf-bl.hover{
+    box-shadow: 0 0 8px #d1d1d1;
+    /* box-shadow: 0 0 5px #e3e3e3; */
     }
     .rf-bl.hoverrf-bl .rf-blheader img{
     /* background: url("http://lorempixel.com/850/280/nature/4/");

@@ -525,14 +525,14 @@ $img = explode(',', $recent_product_details->row($i)->image);
 										<?php } ?>
 									</div>
 									<?php if (sizeof($img) > 1) { ?>
-		                            <a class="left carousel-control" style="opacity:100%" data-slide="prev" href="<?php echo '#productCarousel' . $i; ?>" role="button">
+		                            <a class="left carousel-control" style="opacity:100% !important" data-slide="prev" href="<?php echo '#productCarousel' . $i; ?>" role="button">
 			                                <span aria-hidden="true" class="glyphicon glyphicon-chevron-left">
 			                                </span>
 			                                <span class="sr-only">
 				                                    Previous
 			                                </span>
 		                            </a>
-		                            <a class="right carousel-control" style="opacity:100%" data-slide="next" href="<?php echo '#productCarousel' . $i; ?>" role="button">
+		                            <a class="right carousel-control" style="opacity:100% !important" data-slide="next" href="<?php echo '#productCarousel' . $i; ?>" role="button">
 			                                <span aria-hidden="true" class="glyphicon glyphicon-chevron-right">
 			                                </span>
 			                                <span class="sr-only">
@@ -550,12 +550,12 @@ $img = explode(',', $recent_product_details->row($i)->image);
 	                        <div class="info" style="display: block;">
 	                        	<!-- product name -->
     							<div class="title text-center" style="font-size: medium;">
-    								<a href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>" alt="<?php echo character_limiter($recent_product_details->row($i)->product_name, 25); ?>"><?php echo character_limiter($recent_product_details->row($i)->product_name, 25); ?></a>
+    								<a  href="products/<?php echo $recent_product_details->row($i)->product_seourl; ?>" alt="<?php echo character_limiter($recent_product_details->row($i)->product_name, 25); ?>"><?php echo character_limiter($recent_product_details->row($i)->product_name, 25); ?></a>
     							</div>
     							<div class="desc row" style="position: absolute;bottom: 0;left: 0;right: 0">
     							    <div class="col-md-8 col-xs-7" style="padding: 0px;">
     							    	<?php
-											$style     = 'style="font-size:medium;"';
+											$style     = 'style="font-size:medium;color:grey"';
 								            $dealprice = '0';
 								            if ($this->config->item('deal_of_day') == 'Yes') {
 								                $starttime  = $recent_product_details->row($i)->deal_date . " " . $recent_product_details->row($i)->deal_time_from;
@@ -596,8 +596,8 @@ $img = explode(',', $recent_product_details->row($i)->image);
     						</div>
     						<div class="info" style="display: none;">
     							<!-- owner name and later details -->
-    						    <div class="title text-center">
-    						        <a href="shop-section/<?php echo $recent_product_details->row($i)->seourl ?>"> <?php echo $recent_product_details->row($i)->full_name; ?>
+    						    <div class="title text-center" style="font-size: medium;">
+    						        <a style="color:grey" href="shop-section/<?php echo $recent_product_details->row($i)->seourl ?>"> <?php echo $recent_product_details->row($i)->full_name; ?>
     						        </a>
     						    </div>
     						</div>
