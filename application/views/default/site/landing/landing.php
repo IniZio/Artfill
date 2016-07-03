@@ -9,7 +9,7 @@ header{
 }
 </style>
 <div id="instafeed"></div>
-<script type="text/javascript" src="js/instafeed.min.js"></script>
+<script type="text/javascript" src="js/instagram/instafeed.min.js"></script>
 
 <script type="text/javascript" src="js/site/jquery.countdown.js"></script>
 <link href="css/animate.css" rel="stylesheet">
