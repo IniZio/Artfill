@@ -583,14 +583,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     cursor: pointer;
     }
     .rf-bl.hoverrf-bl .avatar img {
-    /* width: 60px;
-    height: 60px;
-    max-width: 60px;
-    max-height: 60px; */
-    height:70px;
+    width: 5em;
+    height: 5em;
+    max-width: 5em;
+    max-height: 5em;
+    /* height:70px;
     width: 70px;
     max-height: 70px;
-    max-width: 70px;
+    max-width: 70px; */
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
