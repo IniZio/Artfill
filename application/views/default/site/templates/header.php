@@ -278,7 +278,7 @@ break;}
 
 							<li>
 
-								<a id="register" data-toggle="modal" href="#signin" onclick="javascript:$('#registerTab').trigger('click');"><span class="icon-text"><?php if ($this->lang->line('user_register') != '') {echo stripslashes($this->lang->line('user_register'));} else {
+								<a id="register" href="#signin" onclick="javascript:$('#registerTab').trigger('click');"><span class="icon-text"><?php if ($this->lang->line('user_register') != '') {echo stripslashes($this->lang->line('user_register'));} else {
             echo 'Register';
         }
         ?></span></a>
@@ -288,7 +288,7 @@ break;}
 
 							<li>
 
-								<a id="signin-icon" data-toggle="modal" href="#signin" onclick="javascript:$('#loginTab').trigger('click');"><span class="icon-text"><?php if ($this->lang->line('user_signin') != '') {echo stripslashes($this->lang->line('user_signin'));} else {
+								<a id="signin-icon"  href="#signin" onclick="javascript:$('#loginTab').trigger('click');"><span class="icon-text"><?php if ($this->lang->line('user_signin') != '') {echo stripslashes($this->lang->line('user_signin'));} else {
             echo 'Sign In';
         }
         ?></span></a>
