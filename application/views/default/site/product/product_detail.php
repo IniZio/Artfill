@@ -238,24 +238,24 @@ $this->load->view('site/templates/header');
 												<?php if ($loginCheck != '') {
 												?>
 												<?php if ($shopProductDetails[$i]['user_id'] == $loginCheck) {?>
-												<button data-toggle="modal" onclick="return ownProductFav();" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
-												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
+												<button id="cart_fav" data-toggle="modal" onclick="return ownProductFav();" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
+												<span id="fav" class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php
 												} else {
 												$favArr = $this->product_model->getUserFavoriteProductDetails(stripslashes($shopProductDetails[$i]['id']));
 												if (empty($favArr)) {?>
-												<button data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
-												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
+												<button id="cart_fav" data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
+												<span id="fav" class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php } else {?>
 												<?php echo "hshshshdhsdh"; ?>
-												<button data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Old',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
-												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
+												<button id="cart_fav" data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Old',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
+												<span id="fav" class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php }}} else {?>
-												<button data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
-												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
+												<button id="cart_fav" data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
+												<span id="fav" class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php }?>
 											</div>

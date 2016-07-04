@@ -3388,8 +3388,7 @@ else
             }
 			else
 			{
-				alert("login");
-				//$("#signin").modal('show');
+				$("#signin").modal();
 				//location.href = baseURL+'login?action='+json.next_url+'&redirect='+redirect;
 			}
         }
