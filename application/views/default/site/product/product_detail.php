@@ -127,7 +127,7 @@ $this->load->view('site/templates/header');
 						<?php if ($added_item_details[0]['user_id'] == $loginCheck) {?>
 						<a href="javascript:void(0);" onclick="return ownProductFav();">
 							<div class="btn-secondary">
-								<i class="fa fa-heart"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
+								<i id="prodfav" class="fa fa-heart"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
 								echo 'Favorite';
 								}
 								?>
@@ -140,7 +140,7 @@ $this->load->view('site/templates/header');
 						if (empty($favArr)) {
 						?>
 						<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($added_item_details[0]['id']); ?>','Fresh',this);">
-							<div class="btn-secondary"> <i class="fa fa-heart"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
+							<div class="btn-secondary"> <i id="prodfav" class="fa fa-heart"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
 								echo 'Favorite';
 								}
 							?></div>
@@ -148,7 +148,7 @@ $this->load->view('site/templates/header');
 						<?php } else {
 						?>
 						<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($added_item_details[0]['id']); ?>','Old',this);">
-							<div class="btn-secondary"> <i class="fav-icon-sel"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
+							<div class="btn-secondary"> <i id="prodfav" class="fav-icon-sel"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
 								echo 'Favorite';
 								}
 							?></div>
@@ -156,7 +156,7 @@ $this->load->view('site/templates/header');
 						<?php }}} else {
 						?>
 						<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($added_item_details[0]['id']); ?>','Fresh',this);">
-							<div class="btn-secondary"> <i class="fa fa-heart"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
+							<div class="btn-secondary"> <i id="prodfav" class="fa fa-heart"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
 								echo 'Favorite';
 								}
 							?></div>
@@ -239,23 +239,23 @@ $this->load->view('site/templates/header');
 												?>
 												<?php if ($shopProductDetails[$i]['user_id'] == $loginCheck) {?>
 												<button data-toggle="modal" onclick="return ownProductFav();" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
-												<span id="prodfav" class="icon"></span> <span class="ie-fix">&nbsp;</span>
+												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php
 												} else {
 												$favArr = $this->product_model->getUserFavoriteProductDetails(stripslashes($shopProductDetails[$i]['id']));
 												if (empty($favArr)) {?>
 												<button data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
-												<span id="prodfav" class="icon"></span> <span class="ie-fix">&nbsp;</span>
+												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php } else {?>
 												<?php echo "hshshshdhsdh"; ?>
 												<button data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Old',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
-												<span id="prodfav" class="icon"></span> <span class="ie-fix">&nbsp;</span>
+												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php }}} else {?>
 												<button data-toggle="modal" onclick="return changeProductToFavourite('<?php echo stripslashes($shopProductDetails[$i]['id']); ?>','Fresh',this);" class="btn-fave  inline-overlay-trigger btn-fave-action" type="button">
-												<span id="prodfav" class="icon"></span> <span class="ie-fix">&nbsp;</span>
+												<span class="icon"></span> <span class="ie-fix">&nbsp;</span>
 												</button>
 												<?php }?>
 											</div>
