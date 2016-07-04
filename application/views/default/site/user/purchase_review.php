@@ -124,11 +124,11 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 <!-- header_end -->
 <!-- section_start -->
 <div class="purchase_review container community_right">    	
-     <div class="main">    
-
+     <!-- <div class="main">     -->
+    <div>
      
             	<div class="all-purchase-search">
-        		<div class="top_list" style="width: 75%;margin: 0px;">
+        		<div class="col-md-7 top_list"> <!-- style="width: 75%;margin: 0px;"> -->
                 <ul style="width:auto;" class="listtypename">
                     <li class="first_list1 <?php if(!$this->uri->segment(2) && !isset($_GET['query'])){echo 'first_list first_list_seleted';}?>">
                         <a class="top_first_line" href="purchase-review"><?php if($this->lang->line('user_all_purchases') != '') { echo stripslashes($this->lang->line('user_all_purchases')); } else echo 'All Purchases'; ?> <?php if(!$this->uri->segment(2) && !isset($_GET['query'])){echo count($purchaseProducts);} ?></a>
@@ -167,7 +167,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
                 </ul>
       			</div>
                     
-                    <div class="purchase-search">
+                    <div class="col-md-5 purchase-search" style="float:inherit">
                         <div class="review-search-bar">
                         <form method="get" action="purchase-review">
                         	<input type="text" placeholder="<?php if($this->lang->line('user_ord_no') != '') { echo stripslashes($this->lang->line('user_ord_no')); } else echo 'Order Number'; ?>" name="query" id="query" value="<?php echo $this->input->get('query'); ?>" />

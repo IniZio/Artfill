@@ -2572,7 +2572,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=
 	line-height:16px;
 }
 .community_right {
-	float:left;
+	/* float:left; */
 	width:100%;
 	margin:10px 0 30px 0px;
 	background:#ffffff;
@@ -5022,7 +5022,7 @@ img {
 	color:#fff
 }
 .purchase_review {
-	float:left;
+	/* float:left; */
 	width:100%;
 	background:#ffffff;
 	/*padding:15px 0 !important;*/
@@ -5032,6 +5032,7 @@ img {
 	border: 1px solid #d7d7d4;
 	margin-bottom:0;
 	/*margin-top:25px;*/
+	margin: 0 auto;
 }
 .content-wrap-inner1
 {
@@ -10085,7 +10086,7 @@ span.arrow9 {
 	background: none repeat scroll 0 0 #F7F7F3;
 	border: 1px solid #ECECEC;
 	border-radius: 5px;
-	float: left !important;
+	/* float: left !important; */
 	margin-right: 15px;
 	padding: 10px;
 	width: 316px !important;
