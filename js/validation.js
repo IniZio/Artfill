@@ -3444,19 +3444,19 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 				if( type == 'Fresh'){
 					//alert("fave");
 					$(evt).attr('onclick',"changeProductToFavourite("+pid+",'Old',this)");
-					$(evt).find('.hoverfav_icon').addClass('hoverfav_icon1');
-					$(evt).find('.hoverfav_icon1').removeClass('hoverfav_icon');
+					//$(evt).find('.hoverfav_icon').addClass('hoverfav_icon1');
+					//$(evt).find('.hoverfav_icon1').removeClass('hoverfav_icon');
 					//alert($('.fav_change').text());
 					if($('.fav_change').text() != ""){
 						//alert("sdffsd");
-						$(evt).text(lg_remove_from_fav);
+						$('.fav_change').text(lg_remove_from_fav);
 					}
 				}
 				else if( type == 'Old')
 				{
 					$(evt).attr('onclick',"changeProductToFavourite("+pid+",'Fresh',this)");
-					$(evt).find('.hoverfav_icon1').addClass('hoverfav_icon');
-					$(evt).find('.hoverfav_icon').removeClass('hoverfav_icon1');
+					//$(evt).find('.hoverfav_icon1').addClass('hoverfav_icon');
+					//$(evt).find('.hoverfav_icon').removeClass('hoverfav_icon1');
 					if($('.fav_change').text() != ""){
 						//alert("sdffsd");
 						$(evt).text(lg_add_to_fav);
