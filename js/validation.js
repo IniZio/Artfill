@@ -1283,7 +1283,7 @@ function loginVal(evt){
 					l.stop();
 
                 } else {
-                	$("#loginloadErr").style.color="green";
+                	$("#loginloadErr").css("color", "green");
                 	$("#loginloadErr").html('登錄成功!');
 					$('#loginloadErr').show();
                 	$(evt).attr('action', 'site/user/login_user');
