@@ -547,7 +547,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     transition: 0.15s;
     box-shadow: 0 0 5px #e1e1e1;
     position: relative;
-    padding-top: 0;
+    padding-top: 5px;
     overflow: hidden;
     text-align: left;
     /* background-color: rgba(214, 224, 226, 0.2); */
