@@ -3366,7 +3366,7 @@ else
 		data:{'shopid':shopid,'type':type},
 		dataType : 'json',
 		success: function(json){
-
+	
 			if (json.status_code == 2){ 
 				$('#alert_ownshopfav').trigger('click');
 			}  else if(json.status_code == 1) {
@@ -3434,7 +3434,7 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 		data:{'pid':pid,'type':type},
         dataType : 'json',
 		success: function(json){
-			//alert(json);
+			alert(json);
 			if (json.status_code == 2){
 				//$(".ownproductfav-popup").colorbox({width:"350px", height:"auto", open:true,inline:true, href:"#alert_ownproductfav"});
 				$('#ownProdFavAlertCommonlink').trigger('click');
