@@ -3468,14 +3468,12 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 					   //alert("fav");
 					   //$('#fav').hasClass('fav-icon-sel')
 					   $('#prodfav').removeClass('fav-icon-sel');
-					   $('#prodfav').addClass('fa');
-					   $('#prodfav').addClass('fa-heart');
+					   $('#prodfav').addClass('fa fa-heart');
 					   
 					}else{
 					   //alert("Unfav");
 					   //$('#fav').hasClass('fa fa-heart')
-					   $('#prodfav').removeClass('fa');
-					   $('#prodfav').removeClass('fa-heart');
+					   $('#prodfav').removeClass('fa fa-heart');
 					   $('#prodfav').addClass('fav-icon-sel');
 					}
 				
