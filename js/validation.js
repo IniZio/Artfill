@@ -3449,7 +3449,7 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 					//alert($('.fav_change').text());
 					if($('.fav_change').text() != ""){
 						//alert("sdffsd");
-						$('evt').text(lg_remove_from_fav);
+						$(evt).text(lg_remove_from_fav);
 					}
 				}
 				else if( type == 'Old')
