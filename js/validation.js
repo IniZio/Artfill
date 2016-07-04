@@ -3388,7 +3388,7 @@ else
             }
 			else
 			{
-				$("#signin").modal();
+				$("#signin").modal('show');
 				//location.href = baseURL+'login?action='+json.next_url+'&redirect='+redirect;
 			}
         }
@@ -3478,7 +3478,7 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 					}
 				
             } else {
-				//$("#signin").modal();
+				$("#signin").modal();
 				//window.location.href = baseURL+'login?action='+json.next_url+'&redirect='+redirect;
 			}
 		},
