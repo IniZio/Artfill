@@ -3465,16 +3465,16 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 				
 				
 				if ( $('#prodfav').hasClass('fav-icon-sel') ){
-					   //alert("fav");
+					   //alert("Unfav");
 					   //$('#fav').hasClass('fav-icon-sel')
 					   $('#prodfav').addClass('fa fa-heart');
 					   $('#prodfav').removeClass('fav-icon-sel');
 					   
 					}else{
-					   //alert("Unfav");
+					   //alert("fav");
 					   //$('#fav').hasClass('fa fa-heart')
-					   $('#prodfav').removeClass('fa fa-heart');
 					   $('#prodfav').addClass('fav-icon-sel');
+					   $('#prodfav').removeClass('fa fa-heart');
 					}
 				
             } else {
