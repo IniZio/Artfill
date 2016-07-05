@@ -4686,7 +4686,7 @@ $message.='</td>
 						}
 					}
 					}
-					echo "finished";
+					// echo "finished";
 				$returnStr['status_code'] = 1;
 				$returnStr['fav'] = 1;
 				
