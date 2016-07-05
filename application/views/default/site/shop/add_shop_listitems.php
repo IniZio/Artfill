@@ -611,7 +611,7 @@ $('#sidenav').hide();
 				
 				<div class="col-lg-12 variation_wrapper_list">
 				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-2 control-label"><?php if($this->lang->line('ask_for_variation') != '') { echo stripslashes($this->lang->line('ask_for_variation')); } else echo 'Add a Variation'; ?></label>
+					<label for="inputEmail3" class="col-sm-2 control-label"><?php if($this->lang->line('ask_for_variation') != '') { echo stripslashes(af_lg("ask_for_variation", "加入特徵")); } else echo 'Add a Variation'; ?></label>
 					<p id="have_scalling" style="display:none;"></p>					
 					<div class="col-md-10 col-sm-12">
 					<select id="property_level" class="vari_option" name="property_level">
@@ -667,7 +667,7 @@ $('#sidenav').hide();
 				</div>
 
 				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-2 control-label"><?php if($this->lang->line('ask_for_variation') != '') { echo stripslashes($this->lang->line('ask_for_variation')); } else echo 'Add a Variation'; ?></label>
+					<label for="inputEmail3" class="col-sm-2 control-label"><?php if($this->lang->line('ask_for_variation') != '') { echo stripslashes(af_lg("ask_for_variation", "加入特徵")); } else echo 'Add a Variation'; ?></label>
 					<p id="have_scalling1" style="display:none;"></p>
 					<div class="col-md-10 col-sm-12">
 					<div class="list_inner_right list_small_width" id="variations_level_div1"></div>
