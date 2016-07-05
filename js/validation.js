@@ -3488,7 +3488,7 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 	});
 }
 function ownProductFav(){
-	$('#ownProdFavAlertCommonlink').click();
+	document.getElementById('ownProdFavAlertCommonlink').click();
 }
 /*-----------------------Script for product detail page------------------------------------*/
 
