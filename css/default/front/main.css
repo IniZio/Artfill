@@ -15,7 +15,8 @@ html, body {
 	vertical-align:baseline;
 	background:transparent;
 	color:#999999;
-	font:14px Georgia, "Times New Roman", Times, serif;
+	font:14px;
+    font-family: Georgia, "Times New Roman", Times, serif, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
 }
 body {
 	line-height:1;
@@ -40,6 +41,7 @@ a {
 	font-size:100%;
 	vertical-align:baseline;
 	background:transparent;
+    font-family: "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
 }
 /*a:link, a:visited {
 	color: #0192b5;
