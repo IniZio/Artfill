@@ -4729,8 +4729,8 @@ $message.='</td>
 						$dataArr = array('likes'=>$likes);
 						$condition = array('id'=>$pid);
 						$this->user_model->update_details(PRODUCT,$dataArr,$condition);					
-						#$returnStr['status_code'] = 1;
-						$returnStr['fav'] = 0;
+						$returnStr['status_code'] = 1;
+						$returnStr['fav'] = 1;
 					}
 					$this->user_model->product_fav_delete($userid,$pid);
 					if($this->lang->line('product_remove_fav') != '') { $product_remove_fav= stripslashes($this->lang->line('product_remove_fav')); } else { $product_remove_fav = "Product Removed from Favorite List!"; }
