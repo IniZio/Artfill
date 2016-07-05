@@ -125,7 +125,7 @@ $this->load->view('site/templates/header');
 						<?php if ($loginCheck != '') {
 						?>
 						<?php if ($added_item_details[0]['user_id'] == $loginCheck) {?>
-						<a href="javascript:void(0);" onclick="return ownProductFav();">
+						<a href="javascript:void(0);" onclick="changeProductToFavourite('<?php echo stripslashes($added_item_details[0]['id']); ?>','Fresh',this);">
 							<div class="btn-secondary">
 								<i id="prodfav" class="fa fa-heart"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
 								echo 'Favorite';
