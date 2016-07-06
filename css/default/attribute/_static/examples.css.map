@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAiB,CACf,UAAU,CAAE,CAAC,CAGf,EAAG,CACD,aAAa,CAAE,IAAI,CAGrB,SAAU,CACR,OAAO,CAAE,CAAC,CAGZ,OAAQ,CACN,OAAO,CAAE,QAAQ,CAGnB,gBAAiB,CACf,KAAK,CAAE,IAAI,CACX,UAAU,CAAE,IAAI,CAChB,aAAa,CAAE,IAAI,CAGrB,aAAc,CACZ,OAAO,CAAE,KAAK,CACd,WAAW,CAAE,IAAI,CACjB,aAAa,CAAE,GAAG,CAGpB,iBAAkB,CAChB,SAAS,CAAE,IAAI",
+"sources": ["../../../../scss/default/attribute/_static/examples.scss"],
+"names": [],
+"file": "examples.css"
+}

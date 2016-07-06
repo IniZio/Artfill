@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'buttonColor'.
-        on line 39 of scss/ladda-theme.scss, in `buttonColor'
-        from line 39 of scss/ladda-theme.scss
+        on line 35 of scss/ladda-theme.scss, in `buttonColor'
+        from line 35 of scss/ladda-theme.scss
 
-34: 	&:hover {
-35: 		border-color: rgba( 0, 0, 0, 0.07 );
-36: 		background-color: #888;
-37: 	}
+30:   &:hover {
+31:     border-color: rgba(0, 0, 0, 0.07);
+32:     background-color: #888;
+33:   }
+34: 
+35:   @include buttonColor("green", $green);
+36: 
+37:   @include buttonColor("blue", $blue);
 38: 
-39: 	@include buttonColor( 'green', $green );
-40: 	@include buttonColor( 'blue', $blue );
-41: 	@include buttonColor( 'red', $red );
-42: 	@include buttonColor( 'purple', $purple );
-43: 	@include buttonColor( 'mint', $mint );
-44: 
+39:   @include buttonColor("red", $red);
+40: 
 
 Backtrace:
-scss/ladda-theme.scss:39:in `buttonColor'
-scss/ladda-theme.scss:39
+scss/ladda-theme.scss:35:in `buttonColor'
+scss/ladda-theme.scss:35
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
@@ -72,4 +72,4 @@ C:/Ruby23-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'buttonColor'.\A         on line 39 of scss/ladda-theme.scss, in `buttonColor'\A         from line 39 of scss/ladda-theme.scss\A \A 34: 	&:hover {\A 35: 		border-color: rgba( 0, 0, 0, 0.07 );\A 36: 		background-color: #888;\A 37: 	}\A 38: \A 39: 	@include buttonColor( 'green', $green );\A 40: 	@include buttonColor( 'blue', $blue );\A 41: 	@include buttonColor( 'red', $red );\A 42: 	@include buttonColor( 'purple', $purple );\A 43: 	@include buttonColor( 'mint', $mint );\A 44: "; }
+  content: "Error: Undefined mixin 'buttonColor'.\A         on line 35 of scss/ladda-theme.scss, in `buttonColor'\A         from line 35 of scss/ladda-theme.scss\A \A 30:   &:hover {\A 31:     border-color: rgba(0, 0, 0, 0.07);\A 32:     background-color: #888;\A 33:   }\A 34: \A 35:   @include buttonColor(\"green\", $green);\A 36: \A 37:   @include buttonColor(\"blue\", $blue);\A 38: \A 39:   @include buttonColor(\"red\", $red);\A 40: "; }
