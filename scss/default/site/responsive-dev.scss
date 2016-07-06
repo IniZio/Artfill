@@ -1,0 +1,118 @@
+/* Getting the new tags to behave */
+.bread_crumbs
+{
+	float:left;
+	width:100%;
+	/*border-bottom:1px solid #EEEEEE;*/
+	padding: 15px 0;
+}
+
+/* Sign Page*/
+.sign_in_container {
+    margin: 0 auto;
+    padding-top: 21px;
+    width: 665px;
+}
+
+.sign_in_form {
+    background-color: #EDEDE7;
+    border-radius: 5px;
+	float:left;
+	   margin: 0 0 20px;
+    padding: 4px;
+}
+
+.sign_in_form-inner{
+    background-color: #FFFFFF;
+    border: 1px solid #DADCDC;
+    border-radius: 5px;
+	clear: both;
+    content: ".";
+	float:left;
+    display: block;
+	 padding: 0 0 25px;
+  
+}
+
+.sign_head{
+    background-color: #F5F5F1;
+    border-bottom: 1px solid #DFE1E1;
+    border-radius: 5px 5px 0 0;
+    border-top: 1px solid #FFFFFF;
+    /*float: left;*/
+    margin: 0;
+    padding: 25px 21px 28px;
+}
+
+
+
+.sign_head .fb_div{margin:0; float:right}
+
+.sign_head .button-faceb{margin:0;}
+
+.sign_head h2{
+    color: #444444;
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 26px;
+    width: 543px;
+}
+
+.sign_head .sign_text{/*float:left;*/ width:30%;}
+
+.sign_in_form .popup_login label{
+    float: left;
+    font-size: 13px;
+    margin: 0 0 5px;
+    width: 21%;
+}
+
+.sign_in_form  .search{border-radius:0px;width: 57%;}
+
+.sign_div{float:right;font-size:16px; line-height:18px;}
+.sign_div a:hover{text-decoration:underline;}
+
+.register_container{float:left}
+
+.register_container .popup_login label{width:100%;}
+
+.register_container .popup_login{width:90%;}
+
+.register_container .search {
+ 
+    width: 37%;
+}
+
+.register_container .sign_in_form .search {
+    border-radius: 0;
+    width: 36%;
+}
+
+.sign_in_form .popup_login .search {
+    border-radius: 0;
+    width: 35%;
+}
+
+
+
+.input_tresury label.shoplocal-title {
+    float: left;
+    font-size: 18px;
+    padding-bottom: 4px;
+
+}
+
+.sub_title{
+    color: #808080;
+    float: right;
+    font-size: 10px;
+    margin-right: 51px;
+}
+
+.button_search{float:left; margin:20px 0 0 0;}
+
+.button_search .btn-primary {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 11px;
+}

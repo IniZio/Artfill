@@ -6,3 +6,4 @@ sitemap/settings/files.inc.php
 logs/*
 .phpintel/*
 application/logs/*
+.sass-cache/*
