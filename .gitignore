@@ -7,3 +7,4 @@ logs/*
 .phpintel/*
 application/logs/*
 .sass-cache/*
+.phpintel/index/*

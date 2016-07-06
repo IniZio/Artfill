@@ -128,7 +128,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
     <div>
      
             	<div class="all-purchase-search">
-        		<div class="col-md-7 top_list"> <!-- style="width: 75%;margin: 0px;"> -->
+        		<div class="col-md-9"> <!-- style="width: 75%;margin: 0px;"> -->
                 <ul style="width:auto;" class="listtypename">
                     <li class="first_list1 <?php if(!$this->uri->segment(2) && !isset($_GET['query'])){echo 'first_list first_list_seleted';}?>">
                         <a class="top_first_line" href="purchase-review"><?php if($this->lang->line('user_all_purchases') != '') { echo stripslashes($this->lang->line('user_all_purchases')); } else echo 'All Purchases'; ?> <?php if(!$this->uri->segment(2) && !isset($_GET['query'])){echo count($purchaseProducts);} ?></a>
