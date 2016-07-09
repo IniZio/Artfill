@@ -655,13 +655,14 @@ header {
 }
 
 .rf-bl.hoverrf-bl {
+  border-top: #8FD6D2 3px solid;
   -webkit-transition: 0.15s;
 
   /* Safari */
   transition: 0.15s;
   box-shadow: 0 0 5px #e1e1e1;
   position: relative;
-  padding-top: 5px;
+  padding-top: 4px;
   overflow: hidden;
   text-align: left;
 
@@ -677,10 +678,14 @@ header {
   /* outline: 1px solid #ddd; */
 }
 
-.rf-bl.hoverrf-bl:active, .rf-bl.hoverrf-bl.active, .rf-bl.hoverrf-bl:hover, .rf-bl.hoverrf-bl.hover {
-  box-shadow: 0 0 8px #d1d1d1;
+.rf-bl.hoverrf-bl:hover, .rf-bl.hoverrf-bl.hover {
+  box-shadow: 0 0 8px #c1c1c1;
 
   /* box-shadow: 0 0 5px #e3e3e3; */
+}
+.rf-bl.hoverrf-bl:active, .rf-bl.hoverrf-bl.active{
+  box-shadow: 0 0 8px grey;
+
 }
 
 .rf-bl.hoverrf-bl .rf-blheader img {

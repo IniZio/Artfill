@@ -712,7 +712,7 @@ $p++;
 					}
 				</style>
 						<div class="col-md-3 col-xs-3 hidden-sm hidden-xs" style="text-align: left;">
-							<span style="color:#c5c6c6;font-size:150%;">熱門搜尋﹕</span>
+							<span style="color:#c5c6c6;font-size:120%;">熱門搜尋﹕</span>
 							<a href="<?php echo base_url(); ?>./search/all?item=陶瓷"><span class="hot">陶瓷</span></a>
 							<a href="<?php echo base_url(); ?>./search/all?item=花瓶"><span class="hot">花瓶</span></a>
 							<a href="<?php echo base_url(); ?>./search/all?item=頸鍊"><span class="hot">頸鍊</span></a>

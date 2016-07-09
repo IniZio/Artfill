@@ -509,7 +509,7 @@ for ($i = 0; $i < count($recent_product_details->result()); $i++) {
 $img = explode(',', $recent_product_details->row($i)->image);
 ?>
 					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" style="padding:5px">
-						<div class=" rf-bl hoverrf-bl">
+						<div class=" rf-bl hoverrf-bl" onclick="location.href='products/<?php echo $recent_product_details->row($i)->product_seourl; ?>'";>
 							<div class="rf-blheader">
 								<div class="carousel slide" data-ride="carousel" id="<?php echo 'productCarousel' . $i; ?>">
 									<!-- Wrapper for slides -->
@@ -675,7 +675,8 @@ $img = explode(',', $recent_product_details->row($i)->image);
 						});
 						</script>
 						<script>
-        $('.avatar').click(function(){
+        $('.avatar').click(function(event){
+        	event.stopPropagation();
     if ($(this).next('.info').css('display') == 'block'){
     $(this).next('.info').css('display', 'none');
     $(this).next('.info').next('.info').addClass('animated fadeIn');
