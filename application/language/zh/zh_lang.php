@@ -1348,4 +1348,5 @@ $lang['shop_digitalitems']='添加買家誰購買數字商品的說明';
 $lang['shop_photos']='照片'; 
 $lang['shop_addphotos']='上傳照片'; 
 $lang['shop_note']='注：標準圖像尺寸為550×350像素'; 
-$lang['shop_description']='描述';  ?>
+$lang['shop_description']='描述';
+$lang['remove_from_favorites_cart']='從我的最愛刪除';   ?>
