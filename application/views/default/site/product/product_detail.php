@@ -220,7 +220,7 @@ $this->load->view('site/templates/header');
 									<?php }}?>
 								</div>
 								<?php if (count($shopProductDetails) < 4) {$c = count($shopProductDetails);} else { $c = 4;}
-								for ($i = 0; $i < $c; $i++) {
+								for ($i = 0; $i < 2; $i++) {
 								$imgArry = explode(',', $shopProductDetails[$i]['image']);
 								if ($shopProductDetails[$i]['price'] != 0) {$price = $currencyValue * $shopProductDetails[$i]['price'];} else { $price = $currencyValue * $shopProductDetails[$i]['base_price'] . '+';}
 								?>
