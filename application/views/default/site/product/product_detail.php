@@ -1120,12 +1120,10 @@ if ($product_list->num_rows() > 0) {
 												                    $favArr = $this->product_model->getUserFavoriteProductDetails(stripslashes($proddetails['id']));
 												                    #print_r($favArr); die;
 												if (empty($favArr)) {?>
-												<script>alert('<?php echo $favArr;?>');</script>
 												<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($proddetails['id']); ?>','Fresh',this);">
 													                                            <input type="submit" value="" class="hoverfav_icon" />
 												                                        </a>
 												<?php } else {?>
-												<script>alert('<?php echo $favArr;?>');</script>
 												<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($proddetails['id']); ?>','Old',this);">
 													                                            <input type="submit" value="" class="hoverfav_icon1" />
 												                                        </a>
