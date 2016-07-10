@@ -829,7 +829,7 @@ $CartValue.='
 																
 															} else {
 																if($digital_item == 'No'){										
-																	$UserCartValue.='<div class="error_message">This product is out of stack now, please contact shop owner.</div>';
+																	$UserCartValue.='<div class="error_message">此貨品缺貨，請聯絡店主。</div>';
 																	$UserCartShow = 1;											
 																}
 															}																
