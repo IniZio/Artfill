@@ -829,6 +829,7 @@ if ($CurrUserImg != '') {
             echo 'Reviews';
         }
         ?></a></li>
+		<!--
 									<li><a href="disputes"><?php if ($this->lang->line('lg_disputes') != '') {echo stripslashes($this->lang->line('lg_disputes'));} else {
             echo 'Disputes';
         }
@@ -837,6 +838,7 @@ if ($CurrUserImg != '') {
             echo 'Manage Community';
         }
         ?></a></li>
+		-->
 									<li><a href="public-profile"><?php if ($this->lang->line('user_pub_profile') != '') {echo stripslashes($this->lang->line('user_pub_profile'));} else {
             echo 'Public Profile';
         }
