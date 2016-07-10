@@ -818,6 +818,7 @@ $this->load->view('site/templates/header');
 <div class="col-md-7" style="width:100%;">
 	<div role="tabpanel" class="tab-content">
 		<!-- Nav tabs -->
+		<!--
 		<ul class="nav nav-tabs cart-tabs" role="tablist">
 			<li role="presentation" class="active">
 				<a href="#itemdetails" aria-controls="itemdetails" role="tab" data-toggle="tab"><?php if ($this->lang->line('shop_itemdetails') != '') {echo stripslashes($this->lang->line('shop_itemdetails'));} else {
@@ -859,6 +860,7 @@ $this->load->view('site/templates/header');
 					</a>
 				</li>
 			        </ul>
+					-->
 			<!-- Tab panes -->
 			        <div class="tab-content cart-content">
 				            <div role="tabpanel" class="tab-pane fade in active" id="itemdetails">
