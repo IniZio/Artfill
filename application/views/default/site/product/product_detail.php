@@ -527,12 +527,14 @@ $this->load->view('site/templates/header');
 					echo 'views';
 					}
 				?> </li>
+				<!--
 				<li>
 					<a href="product/<?php echo $added_item_details[0]['seourl']; ?>/favoriters"> <?php echo count($ProductFavoriteCount); ?> <?php if ($this->lang->line('user_favorites') != '') {echo stripslashes($this->lang->line('user_favorites'));} else {
 						echo 'Favorites';
 						}
 					?> </a>
 				</li>
+				-->
 				<?php /* <li> <a href="#"> 1 Treasury list </a> </li>
 				<li id="add-treasury-item"> <a href="#" class="inline-overlay-trigger"> Add item to treasury </a> </li> */?>
 				<!--
