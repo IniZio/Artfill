@@ -865,11 +865,13 @@ $CartValue.='
 																}
 $UserCartValue.='
 </ul></div>';
+/*
 if($UserCartRow->prod_pickup == 'delivery-collecion'){
 	$UserCartValue.='<span style="float:left; width:150px; font-weight:bold;">'.af_lg('pickup','Pickup').': delivery or collection</span>';
 }else{
 	$UserCartValue.='<span style="float:left; width:150px; font-weight:bold;">'.af_lg('pickup','Pickup').':'.$UserCartRow->prod_pickup.' Only</span>';
 }
+*/
 $UserCartValue.='</div>';
 																		
 																$UsercartAmt = $UsercartAmt + ($UserCartRow->price * $UserCartRow->quantity);
