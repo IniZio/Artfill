@@ -852,6 +852,7 @@ $this->load->view('site/templates/header');
 						?>)
 					</a>
 				 </li>
+				 <!--
 				<li role="presentation">
 					<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><?php if ($this->lang->line('shop_shippingpolicy') != '') {echo stripslashes($this->lang->line('shop_shippingpolicy'));} else {
 						    echo 'Shipping & Policies';
@@ -859,6 +860,7 @@ $this->load->view('site/templates/header');
 						?>
 					</a>
 				</li>
+				-->
 			        </ul>
 			<!-- Tab panes -->
 			        <div class="tab-content cart-content">
@@ -929,6 +931,7 @@ $this->load->view('site/templates/header');
 							</div>
 							<?php }?>
 						            </div>
+									<!--
 						             <div role="tabpanel" class="tab-pane fade" id="messages">
 							                 <div class="shipping-tab">
 								<h4 class="processing-time"> <?php if ($this->lang->line('prod_payment') != '') {echo stripslashes($this->lang->line('prod_payment'));} else {
@@ -1073,6 +1076,7 @@ $this->load->view('site/templates/header');
 								<?php }?>
 							            </div>
 						          </div>
+								  -->
 					        </div>
 				      </div>
 			    </div>
