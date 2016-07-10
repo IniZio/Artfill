@@ -764,7 +764,7 @@ $p++;
 							<?php if ($this->session->userdata['shopsy_session_user_name'] != '') {
         ?>
 							<li>
-								<a class="dropdown-toggle browse" data-toggle="dropdown"><img src="./images/user-silhouette.png" style="width:20px;" /><span style=" font-weight: bold;font-size:120%;margin-left:5px;vertical-align: middle;">你好，<?php echo $this->session->userdata['shopsy_session_user_name']; ?></span></a>
+								<a class="dropdown-toggle browse" data-toggle="dropdown"><img src="./images/user-silhouette.png" style="width:20px;" /><span style=" font-weight: bold;font-size:120%;margin-left:5px;vertical-align: middle;"><?php echo $this->session->userdata['shopsy_session_user_name']; ?></span></a>
 
 								<ul class="dropdown-menu browse-nav-inner showlist2" role="you">
 											<span class="menuarrow"></span>
