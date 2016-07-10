@@ -185,7 +185,7 @@ class Cart_model extends My_Model
 		$cart_fillCart = af_lg('cart_fillcart','Let`s fill that cart, shall we?');
 		$cart_urShopCart = af_lg('cart_urshopcart', 'Your Shopping Cart');
 		$Move_to_favorite = af_lg('move_to_favorite_cart', 'Add To favorite');
-		$Remove_from_favorites = af_lg('remove_from_favorites_cart','Remove from favorites');
+		$Remove_from_favorites = af_lg('remove_from_favorites_cart','從我的最愛刪除');
 		$pickup = af_lg('local_collection', '本地接收');
 
 		/*End Language Translation*/
