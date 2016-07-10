@@ -185,7 +185,7 @@ class Cart_model extends My_Model
 		$cart_fillCart = af_lg('cart_fillcart','Let`s fill that cart, shall we?');
 		$cart_urShopCart = af_lg('cart_urshopcart', 'Your Shopping Cart');
 		$Move_to_favorite = af_lg('move_to_favorite_cart', 'Add To favorite');
-		$Remove_from_favorites = af_lg('remove_from_favorites_cart','Remove from favorites');
+		$Remove_from_favorites = af_lg('remove_from_favorites_cart','從我的最愛刪除');
 		$pickup = af_lg('local_collection', '本地接收');
 
 		/*End Language Translation*/
@@ -829,7 +829,7 @@ $CartValue.='
 																
 															} else {
 																if($digital_item == 'No'){										
-																	$UserCartValue.='<div class="error_message">This product is out of stack now, please contact shop owner.</div>';
+																	$UserCartValue.='<div class="error_message">此貨品缺貨，請聯絡店主。</div>';
 																	$UserCartShow = 1;											
 																}
 															}																
@@ -865,11 +865,13 @@ $CartValue.='
 																}
 $UserCartValue.='
 </ul></div>';
+/*
 if($UserCartRow->prod_pickup == 'delivery-collecion'){
 	$UserCartValue.='<span style="float:left; width:150px; font-weight:bold;">'.af_lg('pickup','Pickup').': delivery or collection</span>';
 }else{
 	$UserCartValue.='<span style="float:left; width:150px; font-weight:bold;">'.af_lg('pickup','Pickup').':'.$UserCartRow->prod_pickup.' Only</span>';
 }
+*/
 $UserCartValue.='</div>';
 																		
 																$UsercartAmt = $UsercartAmt + ($UserCartRow->price * $UserCartRow->quantity);

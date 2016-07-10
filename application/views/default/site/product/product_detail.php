@@ -527,12 +527,14 @@ $this->load->view('site/templates/header');
 					echo 'views';
 					}
 				?> </li>
+				<!--
 				<li>
 					<a href="product/<?php echo $added_item_details[0]['seourl']; ?>/favoriters"> <?php echo count($ProductFavoriteCount); ?> <?php if ($this->lang->line('user_favorites') != '') {echo stripslashes($this->lang->line('user_favorites'));} else {
 						echo 'Favorites';
 						}
 					?> </a>
 				</li>
+				-->
 				<?php /* <li> <a href="#"> 1 Treasury list </a> </li>
 				<li id="add-treasury-item"> <a href="#" class="inline-overlay-trigger"> Add item to treasury </a> </li> */?>
 				<!--
@@ -816,6 +818,7 @@ $this->load->view('site/templates/header');
 <div class="col-md-7" style="width:100%;">
 	<div role="tabpanel" class="tab-content">
 		<!-- Nav tabs -->
+		
 		<ul class="nav nav-tabs cart-tabs" role="tablist">
 			<li role="presentation" class="active">
 				<a href="#itemdetails" aria-controls="itemdetails" role="tab" data-toggle="tab"><?php if ($this->lang->line('shop_itemdetails') != '') {echo stripslashes($this->lang->line('shop_itemdetails'));} else {
@@ -849,6 +852,7 @@ $this->load->view('site/templates/header');
 						?>)
 					</a>
 				 </li>
+				 <!--
 				<li role="presentation">
 					<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><?php if ($this->lang->line('shop_shippingpolicy') != '') {echo stripslashes($this->lang->line('shop_shippingpolicy'));} else {
 						    echo 'Shipping & Policies';
@@ -856,6 +860,7 @@ $this->load->view('site/templates/header');
 						?>
 					</a>
 				</li>
+				-->
 			        </ul>
 			<!-- Tab panes -->
 			        <div class="tab-content cart-content">
@@ -926,6 +931,7 @@ $this->load->view('site/templates/header');
 							</div>
 							<?php }?>
 						            </div>
+									<!--
 						             <div role="tabpanel" class="tab-pane fade" id="messages">
 							                 <div class="shipping-tab">
 								<h4 class="processing-time"> <?php if ($this->lang->line('prod_payment') != '') {echo stripslashes($this->lang->line('prod_payment'));} else {
@@ -1070,6 +1076,7 @@ $this->load->view('site/templates/header');
 								<?php }?>
 							            </div>
 						          </div>
+								  -->
 					        </div>
 				      </div>
 			    </div>
@@ -1111,10 +1118,12 @@ if ($product_list->num_rows() > 0) {
 												                    $favArr = $this->product_model->getUserFavoriteProductDetails(stripslashes($proddetails['id']));
 												                    #print_r($favArr); die;
 												if (empty($favArr)) {?>
+												<script>alert(<?=$favArr?>)</script>
 												<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($proddetails['id']); ?>','Fresh',this);">
 													                                            <input type="submit" value="" class="hoverfav_icon" />
 												                                        </a>
 												<?php } else {?>
+												<script>alert(<?=$favArr?>)</script>
 												<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($proddetails['id']); ?>','Old',this);">
 													                                            <input type="submit" value="" class="hoverfav_icon1" />
 												                                        </a>
