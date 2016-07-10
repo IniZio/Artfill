@@ -1082,7 +1082,7 @@ if($innerSub[$i]['sub_mega_menu'] == "Yes"){
                     
                     <?php if($this->session->userdata['shopsy_session_user_name'] != ''){ ?>
                     <li class="page-scroll">
-                    	<a href="public-profile"><?php echo af_lg('landing_view_profile','個人檔案'); ?></a>
+                    	<a href="public-profile">檢查個人檔案</a>
                     </li>
                     <li class="page-scroll">
                     	<a href="activity">動態消息</a>
@@ -1107,12 +1107,14 @@ if($innerSub[$i]['sub_mega_menu'] == "Yes"){
                     <li class="page-scroll">
                     	<a href="reviews">評價</a>
                     </li>
+					<!--
                     <li class="page-scroll">
                     	<a href="disputes">糾紛</a>
                     </li>
                     <li class="page-scroll">
                     	<a href="manage-community">管理社區</a>
                     </li>
+					-->
                     <li class="page-scroll">
                     	<a href="public-profile">公開個人檔案</a>
                     </li>
