@@ -535,6 +535,7 @@ $this->load->view('site/templates/header');
 				</li>
 				<?php /* <li> <a href="#"> 1 Treasury list </a> </li>
 				<li id="add-treasury-item"> <a href="#" class="inline-overlay-trigger"> Add item to treasury </a> </li> */?>
+				<!--
 				<li id="item-reporter">
 					<div id="reporter-link-container">
 						<?php if ($this->session->userdata['shopsy_session_user_id'] != '') {
@@ -560,6 +561,7 @@ $this->load->view('site/templates/header');
 					</div>
 					<div id="reporter-complete-container"> </div>
 				</li>
+				-->
 			</ul>
 		</div>
 						
