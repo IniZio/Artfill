@@ -139,7 +139,6 @@ $this->load->view('site/templates/header');
 						#print_r($favArr); die;
 						if (empty($favArr)) {
 						?>
-												<script>alert('No<?php echo $favArr;?>');</script>
 						<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($added_item_details[0]['id']); ?>','Fresh',this);">
 							<div class="btn-secondary"> <i id="prodfav" class="fa fa-heart"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
 								echo 'Favorite';
@@ -148,7 +147,6 @@ $this->load->view('site/templates/header');
 						</a>
 						<?php } else {
 						?>
-												<script>alert('Yes<?php echo $favArr;?>');</script>
 						<a href="javascript:void(0);" onclick="return changeProductToFavourite('<?php echo stripslashes($added_item_details[0]['id']); ?>','Old',this);">
 							<div class="btn-secondary"> <i id="prodfav" class="fav-icon-sel"></i><?php if ($this->lang->line('user_favorite') != '') {echo stripslashes($this->lang->line('user_favorite'));} else {
 								echo 'Favorite';
