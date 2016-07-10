@@ -209,6 +209,7 @@ $(document).ready(function() {
 
 				?>
 
+                <?php if(!empty($favArr)) { ?>
                     <li class="activity small-wid <?php echo $cls; ?>">
 
                         <div class="activity-desc">
@@ -227,7 +228,7 @@ $(document).ready(function() {
 						<?php $favArr = $this->product_model->getUserFavoriteProductDetails($productDetail->id); ?>
                             <p class="activity-name">
 
-                               <?php if($userProfileDetails[0]['id']!=$loginCheck){ echo $userProfileDetails[0]['user_name']; } else { echo 'You';} ?>
+                               <?php if($userProfileDetails[0]['id']!=$loginCheck){ echo $userProfileDetails[0]['user_name']; } else { echo '您';} ?>
 									
                                		<?php if(!empty($favArr)) { if($this->lang->line('favorited') != '') { echo stripslashes($this->lang->line('favorited')); } else echo "favorited"; }  else { if($this->lang->line('unfavorited') != '') { echo stripslashes($this->lang->line('unfavorited')); } else echo "Unfavorited";} ?>
 
@@ -343,6 +344,7 @@ $(document).ready(function() {
                         </div>
 
                     </li> 
+                    <?php } ?>
 
                 <?php }else if($actFav['activity_name']=='Unfavorite shop' || $actFav['activity_name']=='favorite shop') {  ?>                
 
