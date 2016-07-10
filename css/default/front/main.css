@@ -540,6 +540,7 @@ header {
   box-sizing: border-box; }
 
 .rf-bl.hoverrf-bl {
+  z-index: 100;
   border-top: #8FD6D2 3px solid;
   -webkit-transition: 0.15s;
   /* Safari */
@@ -585,6 +586,7 @@ header {
   cursor: pointer; }
 
 .rf-bl.hoverrf-bl .avatar img {
+  z-index: 101;
   width: 5em;
   height: 5em;
   max-width: 5em;
