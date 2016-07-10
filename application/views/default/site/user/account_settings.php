@@ -35,7 +35,7 @@ $this->load->model('user_model');
             <div class="community_page">
                 <div class="community_div">
 
-                    <div class="community_right">
+                    <div class="community_right container">
                    
                     <?php $this->load->view("site/user/settings_tab");?>
                     	   
@@ -80,7 +80,7 @@ $this->load->model('user_model');
                 </div>	
                 <?php if($loginCheck!=1){?>
                      <form method="post" action="site/user/change_password" onsubmit="return password_validation();">
-                     	<div class="pass pass-1">
+                     	<div class="acc_full">
                   <div class="heading_account" ><?php if($this->lang->line('user_password') != '') { echo stripslashes($this->lang->line('user_password')); } else echo "Password"; ?></div>
                   <div class="field_account">
         	         <label ><?php if($this->lang->line('user_email_or_uname') != '') { echo stripslashes($this->lang->line('user_email_or_uname')); } else echo "Email or Username"; ?> </label><p style="color:#F00; float:left;">*</p><span style="color:#F00;"  id="err_pass_email"></span>
@@ -106,7 +106,7 @@ $this->load->model('user_model');
          </form>        
          		<?php } ?>
                  
-                 			<div class="pass pass-1">
+                 			<div class="acc_full">
                   <div class="heading_account" ><?php if($this->lang->line('user_email') != '') { echo stripslashes($this->lang->line('user_email')); } else echo "Email"; ?></div>
                   
                  <div class="account_info">

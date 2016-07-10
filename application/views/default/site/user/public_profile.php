@@ -45,7 +45,7 @@ $this->load->model('user_model');
                 <div class="community_div">
 
 
-                    <div class="community_right">                    	   
+                    <div class="community_right container">                    	   
 
              <div class="split_prefile">
 
