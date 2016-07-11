@@ -91,7 +91,7 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 						<a href="."><img class="shadowed" src="./images/<?php echo $this->config->item('logo_image'); ?>" alt="<?php echo $this->config->item('email_title'); ?>" title="<?php echo $this->config->item('email_title'); ?>" style="width:20%;min-width:200px;" /></a>
 					</div>
 
-					<div style="clear:both;padding-top:30px;padding-bottom:30px;">
+					<div style="clear:both;padding-top:20px;padding-bottom:20px;">
 					</div>
 
 
