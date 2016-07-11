@@ -51,7 +51,7 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 		<?php if ($this->session->userdata['shopsy_session_user_name'] == '' || true) {
     ?>
 			<div class="container top">
-				<div class="row" style="margin-top:40px;">    <!-- padding-bottom:30px;magrin-bottom:30px;margin-top:40px;"> -->
+				<div class="row">    <!-- padding-bottom:30px;magrin-bottom:30px;margin-top:40px;"> -->
 				    <!--<div class="col-md-12 signin sign-mobile">
 					     <a href="register"><?php if ($this->lang->line('headind_register') != '') {echo stripslashes($this->lang->line('headind_register'));} else {
         echo 'Register';
@@ -619,19 +619,14 @@ if ($CurrUserImg != '') {
 
 			$(window).scroll(function(){
 				//$('.header_fixed_menu').css({"position":"fixed"});
-				//alert("haha");
 				if($(this).scrollTop() > pos.top){
-					//alert("haha");
 					$('.header_fixed_menu').css({"position":"fixed"});
 						//$('#menu').addClass('header_top');
 				} else if($(this).scrollTop() <= pos.top ){
-					//alert("hehe");
 					$('.header_fixed_menu').css({"position":"relative"});
 						//$('#menu').removeClass('header_top');
 				}else{
-					//alert("hoho");
 				}
-				//alert("hohi");
 			});
 		});
 		</script>
