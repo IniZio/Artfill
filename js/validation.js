@@ -1960,6 +1960,7 @@ function UserCartChangeAddress(IDval,selid){
 				$('#Chg_Add_Val_'+selid).html(arr[4]);*/
 				
 			}else{
+				console.log('response is 1');
 				return false;	
 			}
 		}
