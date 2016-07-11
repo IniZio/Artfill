@@ -860,7 +860,7 @@ $CartValue.='
 																		$UserCartValue.='<li class="error_message" style="display:block;">'.$cart_notShipto.' '.$this->session->userdata('ShopCountry-'.$selId).'.</li>';
 																		$UserCartShow = 1;
 																   }else{
-																	   $UserCartValue.='<li class="error_message" style="display:none;">'.$cart_notShipto.' '.$this->session->userdata('ShopCountry-'.$selId).'.</li>';
+																	   // $UserCartValue.='<li class="error_message" style="display:none;">'.$cart_notShipto.' '.$this->session->userdata('ShopCountry-'.$selId).'.</li>';
 																   }
 																}
 $UserCartValue.='
