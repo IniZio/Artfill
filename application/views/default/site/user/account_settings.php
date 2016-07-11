@@ -107,6 +107,7 @@ $this->load->model('user_model');
          		<?php } ?>
                  
                  			<div class="acc_full">
+                      <div class="section">
                   <div class="heading_account" ><?php if($this->lang->line('user_email') != '') { echo stripslashes($this->lang->line('user_email')); } else echo "Email"; ?></div>
                   
                  <div class="account_info">
@@ -193,7 +194,8 @@ $this->load->model('user_model');
                  
                  </div>
                    	  
-                    <?php } ?>    
+                    <?php } ?> 
+                    </div>   
                        
                         
                      
