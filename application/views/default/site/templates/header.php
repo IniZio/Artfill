@@ -37,10 +37,6 @@ Color='#444')";
 <!-- END UNUSED STYLE to be deleted -->
 
 </head>
-                <div class="errorContainer" id="message-red" style="position:fixed;top:0;">
-                  <!-- <script>setTimeout("hideErrDiv('<?php echo $this->session->flashdata('sErrMSGType'); ?>')", 5000);</script> -->
-                  <p><span> 現為封測版，所有交易不涉及真實金錢及貨品 </span></p>
-                </div>
  		<?php
 if ($this->session->flashdata('sErrMSG') != '') {?>
                 <div class="errorContainer" id="<?php echo $this->session->flashdata('sErrMSGType'); ?>">
