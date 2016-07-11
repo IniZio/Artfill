@@ -8,8 +8,9 @@
 #nav-trigger span {
   display: inline-block;
   padding: 10px 0;
-  background: #3E444E none repeat scroll 0% 0%;
-  color: white;
+  // background: #3E444E none repeat scroll 0% 0%;
+  background-color: white;
+  color: black;
   cursor: pointer;
   text-transform: uppercase;
   text-align: left;
@@ -29,7 +30,7 @@
 }
 
 #nav-trigger span:hover {
-  background: #3E444E none repeat scroll 0% 0%;
+  // background: #3E444E none repeat scroll 0% 0%;
 }
 
 #nav-trigger span.open:after {
