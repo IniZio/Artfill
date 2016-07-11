@@ -5,7 +5,7 @@
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
 		<div class="row">
-			<div>
+			<div style="text-align:center;">
 				<img src="./images/artfill_logo_footer.png">
 			</div>
 			<div class="col-md-6  footer-block">
