@@ -28,7 +28,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 } else if ($this->_ci_cached_vars["languageCode"] == "zh_HK") {
     ?>
 			<div class="row">
-				<div>
+				<div style="text-align:center;">
 					<img src="./images/artfill_logo_footer_transparent.png">
 				</div>
 				<div class="col-md-6 footer-block">
