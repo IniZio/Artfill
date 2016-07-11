@@ -58,7 +58,7 @@
 
     <!--<li <?php if($this->uri->segment(1) == 'prototypes'){ echo 'class="side_active"'; } ?>><a href="prototypes"> Prototypes</a></li>--> */?>
 
-    <li <?php if($this->uri->segment(1)=='manage-community'){ echo 'class="active"';} ?>>
+    <!-- <li <?php if($this->uri->segment(1)=='manage-community'){ echo 'class="active"';} ?>>
 
     	<a href="manage-community" ><i class="ic-credit"></i>
 
@@ -66,7 +66,7 @@
 
         </a>
 
-    </li>
+    </li> -->
 	<li <?php if($this->uri->segment(1)=='manage-notification'){ echo 'class="active"';} ?>>
 
     	<a href="manage-notification" ><i class="ic-credit"></i>
