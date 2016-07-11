@@ -892,11 +892,11 @@ if ($CurrUserImg != '') {
 							</li>
 							<?php } else {?>
 							<li>
-								<a href="#signin"><img src="./images/shape.png" style="width:20px;" /><span style=" font-weight: bold;font-size:120%;margin-left:5px;">登入</span></a>
+								<a data-toggle="modal" href="#signin"><img src="./images/shape.png" style="width:20px;" /><span style=" font-weight: bold;font-size:120%;margin-left:5px;">登入</span></a>
 							</li>
 
 							<li>
-								<a href="#signup"><img src="./images/notes.png" style="width:20px;" /><span style=" font-weight: bold;font-size:120%;margin-left:5px;">註冊</span></a>
+								<a data-toggle="modal" href="#signup"><img src="./images/notes.png" style="width:20px;" /><span style=" font-weight: bold;font-size:120%;margin-left:5px;">註冊</span></a>
 							</li>
 							<?php }?>
 
@@ -1128,10 +1128,10 @@ if($innerSub[$i]['sub_mega_menu'] == "Yes"){
                     </li>
                     <?php }else{?>
                     <li class="page-scroll">
-                        <a  href="#signin"><img src="./images/shape.png" style="width:20px;" /><span style="margin-left:5px;">登入</span></a>
+                        <a data-toggle="modal" href="#signin"><img src="./images/shape.png" style="width:20px;" /><span style="margin-left:5px;">登入</span></a>
                     </li>
                     <li class="page-scroll">
-                        <a  href="#signup"><img src="./images/notes.png" style="width:20px;" /><span style="margin-left:5px;">註冊</span></a>
+                        <a data-toggle="modal" href="#signup"><img src="./images/notes.png" style="width:20px;" /><span style="margin-left:5px;">註冊</span></a>
                     </li>
                     <?php }?>
                     <li class="page-scroll">
