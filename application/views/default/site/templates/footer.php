@@ -136,7 +136,9 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
 	<span style="color:#8bdad4;">付款方式</span> &emsp;
 	<?php }?>	
-	<img src="./images/paypal.png" />
+	<img style="height:50px;" src="./images/paypal.png" />
+	<img style="height:50px;" src="./images/visa.jpg" />
+	<img style="height:50px;" src="./images/master.gif" />
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
