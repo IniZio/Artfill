@@ -1,23 +1,23 @@
 <section class="second-bl third-bl foot-bg">
 	<footer class="container">
 	
-	<style>
-		ul.footer-list li{
-			float:left;
-			text-align:center;
-		}
-	</style>
+<style>
+	ul.footer-list li{
+		float:left;
+		text-align:center;
+	}
+</style>
 	
-		<?php
+<?php
 // adding chinese footer translations Kethen was here 25/1/2016
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
-		<div class="row">
+		<div class="col-md-12 col-xs-12 col-sm-12 row">
 			<div style="text-align:center;">
-					<img src="./images/artfill_logo_footer_transparent.png">
+				<img src="./images/artfill_logo_footer_transparent.png">
 			</div>
 			<div class="footer-block">
-				<ul class="footer-list" style="text-align:center;">
+				<ul class="footer-list">
 					<li class="col-md-2"><a href="pages/about-us">About Us</a></li>
 					<li class="col-md-2"><a href="company">Company Information</a></li>
 					<li class="col-md-2"><a href="shop/sell">Join Us</a></li>
@@ -26,105 +26,29 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 					<li class="col-md-2"><a href="reflection">Feedback to Us</a></li>
 				</ul>
 			</div>
-			<!--
-			<div class="col-md-6 col-xs-6 col-sm-6 footer-block">
-				<ul class="footer-list">
-					<li>Payment Method</li>
-					<img style="background-size:cover;" src="./images/paymentmethod.png" />
-				</ul>
-			</div>-->
-			<?php
+		</div>
+<?php
 } else if ($this->_ci_cached_vars["languageCode"] == "zh_HK") {
-    ?>
-			<div class="row">
+?>
+			<div class="col-md-12 col-xs-12 col-sm-12 row">
 				<div style="text-align:center;">
 					<img src="./images/artfill_logo_footer_transparent.png">
 				</div>
 				<div class="footer-block">
-					<?php if ($shopProduc == 0) {
-        ?>
-					<!--<span class="footer-head no-ul"><?php if ($this->lang->line('footer_business') != '') {echo stripslashes($this->lang->line('footer_business'));} else {
-            echo '';
-        }
-        ?></span>-->
-					<!--<a href="shop/sell"><div class="search-bt col-md-6 col-xs-4 op-bt"><?php if ($this->lang->line('footer_open_a_shop') != '') {echo stripslashes($this->lang->line('footer_open_a_shop'));} else {
-            echo 'Open a Shop';
-        }
-        ?></div></a>-->
-					<?php }?>
-					<!--<span class="footer-head"><?php if ($this->lang->line('footer_sell_on') != '') {echo stripslashes($this->lang->line('footer_sell_on'));} else {
-        echo 'Sell on';
-    }
-    ?> <?php echo $this->config->item('email_title'); ?></span>-->
-					<!--<ul class="footer-list">-->
-					<!--<li><a href="find/shop"><?php if ($this->lang->line('footer_browse_all_shops') != '') {echo stripslashes($this->lang->line('footer_browse_all_shops'));} else {
-        echo 'Browse all shops';
-    }
-    ?></a></li>
-					<li><a href="shop-by-location"><?php if ($this->lang->line('footer_search_shops') != '') {echo stripslashes($this->lang->line('footer_search_shops'));} else {
-        echo 'Search by Location';
-    }
-    ?></a></li>-->
-					<!--<li><a href="" > 購物指南</li>
-					<li><a href="" > 商品評價排行榜</li>
-					<li><a href="" > 全場商品分類</li>
-					<li><a href="" > 商品列表</li>
-					<li><a href="" > 購買特集</li>-->
-				<!--</ul>
-			</div>-->
-			<div class="footer-block">
-				<ul class="footer-list" style="text-align:center;">
-					<li class="col-md-2"><a href="pages/about-us">關於我們</a></li>
-					<li class="col-md-2"><a href="pages/company-info">公司資料</a></li>
-					<li class="col-md-2"><a href="shop/sell">商店加盟</a></li>
-					<li class="col-md-2"><a href="pages/terms-and-conditions">使用條款</a></li>
-					<li class="col-md-2"><a href="pages/privacy-policy">私隱政策</a></li>
-					<li class="col-md-2"><a href="reflection">意見諮詢</a></li>
-				</ul>
+					<ul class="footer-list">
+						<li class="col-md-2"><a href="pages/about-us">關於我們</a></li>
+						<li class="col-md-2"><a href="pages/company-info">公司資料</a></li>
+						<li class="col-md-2"><a href="shop/sell">商店加盟</a></li>
+						<li class="col-md-2"><a href="pages/terms-and-conditions">使用條款</a></li>
+						<li class="col-md-2"><a href="pages/privacy-policy">私隱政策</a></li>
+						<li class="col-md-2"><a href="reflection">意見諮詢</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<!--
-		<div class="col-md-6 col-xs-6 col-sm-6 footer-block">
-			<ul class="footer-list">
-				<li>付款方式</li>
-				<img style="background-size:cover;" src="./images/paymentmethod.png" />
-			</ul>
-		</div>-->
-		<?php
+<?php
 }
 ?>
-		<!--</div>-->
-		<!--<div class="footer-row">-->
-		<!--
-		<div id="google_translate_element"></div><script type="text/javascript">
-			function googleTranslateElementInit() {
-			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ml,ta,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-			}
-		</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-		<style>
-		.goog-te-banner-frame.skiptranslate {display: none !important;}
-		body { top: 0px !important; }
-		</style>
-		-->
-		<!--<ul class="locale-settings">-->
-		<!--<li><a href="javascript:void(0);"> <i class="fa fa-globe"></i><?php echo $regionName; ?></a></li>-->
-		<!--<li><a data-toggle="modal" id="language_href" href="#Language" onclick="javascript:$('#languageTab').trigger('click');">  <?php echo $languageName; ?></a></li>
-		<li><a data-toggle="modal" id="currency_href" href="#Language" onclick="javascript:$('#currencyTab').trigger('click');"> <?php echo $currencySymbol; ?> <?php echo $currencyType; ?></a></li>
-	</ul>
-	<a href="pages/help"><div class="help-bt"><?php if ($this->lang->line('footer_help') != '') {echo stripslashes($this->lang->line('footer_help'));} else {
-    echo 'Help';
-}
-?></div></a>
-</div>
-<ul class="bt-menu">
-	<li id="copy"> <?php echo stripslashes($this->config->item('footer_content')); ?></li>
-	<li><a href="pages/privacy-policy"><?php if ($this->lang->line('user_privacy_policy') != '') {echo stripslashes($this->lang->line('user_privacy_policy'));} else {
-    echo 'Privacy';
-}
-?></a></li>
-</ul>
--->
-</div>
+
 <br/>
 <div class="row">
 <div class="col-md-12 col-xs-12 col-sm-12 footer-block">
