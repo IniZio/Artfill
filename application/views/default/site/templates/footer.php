@@ -16,7 +16,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 					<img src="./images/artfill_logo_footer_transparent.png">
 			</div>
 			<div class="footer-block">
-				<ul class="footer-list">
+				<ul class="footer-list" style="text-align:center;">
 					<li class="col-md-2"><a href="pages/about-us">About Us</a></li>
 					<li class="col-md-2"><a href="company">Company Information</a></li>
 					<li class="col-md-2"><a href="shop/sell">Join Us</a></li>
@@ -72,7 +72,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 				<!--</ul>
 			</div>-->
 			<div class="footer-block">
-				<ul class="footer-list">
+				<ul class="footer-list" style="text-align:center;">
 					<li class="col-md-2"><a href="pages/about-us">關於我們</a></li>
 					<li class="col-md-2"><a href="pages/company-info">公司資料</a></li>
 					<li class="col-md-2"><a href="shop/sell">商店加盟</a></li>
