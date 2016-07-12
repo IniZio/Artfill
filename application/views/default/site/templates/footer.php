@@ -3,7 +3,6 @@
 	
 <style>
 	ul.footer-list li{
-		float:left;
 		text-align:center;
 	}
 </style>
