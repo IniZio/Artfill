@@ -139,6 +139,10 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 	<img style="height:30px;" src="./images/paypal.png" />
 	<img style="height:30px;" src="./images/visa.jpg" />
 	<img style="height:30px;" src="./images/master.gif" />
+	
+</div>
+<div class="col-md-6 col-xs-6 col-sm-6 footer-block">
+	
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
