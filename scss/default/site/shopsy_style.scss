@@ -15662,8 +15662,8 @@ a.title-info, .list-select {
 
   /*King edited*/
   margin-top: 0px;
-  background-size: cover;
-background-image: url("../../../images/footer_background.png");
+  background-size: cover !important;
+ background-image: url("../../../images/footer_background.png") !important;
 
 }
 
