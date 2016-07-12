@@ -693,11 +693,13 @@ $p++;
 						border-bottom:thin solid #c8b0b0;;
 					}
 				</style>
+				<!--
 						<div class="col-md-3 col-xs-3 hidden-sm hidden-xs" style="text-align: left;">
 							<span style="color:#c5c6c6;font-size:120%;">熱門搜尋﹕</span>
 							<a href="<?php echo base_url(); ?>./search/all?item=陶瓷"><span class="hot">陶瓷</span></a>
 							<a href="<?php echo base_url(); ?>./search/all?item=花瓶"><span class="hot">花瓶</span></a>
 							<a href="<?php echo base_url(); ?>./search/all?item=頸鍊"><span class="hot">頸鍊</span></a>
+							-->
 						 <!--<span class="shop-cart">
 							<a href="cart"  title =" Cart"><i class="fa fa-shopping-cart icon-shopping"></i></a>
 							<a class="cart-txt" href="cart" title="Cart">
@@ -709,7 +711,7 @@ $p++;
 							</a>
 						</span> -->
 
-					    </div>
+					   <!-- </div>-->
 
 					<div class="col-md-2 col-xs-3 top-login">
 						<ul class="header_menu">
