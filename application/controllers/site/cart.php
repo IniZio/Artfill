@@ -916,11 +916,12 @@ if ($this->checkLogin('U')==''){
 $this->setErrorMessage('error', 'Login Required');
 redirect("login");
 }
-	echo 'here'; die;
+
 		$sellerId = $this->input->post('sell_id');
 		// $quantity = $this->input->post('userquantity0');
 		$userid = $this->checkLogin('U');
 		if($this->input->post('digital_item') == 'No'){
+
 			$cartDetails = $this->cart_model->get_all_details(USER_SHOPPING_CART,array('sell_id' => $sellerId, 'user_id' => $userid));
 			$checkArr = array();
 			foreach($cartDetails->result() as $_collection){
@@ -938,7 +939,7 @@ redirect("login");
 					redirect("cart");
 				}
 			}
-			elseif($this->input->post('pickup_mtr') == 'checked'){
+			elseif($this->input->post('pickup_mtr') == 'on'){
 				echo 'pick up at mtr'; die;
 			}elseif($this->input->post('Ship_address_val') !='' ){
 				if($this->input->post('payment_value')!=''){  
