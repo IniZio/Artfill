@@ -711,7 +711,7 @@ $p++;
 							</a>
 						</span> -->
 
-					   <!-- </div>-->
+					   <!-- </div>-->	
 
 					<div class="col-md-2 col-xs-3 top-login">
 						<ul class="header_menu">

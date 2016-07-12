@@ -8,7 +8,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 			<div style="text-align:center;">
 					<img src="./images/artfill_logo_footer_transparent.png">
 			</div>
-			<div class="col-md-6  footer-block">
+			<div class="footer-block">
 				<ul class="footer-list">
 					<li><a href="pages/about-us">About Us</a></li>
 					<li><a href="company">Company Information</a></li>
@@ -18,12 +18,13 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 					<li><a href="reflection">Feedback to Us</a></li>
 				</ul>
 			</div>
+			<!--
 			<div class="col-md-6 col-xs-6 col-sm-6 footer-block">
 				<ul class="footer-list">
 					<li>Payment Method</li>
 					<img style="background-size:cover;" src="./images/paymentmethod.png" />
 				</ul>
-			</div>
+			</div>-->
 			<?php
 } else if ($this->_ci_cached_vars["languageCode"] == "zh_HK") {
     ?>
@@ -31,7 +32,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 				<div style="text-align:center;">
 					<img src="./images/artfill_logo_footer_transparent.png">
 				</div>
-				<div class="col-md-6 footer-block">
+				<div class="footer-block">
 					<?php if ($shopProduc == 0) {
         ?>
 					<!--<span class="footer-head no-ul"><?php if ($this->lang->line('footer_business') != '') {echo stripslashes($this->lang->line('footer_business'));} else {
@@ -74,12 +75,13 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 				</ul>
 			</div>
 		</div>
+		<!--
 		<div class="col-md-6 col-xs-6 col-sm-6 footer-block">
 			<ul class="footer-list">
 				<li>付款方式</li>
 				<img style="background-size:cover;" src="./images/paymentmethod.png" />
 			</ul>
-		</div>
+		</div>-->
 		<?php
 }
 ?>
