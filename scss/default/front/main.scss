@@ -1151,7 +1151,9 @@ ul.footer-list li {
 }
 
 ul.footer-list li a {
-  color: #999;
+  // color: #999;
+  color: grey;
+text-shadow: 1px 2px 3px white;
 }
 
 ul.footer-list li a i {

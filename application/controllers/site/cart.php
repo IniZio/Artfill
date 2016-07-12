@@ -916,6 +916,7 @@ if ($this->checkLogin('U')==''){
 $this->setErrorMessage('error', 'Login Required');
 redirect("login");
 }
+	echo 'here'; die;
 		$sellerId = $this->input->post('sell_id');
 		// $quantity = $this->input->post('userquantity0');
 		$userid = $this->checkLogin('U');
