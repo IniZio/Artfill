@@ -10,15 +10,6 @@ if ($CurrUserImg != '') {
     $user_pic = 'default_avat.png';
 }
 ?>
-<style>
-	.shadowed {
-	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
-Color='#444')";
-	filter: url(#drop-shadow);
-	-webkit-filter: drop-shadow(12px 12px 7px rgba(100,100,100,0.5));
-	filter: drop-shadow(12px 12px 7px rgba(100,100,100,0.5));
-}
-</style>
 <!-- START UNUSED STYLE to be deleted -->
 <style>
 #you1{

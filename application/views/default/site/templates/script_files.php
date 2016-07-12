@@ -417,7 +417,7 @@ var lg_remove_from_fav='<?php echo addslashes(af_lg('lg_remove_from_fav','Remove
 <script src="js/front/jquery-1.9.1.min.js"></script>
 <script src="js/front/bootstrap.min-v3.3.4.js"></script>
 <!---------------New script lines -------->
-
+<script type="text/javascript" src="js/pace.min.js"></script>
 <script type="text/javascript" src="js/jquery.elastislide.js"></script>
 <script type="text/javascript" src="js/jcarousellite_1.0.1.pack.js"></script>
 <?php if($this->uri->segment(1) =='gift-cards'){?>

@@ -19,6 +19,14 @@ html, body {
   font-family: Georgia, "Times New Roman", Times, serif, "Microsoft YaHei New", "Microsoft Yahei", "σ╛«Φ╜»Θ¢àΘ╗æ", σ«ïΣ╜ô, SimSun, STXihei, "σìÄµûçτ╗åΘ╗æ";
 }
 
+.shadowed {
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
+Color='#444')";
+  filter: url(#drop-shadow);
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(100,100,100,0.5));
+  filter: drop-shadow(12px 12px 7px rgba(100,100,100,0.5));
+}
+
 body {
   line-height: 1;
 }
