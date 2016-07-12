@@ -937,7 +937,7 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 		$style ='style="display:block"';
 	}
 	$UserCartValue.='<div class="local-pick"><input class="local-pickup" onclick="localPickup(this,'.$selId.');" type="checkbox" value="'.$pcollect.'" name="pickup_option" '.$pcollect.'><img src="images/pickup.png"/>'.$pickup.'</div>';
-	$UserCartValue.='<div class="mtr-pick"><input class="mtr-pickup" type="checkbox" value="" name="pickup_option">Pickup at MTR station</div>';
+	$UserCartValue.='<div class="mtr-pick"><input class="mtr-pickup" type="checkbox" value="" name="pickup_mtr">Pickup at MTR station</div>';
 	$UserCartValue.='<p '.$style.' class="ship_to" checked="checked">'.$cart_shipTo.'</p>
 	<select '.$style.' id="address-cart" class="ship_to" onchange="UserCartChangeAddress(this.value,'.$selId.');">
 	<option value="" id="address-select">'.$cart_chose.'</option>';

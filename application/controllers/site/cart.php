@@ -936,6 +936,9 @@ redirect("login");
 					$this->setErrorMessage('error','Please Select the Payment Method');		
 					redirect("cart");
 				}
+			}
+			elseif($this->input->post('pickup_mtr') == 'checked'){
+				echo 'pick up at mtr'; die;
 			}elseif($this->input->post('Ship_address_val') !='' ){
 				if($this->input->post('payment_value')!=''){  
 					$userid = $this->checkLogin('U');
