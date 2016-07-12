@@ -5,6 +5,9 @@
 	ul.footer-list li{
 		text-align:center;
 	}
+	.footer-margin{
+		margin:10px;
+	}
 </style>
 	
 <?php
@@ -49,8 +52,8 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 ?>
 
 <br/>
-<div class="row">
-<div class="col-md-12 col-xs-12 col-sm-12 footer-block second-bl">
+<div class="row footer-margin">
+<div class="col-md-12 col-xs-12 col-sm-12 footer-margin">
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
@@ -65,7 +68,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 	<img style="height:20px;" src="./images/master.gif" />
 	
 </div>
-<div class="col-md-12 col-xs-12 col-sm-12 footer-block second-bl">
+<div class="col-md-12 col-xs-12 col-sm-12 footer-margin">
 	
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
