@@ -18,7 +18,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 			<div style="text-align:center;">
 				<img src="./images/artfill_logo_footer_transparent.png">
 			</div>
-			<div class="footer-block">
+			<div class="">
 				<ul class="footer-list">
 					<li class="col-md-2"><a href="pages/about-us">About Us</a></li>
 					<li class="col-md-2"><a href="company">Company Information</a></li>
@@ -36,7 +36,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 				<div style="text-align:center;">
 					<img src="./images/artfill_logo_footer_transparent.png">
 				</div>
-				<div class="footer-block">
+				<div class="">
 					<ul class="footer-list">
 						<li class="col-md-2"><a href="pages/about-us">關於我們</a></li>
 						<li class="col-md-2"><a href="pages/company-info">公司資料</a></li>
