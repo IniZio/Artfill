@@ -52,8 +52,8 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 ?>
 
 <br/>
-<div class="row">
-<div class="col-md-3 col-xs-12 col-sm-12 footer-margin">
+<div class="row" style="text-align:center;">
+<div class="col-md-6 col-xs-12 col-sm-12 footer-margin">
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
@@ -68,7 +68,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 	<img style="height:20px;" src="./images/master.jpg" /> &emsp;&emsp;
 	
 </div>
-<div class="col-md-3 col-xs-12 col-sm-12 footer-margin">
+<div class="col-md-6 col-xs-12 col-sm-12 footer-margin">
 	
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
