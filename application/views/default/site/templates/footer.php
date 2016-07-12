@@ -14,7 +14,7 @@
 // adding chinese footer translations Kethen was here 25/1/2016
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
-		<div class="col-md-12 col-xs-12 col-sm-12 row">
+		<div class="col-md-12 col-xs-12 col-sm-12 row" style="margin-bottom:20px;">
 			<div style="text-align:center;">
 				<img src="./images/artfill_logo_footer_transparent.png">
 			</div>
@@ -32,7 +32,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 <?php
 } else if ($this->_ci_cached_vars["languageCode"] == "zh_HK") {
 ?>
-			<div class="col-md-12 col-xs-12 col-sm-12 row">
+			<div class="col-md-12 col-xs-12 col-sm-12 row" style="margin-bottom:20px;">
 				<div style="text-align:center;">
 					<img src="./images/artfill_logo_footer_transparent.png">
 				</div>
