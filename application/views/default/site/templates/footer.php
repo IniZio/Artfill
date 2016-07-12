@@ -126,7 +126,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 </div>
 <br/>
 <div class="row">
-<div class="col-md-6 col-xs-6 col-sm-6 footer-block">
+<div class="col-md-12 col-xs-12 col-sm-12 footer-block">
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
@@ -141,7 +141,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 	<img style="height:30px;" src="./images/master.gif" />
 	
 </div>
-<div class="col-md-6 col-xs-6 col-sm-6 footer-block">
+<div class="col-md-12 col-xs-12 col-sm-12 footer-block">
 	
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
