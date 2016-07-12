@@ -86,7 +86,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 <!--<hr style="background-color: #66f4cf"/>-->
 <div class="container">
 <div class="row">
-<div class="col-md-12">
+<div class="col-md-12" style="text-align:center;">
 	2016 Artfill.Co. All Rights Reserved
 </div>
 </div>
