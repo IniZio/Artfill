@@ -940,7 +940,8 @@ redirect("login");
 				}
 			}
 			elseif($this->input->post('pickup_mtr') == 'on'){
-				echo 'pick up at mtr'; die;
+				$this->cart_model->addPaymentUserCart($userid,$this->data['currencyValue']);
+				redirect("checkout/sellercart");
 			}elseif($this->input->post('Ship_address_val') !='' ){
 				if($this->input->post('payment_value')!=''){  
 					$userid = $this->checkLogin('U');
