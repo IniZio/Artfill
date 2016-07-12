@@ -6,6 +6,15 @@ Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 
+body,
+button, /* 1 */
+input, /* 1 */
+select, /* 1 */
+textarea  /* 1 */
+{
+    font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif !important;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -16,7 +25,7 @@ html, body {
   background: transparent;
   color: #999999;
   font: 14px;
-  font-family: Georgia, "Times New Roman", Times, serif, "Microsoft YaHei New", "Microsoft Yahei", "σ╛«Φ╜»Θ¢àΘ╗æ", σ«ïΣ╜ô, SimSun, STXihei, "σìÄµûçτ╗åΘ╗æ";
+  // font-family: Georgia, "Times New Roman", Times, serif, "Microsoft YaHei New", "Microsoft Yahei", "σ╛«Φ╜»Θ¢àΘ╗æ", σ«ïΣ╜ô, SimSun, STXihei, "σìÄµûçτ╗åΘ╗æ";
 }
 
 .shadowed {
@@ -55,7 +64,7 @@ a {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-  font-family: "Microsoft YaHei New", "Microsoft Yahei", "σ╛«Φ╜»Θ¢àΘ╗æ", σ«ïΣ╜ô, SimSun, STXihei, "σìÄµûçτ╗åΘ╗æ";
+  // font-family: "Microsoft YaHei New", "Microsoft Yahei", "σ╛«Φ╜»Θ¢àΘ╗æ", σ«ïΣ╜ô, SimSun, STXihei, "σìÄµûçτ╗åΘ╗æ";
 }
 
 /*a:link, a:visited {
