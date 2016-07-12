@@ -6,14 +6,14 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
 		<div class="row">
 			<div style="text-align:center;">
-				<img src="./images/artfill_logo_footer.png">
+					<img src="./images/artfill_logo_footer_transparent.png">
 			</div>
 			<div class="col-md-6  footer-block">
 				<ul class="footer-list">
-					<li><a href="pages/about-us">關於我們</a></li>
-					<li><a href="company">公司資料</a></li>
-					<li><a href="shop/sell">商店加盟</a></li>
-					<li><a href="terms">使用條款</a></li>
+					<li><a href="pages/about-us">About Us</a></li>
+					<li><a href="company">Company Information</a></li>
+					<li><a href="shop/sell">Join Us</a></li>
+					<li><a href="terms">Terms and Conditions</a></li>
 					<li><a href="privacy">Privacy Policy</a></li>
 					<li><a href="reflection">Feedback to Us</a></li>
 				</ul>
@@ -118,6 +118,16 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 <br/>
 <div class="row">
 <div class="col-md-6 col-xs-6 col-sm-6 footer-block">
+	<?php
+if ($this->_ci_cached_vars["languageCode"] == "en") {
+    ?>
+	<span style="color:#8bdad4;">Payment Methods</span> &emsp;
+	<?php
+} elseif ($this->_ci_cached_vars["languageCode"] == "zh_HK") {
+    ?>
+	<span style="color:#8bdad4;">付款方式</span> &emsp;
+	<?php }?>
+	<img style="width:100px;" src="./images/paymentmethod.png" />
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
