@@ -57,15 +57,15 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
-	<span style="color:#8bdad4;">Payment Methods</span> &emsp;
+	<span style="color:#8bdad4;">Payment Methods</span>&emsp; 
 	<?php
 } elseif ($this->_ci_cached_vars["languageCode"] == "zh_HK") {
     ?>
-	<span style="color:#8bdad4;">付款方式</span> &emsp;
+	<span style="color:#8bdad4;">付款方式</span>&emsp;
 	<?php }?>	
 	<img style="height:20px;" src="./images/paypal.png" />
 	<img style="height:20px;" src="./images/visa.jpg" />
-	<img style="height:20px;" src="./images/master.jpg" />
+	<img style="height:20px;" src="./images/master.jpg" /> &emsp;&emsp;
 	<!--
 </div>
 <div class="col-md-12 col-xs-12 col-sm-12 footer-margin">
