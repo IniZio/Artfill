@@ -136,7 +136,23 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
 	<span style="color:#8bdad4;">付款方式</span> &emsp;
 	<?php }?>
-	<img style="width:100px;" src="./images/paymentmethod.png" />
+	
+	
+	<!-- PayPal Logo -->
+	<table border="0" cellpadding="10" cellspacing="0" align="center">
+		<tr>
+			<td align="center"></td>
+		</tr>
+		<tr>
+			<td align="center"><a href="https://www.paypal.com/au/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/au/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;">
+			<img src="https://www.paypalobjects.com/webstatic/mktg/logo/PP_AcceptanceMarkTray-NoDiscover_243x40.png" alt="Buy now with PayPal" /></a>
+			</td>
+		</tr>
+	</table>
+	<!-- PayPal Logo -->
+	
+	
+	<!--<img style="width:100px;" src="./images/paymentmethod.png" />-->
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
