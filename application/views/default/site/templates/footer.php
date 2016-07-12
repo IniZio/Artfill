@@ -53,7 +53,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 
 <br/>
 <div class="row">
-<div class="col-md-12 col-xs-6 col-sm-6 footer-margin" style="text-align:center;">
+<div class="col-md-12 col-xs-10 col-sm-10 footer-margin" style="text-align:center;">
 	<?php
 if ($this->_ci_cached_vars["languageCode"] == "en") {
     ?>
