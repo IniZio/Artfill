@@ -970,7 +970,7 @@ if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
 							$payment_method = explode(',',$UserCartRow->payment_mode);
 		if($payAdptDetailsVal['status']=='Enable' && $paypalAdptVal['merchant_email']!='' && in_array('PayPal Adaptive',$payment_method) && $UserCartRow->Paypal_merchant_email != "" ){
 			
-				$UserCartValue.='<li><input type="radio"  name="payment_value" value="Paypal Adaptive" ><label><span class="paypal-plus-cards"><img src="images/facebook22.png" /></span></label></li>';	
+				$UserCartValue.='<li><input type="radio"  name="payment_value" value="Paypal Adaptive" checked /><label><span class="paypal-plus-cards"><img src="images/facebook22.png" /></span></label></li>';	
 				$UserCartPaymentShow = 1;
 			
 		}else{
@@ -984,13 +984,13 @@ if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
 			}			
 			if($authorizeDetailsVal['status']=='Enable'){
 				if($AuthorizesVal['Login_ID']!='' && $AuthorizesVal['Transaction_Key']!=''){
-					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Credit-Card" ><label><span class="cc-icons ">Credit Card</span></label></li>';
+					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Credit-Card" checked /><label><span class="cc-icons ">Credit Card</span></label></li>';
 					$UserCartPaymentShow = 1;
 				}
 			}
 			if($twocheckoutDetailsVal['status']=='Enable'){
 				
-					$UserCartValue.='<li><input type="radio"  name="payment_value" value="twocheckout" ><img width="100px" src="images/twocheckout.png" /></li>';
+					$UserCartValue.='<li><input type="radio"  name="payment_value" value="twocheckout" checked /><img width="100px" src="images/twocheckout.png" /></li>';
 				
 				
 			}
@@ -998,7 +998,7 @@ if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
 			if($StripeDetailsVAl['status']=='Enable'){
 			
 				if($StripeVal['secret_key']!='' && $StripeVal['publishable_key']!=''){
-					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Stripe" ><label><span class=" "><img src="images/stripe.png" /></span></label></li>';
+					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Stripe" checked /><label><span class=" "><img src="images/stripe.png" /></span></label></li>';
 					$UserCartPaymentShow = 1;
 				}
 			
