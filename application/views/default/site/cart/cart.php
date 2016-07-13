@@ -85,6 +85,12 @@
 		</div>
 	</div>
 <script type="text/javascript">
+// hide shipping
+window.onload = function(){
+	$(evt).parent().parent().find('.default_addr').css('display','none');
+		$(evt).parent().parent().find('.ship_to').css('display','none');
+		$(evt).parent().parent().find('.add_addr').css('display','none');
+}
 function localPickup(evt,sid){
 	var ischeckedvalue = $(evt).prop('checked');
 	if(ischeckedvalue == true){
