@@ -8,3 +8,4 @@ logs/*
 application/logs/*
 .sass-cache/*
 .phpintel/index/*
+scss/scss_cache/*
