@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAK;EACH,IAAI,EAAE,CAAC;;AAGT,OAAQ;EACN,WAAW,EAAE,GAAG;;AAGlB,sBAAuB;EACrB,MAAM,EAAE,UAAU;EAClB,WAAW,EAAE,KAAK",
+"sources": ["../../../../scss/default/attribute/_static/subpage.scss"],
+"names": [],
+"file": "subpage.css"
+}

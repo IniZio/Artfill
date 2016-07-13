@@ -1,0 +1,293 @@
+#google_invite {
+  float: right;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 100px 600px 106px 36px; }
+
+#facebook {
+  float: right;
+  display: table-cell;
+  vertical-align: middle;
+  margin: -139px 270px 108px 36px; }
+
+.signin_container {
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 0;
+  text-align: left;
+  width: 680px; }
+
+.action_button {
+  background-color: #005598;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none; }
+
+.profile_edit a, .profile_follow a {
+  color: #ffffff; }
+
+#my_feed_link {
+  background: none repeat scroll 0 0 #005598;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 30px; }
+
+.following_box {
+  display: inline-block; }
+
+.follow_block {
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+  float: left;
+  height: 88px;
+  margin: 10px 15px 10px 0;
+  padding: 10px;
+  text-align: left;
+  width: 295px; }
+
+.following_box .follow_block {
+  height: auto !important; }
+
+.follow_logo {
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  display: inline-block;
+  height: 65px;
+  padding: 2px;
+  vertical-align: middle;
+  width: 65px; }
+
+.follow_details {
+  display: inline-block;
+  line-height: 1.2em;
+  margin-bottom: 4px;
+  margin-left: 10px;
+  vertical-align: middle;
+  width: 112px;
+  word-wrap: break-word; }
+
+.follow_name a {
+  color: #2f343d;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3em; }
+
+.follow_related_name a {
+  color: #2f343d;
+  font-size: 12px; }
+
+.follow_block.no_image {
+  border: 1px solid #cacaca;
+  height: 44px; }
+
+.follow_block.no_image .follow_details {
+  float: left;
+  line-height: 22px;
+  margin-left: 10px;
+  width: 185px; }
+
+.follow_block.no_image .profile_follow {
+  float: right; }
+
+.profile_follow:hover {
+  background-color: #00aeef !important; }
+
+.profile_follow.active {
+  background-color: #f58723; }
+
+.sign_social_btn1 {
+  background-color: #f3f3f3;
+  border: medium none;
+  color: #005598;
+  font-size: 12px;
+  font-weight: bold; }
+
+.sign_social_btn:first-child {
+  margin-left: 0; }
+
+.account_menu_link.open {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none; }
+
+.account_menu_link:hover {
+  background-color: #e4e4e4;
+  color: #2f343d;
+  cursor: pointer;
+  text-decoration: none; }
+
+#content {
+  background-color: #ffffff;
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  float: left;
+  margin-left: 20px;
+  padding: 20px 0;
+  width: 640px; }
+
+#contact-content {
+  padding: 0 20px 0 15px; }
+
+.user_notifications_title {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 15px; }
+
+.subtabs_btns_div a:first-child {
+  margin-left: 0; }
+
+.emails_div {
+  float: left;
+  width: 100%; }
+
+.email_settings_div {
+  margin: 10px 0; }
+
+.email_settings_div input {
+  vertical-align: middle; }
+
+.notifications_email_label {
+  color: #000000;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 3px; }
+
+.file_upload {
+  height: 100px;
+  opacity: 0;
+  position: relative;
+  width: 100px;
+  z-index: 1; }
+
+.upload_img {
+  position: absolute;
+  top: 1px; }
+
+.join_followus {
+  border-bottom: 1px solid #e4e4e4;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  width: 100%; }
+
+.join_invites_submit {
+  background-color: #8d8d8d;
+  border: 1px solid #2f343d;
+  border-radius: 4px;
+  color: #ffffff;
+  float: right;
+  font-size: 14px;
+  margin-right: 25px;
+  padding: 3px 10px;
+  text-align: center; }
+
+.join_invites_submit:hover {
+  background-color: #c8c8c8;
+  color: #ffffff; }
+
+.contact_right_block {
+  float: left;
+  margin-left: 25px;
+  text-align: left;
+  width: 300px; }
+
+.contact_right_block {
+  text-align: left; }
+
+.contact_name {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left; }
+
+.contact_input_div {
+  display: inline-block;
+  float: left;
+  margin: 10px 0; }
+
+.join_input {
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  padding: 7px;
+  width: 265px; }
+
+.contact_right_block_content {
+  clear: both;
+  display: inline-block;
+  margin: 20px 0;
+  text-align: center; }
+
+.join_contacts_div {
+  height: 500px;
+  overflow: auto; }
+
+.slider {
+  float: left;
+  left: -5000px;
+  position: relative;
+  visibility: hidden; }
+
+.slider ul {
+  height: 100px;
+  width: 100px; }
+
+.slider ul li {
+  padding: 0; }
+
+.slider ul li img {
+  cursor: pointer;
+  height: 100px;
+  padding-top: 3px;
+  width: 100px; }
+
+.prev {
+  bottom: 0;
+  color: #ffffff;
+  cursor: pointer;
+  float: left;
+  left: 10px;
+  position: absolute; }
+
+.next {
+  bottom: 0;
+  color: #ffffff;
+  cursor: pointer;
+  float: right;
+  position: absolute;
+  right: 10px; }
+
+.content_middle {
+  display: inline-block;
+  margin: 10px 20px 10px 0;
+  text-align: center;
+  width: 96%; }
+
+.content_middle .contact_name {
+  text-align: center !important; }
+
+.content_middle .contact_input_div {
+  float: none !important;
+  text-align: center; }
+
+.contact_input_div .follow_name {
+  float: left;
+  width: 215px; }
+
+.contact_input_div .follow_name .join_input {
+  float: left;
+  margin-right: 10px;
+  width: auto; }
+
+.page_title, .have_account, .fields_section, .used_emails_section {
+  padding: 20px 0; }
+
+/*# sourceMappingURL=invite.css.map */
