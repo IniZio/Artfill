@@ -936,8 +936,8 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 		$pcollect = '';
 		$style ='style="display:block"';
 	}
-	$UserCartValue.='<div class="local-pick"><input class="local-pickup" display="none" onclick="localPickup(this,'.$selId.');" type="checkbox" value="'.$pcollect.'" name="pickup_option" '.$pcollect.'><img src="images/pickup.png"/>'.$pickup.'</div>';
-	$UserCartValue.='<div class="mtr-pick"><input class="mtr-pickup" type="checkbox" name="pickup_mtr">Pickup at MTR station</div>';
+	//$UserCartValue.='<div class="local-pick"><input class="local-pickup" display="none" onclick="localPickup(this,'.$selId.');" type="checkbox" value="'.$pcollect.'" name="pickup_option" '.$pcollect.'><img src="images/pickup.png"/>'.$pickup.'</div>';
+	$UserCartValue.='<div class="mtr-pick"><input class="mtr-pickup" type="radio" name="pickup_mtr" checked />Pickup at MTR station</div>';
 	$UserCartValue.='<p '.$style.' class="ship_to" checked="checked">'.$cart_shipTo.'</p>
 	<select '.$style.' id="address-cart" class="ship_to" onchange="UserCartChangeAddress(this.value,'.$selId.');">
 	<option value="" id="address-select">'.$cart_chose.'</option>';
@@ -984,13 +984,13 @@ if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
 			}			
 			if($authorizeDetailsVal['status']=='Enable'){
 				if($AuthorizesVal['Login_ID']!='' && $AuthorizesVal['Transaction_Key']!=''){
-					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Credit-Card" checked /><label><span class="cc-icons ">Credit Card</span></label></li>';
+					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Credit-Card" ><label><span class="cc-icons ">Credit Card</span></label></li>';
 					$UserCartPaymentShow = 1;
 				}
 			}
 			if($twocheckoutDetailsVal['status']=='Enable'){
 				
-					$UserCartValue.='<li><input type="radio"  name="payment_value" value="twocheckout" checked /><img width="100px" src="images/twocheckout.png" /></li>';
+					$UserCartValue.='<li><input type="radio"  name="payment_value" value="twocheckout" ><img width="100px" src="images/twocheckout.png" /></li>';
 				
 				
 			}
@@ -998,7 +998,7 @@ if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
 			if($StripeDetailsVAl['status']=='Enable'){
 			
 				if($StripeVal['secret_key']!='' && $StripeVal['publishable_key']!=''){
-					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Stripe" checked /><label><span class=" "><img src="images/stripe.png" /></span></label></li>';
+					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Stripe" ><label><span class=" "><img src="images/stripe.png" /></span></label></li>';
 					$UserCartPaymentShow = 1;
 				}
 			
