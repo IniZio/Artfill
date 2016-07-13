@@ -936,11 +936,32 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 		$pcollect = '';
 		$style ='style="display:block"';
 	}
-	$UserCartValue.='<div class="local-pick"><input class="local-pickup" display="none" onclick="localPickup(this,'.$selId.');" type="checkbox" value="'.$pcollect.'" name="pickup_option" '.$pcollect.'><img src="images/pickup.png"/>'.$pickup.'</div>';
-	$UserCartValue.='<div class="mtr-pick"><input class="mtr-pickup" type="checkbox" name="pickup_mtr">Pickup at MTR station</div>';
+	//$UserCartValue.='<div class="local-pick"><input class="local-pickup" display="none" onclick="localPickup(this,'.$selId.');" type="checkbox" value="'.$pcollect.'" name="pickup_option" '.$pcollect.'><img src="images/pickup.png"/>'.$pickup.'</div>';
+	$UserCartValue.='<div class="mtr-pick"><input class="mtr-pickup" type="radio" name="pickup_mtr" checked />地鐵站交收</div>';
 	$UserCartValue.='<p '.$style.' class="ship_to" checked="checked">'.$cart_shipTo.'</p>
 	<select '.$style.' id="address-cart" class="ship_to" onchange="UserCartChangeAddress(this.value,'.$selId.');">
-	<option value="" id="address-select">'.$cart_chose.'</option>';
+	<option value="" id="address-select">選擇交收的地鐵站</option>
+	<option value="1" id="address-select">--觀塘線--</option>
+	<option value="2" id="address-select">油麻地</option>
+	<option value="2" id="address-select">旺角</option>
+	<option value="2" id="address-select">太子</option>
+	<option value="2" id="address-select">石硤尾</option>
+	<option value="2" id="address-select">九龍塘</option>
+	<option value="2" id="address-select">樂富</option>
+	<option value="2" id="address-select">黃大仙</option>
+	<option value="2" id="address-select">鑽石山</option>
+	<option value="2" id="address-select">彩虹</option>
+	<option value="2" id="address-select">九龍灣</option>
+	<option value="2" id="address-select">牛頭角</option>
+	<option value="2" id="address-select">觀塘</option>
+	<option value="2" id="address-select">藍田</option>
+	<option value="2" id="address-select">油塘</option>
+	<option value="2" id="address-select">調景嶺</option>
+	<option value="2" id="address-select">--荃灣線--</option>
+	<option value="2" id="address-select">中環</option>';
+	
+	//.$cart_chose.'</option>';
+	/*
 	foreach ($shipVal->result() as $Shiprow){
 		if($Shiprow->id == $this->session->userdata('shopId-'.$selId)){ 
 			$optionsValues = 'selected="selected"'; 
@@ -950,8 +971,8 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 			$optionsValues ='';
 		}
 		$UserCartValue.='<option '.$optionsValues.' value="'.$Shiprow->id.'" l1="'.$Shiprow->full_name.'" l2="'.$Shiprow->address_location.'" l3="'.$Shiprow->phone.'">'.$Shiprow->full_name.'</option>';
-	}
-	$UserCartValue.='</select><p '.$style.'  class="default_addr"><span id="Chg_Add_Val_'.$selId.'">'.$ChooseVal.'</span></p><span style="color:#FF0000;" id="User_Ship_err_'.$selId.'"></span><a  '.$style.' href="settings/cart-shipping-address" class="add_addr add_" onclick="shipping_address_cart();">'.$cart_addAddr.'</a>';
+	}*/
+	$UserCartValue.='</select><p '.$style.'  class="default_addr"><span id="Chg_Add_Val_'.$selId.'">'.$ChooseVal.'</span></p><span style="color:#FF0000;" id="User_Ship_err_'.$selId.'"></span>';//<a  '.$style.' href="settings/cart-shipping-address" class="add_addr add_" onclick="shipping_address_cart();">'.$cart_addAddr.'</a>';
 }
 }
 if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
@@ -984,13 +1005,13 @@ if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
 			}			
 			if($authorizeDetailsVal['status']=='Enable'){
 				if($AuthorizesVal['Login_ID']!='' && $AuthorizesVal['Transaction_Key']!=''){
-					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Credit-Card" checked /><label><span class="cc-icons ">Credit Card</span></label></li>';
+					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Credit-Card" ><label><span class="cc-icons ">Credit Card</span></label></li>';
 					$UserCartPaymentShow = 1;
 				}
 			}
 			if($twocheckoutDetailsVal['status']=='Enable'){
 				
-					$UserCartValue.='<li><input type="radio"  name="payment_value" value="twocheckout" checked /><img width="100px" src="images/twocheckout.png" /></li>';
+					$UserCartValue.='<li><input type="radio"  name="payment_value" value="twocheckout" ><img width="100px" src="images/twocheckout.png" /></li>';
 				
 				
 			}
@@ -998,7 +1019,7 @@ if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
 			if($StripeDetailsVAl['status']=='Enable'){
 			
 				if($StripeVal['secret_key']!='' && $StripeVal['publishable_key']!=''){
-					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Stripe" checked /><label><span class=" "><img src="images/stripe.png" /></span></label></li>';
+					$UserCartValue.='<li><input type="radio"  name="payment_value" value="Stripe" ><label><span class=" "><img src="images/stripe.png" /></span></label></li>';
 					$UserCartPaymentShow = 1;
 				}
 			
