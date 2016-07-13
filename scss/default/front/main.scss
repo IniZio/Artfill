@@ -1,18 +1,10 @@
-/*
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-*/
-
 body,
-button, /* 1 */
-input, /* 1 */
-select, /* 1 */
-textarea  /* 1 */
+button,
+input,
+select,
+textarea
 {
-    font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif !important;
+    font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',sans-serif !important;
 }
 
 html, body {
@@ -25,12 +17,10 @@ html, body {
   background: transparent;
   color: #999999;
   font: 14px;
-  // font-family: Georgia, "Times New Roman", Times, serif, "Microsoft YaHei New", "Microsoft Yahei", "σ╛«Φ╜»Θ¢àΘ╗æ", σ«ïΣ╜ô, SimSun, STXihei, "σìÄµûçτ╗åΘ╗æ";
 }
 
 .shadowed {
-  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
-Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,Color='#444')";
   filter: url(#drop-shadow);
   -webkit-filter: drop-shadow(12px 12px 7px rgba(100,100,100,0.5));
   filter: drop-shadow(12px 12px 7px rgba(100,100,100,0.5));
@@ -64,7 +54,6 @@ a {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-  // font-family: "Microsoft YaHei New", "Microsoft Yahei", "σ╛«Φ╜»Θ¢àΘ╗æ", σ«ïΣ╜ô, SimSun, STXihei, "σìÄµûçτ╗åΘ╗æ";
 }
 
 /*a:link, a:visited {
@@ -137,11 +126,11 @@ h1 {
 
 /*header*/
 
-@font-face {
+/*@font-face {
   font-family: 'IndianRupeeRegular';
   src: url("../../fonts/indianrupee.eot");
   src: url("../../fonts/indianrupee.eot") format("embedded-opentype"), url("../../fonts/indianrupee.woff2") format("woff2"), url("../../fonts/indianrupee.woff") format("woff"), url("../../fonts/indianrupee.ttf") format("truetype"), url("../../fonts/indianrupee.svg#IndianRupeeRegular") format("svg");
-}
+}*/
 
 header {
   /*padding:20px 0 0;*/
@@ -1138,6 +1127,7 @@ footer {
 
 ul.footer-list {
   font: 12px Arial, Helvetica, sans-serif;
+  // font-weight: bold;
   color: black;
   padding: 0;
   clear: both;
@@ -1152,8 +1142,8 @@ ul.footer-list li {
 
 ul.footer-list li a {
   // color: #999;
-  color: grey;
-  text-shadow: 0px 0px 5px white;
+  color: #333333;
+  text-shadow: 0px 0px 9px white;
 }
 
 ul.footer-list li a i {
