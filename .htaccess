@@ -5,3 +5,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond $1 !^(index\.php|javascript|images|robots\.txt)
 RewriteRule ^(.*)$ /index.php?/$1 [L]
 Options -Indexes
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+RewriteRule ^css/(.*)\.css$ /css/s.php/$1.scss [R=301,L]

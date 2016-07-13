@@ -1,0 +1,991 @@
+.error {
+  color: #F00 !important;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+.wrapper-content {
+  clear: both;
+  padding: 0;
+}
+
+#content, .wrapper-content {
+  /*  background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    padding: 20px;*/
+}
+
+.cart-order-depth {
+  /* border-bottom: 1px solid #ECEEF4; */
+  float: left;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.cart-order-depth li.depth1 {
+  padding-left: 117px;
+  width: 188px;
+}
+
+.cart-order-depth li {
+  background: url("../../../images/site/bg-order-depth.gif") no-repeat scroll 100% 0 transparent;
+  color: #C8CCD0;
+  float: left;
+  font-size: 13px;
+  font-weight: bold;
+  height: 40px;
+  padding-top: 26px;
+  position: relative;
+}
+
+.cart-order-depth li.depth1 span {
+  left: 18px;
+}
+
+.cart-order-depth li.depth1 {
+  padding-left: 117px;
+  width: 188px;
+}
+
+.cart-order-depth li span {
+  background: url("../../../images/site/bg-cart-order.gif") no-repeat scroll 0 0 transparent;
+  display: block;
+  font-size: 14px;
+  height: 22px;
+  left: 0;
+  line-height: 14px;
+  padding-top: 8px;
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  width: 30px;
+}
+
+.cart-order-depth li.depth2 span {
+  left: 74px;
+}
+
+.cart-order-depth li.current span {
+  background-position: 100% 100%;
+}
+
+.cart-order-depth li span {
+  background: url("../../../images/site/bg-cart-order.gif") no-repeat scroll 0 0 transparent;
+  display: block;
+  font-size: 14px;
+  height: 30px;
+  left: 0;
+  line-height: 14px;
+  padding-top: 8px;
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  width: 30px;
+}
+
+.cart-order-depth li.depth3 {
+  background: none repeat scroll 0 0 transparent;
+  padding-left: 110px;
+  width: 200px;
+}
+
+.cart-order-depth li {
+  background: url("../../../images/site/bg-order-depth.gif") no-repeat scroll 100% 0 transparent;
+  color: #C8CCD0;
+  float: left;
+  font-size: 13px;
+  font-weight: bold;
+  height: 40px;
+  padding-top: 26px;
+  position: relative;
+}
+
+.cart-list {
+  clear: both;
+  float: left;
+  width: 100%;
+  background: #fff;
+}
+
+.cart-list h2 {
+  color: #373D49;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.cart-order-depth {
+  /* border-bottom: 1px solid #ECEEF4; */
+  float: left;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  margin-bottom: 13px;
+}
+
+.cart-order-depth li.depth1 {
+  padding-left: 60px;
+  width: 188px;
+  padding-bottom: 25px;
+}
+
+.cart-order-depth li.current {
+  color: #59646F;
+}
+
+.cart-order-depth li.depth2 {
+  padding-left: 117px;
+
+  /* width: 188px; */
+  width: 255px;
+}
+
+.cart-order-depth li.depth2 span {
+  left: 74px;
+}
+
+.cart-list.chept2 .card-payment {
+  background: none repeat scroll 0 0 #FDFDFE;
+}
+
+.cart-list .cart-payment-wrap {
+  border: 1px solid #DDDDDD;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+.cart-list.chept2 .hotel-booking-left {
+  padding-bottom: 82px;
+}
+
+.cart-list.chept2 .hotel-booking-left {
+  min-height: 400px;
+}
+
+.cart-list.chept2 .hotel-booking-left {
+  background: none repeat scroll 0 0 #FFFFFF;
+  padding-bottom: 101px;
+  width: 647px;
+}
+
+.hotel-booking-left {
+  border-right: 1px solid #D4D6DF;
+  clear: both;
+  float: left;
+  padding: 3px 0 0;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dl.payment-personal {
+  padding-right: 0;
+  width: 270px;
+  margin: 0 50px 0 0;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dl.payment-personal {
+  border: 0 none;
+  padding-bottom: 9px;
+}
+
+.hotel-booking-left dl.payment-personal {
+  border-bottom: 1px solid #D4D6DF;
+  padding-bottom: 14px;
+}
+
+.hotel-booking-left dl {
+  clear: both;
+  float: left;
+  padding: 0 20px 10px;
+  position: relative;
+  width: 607px;
+}
+
+.hotel-booking-left dt b {
+  color: #373D49;
+  display: block;
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.cart-list .cart-payment dt {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 16px 0 5px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .select-country {
+  width: 253px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .select-round {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-color: #D1D3D9;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .selectBox {
+  height: 29px;
+}
+
+.hotel-booking-left dd .select-white {
+  float: left;
+  height: 29px;
+  width: 415px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd label {
+  display: block;
+  float: none;
+}
+
+.hotel-booking-left dd label {
+  color: #373D49;
+  float: left;
+  font-size: 12px;
+  line-height: 22px;
+  padding-top: 4px;
+  width: 180px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  margin-bottom: 0;
+  width: 253px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  float: none;
+  width: 280px;
+}
+
+.hotel-booking-left dd input {
+  border: 1px solid #D1D3D9;
+  border-radius: 4px 4px 4px 4px;
+  float: left;
+  height: 17px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 415px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd label {
+  display: block;
+  float: none;
+}
+
+.hotel-booking-left dd label {
+  color: #373D49;
+  float: left;
+  font-size: 12px;
+  line-height: 22px;
+  padding-top: 4px;
+  width: 180px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  margin-bottom: 0;
+  width: 253px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  float: none;
+  width: 280px;
+}
+
+.hotel-booking-left dd input {
+  border: 1px solid #D1D3D9;
+  border-radius: 4px 4px 4px 4px;
+  float: left;
+  height: 17px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 415px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd label {
+  display: block;
+  float: none;
+}
+
+.hotel-booking-left dd label {
+  color: #373D49;
+  float: left;
+  font-size: 12px;
+  line-height: 22px;
+  padding-top: 4px;
+  width: 180px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd label b {
+  color: #3077CE;
+  font-size: 12px;
+  font-weight: normal;
+  position: relative;
+  top: 2px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  margin-bottom: 0;
+  width: 253px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  float: none;
+  width: 280px;
+}
+
+.hotel-booking-left dd input {
+  border: 1px solid #D1D3D9;
+  border-radius: 4px 4px 4px 4px;
+  float: left;
+  height: 17px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 415px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd label {
+  display: block;
+  float: none;
+}
+
+.hotel-booking-left dd label {
+  color: #373D49;
+  float: left;
+  font-size: 12px;
+  line-height: 22px;
+  padding-top: 4px;
+  width: 180px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  margin-bottom: 0;
+  width: 253px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  float: none;
+  width: 280px;
+}
+
+.hotel-booking-left dd input {
+  border: 1px solid #D1D3D9;
+  border-radius: 4px 4px 4px 4px;
+  float: left;
+  height: 17px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 415px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd {
+  padding-bottom: 10px;
+}
+
+.hotel-booking-left dd {
+  clear: both;
+  float: left;
+  min-height: 39px;
+  width: 100%;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd label {
+  display: block;
+  float: none;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  margin-bottom: 0;
+  width: 253px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  float: none;
+  width: 280px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dl.payment-card {
+  clear: none;
+  padding: 0;
+  width: 265px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dl.payment-card {}
+
+.hotel-booking-left dl {
+  clear: both;
+  float: left;
+  padding: 0 20px 10px;
+  position: relative;
+  width: 607px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd {
+  padding-bottom: 10px;
+}
+
+.hotel-booking-left dd {
+  clear: both;
+  float: left;
+  min-height: 39px;
+  margin: 0 10px 0 0;
+  width: 100%;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd label {
+  display: block;
+  float: none;
+}
+
+.hotel-booking-left dd label {
+  color: #373D49;
+  float: left;
+  font-size: 12px;
+  line-height: 22px;
+  padding-top: 4px;
+  width: 180px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .select-country {
+  width: 253px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .select-round {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-color: #D1D3D9;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .selectBox {
+  height: 29px;
+}
+
+.hotel-booking-left dd .select-white {
+  float: left;
+  height: 29px;
+  width: 415px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd {
+  padding-bottom: 10px;
+}
+
+.hotel-booking-left dd {
+  clear: both;
+  float: left;
+  min-height: 39px;
+  width: 100%;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd label {
+  display: block;
+  float: none;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd label b {
+  color: #3077CE;
+  font-size: 12px;
+  font-weight: normal;
+  position: relative;
+  top: 2px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  margin-bottom: 0;
+  width: 253px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  float: none;
+  width: 280px;
+}
+
+.hotel-booking-left dd input {
+  border: 1px solid #D1D3D9;
+  border-radius: 4px 4px 4px 4px;
+  float: left;
+  height: 17px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 415px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd label {
+  display: block;
+  float: none;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  margin-bottom: 0;
+  width: 253px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd input {
+  border-radius: 3px;
+  float: none;
+  height: 33px;
+  width: 256px;
+}
+
+.hotel-booking-left dd input {
+  border: 1px solid #D1D3D9;
+  border-radius: 4px 4px 4px 4px;
+  float: left;
+  height: 17px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 415px;
+}
+
+.payment-card #country {
+  border-radius: 3px;
+  height: 32px;
+  width: 268px;
+}
+
+.hotel-booking-left .hotel-booking-noti {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 582px;
+}
+
+.hotel-booking-left .hotel-booking-noti {
+  background: url("../../../images/site/icon-hotel-payment.gif") no-repeat scroll 22px -102px #F5F6F8;
+  border-top: 1px solid #E9EAEF;
+  color: #91949A;
+  font-size: 11px;
+  line-height: 18px;
+  padding: 30px 0 14px 50px;
+  width: 72.9%;
+}
+
+.hotel-booking-left .hotel-booking-noti big {
+  color: #646872;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  width: 400px;
+}
+
+.cart-list.chept2 .card-payment .cart-payment {
+  overflow: hidden;
+  padding-bottom: 150px;
+  width: 252px;
+}
+
+.cart-list.chept2 .cart-payment {
+  padding: 0;
+}
+
+.current {
+  color: #81ca0f;
+  cursor: default;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.cart-order-depth li.depth2 a {
+  color: #81ca0f;
+  cursor: default;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* .cart-list.chept2 .card-payment .cart-payment {
+    overflow: hidden;
+    padding-bottom: 245px;
+    width: 252px;
+	 
+} */
+.cart-list.chept2 .cart-payment {
+  padding: 0;
+}
+
+.cart-list .cart-payment {
+  padding: 34px 0 53px;
+  position: relative;
+  width: 281px;
+  z-index: 1;
+}
+
+.cart-list .cart-payment .cart-payment-order {
+  clear: both;
+}
+
+.cart-list .cart-payment dl {
+  padding: 0 0 15px 13px;
+}
+
+.cart-list .cart-payment-order li.first {
+  background: none repeat scroll 0 0 transparent;
+}
+
+.cart-list .cart-payment-order li {
+  background: url("../../../images/site/common/line-dot-gray.gif") repeat-x scroll 0 0 transparent;
+  padding: 7px;
+  text-align: right;
+}
+
+.cart-list .cart-payment-order li .order-payment-type {
+  color: #5A5B5D;
+  float: left;
+  font-size: 12px;
+}
+
+.cart-list .cart-payment-order li .order-payment-usd {
+  color: #373D49;
+  font-size: 10px;
+  text-align: right;
+}
+
+.cart-list .cart-payment-order li .order-payment-usd b {
+  color: #5A5B5D;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cart-list .cart-payment-order li .order-payment-type {
+  color: #5A5B5D;
+  float: left;
+  font-size: 12px;
+}
+
+.cart-list .cart-payment-order li .order-payment-usd {
+  color: #373D49;
+  font-size: 10px;
+  text-align: right;
+}
+
+.cart-list .cart-payment-order li .order-payment-usd b {
+  color: #5A5B5D;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cart-list .cart-payment-order li {
+  background: url("../../../images/site/common/line-dot-gray.gif") repeat-x scroll 0 0 transparent;
+  padding: 7px;
+  text-align: right;
+}
+
+.cart-list .cart-payment-order li .order-payment-type {
+  color: #5A5B5D;
+  float: left;
+  font-size: 12px;
+}
+
+.cart-list .cart-payment-order li .order-payment-usd {
+  color: #373D49;
+  font-size: 10px;
+  text-align: right;
+}
+
+.cart-list .cart-payment-order li .order-payment-usd b {
+  color: #5A5B5D;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cart-list .cart-payment-order li.total {
+  background: none repeat scroll 0 0 transparent;
+  border-top: 1px solid #D4D6DF;
+  border-bottom: 1px solid #D4D6DF;
+  padding-top: 13px;
+}
+
+.cart-list .cart-payment-order li {
+  background: url("../../../images/site/common/line-dot-gray.gif") repeat-x scroll 0 0 transparent;
+  padding: 7px;
+  text-align: right;
+}
+
+.cart-list .cart-payment-order li.total .order-payment-type {
+  color: #373D49;
+  font-size: 15px;
+}
+
+.cart-list .cart-payment-order li .order-payment-type {
+  color: #5A5B5D;
+  float: left;
+  font-size: 13px;
+}
+
+.cart-list .cart-payment-order li.total .order-payment-usd {
+  color: #373D49;
+  font-size: 12px;
+}
+
+.cart-list .cart-payment-order li .order-payment-usd {
+  color: #373D49;
+  font-size: 10px;
+  text-align: right;
+}
+
+.cart-list .cart-payment-order li.total .order-payment-usd b {
+  color: #373D49;
+  font-size: 14px;
+}
+
+.cart-list.chept2 .card-payment .button-complete {
+  background: none repeat scroll 0 0 #4fa9c6;
+  border: 0 none;
+  border-radius: 3px 3px 3px 3px;
+  bottom: 82px;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: bold;
+  height: 40px;
+  margin: 20px auto;
+  position: absolute;
+  right: 20px;
+  text-align: center;
+  width: 212px;
+  z-index: 3;
+}
+
+.cart-list.chept2 .card-payment .card-payment-foot {
+  background: none repeat scroll 0 0 #FFFFFF;
+  bottom: 0;
+  padding-bottom: 16px;
+}
+
+.cart-list.chept2 .card-payment .card-payment-foot {
+  border-top: 1px solid #E9EAEF;
+  bottom: 13px;
+  color: #373D49;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 17px;
+  padding: 17px 20px 3px;
+  position: absolute;
+  right: 0;
+  width: 26.7%;
+  z-index: 3;
+}
+
+.cart-list.chept2 .hotel-booking-left {
+  padding-bottom: 82px;
+}
+
+.cart-list.chept2 .hotel-booking-left {
+  min-height: 400px;
+}
+
+.cart-list.chept2 .hotel-booking-left {
+  background: none repeat scroll 0 0 #FFFFFF;
+  padding-bottom: 101px;
+  width: 67%;
+  padding-left: 25px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd.comment {
+  padding: 0;
+  position: relative;
+  text-align: left;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd.comment {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 47px 22px 0 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
+.select-round {
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  height: 29px;
+  line-height: 19px;
+  padding: 5px;
+}
+
+/***today car***/
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .select-country {
+  width: 253px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .select-round {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-color: #D1D3D9;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .selectBox {
+  height: 29px;
+}
+
+.hotel-booking-left dd .select-white {
+  float: left;
+  height: 29px;
+  width: 415px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .select-date {
+  margin-right: 7px;
+  width: 73px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .select-date {
+  margin-right: 7px;
+  width: 73px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .select-round {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-color: #D1D3D9;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .select-date {
+  margin-right: 7px;
+  width: 73px;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .select-round {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-color: #D1D3D9;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd .selectBox {
+  height: 29px;
+}
+
+.hotel-booking-left dd .select-white {
+  float: left;
+  height: 29px;
+  width: 415px;
+}
+
+.hotel-booking-left dd select, .hotel-booking-left dd select, .order-detail-fulfill li .select-round, .add-option .add-txt dl.add-option-zip .select-round, .add-option .add-txt dl.add-option-state .select-round {
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  height: 29px;
+  line-height: 19px;
+  padding: 5px;
+}
+
+.hotel-booking-left dd select, .hotel-booking-left dd select, .order-detail-fulfill li .select-round, .add-option .add-txt dl.add-option-zip .select-round, .add-option .add-txt dl.add-option-state .select-round {
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  height: 29px;
+  line-height: 19px;
+  padding: 5px;
+}
+
+.select-round {
+  background: -moz-linear-gradient(center top, #ECECEC, #FFFFFF) repeat scroll 0 0 transparent;
+  border: 1px solid #9A9A9A;
+  border-radius: 3px 3px 3px 3px;
+  color: #303030;
+  font-size: 12px;
+  font-weight: normal;
+  height: 21px;
+  line-height: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd.comment {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 47px 22px 0 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
+.cart-list.chept2 .card-payment .hotel-booking-left dd.comment {
+  padding: 0;
+  position: relative;
+  text-align: left;
+}
+
+.cart-list .cart-payment-wrap strong {
+  margin: 30px 0 50px 10px;
+  padding: 0px;
+  font-size: 26px;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.payment_success img {
+  margin: 0 0 50px 230px;
+  padding: 0px;
+}
+
+.payment-personal span {
+  font-size: 12px;
+  margin: 8px 0 12px 0px;
+  padding: 0px;
+  color: #999999;
+}
+
+.payment-card span {
+  font-size: 12px;
+  margin: 8px 0 12px 0px;
+  padding: 0px;
+  color: #999999;
+}
+
+.chekout_heading {
+  height: 58px;
+}
+
+.payment_text {
+  height: 40px;
+  padding: 13px 0 12px 0;
+}
+
+.cart-payment-order dd {
+  margin: 0 20px 0 0;
+  padding: 0;
+}
+
+.cart-payment .checkout_txt {
+  border-color: #959595 #D3D3D3 #D3D3D3 #959595;
+  border-style: solid;
+  border-width: 1px;
+  padding: 6px;
+  width: 194px;
+}
+
+.cart-payment .checkout_header {
+  float: left;
+  width: 94.5%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #666666;
+  margin: 0 0 20px;
+  padding: 12px 15px 8px;
+}
+
+.payment_sucess {
+  margin: 40px 0;
+}
+
+.payment_success {
+  float: right;
+  padding: 20px 30px 30px;
+  width: 69%;
+}
+
+.payment_success img {
+  float: left;
+  width: 55%;
+}
+
+.cart-list .cart-payment-wrap strong {
+  float: left;
+  font-size: 17px;
+  padding: 10px 0 0 14px;
+  width: 50%;
+}
