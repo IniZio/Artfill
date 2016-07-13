@@ -61,7 +61,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 	<?php
 } elseif ($this->_ci_cached_vars["languageCode"] == "zh_HK") {
     ?>
-	<span style="color:#8bdad4;">付款方式</span>&emsp;
+	<span>付款方式</span>&emsp;
 	<?php }?>	
 	<img style="height:20px;" src="./images/paypal.png" />
 	<img style="height:20px;" src="./images/visa.jpg" />
@@ -75,7 +75,7 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 	<?php
 } elseif ($this->_ci_cached_vars["languageCode"] == "zh_HK") {
     ?>
-	<span style="color:#8bdad4;">聯絡我們</span> &emsp;
+	<span>聯絡我們</span> &emsp;
 	<?php }?>
 	<a href="https://www.facebook.com/artfillco/"><img style="width:30px;"src="./images/Facebook-64.png"/></a> &emsp;
 	<a href="https://www.instagram.com/artfill.hk/"><img style="width:30px;" src="./images/Instagram-64.png"/></a> &emsp;
