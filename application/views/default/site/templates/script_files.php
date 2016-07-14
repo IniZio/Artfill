@@ -423,5 +423,5 @@ var lg_remove_from_fav='<?php echo addslashes(af_lg('lg_remove_from_fav','Remove
 <?php if($this->uri->segment(1) =='gift-cards'){?>
 <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
 <script type="text/javascript" src="js/gallery.js"></script>
-<script type="text/javascript" src="js/favico.js"></script>
 <?php }?>
+<script type="text/javascript" src="js/favico.js"></script>
