@@ -937,28 +937,114 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 		$style ='style="display:block"';
 	}
 	//$UserCartValue.='<div class="local-pick"><input class="local-pickup" display="none" onclick="localPickup(this,'.$selId.');" type="checkbox" value="'.$pcollect.'" name="pickup_option" '.$pcollect.'><img src="images/pickup.png"/>'.$pickup.'</div>';
-	$UserCartValue.='<div class="mtr-pick"><input class="mtr-pickup" type="radio" name="pickup_mtr" checked />地鐵站交收</div>';
+	$UserCartValue.='<div class="station-pick"><input class="station-pickup" type="radio" name="pickup_station" checked />地鐵站交收</div>';
 	$UserCartValue.='<p '.$style.' class="ship_to" checked="checked">'.$cart_shipTo.'</p>
 	<select '.$style.' id="address-cart" class="ship_to" onchange="UserCartChangeAddress(this.value,'.$selId.');">
-	<option value="" id="address-select">選擇交收的地鐵站</option>
-	<option value="1" id="address-select">--觀塘線--</option>
-	<option value="2" id="address-select">油麻地</option>
-	<option value="2" id="address-select">旺角</option>
-	<option value="2" id="address-select">太子</option>
-	<option value="2" id="address-select">石硤尾</option>
-	<option value="2" id="address-select">九龍塘</option>
-	<option value="2" id="address-select">樂富</option>
-	<option value="2" id="address-select">黃大仙</option>
-	<option value="2" id="address-select">鑽石山</option>
-	<option value="2" id="address-select">彩虹</option>
-	<option value="2" id="address-select">九龍灣</option>
-	<option value="2" id="address-select">牛頭角</option>
-	<option value="2" id="address-select">觀塘</option>
-	<option value="2" id="address-select">藍田</option>
-	<option value="2" id="address-select">油塘</option>
-	<option value="2" id="address-select">調景嶺</option>
-	<option value="2" id="address-select">--荃灣線--</option>
-	<option value="2" id="address-select">中環</option>';
+	<option value="">-- 港島綫 --</option>
+    <option value="">堅尼地城</option>
+    <option value="">香港大學</option>
+    <option value="">西營盤</option>
+    <option value="">上環</option>
+    <option value="">中環</option>
+    <option value="">金鐘</option>
+    <option value="">灣仔</option>
+    <option value="">銅鑼灣</option>
+    <option value="">天后</option>
+    <option value="">炮台山</option>
+    <option value="">北角</option>
+    <option value="">鰂魚涌</option>
+    <option value="">太古</option>
+    <option value="">西灣河</option>
+    <option value="">筲箕灣</option>
+    <option value="">杏花邨</option>
+    <option value="">柴灣</option>
+    <option value="">-- 觀塘綫 --</option>
+    <option value="">油麻地</option>
+    <option value="">旺角</option>
+    <option value="">太子</option>
+    <option value="">石硤尾</option>
+    <option value="">九龍塘</option>
+    <option value="">樂富</option>
+    <option value="">黃大仙</option>
+    <option value="">鑽石山</option>
+    <option value="">彩虹</option>
+    <option value="">九龍灣</option>
+    <option value="">牛頭角</option>
+    <option value="">觀塘</option>
+    <option value="">藍田</option>
+    <option value="">油塘</option>
+    <option value="">調景嶺</option>
+    <option value="">-- 荃灣綫 --</option>
+    <option value="">中環</option>
+    <option value="">金鐘</option>
+    <option value="">尖沙咀</option>
+    <option value="">佐敦</option>
+    <option value="">油麻地</option>
+    <option value="">旺角</option>
+    <option value="">太子</option>
+    <option value="">深水埗</option>
+    <option value="">長沙灣</option>
+    <option value="">荔枝角</option>
+    <option value="">美孚</option>
+    <option value="">荔景</option>
+    <option value="">葵芳</option>
+    <option value="">葵興</option>
+    <option value="">大窩口</option>
+    <option value="">荃灣</option>
+    <option value="">-- 將軍澳綫 --</option>
+    <option value="">北角</option>
+    <option value="">鰂魚涌</option>
+    <option value="">油塘</option>
+    <option value="">調景嶺</option>
+    <option value="">將軍澳</option>
+    <option value="">坑口</option>
+    <option value="">寶琳</option>
+    <option value="">康城</option>
+    <option value="">-- 東涌綫及迪士尼綫 --</option>
+    <option value="">香港</option>
+    <option value="">九龍</option>
+    <option value="">奧運</option>
+    <option value="">南昌</option>
+    <option value="">荔景</option>
+    <option value="">青衣</option>
+    <option value="">東涌</option>
+    <option value="">欣澳</option>
+    <option value="">迪士尼</option>
+    <option value="">-- 東鐵綫 --</option>
+    <option value="">紅磡</option>
+    <option value="">旺角東</option>
+    <option value="">九龍塘</option>
+    <option value="">大圍</option>
+    <option value="">沙田</option>
+    <option value="">火炭</option>
+    <option value="">大學</option>
+    <option value="">大埔墟</option>
+    <option value="">太和</option>
+    <option value="">粉嶺</option>
+    <option value="">上水</option>
+    <option value="">-- 馬鞍山綫 --</option>
+    <option value="">大圍</option>
+    <option value="">車公廟</option>
+    <option value="">沙田圍</option>
+    <option value="">第一城</option>
+    <option value="">石門</option>
+    <option value="">大水坑</option>
+    <option value="">恆安</option>
+    <option value="">馬鞍山</option>
+    <option value="">烏溪沙</option>
+    <option value="">-- 西鐵綫 --</option>
+    <option value="">紅磡</option>
+    <option value="">尖東</option>
+    <option value="">柯士甸</option>
+    <option value="">南昌</option>
+    <option value="">美孚</option>
+    <option value="">荃灣西</option>
+    <option value="">錦上路</option>
+    <option value="">元朗</option>
+    <option value="">朗屏</option>
+    <option value="">天水圍</option>
+    <option value="">兆康</option>
+    <option value="">屯門</option>';
 	
 	//.$cart_chose.'</option>';
 	/*
