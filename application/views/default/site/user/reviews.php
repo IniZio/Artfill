@@ -121,7 +121,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 <section class="container">
 
 <!-- <div class="purchase_review container  hole_content" style="width:1000px;max-width:1000px">    	 -->
-<div class="purchase_review container  hole_content">    	
+<div class="purchase_review hole_content">    	
      <div class="main"> 
 <!-- feedback-container start -->
    <div class="feedback-container">
