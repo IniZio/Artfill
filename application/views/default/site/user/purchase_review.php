@@ -123,7 +123,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 <section class="container">
 <!-- header_end -->
 <!-- section_start -->
-<div class="purchase_review community_right">    	
+<div class="purchase_review container community_right">    	
      <!-- <div class="main">     -->
     <div>
      
