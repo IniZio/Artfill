@@ -349,5 +349,13 @@ $("#maxPriceDisp").html(ui.values[1]);
 window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);</script> -->
 
 <?php }?>
+<script>
+<?php if ($userActivityCount > 0) {?>
+	var favicon=new Favico({
+    animation:'fade'
+	});
+	favicon.badge(<?php echo $userActivityCount; ?>);
+<?php }?>
+</script>
 </body>
 </html>
