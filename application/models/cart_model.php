@@ -939,7 +939,7 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 	//$UserCartValue.='<div class="local-pick"><input class="local-pickup" display="none" onclick="localPickup(this,'.$selId.');" type="checkbox" value="'.$pcollect.'" name="pickup_option" '.$pcollect.'><img src="images/pickup.png"/>'.$pickup.'</div>';
 	$UserCartValue.='<div class="station-pick"><input class="station-pickup" type="radio" name="pickup_station" checked />地鐵站交收</div>';
 	$UserCartValue.='<p '.$style.' class="ship_to" checked="checked">'.$cart_shipTo.'</p>
-	<select '.$style.' id="address-cart" class="ship_to" onchange="UserCartChangeAddress(this.value,'.$selId.');">
+	<select id="address-cart" class="ship_to" onchange="UserCartChangeAddress(this.value,'.$selId.');">
 	<option value="">-- 港島綫 --</option>
     <option value="">堅尼地城</option>
     <option value="">香港大學</option>
