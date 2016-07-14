@@ -1057,7 +1057,7 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 		}
 		$UserCartValue.='<option '.$optionsValues.' value="'.$Shiprow->id.'" l1="'.$Shiprow->full_name.'" l2="'.$Shiprow->address_location.'" l3="'.$Shiprow->phone.'">'.$Shiprow->full_name.'</option>';
 	}*/
-	$UserCartValue.='</select><p '.$style.'  class="default_addr"><span id="Chg_Add_Val_'.$selId.'">'.$ChooseVal.'</span></p><span style="color:#FF0000;" id="User_Ship_err_'.$selId.'"></span>';//<a  '.$style.' href="settings/cart-shipping-address" class="add_addr add_" onclick="shipping_address_cart();">'.$cart_addAddr.'</a>';
+	$UserCartValue.='</select><input type="text" name="pickup_date" id="pickup_date" value="" placeholder="Date" class="form-control date"><input type="text" name="pickup_time" id="pickup_time" value="" placeholder="Time" class="form-control time"><p '.$style.'  class="default_addr"><span id="Chg_Add_Val_'.$selId.'">'.$ChooseVal.'</span></p><span style="color:#FF0000;" id="User_Ship_err_'.$selId.'"></span>';//<a  '.$style.' href="settings/cart-shipping-address" class="add_addr add_" onclick="shipping_address_cart();">'.$cart_addAddr.'</a>';
 }
 }
 if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){

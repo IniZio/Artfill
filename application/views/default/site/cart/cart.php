@@ -16,6 +16,10 @@
 		$(amt).html((cartAmt * cartRate * 0.01 + cartStatic).toFixed(2));
 	}
 </script>
+<script type="text/javascript" src="js/site/timepicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="js/site/timepicker/jquery.timepicker.js"></script>
+<link rel="stylesheet" media="screen" type="text/css" href="css/default/site/timepicker/bootstrap-datepicker.css" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/default/site/timepicker/jquery.timepicker.css"/>
 
 <div id="cart_div">
 	<section class="container">
@@ -84,7 +88,26 @@
 			</div>
 		</div>
 	</div>
-<script type="text/javascript">
+	<script>
+$(function($) {
+				$('.time').timepicker({
+                    'showDuration': true,
+                    'timeFormat': 'g:ia',
+					 minDate: 0,
+					 'disableTimeRanges':  [['<?php echo $GetAllExtrasCharge[0]->time_frame_from; ?>', '<?php echo $GetAllExtrasCharge[0]->time_frame_to; ?>']]
+
+                });				
+						var nowDate = new Date();
+var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0);
+				$('.date').datepicker({				
+                    'format': 'm/d/yyyy',
+                    'autoclose': true,
+					 minDate: 0,
+						 startDate: today 
+					
+                });
+
+  });
 function localPickup(evt,sid){
 	var ischeckedvalue = $(evt).prop('checked');
 	if(ischeckedvalue == true){

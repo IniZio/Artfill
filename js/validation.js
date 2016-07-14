@@ -1943,7 +1943,6 @@ function UserCartChangeAddress(IDval,selid){
 			//return false;
 			//alert(response); return false;
 			if(response !='0'){
-				alert('response is 0');
 				window.location.reload();
 				
 				/*var arr = response.split('|');
@@ -1960,7 +1959,6 @@ function UserCartChangeAddress(IDval,selid){
 				$('#Chg_Add_Val_'+selid).html(arr[4]);*/
 				
 			}else{
-				alert('response is 1');
 				return false;	
 			}
 		}

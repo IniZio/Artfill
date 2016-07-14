@@ -38,7 +38,7 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 <body>
 <!-- header_start -->
  <header>
- <div class="header_top animated slideInDown hidden-xs" style="position:relative;">
+ <div class="header_top animated hidden-xs" style="position:relative;">
 		<?php if ($this->session->userdata['shopsy_session_user_name'] == '' || true) {
     ?>
 			<div class="container top">
