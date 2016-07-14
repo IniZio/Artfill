@@ -1000,7 +1000,7 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
     <option value="">坑口</option>
     <option value="">寶琳</option>
     <option value="">康城</option>
-    <option value="">-- 東涌綫及迪士尼綫 --</option>
+    <option value="">-- 東涌綫 --</option>
     <option value="">香港</option>
     <option value="">九龍</option>
     <option value="">奧運</option>
@@ -1009,7 +1009,6 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
     <option value="">青衣</option>
     <option value="">東涌</option>
     <option value="">欣澳</option>
-    <option value="">迪士尼</option>
     <option value="">-- 東鐵綫 --</option>
     <option value="">紅磡</option>
     <option value="">旺角東</option>
