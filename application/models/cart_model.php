@@ -2016,6 +2016,13 @@ changeGateway('.$selId.','.$paypalRate.','.$paypalStatic.','.$UsergrantAmt.');
 				$AddPayt = $this->db->get();
 				/* echo $this->db->last_query();
 				die; */
+			} elseif($this->input->post('pickup_station') == 'on'){
+				$this->db->select('a.*');
+				$this->db->from(USER_SHOPPING_CART.' as a');
+				$this->db->join(PICKUP_STATION.'as b', 'b.id="'.$this->input->post('pickup_station_value').'"');
+				$this->db->where("a.user_id =".$userid);
+				$this->db->where("a.sell_id =".$this->input->post('sell_id'));
+				$AddPayt = $this->db->get();
 			}else{
 				$this->db->select('a.*,b.city,b.state,b.country,b.postal_code');
 				$this->db->from(USER_SHOPPING_CART.' as a');
@@ -2075,6 +2082,8 @@ changeGateway('.$selId.','.$paypalRate.','.$paypalStatic.','.$UsergrantAmt.');
 								price = "'.$result->price.'",
 								quantity = "'.$result->quantity.'",
 								indtotal = "'.$indTotal.'",
+								pickup_station = "'.$result->pickup_station.'",
+								pickup_time = "'.$result->pickup_time.'",
 								shippingcountry = "'.$result->country.'",
 								shippingid = "'.$this->input->post('Ship_address_val').'",
 								shippingstate = "'.$result->state.'",

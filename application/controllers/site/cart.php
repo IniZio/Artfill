@@ -937,8 +937,19 @@ redirect("login");
 					redirect("cart");
 				}
 			}
+<<<<<<< Updated upstream
 			elseif($this->input->post('pickup_mtr') == 'checked'){
 				echo 'pick up at mtr'; die;
+=======
+			elseif($this->input->post('pickup_station') == 'on'){
+				if($this->input->post('payment_value')!=''){
+					$this->cart_model->addPaymentUserCart($userid,$this->data['currencyValue']);
+					redirect("checkout/sellercart");
+				}else{
+					$this->setErrorMessage('error','Please Select the Payment Method');		
+					redirect("cart");
+				}
+>>>>>>> Stashed changes
 			}elseif($this->input->post('Ship_address_val') !='' ){
 				if($this->input->post('payment_value')!=''){  
 					$userid = $this->checkLogin('U');
