@@ -216,7 +216,7 @@ class Landing extends MY_Controller {
 			$subattr = "and sub.attr_value='".$color."' ";
 		}
 		
-		$condition = " where p.status='Publish' and p.pay_status='Paid' and FIND_IN_SET('".$Catid[0]."',p.category_id) ".$made_by." ".$gift_cards." ".$price." ".$prcing." ".$shipto." ".$shipfrom." and u.group='Seller' ".$subattr." and u.status='Active' or p.status='Publish' and p.user_id=0 group by p.id order by p.created desc limit ".$limitPaging;
+		$condition = " where p.status='Publish' and p.pay_status='Paid' and u.group='Seller' and u.status='Active' or p.status='Publish' group by p.id order by p.created desc limit ".$limitPaging;
 		
 		$this->data['product_list']=$this->product_model->view_product_details($condition);
 		
@@ -229,7 +229,7 @@ class Landing extends MY_Controller {
 		}	
 		$this->data['paginationDisplay'] = $paginationDisplay;
 	    $this->data['countryList'] = $this->product_model->get_all_details(COUNTRY_LIST,array(),array(array('field'=>'name','type'=>'asc')))->result();
-	    
+
 		$this->load->view('site/landing/landing',$this->data);
 	}
 	
