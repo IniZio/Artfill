@@ -607,6 +607,7 @@ $img = explode(',', $recent_product_details->row($i)->image);
 					</div>
 		    	</div>
 	  		</div>
+	  		<a title="1" class="landing-btn-more" href="https://artfill.co/shop_test/search/all?item=&pg=1" style="display: none;">See More Products</a>                        </div>
 		</section>
 			<?php }?>
 
