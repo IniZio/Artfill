@@ -30,7 +30,7 @@
 
     <li <?php if($this->uri->segment(1) == 'public-profile'){ echo 'class="side_active"'; } ?>>
 
-    	<a href="public-profile"><?php if($this->lang->line('user_pub_profile') != '') { echo stripslashes($this->lang->line('user_pub_profile')); } else echo "Public Profile"; ?></a>
+    	<a href="public-profile"><?php if($this->lang->line('user_pub_profile') != '') { echo "個人檔案"; } else echo "Public Profile"; ?></a>
 
         </li>
 
