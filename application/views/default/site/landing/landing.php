@@ -504,7 +504,7 @@ $n = $deal_of_day1->num_rows();
 		  <div class="container">
 			<h1 class="today-deal">最新商品</h1>
 			    <div class="row">
-					<div class="recent-fav" >
+					<div class="recent-fav" style="display:none">
 					<?php
 for ($i = 0; $i < count($recent_product_details->result()); $i++) {
 $img = explode(',', $recent_product_details->row($i)->image);
