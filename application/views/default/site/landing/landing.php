@@ -607,8 +607,7 @@ $img = explode(',', $recent_product_details->row($i)->image);
 					<?php }?>
 					</div>
 		    	</div>
-	  		</div>
-<div id="primary">
+		    	<div id="primary">
        
 	<div id="freewall" class="free-wall" style="margin-bottom: 51px;"> 
 	<?php if($product_list->num_rows() > 0){ ?>	
@@ -721,6 +720,8 @@ $img = explode(',', $recent_product_details->row($i)->image);
 	</div>
 	
 	</div>
+	  		</div>
+
 	  		<a title="1" class="landing-btn-more" href="https://artfill.co/shop_test/search/all?item=&pg=1" style="display: none;">See More Products</a>                        </div>
 		</section>
 			<?php }?>
@@ -835,15 +836,15 @@ $img = explode(',', $recent_product_details->row($i)->image);
 										cellW: 230,
 										cellH: 'auto',
 										onResize: function() {
-											wall.fitWidth();
+											wall.fitWidth($('.container').width());
 										}
 									});
 									
 									wall.container.find('.brick img').load(function() {
-										wall.fitWidth();
-										setTimeout(function(){wall.fitWidth();},100);
+										wall.fitWidth($('.container').width());
+										setTimeout(function(){wall.fitWidth($('.container').width());},100);
 									});
-									setTimeout(function(){ wall.fitWidth(); }, 100);
+									setTimeout(function(){wall.fitWidth($('.container').width()); }, 100);
 
 						</script>
 						<script type="text/javascript">
@@ -868,8 +869,8 @@ $(window).scroll(function(){
 						$(document).find('.landing-btn-more').remove();
 						$(document).find('#tiles').append($html.find('#tiles').html());
 						$(document).find('#tiles').after($html.find('.landing-btn-more'));
-						wall.fitWidth();
-						setTimeout(function(){wall.fitWidth();},100);
+						wall.fitWidth($('.container').width());
+						setTimeout(function(){wall.fitWidth($('.container').width());},100);
 						
 					},
 					error : function(a,b,c){
