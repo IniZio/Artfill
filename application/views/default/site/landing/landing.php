@@ -10,6 +10,7 @@ header{
 </style>
 <script type="text/javascript" src="js/site/jquery.countdown.js"></script>
 <link href="css/animate.css" rel="stylesheet">
+<script type="text/javascript" src="js/front/freewall.js"></script>
 <?php if (isset($active_theme) && $active_theme->num_rows() != 0) {?>
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Home-page.css" rel="stylesheet">
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
@@ -607,6 +608,115 @@ $img = explode(',', $recent_product_details->row($i)->image);
 					</div>
 		    	</div>
 	  		</div>
+	  		<div id="freewall" class="free-wall" style="margin-bottom: 51px;"> 
+	<?php if($product_list->num_rows() > 0){ ?>	
+		<ul style="  background: none repeat scroll 0 0 #FFFFFF;box-shadow: 0 3px 0 0 #E1E1E1;float: left;padding: 20px;width: 95%; display:none" id="loader">
+			<li style="text-align: center;" ><img src="images/spinner.gif" /></li>
+		</ul>
+		<div class="product-list" id="tiles">
+		    <?php        
+				$i=0; $hover=0; foreach($product_list->result_array() as $products) {
+			   $hover++;
+			   $Images=explode(',',$products['image']);
+			   $shopDet = $this->product_model->get_business_name($products['user_id']);
+			?>
+			 <div class="brick"> 
+				<a href="products/<?php echo $products['seourl'];?>"> 
+					<img src="images/product/org-image/<?php echo $Images[0]?>" width="100%">
+				</a>
+				<div class="info">
+					<h3><?php echo $products['product_name'];?></h3>
+					<span class="cat-name"><a href="shop-section/<?php echo $shopDet->row()->shop_seourl;?>"><?php echo $shopDet->row()->shop_name;?></a></span>
+					<span class="cat-name cat-price">
+						<a href="products/<?php echo $products['seourl'];?>"> <?php echo $currencySymbol; if($products['price'] != 0.00) { echo number_format($currencyValue*$products['price'],2); } else { echo number_format($currencyValue*$products['base_price'],2); echo '+'; } echo  $currencyType;?></a> 
+					</span> 
+				 </div>
+				 <div class="collections-ui">
+			
+					 <div  class="favorite-container">
+					  <?php if($loginCheck !=''){
+						if($products['user_id']==$loginCheck){ ?>
+						<button onclick="return ownProductFav();" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
+								<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
+						</button>
+						<?php
+						}else{
+						$favArr = $this->product_model->getUserFavoriteProductDetails(stripslashes($products['id']));
+						if(empty($favArr)){ ?>
+							 <button onclick="return changeProductToFavourite('<?php echo stripslashes($products['id']); ?>','Fresh',thia);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
+								<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
+							 </button>
+						<?php } else {?>
+							<button onclick="return changeProductToFavourite('<?php echo stripslashes($products['id']); ?>','Old',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
+							<span class="icon fav-active"></span> <span class="ie-fix">&nbsp;</span> 
+						 </button>
+						<?php }}} else {?> 
+							<button onclick="return changeProductToFavourite('<?php echo stripslashes($products['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
+							<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
+						 </button>
+						<?php }?>
+					 </div>
+				
+					 
+					 <div  class="collect-container">
+						 <button onclick="return hoverView('<?php echo $products['id'];?>');"" class="btn-collect btn-dropdown  inline-overlay-trigger ollection-add-action" type="button"> 
+							<span class="icon"></span> 
+							<span class="icon-dropdown"></span> 
+							<span class="ie-fix">&nbsp;</span>
+						</button>
+						
+					  <div id="hoverlist<?php echo $products['id'];?>" class="hover_lists">
+						<h2>Your Lists</h2>
+						<div class="lists_check">
+						<?php foreach($userLists as $Lists){ 
+							$haveListIn = $this->user_model->check_list_products(stripslashes($products['id']),$Lists['id'])->num_rows();
+							#echo $haveListIn;
+							if($haveListIn>0){$chk='checked="checked"';}else{ $chk='';}
+						?>
+						 <input type="checkbox" onclick="return addproducttoList('<?php echo $Lists['id']; ?>','<?php echo stripslashes($products['id']); ?>');" <?php echo $chk; ?> />
+						 <label><?php echo $Lists['name']; ?></label> <br />
+						 <?php } ?>
+						 
+						 <?php if(!empty($userRegistry)){ 
+								$haveRegisryIn = $this->user_model->check_registry_products($products['id'],$userRegistry->user_id)->num_rows();
+								if($haveRegisryIn>0){$chk='checked="checked"';}else{ $chk='';}
+							?>
+							<input type="checkbox"  onclick="return manageRegisrtyProduct('<?php echo $userRegistry->user_id; ?>','<?php echo $products['id']; ?>');" <?php echo $chk; ?> />
+							<label><span class="registry_icon"></span><?php if($this->lang->line('prod_wedding') != '') { echo stripslashes($this->lang->line('prod_wedding')); } else echo 'Wedding Registry'; ?></label>
+							<?php }  ?>						
+						  </div>       
+						  
+						<div class="new_list">
+							<form action="site/user/add_list" method="post">
+								<input type="hidden" value="1" name="ddl" />
+								<input type="hidden" value="<?php echo $products['id']; ?>" name="productId" />
+								<input type="text" placeholder="<?php if($this->lang->line('user_new_list') != '') { echo stripslashes($this->lang->line('user_new_list')); } else echo 'New list'; ?>" class="list_scroll" name="list" id="creat_list_<?php echo $i; ?>" />
+								<input type="submit" value="<?php if($this->lang->line('user_add') != '') { echo stripslashes($this->lang->line('user_add')); } else echo 'Add'; ?>" class="primary-button" onclick="return validate_create_list('<?php echo $i; ?>');" />
+							</form>
+						</div>
+						
+					</div> 		 
+					
+					 </div>
+				</div> 
+				
+				
+				
+				
+				
+			</div>
+		 <?php }?>
+		 </div> 
+  <?php } else { ?>
+		<div style="margin:20px 0" class="search-error">
+		  <h3 class="crumbs"> <?php if($this->lang->line('list_selections') != '') { echo stripslashes($this->lang->line('list_selections')); } else echo 'Darn. No items match your selections'; ?>. </h3>
+		  <p class="newline"> <?php if($this->lang->line('list_try') != '') { echo stripslashes($this->lang->line('list_try')); } else echo 'Try'; ?> <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>"><?php if($this->lang->line('list_showing') != '') { echo stripslashes($this->lang->line('list_showing')); } else echo 'showing all items'; ?> .</a>  </p>
+		</div>
+	 <?php }?>
+	 
+	 
+	 
+	</div>
 	  		<a title="1" class="landing-btn-more" href="https://artfill.co/shop_test/search/all?item=&pg=1" style="display: none;">See More Products</a>                        </div>
 		</section>
 			<?php }?>
@@ -712,6 +822,25 @@ $img = explode(',', $recent_product_details->row($i)->image);
 						    });
 						  } // end animate_elems()
 						});
+						</script>
+						<script type="text/javascript">
+									var wall = new freewall("#freewall");
+									wall.reset({
+										selector: '.brick',
+										animate: true,
+										cellW: 230,
+										cellH: 'auto',
+										onResize: function() {
+											wall.fitWidth();
+										}
+									});
+									
+									wall.container.find('.brick img').load(function() {
+										wall.fitWidth();
+										setTimeout(function(){wall.fitWidth();},100);
+									});
+									setTimeout(function(){ wall.fitWidth(); }, 100);
+
 						</script>
 						<script type="text/javascript">
 var loading = true;
