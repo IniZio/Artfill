@@ -4,7 +4,7 @@
 }
 
 .brick {
-  background: white;
+  // background: white;
   color: #333;
   // border: 1px solid #e4e4e2;
   // border-radius: 3px;
@@ -38,7 +38,8 @@
   padding: 0 17px 10px 17px;
   width: 100%;
   display: inline-block;
-  background-color: rgba(200,200,200,0.1);
+  text-shadow: 0 1px 1px rgba(255,255,255,.6);
+  background-color: rgba(250,250,250,0.8);
 }
 
 .info h3 {
