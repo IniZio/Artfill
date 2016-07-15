@@ -104,7 +104,20 @@ if($this->session->userdata('rUrl') != '')
                     </div>
 
                     </form>
-
+                    <hr/>
+		            <?php if($this->config->item('facebook_app_id') != '' && $this->config->item('facebook_app_secret') != '') { ?> 
+                           <div class="fb_div">
+								<a style="margin:0" id="fbsignin" class="" href="<?php echo base_url().'facebooklogin'; ?>">
+									<img src="images/facebook_login.png" alt="facebook">
+								</a>
+							</div>
+							<?php } ?>
+							
+							<?php if($this->config->item('google_client_id') != '' && $this->config->item('google_redirect_url') != '' && $this->config->item('google_client_secret') != '') { ?>
+								<div class="fb_div">
+									<a class="" onclick="window.location.href='<?php echo $authUrl; ?>'"><img src="images/google_login.png" alt="google"></a>
+								</div>	
+							<?php } ?>	
                 	<div class="div_line"></div>
 
                     <a href="forgot-password" class="forgot-link"><?php if($this->lang->line('user_fgt_pwd') != '') { echo stripslashes($this->lang->line('user_fgt_pwd')); } else echo 'Forgot your password?'; ?></a> 

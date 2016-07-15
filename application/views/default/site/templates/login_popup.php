@@ -70,7 +70,20 @@ if($this->session->userdata('rUrl') != ''){
 					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>									 									 
 					</div>
 				</form>
-									
+				<hr/>
+				<?php if($this->config->item('facebook_app_id') != '' && $this->config->item('facebook_app_secret') != '') { ?> 
+                           <div class="fb_div">
+								<a style="margin:0" id="fbsignin" class="" href="<?php echo base_url().'facebooklogin'; ?>">
+									<img src="images/facebook_login.png" alt="facebook">
+								</a>
+							</div>
+							<?php } ?>
+							
+							<?php if($this->config->item('google_client_id') != '' && $this->config->item('google_redirect_url') != '' && $this->config->item('google_client_secret') != '') { ?>
+								<div class="fb_div">
+									<a class="" onclick="window.location.href='<?php echo $authUrl; ?>'"><img src="images/google_login.png" alt="google"></a>
+								</div>	
+							<?php } ?>						
 					<a href="forgot-password" style="font-size: 12px; width:100%;"><?php echo af_lg('user_fgt_pwd',"忘記密碼"); ?></a> | 
 					<a href="register" style="font-size: 12px; width:100%;"><?php echo af_lg('user_register',"新會員註冊"); ?></a>
 					
