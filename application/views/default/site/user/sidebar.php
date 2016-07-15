@@ -91,7 +91,7 @@
 	 <li <?php if($this->uri->segment(2) == 'invite-friends' ){ echo 'class="side_active"';} ?>>
 
     	<a href="settings/invite-friends" ><i class="ic-credit"></i>
-        	<?php if($this->lang->line('lg_user_invite') != '') { echo stripslashes($this->lang->line('lg_user_invite')); } else echo "Invite Friends"; ?>
+        	<?php if($this->lang->line('lg_user_invite') != '') { echo "邀請朋友"; } else echo "Invite Friends"; ?>
 
 
         </a>
