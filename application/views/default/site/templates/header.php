@@ -85,7 +85,7 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 					<div style="clear:both;padding-top:20px;padding-bottom:20px;">
 					</div>
 
-
+<!--
 					<div class="" style="width:100%;padding-bottom:20px;">
 						<div class="col-xs-6 col-sm-3 header-menu" style="text-align:center;">
 							<div style="width:100%;" >
@@ -124,7 +124,7 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 							</div>
 						</div>
 					</div>
-
+-->
 
 				</div>
 				<!--
