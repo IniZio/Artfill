@@ -69,8 +69,8 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 						<span style="color:white;">&emsp;|&emsp;</span>
 						<a href="faq"><span style="color:white;">常見問題</span></a>
 						<span style="color:white;">&emsp;|&emsp;</span>
-						<a href="coming-soon"><span style="color:white;">購物指南</span></a>
-						<span style="color:white;">&emsp;|&emsp;</span>
+						<!--<a href="coming-soon"><span style="color:white;">購物指南</span></a>
+						<span style="color:white;">&emsp;|&emsp;</span>-->
 						<a href="shop/sell"><span style="color:white;">立即開店</span></a>
 						<span style="color:white;">&emsp;</span>
 						<a data-toggle="modal" id="language_href" href="#Language" onclick="javascript:$('#languageTab').trigger('click');">
