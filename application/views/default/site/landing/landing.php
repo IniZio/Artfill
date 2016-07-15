@@ -712,4 +712,44 @@ $img = explode(',', $recent_product_details->row($i)->image);
 						  } // end animate_elems()
 						});
 						</script>
+						<script type="text/javascript">
+var loading = true;
+$(window).scroll(function(){
+	if(loading==true){
+		if(($(document).scrollTop()+$(window).height())>($(document).height()-200)){
+			//wall.fitWidth();
+			$url = $(document).find('.landing-btn-more').attr('href');
+			console.log($url);
+			if($url){
+				loading = false;
+				$(document).find('#load_ajax_img').append('<img id="theImg" src="<?php echo base_url(); ?>images/loader64.gif" />');
+				$.ajax({
+					type : 'get',
+					url : $url,
+					dataType : 'html',
+					success : function(html){
 						
+						$html = $($.trim(html));
+						//console.log($html);
+						$(document).find('.landing-btn-more').remove();
+						$(document).find('#tiles').append($html.find('#tiles').html());
+						$(document).find('#tiles').after($html.find('.landing-btn-more'));
+						wall.fitWidth();
+						setTimeout(function(){wall.fitWidth();},100);
+						
+					},
+					error : function(a,b,c){
+						console.log(c);
+					},
+					complete : function(){
+						$("#load_ajax_img img:last-child").remove();
+						loading = true;
+						
+					}
+				});
+			}
+		}
+	}
+});
+
+</script>
