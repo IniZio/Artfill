@@ -162,11 +162,11 @@ class Landing extends MY_Controller {
 		$sortArr2 = array('field'=>'cat_position','type'=>'asc');
 		$sortArr1 = array($sortArr2);
 		$currentcatDetails=$this->product_model->get_all_details(CATEGORY,array('id' => $Catid[0],'status'=>'Active'))->row();
-		if($currentcatDetails->rootID == 0){
-			if(!isset($_GET['ref'])){
-				redirect('category-list/'.$this->uri->segment(count($segmentArr)));
-			}
-		}
+		// if($currentcatDetails->rootID == 0){
+		// 	if(!isset($_GET['ref'])){
+		// 		redirect('category-list/'.$this->uri->segment(count($segmentArr)));
+		// 	}
+		// }
 		$this->data['currentsubCategory']=$currentcatDetails;
 		$this->data['subCats']=$this->product_model->get_all_details(CATEGORY,array('rootID'=>$Catid[0],'status'=>'Active'),$sortArr1);
 		$this->data['super_sub_catStatus']='Yes';
