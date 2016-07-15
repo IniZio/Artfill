@@ -43,7 +43,7 @@
         </a>
 
      </li>
-
+<!--
     <li <?php if($this->uri->segment(2) == 'giftcards'){ echo 'class="side_active"'; } ?>>
 
     	<a href="settings/giftcards">
@@ -53,7 +53,7 @@
         </a>
 
     </li>
-
+-->
    <?php /*  <!--<li <?php if($this->uri->segment(1) == 'apps'){ echo 'class="side_active"'; } ?>><a href="javascript: void(0);"> Apps</a></li>--> 
 
     <!--<li <?php if($this->uri->segment(1) == 'prototypes'){ echo 'class="side_active"'; } ?>><a href="prototypes"> Prototypes</a></li>--> */?>
