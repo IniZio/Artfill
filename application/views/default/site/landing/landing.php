@@ -644,7 +644,7 @@ $img = explode(',', $recent_product_details->row($i)->image);
 						}else{
 						$favArr = $this->product_model->getUserFavoriteProductDetails(stripslashes($products['id']));
 						if(empty($favArr)){ ?>
-							 <button onclick="return changeProductToFavourite('<?php echo stripslashes($products['id']); ?>','Fresh',thia);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
+							 <button onclick="return changeProductToFavourite('<?php echo stripslashes($products['id']); ?>','Fresh',this);" data-source="casanova"  class="btn-fave  inline-overlay-trigger btn-fave-action" type="button"> 
 								<span class="icon"></span> <span class="ie-fix">&nbsp;</span> 
 							 </button>
 						<?php } else {?>
