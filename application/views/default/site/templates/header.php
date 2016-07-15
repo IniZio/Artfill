@@ -805,14 +805,8 @@ if ($CurrUserImg != '') {
 
 									<li><a href="shop/sell">我的商店</a></li>
 
-									<li><a href="purchase-review"><?php if ($this->lang->line('user_purchases') != '') {echo af_lg('user_purchases','交易紀錄');} else {
-            echo 'Purchases';
-        }
-        ?></a></li>
-									<li><a href="reviews"><?php if ($this->lang->line('lg_reviews') != '') {echo af_lg('lg_reviews','意見回饋');} else {
-            echo 'Reviews';
-        }
-        ?></a></li>
+									<li><a href="purchase-review">交易紀錄</a></li>
+									<li><a href="reviews">意見回饋</a></li>
 		<!--
 									<li><a href="disputes"><?php if ($this->lang->line('lg_disputes') != '') {echo stripslashes($this->lang->line('lg_disputes'));} else {
             echo 'Disputes';
