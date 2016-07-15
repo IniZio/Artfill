@@ -20,12 +20,12 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 			</div>
 			<div class="">
 				<ul class="footer-list">
-					<li class="col-md-2"><a href="pages/about-us">About Us</a></li>
+					<li class="col-md-3"><a href="pages/about-us">About Us</a></li>
 					<!--<li class="col-md-2"><a href="company">Company Information</a></li>-->
 					<li class="col-md-2"><a href="shop/sell">Join Us</a></li>
 					<li class="col-md-2"><a href="terms">Terms and Conditions</a></li>
 					<li class="col-md-2"><a href="privacy">Privacy Policy</a></li>
-					<li class="col-md-2"><a href="reflection">Feedback to Us</a></li>
+					<li class="col-md-3"><a href="reflection">Feedback to Us</a></li>
 				</ul>
 			</div>
 		</div>
@@ -38,12 +38,12 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 				</div>
 				<div class="">
 					<ul class="footer-list">
-						<li class="col-md-2"><a href="pages/about-us">關於我們</a></li>
+						<li class="col-md-3"><a href="pages/about-us">關於我們</a></li>
 						<!--<li class="col-md-2"><a href="pages/company-info">公司資料</a></li>-->
 						<li class="col-md-2"><a href="shop/sell">商店加盟</a></li>
 						<li class="col-md-2"><a href="pages/terms-and-conditions">使用條款</a></li>
 						<li class="col-md-2"><a href="pages/privacy-policy">私隱政策</a></li>
-						<li class="col-md-2"><a href="reflection">意見諮詢</a></li>
+						<li class="col-md-3"><a href="reflection">意見諮詢</a></li>
 					</ul>
 				</div>
 			</div>
