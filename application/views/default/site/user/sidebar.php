@@ -30,7 +30,7 @@
 
     <li <?php if($this->uri->segment(1) == 'public-profile'){ echo 'class="side_active"'; } ?>>
 
-    	<a href="public-profile"><?php if($this->lang->line('user_pub_profile') != '') { echo "個人檔案" } else echo "Public Profile"; ?></a>
+    	<a href="public-profile"><?php if($this->lang->line('user_pub_profile') != '') { echo stripslashes($this->lang->line('user_pub_profile')); } else echo "Public Profile"; ?></a>
 
         </li>
 
@@ -44,7 +44,6 @@
 
      </li>
 
-	 <!--
     <li <?php if($this->uri->segment(2) == 'giftcards'){ echo 'class="side_active"'; } ?>>
 
     	<a href="settings/giftcards">
@@ -54,7 +53,6 @@
         </a>
 
     </li>
-	-->
 
    <?php /*  <!--<li <?php if($this->uri->segment(1) == 'apps'){ echo 'class="side_active"'; } ?>><a href="javascript: void(0);"> Apps</a></li>--> 
 
@@ -84,7 +82,7 @@
 		<li <?php if($this->uri->segment(3)=='conversations'){ echo 'class="side_active"';} ?>>
 
     	<a href="people/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>/conversations" ><i class="ic-credit"></i>
-        	<?php if($this->lang->line('lg_user_conversation') != '') { echo af_lg('lg_user_conversation','對話'); } else echo "Conversations"; ?>
+        	<?php if($this->lang->line('lg_user_conversation') != '') { echo stripslashes($this->lang->line('lg_user_conversation')); } else echo "Conversations"; ?>
 
 
         </a>
