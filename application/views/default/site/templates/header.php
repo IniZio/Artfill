@@ -805,11 +805,11 @@ if ($CurrUserImg != '') {
 
 									<li><a href="shop/sell">我的商店</a></li>
 
-									<li><a href="purchase-review"><?php if ($this->lang->line('user_purchases') != '') {echo stripslashes($this->lang->line('user_purchases'));} else {
+									<li><a href="purchase-review"><?php if ($this->lang->line('user_purchases') != '') {echo af_lg('user_purchases','交易紀錄');} else {
             echo 'Purchases';
         }
         ?></a></li>
-									<li><a href="reviews"><?php if ($this->lang->line('lg_reviews') != '') {echo stripslashes($this->lang->line('lg_reviews'));} else {
+									<li><a href="reviews"><?php if ($this->lang->line('lg_reviews') != '') {echo af_lg('lg_reviews','意見回饋');} else {
             echo 'Reviews';
         }
         ?></a></li>
@@ -822,11 +822,11 @@ if ($CurrUserImg != '') {
             echo 'Manage Community';
         }
         ?></a></li>
-		-->
+		
 									<li><a href="public-profile"><?php if ($this->lang->line('user_pub_profile') != '') {echo stripslashes($this->lang->line('user_pub_profile'));} else {
             echo 'Public Profile';
         }
-        ?></a></li>
+        ?></a></li>-->
 									<li><a href="settings/my-account/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>"><?php if ($this->lang->line('landing_account_ettings') != '') {echo stripslashes($this->lang->line('landing_account_ettings'));} else {
             echo 'Account Settings';
         }
@@ -1088,10 +1088,10 @@ if($innerSub[$i]['sub_mega_menu'] == "Yes"){
                     	<a href="shop/sell">我的商店</a>
                     </li>
                     <li class="page-scroll">
-                    	<a href="purchase-review">所有購買</a>
+                    	<a href="purchase-review">交易紀錄</a>
                     </li>
                     <li class="page-scroll">
-                    	<a href="reviews">評價</a>
+                    	<a href="reviews">意見回饋</a>
                     </li>
 					<!--
                     <li class="page-scroll">
@@ -1100,10 +1100,10 @@ if($innerSub[$i]['sub_mega_menu'] == "Yes"){
                     <li class="page-scroll">
                     	<a href="manage-community">管理社區</a>
                     </li>
-					-->
                     <li class="page-scroll">
                     	<a href="public-profile">公開個人檔案</a>
                     </li>
+					-->
                     <li class="page-scroll">
                     	<a href="settings/my-account/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>">帳戶設置</a>
                     </li>
