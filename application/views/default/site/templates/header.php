@@ -627,7 +627,7 @@ if ($CurrUserImg != '') {
 				<div class="row">
 
 					<div class="col-md-4 search-bl col-xs-12">
-						<div class="col-md-3 col-sm-4 vcenter text-right"><a href="search/all" style="color:#8dbad4; font-weight: bold;font-size:120%;">分類</a></div>
+						<div class="col-md-3 col-sm-4 vcenter text-right"><a href="search/all" style="color:#8dbad4; font-weight: bold;font-size:120%;">商品</a></div>
 						<div class="col-md-9 col-sm-8 vcenter" style="top: -2px;padding:0"><form name="search" action="search/all" method="get" style="padding: 0;width: 100%;"> <!--style="width:80%;"> -->
 							<div class="input-group">
 								<input type="text" class="search" name="item" placeholder="<?php if ($this->lang->line('temp_srchitems') != '') {echo stripslashes($this->lang->line('temp_srchitems'));} else {
