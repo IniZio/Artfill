@@ -3477,7 +3477,7 @@ $(evt).css({'opacity':'0.4','cursor':'progress'});
 				
             } else {
 				// $("#signin").modal();
-				document.getElementById('signin').click();
+				document.getElementById('signin-modal').click();
 				//window.location.href = baseURL+'login?action='+json.next_url+'&redirect='+redirect;
 			}
 		},

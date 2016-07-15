@@ -876,7 +876,7 @@ if ($CurrUserImg != '') {
 							</li>
 							<?php } else {?>
 							<li>
-								<a id="signin" data-toggle="modal" href="#signin"><img src="./images/shape.png" style="width:20px;" /><span style=" font-weight: bold;font-size:120%;margin-left:5px;">登入</span></a>
+								<a id="signin-modal" data-toggle="modal" href="#signin"><img src="./images/shape.png" style="width:20px;" /><span style=" font-weight: bold;font-size:120%;margin-left:5px;">登入</span></a>
 							</li>
 
 							<li>
