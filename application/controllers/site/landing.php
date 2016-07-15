@@ -131,7 +131,105 @@ class Landing extends MY_Controller {
 		$testiMoni= array_rand($recentpromote->result());
 		
 		$this->data['new_promote'] = $recentpromote->row($testiMoni);
+		if(isset($_SERVER['HTTPS'])){
+        	$protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https://" : "http://";
+	    }else{
+			$protocol = 'http://';
+	    }	
+		$CUrurl = $protocol.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+		#$curUrl = @explode('?pg=',$CUrurl);
+		if(substr_count($CUrurl,'?pg=') == 0){
+			$curUrl = @explode('&pg=',$CUrurl);
+		} else {
+			$curUrl = @explode('?pg=',$CUrurl);
+		}
+
+		if($this->input->get('pg') != ''){
+			$paginationVal = $this->input->get('pg') * 8;
+			$limitPaging = $paginationVal.',8 ';
+		} else {
+			$limitPaging = ' 8';
+		}
+		$newPage = $this->input->get('pg')+1;
+		#$qry_str = $curUrl[0].'?pg='.$newPage;
+		if(substr_count($curUrl[0],'?') >= 1){
+			$qry_str = $curUrl[0].'&pg='.$newPage;
+		} else {
+			$qry_str = $curUrl[0].'?pg='.$newPage;
+		}
+		$segmentArr=$this->uri->segment_array();
+		$Catid=explode('-',$this->uri->segment(count($segmentArr))); 
+		$sortArr2 = array('field'=>'cat_position','type'=>'asc');
+		$sortArr1 = array($sortArr2);
+		$currentcatDetails=$this->product_model->get_all_details(CATEGORY,array('id' => $Catid[0],'status'=>'Active'))->row();
+		if($currentcatDetails->rootID == 0){
+			if(!isset($_GET['ref'])){
+				redirect('category-list/'.$this->uri->segment(count($segmentArr)));
+			}
+		}
+		$this->data['currentsubCategory']=$currentcatDetails;
+		$this->data['subCats']=$this->product_model->get_all_details(CATEGORY,array('rootID'=>$Catid[0],'status'=>'Active'),$sortArr1);
+		$this->data['super_sub_catStatus']='Yes';
+		$this->data['super_sub_catID']=$Catid[0];
+		if($this->data['subCats']->num_rows() == 0){
+			$this->data['super_sub_catStatus']='No';
+			$this->data['subCats']=$this->product_model->get_all_details(CATEGORY,array('rootID'=>$currentcatDetails->rootID,'status'=>'Active'),$sortArr1);   
+		}
+		$Catid1=explode('-',$this->uri->segment(2)); 
+		$this->data['footerSubcatList']=$this->product_model->get_all_details(CATEGORY,array('rootID'=>$Catid1[0],'status'=>'Active'),$sortArr1);
+		$made_by='';
+		if($this->input->get('marketplace') == 'handmade'){
+		$filterid=1;
+		$made_by="and p.made_by='".$filterid."'";
+		} else if($this->input->get('marketplace') == 'vintage'){
+		$filterid=2;
+		$made_by="and p.made_by='".$filterid."'";
+		}
+		$minprice='';
+		$maxprice='';
+		if($this->input->get('max_price') != '' || $this->input->get('min_price') != ''){
+			$minVal = $this->input->get('min_price')/$this->data['currencyValue']; $maxVal = $this->input->get('max_price')/$this->data['currencyValue'];  
+			if($maxVal == ''){
+				$price="and (p.base_price >= '".$minVal."')"; 
+			}else { 
+				$price="and (p.base_price >= '".$minVal."' and p.base_price <= '".$maxVal."')";
+			}
+		}
+		$shipto='';  
+		if($this->input->get('shipto') != ''){
+			$shipto="and (ss.ship_id ='".$this->input->get('shipto')."' or ss.ship_id ='232')";
+		}
+		$shipfrom='';
+		$location=mysql_real_escape_string($this->input->get('location'));
+		if($location != ''){
+			$shipfrom="and (u.city LIKE '%".$location."%' or u.district LIKE '%".$location."%' or u.state LIKE '%".$location."%' or u.country LIKE '%".$location."%')";
+		}
+		$gift_cards=''; 
+			if($this->input->get('gift_cards') != ''){
+			$gift_cards="and s.gift_card ='Yes'"; 
+		} 
+		//p.category_id LIKE '%,".$Catid[0]."'
 		
+		$subattr = '';
+		if($this->input->get('color') != ''){
+			$color = $this->input->get('color');
+			$subattr = "and sub.attr_value='".$color."' ";
+		}
+		
+		$condition = " where p.status='Publish' and p.pay_status='Paid' and FIND_IN_SET('".$Catid[0]."',p.category_id) ".$made_by." ".$gift_cards." ".$price." ".$prcing." ".$shipto." ".$shipfrom." and u.group='Seller' ".$subattr." and u.status='Active' or p.status='Publish' and p.user_id=0 group by p.id order by p.created desc limit ".$limitPaging;
+		
+		$this->data['product_list']=$this->product_model->view_product_details($condition);
+		
+		#echo $this->db->last_query(); echo '<pre>'; print_r($this->data['product_list']->num_rows());die;
+		
+		if($this->data['product_list']->num_rows() > 0){
+			$paginationDisplay  = '<a title="'.$newPage.'" class="landing-btn-more" href="'.$qry_str.'" style="display: none;">See More Products</a>';
+		}else{
+			$paginationDisplay  = '<a title="'.$newPage.'" class="landing-btn-more" style="display: none;">No More Products</a>';
+		}	
+		$this->data['paginationDisplay'] = $paginationDisplay;
+	    $this->data['countryList'] = $this->product_model->get_all_details(COUNTRY_LIST,array(),array(array('field'=>'name','type'=>'asc')))->result();
+	    
 		$this->load->view('site/landing/landing',$this->data);
 	}
 	

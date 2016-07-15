@@ -608,7 +608,9 @@ $img = explode(',', $recent_product_details->row($i)->image);
 					</div>
 		    	</div>
 	  		</div>
-	  		<div id="freewall" class="free-wall" style="margin-bottom: 51px;"> 
+<div id="primary">
+       
+	<div id="freewall" class="free-wall" style="margin-bottom: 51px;"> 
 	<?php if($product_list->num_rows() > 0){ ?>	
 		<ul style="  background: none repeat scroll 0 0 #FFFFFF;box-shadow: 0 3px 0 0 #E1E1E1;float: left;padding: 20px;width: 95%; display:none" id="loader">
 			<li style="text-align: center;" ><img src="images/spinner.gif" /></li>
@@ -716,6 +718,8 @@ $img = explode(',', $recent_product_details->row($i)->image);
 	 
 	 
 	 
+	</div>
+	
 	</div>
 	  		<a title="1" class="landing-btn-more" href="https://artfill.co/shop_test/search/all?item=&pg=1" style="display: none;">See More Products</a>                        </div>
 		</section>
