@@ -720,9 +720,12 @@ $img = explode(',', $recent_product_details->row($i)->image);
 	</div>
 	
 	</div>
-	  		</div>
-
-	  		<a title="1" class="landing-btn-more" href="https://artfill.co/shop_test/search/all?item=&pg=1" style="display: none;">See More Products</a>                        </div>
+	  		<div id="infscr-loading" style="text-align: center; display: none;">
+		<span><img src="images/spinner.gif" alt="Loading..." /></span>
+	</div>
+	<div class="landing_pagination" id="landing_page_id" style="display: none;">
+		<?php echo $paginationDisplay;?>
+	</div>
 		</section>
 			<?php }?>
 

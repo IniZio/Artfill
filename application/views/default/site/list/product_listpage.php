@@ -372,7 +372,7 @@ $this->load->model('user_model');
 	<div class="landing_pagination" id="landing_page_id" style="display: none;">
 		<?php echo $paginationDisplay;?>
 	</div>
-	 
+	 </div>
   </section>
 </section>
 
