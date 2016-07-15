@@ -927,7 +927,7 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 	$UserCartValue.='</select>
 	<p class="default_addr"><span id="Chg_Add_Val_'.$selId.'">'.$ChooseVal.'</span></p>
 	<span style="color:#FF0000;" id="User_Ship_err_'.$selId.'"></span>
-	<a href="settings/cart-shipping-address" class="add_addr add_" onclick="shipping_address_cart();"><i class="fa fa-subway" aria-hidden="true"></i>'.$cart_addAddr.'</a>';
+	<a href="settings/cart-shipping-address" class="add_addr add_" onclick="shipping_address_cart();"><i class="fa fa-subway" aria-hidden="false"></i>'.$cart_addAddr.'</a>';
 }else{
 	if(in_array('Yes', $collection)){
 		$pcollect = 'checked';
