@@ -6,8 +6,7 @@ $this->load->model('user_model');
 ?>
 
 
-
-		<?php if(isset($active_theme) && $active_theme->num_rows() !=0) {?>
+<?php if(isset($active_theme) && $active_theme->num_rows() !=0) {?>
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>User-Profile-page.css" rel="stylesheet">
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
 <link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
@@ -32,30 +31,6 @@ $this->load->model('user_model');
 			
 
 <div id="community_tag">			
-<section class="browse-head">
-
-
-<div class="container">
-
-<ul class="bread_crumbs">
-        	<li><a href="<?php echo base_url(); ?>" class="a_links"><?php if($this->lang->line('user_home') != '') { echo stripslashes($this->lang->line('user_home')); } else echo "Home"; ?></a></li>
-            <span>&rsaquo;</span>
-           <li><a href="view-profile/<?php echo $this->session->userdata['shopsy_session_user_name'];?>" class="a_links"><?php echo $this->session->userdata['shopsy_session_user_name'];?></a></li>
-		   <span>&rsaquo;</span>
-		   <li><?php if($this->lang->line('purchases-review') != '') { echo stripslashes($this->lang->line('purchases-review')); } else echo 'Purchases & Reviews'; ?></li>
-        </ul>
-
-  	<div class="">
-        <div id="header_menu" class="content-wrap-inner clear ">
-            <div class="col col4">
-                <h1><?php if($this->lang->line('review') != '') { echo stripslashes($this->lang->line('review')); } else echo 'Reviews'; ?></h1>
-            </div>
-
-        </div>
-	</div>
-</div>    
-</header>
-</section>
 
 <section class="container">
 
