@@ -21,10 +21,10 @@
         });
     });*/
 </script>
-
+<!--
 <div id="nav-trigger">
 					<span>Menu</span>
-				</div>
+				</div>-->
 				<nav id="nav-main">
 					<ul id="panel" class="add_steps" style="background:none; box-shadow:none;">
 
@@ -111,5 +111,5 @@
 
 </nav>
 				
-				<nav id="nav-mobile"></nav>
+				<!--<nav id="nav-mobile"></nav>-->
 
