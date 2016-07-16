@@ -35,6 +35,10 @@ $this->load->model('user_model');
 <section class="container">
   	
      <div class="main"> 
+            <div class="community_page">
+                <div class="community_div">
+
+                    <div class="community_right container">
 <!-- feedback-container start -->
    <div class="feedback-container">
       <!-- Nav tabs -->
@@ -234,6 +238,9 @@ $this->load->model('user_model');
     </div>
 <!-- feedback-container end-->
 
+	</div>
+	</div>
+	</div>
 
 
 	</div> 
