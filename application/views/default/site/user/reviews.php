@@ -5,65 +5,24 @@ $this->load->model('user_model');
 //echo "<pre>";print_r($PublicProfile->row()); die;
 ?>
 
-<script src="js/site/jquery-1.9.0.js" type="text/javascript"></script>
-<script src="js/jquery.colorbox.js"></script>
-<link rel="stylesheet" href="css/default/site/shopsy_style.css" type="text/css" media="all" />
-<link rel="shortcut icon" type="image/x-icon" href="images/logo/<?=$this->data["fevicon"]?>" />
-<link rel="stylesheet" type="text/css" href="css/default/site/new/colorbox.css" media="all" />
+
+
+		<?php if(isset($active_theme) && $active_theme->num_rows() !=0) {?>
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>User-Profile-page.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
+<?php }?>
 <!--[if lt IE 9]>
 <script src="'.base_url().'js/html5shiv.js"></script>
+-->
 
-<style>
 
-#cboxClose {
-    background: url("../../images/close_img.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border: medium none;
-    height: 16px;
-    position: absolute;
-    right: 0;
-    text-indent: -9999px;
-    top: 8px;
-    width: 20px;
-}
-
-#cboxClose:hover {
-background: url("../../images/buttons-master.20140130192956.png") no-repeat scroll -31px -1326px rgba(0, 0, 0, 0);
-}
-</style>
-
-<style>
-#cboxContent{background:none !important;}
-
-</style>
-<!-- css -->
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-
-<!--<link rel="stylesheet" href="css/default/site/style-menu.css" />-->
-    
-
-<script>
-/*
-    $(document).ready(function(){
-        $("#nav-mobile").html($("#nav-main").html());
-        $("#nav-trigger span").click(function(){
-            if ($("nav#nav-mobile ul").hasClass("expanded")) {
-                $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
-                $(this).removeClass("open");
-            } else {
-                $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
-                $(this).addClass("open");
-            }
-        });
-    });
-	*/
-</script>
 <?php if(isset($active_theme) && $active_theme->num_rows() !=0) {?>
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Community-page.css" rel="stylesheet">
 <?php }?>
 
-
-				<div class="add_steps shop-menu-list">
+			
+			<div class="add_steps shop-menu-list">
 
 			<div class="main">
 				 
@@ -72,6 +31,8 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 			</div>
 			
 			</div>
+
+			
 			
 
 <div id="community_tag">			
