@@ -38,7 +38,7 @@
 
     	<a href="<?php echo 'settings/my-account/'.$this->session->userdata['shopsy_session_user_name'];?>">
 
-			<?php if($this->lang->line('user_settings') != '') { echo stripslashes($this->lang->line('user_settings')); } else echo "Settings"; ?>
+			<?php if($this->lang->line('user_settings') != '') { echo "帳戶設置"; } else echo "Settings"; ?>
 
         </a>
 
