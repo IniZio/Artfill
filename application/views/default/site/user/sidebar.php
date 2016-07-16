@@ -4,20 +4,6 @@
 
 <link rel="stylesheet" href="css/default/site/style-menu.css" />
     
-	
-<!-- css -->
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="css/default/site/style-menu.css" />
-
-
-<script src="js/site/jquery-1.9.0.js" type="text/javascript"></script>
-<script src="js/jquery.colorbox.js"></script>
-<link rel="stylesheet" href="css/default/site/shopsy_style.css" type="text/css" media="all" />
-<link rel="shortcut icon" type="image/x-icon" href="images/logo/<?=$this->data["fevicon"]?>" />
-<link rel="stylesheet" type="text/css" href="css/default/site/new/colorbox.css" media="all" />
-	
 <!-- js -->
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
