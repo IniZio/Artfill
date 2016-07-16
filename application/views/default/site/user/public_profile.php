@@ -450,7 +450,7 @@ $this->load->model('user_model');
         </div>
 
     </section>
-<div>
+</div>
   
 
   <div id="popupContact">
