@@ -90,7 +90,7 @@
     </li>
 	<li <?php if($this->uri->segment(3)=='reviews'){ echo 'class="side_active"';} ?>>
 
-    	<a href="users/reviews" ><i class="ic-credit"></i>
+    	<a href="reviews" ><i class="ic-credit"></i>
         	<?php echo "意見回饋"; ?>
 
 
