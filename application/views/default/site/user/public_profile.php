@@ -447,6 +447,8 @@ $this->load->model('user_model');
 
         </div>
 
+        </div>
+
     </section>
 <div>
   
