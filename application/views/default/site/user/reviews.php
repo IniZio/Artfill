@@ -43,6 +43,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
     
 
 <script>
+/*
     $(document).ready(function(){
         $("#nav-mobile").html($("#nav-main").html());
         $("#nav-trigger span").click(function(){
@@ -55,6 +56,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
             }
         });
     });
+	*/
 </script>
 <?php if(isset($active_theme) && $active_theme->num_rows() !=0) {?>
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Community-page.css" rel="stylesheet">

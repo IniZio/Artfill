@@ -8,7 +8,7 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
 <script>
-    $(document).ready(function(){
+    /*$(document).ready(function(){
         $("#nav-mobile").html($("#nav-main").html());
         $("#nav-trigger span").click(function(){
             if ($("nav#nav-mobile ul").hasClass("expanded")) {
@@ -19,7 +19,7 @@
                 $(this).addClass("open");
             }
         });
-    });
+    });*/
 </script>
 
 <div id="nav-trigger">
