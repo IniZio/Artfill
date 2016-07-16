@@ -89,14 +89,10 @@
 		</div>
 	</div>
 	<script>
-$(function($) {
-				$('.time').timepicker({
-                    'showDuration': true,
-                    'timeFormat': 'g:ia',
-					 minDate: 0,
-					 'disableTimeRanges':  [['<?php echo $GetAllExtrasCharge[0]->time_frame_from; ?>', '<?php echo $GetAllExtrasCharge[0]->time_frame_to; ?>']]
 
-                });				
+
+$(function($) {
+							
 						var nowDate = new Date();
 var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0);
 				$('.date').datepicker({				
@@ -107,7 +103,26 @@ var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(
 					
                 });
 
+				
+                $('.time').timepicker({
+                    'showDuration': false,
+                    'timeFormat': 'g:ia',
+                    'minTime': '10:00am',
+                    'maxTime': '6:00pm',
+					 'forceRoundTime': true,
+					 'disableTimeRanges':  [['<?php echo $GetAllExtrasCharge[0]->time_frame_from; ?>', '<?php echo $GetAllExtrasCharge[0]->time_frame_to; ?>']]
+
+                });	
+
   });
+
+// 				$("#pickup_date").change(function(){
+// 					var nowDate = new Date();
+// var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0);
+// var minTime = '10:00am';
+//       				if (document.getElementById('pickup_date').value <= today) minTime = nowDate;
+//       				$('.time').timepicker('option', 'minTime', minTime);	
+// 				});
 function localPickup(evt,sid){
 	var ischeckedvalue = $(evt).prop('checked');
 	if(ischeckedvalue == true){

@@ -140,6 +140,7 @@ define('PROOF',							TBL_PREF.'payment_proof');
 define('SHIPPIN_METHODS',				TBL_PREF.'shipping_methods');
 define('HOME_SLIDERS',                  TBL_PREF.'home_sliders');
 define('IPWHITELIST',                   TBL_PREF.'ipwhitelist');            
+define('PICKUP_STATION',				TBL_PREF.'pickup_station');
 /* 
 |--------------------------------------------------------------------------
 | Community :-  Table  Constants

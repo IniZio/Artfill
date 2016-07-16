@@ -856,7 +856,7 @@ $CartValue.='
 																//echo $this->session->userdata('shopId-'.$selId)."".$digital_item;#die;
 																if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
 																	//echo $UserCartRow->shipping;die;
-																   if($UserCartRow->shipping == 'No'){
+																   if($UserCartRow->shipping == 'No' && $UserCartRow->station_pickup	 == ''){
 																		$UserCartValue.='<li class="error_message" style="display:block;">'.$cart_notShipto.' '.$this->session->userdata('ShopCountry-'.$selId).'.</li>';
 																		$UserCartShow = 1;
 																   }else{
@@ -939,9 +939,10 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 	//$UserCartValue.='<div class="local-pick"><input class="local-pickup" display="none" onclick="localPickup(this,'.$selId.');" type="checkbox" value="'.$pcollect.'" name="pickup_option" '.$pcollect.'><img src="images/pickup.png"/>'.$pickup.'</div>';
 	$UserCartValue.='<div class="station-pick"><h4>建議的交收地鐵站和日期</h4></div>';
 	$UserCartValue.='
-	<select id="address-cart" class="ship_to" onchange="UserCartChangeAddress(this.value,'.$selId.');">
+	<select id="pickup_station" name="pickup_station" class="ship_to">
+	<option value="" selected>請選擇地鐵站:</option>
 	<option value="">-- 港島綫 --</option>
-    <option value="">堅尼地城</option>
+    <option value="1">堅尼地城</option>
     <option value="">香港大學</option>
     <option value="">西營盤</option>
     <option value="">上環</option>
@@ -1061,11 +1062,11 @@ if((in_array('collection', $pickupArr)) && (in_array('delivery', $pickupArr))){
 }
 }
 if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
-	if($UserCartRow->shipping == 'No'){
-		$UserCartValue.='<li class="error_message" style="display:block;">'.$cart_notShipto.' '.$this->session->userdata('ShopCountry-'.$selId).'.</li>';
+	if($UserCartRow->shipping == 'No' && $UserCartRow->station_pickup	 == ''){
+		$UserCartValue.='<li class="error_message" style="display:block;">2'.$cart_notShipto.' '.$this->session->userdata('ShopCountry-'.$selId).'.</li>';
 		$UserCartShow = 1;
 	}else{
-		$UserCartValue.='<li class="error_message" style="display:none;">'.$cart_notShipto.' '.$this->session->userdata('ShopCountry-'.$selId).'.</li>';
+		$UserCartValue.='<li class="error_message" style="display:none;">3'.$cart_notShipto.' '.$this->session->userdata('ShopCountry-'.$selId).'.</li>';
 	}
 }
 					$UserCartValue.='<input type="hidden" name="Ship_address_val" id="User_Ship_address_val_'.$selId.'" value="'.$ship_id.'" />
@@ -2122,10 +2123,10 @@ changeGateway('.$selId.','.$paypalRate.','.$paypalStatic.','.$UsergrantAmt.');
 				$AddPayt = $this->db->get();
 				/* echo $this->db->last_query();
 				die; */
-			} elseif($this->input->post('pickup_station') == 'on'){
+			} elseif($this->input->post('pickup_station') != ''){
 				$this->db->select('a.*');
 				$this->db->from(USER_SHOPPING_CART.' as a');
-				$this->db->join(PICKUP_STATION.'as b', 'b.id="'.$this->input->post('pickup_station_value').'"');
+				// $this->db->join(PICKUP_STATION.'as b', 'b.id="'.$this->input->post('pickup_station').'"');
 				$this->db->where("a.user_id =".$userid);
 				$this->db->where("a.sell_id =".$this->input->post('sell_id'));
 				$AddPayt = $this->db->get();
@@ -2188,9 +2189,9 @@ changeGateway('.$selId.','.$paypalRate.','.$paypalStatic.','.$UsergrantAmt.');
 								price = "'.$result->price.'",
 								quantity = "'.$result->quantity.'",
 								indtotal = "'.$indTotal.'",
+								pickup_station_date = "'.$this->input->post('pickup_date').'",
 								pickup_station_id = "'.$this->input->post('pickup_station').'",
-								pickup_station_date = "'.$this->input->post('pickup_station_date').'",
-								pickup_station_time = "'.$this->input->post('pickup_station_time').'",
+								pickup_station_time = "'.$this->input->post('pickup_time').'",
 								shippingcountry = "'.$result->country.'",
 								shippingid = "'.$this->input->post('Ship_address_val').'",
 								shippingstate = "'.$result->state.'",

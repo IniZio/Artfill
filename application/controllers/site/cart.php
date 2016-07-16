@@ -939,7 +939,7 @@ redirect("login");
 					redirect("cart");
 				}
 			}
-			elseif($this->input->post('pickup_station') == 'on'){
+			elseif ($this->input->post('pickup_station')!= ''){
 				if($this->input->post('payment_value')!=''){
 					$this->cart_model->addPaymentUserCart($userid,$this->data['currencyValue']);
 					redirect("checkout/sellercart");
