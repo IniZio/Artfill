@@ -33,9 +33,7 @@ $this->load->model('user_model');
 <div id="community_tag">			
 
 <section class="container">
-
-<!-- <div class="purchase_review container  hole_content" style="width:1000px;max-width:1000px">    	 -->
-<div class="purchase_review container  hole_content">    	
+  	
      <div class="main"> 
 <!-- feedback-container start -->
    <div class="feedback-container">
@@ -239,7 +237,6 @@ $this->load->model('user_model');
 
 
 	</div> 
-</div>
 </section>
 </div>
 	<div style="display:none;"><div id="inline_reg1"></div></div>
