@@ -89,7 +89,6 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 			</div>
 			
 			</div>
-			</div>
 
 
 <div id="community_tag">			
