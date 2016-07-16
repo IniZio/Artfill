@@ -1,5 +1,5 @@
-<section class="second-bl third-bl foot-bg">
-	<footer class="container">
+<!-- <section class="second-bl third-bl foot-bg"> -->
+	<footer class="foot-bg">
 	
 <style>
 	ul.footer-list li{
@@ -82,7 +82,6 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 	<img style="width:30px;" src="./images/Youtube-64.png"/>
 </div>
 </div>
-</footer>
 <!--<hr style="background-color: #66f4cf"/>-->
 <div class="container">
 <div class="row">
@@ -91,7 +90,8 @@ if ($this->_ci_cached_vars["languageCode"] == "en") {
 </div>
 </div>
 </div>
-</section>
+</footer>
+<!-- </section> -->
 <!-- Geo Start -->
 <?php /* if($GeoLocationVal==''){
 $this->load->view('site/templates/geo_popup');

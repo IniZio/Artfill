@@ -597,3 +597,10 @@ a
 a:hover{
   text-decoration: none !important;
 }
+
+html, 
+body {
+    height: 100%;
+}
+
+.community_tag{min-height:100%}
