@@ -8,7 +8,7 @@ $this->load->model('user_model');
 <script src="js/site/jquery-1.9.0.js" type="text/javascript"></script>
 <script src="js/jquery.colorbox.js"></script>
 <link rel="stylesheet" href="css/default/site/shopsy_style.css" type="text/css" media="all" />
-<link rel="shortcut icon" type="image/x-icon" href="images/logo/'.$this->data["fevicon"].'">
+<link rel="shortcut icon" type="image/x-icon" href="images/logo/<?=$this->data["fevicon"]?>" />
 <link rel="stylesheet" type="text/css" href="css/default/site/new/colorbox.css" media="all" />
 <!--[if lt IE 9]>
 <script src="'.base_url().'js/html5shiv.js"></script>
