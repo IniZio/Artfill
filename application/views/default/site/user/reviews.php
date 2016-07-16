@@ -30,7 +30,7 @@ $this->load->model('user_model');
 			
 			
 
-<div id="community_tag">			
+<div id="profile_div">			
 
 <section class="container">
   	
