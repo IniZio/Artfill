@@ -67,10 +67,9 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 </section>
 
 <section class="container">
-<div class="main">
 <!-- header_end -->
 <!-- section_start -->
-<div class="community_right">    	
+<div class="purchase_review container community_right">    	
      <!-- <div class="main">     -->
     <div>
      
@@ -394,7 +393,6 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 <?php } ?>        
 		</section> 
 	</div> 
-</div>
 </div>
 </section>
 
