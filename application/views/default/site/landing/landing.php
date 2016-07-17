@@ -244,7 +244,6 @@ $n = $deal_of_day1->num_rows();
 				<?php if ($this->config->item('featured_shop') == 'active') {?>
 				<section class="third-bl">
 					<div class="container">
-						<h1><br/></h1>
 						<!--<h1><?php //echo af_lg('lg_Featured_shop','Featured shops');?></h1>-->
 						<style>
 						.sub-box{
@@ -609,7 +608,7 @@ $img = explode(',', $recent_product_details->row($i)->image);
 		    	</div>
 		    	<div id="primary">
        
-	<div id="freewall" class="free-wall" style="margin-bottom: 51px;"> 
+	<div id="freewall" class="free-wall" style="margin-bottom: 51px !important;"> 
 	<?php if($product_list->num_rows() > 0){ ?>	
 		<ul style="  background: none repeat scroll 0 0 #FFFFFF;box-shadow: 0 3px 0 0 #E1E1E1;float: left;padding: 20px;width: 95%; display:none" id="loader">
 			<li style="text-align: center;" ><img src="images/spinner.gif" /></li>

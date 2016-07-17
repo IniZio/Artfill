@@ -45,7 +45,7 @@ $this->load->model('user_model');
                 <div class="community_div">
 
 
-                    <div class="community_right container">                    	   
+                    <div class="community_right">                    	   
 
              <div class="split_prefile">
 
@@ -447,8 +447,10 @@ $this->load->model('user_model');
 
         </div>
 
+        </div>
+
     </section>
-<div>
+</div>
   
 
   <div id="popupContact">

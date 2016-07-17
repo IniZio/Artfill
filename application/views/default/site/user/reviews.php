@@ -5,124 +5,40 @@ $this->load->model('user_model');
 //echo "<pre>";print_r($PublicProfile->row()); die;
 ?>
 
-<script src="js/site/jquery-1.9.0.js" type="text/javascript"></script>
-<script src="js/jquery.colorbox.js"></script>
-<link rel="stylesheet" href="css/default/site/shopsy_style.css" type="text/css" media="all" />
-<link rel="shortcut icon" type="image/x-icon" href="images/logo/'.$this->data["fevicon"].'">
-<link rel="stylesheet" type="text/css" href="css/default/site/new/colorbox.css" media="all" />
+
+<?php if(isset($active_theme) && $active_theme->num_rows() !=0) {?>
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>User-Profile-page.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
+<?php }?>
 <!--[if lt IE 9]>
 <script src="'.base_url().'js/html5shiv.js"></script>
+-->
 
-<style>
 
-#cboxClose {
-    background: url("../../images/close_img.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border: medium none;
-    height: 16px;
-    position: absolute;
-    right: 0;
-    text-indent: -9999px;
-    top: 8px;
-    width: 20px;
-}
-
-#cboxClose:hover {
-background: url("../../images/buttons-master.20140130192956.png") no-repeat scroll -31px -1326px rgba(0, 0, 0, 0);
-}
-</style>
-
-<style>
-#cboxContent{background:none !important;}
-
-</style>
-<!-- css -->
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="css/default/site/style-menu.css" />
-    
-
-<script>
-    $(document).ready(function(){
-        $("#nav-mobile").html($("#nav-main").html());
-        $("#nav-trigger span").click(function(){
-            if ($("nav#nav-mobile ul").hasClass("expanded")) {
-                $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
-                $(this).removeClass("open");
-            } else {
-                $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
-                $(this).addClass("open");
-            }
-        });
-    });
-</script>
-<?php if(isset($active_theme) && $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Community-page.css" rel="stylesheet">
-<?php }?>
-<div class="add_steps shop-menu-list">
+			
+			<div class="add_steps shop-menu-list">
 
 			<div class="main">
-				<div id="nav-trigger">
-					<span>Menu</span>
-				</div>
-				<nav id="nav-main">
-				<ul id="panel" class="add_steps" style="background:none; box-shadow:none;">
+				 
+				 <?php $this->load->view('site/user/sidebar');?>  
 			
-				 <li>
-                    <a href="purchase-review"> <?php if($this->lang->line('user_purchases') != '') { echo stripslashes($this->lang->line('user_purchases')); } else echo 'Purchases'; ?> </a>
-                 </li>
-                 
-                <li>
-                     <a href="settings/my-account/<?=$this->session->userdata['shopsy_session_user_name']?>"> <?php if($this->lang->line('user_settings') != '') { echo stripslashes($this->lang->line('user_settings')); } else echo 'Settings'; ?></a>
-                </li>
-                
-                 <li>
-                     <a href="settings/giftcards"> <?php if($this->lang->line('giftcard_cards') != '') { echo stripslashes($this->lang->line('giftcard_cards')); } else echo 'Gift Cards'; ?></a>
-                </li>             
-                
-                <li>
-                     <a href="public-profile"><?php if($this->lang->line('user_pub_profile') != '') { echo stripslashes($this->lang->line('user_pub_profile')); } else echo 'Public Profile'; ?></a>
-                </li>
-			</ul>
-  </nav>
-        <nav id="nav-mobile"></nav>
 			</div>
 			
 			</div>
-			</div>
 
+			
+			
 
-<div id="community_tag">			
-<section class="browse-head">
-
-
-<div class="container">
-
-<ul class="bread_crumbs">
-        	<li><a href="<?php echo base_url(); ?>" class="a_links"><?php if($this->lang->line('user_home') != '') { echo stripslashes($this->lang->line('user_home')); } else echo "Home"; ?></a></li>
-            <span>&rsaquo;</span>
-           <li><a href="view-profile/<?php echo $this->session->userdata['shopsy_session_user_name'];?>" class="a_links"><?php echo $this->session->userdata['shopsy_session_user_name'];?></a></li>
-		   <span>&rsaquo;</span>
-		   <li><?php if($this->lang->line('purchases-review') != '') { echo stripslashes($this->lang->line('purchases-review')); } else echo 'Purchases & Reviews'; ?></li>
-        </ul>
-
-  	<div class="">
-        <div id="header_menu" class="content-wrap-inner clear ">
-            <div class="col col4">
-                <h1><?php if($this->lang->line('review') != '') { echo stripslashes($this->lang->line('review')); } else echo 'Reviews'; ?></h1>
-            </div>
-
-        </div>
-	</div>
-</div>    
-</header>
-</section>
+<div id="profile_div">			
 
 <section class="container">
-
-<!-- <div class="purchase_review container  hole_content" style="width:1000px;max-width:1000px">    	 -->
-<div class="purchase_review container  hole_content">    	
+  	
      <div class="main"> 
+            <div class="community_page">
+                <div class="community_div">
+
+                    <div class="community_right">
 <!-- feedback-container start -->
    <div class="feedback-container">
       <!-- Nav tabs -->
@@ -322,10 +238,12 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
     </div>
 <!-- feedback-container end-->
 
+	</div>
+	</div>
+	</div>
 
 
 	</div> 
-</div>
 </section>
 </div>
 	<div style="display:none;"><div id="inline_reg1"></div></div>

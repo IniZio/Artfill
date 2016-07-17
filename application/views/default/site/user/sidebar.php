@@ -2,13 +2,13 @@
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="css/default/site/style-menu.css" />
+<!--<link rel="stylesheet" href="css/default/site/style-menu.css" />-->
     
 <!-- js -->
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
 <script>
-    $(document).ready(function(){
+    /*$(document).ready(function(){
         $("#nav-mobile").html($("#nav-main").html());
         $("#nav-trigger span").click(function(){
             if ($("nav#nav-mobile ul").hasClass("expanded")) {
@@ -19,12 +19,12 @@
                 $(this).addClass("open");
             }
         });
-    });
+    });*/
 </script>
-
+<!--
 <div id="nav-trigger">
 					<span>Menu</span>
-				</div>
+				</div>-->
 				<nav id="nav-main">
 					<ul id="panel" class="add_steps" style="background:none; box-shadow:none;">
 
@@ -38,7 +38,7 @@
 
     	<a href="<?php echo 'settings/my-account/'.$this->session->userdata['shopsy_session_user_name'];?>">
 
-			<?php if($this->lang->line('user_settings') != '') { echo stripslashes($this->lang->line('user_settings')); } else echo "Settings"; ?>
+			<?php if($this->lang->line('user_settings') != '') { echo "帳戶設置"; } else echo "Settings"; ?>
 
         </a>
 
@@ -67,7 +67,7 @@
         </a>
 
     </li> -->
-	<li <?php if($this->uri->segment(1)=='manage-notification'){ echo 'class="active"';} ?>>
+	<li <?php if($this->uri->segment(1)=='manage-notification'){ echo 'class="side_active"';} ?>>
 
     	<a href="manage-notification" ><i class="ic-credit"></i>
         	<?php if($this->lang->line('lg_user_notification') != '') { echo stripslashes($this->lang->line('lg_user_notification')); } else echo "Notification Settings"; ?>
@@ -83,6 +83,15 @@
 
     	<a href="people/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>/conversations" ><i class="ic-credit"></i>
         	<?php if($this->lang->line('lg_user_conversation') != '') { echo stripslashes($this->lang->line('lg_user_conversation')); } else echo "Conversations"; ?>
+
+
+        </a>
+
+    </li>
+	<li <?php if($this->uri->segment(1)=='reviews'){ echo 'class="side_active"';} ?>>
+
+    	<a href="reviews" ><i class="ic-credit"></i>
+        	<?php echo "意見回饋"; ?>
 
 
         </a>
@@ -111,5 +120,5 @@
 
 </nav>
 				
-				<nav id="nav-mobile"></nav>
+				<!--<nav id="nav-mobile"></nav>-->
 

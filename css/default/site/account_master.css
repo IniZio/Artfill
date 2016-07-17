@@ -77,8 +77,8 @@
 
 .pass {
   width: 99%;
-  float: left;
-  margin: 0 0 20px 7px;
+  /*float: left;*/
+  margin: 0 0 30px 7px;
   padding: 0px;
   /*background-color: #FFFFFF;*/
   /* border: 1px solid #DADBD6; */
@@ -373,7 +373,7 @@
 
 /*profile*/
 .split_prefile {
-  float: left;
+  /*float: left;*/
   margin: 0 0 0 0px;
   padding: 0px;
   width: 100%;
