@@ -15,7 +15,7 @@ $this->load->model('user_model');
 
 			<div class="main">
 			
-				 <?php $this->load->view('site/user/profile_sidebar'); ?>
+				 <?php $this->load->view('site/user/sidebar'); ?>
 		  
 			</div>
 			

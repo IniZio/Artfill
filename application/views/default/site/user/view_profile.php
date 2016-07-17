@@ -11,7 +11,7 @@ $this->load->model('user_model');
 <script src="js/jquery.colorbox.js"></script>
 		<div class="add_steps shop-menu-list">
 			<div class="main">
-				<?php $this->load->view('site/user/profile_sidebar'); ?>
+				<?php $this->load->view('site/user/sidebar'); ?>
 			</div>
 		</div>
 <div id="seller_div">
