@@ -37,6 +37,8 @@ $this->load->view('site/templates/shop_header'); //$checkloginIDarr=$this->sessi
 
                     <span class="note"><?php if($this->lang->line('shop_change') != '') { echo stripslashes($this->lang->line('shop_change')); } else echo 'You can change your shop name later'; ?><?php echo $fullstop ?></span>
 					
+					<div><br/></div>
+					
 					<label><?php if($this->lang->line('com_location') != '') { echo stripslashes($this->lang->line('com_location')); } else echo 'Location'; ?></label>
 					
 					<input type="text" class="checkout_txt" name="shop_location" id="shop_location" placeholder="<?php echo af_lg('lg_enter_location','Enter a location');?>" value="<?php  echo stripslashes($selectSeller_details[0]['shop_location']); ?>" style="width:425px; height:27px; margin-left: 17px;" />
