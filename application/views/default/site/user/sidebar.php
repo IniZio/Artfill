@@ -90,6 +90,16 @@
     </li>
 	
 	
+    <li <?php if($this->uri->segment(3)=='followers'){ echo 'class="side_active"';  }?>>
+ABC
+    </li>      
+	
+    <li <?php if($this->uri->segment(1)=='view-people'){ echo 'class="side_active"';  }?>>ABC
+    </li>
+
+    <li <?php if($this->uri->segment(3)=='favorites'){ echo 'class="side_active"';  }?>>ABC
+    </li>
+	
 	
 	<li <?php if($this->uri->segment(1)=='reviews'){ echo 'class="side_active"';} ?>>
 
