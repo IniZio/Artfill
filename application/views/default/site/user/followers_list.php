@@ -25,8 +25,6 @@ $this->load->model('user_model');
 
     <div class="main">
 
-        <div class="container">
-
             <ul class="breadcrumb_top">
 
                 <li><a href="<?php echo base_url();?>"><?php if($this->lang->line('user_home') != '') { echo stripslashes($this->lang->line('user_home')); } else echo "Home"; ?></a></li>
@@ -247,8 +245,6 @@ $this->load->model('user_model');
                 </div>
 
             </div>
-
-        </div>
 
     </div>
 
