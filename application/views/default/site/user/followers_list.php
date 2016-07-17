@@ -1,4 +1,3 @@
-<?php $userProfileDetails=$userProfileDetails->result_array(); ?>
 
 <?php
 
@@ -19,6 +18,7 @@ $this->load->model('user_model');
 			</div>
 			
 			</div>
+<?php $userProfileDetails=$userProfileDetails->result_array(); ?>
 
 <section class="container">
 
