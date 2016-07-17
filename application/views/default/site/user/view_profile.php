@@ -1,4 +1,4 @@
-<?php $userProfileDetails=$userProfileDetails->result_array(); ?>
+
 <?php 
 $this->load->view('site/templates/header');
 $this->load->model('user_model');
@@ -8,10 +8,9 @@ $this->load->model('user_model');
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
 <link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
 <?php } ?>
-<script src="js/jquery.colorbox.js"></script>
 		<div class="add_steps shop-menu-list">
 			<div class="main">
-				<?php $this->load->view('site/user/sidebar'); ?>
+				<?php $this->load->view('site/user/sidebar');?> 
 			</div>
 		</div>
 <div id="seller_div">
