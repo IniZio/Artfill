@@ -49,7 +49,7 @@ $this->load->model('user_model');
 
              <div class="split_prefile">
 
-            <h2> <?php if($this->lang->line('user_ur_pub_prof') != '') { echo stripslashes($this->lang->line('user_ur_pub_prof')); } else echo 'Your Public Profile'; ?></h2>
+            <h2> <?php if($this->lang->line('user_ur_pub_prof') != '') { echo "你的個人檔案"; } else echo 'Your Public Profile'; ?></h2>
 
             <p><?php if($this->lang->line('user_every_page_anyone') != '') { echo stripslashes($this->lang->line('user_every_page_anyone')); } else echo 'Everything on this page can be seen by anyone'; ?> </p>
 

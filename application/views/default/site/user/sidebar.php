@@ -28,9 +28,15 @@
 				<nav id="nav-main">
 					<ul id="panel" class="add_steps" style="background:none; box-shadow:none;">
 
+    <li <?php if($this->uri->segment(1)=='view-people'){ echo 'class="side_active"';  }?>>
+
+       	<a href="view-people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>" ><i class="ic-credit"></i><?php if($this->lang->line('user_profile') != '') { echo stripslashes($this->lang->line('user_profile')); } else echo 'Profile'; ?></a>
+
+    </li>
+					
     <li <?php if($this->uri->segment(1) == 'public-profile'){ echo 'class="side_active"'; } ?>>
 
-    	<a href="public-profile"><?php if($this->lang->line('user_pub_profile') != '') { echo "個人檔案"; } else echo "Public Profile"; ?></a>
+    	<a href="public-profile"><?php if($this->lang->line('user_pub_profile') != '') { echo "編輯個人檔案"; } else echo "Public Profile"; ?></a>
 
         </li>
 
@@ -96,11 +102,6 @@
 
     </li>      
 	
-    <li <?php if($this->uri->segment(1)=='view-people'){ echo 'class="side_active"';  }?>>
-
-       	<a href="view-people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>" ><i class="ic-credit"></i><?php if($this->lang->line('user_profile') != '') { echo stripslashes($this->lang->line('user_profile')); } else echo 'Profile'; ?></a>
-
-    </li>
 
     <li <?php if($this->uri->segment(3)=='favorites'){ echo 'class="side_active"';  }?>>
 
