@@ -352,7 +352,7 @@ window.location.href = "https:" + window.location.href.substring(window.location
 <script>
 <?php if ($userActivityCount > 0) {?>
 	var favicon=new Favico({
-    animation:'fade'
+    animation:'slide'
 	});
 	favicon.badge(<?php echo $userActivityCount; ?>);
 <?php }?>
