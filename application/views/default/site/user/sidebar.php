@@ -91,13 +91,21 @@
 	
 	
     <li <?php if($this->uri->segment(3)=='followers'){ echo 'class="side_active"';  }?>>
-ABC
+
+        <a href="people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>/followers"><i class="ic-credit"></i><?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo 'Followers'; ?></a>
+
     </li>      
 	
-    <li <?php if($this->uri->segment(1)=='view-people'){ echo 'class="side_active"';  }?>>ABC
+    <li <?php if($this->uri->segment(1)=='view-people'){ echo 'class="side_active"';  }?>>
+
+       	<a href="view-people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>" ><i class="ic-credit"></i><?php if($this->lang->line('user_profile') != '') { echo stripslashes($this->lang->line('user_profile')); } else echo 'Profile'; ?></a>
+
     </li>
 
-    <li <?php if($this->uri->segment(3)=='favorites'){ echo 'class="side_active"';  }?>>ABC
+    <li <?php if($this->uri->segment(3)=='favorites'){ echo 'class="side_active"';  }?>>
+
+       	<a href="people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>/favorites"><i class="ic-credit"></i><?php if($this->lang->line('user_favorite') != '') { echo stripslashes($this->lang->line('user_favorite')); } else echo 'Favorite'; ?></a>
+
     </li>
 	
 	
