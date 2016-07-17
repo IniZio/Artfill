@@ -55,7 +55,7 @@ $this->load->view('site/templates/shop_header');
             
             <?php if($selectSeller_details[0]['seller_store_image'] != ''){ ?>
             <div class="shop_member">
-                <label class="label-text"><?php echo af_lg('lg_current_bannerimage','Current Banner image');?></label>
+                <label class="label-text">現時店鋪橫幅</label>
                 <div class="shop_member_right"><img src="images/store-banner/<?php print_r($selectSeller_details[0]['seller_store_image']); ?>"/></div>
             </div>
             <hr>
@@ -63,7 +63,7 @@ $this->load->view('site/templates/shop_header');
             
             
 			<div class="shop_member">
-                <label class="label-text"><?php if($this->lang->line('shop_shopbanner') != '') { echo stripslashes($this->lang->line('shop_shopbanner')); } else echo 'Shop Banner Image'; ?> </label>
+                <label class="label-text">上載店鋪橫幅</label>
 				<div class="shop_member_right">
 				<div class="input-change" ><div>
 <!--  <input type="button" onclick="document.getElementById('shop_banner_img').click()" value="<?php if($this->lang->line('choose_file') != '') { echo stripslashes($this->lang->line('choose_file')); } else echo 'Choose File'; ?>..."/><b id="no_file_selected"><?php if($this->lang->line('no_file_selected') != '') { echo stripslashes($this->lang->line('no_file_selected')); } else echo 'No File Selected'; ?></b></div></div> -->
