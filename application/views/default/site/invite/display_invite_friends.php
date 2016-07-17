@@ -54,7 +54,7 @@ $this->load->view('site/templates/header');
 
 					<button class="submit_btn facebook" id="facebook" name="facebook"><i class="fa fa-facebook-square"></i><span style="margin-left:10px;"><?php echo af_lg('lg_FB_invite','Facebook invite');?></span>
 					
-					<button class="submit_btn twitter" id="twitter" name="twitter" data-url="http://twitter.com/share?text=<?php echo urlencode($siteTitle);?>&url=<?php echo urlencode(base_url());?>%3Faff%3D<?php echo $userDetails->row()->affiliateId;?>"><i class="fa fa-twitter-square"></i><span style="margin-left:10px;"><?php echo af_lg('lg_twitter_invite','Twitter invite');?></span>					
+					<!--<button class="submit_btn twitter" id="twitter" name="twitter" data-url="http://twitter.com/share?text=<?php echo urlencode($siteTitle);?>&url=<?php echo urlencode(base_url());?>%3Faff%3D<?php echo $userDetails->row()->affiliateId;?>"><i class="fa fa-twitter-square"></i><span style="margin-left:10px;"><?php echo af_lg('lg_twitter_invite','Twitter invite');?></span>					-->
 					
 			</div>
                 </div>
