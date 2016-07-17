@@ -41,7 +41,7 @@ $this->load->model('user_model');
 
                     <form action="update_privacy" method="post" id="privacy_form">
 
-                    <div class="community_right container">
+                    <div class="community_right">
 
                     	 
 
