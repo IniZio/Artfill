@@ -35,7 +35,7 @@ $this->load->model('user_model');
             <div class="community_page">
                 <div class="community_div">
 
-                    <div class="community_right container">
+                    <div class="community_right">
                    
                     <?php $this->load->view("site/user/settings_tab");?>
                     	   
