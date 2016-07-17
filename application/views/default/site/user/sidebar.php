@@ -1,4 +1,3 @@
-
 <!-- css -->
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
@@ -91,21 +90,21 @@
     </li>
 	
 	
-    <li <?php if (in_array('followers', $urlArr) || in_array('following', $urlArr)){ echo 'class="side_active"';  }?>>
+    <li <?php if($this->uri->segment(3)=='followers'){ echo 'class="side_active"';  }?>>
 
-        <a href="people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>/followers"><?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo 'Followers'; ?> <?php if($userProfileDetails[0]['followers_count']>0){ echo ': '.$userProfileDetails[0]['followers_count']; } ?></a>
+        <a href="people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>/followers"><i class="ic-credit"></i><?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo 'Followers'; ?> <?php if($userProfileDetails[0]['followers_count']>0){ echo ': '.$userProfileDetails[0]['followers_count']; } ?></a>
 
     </li>      
 	
-    <li <?php if ($urlArr[sizeof($urlArr)]==urldecode($this->uri->segment(2,0))){ echo 'class="side_active"';  }?>>
+    <li <?php if($this->uri->segment(1)=='view-people'){ echo 'class="side_active"';  }?>>
 
-       	<a href="view-people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>" ><?php if($this->lang->line('user_profile') != '') { echo stripslashes($this->lang->line('user_profile')); } else echo 'Profile'; ?></a>
+       	<a href="view-people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>" ><i class="ic-credit"></i><?php if($this->lang->line('user_profile') != '') { echo stripslashes($this->lang->line('user_profile')); } else echo 'Profile'; ?></a>
 
     </li>
 
-    <li <?php if (in_array('favorites', $urlArr) || in_array('shop', $urlArr)|| in_array('treasury', $urlArr)){ echo 'class="side_active"';  }?>>
+    <li <?php if($this->uri->segment(3)=='favorites'){ echo 'class="side_active"';  }?>>
 
-       	<a href="people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>/favorites"><?php if($this->lang->line('user_favorite') != '') { echo stripslashes($this->lang->line('user_favorite')); } else echo 'Favorite'; ?></a>
+       	<a href="people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>/favorites"><i class="ic-credit"></i><?php if($this->lang->line('user_favorite') != '') { echo stripslashes($this->lang->line('user_favorite')); } else echo 'Favorite'; ?></a>
 
     </li>
 	
