@@ -1,3 +1,4 @@
+<?php $userProfileDetails=$userProfileDetails->result_array(); ?>
 
 <?php
 
@@ -7,18 +8,18 @@ $this->load->model('user_model');
 
 ?>
 
+<script src="js/jquery.colorbox.js"></script>
 
 
 			<div class="add_steps shop-menu-list">
 
 			<div class="main">
 			
-				<?php $this->load->view('site/user/sidebar');?>  
+				 <?php $this->load->view('site/user/profile_sidebar'); ?>
 		  
 			</div>
 			
 			</div>
-<?php $userProfileDetails=$userProfileDetails->result_array(); ?>
 
 <section class="container">
 
@@ -30,7 +31,7 @@ $this->load->model('user_model');
 
                 <li><a href="<?php echo base_url();?>"><?php if($this->lang->line('user_home') != '') { echo stripslashes($this->lang->line('user_home')); } else echo "Home"; ?></a></li>
 
-                <li></li>
+                <li>></li>
 
                 <li><?php echo stripslashes($userProfileDetails[0]['user_name']);?>'s <?php if($this->lang->line('user_profile') != '') { echo stripslashes($this->lang->line('user_profile')); } else echo "profile"; ?></li>
 
