@@ -1,13 +1,9 @@
 
 <?php 
 $this->load->view('site/templates/header');
+$this->load->model('product_model');
 $this->load->model('user_model');
 ?>
-<?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Seller-page.css" rel="stylesheet">
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
-<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
-<?php } ?>
 		<div class="add_steps shop-menu-list">
 			<div class="main">
 				<?php $this->load->view('site/user/sidebar');?> 
