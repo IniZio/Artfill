@@ -33,6 +33,12 @@
        	<a href="view-people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>" ><i class="ic-credit"></i><?php if($this->lang->line('user_profile') != '') { echo stripslashes($this->lang->line('user_profile')); } else echo 'Profile'; ?></a>
 
     </li>
+	
+    <li <?php if($this->uri->segment(1)=='purchase-review'){ echo 'class="side_active"';  }?>>
+
+       	<a href="purchase-review" ><i class="ic-credit"></i>交易紀錄</a>
+
+    </li>
 					
     <li <?php if($this->uri->segment(1) == 'public-profile'){ echo 'class="side_active"'; } ?>>
 

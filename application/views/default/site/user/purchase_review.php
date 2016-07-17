@@ -41,58 +41,13 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 
 </style>
 
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="css/default/site/style-menu.css" />
-<script>
-    $(document).ready(function(){
-        $("#nav-mobile").html($("#nav-main").html());
-        $("#nav-trigger span").click(function(){
-            if ($("nav#nav-mobile ul").hasClass("expanded")) {
-                $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
-                $(this).removeClass("open");
-            } else {
-                $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
-                $(this).addClass("open");
-            }
-        });
-    });
-</script>
-<?php if(isset($active_theme) && $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>User-Profile-page.css" rel="stylesheet">
-<?php }?>
-			<div class="add_steps shop-menu-list">
-
-			<div class="main">
-				<div id="nav-trigger">
-					<span>Menu</span>
-				</div>
-				<nav id="nav-main">
-				<ul id="panel" class="add_steps" style="background:none; box-shadow:none;">
-			
-				 <li>
-                    <a href="purchase-review"> <?php if($this->lang->line('user_purchases') != '') { echo stripslashes($this->lang->line('user_purchases')); } else echo 'Purchases'; ?> </a>
-                 </li>
-                 
-                <li>
-                     <a href="settings/my-account/<?=$this->session->userdata['shopsy_session_user_name']?>"> <?php if($this->lang->line('user_settings') != '') { echo stripslashes($this->lang->line('user_settings')); } else echo 'Settings'; ?></a>
-                </li>
-                
-                 <li>
-                     <a href="settings/giftcards"> <?php if($this->lang->line('giftcard_cards') != '') { echo stripslashes($this->lang->line('giftcard_cards')); } else echo 'Gift Cards'; ?></a>
-                </li>             
-                
-                <li>
-                     <a href="public-profile"><?php if($this->lang->line('user_pub_profile') != '') { echo stripslashes($this->lang->line('user_pub_profile')); } else echo 'Public Profile'; ?></a>
-                </li>
-			</ul>
-  </nav>
-        <nav id="nav-mobile"></nav>
+<div class="add_steps shop-menu-list">
+			<div class="main">		
+				<?php $this->load->view('site/user/sidebar'); ?>
 			</div>
-			
-			</div>
-			</div>
+		</div>
+		
 <div id="profile_div">
 <section class="browse-head">
 
