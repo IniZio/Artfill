@@ -81,6 +81,7 @@ $this->load->model('user_model');
                 <?php if($loginCheck!=1){?>
                      <form method="post" action="site/user/change_password" onsubmit="return password_validation();">
                      	<div class="acc_full">
+                     	<div class="section">
                   <div class="heading_account" ><?php if($this->lang->line('user_password') != '') { echo stripslashes($this->lang->line('user_password')); } else echo "Password"; ?></div>
                   <div class="field_account">
         	         <label ><?php if($this->lang->line('user_email_or_uname') != '') { echo stripslashes($this->lang->line('user_email_or_uname')); } else echo "Email or Username"; ?> </label><p style="color:#F00; float:left;">*</p><span style="color:#F00;"  id="err_pass_email"></span>
@@ -102,6 +103,7 @@ $this->load->model('user_model');
           	<input type="submit" class="password_btn" value="<?php if($this->lang->line('user_changepwd') != '') { echo stripslashes($this->lang->line('user_changepwd')); } else echo "Change Password"; ?>" style=" margin-left:10px;" />
         
                  
+                 </div>
                  </div>
          </form>        
          		<?php } ?>
