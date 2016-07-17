@@ -244,23 +244,23 @@ $('#shop_banner_img').on('change',function(){
 });
 
 
-// $("#shop_banner_img").change(function(e) {
-// 	alert("b");
-//     for (var i = 0; i < e.originalEvent.srcElement.files.length; i++) {
+ $("#shop_banner_img").change(function(e) {
+ 	alert("b");
+     for (var i = 0; i < e.originalEvent.srcElement.files.length; i++) {
         
-//         var file = e.originalEvent.srcElement.files[i];
-        
-//         //var img = document.createElement("img");
-//         var reader = new FileReader();
-//         reader.onloadend = function() {
-//              	//img.src = reader.result;
-//         		//$("#img").attr("src",reader.result);
-//         		$("#cropImage img").attr("src",reader.result);
-//         }
-//         reader.readAsDataURL(file);
-//         //$("#shop_banner_img").after(img);
-//     }
-// });
+         var file = e.originalEvent.srcElement.files[i];
+       
+         //var img = document.createElement("img");
+         var reader = new FileReader();
+         reader.onloadend = function() {
+              	//img.src = reader.result;
+         		//$("#img").attr("src",reader.result);
+         		$("#cropImage img").attr("src",reader.result);
+         }
+         reader.readAsDataURL(file);
+         //$("#shop_banner_img").after(img);
+     }
+ });
 
 });    
 
