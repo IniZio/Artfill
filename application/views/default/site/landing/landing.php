@@ -244,7 +244,6 @@ $n = $deal_of_day1->num_rows();
 				<?php if ($this->config->item('featured_shop') == 'active') {?>
 				<section class="third-bl">
 					<div class="container">
-						<h1><br/></h1>
 						<!--<h1><?php //echo af_lg('lg_Featured_shop','Featured shops');?></h1>-->
 						<style>
 						.sub-box{
