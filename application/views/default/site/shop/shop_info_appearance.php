@@ -217,12 +217,7 @@ $this->load->view('site/templates/shop_header');
                     <label class="label-text"><?php if($this->lang->line('shop_message') != '') { echo stripslashes($this->lang->line('shop_message')); } else echo 'Message to Buyers'; ?> </label>
                     <div class="shop_member_right"><textarea id="msg_to_buyers" class="message121" rows="4" name="msg_to_buyers" style="overflow: hidden; height: 101px; border-color: #CCCCCC;"><?php  echo stripslashes(strip_tags($selectSeller_details[0]['msg_to_buyers'])); ?></textarea>
                     <p class="inline-message"><?php if($this->lang->line('shop_include') != '') { echo stripslashes($this->lang->line('shop_include')); } else echo 'We include this message on receipt pages and in the email buyers receive when they purchase from your shop'; ?><?php if($footstop = $this->_ci_cached_vars["languageCode"] == "zh_HK") echo "。"; else echo "." ?> </p></div>
-                </div>           
-                <!-- <div class="shop_member">
-                    <label class="label-text"><?php if($this->lang->line('shop_messagebuyers') != '') { echo stripslashes($this->lang->line('shop_messagebuyers')); } else echo 'Message to Buyers for Digital Items'; ?> </label>
-                    <div class="shop_member_right"><textarea id="msg_to_buyers_for_digiitem" class="message121" rows="4" name="msg_to_buyers_for_digiitem" style="overflow: hidden; height: 101px; border-color: #CCCCCC;"><?php  echo htmlspecialchars(stripslashes(strip_tags($selectSeller_details[0]['msg_to_buyers_for_digiitem']))); ?></textarea>
-                    <p class="inline-message"><?php if($this->lang->line('shop_downloads') != '') { echo stripslashes($this->lang->line('shop_downloads')); } else echo 'If you sell digital items, we include this message on the Downloads page for digital orders. It applies to all digital listings purchased from your shop'; ?><?php if($footstop = $this->_ci_cached_vars["languageCode"] == "zh_HK") echo "。"; else echo "." ?><!--<a href="javascript:void(0);"> <?php if($this->lang->line('shop_aboutselling') != '') { echo stripslashes($this->lang->line('shop_aboutselling')); } else echo 'Learn about selling digital items'; ?>. </a>--> </p></div>
-                </div> -->
+                </div>
 			</div>
 		</div>
         </div>
