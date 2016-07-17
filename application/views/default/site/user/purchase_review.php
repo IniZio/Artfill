@@ -61,15 +61,6 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 		   <span>&rsaquo;</span>
 		   <li><?php if($this->lang->line('purchases-review') != '') { echo stripslashes($this->lang->line('purchases-review')); } else echo 'Purchases & Reviews'; ?></li>
         </ul>
-
-  	<div class="">
-        <div id="header_menu" class="content-wrap-inner clear ">
-            <div class="col col4">
-                <h1><?php if($this->lang->line('user_purchases') != '') { echo stripslashes($this->lang->line('user_purchases')); } else echo 'Purchases'; ?></h1>
-            </div>
-
-        </div>
-	</div>
 </div>    
 <!-- purchases and Review -->        
 </header>
