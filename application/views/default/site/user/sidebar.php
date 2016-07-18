@@ -125,7 +125,6 @@
         </a>
 
     </li>
-	<!--
 	 <li <?php if($this->uri->segment(2) == 'invite-friends' ){ echo 'class="side_active"';} ?>>
 
     	<a href="settings/invite-friends" ><i class="ic-credit"></i>
@@ -135,7 +134,6 @@
         </a>
 
     </li>
-	-->
 		
 	<?php	}
 	?>
