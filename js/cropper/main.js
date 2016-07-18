@@ -184,7 +184,7 @@ $(function () {
     var $inputImage = $('#inputImage'),
         URL = window.URL || window.webkitURL,
         blobURL;
-
+        console.log('uploading image');
     if (URL) {
       $inputImage.change(function () {
         var files = this.files,
