@@ -1151,7 +1151,6 @@ $image_name = "images/landingbanner/banner-admin.jpg";
             $banner_description = $this->config->item('banner_description');
         }
         ?>
-</header>
 
 			 <!--<div class="jumbotron hero" <?php if ($recentFavorites[0]['seller_banner'] != '') {?>style="background-image:url(images/banner/<?php echo $recentFavorites[0]['seller_banner']; ?>)" <?php }?>>-->
 
@@ -1312,7 +1311,7 @@ $tag_txt = $recentFavorites[0]['city'];
 
 
 
-
+</header>
 	<div class="col-md-4 search-bl col-xs-12 hidesearch">
 		<div class="hidesearch-cover">
 			<form name="search" action="search/all" method="get">
@@ -1349,4 +1348,3 @@ function hoverView(val){
 	}
 }
 </script>
-</header>

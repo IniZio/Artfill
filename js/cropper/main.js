@@ -85,29 +85,29 @@ $(function () {
           }
         };
 
-    // $image.on({
-    //   'build.cropper': function (e) {
-    //     console.log(e.type);
-    //   },
-    //   'built.cropper': function (e) {
-    //     console.log(e.type);
-    //   },
-    //   'cropstart.cropper': function (e) {
-    //     console.log(e.type, e.cropType);
-    //   },
-    //   'cropmove.cropper': function (e) {
-    //     console.log(e.type, e.cropType);
-    //   },
-    //   'cropend.cropper': function (e) {
-    //     console.log(e.type, e.cropType);
-    //   },
-    //   'change.cropper': function (e) {
-    //     console.log(e.type);
-    //   },
-    //   'zoom.cropper': function (e) {
-    //     console.log(e.type, e.zoomType, e.zoomRatio);
-    //   }
-    // }).cropper(options);
+    $image.on({
+      'build.cropper': function (e) {
+        console.log(e.type);
+      },
+      'built.cropper': function (e) {
+        console.log(e.type);
+      },
+      'cropstart.cropper': function (e) {
+        console.log(e.type, e.cropType);
+      },
+      'cropmove.cropper': function (e) {
+        console.log(e.type, e.cropType);
+      },
+      'cropend.cropper': function (e) {
+        console.log(e.type, e.cropType);
+      },
+      'change.cropper': function (e) {
+        console.log(e.type);
+      },
+      'zoom.cropper': function (e) {
+        console.log(e.type, e.zoomType, e.zoomRatio);
+      }
+    }).cropper(options);
 
 
     // Methods
@@ -184,7 +184,6 @@ $(function () {
     var $inputImage = $('#inputImage'),
         URL = window.URL || window.webkitURL,
         blobURL;
-        console.log('uploading image',URL);
 
     if (URL) {
       $inputImage.change(function () {
@@ -194,7 +193,6 @@ $(function () {
         if (!$image.data('cropper')) {
           return;
         }
-
 
         if (files && files.length) {
           file = files[0];
@@ -207,7 +205,7 @@ $(function () {
       			beforeSend: function()
        		      {
       				$("#loadedImgshop").css("display", "block");
-            	        //$("#shop_banner_img").html('<img id="loadedImg" src="images/loader64.gif" style="widows:25px; height:25px;" />');
+            	       // $("#shop_banner_img").html('<img id="loadedImg" src="images/loader64.gif" style="widows:25px; height:25px;" />');
         			  },
                   url: 'site/shop/ajax_check_shop_mainBanner_size',
                   type: 'POST',
@@ -216,9 +214,8 @@ $(function () {
                       return myXhr;
                   },
                   success: function (data) { 
-					$("#loadedImgshop").css("display", "none");
-					if(data=='Success'){
-
+      			$("#loadedImgshop").css("display", "none");
+      			  if(data=='Success'){
       				  $('#ErrImage').css('color','#090');
       				  $('#ErrImage').html('Success');
       				  $("#showcropImage").show();
@@ -227,8 +224,6 @@ $(function () {
       				  return true;
       			  } else {
       				  //$("#showcropImage").hide();
-
-      				  $("#imageResult").val("success");
       				  $("#preview").hide();
       				  $("#showcropImage").hide();
       				  $('#ErrImage').css('color','#F00');
@@ -241,7 +236,6 @@ $(function () {
                   contentType: false,
                   processData: false
               });
-			  console.log(file);
         	  
             blobURL = URL.createObjectURL(file);
             $image.one('built.cropper', function () {
@@ -282,7 +276,7 @@ $(function () {
 
 
     // Tooltips
-    // $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
 
   }());
 
