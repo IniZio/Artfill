@@ -70,7 +70,7 @@ if($this->session->userdata('rUrl') != ''){
 					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>
 					<br/>
 					<a href="forgot-password" style="font-size: 12px; width:100%;"><?php echo af_lg('user_fgt_pwd',"忘記密碼"); ?></a> | 
-					<a data-toggle="modal" href="#signup" style="font-size: 12px; width:100%;"><?php echo af_lg('user_register',"新會員註冊"); ?></a>					
+					<a data-toggle="modal" href="#signup" style="font-size: 12px; width:100%;" onclick="$('signin').attr('aria-hidden','true').hide();return false;"><?php echo af_lg('user_register',"新會員註冊"); ?></a>					
 					</div>
 				</form>
 				<hr/>
