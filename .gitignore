@@ -1,8 +1,3 @@
-commonsettings/shop_admin_settings.php
-config-shopsy/databaseValues.php
-.htaccess
-blog/wp-config-db.php
-sitemap/settings/files.inc.php
 logs/*
 .phpintel/*
 application/logs/*
