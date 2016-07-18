@@ -184,17 +184,17 @@ $(function () {
     var $inputImage = $('#inputImage'),
         URL = window.URL || window.webkitURL,
         blobURL;
-
+        console.log('uploading image',URL);
 
     if (URL) {
       $inputImage.change(function () {
         var files = this.files,
             file;
 
-        // if (!$image.data('cropper')) {
-        //   return;
+        if (!$image.data('cropper')) {
+          return;
+        }
 
-        // }
 
         if (files && files.length) {
           file = files[0];
@@ -218,7 +218,7 @@ $(function () {
                   success: function (data) { 
       			$("#loadedImgshop").css("display", "none");
       			  if(data=='Success'){
-                console.log('hey it work');
+
       				  $('#ErrImage').css('color','#090');
       				  $('#ErrImage').html('Success');
       				  $("#showcropImage").show();
@@ -227,7 +227,7 @@ $(function () {
       				  return true;
       			  } else {
       				  //$("#showcropImage").hide();
-                console.log('nope it fail');
+
       				  $("#preview").hide();
       				  $("#showcropImage").hide();
       				  $('#ErrImage').css('color','#F00');
@@ -280,7 +280,7 @@ $(function () {
 
 
     // Tooltips
-    $('[data-toggle="tooltip"]').tooltip();
+    // $('[data-toggle="tooltip"]').tooltip();
 
   }());
 
