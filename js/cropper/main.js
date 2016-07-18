@@ -228,6 +228,7 @@ $(function () {
       			  } else {
       				  //$("#showcropImage").hide();
 
+      				  $("#imageResult").val("success");
       				  $("#preview").hide();
       				  $("#showcropImage").hide();
       				  $('#ErrImage').css('color','#F00');
