@@ -207,7 +207,7 @@ $(function () {
       			beforeSend: function()
        		      {
       				$("#loadedImgshop").css("display", "block");
-            	        $("#shop_banner_img").html('<img id="loadedImg" src="images/loader64.gif" style="widows:25px; height:25px;" />');
+            	        //$("#shop_banner_img").html('<img id="loadedImg" src="images/loader64.gif" style="widows:25px; height:25px;" />');
         			  },
                   url: 'site/shop/ajax_check_shop_mainBanner_size',
                   type: 'POST',
@@ -216,8 +216,8 @@ $(function () {
                       return myXhr;
                   },
                   success: function (data) { 
-      			$("#loadedImgshop").css("display", "none");
-      			  if(data=='Success'){
+					$("#loadedImgshop").css("display", "none");
+					if(data=='Success'){
 
       				  $('#ErrImage').css('color','#090');
       				  $('#ErrImage').html('Success');
@@ -241,6 +241,7 @@ $(function () {
                   contentType: false,
                   processData: false
               });
+			  console.log(file);
         	  
             blobURL = URL.createObjectURL(file);
             $image.one('built.cropper', function () {
