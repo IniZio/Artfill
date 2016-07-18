@@ -85,29 +85,29 @@ $(function () {
           }
         };
 
-    $image.on({
-      'build.cropper': function (e) {
-        console.log(e.type);
-      },
-      'built.cropper': function (e) {
-        console.log(e.type);
-      },
-      'cropstart.cropper': function (e) {
-        console.log(e.type, e.cropType);
-      },
-      'cropmove.cropper': function (e) {
-        console.log(e.type, e.cropType);
-      },
-      'cropend.cropper': function (e) {
-        console.log(e.type, e.cropType);
-      },
-      'change.cropper': function (e) {
-        console.log(e.type);
-      },
-      'zoom.cropper': function (e) {
-        console.log(e.type, e.zoomType, e.zoomRatio);
-      }
-    }).cropper(options);
+    // $image.on({
+    //   'build.cropper': function (e) {
+    //     console.log(e.type);
+    //   },
+    //   'built.cropper': function (e) {
+    //     console.log(e.type);
+    //   },
+    //   'cropstart.cropper': function (e) {
+    //     console.log(e.type, e.cropType);
+    //   },
+    //   'cropmove.cropper': function (e) {
+    //     console.log(e.type, e.cropType);
+    //   },
+    //   'cropend.cropper': function (e) {
+    //     console.log(e.type, e.cropType);
+    //   },
+    //   'change.cropper': function (e) {
+    //     console.log(e.type);
+    //   },
+    //   'zoom.cropper': function (e) {
+    //     console.log(e.type, e.zoomType, e.zoomRatio);
+    //   }
+    // }).cropper(options);
 
 
     // Methods
@@ -184,7 +184,7 @@ $(function () {
     var $inputImage = $('#inputImage'),
         URL = window.URL || window.webkitURL,
         blobURL;
-        console.log('uploading image');
+        console.log('uploading image',URL);
     if (URL) {
       $inputImage.change(function () {
         var files = this.files,
@@ -276,7 +276,7 @@ $(function () {
 
 
     // Tooltips
-    $('[data-toggle="tooltip"]').tooltip();
+    // $('[data-toggle="tooltip"]').tooltip();
 
   }());
 
