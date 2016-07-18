@@ -207,7 +207,7 @@ $(function () {
       			beforeSend: function()
        		      {
       				$("#loadedImgshop").css("display", "block");
-            	       // $("#shop_banner_img").html('<img id="loadedImg" src="images/loader64.gif" style="widows:25px; height:25px;" />');
+            	        $("#shop_banner_img").html('<img id="loadedImg" src="images/loader64.gif" style="widows:25px; height:25px;" />');
         			  },
                   url: 'site/shop/ajax_check_shop_mainBanner_size',
                   type: 'POST',
