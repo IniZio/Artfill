@@ -36,9 +36,9 @@ if($this->session->userdata('rUrl') != ''){
 
 <div id="signin" class="modal sign-popup in" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
-		<div class="modal-content">
+		<div class="modal-content" style="float:left;">
 			<div class="tabbable-panel">
-			<div style="margin:5px;border: 2px dashed #8adbd4; border-radius:5px;">
+			<div style="margin:5px;border: 2px dashed #8adbd4; border-radius:5px;float:left;">
 				<span style="float:right;">
 					<a class="btn btn-default " href="javascript:void(0);" data-dismiss="modal">
 					<?php echo af_lg('X', 'X'); ?>
@@ -67,7 +67,10 @@ if($this->session->userdata('rUrl') != ''){
 					<div class="popup_login" style="margin-bottom:15px">
 					<!-- <input type="submit" class="submit_btn"  value="<?php echo af_lg('user_signin', "Sign In"); ?>" /> -->
 					<button id="login" type="submit" class="btn btn-primary submit-btn ladda-button" data-style="expand-right" data-size="s"><span class="ladda-label"><?php echo af_lg('user_signin', "Sign In"); ?></span></button>
-					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>									 									 
+					<span id="loginloadErr" style="display:none;padding: 12px;color:red"></span>
+					<br/>
+					<a href="forgot-password" style="font-size: 12px; width:100%;"><?php echo af_lg('user_fgt_pwd',"忘記密碼"); ?></a> | 
+					<a href="register" style="font-size: 12px; width:100%;"><?php echo af_lg('user_register',"新會員註冊"); ?></a>					
 					</div>
 				</form>
 				<hr/>
@@ -84,8 +87,6 @@ if($this->session->userdata('rUrl') != ''){
 									<a class="" onclick="window.location.href='<?php echo $authUrl; ?>'"><img src="images/google_login.png" alt="google"></a>
 								</div>	
 							<?php } ?>						
-					<a href="forgot-password" style="font-size: 12px; width:100%;"><?php echo af_lg('user_fgt_pwd',"忘記密碼"); ?></a> | 
-					<a href="register" style="font-size: 12px; width:100%;"><?php echo af_lg('user_register',"新會員註冊"); ?></a>
 					
 				</div>
 				</div>
