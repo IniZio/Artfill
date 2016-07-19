@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,ynEAA0nE;EACxnE,MAAM,EAAE,IAAI",
-"sources": ["../../../scss/default/ie/ie9.scss"],
-"names": [],
-"file": "ie9.css"
-}
