@@ -247,7 +247,7 @@ $('#languageTab').trigger('click');
 <script src="js/site/ttmenu.js"></script>
 <link rel="stylesheet" type="text/css" href="a_data/jquery-ui.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/default/site/themes-smoothness-jquery-ui.css" />
-<script type="text/javascript" src="a_data/jquery.js"></script>
+<!-- <script type="text/javascript" src="a_data/jquery.js"></script> -->
 <script type="text/javascript" src="a_data/jquery-ui.js"></script>
 <script type="text/javascript" src="js/currency/jquery.formatCurrency-1.4.0.js"></script>
 <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
