@@ -389,8 +389,8 @@ header {
   border-left: none;
   border-right: none;
   border-bottom: none;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
   	/* display: inline-block;
       width: 100%;*/ }
 
