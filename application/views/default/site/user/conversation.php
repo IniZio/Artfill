@@ -16,7 +16,7 @@ $this->load->model('user_model');
 <div id="profile_div">
 	<section class="container">
     	<div class="main">
-        	<ul class="bread_crumbs" class="clear">
+        	<ul id="breadcrumbs" class="clear">
             	<li><a href="<?php echo base_url(); ?>"><?php if($this->lang->line('user_home') != '') { echo stripslashes($this->lang->line('user_home')); } else echo 'Home'; ?></a></a></li>
                 <span>›</span>
                 <li><a href="view-profile/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>"><?php if($this->lang->line('user_profile') != '') { echo stripslashes($this->lang->line('user_profile')); } else echo 'Profile'; ?></a></li>
