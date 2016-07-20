@@ -23,6 +23,9 @@ $this->load->model('user_model');
                 <span>›</span>
                 <li><a ><?php if($this->lang->line('conversation') != '') { echo stripslashes($this->lang->line('conversation')); } else echo 'Conversation'; ?></a></li>
             </ul>
+			
+            <div class="community_page">
+			<div class="community_div">
             <div class="convers">   
                 <div class="conversation_container">
                     <?php /* <div class="conversation_container_left">
@@ -157,6 +160,8 @@ $this->load->model('user_model');
            			</div>
                 </div>
 			</div>
+		</div>
+		</div>
 		</div>
 	</section>
 </div>
