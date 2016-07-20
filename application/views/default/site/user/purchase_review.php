@@ -72,7 +72,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 <div class="main">
             <div class="community_page">
                 <div class="community_div">
-<div class="purchase_review community_right" style="float:left;">    	
+<div class="community_right" style="float:left;">    	
      <!-- <div class="main">     -->
     <div>
      
