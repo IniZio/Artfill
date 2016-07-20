@@ -51,8 +51,6 @@ $this->load->model('user_model');
 
             <h2> <?php if($this->lang->line('user_ur_pub_prof') != '') { echo "你的個人檔案"; } else echo 'Your Public Profile'; ?></h2>
 
-            <p><?php if($this->lang->line('user_every_page_anyone') != '') { echo stripslashes($this->lang->line('user_every_page_anyone')); } else echo 'Everything on this page can be seen by anyone'; ?> </p>
-
             <a href="view-profile/<?php echo $this->session->userdata['shopsy_session_user_name']?>" class="button_view" ><?php if($this->lang->line('user_view_profile') != '') { echo stripslashes($this->lang->line('user_view_profile')); } else echo 'View Profile'; ?></a>
 
             <div class="clear"></div>
