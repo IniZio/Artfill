@@ -16,7 +16,7 @@ $this->load->model('user_model');
 <div id="profile_div">
 	<section class="container">
     	<div class="main">
-        	<ul class="bread_crumbs">
+        	<ul class="bread_crumbs" class="clear">
             	<li><a href="<?php echo base_url(); ?>"><?php if($this->lang->line('user_home') != '') { echo stripslashes($this->lang->line('user_home')); } else echo 'Home'; ?></a></a></li>
                 <span>›</span>
                 <li><a href="view-profile/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>"><?php if($this->lang->line('user_profile') != '') { echo stripslashes($this->lang->line('user_profile')); } else echo 'Profile'; ?></a></li>
@@ -34,7 +34,7 @@ $this->load->model('user_model');
                             </ul>
                         </div>
                     </div>     */ ?>
-                    <div class="conversation_container_right" style="width:100%;">     
+                    <div class="conversation_container_right" >     
                         <div>
                             <center><img id="MessageStatus" src="images/ajax-loader/ajax-loader(6).gif" alt="Loading" style="display:none;" /></center>
                         </div>  
