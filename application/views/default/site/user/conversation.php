@@ -26,7 +26,7 @@ $this->load->model('user_model');
 			
             <div class="community_page">
 			<div class="community_div">
-                    <div class="community_right">
+                    <div class="community_right" style="border:none;">
             <div class="convers">   
                 <div class="conversation_container">
                     <?php /* <div class="conversation_container_left">
