@@ -12,8 +12,9 @@
     <li><a href="settings/account-shipping-address" <?php if($this->uri->segment(2) == 'account-shipping-address'){ echo 'class="active"'; } ?>>
     	<?php if($this->lang->line('ship_address') != '') { echo stripslashes($this->lang->line('ship_address')); } else echo 'Shipping Addresses'; ?>
     </a></li>
+	<!--
     <li><a href="settings/account-creditcard" <?php if($this->uri->segment(2) == 'account-creditcard'){ echo 'class="active"'; } ?>>
     	<?php if($this->lang->line('user_credt_cards') != '') { echo stripslashes($this->lang->line('user_credt_cards')); } else echo 'Credit Cards'; ?>
-    </a></li>
+    </a></li>-->
     <!--<li><a href="settings/account-email" <?php if($this->uri->segment(2) == 'account-email'){ echo 'class="active"'; } ?>>Emails</a></li>-->
 </ul>

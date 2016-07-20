@@ -69,7 +69,10 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 <section class="container">
 <!-- header_end -->
 <!-- section_start -->
-<div class="purchase_review container community_right">    	
+<div class="main">
+            <div class="community_page">
+                <div class="community_div">
+<div class="community_right" style="float:left;">    	
      <!-- <div class="main">     -->
     <div>
      
@@ -77,7 +80,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
         		<div class="col-md-9"> <!-- style="width: 75%;margin: 0px;"> -->
                 <ul style="width:auto;" class="listtypename">
                     <li class="first_list1 <?php if(!$this->uri->segment(2) && !isset($_GET['query'])){echo 'first_list first_list_seleted';}?>">
-                        <a class="top_first_line" href="purchase-review"><?php if($this->lang->line('user_all_purchases') != '') { echo stripslashes($this->lang->line('user_all_purchases')); } else echo 'All Purchases'; ?> <?php if(!$this->uri->segment(2) && !isset($_GET['query'])){echo count($purchaseProducts);} ?></a>
+                        <a class="top_first_line" href="purchase-review"><?php if(!$this->uri->segment(2) && !isset($_GET['query'])){echo count($purchaseProducts);} ?>個<?php if($this->lang->line('user_all_purchases') != '') { echo "交易紀錄"; } else echo 'All Purchases'; ?> </a>
                     </li>
                     <?php if(isset($_GET['query'])){?>
                     <li class="first_list1 <?php if(isset($_GET['query'])){echo 'first_list first_list_seleted';}?>">
@@ -393,6 +396,9 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 <?php } ?>        
 		</section> 
 	</div> 
+</div>
+</div>
+</div>
 </div>
 </section>
 

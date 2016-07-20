@@ -16,13 +16,17 @@ $this->load->model('user_model');
 <div id="profile_div">
 	<section class="container">
     	<div class="main">
-        	<ul class="bread_crumbs">
+        	<ul id="breadcrumbs" class="clear">
             	<li><a href="<?php echo base_url(); ?>"><?php if($this->lang->line('user_home') != '') { echo stripslashes($this->lang->line('user_home')); } else echo 'Home'; ?></a></a></li>
                 <span>›</span>
                 <li><a href="view-profile/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>"><?php if($this->lang->line('user_profile') != '') { echo stripslashes($this->lang->line('user_profile')); } else echo 'Profile'; ?></a></li>
                 <span>›</span>
                 <li><a ><?php if($this->lang->line('conversation') != '') { echo stripslashes($this->lang->line('conversation')); } else echo 'Conversation'; ?></a></li>
             </ul>
+			
+            <div class="community_page">
+			<div class="community_div">
+                    <div class="community_right" style="border:none;">
             <div class="convers">   
                 <div class="conversation_container">
                     <?php /* <div class="conversation_container_left">
@@ -34,7 +38,7 @@ $this->load->model('user_model');
                             </ul>
                         </div>
                     </div>     */ ?>
-                    <div class="conversation_container_right" style="width:100%;">     
+                    <div class="conversation_container_right" >     
                         <div>
                             <center><img id="MessageStatus" src="images/ajax-loader/ajax-loader(6).gif" alt="Loading" style="display:none;" /></center>
                         </div>  
@@ -157,6 +161,9 @@ $this->load->model('user_model');
            			</div>
                 </div>
 			</div>
+		</div>
+		</div>
+		</div>
 		</div>
 	</section>
 </div>
