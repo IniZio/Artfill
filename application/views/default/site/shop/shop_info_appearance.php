@@ -38,7 +38,7 @@ $this->load->view('site/templates/shop_header');
 		   <div class="shop_member_right">
            <input type="text" class="checkout_txt" name="seller_businessname" id="seller_businessname" value="<?php  echo stripslashes(strip_tags($selectSeller_details[0]['seller_businessname'])); ?>" autocomplete="off" onCopy="return false" onDrag="return false" onDrop="return false"
  onblur="return check_shopname(this);"  onkeyup="return check_shopname(this);" style="width:425px; height:27px" />
-            <label>這不是店名啊！是網址裡的名字， 只可打英文</label>
+            <div clas="text-right" style="font-size:60%;color: grey">這不是店名啊！是網址裡的名字， 只可打英文</div>
             <div id="errMsg" style="color:#FF3333"></div>
 			</div>
             </div>
