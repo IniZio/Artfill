@@ -55,7 +55,7 @@ $this->load->model('user_model');
        <!-- <span class="bid-count">Bid Reactions (last 12 Months): <strong>0</strong></span>-->
       </div>
        <div class="period-choose hole_content">
-        <label><?php echo af_lg('lg_period','Period:');?> </label>
+        <!--<label><?php echo af_lg('lg_period','Period:');?> </label>-->
         <select id="stats">
             <option value="site/product/reviews" >所有</option>
             <option <?php if(isset($_GET['month']) && $_GET['month'] == '12' ){ echo "selected"; }?> value="site/product/reviews?month=12" >最近12個月</option>
