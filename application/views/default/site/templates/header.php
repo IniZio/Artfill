@@ -1,7 +1,6 @@
 <?php
 $this->load->view('site/templates/commonheader');
 $this->load->model('user_model');
-#echo $CurrUserImg;die;
 ?>
 <?php
 if ($CurrUserImg != '') {
@@ -10,22 +9,6 @@ if ($CurrUserImg != '') {
     $user_pic = 'default_avat.png';
 }
 ?>
-<!-- START UNUSED STYLE to be deleted -->
-<style>
-#you1{
-	background-image:url("<?php echo base_url() . "images/" . $user_pic; ?>");
-	background-position:center;
-	border-radius: 50%;
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-	float: left;
-	height: 31px !important;
-	margin-top: 0;
-	vertical-align: middle;
-	width: 31px;
-	background-size: cover;
-}
-</style>
-<!-- END UNUSED STYLE to be deleted -->
 
 </head>
  		<?php
