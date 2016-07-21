@@ -33,7 +33,7 @@ $this->load->view('site/templates/shop_header');
 
             <div style="margin: 20px 0;" class="manage-listing-heading">
 
-                <h1><?php if($this->lang->line('shopsec_shop') != '') { echo stripslashes($this->lang->line('shopsec_shop')); } else echo 'Shop Sections'; ?></h1>
+                <h1><?php if($this->lang->line('shopsec_shop') != '') { echo "商店部份"; } else echo 'Shop Sections'; ?></h1>
 
                 <p>
 
