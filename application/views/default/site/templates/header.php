@@ -9,6 +9,7 @@ if ($CurrUserImg != '') {
     $user_pic = 'default_avat.png';
 }
 ?>
+
 </head>
  		<?php
 if ($this->session->flashdata('sErrMSG') != '') {?>
@@ -33,8 +34,6 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 						<span style="color:white;">&emsp;|&emsp;</span>
 						<a href="faq"><span style="color:white;">常見問題</span></a>
 						<span style="color:white;">&emsp;|&emsp;</span>
-						<!--<a href="coming-soon"><span style="color:white;">購物指南</span></a>
-						<span style="color:white;">&emsp;|&emsp;</span>-->
 						<a href="shop/sell"><span style="color:white;">立即開店</span></a>
 						<span style="color:white;">&emsp;</span>
 						<a data-toggle="modal" id="language_href" href="#Language" onclick="javascript:$('#languageTab').trigger('click');">
@@ -60,7 +59,6 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 				<?php if ($this->config->item('mega_menu') == 'No') {
         ?>
 				<?php }?>
-
 								<ul class="dropdown-menu browse-nav-inner showlist2" role="you">
 											<span class="menuarrow"></span>
 									 <li class="first">
@@ -161,7 +159,6 @@ if ($CurrUserImg != '') {
 						</div>
 						<div id="sugglist"></div>
 					</div>
-				     
 					<div class="col-md-2 col-xs-3 top-login">
 						<ul class="header_menu">
 							<?php if ($this->session->userdata['shopsy_session_user_name'] != '') {
@@ -306,14 +303,14 @@ if ($CurrUserImg != '') {
                     <li class="page-scroll">
                         <a href="#portfolio">產品分類</a>
                     </li>
-                    
+
                     <?php if($this->session->userdata['shopsy_session_user_name'] != ''){ ?>
                     <li class="page-scroll">
                     	<a href="public-profile">檢查個人檔案</a>
                     </li>
                     <li class="page-scroll">
                     	<a href="activity">動態消息</a>
-       			
+
 			<?php if ($userActivityCount > 0) {?>
 			<span class="activity-count"><?php echo $userActivityCount; ?></span>
 			<?php }?>
@@ -323,7 +320,7 @@ if ($CurrUserImg != '') {
 			通知
 			<span class="notification-list-count"><?php echo $notificationCount; ?></span>
 			</a>
-       			
+
                     </li>
                     <li class="page-scroll">
                     	<a href="shop/sell">我的商店</a>
