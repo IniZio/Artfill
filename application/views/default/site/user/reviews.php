@@ -57,10 +57,10 @@ $this->load->model('user_model');
        <div class="period-choose hole_content">
         <label><?php echo af_lg('lg_period','Period:');?> </label>
         <select id="stats">
-            <option value="site/product/reviews" ><?php echo af_lg('lg_all','All');?></option>
-            <option <?php if(isset($_GET['month']) && $_GET['month'] == '12' ){ echo "selected"; }?> value="site/product/reviews?month=12" ><?php echo af_lg('lg_12_months','12 Months');?></option>
-            <option <?php if(isset($_GET['month']) && $_GET['month'] == '6' ){ echo "selected"; }?> value="site/product/reviews?month=6"><?php echo af_lg('lg_6_months','6 Months');?></option>
-            <option <?php if(isset($_GET['month']) && $_GET['month'] == '3' ){ echo "selected"; }?> value="site/product/reviews?month=3"><?php echo af_lg('lg_3_months','3 Months');?></option>
+            <option value="site/product/reviews" >所有</option>
+            <option <?php if(isset($_GET['month']) && $_GET['month'] == '12' ){ echo "selected"; }?> value="site/product/reviews?month=12" >最近12個月</option>
+            <option <?php if(isset($_GET['month']) && $_GET['month'] == '6' ){ echo "selected"; }?> value="site/product/reviews?month=6">最近6個月</option>
+            <option <?php if(isset($_GET['month']) && $_GET['month'] == '3' ){ echo "selected"; }?> value="site/product/reviews?month=3">最近3個月</option>
         </select>
       </div>
       <!-- Tab panes -->
