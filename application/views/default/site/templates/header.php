@@ -25,26 +25,8 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 		<?php if ($this->session->userdata['shopsy_session_user_name'] == '' || true) {
     ?>
 			<div class="container top">
-				<div class="row">    <!-- padding-bottom:30px;magrin-bottom:30px;margin-top:40px;"> -->
-				    <!--<div class="col-md-12 signin sign-mobile">
-					     <a href="register"><?php if ($this->lang->line('headind_register') != '') {echo stripslashes($this->lang->line('headind_register'));} else {
-        echo 'Register';
-    }
-    ?></a> | <a href="login"><?php if ($this->lang->line('headind_sign_in') != '') {echo stripslashes($this->lang->line('headind_sign_in'));} else {
-        echo 'Sign in';
-    }
-    ?></a>
-
-						 <span class="shop-cart">
-						<a href="cart" title =" Cart"><i class="fa fa-shopping-cart"></i><?php if ($this->lang->line('heading_cart') != '') {echo stripslashes($this->lang->line('heading_cart'));} else {
-        echo 'Cart';
-    }
-    ?>
-						<span id="CartCount1" class="CartCount1"> <?php if ($MiniCartViewSet > 0) {?><?php echo $MiniCartViewSet; ?><?php } else {echo '0';}?></span>
-						</a>
-						</span>
-				    </div>-->
-					<!--new elements-->
+        <div class="row">
+          <!--new elements-->
 					<div class="hidden-xs">
 						<a href="<?php echo base_url(); ?>" title="<?php echo af_lg('lg_home', 'Home'); ?>"><span style="color:white;">首頁</span></a>
 						<span style="color:white;">&emsp;|&emsp;</span>
@@ -52,8 +34,6 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 						<span style="color:white;">&emsp;|&emsp;</span>
 						<a href="faq"><span style="color:white;">常見問題</span></a>
 						<span style="color:white;">&emsp;|&emsp;</span>
-						<!--<a href="coming-soon"><span style="color:white;">購物指南</span></a>
-						<span style="color:white;">&emsp;|&emsp;</span>-->
 						<a href="shop/sell"><span style="color:white;">立即開店</span></a>
 						<span style="color:white;">&emsp;</span>
 						<a data-toggle="modal" id="language_href" href="#Language" onclick="javascript:$('#languageTab').trigger('click');">
@@ -67,333 +47,18 @@ if ($this->session->flashdata('sErrMSG') != '') {?>
 
 					<div style="clear:both;padding-top:20px;padding-bottom:20px;">
 					</div>
-
-<!--
-					<div class="" style="width:100%;padding-bottom:20px;">
-						<div class="col-xs-6 col-sm-3 header-menu" style="text-align:center;">
-							<div style="width:100%;" >
-								<div style="">
-								<a href="search/vintage/4-clothing?" style="color:#8dbad4">
-								<span style="padding:5px;font-size:120%;">衣物配件</span>
-								</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-6 col-sm-3 header-menu" style="text-align:center;">
-							<div style="width:100%;" >
-								<div style="">
-								<a href="search/supplies?" style="color:#8dbad4">
-								<span style="padding:5px;font-size:120%;">工藝用品</span>
-								</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-6 col-sm-3 header-menu" style="text-align:center;">
-							<div style="width:100%;" >
-								<div style="">
-								<a href="search/all?min_price=0&max_price=100" style="color:#8dbad4">
-								<span style="padding:5px;font-size:120%;">100元內筍貨</span>
-								</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-6 col-sm-3 header-menu" style="text-align:center;">
-							<div style="width:100%;" >
-								<div style="">
-								<a href="search/supplies/11-tailor-made?" style="color:#8dbad4">
-								<span style="padding:5px;font-size:120%;">度身訂做</span>
-								</a>
-								</div>
-							</div>
-						</div>
-					</div>
--->
-
 				</div>
-				<!--
-				<div class="row">
 
-					<div class="col-md-2 col-xs-2" id="logo">
-						<a href="<?php echo base_url(); ?>">
-							<img src="images/logo/<?php echo $this->config->item('logo_image'); ?>" alt="<?php echo $this->config->item('email_title'); ?>" title="<?php echo $this->config->item('email_title'); ?>" />
-						</a>
-					</div>
-					<div class="col-md-3 search-bl col-xs-6">
-						<form name="search" action="search/all" method="get">
-							<input type="text" class="search" name="item" placeholder="<?php if ($this->lang->line('temp_srchitems') != '') {echo stripslashes($this->lang->line('temp_srchitems'));} else {
-        echo 'Search for items and shops';
-    }
-    ?>" value="<?php if ($this->input->get('item') != '') {echo htmlspecialchars($this->input->get('item'));}?>" id="search_items" autocomplete="off" >
-							<?php if ($this->input->get('gift_cards') == 'on') {?>
-							<input type="hidden" name="gift_cards" value="<?php echo $gift; ?>" /> <?php }?>
-							 <?php if ($minVal != '') {?>
-							<input type="hidden" name="min_price" value="<?php echo $minVal; ?>" /> <?php }?>
-								 <?php if ($maxVal != '') {?>
-							<input type="hidden" name="max_price" value="<?php echo $maxVal; ?>" /> <?php }?>
-							<?php if ($locVal != '') {?>
-							<input type="hidden" name="location" value="<?php echo $locVal; ?>" /> <?php }?>
-							<?php if ($shipVal != '') {?>
-							<input type="hidden" name="shipto" value="<?php echo $shipVal; ?>" /> <?php }?>
-							<input type="submit" value="<?php echo af_lg('heading_search', 'Search'); ?>" class="search-bt">
-						</form>
-						<div id="sugglist"></div>
-					</div>
-				<?php if ($this->config->item('mega_menu') == 'No') {
-        ?>
-					<div class="btn-group col-md-1 act-browse-bt">
-						<button type="button" class="btn btn-default dropdown-toggle browse " data-toggle="dropdown" aria-expanded="false">
-							<?php if ($this->lang->line('heading_browse') != '') {echo stripslashes($this->lang->line('heading_browse'));} else {
-            echo 'Browse';
-        }
-        ?>
-							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<?php $p = 0;
-        foreach ($mainCategories->result() as $row) {
-            if ($row->cat_name != '') {
-                if ($p <= 14) {
-
-                    //$commentData = $this->category_model->get_all_counts($row->id,'');
-                    //if($commentData[0]['disp']>0){
-                    ?>
-							<li><a href="category-list/<?php echo $row->id; ?>-<?php echo $row->seourl; ?>"><?php echo $row->cat_name; ?></a></li>
-							<?php
-//}
-                } else {
-                    ?>
-								<li><a href="<?php echo base_url() . 'category'; ?>"><?php if ($this->lang->line('com_more') != '') {echo stripslashes($this->lang->line('com_more'));} else {
-                        echo "More";
-                    }
-                    ?></a></li>
-
-								<?php
-break;}
-                $p++;
-            }
-        }
-        ?>
-						</ul>
-					</div>
-				<?php }?>
-                      <div class="col-md-2 pull-right signin cart-top">
-
-						  <span class="shop-cart">
-							<a href="cart"  title =" Cart"><i class="fa fa-shopping-cart icon-shopping"></i></a>
-							<a class="cart-txt" href="cart" title="Cart">
-								<?php if ($this->lang->line('comm_cart') != '') {echo stripslashes($this->lang->line('comm_cart'));} else {
-        echo 'Cart';
-    }
-    ?>
-								<span id="CartCount1" class="CartCount1"> <?php if ($MiniCartViewSet > 0) {?><?php echo $MiniCartViewSet; ?><?php } else {echo '0';}?></span>
-							</a>
-							</span>
-
-					    </div>
-					<div class="col-md-5 col-xs-5 top-login">
-						<ul class="header_menu">
-							<li>
-								<a href="<?php echo base_url(); ?>" id="home" title="<?php echo af_lg('lg_home', 'Home'); ?>">
-									<span class="icon-text"><?php if ($this->lang->line('landing_home') != '') {echo stripslashes($this->lang->line('landing_home'));} else {
-        echo 'Home';
-    }
-    ?></span>
-								</a>
-							</li>
-							<li>
-								<a href="shop/sell" id="shop" title="<?php echo af_lg('lg_you_shop', 'You Shop'); ?>">
-									<span class="icon-text"><?php if ($this->lang->line('header_shop') != '') {echo stripslashes($this->lang->line('header_shop'));} else {
-        echo 'Shop';
-    }
-    ?></span>
-
-								</a>
-
-							</li>
-
-							<li>
-								<a id="location" href="shop-by-location" title =" Search by location">
-								<span class="icon-text"><?php if ($this->lang->line('header_search_shops') != '') {echo stripslashes($this->lang->line('header_search_shops'));} else {
-        echo 'By Location';
-    }
-    ?></span>
-								</a>
-
-							</li>
-
-							<?php if ($this->uri->segment(1) == 'register' || $this->uri->segment(1) == 'login') {
-        ?>
-
-							<li>
-
-								<a id="register" href="register"><span class="icon-text"><?php if ($this->lang->line('user_register') != '') {echo stripslashes($this->lang->line('user_register'));} else {
-            echo 'Register';
-        }
-        ?></span></a>
-
-							</li>
-
-
-							<li>
-
-								<a id="signin-icon" data-toggle="modal" href="login"><span class="icon-text"><?php if ($this->lang->line('user_signin') != '') {echo stripslashes($this->lang->line('user_signin'));} else {
-            echo 'Sign In';
-        }
-        ?></span></a>
-
-							</li>
-
-							<?php } else {
-        ?>
-
-							<li>
-
-								<a id="register" data-toggle="modal" href="#signin" onclick="javascript:$('#registerTab').trigger('click');"><span class="icon-text"><?php if ($this->lang->line('user_register') != '') {echo stripslashes($this->lang->line('user_register'));} else {
-            echo 'Register';
-        }
-        ?></span></a>
-
-							</li>
-
-
-							<li>
-
-								<a id="signin-icon" data-toggle="modal" href="#signin" onclick="javascript:$('#loginTab').trigger('click');"><span class="icon-text"><?php if ($this->lang->line('user_signin') != '') {echo stripslashes($this->lang->line('user_signin'));} else {
-            echo 'Sign In';
-        }
-        ?></span></a>
-
-							</li>
-
-							<?php }?>
-
-
-
-
-						</ul>
-
-
-						</div>-->
-
-					  <!--<?php if ($this->uri->segment(1) == 'register' || $this->uri->segment(1) == 'login') {
-        ?>
-						  <a  href="register"><?php if ($this->lang->line('user_register') != '') {echo stripslashes($this->lang->line('user_register'));} else {
-            echo 'Register';
-        }
-        ?></a> <span class="btn">
-					     <a  href="login"><?php if ($this->lang->line('user_signin') != '') {echo stripslashes($this->lang->line('user_signin'));} else {
-            echo 'Sign In';
-        }
-        ?></a></span>
-					  <?php } else {
-        ?>
-					     <a data-toggle="modal" href="#signin" onclick="javascript:$('#registerTab').trigger('click');"><?php if ($this->lang->line('user_register') != '') {echo stripslashes($this->lang->line('user_register'));} else {
-            echo 'Register';
-        }
-        ?></a> <span class="btn">
-					     <a data-toggle="modal" href="#signin" onclick="javascript:$('#loginTab').trigger('click');"><?php if ($this->lang->line('user_signin') != '') {echo stripslashes($this->lang->line('user_signin'));} else {
-            echo 'Sign In';
-        }
-        ?></a></span>
-					  <?php }?>-->
-
-
-					<!--
-				</div>
-				-->
-			</div>
+		</div>
 
 		<?php } else {
     ?>
 
 			 <div class="container top">
 				<div class="row">
-				 <!--
-				<div class="col-md-12 signin sign-mobile">
-						<span class="shop-cart" >
-							<a href="cart" title ="cart"><i class="fa fa-shopping-cart icon-shopping"></i> <?php if ($this->lang->line('comm_cart') != '') {echo stripslashes($this->lang->line('comm_cart'));} else {
-        echo 'Cart';
-    }
-    ?>
-							<span id="CartCount1" class="CartCount1"> <?php if ($MiniCartViewSet > 0) {?><?php echo $MiniCartViewSet; ?><?php } else {echo '0';}?></span>
-						</a>
-						</span>
-				</div>-->
-
-
-				  <!--
-				     <div class="col-md-2 col-xs-2" id="logo">
-						<a href="<?php echo base_url(); ?>">
-							<img src="images/logo/<?php echo $this->config->item('logo_image'); ?>"  alt="<?php echo $this->config->item('email_title'); ?>" title="<?php echo $this->config->item('email_title'); ?>">
-						</a>
-				     </div>
-
-				   <div class="col-md-3 search-bl col-xs-6 ">
-						<form name="search" action="search/all" method="get">
-							<input type="text" class="search" name="item" placeholder="<?php if ($this->lang->line('temp_srchitems') != '') {echo stripslashes($this->lang->line('temp_srchitems'));} else {
-        echo 'Search for items and shops';
-    }
-    ?>" value="<?php if ($this->input->get('item') != '') {echo htmlspecialchars($this->input->get('item'));}?>" id="search_items" autocomplete="off" >
-							<?php if ($this->input->get('gift_cards') == 'on') {?>
-							<input type="hidden" name="gift_cards" value="<?php echo $gift; ?>" /> <?php }?>
-							 <?php if ($minVal != '') {?>
-							<input type="hidden" name="min_price" value="<?php echo $minVal; ?>" /> <?php }?>
-								 <?php if ($maxVal != '') {?>
-							<input type="hidden" name="max_price" value="<?php echo $maxVal; ?>" /> <?php }?>
-							<?php if ($locVal != '') {?>
-							<input type="hidden" name="location" value="<?php echo $locVal; ?>" /> <?php }?>
-							<?php if ($shipVal != '') {?>
-							<input type="hidden" name="shipto" value="<?php echo $shipVal; ?>" /> <?php }?>
-							<input type="submit" value="<?php if ($this->lang->line('heading_search') != '') {echo stripslashes($this->lang->line('heading_search'));} else {
-        echo 'Search';
-    }
-    ?>" class="search-bt">
-						</form>
-						<div id="sugglist"></div>
-				  </div>-->
-
-
-
 				<?php if ($this->config->item('mega_menu') == 'No') {
         ?>
-				<!--
-				 <div class="btn-group col-md-1 act-browse-bt col-xs-6">
-					<button type="button" class="btn btn-default dropdown-toggle browse " data-toggle="dropdown" aria-expanded="false"> <?php if ($this->lang->line('heading_browse') != '') {echo stripslashes($this->lang->line('heading_browse'));} else {
-            echo 'Browse';
-        }
-        ?>
-						<span class="caret"></span>
-					</button>
-							<ul class="dropdown-menu" role="menu">
-
-								<?php
-$p = 0;
-        foreach ($mainCategories->result() as $row) {
-            if ($row->cat_name != '') {
-                if ($p <= 14) {
-
-                    //$commentData = $this->category_model->get_all_counts($row->id,'');
-                    //if($commentData[0]['disp']>0){
-                    ?>
-							<li><a href="category-list/<?php echo $row->id; ?>-<?php echo $row->seourl; ?>"><?php echo $row->cat_name; ?></a></li>
-							<?php
-//}
-                } else {
-                    ?>
-								<li><a href="<?php echo base_url() . 'category'; ?>"><?php echo $recentFavorites[0]['full_name']; ?> <em><?php if ($this->lang->line('com_more') != '') {echo stripslashes($this->lang->line('com_more'));} else {
-                        echo "More";
-                    }
-                    ?></a></li>
-
-								<?php
-break;}
-                $p++;
-            }
-        }
-        ?>
-						</ul>
-				 </div>-->
-				 <?php }?>
+				<?php }?>
 
 				 <!--<div class="col-md-2 pull-right signin cart-top">  -->
 						<!--<i class="fa fa-bell"></i>-->
@@ -694,7 +359,7 @@ $p++;
 							</a>
 						</span> -->
 
-					   <!-- </div>-->	
+					   <!-- </div>-->
 
 					<div class="col-md-2 col-xs-3 top-login">
 						<ul class="header_menu">
@@ -799,7 +464,7 @@ if ($CurrUserImg != '') {
             echo 'Manage Community';
         }
         ?></a></li>
-		
+
 									<li><a href="public-profile"><?php if ($this->lang->line('user_pub_profile') != '') {echo stripslashes($this->lang->line('user_pub_profile'));} else {
             echo 'Public Profile';
         }
@@ -1042,14 +707,14 @@ if($innerSub[$i]['sub_mega_menu'] == "Yes"){
                     <li class="page-scroll">
                         <a href="#portfolio">產品分類</a>
                     </li>
-                    
+
                     <?php if($this->session->userdata['shopsy_session_user_name'] != ''){ ?>
                     <li class="page-scroll">
                     	<a href="public-profile">檢查個人檔案</a>
                     </li>
                     <li class="page-scroll">
                     	<a href="activity">動態消息</a>
-       			
+
 			<?php if ($userActivityCount > 0) {?>
 			<span class="activity-count"><?php echo $userActivityCount; ?></span>
 			<?php }?>
@@ -1059,7 +724,7 @@ if($innerSub[$i]['sub_mega_menu'] == "Yes"){
 			通知
 			<span class="notification-list-count"><?php echo $notificationCount; ?></span>
 			</a>
-       			
+
                     </li>
                     <li class="page-scroll">
                     	<a href="shop/sell">我的商店</a>
