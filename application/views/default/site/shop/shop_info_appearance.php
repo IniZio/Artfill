@@ -28,7 +28,7 @@ $this->load->view('site/templates/shop_header');
                 <h1><?php if($this->lang->line('shop_appearance') != '') { echo stripslashes($this->lang->line('shop_appearance')); } else echo 'Info & Appearance'; ?> </h1>
                 <p><?php if($this->lang->line('shop_fleshout') != '') { echo stripslashes($this->lang->line('shop_fleshout')); } else echo 'Flesh out your shop with the following information'; ?> </p>
             </div>
-            <form id="policies" class="shop-form-policies" action="site/shop/shop_appearance_setting" method="post" enctype="multipart/form-data" onsubmit="return image_validate()" style="width:1050px">
+            <form id="policies" class="shop-form-policies" action="site/shop/shop_appearance_setting" method="post" enctype="multipart/form-data" onsubmit="return image_validate()" style="width:1250px">
 
             <div class="shop-policies-section list_wrap">
             <div class="shop-form-section-inner">
