@@ -942,6 +942,7 @@ redirect("login");
 			elseif ($this->input->post('pickup_station')!= ''){
 				if($this->input->post('payment_value')!=''){
 					$this->cart_model->addPaymentUserCart($userid,$this->data['currencyValue']);
+          // require: notify use// require: notify user
 					redirect("checkout/sellercart");
 				}else{
 					$this->setErrorMessage('error','Please Select the Payment Method');		
