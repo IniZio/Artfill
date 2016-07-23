@@ -6,7 +6,7 @@ $this->load->model('user_model');
 <script src="js/jquery.colorbox.js"></script>
 			<div class="add_steps shop-menu-list">
 			<div class="main">
-				<?php $this->load->view('site/user/profile_sidebar'); ?>  
+				<?php $this->load->view('site/user/sidebar'); ?>  
 			</div>
 			</div>
 			<?php if(isset($active_theme) && $active_theme->num_rows() !=0) {?>
@@ -48,7 +48,7 @@ $this->load->model('user_model');
                 <div class="community_div">
 
 
-                    <div class="community_right">
+                    <div class="community_right" style="float:left;">
 
                     	   
 
