@@ -10,9 +10,9 @@ $this->load->model('user_model');
 
 ?>
 <?php if(isset($active_theme) && $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Favorite-page.css" rel="stylesheet">
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
-<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
+//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Favorite-page.css" rel="stylesheet">
+//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
+//<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
 <?php }?>
 <div id="fav_list_tag">
 <section class="container">

@@ -6,9 +6,9 @@ $this->load->view('site/templates/header');
 <!--<link href="css/default/front/fancyzoom.css" rel="stylesheet">-->
 <link rel="shortcut icon" type="image/ico" href="img/logo.ico"/>
 <?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Product-Detail-page.css" rel="stylesheet">
-<link href="./theme/themecss_<?php echo $active_theme->row()->id;?>header.css" rel="stylesheet">
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>footer.css" rel="stylesheet">
+//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Product-Detail-page.css" rel="stylesheet">
+//<link href="./theme/themecss_<?php echo $active_theme->row()->id;?>header.css" rel="stylesheet">
+//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>footer.css" rel="stylesheet">
 <?php } ?>
 <link rel="stylesheet" type="text/css" media="all" href="css/default/site/jquery.galleryview-3.0-dev.css"/>
 <link rel="stylesheet" href="css/default/flexslider.css" type="text/css" media="screen" />

@@ -9,9 +9,9 @@
 <link rel="stylesheet" type="text/css" href="a_data/jquery-ui.css">  
 <script type="text/javascript" src="js/front/freewall.js"></script>
 <?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Search-page.css" rel="stylesheet">
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
-<link href="./theme/themecss_<?php echo $active_theme->row()->id;?>footer.css" rel="stylesheet">
+//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Search-page.css" rel="stylesheet">
+//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
+//<link href="./theme/themecss_<?php echo $active_theme->row()->id;?>footer.css" rel="stylesheet">
 <?php } ?>
 <link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
