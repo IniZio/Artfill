@@ -24,7 +24,7 @@ $n = $deal_of_day1->num_rows();
 // if($deal_of_day1->num_rows() > 3){
 //     $n=3;
 // }
-// shuffle($deal_of_day);
+shuffle($deal_of_day);
 ?>
 <section class="second-bl" style="display:none;">
 	<div class="container">
@@ -806,8 +806,7 @@ $img = explode(',', $recent_product_details->row($i)->image);
     }
     });
     </script>
-						<?php $this->load->view('site/templates/footer');?>
-						<script type="text/javascript">
+    <script>
 						$(function(){
 						  var $elems = $('.animateblock');
 						  var winheight = $(window).height();
@@ -890,3 +889,5 @@ $(window).scroll(function(){
 });
 
 </script>
+						<?php $this->load->view('site/templates/footer');?>
+						

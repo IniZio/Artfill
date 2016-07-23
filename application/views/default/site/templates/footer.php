@@ -358,22 +358,22 @@ window.location.href = "https:" + window.location.href.substring(window.location
 <?php }?>
 </script>
 <script>
-		$(function(){
-			var menu = $('.header_fixed_menu'), pos = menu.offset();
+$(function(){
+	var menu = $('.header_fixed_menu'), pos = menu.offset();
 
-			$(window).scroll(function(){
-				//$('.header_fixed_menu').css({"position":"fixed"});
-				if($(this).scrollTop() > pos.top){
-					$('.header_fixed_menu').css({"position":"fixed"});
-						//$('#menu').addClass('header_top');
-				} else if($(this).scrollTop() <= pos.top ){
-					$('.header_fixed_menu').css({"position":"relative"});
-						//$('#menu').removeClass('header_top');
-				}else{
-				}
-			});
-		});
-		</script>
+	$(window).scroll(function(){
+		//$('.header_fixed_menu').css({"position":"fixed"});
+		if($(this).scrollTop() > pos.top){
+			$('.header_fixed_menu').css({"position":"fixed"});
+				//$('#menu').addClass('header_top');
+		} else if($(this).scrollTop() <= pos.top ){
+			$('.header_fixed_menu').css({"position":"relative"});
+				//$('#menu').removeClass('header_top');
+		}else{
+		}
+	});
+});
+</script>
 
 </body>
 </html>
