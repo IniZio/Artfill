@@ -4,9 +4,9 @@ $this->load->view('site/templates/header');
 $this->load->model('user_model');
 ?>
 <?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Seller-page.css" rel="stylesheet">
-//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
-//<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Seller-page.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
 <?php } ?>
 <script src="js/jquery.colorbox.js"></script>
 		<div class="add_steps shop-menu-list">

@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="css/default/site/style-menu.css" />
     
 <?php if(isset($active_theme) && $active_theme->num_rows() !=0) {?>
-//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Community-Page.css" rel="stylesheet">
-//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
-//<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Community-Page.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
 <?php }?>
 <script>
     $(document).ready(function(){

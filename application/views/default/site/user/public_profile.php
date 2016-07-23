@@ -5,9 +5,9 @@ $this->load->model('user_model');
 //echo "<pre>";print_r($PublicProfile->row());
 ?>
 <?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>User-Profile-page.css" rel="stylesheet">
-//<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>header.css" rel="stylesheet">
-//<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>User-Profile-page.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>header.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id;  ?>footer.css" rel="stylesheet">
 <?php } ?>
 <script src="js/popup.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/jcarousellite_1.0.1.pack.js"></script>

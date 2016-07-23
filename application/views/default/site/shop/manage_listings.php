@@ -10,7 +10,7 @@ $showShopHeadList = 0; if(in_array($this->uri->segment(1),$shopEditArr)){
 <?php // Kethen here, adding Chinese footstop 26/1/2016 ?>
 <?php $footstop = $this->_ci_cached_vars["languageCode"] == "zh_HK" ? "。" : "." ?>
 <?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-//<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Shop-page.css" rel="stylesheet">
+<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Shop-page.css" rel="stylesheet">
 <?php } ?>
 <div class="add_shop" id="shop_page_seller">
 <div class="main">
