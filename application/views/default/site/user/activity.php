@@ -113,7 +113,7 @@ $(document).ready(function() {
 					
 					<li class="first_list">
 
-                    	<a class="top_first_line " href="<?php echo base_url().'pickup'; ?>">
+                    	<a class="top_first_line " href="<?php echo base_url().'activity/pickup'; ?>">
 
                         	<?php echo af_lg("pickup", "<i cant type  :0)>");?>
 
