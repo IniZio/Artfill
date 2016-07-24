@@ -942,7 +942,105 @@ redirect("login");
 			elseif ($this->input->post('pickup_station')!= ''){
 				if($this->input->post('payment_value')!=''){
 					$this->cart_model->addPaymentUserCart($userid,$this->data['currencyValue']);
-          // require: notify use// require: notify user
+          			// push notification of item pickup
+					if ($cartDetails->num_rows() > 0){						
+						$checkArr = array();
+						foreach($cartDetails->result() as $_collection){
+
+							$pid = $_collection->product_id;
+							$pickup_time = $_collection->pickup_date;
+							$actArr = array(
+								'activity_name'	=>	'pickup item',
+								'activity_id'	=>  $pid,	
+								'user_id'		=>	$this->checkLogin('U'),
+								'activity_time'		=>time(),
+								'activity_ip'	=>	$this->input->ip_address()
+							);
+							$checkProductStatus = $this->user_model->get_all_details(USER_ACTIVITY,array('activity_id'=>$pid,'user_id'=>$this->checkLogin('U')));
+							if ($checkProductStatus->num_rows() < 1){
+							$this->user_model->simple_insert(USER_ACTIVITY,$actArr);
+							}
+							else
+							{
+								$this->user_model->commonDelete(USER_ACTIVITY,array('activity_id'=>$pid,'user_id'=>$this->checkLogin('U')));
+								$this->user_model->simple_insert(USER_ACTIVITY,$actArr);
+							}
+							
+							$this->user_model->commonDelete(NOTIFICATIONS,array('activity'=>'pickup item','activity_id'=>$pid,'user_id'=>$this->checkLogin('U')));
+							$this->user_model->commonDelete(NOTIFICATIONS,array('activity'=>'cancel pickup item','activity_id'=>$pid,'user_id'=>$this->checkLogin('U')));
+							$actArr = array('activity'=>'pickup item',
+													'activity_id'=>$pid,
+													'user_id'	=>$userid,
+													'activity_ip'=>$this->input->ip_address(),
+													'created'=>date("Y-m-d H:i:s"));
+							$this->user_model->simple_insert(NOTIFICATIONS,$actArr);
+							
+							// $dataArr = array('likes'=>$likes);
+							// $condition = array('id'=>$pid);
+							// $this->user_model->update_details(PRODUCT,$dataArr,$condition);					
+							$returnStr['status_code'] = 1;
+							$shopid = $sellerId;
+
+							/*Push Message Starts*/
+							$message=$this->session->userdata('shopsy_session_user_name').' want to pick up your item on '.$this->config->item('email_title');
+							$type='pickup item';
+							$this->sendPushNotification($shopid,$message,$type,array($pid));
+
+							$message='You will pick up your item on '.$this->config->item('email_title');
+							$type='pickup item';
+							$this->sendPushNotification($this->checkLogin('U'),$message,$type,array($pid));
+							/*Push Message Ends*/	
+							// $sent_email=$this->user_model->get_all_details(users,array('id'=>$shopid));//,'like'=>'yes'));
+							// $noty_email_arr=explode(',',$sent_email->row()->notification_email);
+							// if(in_array('like',$noty_email_arr)){													
+							// 	$full_name=$sent_email->row()->full_name;
+							// 	#echo "<pre>";print_r($this->data['userdetails']);die;
+							// 	$user_name=$this->data['userdetails']->row()->full_name;
+							// 	$product_seo=$productdetails->row()->seourl;
+								
+							// 	$newsid='29';
+								
+							// 	$template_values=$this->user_model->get_newsletter_template_details($newsid);
+
+							// 	$adminnewstemplatearr=array('email_title'=> $this->config->item('email_title'),'logo'=> $this->data['logo'],'meta_title'=>$this->config->item('meta_title'));
+							// 	extract($adminnewstemplatearr);
+							// 	$subject = 'from: '.$this->config->item('email_title').' - '.$template_values['news_subject'];
+							// 	$message .= '<!doctype html>
+							// 		<html>
+							// 		<head>
+							// 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+							// 		<meta name="viewport" content="width=device-width"/>
+							// 		<title>'.$template_values['news_subject'].'</title>
+							// 		<body>';
+							// 	include('./newsletter/registeration'.$newsid.'.php');	
+								
+							// 	$message .= '</body>
+							// 		</html>';
+									
+
+							// 	if($template_values['sender_name']=='' && $template_values['sender_email']==''){
+							// 		$sender_email=$this->config->item('site_contact_mail');
+									
+							// 		$sender_name=$this->config->item('email_title');
+							// 	}else{
+							// 		$sender_name=$template_values['sender_name'];
+							// 		$sender_email=$template_values['sender_email'];
+							// 	}
+							// 	$email_values = array('mail_type'=>'html',
+							// 						'from_mail_id'=>$sender_email,
+							// 						'mail_name'=>$sender_name,
+							// 						'to_mail_id'=>$sent_email->row()->email,
+							// 						'subject_message'=>'favourite',
+							// 						'body_messages'=>$message
+							// 					);
+													
+							// 	//echo '<pre>'; print_r($email_values); die;
+
+							// 	$email_send_to_common = $this->product_model->common_email_send($email_values);#die;
+							// }
+
+						}
+					}
 					redirect("checkout/sellercart");
 				}else{
 					$this->setErrorMessage('error','Please Select the Payment Method');		
