@@ -61,7 +61,7 @@ if($CurrUserImg != ''){
 			</a>
         <?php } else { ?>
         	<a class="shop_active"  >
-				<div class="name-inner"><?php if($this->lang->line('manage_listitems') != '') { echo stripslashes($this->lang->line('manage_listitems')); } else echo 'Manage items'; ?></div>
+				<div class="name-inner">管理產品</div>
 			</a>
          <?php } ?>
         </li>
