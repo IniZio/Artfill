@@ -637,9 +637,6 @@ $this->load->model('user_model');
 
                 
 
-              
-
-            <div class="clear" style="min-height:250px;"></div>
 
          
 
