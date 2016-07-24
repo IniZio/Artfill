@@ -192,14 +192,7 @@ $('.chkProd').change(function(){
 	
 } */
 </script>
-<style>
-#shop_page_seller{
-	background:#e6e6e6; 
-	border-bottom: 1px solid #DDDDDD; 
-	border-top: 1px solid #DDDDDD;  
-	padding: 20px 0;
-}
-</style>
+
  <style>
 .not-active {
  pointer-events: none;
