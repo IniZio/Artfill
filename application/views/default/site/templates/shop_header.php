@@ -99,7 +99,8 @@ if($CurrUserImg != ''){
         
         <li <?php if ($this->uri->segment(3) == 'coupon-code'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/coupon-code"><div class="name-inner"><?php if($this->lang->line('cart_couponcode') != '') { echo stripslashes($this->lang->line('cart_couponcode')); } else echo 'Coupon Codes'; ?> </div></a></li>
 		
-		<li <?php if ($this->uri->segment(3) == 'tax-list'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/tax-list"><div class="name-inner"><?php if($this->lang->line('shop_nav_shop_tax') != '') { echo stripslashes($this->lang->line('shop_nav_shop_tax')); } else echo 'Your Tax'; ?></div></a></li>
+		<!--<li <?php if ($this->uri->segment(3) == 'tax-list'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/tax-list"><div class="name-inner"><?php if($this->lang->line('shop_nav_shop_tax') != '') { echo stripslashes($this->lang->line('shop_nav_shop_tax')); } else echo 'Your Tax'; ?></div></a></li>-->
+		
                 <li <?php if ($this->uri->segment(3) == 'contact-user'){ ?> class="side_active" <?php } ?> ><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/contact-user"><div class="name-inner"><?php if($this->lang->line('shop_nav_user_contact') != '') { echo stripslashes($this->lang->line('shop_nav_user_contact')); } else echo 'User Contacts'; ?></div></a></li>
 		
 		<li <?php if ($this->uri->segment(3) == 'shop-orders'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders"><div class="name-inner"><?php if($this->lang->line('shop_nav_shop_orders') != '') { echo stripslashes($this->lang->line('shop_nav_shop_orders')); } else echo 'Orders'; ?> <b class="caret" style="position: static;"></b> </div></a>
