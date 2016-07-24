@@ -93,7 +93,7 @@ $(document).ready(function() {
 
             <div class="top_list">
 
-            <a class="title-head2-bold" href="home">
+            <a class="title-head2-bold">
 
             	<?php if($this->lang->line('your-feed') != '') { echo stripslashes($this->lang->line('your-feed')); } else echo "Your Feed"; ?>
 
@@ -106,6 +106,16 @@ $(document).ready(function() {
                     	<a class="top_first_line " href="<?php echo base_url().'activity'; ?>">
 
                         	<?php if($this->lang->line('user_following') != '') { echo stripslashes($this->lang->line('user_following')); } else echo "Following"; ?>
+
+                        </a>
+
+                    </li>
+					
+					<li class="first_list">
+
+                    	<a class="top_first_line " href="<?php echo base_url().'pickup'; ?>">
+
+                        	<?php echo af_lg("pickup", "<i cant type  :0)>");?>
 
                         </a>
 
