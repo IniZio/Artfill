@@ -111,7 +111,7 @@ $(document).ready(function() {
 
                     </li>
 					
-					<li class="first_list">
+					<li class="first_list4">
 
                     	<a class="top_first_line " href="<?php echo base_url().'activity/pickup'; ?>">
 
