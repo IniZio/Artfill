@@ -65,7 +65,7 @@ if($CurrUserImg != ''){
 			</a>
          <?php } ?>
         </li>
-		
+		<!--
       <li <?php if ($this->uri->segment(1) == 'shop' && ($this->uri->segment(2) == 'payment' || $this->uri->segment(2) == 'billing')){ ?> class="side_active" <?php } ?> ><a style="padding:0px !important;" href="javascript:void(0)"><div class="name-inner"><?php if($this->lang->line('payment_settings') != '') { echo stripslashes($this->lang->line('payment_settings')); } else echo 'Payment Settings'; ?><b class="caret" style="position: static;"></b></div></a>
 	
 		<ul class="add_shop_drop_down">
@@ -90,14 +90,14 @@ if($CurrUserImg != ''){
 		        
 		</ul>
    	</li>     
-        
+        -->
         
                 
         <?php if($loginCheck != 1){ ?>
       	
         <?php if($curruserGroup=='Seller'){ ?>
         
-        <li <?php if ($this->uri->segment(3) == 'coupon-code'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/coupon-code"><div class="name-inner"><?php if($this->lang->line('cart_couponcode') != '') { echo stripslashes($this->lang->line('cart_couponcode')); } else echo 'Coupon Codes'; ?> </div></a></li>
+        <!--<li <?php if ($this->uri->segment(3) == 'coupon-code'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/coupon-code"><div class="name-inner"><?php if($this->lang->line('cart_couponcode') != '') { echo stripslashes($this->lang->line('cart_couponcode')); } else echo 'Coupon Codes'; ?> </div></a></li>-->
 		
 		<!--<li <?php if ($this->uri->segment(3) == 'tax-list'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/tax-list"><div class="name-inner"><?php if($this->lang->line('shop_nav_shop_tax') != '') { echo stripslashes($this->lang->line('shop_nav_shop_tax')); } else echo 'Your Tax'; ?></div></a></li>-->
 		
