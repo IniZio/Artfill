@@ -57,7 +57,7 @@ if($CurrUserImg != ''){
 		 <li <?php if ($this->uri->segment(2) == 'managelistings' && $this->uri->segment(1) == 'shop'){ ?> class="side_active" <?php } ?> >
           <?php if(count($shopProduc)!= 0) { ?>
         	<a title="<?php echo af_lg('lg_Manage_listings','Manage your listings here.');?>" href="shop/managelistings" class="<?php if($this->uri->segment(2)=='managelistings' || $this->uri->segment(1)=='edit-product'){ echo 'shop_active_tab';} ?>"> 
-				<div class="name-inner"><?php if($this->lang->line('manage_listitems') != '') { echo stripslashes($this->lang->line('manage_listitems')); } else echo 'Manage items'; ?></div>
+				<div class="name-inner"><?php if($this->lang->line('manage_listitems') != '') { echo '管理產品'; ?></div>
 			</a>
         <?php } else { ?>
         	<a class="shop_active"  >
