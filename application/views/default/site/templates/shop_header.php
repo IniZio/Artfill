@@ -55,6 +55,8 @@ if($CurrUserImg != ''){
       </li>
 
 		 <li <?php if ($this->uri->segment(2) == 'managelistings' && $this->uri->segment(1) == 'shop'){ ?> class="side_active" <?php } ?> >
+		 
+      <?php if($selectSellershop_details[0]['seourl'] !=''){?>
           <?php if(count($shopProduc)!= 0) { ?>
         	<a title="<?php echo af_lg('lg_Manage_listings','Manage your listings here.');?>" href="shop/managelistings" class="<?php if($this->uri->segment(2)=='managelistings' || $this->uri->segment(1)=='edit-product'){ echo 'shop_active_tab';} ?>"> 
 				<div class="name-inner"><?php echo '管理產品'; ?></div>
@@ -64,6 +66,11 @@ if($CurrUserImg != ''){
 				<div class="name-inner">管理產品</div>
 			</a>
          <?php } ?>
+	  <?php }else{ ?>
+        	<a class="shop_active"  >
+				<div class="name-inner">管理產品</div>
+			</a>
+	  <?php } ?>
         </li>
 		<!--
       <li <?php if ($this->uri->segment(1) == 'shop' && ($this->uri->segment(2) == 'payment' || $this->uri->segment(2) == 'billing')){ ?> class="side_active" <?php } ?> ><a style="padding:0px !important;" href="javascript:void(0)"><div class="name-inner"><?php if($this->lang->line('payment_settings') != '') { echo stripslashes($this->lang->line('payment_settings')); } else echo 'Payment Settings'; ?><b class="caret" style="position: static;"></b></div></a>
