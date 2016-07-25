@@ -138,7 +138,7 @@ if($CurrUserImg != ''){
 		<li><a style="padding:0px !important;" href="javascript:void(0)"><div class="name-inner"><?php if($this->lang->line('com_more') != '') { echo stripslashes($this->lang->line('com_more')); } else echo 'More'; ?><b class="caret" style="position: static;"></b></div></a>
 		
 			<ul class="add_shop_drop_down">
-					<li><a href="promote-shop"><?php if($this->lang->line('shop_mainimg') != '') { echo stripslashes($this->lang->line('shop_mainimg')); } else echo 'Your Main Image'; ?></a></li>
+					<!--<li><a href="promote-shop"><?php if($this->lang->line('shop_mainimg') != '') { echo stripslashes($this->lang->line('shop_mainimg')); } else echo 'Your Main Image'; ?></a></li>-->
 					
 					<li><a href="shop/reviews"><?php if($this->lang->line('shopsec_reviews') != '') { echo stripslashes($this->lang->line('shopsec_reviews')); } else echo 'Reviews'; ?></a></li>
 					
