@@ -53,7 +53,7 @@ if($CurrUserImg != ''){
         	<a class="shop_active" ><div class="name-inner"><?php if($this->lang->line('add_items') != '') { echo stripslashes($this->lang->line('add_items')); } else echo 'Add Items'; ?></div></a>
          <?php } ?>
       </li>
-
+<?php echo count($shopProduc); ?>
 		 <li <?php if ($this->uri->segment(2) == 'managelistings' && $this->uri->segment(1) == 'shop'){ ?> class="side_active" <?php } ?> >
 		 
       <?php if($selectSellershop_details[0]['seourl'] !=''){?>
