@@ -108,10 +108,10 @@ j(document).ready(function(){
 								?>
 								<?php echo number_format($balance_amt,2);?>
 							</h1>
-							<h2 style="text-align:center !important;margin-top: -11px;"><?php echo af_lg('lg_to_ear-withdar_earning','(Total Earnings - Withdrawal Earnings)');?>
+							<!--<h2 style="text-align:center !important;margin-top: -11px;"><?php echo af_lg('lg_to_ear-withdar_earning','(Total Earnings - Withdrawal Earnings)');?>
 							
 							
-							</h2>
+							</h2>-->
 						</div>             
 					</div>
 					<?php /*
@@ -123,7 +123,7 @@ j(document).ready(function(){
 					</div>
 					*/ ?>
 					
-<div class="purchase_review container community_right">     					
+<div class="purchase_review community_right">     					
 				
 			<div class="all-purchase-search">
         		<div class="top_list" style="width: 90%;margin: 0px 0px 10px 10px;">
