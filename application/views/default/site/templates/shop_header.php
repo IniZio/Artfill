@@ -58,16 +58,16 @@ if($CurrUserImg != ''){
 		 
       <?php if($selectSellershop_details[0]['seourl'] !=''){?>
           <?php if(count($shopProduc)!= 0) { ?>
-        	<a title="<?php echo af_lg('lg_Manage_listings','Manage your listings here.');?>" href="shop/managelistings" class="shop_active"> 
+        	<a title="<?php echo af_lg('lg_Manage_listings','Manage your listings here.');?>" href="shop/managelistings" class=""> 
 				<div class="name-inner"><?php echo '管理產品'; ?></div>
 			</a>
         <?php } else { ?>
-        	<a class="shop_active"  >
+        	<a class=""  >
 				<div class="name-inner">管理產品</div>
 			</a>
          <?php } ?>
 	  <?php }else{ ?>
-        	<a class="shop_active"  >
+        	<a class=""  >
 				<div class="name-inner">管理產品</div>
 			</a>
 	  <?php } ?>
