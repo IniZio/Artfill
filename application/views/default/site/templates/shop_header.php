@@ -167,11 +167,11 @@ if($CurrUserImg != ''){
 						<?php } ?>
 					
 					<?php } ?>
-					
+					<!--
 					<li>
 						<a href="import-items">匯入貨品</a>
 					</li>
-						
+					-->
 			</ul>
 
 		
