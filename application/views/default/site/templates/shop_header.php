@@ -146,7 +146,7 @@ if($CurrUserImg != ''){
 					
 					<!--<li><a href="shops/<?php echo $selectSeller_details[0]['seourl']; ?>/shop-orders"><?php if($this->lang->line('shop_nav_shop_orders') != '') { echo stripslashes($this->lang->line('shop_nav_shop_orders')); } else echo 'Orders'; ?></a></li>-->
 					
-					<li><a href="shops/<?php echo $selectSeller_details[0]['seourl']; ?>/commision-tracking"><?php if($this->lang->line('shop_nav_earn_list') != '') { echo stripslashes($this->lang->line('shop_nav_earn_list')); } else echo 'Earnings List'; ?></a></li>
+					<!--<li><a href="shops/<?php echo $selectSeller_details[0]['seourl']; ?>/commision-tracking"><?php if($this->lang->line('shop_nav_earn_list') != '') { echo stripslashes($this->lang->line('shop_nav_earn_list')); } else echo 'Earnings List'; ?></a></li>-->
 					
 					<li><a href="shops/<?php echo $selectSeller_details[0]['seourl']; ?>/withdraw-req"><?php if($this->lang->line('shop_nav_with_request') != '') { echo stripslashes($this->lang->line('shop_nav_with_request')); } else echo 'Withdrawal Request'; ?>
 					</a></li>
@@ -169,9 +169,7 @@ if($CurrUserImg != ''){
 					<?php } ?>
 					
 					<li>
-						<a href="import-items">
-							<?php if($this->lang->line('shop_nav_seller_import') != '') { echo stripslashes($this->lang->line('shop_nav_seller_import')); } else echo 'Import Listings'; ?>
-						</a>
+						<a href="import-items">匯入貨品</a>
 					</li>
 						
 			</ul>
