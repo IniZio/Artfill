@@ -39,7 +39,7 @@ if($CurrUserImg != ''){
         
       <li <?php if ($this->uri->segment(3) == 'sections'){ ?> class="side_active" <?php } ?>  >
 		<?php if($selectSellershop_details[0]['seller_businessname'] != '') { ?>
-			<a href="shops/<?php echo $selectSellershop_details[0]['seller_businessname'];?>/sections/All">
+			<a class="shop_active" href="shops/<?php echo $selectSellershop_details[0]['seller_businessname'];?>/sections/All">
 				<div class="name-inner"><?php if($this->lang->line('shopsec_shopsec') != '') { echo stripslashes($this->lang->line('shopsec_shopsec')); } else echo 'Shop Section'; ?><span class="complete-indicator"></span></div>
 			</a>
 		<?php } ?>	
@@ -47,7 +47,7 @@ if($CurrUserImg != ''){
 	 
       <li <?php if ($this->uri->segment(2) == 'listitem'){ ?> class="side_active" <?php } ?>>
         <?php if($selectSellershop_details[0]['seller_businessname'] != '') { ?>
-        	<a title="<?php echo af_lg('lg_What_going_to_sell_Add_edit_listings','What are you going to sell? Add and edit listings here.');?>" href="shop/listitem" class="<?php if($this->uri->segment(2)=='listitem'){ echo 'shop_active_tab';} ?> "> 
+        	<a title="<?php echo af_lg('lg_What_going_to_sell_Add_edit_listings','What are you going to sell? Add and edit listings here.');?>" href="shop/listitem" class="shop_active"> 
 			<div class="name-inner"><?php if($this->lang->line('add_items') != '') { echo stripslashes($this->lang->line('add_items')); } else echo 'Add Items'; ?></div></a>
         <?php } else { ?>
         	<a class="shop_active" ><div class="name-inner"><?php if($this->lang->line('add_items') != '') { echo stripslashes($this->lang->line('add_items')); } else echo 'Add Items'; ?></div></a>
@@ -58,7 +58,7 @@ if($CurrUserImg != ''){
 		 
       <?php if($selectSellershop_details[0]['seourl'] !=''){?>
           <?php if(count($shopProduc)!= 0) { ?>
-        	<a title="<?php echo af_lg('lg_Manage_listings','Manage your listings here.');?>" href="shop/managelistings" class="<?php if($this->uri->segment(2)=='managelistings' || $this->uri->segment(1)=='edit-product'){ echo 'shop_active_tab';} ?>"> 
+        	<a title="<?php echo af_lg('lg_Manage_listings','Manage your listings here.');?>" href="shop/managelistings" class="shop_active"> 
 				<div class="name-inner"><?php echo '管理產品'; ?></div>
 			</a>
         <?php } else { ?>
