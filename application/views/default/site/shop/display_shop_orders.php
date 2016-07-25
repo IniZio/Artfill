@@ -108,10 +108,10 @@ j(document).ready(function(){
 								?>
 								<?php echo number_format($balance_amt,2);?>
 							</h1>
-							<h2 style="text-align:center !important;margin-top: -11px;"><?php echo af_lg('lg_to_ear-withdar_earning','(Total Earnings - Withdrawal Earnings)');?>
+							<!--<h2 style="text-align:center !important;margin-top: -11px;"><?php echo af_lg('lg_to_ear-withdar_earning','(Total Earnings - Withdrawal Earnings)');?>
 							
 							
-							</h2>
+							</h2>-->
 						</div>             
 					</div>
 					<?php /*
