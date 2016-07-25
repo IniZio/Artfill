@@ -44,7 +44,8 @@ if($CurrUserImg != ''){
 			</a>
 		<?php } ?>	
 	 </li>
-	 
+	 	  
+      <?php if($selectSellershop_details[0]['seourl'] !=''){?>
       <li <?php if ($this->uri->segment(2) == 'listitem'){ ?> class="side_active" <?php } ?>>
         <?php if($selectSellershop_details[0]['seller_businessname'] != '') { ?>
         	<a title="<?php echo af_lg('lg_What_going_to_sell_Add_edit_listings','What are you going to sell? Add and edit listings here.');?>" href="shop/listitem"> 
@@ -53,10 +54,10 @@ if($CurrUserImg != ''){
         	<a><div class="name-inner"><?php if($this->lang->line('add_items') != '') { echo stripslashes($this->lang->line('add_items')); } else echo 'Add Items'; ?></div></a>
          <?php } ?>
       </li>
+	  <?php } ?>
 	  
-		 <li <?php if ($this->uri->segment(2) == 'managelistings'){ ?> class="side_active" <?php } ?> >
-		 
       <?php if($selectSellershop_details[0]['seourl'] !=''){?>
+		 <li <?php if ($this->uri->segment(2) == 'managelistings'){ ?> class="side_active" <?php } ?> >
           <?php if(count($shopProduc)!= 0) { ?>
         	<a title="<?php echo af_lg('lg_Manage_listings','Manage your listings here.');?>" href="shop/managelistings" > 
 				<div class="name-inner"><?php echo '管理產品'; ?></div>
@@ -66,12 +67,8 @@ if($CurrUserImg != ''){
 				<div class="name-inner">管理產品</div>
 			</a>
          <?php } ?>
-	  <?php }else{ ?>
-        	<a>
-				<div class="name-inner">管理產品</div>
-			</a>
-	  <?php } ?>
         </li>
+	  <?php } ?>
 		<!--
       <li <?php if ($this->uri->segment(1) == 'shop' && ($this->uri->segment(2) == 'payment' || $this->uri->segment(2) == 'billing')){ ?> class="side_active" <?php } ?> ><a style="padding:0px !important;" href="javascript:void(0)"><div class="name-inner"><?php if($this->lang->line('payment_settings') != '') { echo stripslashes($this->lang->line('payment_settings')); } else echo 'Payment Settings'; ?><b class="caret" style="position: static;"></b></div></a>
 	
