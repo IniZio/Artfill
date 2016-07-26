@@ -161,6 +161,7 @@ $route['view-people/(:any)']="site/user/view_people/$1";
 $route['activity']="site/user/activity";
 $route['activity/shop']="site/user/activity_shop";
 $route['activity/interaction']="site/user/activity_interaction";
+$route['activity/pickup']="site/user/activity_pickup";
 $route['']="site/user/category";
 $route['verify']="site/user/verify_user_email";
 /*****************people routes end*******************/

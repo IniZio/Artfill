@@ -951,6 +951,8 @@ redirect("login");
 							$pickup_time = $_collection->pickup_date;
 							$actArr = array(
 								'activity_name'	=>	'pickup item',
+								'activity_location' => $this->input->post('pickup_station'),
+								'seller_id' => $sellerId,
 								'activity_id'	=>  $pid,
 								'user_id'		=>	$this->checkLogin('U'),
 								'activity_time'		=> date('Y-m-d H:i:s', strtotime($this->input->post('pickup_date').$this->input->post('pickup_time'))),

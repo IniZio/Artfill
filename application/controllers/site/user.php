@@ -5469,6 +5469,34 @@ $message.='</td>
 			redirect('login');
 		}
 	}
+
+	/**
+	 * 
+	 * To view the user pickup 
+	 * 
+	 */
+	public function activity_pickup(){
+		if ($this->checkLogin('U')!=''){		
+			$this->data['currUser']=$checkloginIDarr=$this->session->all_userdata(); 
+		 	$loggeduserID=$checkloginIDarr['shopsy_session_user_id'];
+			/*Get the buyer pickup details*/
+			// $isBuyerPickupActivities = $this->user_model->get_activity_details($loggeduserID, $this->user_model->get_activity_count($loggeduserID))->result_array();
+			$this->date['isBuyerPickupActivities'] = $this->user_model->get_all_details(USER_ACTIVITY, array('user_id'=>$loggeduserID, 'activity_name'=> 'pickup item'))->result_array();
+			// print_r($isBuyerPickupActivities);
+			$this->data['sellerProfileDetails']=array();
+			foreach ($this->date['isBuyerPickupActivities'] as $buyerPickupActivity) {
+				// print_r($buyerPickupActivity['seller_id']);die;
+				array_push($this->data['sellerProfileDetails'], $this->seller_model->get_all_details(SELLER, array('seller_id'=>$buyerPickupActivity['seller_id']))->result_array());
+			}
+			// print_r($this->data['sellerProfileDetails']);
+			/*Get the seller pickup details*/
+
+			$this->data['heading'] = $this->config->item('email_title').'-Your Pickup';
+			$this->load->view('site/user/activity_pickup',$this->data);	
+		}else{
+			redirect('login');
+		}
+	}
 	
 	/**
 	 * 
