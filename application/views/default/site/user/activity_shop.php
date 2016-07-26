@@ -114,7 +114,7 @@ $(document).ready(function() {
 
                     	<a class="top_first_line " href="<?php echo base_url().'activity/pickup'; ?>">
 
-                        	<?php echo af_lg("pickup", "<i cant type  :0)>");?>
+                        	<?php echo "地鐵交收";?>
 
                         </a>
 
@@ -168,7 +168,7 @@ $(document).ready(function() {
 
                             <span class="fav-name"> 
 
-                            	<?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo "Followers"; ?>
+                            	<?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo "Following"; ?>
 
                             </span>
 
