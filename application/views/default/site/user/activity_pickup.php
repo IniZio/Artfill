@@ -15,25 +15,26 @@ $this->load->model('user_model');
 $(document).ready(function() {
 
 	$('#activities').scrollPagination({
+//	$('#activity-list').scrollPagination({
 
-		nop     : 5, // The number of posts per scroll to be loaded
+		nop     : 6, // The number of posts per scroll to be loaded
 
-		offset  : 10, // Initial offset, begins at 0 in this case
+		offset  : 9, // Initial offset, begins at 0 in this case
 
-		error   : '', // When the user reaches the end this is the message that is
+		error   : 'No More Activity!', // When the user reaches the end this is the message that is
 
 		                            // displayed. You can change this if you want.
 
-		path   : 'site/user/ajax_activity_shop',
+		path   : 'site/user/ajax_activity',
 
 		delay   : 500, // When you scroll down the posts will load after a delayed amount of time.
 
 		               // This is mainly for usability concerns. You can alter this as you see fit
 
-		scroll  : true // The main bit, if set to false posts will not load as the user scrolls. 
+		scroll  : true, // The main bit, if set to false posts will not load as the user scrolls. 
 
 		               // but will still load if the user clicks.		
-
+		page	: true,
 	});	
 
 });
@@ -92,7 +93,7 @@ $(document).ready(function() {
 
             <div class="top_list">
 
-            <a class="title-head2-bold" href="home">
+            <a class="title-head2-bold">
 
             	<?php if($this->lang->line('your-feed') != '') { echo stripslashes($this->lang->line('your-feed')); } else echo "Your Feed"; ?>
 
@@ -100,7 +101,7 @@ $(document).ready(function() {
 
                 <ul style="width:auto;" class="listtypename">
 
-                    <li class="first_list3">
+                    <li class="first_list4">
 
                     	<a class="top_first_line " href="<?php echo base_url().'activity'; ?>">
 
@@ -109,37 +110,37 @@ $(document).ready(function() {
                         </a>
 
                     </li>
-
-					<li class="first_list4">
+					
+					<li class="first_list first_list_seleted">
 
                     	<a class="top_first_line " href="<?php echo base_url().'activity/pickup'; ?>">
 
-                        	<?php echo af_lg("pickup", "地鐵交收");?>
+                        	<?php echo "地鐵交收";?>
 
                         </a>
 
                     </li>
-					
+
                     <li class="first_list2">
 
-                    	<a class="top_first_line" href="<?php echo base_url().'activity/interaction'; ?>"> 
+                    	<a class="top_first_line" href="<?php echo base_url().'activity/interaction'; ?>">
 
-                        	<?php if($this->lang->line('interactions') != '') { echo stripslashes($this->lang->line('interactions')); } else echo "Interactions"; ?>
+                            <?php if($this->lang->line('interactions') != '') { echo stripslashes($this->lang->line('interactions')); } else echo "Interactions"; ?>
 
                         </a>
 
                     </li>
+					<?php if($selectSellershop_details[0]['seller_businessname'] != ''){ ?>
+                    <li class="first_list3">
 
-                    <li class="first_list first_list_seleted">
-
-                    	<a class="top_first_line" href="<?php echo base_url().'activity/shop'; ?>"> 
+                    	<a class="top_first_line" href="<?php echo base_url().'activity/shop'; ?>">
 
                         	<?php if($this->lang->line('you-shop') != '') { echo stripslashes($this->lang->line('you-shop')); } else echo "You Shop"; ?>
 
                         </a>
 
                     </li>
-
+					<?php } ?>
                 </ul>
 
                 <ul class="owner-activity">
@@ -150,7 +151,7 @@ $(document).ready(function() {
 
                             <span class="fav-number"><?php echo stripslashes($userProfileDetails[0]['followers_count']); ?></span>
 
-                            <span class="fav-name">
+                            <span class="fav-name"> 
 
                             	<?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo "Followers"; ?>
 
@@ -168,7 +169,7 @@ $(document).ready(function() {
 
                             <span class="fav-name"> 
 
-                            	<?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo "Followers"; ?>
+                            	<?php if($this->lang->line('user_following') != '') { echo stripslashes($this->lang->line('user_following')); } else echo "Following"; ?>
 
                             </span>
 
@@ -194,11 +195,11 @@ $(document).ready(function() {
 
             <div id="activities">
 
-                <?php if(!empty($myshopactivity)){ ?>     
+            	<?php if(!empty($userActivity)){ ?>
 
-                <ul id="activity-list">
+                <ul class="activity-list" id="activity-list activity-list-1">
 
-                <?php $hover=0; $s=0;$l=1; foreach($myshopactivity as $actFav){ ?>
+                <?php $hover=0; $s=0;$l=1; foreach($userActivity as $actFav){ ?>
 
                 <?php if($s<3 && $l<4){ $cls="small"; $s++; } else if($s>2 && $l<4){ $cls="large"; $l++;} else {$s=0;$l=1;}?>
 
@@ -218,6 +219,7 @@ $(document).ready(function() {
 
 				?>
 
+                <?php if(!empty($favArr)) { ?>
                     <li class="activity small-wid <?php echo $cls; ?>">
 
                         <div class="activity-desc">
@@ -233,14 +235,14 @@ $(document).ready(function() {
                                 </a>
 
                             </div>
-
+						<?php $favArr = $this->product_model->getUserFavoriteProductDetails($productDetail->id); ?>
                             <p class="activity-name">
 
-                               <?php if($userProfileDetails[0]['id']!=$loginCheck){ echo $userProfileDetails[0]['user_name']; } else { echo 'You';} ?>
+                               <?php if($userProfileDetails[0]['id']!=$loginCheck){ echo $userProfileDetails[0]['user_name']; } else { echo '您';} ?>
+									
+                               		<?php if(!empty($favArr)) { if($this->lang->line('favorited') != '') { echo stripslashes($this->lang->line('favorited')); } else echo "favorited"; }  else { if($this->lang->line('unfavorited') != '') { echo stripslashes($this->lang->line('unfavorited')); } else echo "Unfavorited";} ?>
 
-                               		<?php if($this->lang->line('favorited') != '') { echo stripslashes($this->lang->line('favorited')); } else echo "favorited"; ?>
-
-                               <a class="member-name" href="products/<?php echo $productDetail->seourl; ?>"> your item.<?php #echo str_replace("item","this item",$actFav['activity_name']); ?>.</a>
+                               <a class="member-name" href="products/<?php echo $productDetail->seourl; ?>"> <?php if($this->lang->line('user_thisitem') != '') { echo stripslashes($this->lang->line('user_thisitem')); } else echo "this item"; ?>.<?php #echo str_replace("item","this item",$actFav['activity_name']); ?>.</a>
 
                             </p>
 
@@ -270,8 +272,7 @@ $(document).ready(function() {
 											<?php
 											}else{
 
-                                        $favArr = $this->product_model->getUserFavoriteProductDetails($productDetail->id);
-
+                                        //$favArr = $this->product_model->getUserFavoriteProductDetails($productDetail->id);
                                         #print_r($favArr); die;
 
                                         if(empty($favArr)){ ?>
@@ -306,7 +307,7 @@ $(document).ready(function() {
 
                                         <div class="hover_lists" id="hoverlist<?php echo $hover; ?>">
 
-                                            <h2><?php if($this->lang->line('user_your_lists') != '') { echo stripslashes($this->lang->line('user_your_lists')); } else echo "Your Lists"; ?></h2> 
+                                            <h2><?php echo af_lg('lg_your_list','Your Lists');?></h2> 
 
                                             <div class="lists_check">
 
@@ -353,6 +354,7 @@ $(document).ready(function() {
                         </div>
 
                     </li> 
+                    <?php } ?>
 
                 <?php }else if($actFav['activity_name']=='Unfavorite shop' || $actFav['activity_name']=='favorite shop') {  ?>                
 
@@ -380,11 +382,10 @@ $(document).ready(function() {
 
                         <p class="activity-name">
 
-                            <?php if($userProfileDetails[0]['id']!=$loginCheck){ echo $userProfileDetails[0]['user_name']; } else { echo 'You';} ?>
-
-                            	<?php if($this->lang->line('favorited') != '') { echo stripslashes($this->lang->line('favorited')); } else echo "favorited"; ?>
-
-                            <a class="member-name" href="shop-section/<?php echo $shopproductDetail[0]['shopurl']; ?>"> your shop.<?php #echo str_replace("shop","this shop",$actFav['activity_name']); ?></a> 
+                            <?php if($userProfileDetails[0]['id']!=$loginCheck){ echo $userProfileDetails[0]['user_name']; } else { if($this->lang->line('user_you')!='') { echo stripslashes($this->lang->line('user_you')); } else echo "You"; } ?> 
+							
+							
+							<?php if($this->lang->line('favorited') != '') { echo stripslashes($this->lang->line('favorited')); } else echo "favorited"; ?><a class="member-name" href="shop-section/<?php echo $shopproductDetail[0]['shopurl']; ?>"> <?php if($this->lang->line('user_thisshop') != '') { echo stripslashes($this->lang->line('user_thisshop')); } else echo "this shop"; ?>.<?php #echo str_replace("shop","this shop",$actFav['activity_name']); ?></a> 
 
                         </p>
 
@@ -422,7 +423,7 @@ $(document).ready(function() {
 
                             <p class="line-type">
 
-								<?php if($this->lang->line('shop') != '') { echo stripslashes($this->lang->line('shop')); } else echo "SHOP"; ?>
+                            	<?php if($this->lang->line('shop') != '') { echo stripslashes($this->lang->line('shop')); } else echo "SHOP"; ?>
 
                             </p>
 
@@ -464,9 +465,9 @@ $(document).ready(function() {
 
                 <?php } }?>
 
-                </ul>     
+                </ul>
 
-                <?php }else { ?>
+                <?php } else { ?>
 
                 <ul class="interactions">
 
@@ -474,27 +475,7 @@ $(document).ready(function() {
 
                         <div class="your-shopfeed">
 
-                            <h1><?php if($this->lang->line('activity') != '') { echo stripslashes($this->lang->line('activity')); } else echo "Darn, there's no activity yet."; ?></h1>
-
-                            <p><?php if($this->lang->line('more-visible') != '') { echo stripslashes($this->lang->line('more-visible')); } else echo "The more active your shop, the more visible it is to buyers."; ?></p>
-
-                            <p>
-
-                            	<?php if($this->lang->line('check-out') != '') { echo stripslashes($this->lang->line('check-out')); } else echo "Check out"; ?>
-
-                            	<a href="javascript:void(0);">
-
-                                <?php if($this->lang->line('seller') != '') { echo stripslashes($this->lang->line('seller')); } else echo "seller central"; ?>
-
-                                </a>
-
-                                <?php if($this->lang->line('improving') != '') { echo stripslashes($this->lang->line('improving')); } else echo "for tips on improving your"; ?>
-
-								<?php echo $this->config->item('email_title'); ?>
-
-                                <?php if($this->lang->line('business') != '') { echo stripslashes($this->lang->line('business')); } else echo "business."; ?>
-
-                                </p>
+                            <h1><?php if($this->lang->line('activity') != '') { echo stripslashes($this->lang->line('activity')); } else echo "Darn, there's no activity yet."; ?></h1>                            
 
                         </div>
 
@@ -504,7 +485,7 @@ $(document).ready(function() {
 
                 <?php } ?>
 
-            </div>    
+            </div>   
 
         </div> 
 

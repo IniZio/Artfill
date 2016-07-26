@@ -115,7 +115,7 @@ $(document).ready(function() {
 
                     	<a class="top_first_line " href="<?php echo base_url().'activity/pickup'; ?>">
 
-                        	<?php echo af_lg("pickup", "地鐵交收");?>
+                        	<?php echo "地鐵交收";?>
 
                         </a>
 
