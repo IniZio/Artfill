@@ -953,7 +953,7 @@ redirect("login");
 								'activity_name'	=>	'pickup item',
 								'activity_id'	=>  $pid,
 								'user_id'		=>	$this->checkLogin('U'),
-								'activity_time'		=> date('Y-m-d H:i:s', strtotime("$this->input->post('pickup_date') $this->input->post('pickup_time')")),
+								'activity_time'		=> date('Y-m-d H:i:s', strtotime($this->input->post('pickup_date').$this->input->post('pickup_time'))),
 								'activity_ip'	=>	$this->input->ip_address()
 							);
 							$checkProductStatus = $this->user_model->get_all_details(USER_ACTIVITY,array('activity_id'=>$pid,'user_id'=>$this->checkLogin('U')));
