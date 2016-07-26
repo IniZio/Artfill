@@ -168,7 +168,7 @@ $(document).ready(function() {
 
                             <span class="fav-name"> 
 
-                            	<?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo "Followers"; ?>
+                            	<?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo "Following"; ?>
 
                             </span>
 
