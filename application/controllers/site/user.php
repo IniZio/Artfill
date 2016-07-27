@@ -5482,12 +5482,12 @@ $message.='</td>
 			/*Get the buyer pickup details*/
 			// $isBuyerPickupActivities = $this->user_model->get_activity_details($loggeduserID, $this->user_model->get_activity_count($loggeduserID))->result_array();
 			$this->data['isBuyerPickupActivities'] = $this->user_model->get_all_details(USER_ACTIVITY, array('user_id'=>$loggeduserID, 'activity_name'=> 'pickup item'))->result_array();
-			// print_r($isBuyerPickupActivities);
+			// print_r($this->data['isBuyerPickupActivities']);die;
 			$this->data['sellerProfileDetails']=array();
-			$this->date['sellerProductDetails']=array();
+			$this->data['sellerProductDetails']=array();
 			foreach ($this->data['isBuyerPickupActivities'] as $buyerPickupActivity) {
 				// print_r($buyerPickupActivity['seller_id']);die;
-				array_push($this->data['sellerProfileDetails'], $this->seller_model->get_all_details(SELLER, array('seller_id'=>$buyerPickupActivity['seller_id']))->result_array());
+				array_push($this->data['sellerProfileDetails'], $this->seller_model->get_all_details(SELLER, array('seller_id'=>$buyerPickupActivitypActivity['seller_id']))->result_array());
 				array_push($this->date['sellerProductDetails'], $this->seller_model->get_all_details(PRODUCT, array('id'=>$buyerPickupActivity['activity_id']))->result_array());
 			}
 			// print_r($this->data['sellerProfileDetails']);
@@ -5502,6 +5502,7 @@ $message.='</td>
 			}
 
 			$this->data['heading'] = $this->config->item('email_title').'-Your Pickup';
+			// print_r($this->data['isBuyerPickupActivities']);
 			$this->load->view('site/user/activity_pickup',$this->data);	
 		}else{
 			redirect('login');

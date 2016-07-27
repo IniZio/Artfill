@@ -6,84 +6,6 @@ $this->load->model('user_model');
 
 ?>
 
-<script src="js/site/jquery_ajax.js"> </script>
-
-<script src="js/site/scrolling_javascript.js"> </script>
-
-<script>
-
-$(document).ready(function() {
-
-	$('#activities').scrollPagination({
-//	$('#activity-list').scrollPagination({
-
-		nop     : 6, // The number of posts per scroll to be loaded
-
-		offset  : 9, // Initial offset, begins at 0 in this case
-
-		error   : 'No More Activity!', // When the user reaches the end this is the message that is
-
-		                            // displayed. You can change this if you want.
-
-		path   : 'site/user/ajax_activity',
-
-		delay   : 500, // When you scroll down the posts will load after a delayed amount of time.
-
-		               // This is mainly for usability concerns. You can alter this as you see fit
-
-		scroll  : true, // The main bit, if set to false posts will not load as the user scrolls. 
-
-		               // but will still load if the user clicks.		
-		page	: true,
-	});	
-
-});
-
-</script>
-
-<style>
-
-.loading-bar {
-
-	border: 1px solid #DDDDDD;
-
-    border-radius: 5px;
-
-    box-shadow: 0 -45px 30px -40px rgba(0, 0, 0, 0.05) inset;
-
-    clear: both;
-
-    cursor: pointer;
-
-    display: block;
-
-    float: none;
-
-    font-family: "museo-sans",sans-serif;
-
-    font-size: 2em;
-
-    font-weight: bold;
-
-    margin: 20px 0px 20px 0;
-
-    padding: 10px 0px;
-
-    position: relative;
-
-    text-align: center;
-
-    width: 100%;
-
-}
-
-.loading-bar:hover {
-
-	box-shadow: inset 0px 45px 30px -40px rgba(0, 0, 0, 0.05);
-
-}
-
-</style>
 
 <section class="container">
 
@@ -94,9 +16,7 @@ $(document).ready(function() {
             <div class="top_list">
 
             <a class="title-head2-bold">
-
-            	<?php if($this->lang->line('your-feed') != '') { echo stripslashes($this->lang->line('your-feed')); } else echo "Your Feed"; ?>
-
+            	     地鐵交收
             </a>
 
                 <ul style="width:auto;" class="listtypename">
@@ -143,42 +63,6 @@ $(document).ready(function() {
 					<?php } ?>
                 </ul>
 
-                <ul class="owner-activity">
-
-                    <li>
-
-                        <a href="people/<?php echo stripslashes($userProfileDetails[0]['user_name']); ?>/followers">
-
-                            <span class="fav-number"><?php echo stripslashes($userProfileDetails[0]['followers_count']); ?></span>
-
-                            <span class="fav-name"> 
-
-                            	<?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo "Followers"; ?>
-
-                            </span>
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="people/<?php echo stripslashes($userProfileDetails[0]['user_name']); ?>/following">
-
-                            <span class="fav-number"><?php echo stripslashes($userProfileDetails[0]['following_count']); ?></span>
-
-                            <span class="fav-name"> 
-
-                            	<?php if($this->lang->line('user_following') != '') { echo stripslashes($this->lang->line('user_following')); } else echo "Following"; ?>
-
-                            </span>
-
-                        </a>
-
-                    </li>
-
-                </ul>
-
             </div>
 
         </div>
@@ -194,24 +78,25 @@ $(document).ready(function() {
             <div class="clear">&nbsp;</div>       
 
             <div id="activities">
+            <!-- <?php print_r ($isBuyerPickupActivities); ?> -->
 
-            	<?php if(!empty($userActivity)){ ?>
+            	<?php if(!empty($isBuyerPickupActivities)){ ?>
 
                 <ul class="activity-list" id="activity-list activity-list-1">
 
-                <?php $hover=0; $s=0;$l=1; foreach($userActivity as $actFav){ ?>
+                <?php $hover=0; $s=0;$l=1; foreach($isBuyerPickupActivities as $actBuyPick){ ?>
 
                 <?php if($s<3 && $l<4){ $cls="small"; $s++; } else if($s>2 && $l<4){ $cls="large"; $l++;} else {$s=0;$l=1;}?>
 
                 <?php 
 
-				$userProfileDetails= $this->user_model->get_all_details(USERS,array('id'=>$actFav['user_id']))->result_array();
+				$userProfileDetails= $this->user_model->get_all_details(USERS,array('id'=>$actBuyPick['user_id']))->result_array();
 
-				if($actFav['activity_name']=='Unfavorite item' || $actFav['activity_name']=='favorite item') { 
+				if($actBuyPick['activity_name']=='pickup item') { 
 
 				$hover++;
 
-					$productDetail = $this->user_model->get_all_details(PRODUCT,array('id'=>$actFav['activity_id']))->row();
+					$productDetail = $this->user_model->get_all_details(PRODUCT,array('id'=>$actBuyPick['activity_id']))->row();
 
 					#echo "<pre>"; print_r($productDetail); die;
 
@@ -219,7 +104,7 @@ $(document).ready(function() {
 
 				?>
 
-                <?php if(!empty($favArr)) { ?>
+                <?php if(!empty($userProfileDetails)) { ?>
                     <li class="activity small-wid <?php echo $cls; ?>">
 
                         <div class="activity-desc">
@@ -235,14 +120,19 @@ $(document).ready(function() {
                                 </a>
 
                             </div>
-						<?php $favArr = $this->product_model->getUserFavoriteProductDetails($productDetail->id); ?>
+						
                             <p class="activity-name">
 
                                <?php if($userProfileDetails[0]['id']!=$loginCheck){ echo $userProfileDetails[0]['user_name']; } else { echo '您';} ?>
 									
-                               		<?php if(!empty($favArr)) { if($this->lang->line('favorited') != '') { echo stripslashes($this->lang->line('favorited')); } else echo "favorited"; }  else { if($this->lang->line('unfavorited') != '') { echo stripslashes($this->lang->line('unfavorited')); } else echo "Unfavorited";} ?>
+                               		<!-- <?php if(!empty($favArr)) { if($this->lang->line('favorited') != '') { echo stripslashes($this->lang->line('favorited')); } else echo "favorited"; }  else { if($this->lang->line('unfavorited') != '') { echo stripslashes($this->lang->line('unfavorited')); } else echo "Unfavorited";} ?> -->
+                                    將於
+                                     <?php $pickup_station= $this->activity_model->get_all_details(PICKUP_STATION, array('id'=>$actBuyPick['activity_location']))->result_array();
+                                     $station_name = $pickup_station['station']; echo $station_name?>
 
-                               <a class="member-name" href="products/<?php echo $productDetail->seourl; ?>"> <?php if($this->lang->line('user_thisitem') != '') { echo stripslashes($this->lang->line('user_thisitem')); } else echo "this item"; ?>.<?php #echo str_replace("item","this item",$actFav['activity_name']); ?>.</a>
+                                    接收
+
+                               <a class="member-name" href="products/<?php echo $productDetail->seourl; ?>"> <?php if($this->lang->line('user_thisitem') != '') { echo stripslashes($this->lang->line('user_thisitem')); } else echo "this item"; ?>.<?php #echo str_replace("item","this item",$actBuyPick['activity_name']); ?>.</a>
 
                             </p>
 
@@ -355,113 +245,6 @@ $(document).ready(function() {
 
                     </li> 
                     <?php } ?>
-
-                <?php }else if($actFav['activity_name']=='Unfavorite shop' || $actFav['activity_name']=='favorite shop') {  ?>                
-
-                <?php 
-
-					$shopproductDetail = $this->user_model->getfavshops_activity($actFav['activity_id'])->result_array();
-
-				?>
-
-                <li class="activity <?php echo $cls; ?>">
-
-                    <div class="activity-desc">
-
-                        <div class="activity-avatar trigger-action-toolbox" data-source="hp_tastemaker">
-
-                            <a href="view-profile/<?php echo $userProfileDetails[0]['user_name']; ?>" >
-
-                                	<?php if($userProfileDetails[0]['thumbnail']!=''){ $profile_pic='users/thumb/'.$userProfileDetails[0]['thumbnail']; } else { $profile_pic='default_avat.png';}?>
-
-                                    <img width="75" height="75" src="images/<?php echo $profile_pic; ?>">
-
-                                </a>
-
-                        </div>
-
-                        <p class="activity-name">
-
-                            <?php if($userProfileDetails[0]['id']!=$loginCheck){ echo $userProfileDetails[0]['user_name']; } else { if($this->lang->line('user_you')!='') { echo stripslashes($this->lang->line('user_you')); } else echo "You"; } ?> 
-							
-							
-							<?php if($this->lang->line('favorited') != '') { echo stripslashes($this->lang->line('favorited')); } else echo "favorited"; ?><a class="member-name" href="shop-section/<?php echo $shopproductDetail[0]['shopurl']; ?>"> <?php if($this->lang->line('user_thisshop') != '') { echo stripslashes($this->lang->line('user_thisshop')); } else echo "this shop"; ?>.<?php #echo str_replace("shop","this shop",$actFav['activity_name']); ?></a> 
-
-                        </p>
-
-                    </div>
-
-                    <div class="activity-favorites">
-
-                    	<?php if(count($shopproductDetail)<4){$count=count($shopproductDetail); } else{ $count=4; } for($i=0;$i<$count;$i++){ ?>
-
-                            <a href="shop-section/<?php echo $shopproductDetail[0]['shopurl']; ?>" class="favorite">
-
-                            	<?php $imgArr=explode(',',$shopproductDetail[$i]['image']); ?>
-
-                                <img  width="170" height="135" alt="<?php echo $shopproductDetail[$i]['product_name']; ?>" src="images/product/<?php echo $imgArr[0]; ?>">
-
-                            </a>                        
-
-                        <?php } ?>
-
-                        <?php if($count!=4) {for($j=4-$count;$j<$count;$j++){ ?>
-
-                            <a class="favorite">
-
-                            </a>                        
-
-                        <?php } } ?>
-
-                    </div>
-
-                    <div class="activity-link clear">
-
-                        <div class="activeright">
-
-                            <span class="newimages"></span>
-
-                            <p class="line-type">
-
-                            	<?php if($this->lang->line('shop') != '') { echo stripslashes($this->lang->line('shop')); } else echo "SHOP"; ?>
-
-                            </p>
-
-                            <p><a class="name_line" href="shop-section/<?php echo $shopproductDetail[0]['shopurl']; ?>"><?php echo $shopproductDetail[0]['shopname']; ?></a></p>
-
-                        </div>
-
-                        <?php if($loginCheck !=''){
-
-                        $favArr = $this->product_model->getUserFavoriteShopDetails($actFav['activity_id']);
-
-                        #print_r($favArr); die;
-
-                        if(empty($favArr)){ ?>
-
-                        <a href="javascript:void(0);" onclick="return changeShopToFavourite('<?php echo $actFav['activity_id']; ?>','Fresh');">
-
-						<input type="submit" value="" class="hoverfav_icon">
-
-                        </a>
-
-                        <?php  } else { ?>                        
-
-                        <a href="javascript:void(0);" onclick="return changeShopToFavourite('<?php echo $actFav['activity_id']; ?>','Old');">
-
-                        <input type="submit" value="" class="hoverfav_icon1">
-
-                        </a>
-
-                        <?php }} else { ?>                                        
-
-                        <input type="submit" value="" class="hoverfav_icon">
-
-                        <?php  } ?> 
-
-                    </div>
-
-                </li>
 
                 <?php } }?>
 
