@@ -5479,6 +5479,7 @@ $message.='</td>
 		if ($this->checkLogin('U')!=''){		
 			$this->data['currUser']=$checkloginIDarr=$this->session->all_userdata(); 
 		 	$loggeduserID=$checkloginIDarr['shopsy_session_user_id'];
+		 	$this->data['pickupStation'] = $this->user_model->get_all_details(PICKUP_STATION, array())->result_array();
 			/*Get the buyer pickup details*/
 			// $isBuyerPickupActivities = $this->user_model->get_activity_details($loggeduserID, $this->user_model->get_activity_count($loggeduserID))->result_array();
 			$this->data['isBuyerPickupActivities'] = $this->user_model->get_all_details(USER_ACTIVITY, array('user_id'=>$loggeduserID, 'activity_name'=> 'pickup item'))->result_array();
@@ -5487,7 +5488,7 @@ $message.='</td>
 			$this->data['sellerProductDetails']=array();
 			foreach ($this->data['isBuyerPickupActivities'] as $buyerPickupActivity) {
 				// print_r($buyerPickupActivity['seller_id']);die;
-				array_push($this->data['sellerProfileDetails'], $this->seller_model->get_all_details(SELLER, array('seller_id'=>$buyerPickupActivitypActivity['seller_id']))->result_array());
+				array_push($this->data['sellerProfileDetails'], $this->seller_model->get_all_details(USERS, array('id'=>$buyerPickupActivitypActivity['seller_id']))->result_array());
 				array_push($this->date['sellerProductDetails'], $this->seller_model->get_all_details(PRODUCT, array('id'=>$buyerPickupActivity['activity_id']))->result_array());
 			}
 			// print_r($this->data['sellerProfileDetails']);
