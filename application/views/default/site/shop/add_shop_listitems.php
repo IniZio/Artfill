@@ -276,7 +276,7 @@ $('#sidenav').hide();
 						</select>
 					</div>
 					<div class="col-md-3 col-sm-12 col-xs-12 right P8">
-						<p><a href="#" target="_blank"> <?php if($this->lang->line('prod_about_listing_text') != '') { echo stripslashes($this->lang->line('prod_about_listing_text')); } else echo 'Learn more about what types of itemsare allowedon Easy'; ?></a></p>
+						<p><a href="#" target="_blank"> <!-- <?php if($this->lang->line('prod_about_listing_text') != '') { echo stripslashes($this->lang->line('prod_about_listing_text')); } else echo 'Learn more about what types of itemsare allowedon Easy'; ?>--></a></p>
 					</div>
 				</div>
 				<div class="form-group">
