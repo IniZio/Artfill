@@ -116,21 +116,21 @@ if($CurrUserImg != ''){
 			<?php $this->load->model('order_model'); ?>
 			
 			<?php $processedorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'Processed'); ?>
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Processed" class="" ><div class="name-inner"><?php echo af_lg('lg_processed','Processed');?> (<?php echo $processedorder->num_rows();?>)</div></a></li>
+			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Processed" class="" ><div class="name-inner"><?php echo "已處理";?> (<?php echo $processedorder->num_rows();?>)</div></a></li>
 			<?php $shippedorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'Shipped'); ?>   
-            <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Shipped" class="" ><div class="name-inner"><?php echo af_lg('lg_shipped','Shipped');?>(<?php echo $shippedorder->num_rows();?>)</div></a></li>
+            <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Shipped" class="" ><div class="name-inner"><?php echo "已送出";?>(<?php echo $shippedorder->num_rows();?>)</div></a></li>-->
 			<?php $deliveredorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'Delivered'); ?>
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Delivered" class="" ><div class="name-inner"><?php echo af_lg('lg_delivered','Delivered');?> (<?php echo $deliveredorder->num_rows();?>)</div></a></li>
+			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Delivered" class="" ><div class="name-inner"><?php echo "已傳達";?> (<?php echo $deliveredorder->num_rows();?>)</div></a></li>
 			<?php $cancelledorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'Cancelled'); ?>
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Cancelled" class="" ><div class="name-inner"><?php echo af_lg('lg_cancelled','Cancelled');?> (<?php echo $cancelledorder->num_rows();?>)</div></a></li>
+			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Cancelled" class="" ><div class="name-inner"><?php echo "已取消";?> (<?php echo $cancelledorder->num_rows();?>)</div></a></li>
 			<?php $returnorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'dispute'); ?>  
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=dispute" class="" ><div class="name-inner"><?php echo af_lg('lg_returnreplace','Return / Replace');?> (<?php echo $returnorder->num_rows();?>)</div></a></li>
+			   <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=dispute" class="" ><div class="name-inner"><?php echo af_lg('lg_returnreplace','Return / Replace');?> (<?php echo $returnorder->num_rows();?>)</div></a></li>-->
 			<?php $codorder = $this->order_model->view_shop_cod_details('COD',$shop_id); ?>   
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=cod" class="" ><div class="name-inner"><?php echo af_lg('lg_cod','Cash on Delivery');?> (<?php echo $codorder->num_rows();?>)</div></a></li>
+			   <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=cod" class="" ><div class="name-inner"><?php echo af_lg('lg_cod','Cash on Delivery');?> (<?php echo $codorder->num_rows();?>)</div></a></li>-->
 			   <?php $wiretransferorder = $this->order_model->view_shop_cod_details('wire_transfer',$shop_id); ?>   
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=wiretransfer" class="" ><div class="name-inner"><?php echo af_lg('lg_wiretransfer','Wire Transfer');?>(<?php echo $wiretransferorder->num_rows();?>)</div></a></li>
+			   <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=wiretransfer" class="" ><div class="name-inner"><?php echo af_lg('lg_wiretransfer','Wire Transfer');?>(<?php echo $wiretransferorder->num_rows();?>)</div></a></li>-->
 			    <?php $westernunionorder = $this->order_model->view_shop_cod_details('western_union',$shop_id); ?>   
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=westernunion" class="" ><div class="name-inner"><?php echo af_lg('lg_westernunion','Western Union');?>(<?php echo $westernunionorder->num_rows();?>)</div></a></li>
+			   <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=westernunion" class="" ><div class="name-inner"><?php echo af_lg('lg_westernunion','Western Union');?>(<?php echo $westernunionorder->num_rows();?>)</div></a></li>-->
 		</ul>
 		
 		</li>
