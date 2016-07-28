@@ -121,7 +121,7 @@ $(function() {
 			
 	<?php if($languagesList->num_rows() > 0 ) {?>
 	<span style="float: right;margin: 0px 20px 0px 0px;">
-	<input type="button" onclick="$('#sidenav').show();" value="<?php echo af_lg('lg_add-lang','Add Language');?>" class="save_btn"/>
+	<!-- <input type="button" onclick="$('#sidenav').show();" value="<?php echo af_lg('lg_add-lang','Add Language');?>" class="save_btn"/> -->
 	</span>
 	<?php }?>
 	</h3>
