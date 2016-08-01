@@ -81,10 +81,11 @@ span.tagBox-item-content {
   text-shadow: 0.083em 0.083em 0.083em #888;
   border: 0.083em solid #3C7BA8;
   color: #FFF;
-  background: #234B77;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4998CF), to(#234B77));
-  background: -moz-linear-gradient(top, #4998CF, #234B77);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4998CF', endColorstr='#234B77');
+  background-color: #a5a6a2;
+  // background: #234B77;
+  // background: -webkit-gradient(linear, left top, left bottom, from(#4998CF), to(#234B77));
+  // background: -moz-linear-gradient(top, #4998CF, #234B77);
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4998CF', endColorstr='#234B77');
   -moz-border-radius: 0.5em;
   -wekit-border-radius: 0.5em;
   border-radius: 0.5em;
