@@ -120,7 +120,7 @@ if($CurrUserImg != ''){
 			<?php $shippedorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'Shipped'); ?>   
             <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Shipped" class="" ><div class="name-inner"><?php echo "已送出";?>(<?php echo $shippedorder->num_rows();?>)</div></a></li>-->
 			<?php $deliveredorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'Delivered'); ?>
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Delivered" class="" ><div class="name-inner"><?php echo "已傳送";?> (<?php echo $deliveredorder->num_rows();?>)</div></a></li>
+			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Delivered" class="" ><div class="name-inner"><?php echo "已送到";?> (<?php echo $deliveredorder->num_rows();?>)</div></a></li>
 			<?php $cancelledorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'Cancelled'); ?>
 			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Cancelled" class="" ><div class="name-inner"><?php echo "已取消";?> (<?php echo $cancelledorder->num_rows();?>)</div></a></li>
 			<?php $returnorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'dispute'); ?>  
