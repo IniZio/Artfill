@@ -101,7 +101,7 @@ $this->load->view('site/templates/shop_header');
 								<?php  echo stripslashes($selectSeller_details[0]['seller_businessname']); ?>
 								<?php  echo ")"; ?>
 								</a>
-								<div class="opented" style="font-size:11px; color:#fff;"><?php if($this->lang->line('shopsec_openedon') != '') { echo stripslashes($this->lang->line('shopsec_openedon')); } else echo 'Opened on'; ?> <?php echo substr($selectSeller_details[0]['created'],0,10); ?></div>
+								<div class="opented" style="font-size:11px; color:#999;"><?php if($this->lang->line('shopsec_openedon') != '') { echo stripslashes($this->lang->line('shopsec_openedon')); } else echo 'Opened on'; ?> <?php echo substr($selectSeller_details[0]['created'],0,10); ?></div>
 							</div>
 							<div class="shop-owner-text">
 								<ul><li>
