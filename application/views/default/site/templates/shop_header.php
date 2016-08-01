@@ -44,28 +44,32 @@ if($CurrUserImg != ''){
 			</a>
 		<?php } ?>	
 	 </li>
-	 
-      <li <?php if ($this->uri->segment(2) == 'listitem' && $this->uri->segment(1) == 'shop'){ ?> class="side_active" <?php } ?>>
+	 	  
+      <?php if($selectSellershop_details[0]['seourl'] !=''){?>
+      <li <?php if ($this->uri->segment(2) == 'listitem'){ ?> class="side_active" <?php } ?>>
         <?php if($selectSellershop_details[0]['seller_businessname'] != '') { ?>
-        	<a title="<?php echo af_lg('lg_What_going_to_sell_Add_edit_listings','What are you going to sell? Add and edit listings here.');?>" href="shop/listitem" class="<?php if($this->uri->segment(2)=='listitem'){ echo 'shop_active_tab';} ?> "> 
+        	<a title="<?php echo af_lg('lg_What_going_to_sell_Add_edit_listings','What are you going to sell? Add and edit listings here.');?>" href="shop/listitem"> 
 			<div class="name-inner"><?php if($this->lang->line('add_items') != '') { echo stripslashes($this->lang->line('add_items')); } else echo 'Add Items'; ?></div></a>
         <?php } else { ?>
-        	<a class="shop_active" ><div class="name-inner"><?php if($this->lang->line('add_items') != '') { echo stripslashes($this->lang->line('add_items')); } else echo 'Add Items'; ?></div></a>
+        	<a><div class="name-inner"><?php if($this->lang->line('add_items') != '') { echo stripslashes($this->lang->line('add_items')); } else echo 'Add Items'; ?></div></a>
          <?php } ?>
       </li>
-
-		 <li <?php if ($this->uri->segment(2) == 'managelistings' && $this->uri->segment(1) == 'shop'){ ?> class="side_active" <?php } ?> >
+	  <?php } ?>
+	  
+      <?php if($selectSellershop_details[0]['seourl'] !=''){?>
+		 <li <?php if ($this->uri->segment(2) == 'managelistings'){ ?> class="side_active" <?php } ?> >
           <?php if(count($shopProduc)!= 0) { ?>
-        	<a title="<?php echo af_lg('lg_Manage_listings','Manage your listings here.');?>" href="shop/managelistings" class="<?php if($this->uri->segment(2)=='managelistings' || $this->uri->segment(1)=='edit-product'){ echo 'shop_active_tab';} ?>"> 
-				<div class="name-inner"><?php if($this->lang->line('manage_listitems') != '') { echo stripslashes($this->lang->line('manage_listitems')); } else echo 'Manage items'; ?></div>
+        	<a title="<?php echo af_lg('lg_Manage_listings','Manage your listings here.');?>" href="shop/managelistings" > 
+				<div class="name-inner"><?php echo '管理產品'; ?></div>
 			</a>
         <?php } else { ?>
-        	<a class="shop_active"  >
-				<div class="name-inner"><?php if($this->lang->line('manage_listitems') != '') { echo stripslashes($this->lang->line('manage_listitems')); } else echo 'Manage items'; ?></div>
+        	<a >
+				<div class="name-inner">管理產品</div>
 			</a>
          <?php } ?>
         </li>
-		
+	  <?php } ?>
+		<!--
       <li <?php if ($this->uri->segment(1) == 'shop' && ($this->uri->segment(2) == 'payment' || $this->uri->segment(2) == 'billing')){ ?> class="side_active" <?php } ?> ><a style="padding:0px !important;" href="javascript:void(0)"><div class="name-inner"><?php if($this->lang->line('payment_settings') != '') { echo stripslashes($this->lang->line('payment_settings')); } else echo 'Payment Settings'; ?><b class="caret" style="position: static;"></b></div></a>
 	
 		<ul class="add_shop_drop_down">
@@ -90,16 +94,17 @@ if($CurrUserImg != ''){
 		        
 		</ul>
    	</li>     
-        
+        -->
         
                 
         <?php if($loginCheck != 1){ ?>
       	
         <?php if($curruserGroup=='Seller'){ ?>
         
-        <li <?php if ($this->uri->segment(3) == 'coupon-code'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/coupon-code"><div class="name-inner"><?php if($this->lang->line('cart_couponcode') != '') { echo stripslashes($this->lang->line('cart_couponcode')); } else echo 'Coupon Codes'; ?> </div></a></li>
+        <!--<li <?php if ($this->uri->segment(3) == 'coupon-code'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/coupon-code"><div class="name-inner"><?php if($this->lang->line('cart_couponcode') != '') { echo stripslashes($this->lang->line('cart_couponcode')); } else echo 'Coupon Codes'; ?> </div></a></li>-->
 		
-		<li <?php if ($this->uri->segment(3) == 'tax-list'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/tax-list"><div class="name-inner"><?php if($this->lang->line('shop_nav_shop_tax') != '') { echo stripslashes($this->lang->line('shop_nav_shop_tax')); } else echo 'Your Tax'; ?></div></a></li>
+		<!--<li <?php if ($this->uri->segment(3) == 'tax-list'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/tax-list"><div class="name-inner"><?php if($this->lang->line('shop_nav_shop_tax') != '') { echo stripslashes($this->lang->line('shop_nav_shop_tax')); } else echo 'Your Tax'; ?></div></a></li>-->
+		
                 <li <?php if ($this->uri->segment(3) == 'contact-user'){ ?> class="side_active" <?php } ?> ><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/contact-user"><div class="name-inner"><?php if($this->lang->line('shop_nav_user_contact') != '') { echo stripslashes($this->lang->line('shop_nav_user_contact')); } else echo 'User Contacts'; ?></div></a></li>
 		
 		<li <?php if ($this->uri->segment(3) == 'shop-orders'){ ?> class="side_active" <?php } ?>><a href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders"><div class="name-inner"><?php if($this->lang->line('shop_nav_shop_orders') != '') { echo stripslashes($this->lang->line('shop_nav_shop_orders')); } else echo 'Orders'; ?> <b class="caret" style="position: static;"></b> </div></a>
@@ -111,21 +116,21 @@ if($CurrUserImg != ''){
 			<?php $this->load->model('order_model'); ?>
 			
 			<?php $processedorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'Processed'); ?>
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Processed" class="" ><div class="name-inner"><?php echo af_lg('lg_processed','Processed');?> (<?php echo $processedorder->num_rows();?>)</div></a></li>
+			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Processed" class="" ><div class="name-inner"><?php echo "已處理";?> (<?php echo $processedorder->num_rows();?>)</div></a></li>
 			<?php $shippedorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'Shipped'); ?>   
-            <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Shipped" class="" ><div class="name-inner"><?php echo af_lg('lg_shipped','Shipped');?>(<?php echo $shippedorder->num_rows();?>)</div></a></li>
+            <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Shipped" class="" ><div class="name-inner"><?php echo "已送出";?>(<?php echo $shippedorder->num_rows();?>)</div></a></li>-->
 			<?php $deliveredorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'Delivered'); ?>
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Delivered" class="" ><div class="name-inner"><?php echo af_lg('lg_delivered','Delivered');?> (<?php echo $deliveredorder->num_rows();?>)</div></a></li>
+			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Delivered" class="" ><div class="name-inner"><?php echo "已傳達";?> (<?php echo $deliveredorder->num_rows();?>)</div></a></li>
 			<?php $cancelledorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'Cancelled'); ?>
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Cancelled" class="" ><div class="name-inner"><?php echo af_lg('lg_cancelled','Cancelled');?> (<?php echo $cancelledorder->num_rows();?>)</div></a></li>
+			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Cancelled" class="" ><div class="name-inner"><?php echo "已取消";?> (<?php echo $cancelledorder->num_rows();?>)</div></a></li>
 			<?php $returnorder = $this->order_model->view_shop_order_details('Paid',$shop_id,'dispute'); ?>  
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=dispute" class="" ><div class="name-inner"><?php echo af_lg('lg_returnreplace','Return / Replace');?> (<?php echo $returnorder->num_rows();?>)</div></a></li>
+			   <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=dispute" class="" ><div class="name-inner"><?php echo af_lg('lg_returnreplace','Return / Replace');?> (<?php echo $returnorder->num_rows();?>)</div></a></li>-->
 			<?php $codorder = $this->order_model->view_shop_cod_details('COD',$shop_id); ?>   
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=cod" class="" ><div class="name-inner"><?php echo af_lg('lg_cod','Cash on Delivery');?> (<?php echo $codorder->num_rows();?>)</div></a></li>
+			   <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=cod" class="" ><div class="name-inner"><?php echo af_lg('lg_cod','Cash on Delivery');?> (<?php echo $codorder->num_rows();?>)</div></a></li>-->
 			   <?php $wiretransferorder = $this->order_model->view_shop_cod_details('wire_transfer',$shop_id); ?>   
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=wiretransfer" class="" ><div class="name-inner"><?php echo af_lg('lg_wiretransfer','Wire Transfer');?>(<?php echo $wiretransferorder->num_rows();?>)</div></a></li>
+			   <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=wiretransfer" class="" ><div class="name-inner"><?php echo af_lg('lg_wiretransfer','Wire Transfer');?>(<?php echo $wiretransferorder->num_rows();?>)</div></a></li>-->
 			    <?php $westernunionorder = $this->order_model->view_shop_cod_details('western_union',$shop_id); ?>   
-			   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=westernunion" class="" ><div class="name-inner"><?php echo af_lg('lg_westernunion','Western Union');?>(<?php echo $westernunionorder->num_rows();?>)</div></a></li>
+			   <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=westernunion" class="" ><div class="name-inner"><?php echo af_lg('lg_westernunion','Western Union');?>(<?php echo $westernunionorder->num_rows();?>)</div></a></li>-->
 		</ul>
 		
 		</li>
@@ -133,7 +138,7 @@ if($CurrUserImg != ''){
 		<li><a style="padding:0px !important;" href="javascript:void(0)"><div class="name-inner"><?php if($this->lang->line('com_more') != '') { echo stripslashes($this->lang->line('com_more')); } else echo 'More'; ?><b class="caret" style="position: static;"></b></div></a>
 		
 			<ul class="add_shop_drop_down">
-					<li><a href="promote-shop"><?php if($this->lang->line('shop_mainimg') != '') { echo stripslashes($this->lang->line('shop_mainimg')); } else echo 'Your Main Image'; ?></a></li>
+					<!--<li><a href="promote-shop"><?php if($this->lang->line('shop_mainimg') != '') { echo stripslashes($this->lang->line('shop_mainimg')); } else echo 'Your Main Image'; ?></a></li>-->
 					
 					<li><a href="shop/reviews"><?php if($this->lang->line('shopsec_reviews') != '') { echo stripslashes($this->lang->line('shopsec_reviews')); } else echo 'Reviews'; ?></a></li>
 					
@@ -141,7 +146,7 @@ if($CurrUserImg != ''){
 					
 					<!--<li><a href="shops/<?php echo $selectSeller_details[0]['seourl']; ?>/shop-orders"><?php if($this->lang->line('shop_nav_shop_orders') != '') { echo stripslashes($this->lang->line('shop_nav_shop_orders')); } else echo 'Orders'; ?></a></li>-->
 					
-					<li><a href="shops/<?php echo $selectSeller_details[0]['seourl']; ?>/commision-tracking"><?php if($this->lang->line('shop_nav_earn_list') != '') { echo stripslashes($this->lang->line('shop_nav_earn_list')); } else echo 'Earnings List'; ?></a></li>
+					<!--<li><a href="shops/<?php echo $selectSeller_details[0]['seourl']; ?>/commision-tracking"><?php if($this->lang->line('shop_nav_earn_list') != '') { echo stripslashes($this->lang->line('shop_nav_earn_list')); } else echo 'Earnings List'; ?></a></li>-->
 					
 					<li><a href="shops/<?php echo $selectSeller_details[0]['seourl']; ?>/withdraw-req"><?php if($this->lang->line('shop_nav_with_request') != '') { echo stripslashes($this->lang->line('shop_nav_with_request')); } else echo 'Withdrawal Request'; ?>
 					</a></li>
@@ -162,13 +167,11 @@ if($CurrUserImg != ''){
 						<?php } ?>
 					
 					<?php } ?>
-					
+					<!--
 					<li>
-						<a href="import-items">
-							<?php if($this->lang->line('shop_nav_seller_import') != '') { echo stripslashes($this->lang->line('shop_nav_seller_import')); } else echo 'Import Listings'; ?>
-						</a>
+						<a href="import-items">匯入貨品</a>
 					</li>
-						
+					-->
 			</ul>
 
 		

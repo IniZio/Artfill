@@ -110,6 +110,7 @@ class Order extends MY_Controller
                     $transId    = $this->uri->segment(5);
                     $Pray_Email = '';
                 }
+                
                 $UserPaymentSuccessCheck = $this->order_model->get_all_details(USER_PAYMENT, array('user_id' => $this->uri->segment(3), 'dealCodeNumber' => $this->uri->segment(4), 'status' => 'Paid'));
                 if ($UserPaymentSuccessCheck->num_rows() == 0) {
                     $this->data['Confirmation'] = $this->order_model->UserPaymentCOD($this->uri->segment(3), $this->uri->segment(4), $transId, $Pray_Email);
@@ -364,6 +365,8 @@ class Order extends MY_Controller
                         //$userdata = array('shopsy_session_user_id' => $newcustom[1],'randomNo' => $newcustom[2]);
                         $this->session->unset_userdata($userdata);
                     }
+          if(true){
+          } 
 
         }
 }

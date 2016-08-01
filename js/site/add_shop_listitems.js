@@ -107,13 +107,19 @@ $("#image_upload").change(function(e) {
 				  $("#imgAddData1").css("display", "block");
 				  $( "#img_empty1" ).removeClass("image_empty");
 				  $("#showImgErr").hide();
-				}else{
+				}else if(arr[0] == 'Failure'){
 					$("#showImgErr").html(arr[1]); 
 					$("#image_upload").val('');
 					$("#showImgErr").show();
 					//$("#showImgErr").show().delay('3000').fadeOut();;
 					$("#loadedImg").css("display", "none"); 
-				}
+				}else{
+					$("#showImgErr").html('上傳圖片失敗'); 
+					$("#image_upload").val('');
+					$("#showImgErr").show();
+					//$("#showImgErr").show().delay('3000').fadeOut();;
+					$("#loadedImg").css("display", "none"); 
+		        }
 			},
             data: formData,
             cache: false,
@@ -149,13 +155,19 @@ $("#image_upload1").change(function(e) {
 					$("#imgAddData2").css("display", "block");
 					$( "#img_empty2" ).removeClass( "image_empty" );
 					 $("#showImgErr").hide();
-				  }else{
-				   	$("#showImgErr").html(arr[1]); 
+				  }else if(arr[0] == 'Failure'){
+					$("#showImgErr").html(arr[1]); 
 					$("#image_upload1").val('');
 					$("#showImgErr").show();
-					//$("#showImgErr").show().delay('3000').fadeOut();
-					$("#loadedImg1").css("display", "none");
-				  }
+					//$("#showImgErr").show().delay('3000').fadeOut();;
+					$("#loadedImg1").css("display", "none"); 
+				}else{
+					$("#showImgErr").html('上傳圖片失敗'); 
+					$("#image_upload1").val('');
+					$("#showImgErr").show();
+					//$("#showImgErr").show().delay('3000').fadeOut();;
+					$("#loadedImg1").css("display", "none"); 
+		        }
 		   },
             data: formData,
             cache: false,
@@ -187,13 +199,19 @@ $("#image_upload2").change(function(e) {
 				  $("#imgAddData3").css("display", "block");
 				  $( "#img_empty3" ).removeClass( "image_empty" );
 				   $("#showImgErr").hide();
-			  }else{
-				  $("#showImgErr").html(arr[1]); 
-				  $("#image_upload2").val('');
-				  $("#showImgErr").show();
-				  //$("#showImgErr").show().delay('3000').fadeOut();
-				  $("#loadedImg2").css("display", "none");
-				  }
+			  }else if(arr[0] == 'Failure'){
+					$("#showImgErr").html(arr[1]); 
+					$("#image_upload2").val('');
+					$("#showImgErr").show();
+					//$("#showImgErr").show().delay('3000').fadeOut();;
+					$("#loadedImg2").css("display", "none"); 
+				}else{
+					$("#showImgErr").html('上傳圖片失敗'); 
+					$("#image_upload2").val('');
+					$("#showImgErr").show();
+					//$("#showImgErr").show().delay('3000').fadeOut();;
+					$("#loadedImg2").css("display", "none"); 
+		        }
 		    },
             data: formData,
             cache: false,
@@ -226,13 +244,19 @@ $("#image_upload3").change(function(e) {
 				  $("#imgAddData4").css("display", "block");
 				  $( "#img_empty4" ).removeClass( "image_empty" );
 				   $("#showImgErr").hide();
-			    }else{
-				  $("#showImgErr").html(arr[1]); 
-				  $("#image_upload3").val('');
-				  $("#showImgErr").show();
-				  //$("#showImgErr").show().delay('3000').fadeOut();
-				  $("#loadedImg3").css("display", "none");
-				  }
+			    }else if(arr[0] == 'Failure'){
+					$("#showImgErr").html(arr[1]); 
+					$("#image_upload3").val('');
+					$("#showImgErr").show();
+					//$("#showImgErr").show().delay('3000').fadeOut();;
+					$("#loadedImg3").css("display", "none"); 
+				}else{
+					$("#showImgErr").html('上傳圖片失敗'); 
+					$("#image_upload3").val('');
+					$("#showImgErr").show();
+					//$("#showImgErr").show().delay('3000').fadeOut();;
+					$("#loadedImg3").css("display", "none"); 
+		        }
 			 },
             data: formData,
             cache: false,
@@ -263,13 +287,19 @@ $("#image_upload4").change(function(e) {
 			  if(arr[0]=='Success'){
 		         document.getElementById("loadedImg4").src=arr[1]; 
 				 $("#showImgErr").hide();
-			  }else{
-				  $("#showImgErr").html(arr[1]); 
-				  $("#image_upload4").val('');
-				  $("#showImgErr").show();
-				  //$("#showImgErr").show().delay('3000').fadeOut();
-				  $("#loadedImg4").css("display", "none");
-			 }	 
+			  }else if(arr[0] == 'Failure'){
+					$("#showImgErr").html(arr[1]); 
+					$("#image_upload3").val('');
+					$("#showImgErr").show();
+					//$("#showImgErr").show().delay('3000').fadeOut();;
+					$("#loadedImg3").css("display", "none"); 
+				}else{
+					$("#showImgErr").html('上傳圖片失敗'); 
+					$("#image_upload3").val('');
+					$("#showImgErr").show();
+					//$("#showImgErr").show().delay('3000').fadeOut();;
+					$("#loadedImg3").css("display", "none"); 
+		        }
 		   },
             data: formData,
             cache: false,

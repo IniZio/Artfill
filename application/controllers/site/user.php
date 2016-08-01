@@ -5469,6 +5469,46 @@ $message.='</td>
 			redirect('login');
 		}
 	}
+
+	/**
+	 * 
+	 * To view the user pickup 
+	 * 
+	 */
+	public function activity_pickup(){
+		if ($this->checkLogin('U')!=''){		
+			$this->data['currUser']=$checkloginIDarr=$this->session->all_userdata(); 
+		 	$loggeduserID=$checkloginIDarr['shopsy_session_user_id'];
+		 	$this->data['pickupStation'] = $this->user_model->get_all_details(PICKUP_STATION, array())->result_array();
+			/*Get the buyer pickup details*/
+			// $isBuyerPickupActivities = $this->user_model->get_activity_details($loggeduserID, $this->user_model->get_activity_count($loggeduserID))->result_array();
+			$this->data['isBuyerPickupActivities'] = $this->user_model->get_all_details(USER_ACTIVITY, array('user_id'=>$loggeduserID, 'activity_name'=> 'pickup item'))->result_array();
+			// print_r($this->data['isBuyerPickupActivities']);die;
+			$this->data['sellerProfileDetails']=array();
+			$this->data['sellerProductDetails']=array();
+			foreach ($this->data['isBuyerPickupActivities'] as $buyerPickupActivity) {
+				// print_r($buyerPickupActivity['seller_id']);die;
+				array_push($this->data['sellerProfileDetails'], $this->seller_model->get_all_details(USERS, array('id'=>$buyerPickupActivitypActivity['seller_id']))->result_array());
+				array_push($this->date['sellerProductDetails'], $this->seller_model->get_all_details(PRODUCT, array('id'=>$buyerPickupActivity['activity_id']))->result_array());
+			}
+			// print_r($this->data['sellerProfileDetails']);
+			/*Get the seller pickup details*/
+			$this->data['isSellerPickupActivities'] = $this->user_model->get_all_details(USER_ACTIVITY, array('seller_id'=>$loggeduserID, 'activity_name'=> 'pickup item'))->result_array();
+			$this->data['buyerProfileDetails']=array();
+			$this->data['buyerProductDetails']=array();
+			foreach ($this->data['isSellerPickupActivities'] as $sellerPickupActivity) {
+				// print_r($buyerPickupActivity['seller_id']);die;
+				array_push($this->data['buyerProfileDetails'], $this->user_model->get_all_details(USER, array('id'=>$sellerPickupActivity['user_id']))->result_array());
+				array_push($this->date['buyerProductDetails'], $this->seller_model->get_all_details(PRODUCT, array('id'=>$sellerPickupActivity['activity_id']))->result_array());
+			}
+
+			$this->data['heading'] = $this->config->item('email_title').'-Your Pickup';
+			// print_r($this->data['isBuyerPickupActivities']);
+			$this->load->view('site/user/activity_pickup',$this->data);	
+		}else{
+			redirect('login');
+		}
+	}
 	
 	/**
 	 * 

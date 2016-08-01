@@ -32,6 +32,16 @@ $this->load->model('user_model');
 
                     </li>
 
+					<li class="first_list4">
+
+                    	<a class="top_first_line " href="<?php echo base_url().'activity/pickup'; ?>">
+
+                        	<?php echo "地鐵交收";?>
+
+                        </a>
+
+                    </li>
+					
                     <li class="first_list first_list_seleted">
 
                     	<a class="top_first_line" href="<?php echo base_url().'activity/interaction'; ?>"> 

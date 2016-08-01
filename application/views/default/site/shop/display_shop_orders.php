@@ -108,10 +108,10 @@ j(document).ready(function(){
 								?>
 								<?php echo number_format($balance_amt,2);?>
 							</h1>
-							<h2 style="text-align:center !important;margin-top: -11px;"><?php echo af_lg('lg_to_ear-withdar_earning','(Total Earnings - Withdrawal Earnings)');?>
+							<!--<h2 style="text-align:center !important;margin-top: -11px;"><?php echo af_lg('lg_to_ear-withdar_earning','(Total Earnings - Withdrawal Earnings)');?>
 							
 							
-							</h2>
+							</h2>-->
 						</div>             
 					</div>
 					<?php /*
@@ -123,7 +123,7 @@ j(document).ready(function(){
 					</div>
 					*/ ?>
 					
-<div class="purchase_review container community_right">     					
+<div class="purchase_review community_right">     					
 				
 			<div class="all-purchase-search">
         		<div class="top_list" style="width: 90%;margin: 0px 0px 10px 10px;">
@@ -131,13 +131,13 @@ j(document).ready(function(){
 					
 				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders" class="" ><div class="name-inner"><?php echo af_lg('lg_all','All');?> <span class="suborder"><?php if($_GET['order']=='' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span> </div></a></li>
 				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Processed" class="" ><div class="name-inner"><?php echo af_lg('lg_processed','Processed');?> <span class="suborder"><?php if($_GET['order']=='Processed' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span> </div></a></li>
-				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Shipped" class="" ><div class="name-inner"><?php echo af_lg('lg_shipped','Shipped');?> <span class="suborder"><?php if($_GET['order']=='Shipped' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
+				   <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Shipped" class="" ><div class="name-inner"><?php echo af_lg('lg_shipped','Shipped');?> <span class="suborder"><?php if($_GET['order']=='Shipped' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>-->
 				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Delivered" class="" ><div class="name-inner"><?php echo af_lg('lg_deliverd','Delivered');?> <span class="suborder"><?php if($_GET['order']=='Delivered' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
 				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=Cancelled" class="" ><div class="name-inner"><?php echo af_lg('lg_cancelled','Cancelled');?> <span class="suborder"><?php if($_GET['order']=='Cancelled' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
-				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=dispute" class="" ><div class="name-inner"><?php echo af_lg('lg_retorrep','Return / Replace ');?> <span class="suborder"><?php if($_GET['order']=='dispute' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
+				   <!--<li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=dispute" class="" ><div class="name-inner"><?php echo af_lg('lg_retorrep','Return / Replace ');?> <span class="suborder"><?php if($_GET['order']=='dispute' && $orderList->num_rows >0){ echo $orderList->num_rows; }?></span></div></a></li>
 				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=cod" class="" ><div class="name-inner"><?php echo af_lg('lg_cod','Cash on Delivery');?> <span class="suborder"><?php if($_GET['order']=='cod' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span></div></a></li>
 				   <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=wiretransfer" class="" ><div class="name-inner"><?php echo af_lg('lg_wiretransfer','Wire Transfer');?> <span class="suborder"><?php if($_GET['order']=='wiretransfer' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span></div></a></li>
-					 <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=westernunion" class="" ><div class="name-inner"><?php echo af_lg('lg_westernunion','Western Union');?> <span class="suborder"><?php if($_GET['order']=='westernunion' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span></div></a></li>
+					 <li><a title="" href="shops/<?php echo $selectSellershop_details[0]['seourl']; ?>/shop-orders?order=westernunion" class="" ><div class="name-inner"><?php echo af_lg('lg_westernunion','Western Union');?> <span class="suborder"><?php if($_GET['order']=='westernunion' && $orderList->num_rows > 0){ echo $orderList->num_rows; }?></span></div></a></li>-->
             
                    
                 </ul>

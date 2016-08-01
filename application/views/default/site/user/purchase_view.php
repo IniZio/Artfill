@@ -59,36 +59,11 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 </script>
 
 <div class="add_steps shop-menu-list">
-
-			<div class="main">
-				<div id="nav-trigger">
-					<span>Menu</span>
-				</div>
-				<nav id="nav-main">
-				<ul id="panel" class="add_steps" style="background:none; box-shadow:none;">
+		<div class="main">		
+			<?php $this->load->view('site/user/sidebar'); ?>
+		</div>
 			
-				 <li>
-                    <a href="purchase-review"> <?php if($this->lang->line('user_purchases') != '') { echo stripslashes($this->lang->line('user_purchases')); } else echo 'Purchases'; ?> </a>
-                 </li>
-                 
-                <li>
-                     <a href="settings/my-account/<?=$this->session->userdata['shopsy_session_user_name']?>"> <?php if($this->lang->line('user_settings') != '') { echo stripslashes($this->lang->line('user_settings')); } else echo 'Settings'; ?></a>
-                </li>
-                
-                 <li>
-                     <a href="settings/giftcards"> <?php if($this->lang->line('giftcard_cards') != '') { echo stripslashes($this->lang->line('giftcard_cards')); } else echo 'Gift Cards'; ?></a>
-                </li>             
-                
-                <li>
-                     <a href="public-profile"><?php if($this->lang->line('user_pub_profile') != '') { echo stripslashes($this->lang->line('user_pub_profile')); } else echo 'Public Profile'; ?></a>
-                </li>
-			</ul>
-  </nav>
-        <nav id="nav-mobile"></nav>
-			</div>
-			
-			</div>
-			</div>
+</div>
 
 <section class="browse-head">
 
@@ -102,7 +77,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 		   <span>&rsaquo;</span>
 		   <li><?php if($this->lang->line('purchases-review') != '') { echo stripslashes($this->lang->line('purchases-review')); } else echo 'Purchases & Reviews'; ?></li>
         </ul>
-
+<!--
   	<div class="">
         <div id="header_menu" class="content-wrap-inner clear ">
             <div class="col col4">
@@ -111,6 +86,7 @@ background: url("../../images/buttons-master.20140130192956.png") no-repeat scro
 
         </div>
 	</div>
+-->
 </div>    
 <!-- purchases and Review -->        
 </header>

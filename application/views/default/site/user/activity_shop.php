@@ -110,6 +110,16 @@ $(document).ready(function() {
 
                     </li>
 
+					<li class="first_list4">
+
+                    	<a class="top_first_line " href="<?php echo base_url().'activity/pickup'; ?>">
+
+                        	<?php echo "地鐵交收";?>
+
+                        </a>
+
+                    </li>
+					
                     <li class="first_list2">
 
                     	<a class="top_first_line" href="<?php echo base_url().'activity/interaction'; ?>"> 
@@ -158,7 +168,7 @@ $(document).ready(function() {
 
                             <span class="fav-name"> 
 
-                            	<?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo "Followers"; ?>
+                            	<?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo "Following"; ?>
 
                             </span>
 

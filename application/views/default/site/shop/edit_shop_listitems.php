@@ -149,14 +149,14 @@ jQuery(function() {
 			
 	<?php if($languagesList->num_rows() > 0 ) {?>
 	<span style="float: right;margin: 0px 20px 0px 0px;">
-	<input type="button" onclick="
+	<!--<input type="button" onclick="
 if($('#sidenav').css('display') == 'none')
 {
 $('#sidenav').show();
 }else{
 $('#sidenav').hide();
 }
-" value="<?php echo af_lg('lg_add-lang','Add Language');?>" class="save_btn"/>
+" value="<?php echo af_lg('lg_add-lang','Add Language');?>" class="save_btn"/> -->
 	</span>
 	<?php }?>
 	</h3>
@@ -302,7 +302,7 @@ $('#sidenav').hide();
 						</select>
 					</div>
 					<div class="col-md-3 col-sm-12 col-xs-12 right P8">
-						<p><a href="#" target=" _blank "> <?php if($this->lang->line('prod_about_listing_text') != '') { echo stripslashes($this->lang->line('prod_about_listing_text')); } else echo 'Learn more about what types of itemsare allowedon Easy'; ?></a></p>
+						<p><a href="#" target=" _blank "> <!-- <?php if($this->lang->line('prod_about_listing_text') != '') { echo stripslashes($this->lang->line('prod_about_listing_text')); } else echo 'Learn more about what types of itemsare allowedon Easy'; ?>--></a></p>
 					</div>
 				</div>
 				<?php $CatId=explode(',',$edit_item_detail->row()->category_id);

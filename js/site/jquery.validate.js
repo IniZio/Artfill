@@ -263,7 +263,6 @@ $.extend($.validator, {
 	setDefaults: function(settings) {
 		$.extend( $.validator.defaults, settings );
 	},
-
 	messages: {
 		required: field_req,
 		remote: "Please fix this field",
