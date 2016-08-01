@@ -104,7 +104,7 @@ tinyMCE.init({
 #When_is{margin:0px !important;}
 </style>
 <link rel="stylesheet" href="css/default/jquery.tagbox.css" />
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/default/font-awesome.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/default/font-awesome.min.css">
 <script type="text/javascript" src="js/site/jquery-1.7.1.min.js"></script>
 <script type="text/javascript">
 	var DealOfDay = '<?php echo $this->config->item('deal_of_day')?>';
