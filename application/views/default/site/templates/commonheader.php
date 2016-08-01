@@ -62,7 +62,7 @@ if($this->config->item('publish')!='Production'){
 <meta property="og:url" content="<?php echo base_url().$meta_product_url;?>"/>
 <meta property="og:image" content="<?php echo base_url().'images/product/thumb/'.$meta_product_img?>" />
 <meta property="og:site_name" content="shopsy-v2"/>
-<meta property="og:description" content="<?php if($meta_description==''){ echo $this->config->item('meta_description');}else{ echo strip_tags($meta_description);}?>/>
+<meta property="og:description" content="<?php if($meta_description==''){ echo $this->config->item('meta_description');}else{ echo strip_tags($meta_description);}?>"/>
 
 <?php }}?>
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url().'images/logo/'.$this->config->item('fevicon_image'); ?>">    
