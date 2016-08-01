@@ -218,12 +218,13 @@ header {
   top: 218px;
   left: 215px;
   position: absolute;
-  background: rgba(0, 0, 0, 0.43);
+  background: #ffffff;
+  opacity: 0.75;
   padding: 10px 15px;
 }
 
 .shop_view_text a {
-  color: #fff;
+  color: #999;
   font-size: 20px !important;
 }
 

@@ -396,7 +396,7 @@ $(document).ready(function(){
 		}
 		var QuertString = allvalue+"&fvalue="+filterValue;
 		//alert(QuertString);
-		window.location.href= baseURL+"admin/product/display_product_list/"+QuertString;
+		window.location.href= BaseURL+"admin/product/display_product_list/"+QuertString;
 	});
 	$('#filterValue').on("change",function(){
 		var filterValue = $('#filterValue option:selected').val();

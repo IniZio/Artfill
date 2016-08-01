@@ -344,7 +344,7 @@ $(document).ready(function(e) {
 
         path='find/people?search_query='+$('#search_key').val()+'&order='+$('#order').val()+'&group=0';
 
-		window.location = baseURL+path;
+		window.location = BaseURL+path;
 
     });
 
@@ -352,7 +352,7 @@ $(document).ready(function(e) {
 
         path='find/people?search_query='+$('#search_key').val()+'&order='+$('#order').val()+'&group=1';
 
-		window.location = baseURL+path;
+		window.location = BaseURL+path;
 
     });
 
@@ -360,7 +360,7 @@ $(document).ready(function(e) {
 
         path='find/people?search_query='+$('#search_key').val()+'&order='+$('#order').val()+'&group=2';
 
-		window.location = baseURL+path;
+		window.location = BaseURL+path;
 
     });
 
@@ -368,7 +368,7 @@ $(document).ready(function(e) {
 
         path='find/people?search_query='+$('#search_key').val()+'&order=0&group='+$('#group').val()+'';
 
-		window.location = baseURL+path;
+		window.location = BaseURL+path;
 
     });
 
@@ -376,7 +376,7 @@ $(document).ready(function(e) {
 
         path='find/people?search_query='+$('#search_key').val()+'&order=1&group='+$('#group').val()+'';
 
-		window.location = baseURL+path;
+		window.location = BaseURL+path;
 
     });
 
