@@ -714,7 +714,7 @@ $('#sidenav').hide();
 					<div class="col-md-3 col-sm-12"><p> <?php if($this->lang->line('std_img') != '') { echo stripslashes($this->lang->line('std_img')); } else echo 'Note: Standard Image size is 550 x 350 pixel.'; ?></p></div>
 				</div>
 <?php if($edit_digital_check[0]['digital_item'] == '' ) { ?> 
-<div class="col-lg-12 sh_border1" id="variation_wrapper">
+<div class="col-lg-8 sh_border1" id="variation_wrapper">
 	<h4><?php if($this->lang->line('shop_variations') != '') { echo stripslashes($this->lang->line('shop_variations')); } else echo 'Variations'; ?></h4>
 	<p><?php if($this->lang->line('shop_variations_text') != '') { echo stripslashes($this->lang->line('shop_variations_text')); } else echo 'Add Variations to your listing to highlight available options for buyers.'; ?></p>
 	<!--  Variation One Starts here LEVEL 1 VARIATION --> 
@@ -1040,6 +1040,7 @@ $('#sidenav').hide();
 		</div>
 	</div>
 </div>
+<div class="col-lg-4">可不填寫</div>
 <?php }?>
 	<?php if($edit_digital_check[0]['digital_item'] == '' ) { ?> 
 			<div class="col-lg-12 sh_border1" id="digital_wrapper" style="display:none;">

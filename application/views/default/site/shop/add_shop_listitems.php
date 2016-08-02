@@ -609,7 +609,7 @@ $('#sidenav').hide();
 				<p><?php if($this->lang->line('shop_variations_text') != '') { echo stripslashes($this->lang->line('shop_variations_text')); } else echo 'Add Variations to your listing to highlight available options for buyers.'; ?></p>
 				
 				
-				<div class="col-lg-12 variation_wrapper_list">
+				<div class="col-lg-8 variation_wrapper_list">
 				<div class="form-group">
 					<label for="inputEmail3" class="col-sm-2 control-label"><?php if($this->lang->line('ask_for_variation') != '') { echo stripslashes(af_lg("ask_for_variation", "加入特徵")); } else echo 'Add a Variation'; ?></label>
 					<p id="have_scalling" style="display:none;"></p>					
@@ -729,6 +729,7 @@ $('#sidenav').hide();
 					</div>
 				</div>
 				</div>
+				<div class="col-lg-4">可不填寫</div>
 				
 			</div>
 			<div class="col-lg-12 sh_border1" id="digital_wrapper" style="display:none;">
