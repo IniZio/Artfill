@@ -6,9 +6,7 @@ $this->load->view('site/freshdesk/menu_bar');
 			
 ?>
 
-<?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Shop-page.css" rel="stylesheet">
-<?php } ?>
+
 
 <div id="shop_page_seller">
     <section class="container">

@@ -1,9 +1,7 @@
 <?php  
 $this->load->view('site/templates/shop_header'); 
 ?>
-<?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Shop-page.css" rel="stylesheet">
-<?php } ?>
+
 <?php $shop_name=trim(stripslashes($selectSeller_details[0]['seller_businessname'])); $seourl=$selectSeller_details[0]['seourl'] 
 // kethen was here, enabling Chinese shop names 25/1/2016 
 // $shop_name=trim(stripslashes($selectSeller_details[0]['seller_businessname'])); $seourl=$selectSeller_details[0]['seller_businessname']
