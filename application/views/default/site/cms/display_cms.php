@@ -2,11 +2,11 @@
 	$this->load->view('site/templates/header');
 ?>
 
-<?php if (isset($active_theme) && $active_theme->num_rows() != 0) {?>
+<!-- <?php if (isset($active_theme) && $active_theme->num_rows() != 0) {?>
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Product-Detail-page.css" rel="stylesheet">
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>footer.css" rel="stylesheet">
-<?php }?>
+<?php }?> -->
 
 <style>
 .cms_content_about{float: left;
