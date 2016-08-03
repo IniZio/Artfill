@@ -411,7 +411,7 @@ $('#sidenav').hide();
 			</div>
 			
 			
-<!-- 			<?php if($this->config->item('deal_of_day')=='Yes') {?>
+			<?php if($this->config->item('deal_of_day')=='Yes') {?>
 			<div class="col-lg-12 sh_border" data-pricing-type="Fixed">
 				<h4><?php echo af_lg('lg_deal_of_the_day','Deal Of The Day'); ?></h4>
 				
@@ -450,7 +450,7 @@ $('#sidenav').hide();
 														
 				
 			</div>
-<?php }?> -->
+<?php }?>
 			<div class="col-lg-12 sh_border1" id="add-photos">
 			
 				<h4 id="photoErr"><?php if($this->lang->line('shop_photos') != '') { echo stripslashes($this->lang->line('shop_photos')); } else echo 'Photos'; ?></h4>
