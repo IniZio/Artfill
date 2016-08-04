@@ -2051,7 +2051,7 @@ function shipping_user_cart_address_delete(selId){
 }
 
 function apply_coupon_code(selid){
-		$('#Coupon_apply_'+selid).show();
+		// $('#Coupon_apply_'+selid).show();
 		$('#shopcoupon'+selid).attr('onclick','display_coupon_code('+selid+')');
 }
 

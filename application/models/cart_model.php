@@ -1172,14 +1172,14 @@ if($this->session->userdata('shopId-'.$selId)!='' && $digital_item=='No'){
 						
 						if($disAmt>0){
 
-							$UserCartValue.='<div class="copun_apply" id="Coupon_apply_'.$selId.'" style="display:block;">
+							$UserCartValue.='<div class="copun_apply" id="Coupon_apply_'.$selId.'" style="display:none;">
 												<span id="CouponErr_'.$selId.'" style="color:#FF0000;"></span>
 												<label>'.$copuncode.'</label>
 												<input id="is_coupon_'.$selId.'" name="is_coupon" class="coupon-search" placeholder="'.$cart_hvCoupcode.'?" readonly="readonly" type="text" value="'.$discountQuery->row()->couponCode.'">
 												<input type="button"  id="CheckCodeButton" class="keep_btn" onclick="javascript:checkRemove('.$selId.');" value="'.$cart_remove.'" style="cursor:pointer;" />
 											</div>';
 						}else{
-							$UserCartValue.='<div class="copun_apply" id="Coupon_apply_'.$selId.'" style="display:block;">
+							$UserCartValue.='<div class="copun_apply" id="Coupon_apply_'.$selId.'" style="display:none;">
 												<span id="CouponErr_'.$selId.'" style="color:#FF0000;"></span>
 												<label>'.$cart_coupCode.'</label>
 												<input id="is_coupon_'.$selId.'" name="is_coupon" class="coupon" placeholder="'.$cart_hvCoupcode.'?" type="text">

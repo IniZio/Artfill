@@ -552,7 +552,7 @@ function hoverView(val){
 									<input type="radio" name="payment_value" value="userCredits" onclick="apply_userCredits(this,1)"><label>Use Your Credits ($<span>0.00</span></b> USD)</label><div id="creditErr" style="color:#FF0000;"></div></li>
 									</ul>
 									<!--<a href="javascript:void(0);" id="shopcoupon1" onclick="apply_coupon_code(1);">Apply shop coupon code</a>-->
-									<div class="clear"></div><div class="copun_apply" id="Coupon_apply_1" style="display:block;">
+									<div class="clear"></div><div class="copun_apply" id="Coupon_apply_1" style="display:none;">
 												<span id="CouponErr_1" style="color:#FF0000;"></span>
 												<label>Coupon Codes</label>
 												<input id="is_coupon_1" name="is_coupon" class="coupon" placeholder="Have a coupon code?" type="text">
