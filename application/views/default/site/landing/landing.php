@@ -11,11 +11,11 @@ header{
 <script type="text/javascript" src="js/site/jquery.countdown.js"></script>
 <link href="css/animate.css" rel="stylesheet">
 <script type="text/javascript" src="js/front/freewall.js"></script>
-<!-- <?php if (isset($active_theme) && $active_theme->num_rows() != 0) {?>
+<?php if (isset($active_theme) && $active_theme->num_rows() != 0) {?>
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Home-page.css" rel="stylesheet">
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>header.css" rel="stylesheet">
 <link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>footer.css" rel="stylesheet">
-<?php }?> -->
+<?php }?>
 <!-- deal of the day  -->
 <?php
 $deal_of_day = $deal_of_day1->result();
