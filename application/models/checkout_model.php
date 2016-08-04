@@ -112,7 +112,7 @@ class Checkout_model extends My_Model
 			$buyerCommission = $this->admin_model->getAdminSettings()->row()->buyer_commission * 1.0;
 //debug
 //echo $buyerCommission;
-echo $this->getAdminSettings()->row()->buyer_commission;
+// echo $this->getAdminSettings()->row()->buyer_commission;
 //
 			$artfillBuyerCommission = (($UsercheckoutAmt + $UsercheckoutSAmt + $UsercheckoutTAmt) * 0.01 * $buyerCommission);
 
