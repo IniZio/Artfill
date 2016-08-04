@@ -79,12 +79,13 @@ span.tagBox-item-content {
   font-size: 10px;
   line-height: 1.4em;
   text-shadow: 0.083em 0.083em 0.083em #888;
-  border: 0.083em solid #3C7BA8;
+  border: 0.083em solid #a5a6a2;
   color: #FFF;
-  background: #234B77;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4998CF), to(#234B77));
-  background: -moz-linear-gradient(top, #4998CF, #234B77);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4998CF', endColorstr='#234B77');
+  background-color: #a7a8a4;
+  // background: #234B77;
+  // background: -webkit-gradient(linear, left top, left bottom, from(#4998CF), to(#234B77));
+  // background: -moz-linear-gradient(top, #4998CF, #234B77);
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4998CF', endColorstr='#234B77');
   -moz-border-radius: 0.5em;
   -wekit-border-radius: 0.5em;
   border-radius: 0.5em;
@@ -100,15 +101,15 @@ span.tagBox-item-content a.tagBox-remove {
   font-size: 8px;
   font-weight: bold;
   line-height: 1em;
-  background: #D00;
+  background: #49c0d5;
   margin-left: 0.5em;
   padding: 0.35em 0.5em;
   -moz-border-radius: 1em;
   -webkit-border-radius: 1em;
   border-radius: 1em;
-  -moz-box-shadow: 0 0 3px #FFF;
-  -webkit-box-shadow: 0 0 3px #FFF;
-  box-shadow: 0 0 3px #FFF;
+  // -moz-box-shadow: 0 0 3px #FFF;
+  // -webkit-box-shadow: 0 0 3px #FFF;
+  // box-shadow: 0 0 3px #FFF;
 }
 
 span.tagBox-item-content a.tagBox-remove:hover {

@@ -1,9 +1,7 @@
 <?php  
 $this->load->view('site/templates/shop_header'); 
 ?>
-<?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Shop-page.css" rel="stylesheet">
-<?php } ?>
+
 <?php $shop_name=trim(stripslashes($selectSeller_details[0]['seller_businessname'])); $seourl=$selectSeller_details[0]['seourl'] 
 // kethen was here, enabling Chinese shop names 25/1/2016 
 // $shop_name=trim(stripslashes($selectSeller_details[0]['seller_businessname'])); $seourl=$selectSeller_details[0]['seller_businessname']
@@ -129,7 +127,7 @@ $this->load->view('site/templates/shop_header');
                             <li class="seller_info">
                                     <a href="policies/<?php echo $seourl; ?>/Seller-Information"><?php if($this->lang->line('shop_sellerinformation') != '') { echo stripslashes($this->lang->line('shop_sellerinformation')); } else echo 'Seller Information'; ?></a>
                             </li>  
-							<li style="margin-left:450px;"><input type="checkbox" name="gcardaccept" id="gcardaccept" value="yes" <?php if($selectSeller_details[0]['gift_card'] == 'Yes') {echo 'checked';} ?> onchange="valchecked(this);"> <?php echo af_lg('lg_accept_gift_card',' Accept Gift Card');?></li>
+							<!--<li style="margin-left:450px;"><input type="checkbox" name="gcardaccept" id="gcardaccept" value="yes" <?php if($selectSeller_details[0]['gift_card'] == 'Yes') {echo 'checked';} ?> onchange="valchecked(this);"> <?php echo af_lg('lg_accept_gift_card',' Accept Gift Card');?></li>-->
                         </ul>
 						<?php /* <div style="float:right; width:25%; padding: 10px;">
 							<a href="shops/<?php echo $seourl; ?>/sections/All">Add shop sections</a>
@@ -149,7 +147,7 @@ $this->load->view('site/templates/shop_header');
                     	<li>
                     	<a href="policies/<?php echo $seourl; ?>/shop-policy"><?php if($this->lang->line('shop_shoppolicy') != '') { echo stripslashes($this->lang->line('shop_shoppolicy')); } else echo 'Add shop policies'; ?></a>
                     	</li>
-                    	<li style="margin-left:450px;"><input type="checkbox" name="gcardaccept" id="gcardaccept" value="yes" <?php if($selectSeller_details[0]['gift_card'] == 'Yes') {echo 'checked';} ?> onchange="valchecked(this);"> <?php echo af_lg('lg_accept_gift_card',' Accept Gift Card');?></li>
+                    	<!--<li style="margin-left:450px;"><input type="checkbox" name="gcardaccept" id="gcardaccept" value="yes" <?php if($selectSeller_details[0]['gift_card'] == 'Yes') {echo 'checked';} ?> onchange="valchecked(this);"> <?php echo af_lg('lg_accept_gift_card',' Accept Gift Card');?></li>-->
 							</ul>
                     </div>
                     <?php } ?>							

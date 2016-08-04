@@ -109,9 +109,7 @@ $('#overall_err').html('');
  });
 });
 </script>
-<?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Shop-page.css" rel="stylesheet">
-<?php } ?>
+
 <?php //print_r($selectSeller_details);
 
 $payment_mode=explode(",",$selectSeller_details[0]['payment_mode']);

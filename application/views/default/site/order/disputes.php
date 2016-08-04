@@ -10,9 +10,7 @@ $this->load->model('user_model');
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="css/default/site/style-menu.css" />
-    <?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>User-Profile-page.css" rel="stylesheet">
-<?php } ?>
+    
 <div class="add_steps shop-menu-list">
 
 			<div class="main">

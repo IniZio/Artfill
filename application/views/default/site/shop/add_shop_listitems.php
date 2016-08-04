@@ -104,7 +104,7 @@ tinyMCE.init({
 #When_is{margin:0px !important;}
 </style>
 <link rel="stylesheet" href="css/default/jquery.tagbox.css" />
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/default/font-awesome.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/default/font-awesome.min.css">
 <script type="text/javascript" src="js/site/jquery-1.7.1.min.js"></script>
 <script type="text/javascript">
 	var DealOfDay = '<?php echo $this->config->item('deal_of_day')?>';
@@ -132,9 +132,7 @@ jQuery(function() {
 <input type="submit" value="submit"/>
 <form>
  -->
-<?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Shop-page.css" rel="stylesheet">
-<?php } ?>
+
 <div class="list_inner_fields" id="shop_page_seller">   
 	<div class="sh_content">
 		<div class="col-lg-12" >
@@ -609,7 +607,7 @@ $('#sidenav').hide();
 				<p><?php if($this->lang->line('shop_variations_text') != '') { echo stripslashes($this->lang->line('shop_variations_text')); } else echo 'Add Variations to your listing to highlight available options for buyers.'; ?></p>
 				
 				
-				<div class="col-lg-12 variation_wrapper_list">
+				<div class="col-lg-8 variation_wrapper_list">
 				<div class="form-group">
 					<label for="inputEmail3" class="col-sm-2 control-label"><?php if($this->lang->line('ask_for_variation') != '') { echo stripslashes(af_lg("ask_for_variation", "加入特徵")); } else echo 'Add a Variation'; ?></label>
 					<p id="have_scalling" style="display:none;"></p>					
@@ -729,6 +727,7 @@ $('#sidenav').hide();
 					</div>
 				</div>
 				</div>
+				<div class="col-lg-4">可不填寫</div>
 				
 			</div>
 			<div class="col-lg-12 sh_border1" id="digital_wrapper" style="display:none;">

@@ -6,9 +6,7 @@ $this->load->view('site/templates/shop_header');
 
 <link href="css/cropper.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
-<?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Shop-page.css" rel="stylesheet">
-<?php } ?>
+
 <div class="clear"></div>
 <div id="shop_page_seller">
 <section class="container">

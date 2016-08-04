@@ -39,9 +39,7 @@ j(document).ready(function(){
 	//$("#datefrom").datepicker({ dateFormat: "yy-mm-dd", changeMonth: true, changeYear: true  }).val();
 });
 </script>
-<?php if(isset($active_theme) &&  $active_theme->num_rows() !=0) {?>
-<link href="./theme/themecss_<?php echo $active_theme->row()->id; ?>Shop-page.css" rel="stylesheet">
-<?php } ?>
+
 <style>
 .table-header th {
     text-align: center;
