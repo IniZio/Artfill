@@ -717,6 +717,7 @@ $img = explode(',', $recent_product_details->row($i)->image);
 	 
 	 
 	</div>
+	<div id="load_ajax_img" style="text-align: center;"></div>
 	
 	</div>
 	  		<div id="infscr-loading" style="text-align: center; display: none;">
