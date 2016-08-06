@@ -115,7 +115,7 @@
 
     </li>
 	
-	
+	<!--
 	<li <?php if($this->uri->segment(1)=='reviews'){ echo 'class="side_active"';} ?>>
 
     	<a href="reviews" ><i class="ic-credit"></i>
@@ -125,6 +125,7 @@
         </a>
 
     </li>
+	-->
 	<!--
 	 <li <?php if($this->uri->segment(2) == 'invite-friends' ){ echo 'class="side_active"';} ?>>
 
