@@ -102,7 +102,7 @@
     </li>
 	
 	
-    <li <?php if($this->uri->segment(3)=='followers'){ echo 'class="side_active"';  }?>>
+    <li <?php if($this->uri->segment(3)=='followers' || $this->uri->segment(3)=='following'){ echo 'class="side_active"';  }?>>
 
         <a href="people/<?php echo $this->session->userdata['shopsy_session_user_name'];?>/followers"><i class="ic-credit"></i><?php if($this->lang->line('user_followers') != '') { echo stripslashes($this->lang->line('user_followers')); } else echo 'Followers'; ?></a>
 
