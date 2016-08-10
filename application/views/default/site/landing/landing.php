@@ -242,7 +242,7 @@ shuffle($deal_of_day);
 				<?php */}
 				//}?>
 				<?php if ($this->config->item('featured_shop') == 'active') {?>
-				<section class="third-bl" style="border-top:thick solid #abdede;">
+				<section class="third-bl" style="border-top:thick solid #a6dcdc;">
 					<div class="container">
 						<!--<h1><?php //echo af_lg('lg_Featured_shop','Featured shops');?></h1>-->
 						<style>
