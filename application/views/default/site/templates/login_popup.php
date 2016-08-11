@@ -74,7 +74,7 @@ if($this->session->userdata('rUrl') != ''){
 					</div>
 				</form>
 				<hr/>
-				<?php if($this->config->item('facebook_app_id') != '' && $this->config->item('facebook_app_secret') != '') { ?> 
+				<?php if(false && $this->config->item('facebook_app_id') != '' && $this->config->item('facebook_app_secret') != '') { ?> 
                            <div class="fb_div">
 								<a style="margin:0" id="fbsignin" class="" href="<?php echo base_url().'facebooklogin'; ?>">
 									<img src="images/facebook_login.png" alt="facebook">
