@@ -413,13 +413,13 @@ $j('#slider-container').slider({
                                <?php if($this->config->item('deal_of_day') == 'Yes'){ ?>
                                 <ul class="filter shop-in">
                                     <li class="input-group selected" id="shiptobox"><?php //echo af_lg('lg_product_type','Product Type') 
-												echo af_lg('lg_deal_of_the_day','Deal Of The Day');
+												echo "優惠";//af_lg('lg_deal_of_the_day','Deal Of The Day');
 												?></li>
                                     
                                   
                                     
-                                    <?php i?><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.$order.$colorVal.'&dealday=today';?>"><p style="margin: 5px 5px 5px 15px;"> <?php echo af_lg('lg_todays_deal','Todays Deals');?> </p></a><?php  ?>
-                                    <?php  ?><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.$order.$colorVal.'&dealday=upcoming';?>"><p style="margin: 5px 5px 5px 15px;"><?php echo af_lg('lg_upcoming_deals','Upcoming Deals');?> </p></a><?php  ?>
+                                    <?php i?><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.$order.$colorVal.'&dealday=today';?>"><p style="margin: 5px 5px 5px 15px;"> <?php echo "今日優惠";//af_lg('lg_todays_deal','Todays Deals');?> </p></a><?php  ?>
+                                    <?php  ?><a href="<?php  echo $c_url.'?'.$s_key.$s_gift.$min_price.$max_price.$location.$shipto.$order.$colorVal.'&dealday=upcoming';?>"><p style="margin: 5px 5px 5px 15px;"><?php echo "即將優惠";//af_lg('lg_upcoming_deals','Upcoming Deals');?> </p></a><?php  ?>
                                 </ul>
                                 <?php } ?>
                             </div>

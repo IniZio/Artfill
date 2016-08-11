@@ -242,7 +242,7 @@ shuffle($deal_of_day);
 				<?php */}
 				//}?>
 				<?php if ($this->config->item('featured_shop') == 'active') {?>
-				<section class="third-bl">
+				<section class="third-bl" style="border-top:thick solid #a6dcdc;">
 					<div class="container">
 						<!--<h1><?php //echo af_lg('lg_Featured_shop','Featured shops');?></h1>-->
 						<style>
@@ -717,6 +717,7 @@ $img = explode(',', $recent_product_details->row($i)->image);
 	 
 	 
 	</div>
+	<div id="load_ajax_img" style="text-align: center;"></div>
 	
 	</div>
 	  		<div id="infscr-loading" style="text-align: center; display: none;">

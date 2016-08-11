@@ -2006,26 +2006,26 @@ $this->load->view('site/templates/header.php');
                       <label for="payment-personal-name-fst">
                         <?php if($this->lang->line('user_name') != '') { echo stripslashes($this->lang->line('user_name')); } else echo "Name"; ?>
                         <b>*</b></label>
-                      <input name="full_name" id="full_name" type="text" class="required" value="<?php echo $shipValDetails->row()->full_name; ?>" />
+                      <input name="full_name" id="full_name" type="text" class="required" value="<?php echo $this->session->userdata('shopsy_session_user_name'); ?>" />
                     </dd>
-                    <dd>
+                    <!-- <dd>
                       <label for="payment-adds-1">
                         <?php if($this->lang->line('shipping_address_comm') != '') { echo stripslashes($this->lang->line('shipping_address_comm')); } else echo "Address"; ?>
                         <b>*</b></label>
                       <input id="address" name="address" type="text" class="required" value="<?php echo $shipValDetails->row()->address1; ?>">
-                    </dd>
+                    </dd> -->
                     <!-- <dd>
                       <label for="payment-adds-1">
                         <?php if($this->lang->line('shipping_address_comm') != '') { echo stripslashes($this->lang->line('shipping_address_comm')); } else echo "Address"; ?>
                         2</label>
                       <input id="address2" name="address2" type="text" class="" value="<?php echo $shipValDetails->row()->address2; ?>">
                     </dd> -->
-                    <dd>
+                    <!-- <dd>
                       <label for="payment-city">
                         <?php if($this->lang->line('header_city') != '') { echo stripslashes($this->lang->line('header_city')); } else echo "City"; ?>
                         <b>*</b></label>
                       <input id="city" name="city" type="text" class="required" value="<?php echo $shipValDetails->row()->city; ?>">
-                    </dd>
+                    </dd> -->
                   </dl>
                   <!-- <dl class="payment-card">
                     <dt><b>&nbsp;</b> <small>&nbsp;</small></dt>
@@ -3207,7 +3207,7 @@ var stripeResponseHandler = function(status, response) {
                       <label for="payment-personal-name-fst">
                         <?php if($this->lang->line('user_name') != '') { echo stripslashes($this->lang->line('user_name')); } else echo "Name"; ?>
                         <b>*</b></label>
-                      <input name="full_name" id="full_name" type="text" class="required" value="<?php echo $shipValDetails->row()->full_name; ?>" />
+                      <input name="full_name" id="full_name" type="text" class="required" value="<?php echo $this->session->userdata('shopsy_session_user_name'); ?>" />
                     </dd>
                     <dd>
                       <label for="payment-adds-1">

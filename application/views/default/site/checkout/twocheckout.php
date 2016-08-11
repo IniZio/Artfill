@@ -105,7 +105,7 @@ $this->load->view('site/templates/header.php');
                       <label for="payment-personal-name-fst">
                         <?php if($this->lang->line('user_name') != '') { echo stripslashes($this->lang->line('user_name')); } else echo "Name"; ?>
                         <b>*</b></label>
-                      <input name="full_name" id="full_name" type="text" class="required" value="<?php echo $shipValDetails->row()->full_name; ?>" />
+                      <input name="full_name" id="full_name" type="text" class="required" value="<?php echo $this->session->userdata('shopsy_session_user_name'); ?>" />
                     </dd>
                     <dd>
                       <label for="payment-card-number">

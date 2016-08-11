@@ -125,6 +125,8 @@ $this->load->model('user_model');
 									
                                		<!-- <?php if(!empty($favArr)) { if($this->lang->line('favorited') != '') { echo stripslashes($this->lang->line('favorited')); } else echo "favorited"; }  else { if($this->lang->line('unfavorited') != '') { echo stripslashes($this->lang->line('unfavorited')); } else echo "Unfavorited";} ?> -->
                                     將於
+                                     <?php print_r($actBuyPick['activity_time']);?>
+                                    在
                                      <?php print_r($pickupStation[$actBuyPick['activity_location']]['station']);
                                      ?>
 
@@ -248,23 +250,8 @@ $this->load->model('user_model');
 
                 </ul>
 
-                <?php } else { ?>
-
-                <ul class="interactions">
-
-                    <li>
-
-                        <div class="your-shopfeed">
-
-                            <h1><?php if($this->lang->line('activity') != '') { echo stripslashes($this->lang->line('activity')); } else echo "Darn, there's no activity yet."; ?></h1>                            
-
-                        </div>
-
-                    </li>
-
-                </ul>
-
                 <?php } ?>
+
 
             </div>   
             <div id="activities">
@@ -315,8 +302,9 @@ $this->load->model('user_model');
                                     
                                     <!-- <?php if(!empty($favArr)) { if($this->lang->line('favorited') != '') { echo stripslashes($this->lang->line('favorited')); } else echo "favorited"; }  else { if($this->lang->line('unfavorited') != '') { echo stripslashes($this->lang->line('unfavorited')); } else echo "Unfavorited";} ?> -->
                                     將於
-                                     <?php print_r($pickupStation[$actSellerPick['activity_location']]['station']);
-                                     ?>
+                                     <?php print_r($actSellerPick['activity_time']);?>
+                                    在
+                                     <?php print_r($pickupStation[$actSellerPick['activity_location']]['station']);?>
 
                                     接收您的
 
@@ -438,8 +426,9 @@ $this->load->model('user_model');
 
                 </ul>
 
-                <?php } else { ?>
+                <?php } ?>
 
+                    <?php if((empty($isBuyerPickupActivities)) and (empty($isSellerPickupActivities))){ ?>
                 <ul class="interactions">
 
                     <li>

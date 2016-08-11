@@ -218,7 +218,7 @@ if ($CurrUserImg != '') {
 									<li><a href="shop/sell">我的商店</a></li>
 
 									<li><a href="purchase-review">交易紀錄</a></li>
-									<li><a href="reviews">意見回饋</a></li>
+									<!--<li><a href="reviews">意見回饋</a></li>-->
 									<li><a href="settings/my-account/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>"><?php if ($this->lang->line('landing_account_ettings') != '') {echo stripslashes($this->lang->line('landing_account_ettings'));} else {
             echo 'Account Settings';
         }
@@ -328,9 +328,11 @@ if ($CurrUserImg != '') {
                     <li class="page-scroll">
                     	<a href="purchase-review">交易紀錄</a>
                     </li>
+					<!--
                     <li class="page-scroll">
                     	<a href="reviews">意見回饋</a>
                     </li>
+					-->
                     <li class="page-scroll">
                     	<a href="settings/my-account/<?php echo $this->session->userdata['shopsy_session_user_name']; ?>">帳戶設置</a>
                     </li>
